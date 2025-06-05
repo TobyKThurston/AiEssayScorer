@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Essay Scorer
+
+AI Essay Scorer is a web application that uses the OpenAI GPT-4 API to evaluate college admissions essays across five core dimensions: structure, clarity, creativity, tone, and overall quality.
+
+The application provides instant, actionable feedback to students looking to improve their college essays, simulating the perspective of a real admissions officer.
+
+## Features
+
+- Scoring on five criteria: structure, clarity, creativity, tone, overall
+- GPT-4 powered analysis and personalized feedback
+- Fast and responsive interface using Next.js 14 and Tailwind CSS
+- App Router API architecture with secure server-side integration
+- No client-side exposure of sensitive keys or logic
+
+## Tech Stack
+
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- OpenAI GPT-4 API
+- Vercel 
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+   cd YOUR_REPO_NAME
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create a `.env.local` file in the root directory:
+   ```
+   OPENAI_API_KEY=your_openai_key_here
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+5. Open your browser to `http://localhost:3000` to use the application.
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/app/page.tsx` – Frontend UI with essay input and score display
+- `src/app/api/score/route.ts` – API route that securely sends essay content to GPT-4 and parses the JSON response
+- `.env.local` – Environment variable file to store your OpenAI API key (not committed to Git)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Why This Project
 
-## Deploy on Vercel
+This project was built to solve a real problem: college applicants often lack timely, high-quality feedback on their essays. By combining AI with modern web technologies, this tool helps students iterate faster and improve their writing quality without needing human reviewers.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+It also serves as a technically meaningful project demonstrating API integration, full-stack architecture, secure credential handling, and clean UI design.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Future Work
+
+- User authentication and saved essay history
+- Stripe integration for premium essay reviews
+- Region-specific admissions insights
+- Essay comparison to accepted applicants
+
+## Author
+
+Toby Thurston  
+[https://github.com/TobyKThurston](https://github.com/TobyKThurston)
+
