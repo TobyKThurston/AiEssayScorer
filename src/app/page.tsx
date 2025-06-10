@@ -1,65 +1,92 @@
+// File: src/app/page.tsx
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
-export default function Home() {
-  const [essay, setEssay] = useState("");
-  const [result, setResult] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
+const texts = ['Success', 'Essays', 'Feedback'];
 
-  const handleSubmit = async () => {
-    setLoading(true);
-    setResult("");
+export default function HomePage() {
+  const [index, setIndex] = useState(0);
 
-    const response = await fetch("/api/score", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ essay }),
-    });
-
-    const data = await response.json();
-    setResult(data); // store full result object
-    setLoading(false);
-  };
+  useEffect(() => {
+    const iv = setInterval(() => setIndex(i => (i + 1) % texts.length), 3000);
+    return () => clearInterval(iv);
+  }, []);
 
   return (
-    <main className="p-8 max-w-2xl mx-auto text-white">
-      <h1 className="text-3xl font-bold mb-4">AI Essay Scorer</h1>
+    <>
+      <style jsx global>{`
+        :root {
+          --header-height: 40px;
+        }
 
-      <textarea
-        className="w-full h-64 border p-4 rounded text-black"
-        placeholder="Paste your college essay here..."
-        value={essay}
-        onChange={(e) => setEssay(e.target.value)}
-      />
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background:#000; color:#fff; }
 
-      <button
-        onClick={handleSubmit}
-        className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-      >
-        Submit Essay
-      </button>
+        /* ---------- Hero ---------- */
+        .hero {
+          height: calc(85vh - var(--header-height));   /* slightly smaller */
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 0 1rem;
+        }
 
-      {loading && <p className="mt-4">Scoring essay...</p>}
+        .rotating-wrapper { display: flex; flex-direction: column; align-items: center; gap:.25rem; }
+        .rotating-text,
+        .mapped-out { font-size:4.5rem; line-height:1.1; font-weight:800; white-space:nowrap; }
+        .rotating-text {
+          background: linear-gradient(90deg,#93c5fd,#e0f2fe);
+          -webkit-background-clip:text;
+          -webkit-text-fill-color:transparent;
+          transition:opacity .8s ease-in-out;
+        }
+        .description { margin-top:1rem; font-size:1.5rem; max-width:640px; color:#cbd5e1; }
+        .review-btn {
+          margin-top:2.5rem; padding:16px 32px; font-size:1.25rem; font-weight:600;
+          background:#b3d9ff; color:#000; border:none; border-radius:10px; cursor:pointer;
+          transition:background .25s, transform .15s, box-shadow .15s;
+        }
+        .review-btn:hover { background:#93c5fd; transform:translateY(-3px); box-shadow:0 14px 24px rgba(59,130,246,.2); }
 
-      {result && (
-        <div className="mt-6 p-4 bg-gray-100 rounded text-black">
-          <h2 className="font-bold mb-2">Essay Analysis:</h2>
-          <p><strong>Structure:</strong> {result.structure}</p>
-          <p><strong>Clarity:</strong> {result.clarity}</p>
-          <p><strong>Creativity:</strong> {result.creativity}</p>
-          <p><strong>Tone:</strong> {result.tone}</p>
-          <p><strong>Overall:</strong> {result.overall}</p>
+        /* simple fade‑in */
+        .fade-in-up { animation: fadeInUp .6s ease forwards; }
+        @keyframes fadeInUp { from { opacity:0; transform:translateY(10px);} to { opacity:1; transform:translateY(0);} }
 
-          <h2 className="font-bold mt-4">Feedback:</h2>
-          <p>{result.feedback}</p>
+        @media (max-width:768px){
+          .rotating-text,.mapped-out{font-size:3rem;}
+          .description{font-size:1.125rem;}
+        }
+      `}</style>
+
+      <section className="hero fade-in-up">
+        <div className="rotating-wrapper">
+          <span className="rotating-text">{texts[index]}</span>
+          <span className="mapped-out">Mapped&nbsp;Out</span>
         </div>
-      )}
-    </main>
+
+        <p className="description">
+          Admit smarter. The most strategic AI for getting in.
+        </p>
+
+        <Link href="/review">
+          <button className="review-btn">Review your essay →</button>
+        </Link>
+      </section>
+    </>
   );
 }
+
+
+
+
+
+
+
+
 
 
 
