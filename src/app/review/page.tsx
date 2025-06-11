@@ -1,8 +1,8 @@
-// File: src/app/review/page.tsx
 'use client';
 
-import { useState } from 'react';
-import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs';
+import { useState, useEffect } from 'react';
+import { useUser, SignedIn, SignedOut, SignInButton } from '@clerk/nextjs';  // ⬅️ added useUser
+
 
 export default function ReviewPage() {
   /* ---------------- Form State ---------------- */
@@ -12,10 +12,37 @@ export default function ReviewPage() {
   const [essay,      setEssay]    = useState('');
   const [extra,      setExtra]    = useState('');
 
-  /* ---------------- App State ----------------- */
-  const [result,      setResult]      = useState<any>(null);
-  const [loading,     setLoading]     = useState(false);
-  const [creditsLeft, setCredits]     = useState(2);
+  /* ---------------- App State ----------------- */
+const [result,  setResult]  = useState<any>(null);   // ✅ keep this
+const [loading, setLoading] = useState(false);
+
+
+/* ---------- Credits ---------- */
+const DEFAULT_CREDITS = 2;          // free quota
+const { user } = useUser();         // null while Clerk is still loading
+const storageKey = user
+  ? `creditsLeft_${user.id}`        // per‑user key
+  : 'creditsLeft_guest';            // optional guest key
+
+const [creditsLeft, setCredits] = useState<number>(() => {
+  if (typeof window === 'undefined') return DEFAULT_CREDITS;   // during SSR
+  const saved = localStorage.getItem(storageKey);
+  return saved !== null ? Number(saved) : DEFAULT_CREDITS;
+});
+
+/* Re‑hydrate when the signed‑in user changes */
+useEffect(() => {
+  const saved = localStorage.getItem(storageKey);
+  if (saved !== null) setCredits(Number(saved));
+}, [storageKey]);
+
+/* Persist every change */
+useEffect(() => {
+  localStorage.setItem(storageKey, String(creditsLeft));
+}, [storageKey, creditsLeft]);
+
+    
+    
 
   /* ---- Suggestions carousel ---- */
   const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -26,6 +53,46 @@ export default function ReviewPage() {
    * (e.g. useUser() from Clerk, a DB lookup, etc.)
    */
   const [premiumUnlocked, setPremium] = useState(false);
+
+  // ─── run on first render ─────────────────────────────────
+  useEffect(() => {
+    const checkSub = async () => {
+      try {
+        const res = await fetch('/api/check-subscription');
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        setPremium(Boolean(data.isActive));
+      } catch {}
+    };
+    checkSub();
+  }, []);
+
+  // ─── re-run when user changes ────────────────────────────
+  useEffect(() => {
+    if (!user) return;
+    const checkSub = async () => {
+      try {
+        const res = await fetch('/api/check-subscription');
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        setPremium(Boolean(data.isActive));
+      } catch {}
+    };
+    checkSub();
+  }, [user]);
+
+  // ─── re-run if returning from Stripe checkout ─────────────
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (window.location.search.includes('checkout=success')) {
+      fetch('/api/check-subscription')
+        .then((r) => r.ok && r.json())
+        .then((data) => setPremium(Boolean(data.isActive)))
+        .catch(() => {});
+    }
+  }, []);
+
+
 
   const categories = ['Clarity', 'Structure', 'Grammar', 'Originality', 'Engagement'];
   const getValue = (name: string) => {
@@ -43,6 +110,12 @@ export default function ReviewPage() {
   /* ---------------- Submit -------------------- */
   const handleSubmit = async () => {
     if (!essay.trim()) return;
+  
+    // 1) If no credits, immediately redirect to Stripe
+    if (creditsLeft <= 0 && !premiumUnlocked) {
+      return handleUpgrade();
+    }
+  
     setLoading(true);
     try {
       const res = await fetch('/api/score', {
@@ -50,32 +123,38 @@ export default function ReviewPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ school, location, prompt: promptText, essay, extra }),
       });
-
-      if (res.status === 402) {            // payment required (example)
-        setPremium(false);
-        alert('Upgrade to unlock personalised suggestions.');
-      } else if (res.status === 403) {     // daily quota
-        alert('Daily limit reached. Upgrade for unlimited essays.');
-      } else {
-        const data = await res.json();
-        setResult(data);
-        setCredits((c) => Math.max(c - 1, 0));
-
-        /* ----- Suggestions handling ----- */
-        if (Array.isArray(data.suggestions) && data.suggestions.length) {
-          setSuggestions(data.suggestions);
-          setSuggIndex(0);
-          setPremium(true);                // they’re allowed to see them
-        } else {
-          // no suggestions returned ⇒ keep whatever state we already have
-        }
+  
+      // 2) If your backend still returns “quota exceeded,” treat it the same
+      if (res.status === 402 || res.status === 403) {
+        return handleUpgrade();
       }
+  
+      const data = await res.json();
+      setResult(data);
+      setCredits((c) => Math.max(c - 1, 0));
+  
+      // …your suggestions logic…
     } catch (err) {
       console.error(err);
+      // Optionally show a generic “Try again later” alert
     } finally {
       setLoading(false);
     }
   };
+  
+    /* ---------------- Upgrade -------------------- */
+    const handleUpgrade = async () => {
+        try {
+          const res = await fetch('/api/stripe/checkout', { method: 'POST' });
+          if (!res.ok) throw new Error('Checkout failed');
+          const { url } = await res.json();
+          window.location.href = url;
+        } catch (err) {
+          console.error(err);
+          alert('Unable to start checkout. Please try again.');
+        }
+      };
+    
 
   /* ---------------- Render -------------------- */
   return (
@@ -256,7 +335,9 @@ export default function ReviewPage() {
                   value={essay}
                   onChange={(e) => setEssay(e.target.value)}
                 />
-                <div className="credits">Credits Left: {creditsLeft}</div>
+                <div className="credits">
+                    Credits Left: {premiumUnlocked ? '∞' : creditsLeft}
+                    </div>
               </div>
 
               {/* Additional Info */}
@@ -271,13 +352,23 @@ export default function ReviewPage() {
               </div>
 
               {/* Submit */}
-              <button
-                className="submit-button"
-                onClick={handleSubmit}
-                disabled={loading || creditsLeft === 0 || !essay.trim()}
-              >
-                {loading ? 'Submitting…' : 'Submit Essay'}
-              </button>
+              {/* Submit or Upgrade */}
+                {(!premiumUnlocked && creditsLeft <= 0) ? (
+                <button
+                    className="submit-button"
+                    onClick={handleUpgrade}
+                >
+                    Upgrade Now
+                </button>
+                ) : (
+                <button
+                    className="submit-button"
+                    onClick={handleSubmit}
+                    disabled={loading || creditsLeft <= 0 || !essay.trim()}
+                >
+                    {loading ? 'Submitting…' : 'Submit Essay'}
+                </button>
+                )}
             </div>
 
             {/* ========== RIGHT COLUMN (Analysis) ========== */}
