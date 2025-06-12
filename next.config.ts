@@ -1,12 +1,16 @@
+import type { NextConfig } from 'next';
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  /* ─── new: don’t fail the build on ESLint “errors” ─── */
+const nextConfig: NextConfig = {
   eslint: {
+    // ✅  Turn all ESLint “errors” into warnings during `next build`
     ignoreDuringBuilds: true,
   },
 
-  /* (keep any other Next.js settings you already have below) */
+  // …keep any other Next.js options you already have below…
 };
 
-module.exports = nextConfig;
+export default nextConfig;
+
+
 
