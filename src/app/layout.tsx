@@ -2,44 +2,115 @@
 'use client';
 
 import './globals.css';
-import { ReactNode } from 'react';
 import Link from 'next/link';
-import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignOutButton } from '@clerk/nextjs';
+import {
+  ClerkProvider,
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignOutButton,
+} from '@clerk/nextjs';
+import { ReactNode, useEffect, useState } from 'react';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  /* ── premium status for navbar ───────────────────────── */
+  const [premiumUnlocked, setPremiumUnlocked] = useState(false);
+
+  useEffect(() => {
+    fetch('/api/check-subscription')
+      .then((r) => r.ok && r.json())
+      .then((d) => setPremiumUnlocked(Boolean(d?.isActive)))
+      .catch(() => {});
+  }, []);
+
   return (
     <ClerkProvider>
       <html lang="en">
         <body>
           {/*— Original header CSS —*/}
           <style jsx global>{`
-            * { margin: 0; padding: 0; box-sizing: border-box; }
-            body { font-family: 'Poppins', sans-serif; background-color: #000; color: #fff; }
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+            body {
+              font-family: 'Poppins', sans-serif;
+              background-color: #000;
+              color: #fff;
+            }
 
             /* Banner + nav layout */
-            .top-tag { text-align: center; padding: 12px; background-color: #111827; font-weight: 600; color: #93c5fd; letter-spacing: 0.5px; }
-            nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background-color: #000; }
+            .top-tag {
+              text-align: center;
+              padding: 12px;
+              background-color: #111827;
+              font-weight: 600;
+              color: #93c5fd;
+              letter-spacing: 0.5px;
+            }
+            nav {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 20px 60px;
+              background-color: #000;
+            }
 
             /* Logo */
-            nav a { text-decoration: none; color: inherit; }          /* ← NEW: kill underline / visited color */
-            nav a:visited { text-decoration: none; color: inherit; } /* ← NEW: keep same after visiting */
-
-            nav .logo { font-size: 1.8rem; font-weight: 700; color: #b3d9ff; }
-            nav ul { list-style: none; display: flex; align-items: center; gap: 30px; }
-            nav ul li { display: flex; align-items: center; }
+            nav a,
+            nav a:visited {
+              text-decoration: none;
+              color: inherit;
+            }
+            nav .logo {
+              font-size: 1.8rem;
+              font-weight: 700;
+              color: #b3d9ff;
+            }
+            nav ul {
+              list-style: none;
+              display: flex;
+              align-items: center;
+              gap: 30px;
+            }
+            nav ul li {
+              display: flex;
+              align-items: center;
+            }
 
             /* Nav buttons */
             nav ul li button {
-              background: none; border: none; font-family: inherit; font-size: inherit;
-              color: #b3d9ff; font-weight: 600; position: relative; cursor: pointer;
-              transition: color 0.3s ease; padding: 0; line-height: 1;
+              background: none;
+              border: none;
+              font-family: inherit;
+              font-size: inherit;
+              color: #b3d9ff;
+              font-weight: 600;
+              position: relative;
+              cursor: pointer;
+              transition: color 0.3s ease;
+              padding: 0;
+              line-height: 1;
             }
             nav ul li button::after {
-              content: ''; position: absolute; width: 0; height: 2px; background-color: #b3d9ff;
-              bottom: -5px; left: 0; right: 0; margin: 0 auto; transition: width 0.3s ease;
+              content: '';
+              position: absolute;
+              width: 0;
+              height: 2px;
+              background-color: #b3d9ff;
+              bottom: -5px;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+              transition: width 0.3s ease;
             }
-            nav ul li button:hover { color: #93c5fd; }
-            nav ul li button:hover::after { width: 100%; }
+            nav ul li button:hover {
+              color: #93c5fd;
+            }
+            nav ul li button:hover::after {
+              width: 100%;
+            }
           `}</style>
 
           {/*— Header HTML —*/}
@@ -47,9 +118,33 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <nav>
             {/* Logo links back to home */}
             <Link href="/">
-              <div className="logo" style={{ display: 'flex', alignItems: 'center', marginLeft: '30px', cursor: 'pointer' }}>
-                <span style={{ position: 'relative', display: 'inline-block', width: '32px', height: '60px', transform: 'translateX(-60px)' }}>
-                  <svg width="32" height="60" viewBox="0 0 180 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="none">
+              <div
+                className="logo"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginLeft: '30px',
+                  cursor: 'pointer',
+                }}
+              >
+                <span
+                  style={{
+                    position: 'relative',
+                    display: 'inline-block',
+                    width: '32px',
+                    height: '60px',
+                    transform: 'translateX(-60px)',
+                  }}
+                >
+                  <svg
+                    width="32"
+                    height="60"
+                    viewBox="0 0 180 150"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    focusable="false"
+                    fill="none"
+                  >
                     <polygon points="90,10 40,140 140,140" fill="#2563eb" />
                     <polygon points="90,10 60,140 90,140" fill="#3b82f6" />
                     <polygon points="90,10 90,140 120,140" fill="#60a5fa" />
@@ -70,7 +165,33 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   </SignInButton>
                 </li>
               </SignedOut>
+
               <SignedIn>
+                {/* Upgrade button – only for free users */}
+                {!premiumUnlocked && (
+                  <li>
+                    <button
+                      onClick={() =>
+                        document.dispatchEvent(
+                          new CustomEvent('open-premium-popup')
+                        )
+                      }
+                      style={{
+                        backgroundColor: '#2563eb',
+                        color: '#fff',
+                        borderRadius: '8px',
+                        padding: '6px 14px',
+                        fontWeight: 600,
+                        fontSize: '0.9rem',
+                        marginRight: '18px',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      Upgrade
+                    </button>
+                  </li>
+                )}
+
                 <li>
                   <SignOutButton>
                     <button>Sign Out</button>
@@ -87,6 +208,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </ClerkProvider>
   );
 }
+
 
 
 

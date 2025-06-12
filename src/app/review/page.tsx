@@ -53,6 +53,9 @@ useEffect(() => {
    * (e.g. useUser() from Clerk, a DB lookup, etc.)
    */
   const [premiumUnlocked, setPremium] = useState(false);
+  // ---- Premium pop-up visibility ----
+  const [showPremiumPopup, setShowPremiumPopup] = useState(false);
+
 
   /* ---------- Credits & premium gating ---------- */
 const canSubmit =
@@ -103,6 +106,14 @@ const canSubmit =
         .catch(() => {});
     }
   }, []);
+
+  /* ─── listen for navbar “Upgrade” click ─────────────────── */
+useEffect(() => {
+    const handler = () => setShowPremiumPopup(true);
+    document.addEventListener('open-premium-popup', handler);
+    return () => document.removeEventListener('open-premium-popup', handler);
+  }, []);
+  
   
 
 
@@ -322,6 +333,7 @@ const canSubmit =
             color: #fff;
             box-shadow: 0 10px 30px rgba(59,130,246,0.3);
             text-align: center;
+            position: relative; 
             }
 
             .premium-popup h2 {
@@ -342,6 +354,7 @@ const canSubmit =
             line-height: 1.5;
             color: #ccc;
             }
+
 
       `}</style>
 
@@ -431,12 +444,13 @@ const canSubmit =
                     {loading ? 'Submitting…' : 'Submit Essay'}
                 </button>
                 ) : (
-                <button
+                    <button
                     className="submit-button"
-                    onClick={handleUpgrade}
+                    onClick={() => setShowPremiumPopup(true)}   // open pop-up
                 >
                     Upgrade Now
                 </button>
+                
                 )}
             </div>
 
@@ -509,22 +523,33 @@ const canSubmit =
             </div>
           </div>
         </SignedIn>
-        {!premiumUnlocked && (
-        <div className="premium-popup-overlay">
-            <div className="premium-popup">
-            <h2>Unlock Premium Features</h2>
-            <ul>
-                <li>🔍 Detailed Suggestions for Improvement</li>
-                <li>📊 Unlimited Essay Submissions</li>
-                <li>✨ Advanced AI Review with More Depth</li>
-                <li>💡 Personalized Writing Tips</li>
-            </ul>
-            <button className="submit-button" onClick={handleUpgrade}>
-                Upgrade Now
-            </button>
-            </div>
-        </div>
-        )}
+       {/* ─── Premium pop-up ───────────────────────────── */}
+{showPremiumPopup && !premiumUnlocked && (
+  <div
+    className="premium-popup-overlay"          /* backdrop */
+    onClick={() => setShowPremiumPopup(false)} /* close on backdrop */
+  >
+    <div
+      className="premium-popup relative"       /* card */
+      onClick={(e) => e.stopPropagation()}     /* keep clicks inside */
+    >
+
+
+      <h2>Unlock Premium Features</h2>
+      <ul>
+        <li>Detailed Suggestions for Improvement</li>
+        <li>Unlimited Essay Submissions</li>
+        <li>Advanced AI Review with More Depth</li>
+        <li>$5 a month</li>
+      </ul>
+
+      <button className="submit-button" onClick={handleUpgrade}>
+        Upgrade Now
+      </button>
+    </div>
+  </div>
+)}
+
     
       </section>
     </>
