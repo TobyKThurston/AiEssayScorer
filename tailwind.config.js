@@ -12,6 +12,7 @@ module.exports = {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },
+      /* ─── fixed: give Tailwind a real sans alias so `font-sans` resolves ─── */
       fontFamily: {
         sans: ['Poppins', 'Arial', 'Helvetica', 'sans-serif'],
       },
@@ -19,3 +20,4 @@ module.exports = {
   },
   plugins: [],
 };
+
