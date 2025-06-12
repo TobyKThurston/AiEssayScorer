@@ -54,6 +54,13 @@ useEffect(() => {
    */
   const [premiumUnlocked, setPremium] = useState(false);
 
+  /* ---------- Credits & premium gating ---------- */
+const canSubmit =
+!loading &&                       // page isn’t busy
+!!essay.trim() &&                 // something to grade
+(premiumUnlocked || creditsLeft > 0);   // enough quota
+
+
   // ─── run on first render ─────────────────────────────────
   useEffect(() => {
     const checkSub = async () => {
@@ -62,6 +69,7 @@ useEffect(() => {
         if (!res.ok) throw new Error();
         const data = await res.json();
         setPremium(Boolean(data.isActive));
+        if (data.isActive) setCredits(DEFAULT_CREDITS);   // add this line
       } catch {}
     };
     checkSub();
@@ -76,6 +84,7 @@ useEffect(() => {
         if (!res.ok) throw new Error();
         const data = await res.json();
         setPremium(Boolean(data.isActive));
+        if (data.isActive) setCredits(DEFAULT_CREDITS);   // add this line
       } catch {}
     };
     checkSub();
@@ -87,10 +96,14 @@ useEffect(() => {
     if (window.location.search.includes('checkout=success')) {
       fetch('/api/check-subscription')
         .then((r) => r.ok && r.json())
-        .then((data) => setPremium(Boolean(data.isActive)))
+        .then((data) => {
+          setPremium(Boolean(data.isActive));
+          if (data.isActive) setCredits(DEFAULT_CREDITS);   // ← add this
+        })
         .catch(() => {});
     }
   }, []);
+  
 
 
 
@@ -130,8 +143,19 @@ useEffect(() => {
       }
   
       const data = await res.json();
-      setResult(data);
-      setCredits((c) => Math.max(c - 1, 0));
+        setResult(data);
+
+        if (!premiumUnlocked) {
+        // only burn a credit for free-tier users
+        setCredits((c) => Math.max(c - 1, 0));
+        }
+
+        /* ----- suggestions array from backend (optional) ----- */
+        if (Array.isArray(data.suggestions)) {
+        setSuggestions(data.suggestions);
+        setSuggIndex(0);
+        }
+
   
       // …your suggestions logic…
     } catch (err) {
@@ -353,20 +377,21 @@ useEffect(() => {
 
               {/* Submit */}
               {/* Submit or Upgrade */}
-                {(!premiumUnlocked && creditsLeft <= 0) ? (
+               {/* Submit or Upgrade */}
+                {premiumUnlocked || creditsLeft > 0 ? (
+                <button
+                    className="submit-button"
+                    onClick={handleSubmit}
+                    disabled={!canSubmit}               // uses the new helper
+                >
+                    {loading ? 'Submitting…' : 'Submit Essay'}
+                </button>
+                ) : (
                 <button
                     className="submit-button"
                     onClick={handleUpgrade}
                 >
                     Upgrade Now
-                </button>
-                ) : (
-                <button
-                    className="submit-button"
-                    onClick={handleSubmit}
-                    disabled={loading || creditsLeft <= 0 || !essay.trim()}
-                >
-                    {loading ? 'Submitting…' : 'Submit Essay'}
                 </button>
                 )}
             </div>
