@@ -13,11 +13,11 @@ Return pure JSON only — no Markdown, headings, or extra keys. If anything besi
 
 Schema (double quotes, no trailing commas):
 {
-  "clarity": <integer 1-10>,
-  "structure": <integer 1-10>,
-  "grammar": <integer 1-10>,
-  "creativity": <integer 1-10>,
-  "tone": <integer 1-10>,
+  "clarity": <1-10>,
+  "structure": <1-10>,
+  "grammar": <1-10>,
+  "originality": <1-10>
+  "engagement": <1-10>,
   "feedback": "<≤150 words, second-person>",
   "suggestions": [
     "<≥50-word bullet 1>",

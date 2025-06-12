@@ -15,7 +15,8 @@ Schema (double quotes, no trailing commas):
   "clarity": <1-10>,
   "structure": <1-10>,
   "grammar": <1-10>,
-  "overall": <1-10>,
+  "originality": <1-10>
+  "engagement": <1-10>,
   "feedback": "<≤120 words, second-person>",
   "suggestions": []
 }
