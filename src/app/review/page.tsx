@@ -299,6 +299,50 @@ const canSubmit =
           .main-content { flex-direction: column; }
           .submit-button { align-self: stretch; }
         }
+          .premium-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.65);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            }
+
+            .premium-popup {
+            background: linear-gradient(145deg, #1f2937, #111827);
+            border: 1px solid #3b82f6;
+            border-radius: 24px;
+            padding: 32px;
+            width: 90%;
+            max-width: 480px;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(59,130,246,0.3);
+            text-align: center;
+            }
+
+            .premium-popup h2 {
+            font-size: 1.5rem;
+            color: #b3d9ff;
+            margin-bottom: 16px;
+            }
+
+            .premium-popup ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px;
+            }
+
+            .premium-popup li {
+            margin-bottom: 12px;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #ccc;
+            }
+
       `}</style>
 
       <section id="review-page">
@@ -465,6 +509,23 @@ const canSubmit =
             </div>
           </div>
         </SignedIn>
+        {!premiumUnlocked && (
+        <div className="premium-popup-overlay">
+            <div className="premium-popup">
+            <h2>Unlock Premium Features</h2>
+            <ul>
+                <li>🔍 Detailed Suggestions for Improvement</li>
+                <li>📊 Unlimited Essay Submissions</li>
+                <li>✨ Advanced AI Review with More Depth</li>
+                <li>💡 Personalized Writing Tips</li>
+            </ul>
+            <button className="submit-button" onClick={handleUpgrade}>
+                Upgrade Now
+            </button>
+            </div>
+        </div>
+        )}
+    
       </section>
     </>
   );
