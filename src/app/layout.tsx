@@ -9,19 +9,48 @@ import {
   SignedOut,
   SignInButton,
   SignOutButton,
+  useUser,  
 } from '@clerk/nextjs';
+import { useSearchParams } from 'next/navigation'; 
 import { ReactNode, useEffect, useState } from 'react';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   /* ── premium status for navbar ───────────────────────── */
-  const [premiumUnlocked, setPremiumUnlocked] = useState(false);
 
-  useEffect(() => {
-    fetch('/api/check-subscription')
-      .then((r) => r.ok && r.json())
-      .then((d) => setPremiumUnlocked(Boolean(d?.isActive)))
-      .catch(() => {});
-  }, []);
+const [premiumUnlocked, setPremiumUnlocked] = useState(false);
+
+const { user } = useUser();             // ← know when they sign in/out
+const searchParams = useSearchParams(); // ← know if URL has ?checkout=success
+
+// helper so we don’t duplicate fetch logic
+const refreshPremium = () => {
+  fetch('/api/check-subscription')
+    .then((r) => r.ok && r.json())
+    .then((d) => setPremiumUnlocked(Boolean(d?.isActive)))
+    .catch(() => {});
+};
+
+// 1) on first render
+useEffect(() => {
+  refreshPremium();
+}, []);
+
+// 2) when user logs in or out
+useEffect(() => {
+  if (user) {
+    refreshPremium();
+  } else {
+    setPremiumUnlocked(false);
+  }
+}, [user?.id]);
+
+// 3) after returning from Stripe (?checkout=success)
+useEffect(() => {
+  if (searchParams?.get('checkout') === 'success') {
+    refreshPremium();
+  }
+}, [searchParams]);
+
 
   return (
     <ClerkProvider>
