@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://your-temp-or-final-domain.com
+
+# Sitemaps
+Sitemap: https://your-temp-or-final-domain.com/sitemap.xml

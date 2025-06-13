@@ -11,13 +11,16 @@ import {
   useUser,
 } from '@clerk/nextjs';
 import { useSearchParams } from 'next/navigation';
-import { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState, Suspense } from 'react';
+
 
 // 1️⃣ RootLayout only does the Provider
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <ClerkProvider>
-      <InnerLayout>{children}</InnerLayout>
+      <Suspense fallback={<div>Loading…</div>}>
+        <InnerLayout>{children}</InnerLayout>
+      </Suspense>
     </ClerkProvider>
   );
 }
