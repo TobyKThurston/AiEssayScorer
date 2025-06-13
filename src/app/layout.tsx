@@ -194,6 +194,32 @@ return (
           nav ul li button:hover::after {
             width: 100%;
           }
+
+          .site-footer {
+            margin-top: 2rem;
+            padding: 1.5rem 0;
+            color: #6b7280;           /* gray-500 */
+            font-size: 0.875rem;      /* small text */
+            text-align: center;
+            background: #111827;      /* match your dark theme (optional) */
+          }
+
+          .site-footer a {
+            color: #9ca3af;           /* gray-400 */
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.2s ease;
+          }
+
+          .site-footer a:hover {
+            color: #ffffff;           /* brighten on hover */
+          }
+
+          .site-footer .sep {
+            margin: 0 0.5rem;
+            color: #6b7280;
+          }
+
         `}</style>
 
 
@@ -287,6 +313,14 @@ return (
 
           {/*— Page content —*/}
           <main>{children}</main>
+
+          <footer className="site-footer">
+            <Link href="/terms">Terms of Service</Link>
+            <span className="sep">•</span>
+            <Link href="/privacy">Privacy Policy</Link>
+            <p>© {new Date().getFullYear()} Ivy Admit AI. All rights reserved.</p>
+          </footer>
+
         </body>
       </html>
   );
