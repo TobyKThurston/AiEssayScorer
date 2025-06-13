@@ -1,4 +1,3 @@
-// File: src/app/layout.tsx
 'use client';
 
 import './globals.css';
@@ -9,138 +8,191 @@ import {
   SignedOut,
   SignInButton,
   SignOutButton,
-  useUser,  
+  useUser,
 } from '@clerk/nextjs';
-import { useSearchParams } from 'next/navigation'; 
+import { useSearchParams } from 'next/navigation';
 import { ReactNode, useEffect, useState } from 'react';
 
+// 1️⃣ RootLayout only does the Provider
 export default function RootLayout({ children }: { children: ReactNode }) {
-  /* ── premium status for navbar ───────────────────────── */
-
-const [premiumUnlocked, setPremiumUnlocked] = useState(false);
-
-const { user } = useUser();             // ← know when they sign in/out
-const searchParams = useSearchParams(); // ← know if URL has ?checkout=success
-
-// helper so we don’t duplicate fetch logic
-const refreshPremium = () => {
-  fetch('/api/check-subscription')
-    .then((r) => r.ok && r.json())
-    .then((d) => setPremiumUnlocked(Boolean(d?.isActive)))
-    .catch(() => {});
-};
-
-// 1) on first render
-useEffect(() => {
-  refreshPremium();
-}, []);
-
-// 2) when user logs in or out
-useEffect(() => {
-  if (user) {
-    refreshPremium();
-  } else {
-    setPremiumUnlocked(false);
-  }
-}, [user?.id]);
-
-// 3) after returning from Stripe (?checkout=success)
-useEffect(() => {
-  if (searchParams?.get('checkout') === 'success') {
-    refreshPremium();
-  }
-}, [searchParams]);
-
-
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body>
-          {/*— Original header CSS —*/}
-          <style jsx global>{`
-            * {
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-            }
-            body {
-              font-family: 'Poppins', sans-serif;
-              background-color: #000;
-              color: #fff;
-            }
+      <InnerLayout>{children}</InnerLayout>
+    </ClerkProvider>
+  );
+}
 
-            /* Banner + nav layout */
-            .top-tag {
-              text-align: center;
-              padding: 12px;
-              background-color: #111827;
-              font-weight: 600;
-              color: #93c5fd;
-              letter-spacing: 0.5px;
-            }
-            nav {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              padding: 20px 60px;
-              background-color: #000;
-            }
+// 2️⃣ InnerLayout is rendered _inside_ the ClerkProvider
+function InnerLayout({ children }: { children: ReactNode }) {
+  /* ── premium status for navbar ───────────────────────── */
+  const [premiumUnlocked, setPremiumUnlocked] = useState(false);
 
-            /* Logo */
-            nav a,
-            nav a:visited {
-              text-decoration: none;
-              color: inherit;
-            }
-            nav .logo {
-              font-size: 1.8rem;
-              font-weight: 700;
-              color: #b3d9ff;
-            }
-            nav ul {
-              list-style: none;
-              display: flex;
-              align-items: center;
-              gap: 30px;
-            }
-            nav ul li {
-              display: flex;
-              align-items: center;
-            }
+  const { user } = useUser();             // NOW valid: you're inside ClerkProvider
+  const searchParams = useSearchParams(); // OK inside client
 
-            /* Nav buttons */
-            nav ul li button {
-              background: none;
-              border: none;
-              font-family: inherit;
-              font-size: inherit;
-              color: #b3d9ff;
-              font-weight: 600;
-              position: relative;
-              cursor: pointer;
-              transition: color 0.3s ease;
-              padding: 0;
-              line-height: 1;
-            }
-            nav ul li button::after {
-              content: '';
-              position: absolute;
-              width: 0;
-              height: 2px;
-              background-color: #b3d9ff;
-              bottom: -5px;
-              left: 0;
-              right: 0;
-              margin: 0 auto;
-              transition: width 0.3s ease;
-            }
-            nav ul li button:hover {
-              color: #93c5fd;
-            }
-            nav ul li button:hover::after {
-              width: 100%;
-            }
-          `}</style>
+  // helper so we don’t duplicate fetch logic
+  const refreshPremium = () => {
+    fetch('/api/check-subscription')
+      .then((r) => r.ok && r.json())
+      .then((d) => setPremiumUnlocked(Boolean(d?.isActive)))
+      .catch(() => {});
+  };
+
+  // 1) on first render
+  useEffect(() => {
+    refreshPremium();
+  }, []);
+
+  // 2) when user logs in or out
+  useEffect(() => {
+    if (user) {
+      refreshPremium();
+    } else {
+      setPremiumUnlocked(false);
+    }
+  }, [user?.id]);
+
+  // 3) after returning from Stripe (?checkout=success)
+  useEffect(() => {
+    if (searchParams?.get('checkout') === 'success') {
+      refreshPremium();
+    }
+  }, [searchParams]);
+
+
+return (
+  <ClerkProvider>
+    <html lang="en">
+      <head>
+        <title>Ivy Admit AI • Instant College Essay Feedback</title>
+        <meta
+          name="description"
+          content="Get instant, AI-powered feedback on your college essays. 2 free reviews/day—upgrade for full 4–6 personalized suggestions."
+        />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Ivy Admit AI • Instant College Essay Feedback"
+        />
+        <meta
+          property="og:description"
+          content="AI-driven clarity, structure, grammar, and more. 2 free reviews/day—upgrade for full insights."
+        />
+        <meta
+          property="og:url"
+          content={process.env.NEXT_PUBLIC_SITE_URL}
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_SITE_URL}/og-image.png`}
+        />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@YourTwitterHandle" />
+        <meta
+          name="twitter:title"
+          content="Ivy Admit AI • Instant College Essay Feedback"
+        />
+        <meta
+          name="twitter:description"
+          content="Get instant AI feedback on your essays. Free tier—unlock premium for full personalized suggestions!"
+        />
+        <meta
+          name="twitter:image"
+          content={`${process.env.NEXT_PUBLIC_SITE_URL}/twitter-card.png`}
+        />
+      </head>
+
+      <body>
+        {/*— Original header CSS —*/}
+        <style jsx global>{`
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+          body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+          }
+
+          /* Banner + nav layout */
+          .top-tag {
+            text-align: center;
+            padding: 12px;
+            background-color: #111827;
+            font-weight: 600;
+            color: #93c5fd;
+            letter-spacing: 0.5px;
+          }
+          nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background-color: #000;
+          }
+
+          /* Logo */
+          nav a,
+          nav a:visited {
+            text-decoration: none;
+            color: inherit;
+          }
+          nav .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #b3d9ff;
+          }
+          nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+          }
+          nav ul li {
+            display: flex;
+            align-items: center;
+          }
+
+          /* Nav buttons */
+          nav ul li button {
+            background: none;
+            border: none;
+            font-family: inherit;
+            font-size: inherit;
+            color: #b3d9ff;
+            font-weight: 600;
+            position: relative;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            padding: 0;
+            line-height: 1;
+          }
+          nav ul li button::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #b3d9ff;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transition: width 0.3s ease;
+          }
+          nav ul li button:hover {
+            color: #93c5fd;
+          }
+          nav ul li button:hover::after {
+            width: 100%;
+          }
+        `}</style>
+
 
           {/*— Header HTML —*/}
           <div className="top-tag">Developed at the Ivy League 🧠🌿</div>
