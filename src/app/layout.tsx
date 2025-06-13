@@ -1,4 +1,5 @@
 'use client';
+export const dynamic = 'force-dynamic';
 
 import './globals.css';
 import Link from 'next/link';
@@ -64,7 +65,6 @@ function InnerLayout({ children }: { children: ReactNode }) {
 
 
 return (
-  <ClerkProvider>
     <html lang="en">
       <head>
         <title>Ivy Admit AI • Instant College Essay Feedback</title>
@@ -289,7 +289,6 @@ return (
           <main>{children}</main>
         </body>
       </html>
-    </ClerkProvider>
   );
 }
 
