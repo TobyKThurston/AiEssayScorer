@@ -1,4 +1,3 @@
-// File: src/app/page.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -26,7 +25,7 @@ export default function HomePage() {
 
         /* ---------- Hero ---------- */
         .hero {
-          height: calc(85vh - var(--header-height));   /* slightly smaller */
+          height: calc(85vh - var(--header-height));
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -42,7 +41,6 @@ export default function HomePage() {
           background: linear-gradient(90deg,#93c5fd,#e0f2fe);
           -webkit-background-clip:text;
           -webkit-text-fill-color:transparent;
-          transition:opacity .8s ease-in-out;
         }
         .description { margin-top:1rem; font-size:1.5rem; max-width:640px; color:#cbd5e1; }
         .review-btn {
@@ -52,7 +50,7 @@ export default function HomePage() {
         }
         .review-btn:hover { background:#93c5fd; transform:translateY(-3px); box-shadow:0 14px 24px rgba(59,130,246,.2); }
 
-        /* simple fade‑in */
+        /* fade‑in-up animation */
         .fade-in-up { animation: fadeInUp .6s ease forwards; }
         @keyframes fadeInUp { from { opacity:0; transform:translateY(10px);} to { opacity:1; transform:translateY(0);} }
 
@@ -62,9 +60,9 @@ export default function HomePage() {
         }
       `}</style>
 
-      <section className="hero fade-in-up">
+      <section className="hero">
         <div className="rotating-wrapper">
-          <span className="rotating-text">{texts[index]}</span>
+          <span key={texts[index]} className="rotating-text fade-in-up">{texts[index]}</span>
           <span className="mapped-out">Mapped&nbsp;Out</span>
         </div>
 
@@ -79,6 +77,7 @@ export default function HomePage() {
     </>
   );
 }
+
 
 
 

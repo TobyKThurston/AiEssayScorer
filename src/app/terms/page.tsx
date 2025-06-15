@@ -144,7 +144,7 @@ export default function TermsPage() {
             <p className="leading-relaxed">
               Questions? Email{' '}
               <a
-                href="mailto:support@ivyadmit.ai"
+                href="mailto:getivyadmit@gmail.com"
                 className="text-blue-400 hover:text-blue-200"
               >
                 support@ivyadmit.ai
