@@ -1,153 +1,218 @@
-// app/terms/page.tsx
+/* app/terms/page.tsx */
 import React from 'react';
 
 export const metadata = {
   title: 'Terms of Service – Ivy Admit AI',
-  description: 'Terms governing use of Ivy Admit AI.',
+  description: 'Official Terms governing use of Ivy Admit AI.',
 };
 
 export default function TermsPage() {
   return (
     <div className="bg-[#111827] min-h-screen py-16">
-      <div className="max-w-2xl mx-auto px-6">
-        {/* Title */}
+      <div className="max-w-3xl mx-auto px-6">
+        {/* Title & Effective Date */}
         <h1 className="text-4xl font-extrabold text-white text-center mb-2">
           Terms of Service
         </h1>
         <p className="text-center text-sm text-gray-400 mb-8">
-          <strong>Effective date:</strong> June 13, 2025
+          <strong>Effective date:</strong> June&nbsp;15,&nbsp;2025
         </p>
 
-        {/* Content */}
-        <div className="space-y-8 text-gray-300">
+        {/* --------------- Terms --------------- */}
+        <div className="space-y-8 text-gray-300 leading-relaxed">
+          {/* 1. Acceptance */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
               1. Acceptance of Terms
             </h2>
-            <p className="leading-relaxed">
-              By accessing or using <strong>ivyadmit.ai</strong> (the “Service”),
-              you agree to these Terms of Service and our Privacy Policy. If you
-              don’t agree, please don’t use the Service.
+            <p>
+              By accessing or using <strong>ivyadmit.ai</strong> (the “Service”,
+              “we”, “us”, or “our”), you agree to be bound by these Terms of
+              Service (<strong>“Terms”</strong>) and our&nbsp;
+              <a
+                href="/privacy"
+                className="text-blue-400 hover:text-blue-200 underline"
+              >
+                Privacy&nbsp;Policy
+              </a>
+              . If you do not agree, do not use the Service.
             </p>
           </section>
 
+          {/* 2. Eligibility */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
               2. Eligibility
             </h2>
-            <p className="leading-relaxed">
-              You must be at least 13 years old and able to enter legal
-              agreements. By using the Service, you represent that you meet
-              these requirements.
+            <p>
+              You must be at least 13&nbsp;years old and capable of entering a
+              legally binding agreement to use the Service.
             </p>
           </section>
 
+          {/* 3. Account */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
               3. Account Registration
             </h2>
-            <ul className="list-disc list-inside space-y-2 leading-relaxed">
+            <ul className="list-disc list-inside space-y-2">
               <li>
-                You sign in via Clerk; you’re responsible for safeguarding your
-                credentials.
+                Authentication is provided by Clerk; you are responsible for
+                safeguarding your login credentials.
               </li>
-              <li>Keep your billing info up to date to avoid interruption.</li>
+              <li>
+                You agree to keep your billing information accurate and up to
+                date.
+              </li>
             </ul>
           </section>
 
+          {/* 4. Service & Usage */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
               4. Service &amp; Usage
             </h2>
-            <p className="leading-relaxed">
-              We provide AI-powered essay feedback (“Essay Reviews”). Free tier:
-              2 credits/day. Premium tier: unlimited credits for $5/month via
-              Stripe.
+            <p>
+              Ivy&nbsp;Admit&nbsp;AI provides AI-powered essay feedback
+              (collectively, “<strong>Essay Reviews</strong>”). The free tier
+              includes <strong>2&nbsp;credits per day</strong>; the premium tier
+              offers <strong>unlimited credits</strong> for
+              <strong> US&nbsp;$5&nbsp;per month</strong>.
             </p>
           </section>
 
+          {/* 5. Payments */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
               5. Payments &amp; Subscriptions
             </h2>
-            <p className="leading-relaxed">
-              All subscription payments are processed by Stripe. You authorize
-              recurring charges until you cancel. No refunds for partial
-              billing periods, except where required by law.
+            <p>
+              Payments are processed by Stripe, Inc. You authorize recurring
+              charges until cancelled. Partial-period refunds are not provided
+              except where required by law.
             </p>
           </section>
 
+          {/* 6. Cancellation */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
               6. Cancellation
             </h2>
-            <p className="leading-relaxed">
-              Cancel anytime in your account settings or via the Stripe customer
-              portal; cancellation takes effect at period end.
+            <p>
+              You may cancel anytime via <strong>Manage / Cancel</strong> in
+              your account or through the Stripe customer portal; service
+              remains active until the end of the current billing cycle.
             </p>
           </section>
 
+          {/* 7. Intellectual Property */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
               7. Intellectual Property
             </h2>
-            <p className="leading-relaxed">
-              We own all rights to the Service code, designs, and AI outputs.
-              You retain ownership of essays you submit, but grant us a license
-              to process and store them.
+            <p>
+              We own all rights in the Service, including code, designs, and AI
+              outputs. You retain ownership of any essay text you submit but
+              grant us a worldwide license to process, store, and display it for
+              the purpose of providing the Service.
             </p>
           </section>
 
+          {/* 8. Prohibited Conduct */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              8. Prohibited Conduct
+              8. Prohibited Conduct &amp; Academic Integrity
             </h2>
-            <p className="leading-relaxed">
-              Don’t reverse-engineer the Service, submit unlawful content, or
-              abuse the API (rate limits apply).
+            <ul className="list-disc list-inside space-y-2">
+              <li>
+                Do not submit unlawful, infringing, or harmful content, or
+                attempt to reverse-engineer the Service.
+              </li>
+              <li>
+                The feedback is intended for <strong>inspiration</strong> and
+                self-improvement&nbsp;only. <strong>Do not copy</strong> AI
+                suggestions verbatim into assignments or violate any academic
+                honor code.
+              </li>
+              <li>Rate-limits and anti-abuse measures apply.</li>
+            </ul>
+          </section>
+
+          {/* 9. AI / Educational Disclaimer */}
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-2">
+              9. Educational &amp; AI Disclaimer
+            </h2>
+            <p>
+              Essay Reviews are generated by large-language-model systems.
+              Content is provided <strong>for educational guidance only</strong>
+              and <strong>does not guarantee admission</strong> to any
+              institution. You should exercise independent judgment or consult
+              qualified professionals before relying on the feedback.
             </p>
           </section>
 
+          {/* 10. Cookies & Compliance */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              9. Disclaimers &amp; Liability
+              10. Cookies &amp; Data Compliance
             </h2>
-            <p className="leading-relaxed">
-              THE SERVICE IS PROVIDED “AS-IS.” OUR LIABILITY IS LIMITED TO THE
-              AMOUNT YOU PAID IN THE PRIOR 3 MONTHS OR $50, WHICHEVER IS LESS.
+            <p>
+              We use cookies and third-party analytics to improve the Service.
+              By using the site you consent to the use of cookies as described
+              in our Privacy Policy and to any rights afforded to you under
+              GDPR, CCPA, or other data-protection laws.
             </p>
           </section>
 
+          {/* 11. Disclaimers & Liability */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              10. Governing Law
+              11. Disclaimers &amp; Limitation of Liability
             </h2>
-            <p className="leading-relaxed">
-              These Terms are governed by the laws of New York.
+            <p>
+              THE SERVICE IS PROVIDED “AS IS” WITHOUT WARRANTY. OUR TOTAL
+              LIABILITY FOR ANY CLAIM ARISING OUT OF THESE TERMS WILL NOT EXCEED
+              THE GREATER OF (A) AMOUNTS PAID BY YOU IN THE LAST THREE MONTHS OR
+              (B) FIFTY U.S. DOLLARS&nbsp;($50).
             </p>
           </section>
 
+          {/* 12. Governing Law */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              11. Changes to These Terms
+              12. Governing Law
             </h2>
-            <p className="leading-relaxed">
-              We may update these Terms; we’ll post a new effective date and
-              notify you by email. Continued use is acceptance.
+            <p>
+              These Terms are governed by the laws of the&nbsp;State&nbsp;of
+              New&nbsp;York, USA, without regard to conflict-of-law principles.
             </p>
           </section>
 
+          {/* 13. Updates */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              12. Contact
+              13. Changes to These Terms
             </h2>
-            <p className="leading-relaxed">
-              Questions? Email{' '}
+            <p>
+              We may update these Terms from time to time. Material changes will
+              be announced on the site or via email; the “Effective&nbsp;date”
+              above will be updated. Continued use constitutes acceptance.
+            </p>
+          </section>
+
+          {/* 14. Contact */}
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-2">
+              14. Contact
+            </h2>
+            <p>
+              Questions or concerns? Email&nbsp;
               <a
                 href="mailto:getivyadmit@gmail.com"
-                className="text-blue-400 hover:text-blue-200"
+                className="text-blue-400 hover:text-blue-200 underline"
               >
-                support@ivyadmit.ai
+                getivyadmit@gmail.com
               </a>
               .
             </p>
@@ -157,5 +222,3 @@ export default function TermsPage() {
     </div>
   );
 }
-
-

@@ -1,127 +1,213 @@
-// app/privacy/page.tsx
+/* app/privacy/page.tsx */
 import React from 'react';
 
 export const metadata = {
   title: 'Privacy Policy – Ivy Admit AI',
-  description: 'Our commitment to your privacy and data security.',
+  description: 'How we collect, use, and protect your data.',
 };
 
 export default function PrivacyPage() {
   return (
     <div className="bg-[#111827] min-h-screen py-16">
-      <div className="max-w-2xl mx-auto px-6">
-        {/* Title */}
+      <div className="max-w-3xl mx-auto px-6">
+        {/* Header */}
         <h1 className="text-4xl font-extrabold text-white text-center mb-2">
-          Privacy Policy
+          Privacy&nbsp;Policy
         </h1>
         <p className="text-center text-sm text-gray-400 mb-8">
-          <strong>Effective date:</strong> June 13, 2025
+          <strong>Effective date:</strong>&nbsp;June&nbsp;15,&nbsp;2025
         </p>
 
-        {/* Content */}
-        <div className="space-y-8 text-gray-300">
+        {/* Policy */}
+        <div className="space-y-8 text-gray-300 leading-relaxed">
+          {/* 1. Intro */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              1. Introduction
+              1.&nbsp;Introduction
             </h2>
-            <p className="leading-relaxed">
-              At <strong>ivyadmit.ai</strong> (“we”, “us”), we respect your privacy. This policy explains what data we collect, why, and how you can control it.
+            <p>
+              At <strong>ivyadmit.ai</strong> (“<strong>we</strong>,”
+              “<strong>us</strong>,” or “<strong>our</strong>”), we respect your
+              privacy and are committed to protecting your personal
+              information. This Privacy Policy explains what data we collect,
+              why we collect it, and how you can exercise your rights.
             </p>
           </section>
 
+          {/* 2. Data We Collect */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              2. Information We Collect
+              2.&nbsp;Information&nbsp;We&nbsp;Collect
             </h2>
-            <p className="leading-relaxed">
-              <strong>a. Account & Profile Data:</strong> Name, email, username (via Clerk). Payment info is handled by Stripe; we don’t store full card details.
-            </p>
-            <p className="leading-relaxed">
-              <strong>b. Content You Submit:</strong> Essays, prompts, extra info—so we can generate feedback.
-            </p>
-            <p className="leading-relaxed">
-              <strong>c. Usage & Analytics:</strong> Pages visited, button clicks, session lengths, IP addresses, browser and device info.
+            <ul className="list-disc list-inside space-y-3">
+              <li>
+                <strong>Account&nbsp;Data&nbsp;–</strong> Name, email, and
+                profile ID provided by Clerk; partial billing details (last&nbsp;4
+                of card, card brand) from Stripe. We never store full card
+                numbers or CVV.
+              </li>
+              <li>
+                <strong>Essay&nbsp;Content&nbsp;–</strong> Essays, prompts, and
+                supplementary text you submit so we can generate feedback.
+              </li>
+              <li>
+                <strong>Usage&nbsp;Data&nbsp;–</strong> Log files, IP address,
+                device/browser type, and interaction events (page views, button
+                clicks) collected via analytics cookies or pixels.
+              </li>
+            </ul>
+          </section>
+
+          {/* 3. How we use */}
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-2">
+              3.&nbsp;How&nbsp;We&nbsp;Use&nbsp;Your&nbsp;Information
+            </h2>
+            <p>
+              We use your data to (a)&nbsp;operate and improve the Service,
+              (b)&nbsp;process payments and manage subscriptions, (c)&nbsp;train
+              and evaluate AI models (in de-identified or aggregated form),
+              (d)&nbsp;provide support and important account notices, and
+              (e)&nbsp;measure marketing performance.
             </p>
           </section>
 
+          {/* 4. Cookies */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              3. How We Use Your Data
+              4.&nbsp;Cookies&nbsp;&amp;&nbsp;Tracking
             </h2>
-            <p className="leading-relaxed">
-              Service delivery (grading essays, tracking credits), billing (processing subscriptions), product improvement (analytics, A/B testing), and communications (account notices, billing receipts).
+            <p>
+              We use first-party cookies for authentication (Clerk) and third-
+              party cookies/pixels&nbsp;(e.g.&nbsp;Google&nbsp;Analytics,
+              Meta&nbsp;Pixel) to understand how visitors use the site. You can
+              disable cookies in your browser; some features may stop working.
+              EU/UK visitors will see a consent banner on first visit.
             </p>
           </section>
 
+          {/* 5. Sharing */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              4. Cookies & Tracking
+              5.&nbsp;Data&nbsp;Sharing&nbsp;With&nbsp;Third&nbsp;Parties
             </h2>
-            <p className="leading-relaxed">
-              We use cookies to authenticate users (Clerk), process payments (Stripe), and gather anonymized analytics (Google Analytics or similar). You can disable cookies via your browser settings, but some features may not work.
+            <p>We only share data with:</p>
+            <ul className="list-disc list-inside space-y-3">
+              <li>
+                <strong>Clerk</strong> – user authentication &amp; session
+                management.
+              </li>
+              <li>
+                <strong>Stripe</strong> – payment processing and invoicing.
+              </li>
+              <li>
+                <strong>Analytics providers</strong> – aggregate usage stats
+                (e.g.&nbsp;Google Analytics).
+              </li>
+              <li>
+                <strong>Legal authorities</strong> – when required to comply
+                with a valid subpoena, court order, or applicable law.
+              </li>
+            </ul>
+            <p>We never sell your personal information.</p>
+          </section>
+
+          {/* 6. Retention */}
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-2">
+              6.&nbsp;Data&nbsp;Retention
+            </h2>
+            <p>
+              Account data and essays are retained until you delete your account
+              or request removal. De-identified analytics may be kept up to
+              <strong> 24&nbsp;months</strong>. Back-ups are purged on a rolling
+              30-day schedule.
             </p>
           </section>
 
+          {/* 7. Security */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              5. Data Sharing & Third Parties
+              7.&nbsp;Security
             </h2>
-            <p className="leading-relaxed">
-              We share data with: Clerk (authentication), Stripe (payments), analytics providers, and legal authorities if required by law.
+            <p>
+              We secure data in transit with TLS 1.2+ and at rest with
+              industry-standard encryption. No method of storage or transmission
+              is 100% secure; you use the Service at your own risk.
             </p>
           </section>
 
+          {/* 8. Subscription */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              6. Data Retention
+              8.&nbsp;Subscription&nbsp;&amp;&nbsp;Cancellation
             </h2>
-            <p className="leading-relaxed">
-              We retain account info and essays until you delete your account or we discontinue the Service. Analytics data is stored for up to 24 months.
+            <p>
+              You can cancel anytime via the in-app
+              <strong> Manage&nbsp;/ Cancel </strong>button (Stripe customer
+              portal). Upon cancellation, premium features remain available
+              until the current billing period ends.
             </p>
           </section>
 
+          {/* 9. GDPR & CCPA */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              7. Security
+              9.&nbsp;Your&nbsp;Privacy&nbsp;Rights (GDPR / CCPA)
             </h2>
-            <p className="leading-relaxed">
-              We use industry-standard encryption (TLS) and best practices to protect your data, but no system is 100% secure.
+            <p>
+              Depending on your location, you may have the right to access,
+              correct, port, or delete personal data and to object to certain
+              processing. To exercise these rights, email&nbsp;
+              <a
+                href="mailto:getivyadmit@gmail.com"
+                className="text-blue-400 hover:text-blue-200 underline"
+              >
+                getivyadmit@gmail.com
+              </a>
+              &nbsp;with the subject&nbsp;“Privacy Request.” We will verify your
+              identity and respond within&nbsp;30 days.
             </p>
           </section>
 
+          {/* 10. Children */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              8. Subscription & Cancellation
+              10.&nbsp;Children’s&nbsp;Privacy
             </h2>
-            <p className="leading-relaxed">
-              To cancel your subscription, please email <strong>support@YOUR_DOMAIN.com</strong> with the subject “Cancel Subscription.” We will process your request within 48 hours. You will retain premium access until the end of your current billing period.
+            <p>
+              The Service is not directed to children under&nbsp;13. We do not
+              knowingly collect personal data from children. If you believe a
+              child has provided us data, contact us for deletion.
             </p>
           </section>
 
+          {/* 11. Updates */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              9. California Privacy Rights (CCPA)
+              11.&nbsp;Updates&nbsp;to&nbsp;This&nbsp;Policy
             </h2>
-            <p className="leading-relaxed">
-              If you are a California resident, you have the right to know, delete, and opt out of sale of your personal data. To exercise these rights, email <strong>privacy@YOUR_DOMAIN.com</strong>.
+            <p>
+              We may revise this Policy from time to time. Material changes will
+              be posted here and, where appropriate, notified by email. The
+              “Effective date” above will always reflect the latest version.
             </p>
           </section>
 
+          {/* 12. Contact */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              10. Updates to This Policy
+              12.&nbsp;Contact&nbsp;Us
             </h2>
-            <p className="leading-relaxed">
-              We may update this policy; we will post changes here with a new effective date. Continued use constitutes acceptance.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-white mb-2">
-              11. Contact Us
-            </h2>
-            <p className="leading-relaxed">
-              For privacy questions: <a href="mailto:getivyadmit@gmail.com" className="text-blue-400 hover:text-blue-200">privacy@YOUR_DOMAIN.com</a>
+            <p>
+              Questions or concerns? Email&nbsp;
+              <a
+                href="mailto:getivyadmit@gmail.com"
+                className="text-blue-400 hover:text-blue-200 underline"
+              >
+                getivyadmit@gmail.com
+              </a>
+              .
             </p>
           </section>
         </div>
