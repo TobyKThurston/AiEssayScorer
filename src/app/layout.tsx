@@ -26,14 +26,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   );
 }
 
+// 2️⃣ InnerLayout is rendered _inside_ the ClerkProvider
 function InnerLayout({ children }: { children: ReactNode }) {
   /* ── premium status for navbar ───────────────────────── */
   const [premiumUnlocked, setPremiumUnlocked] = useState(false);
 
-  const { user } = useUser();
-  const searchParams = useSearchParams();
+  const { user } = useUser();             // NOW valid: you're inside ClerkProvider
+  const searchParams = useSearchParams(); // OK inside client
 
-  /* helper so we don’t duplicate fetch logic */
+  // helper so we don’t duplicate fetch logic
   const refreshPremium = () => {
     fetch('/api/check-subscription')
       .then((r) => r.ok && r.json())
@@ -41,34 +42,27 @@ function InnerLayout({ children }: { children: ReactNode }) {
       .catch(() => {});
   };
 
-  /* ✨ ① NEW helper that opens Stripe’s customer-portal */
-  const handleManage = async () => {
-    try {
-      const res = await fetch('/api/stripe/portal', { method: 'POST' });
-      if (!res.ok) throw new Error();
-      const { url } = await res.json();
-      window.location.href = url;            // → Stripe portal
-    } catch {
-      alert('Could not open billing portal. Please try again.');
+  // 1) on first render
+  useEffect(() => {
+    refreshPremium();
+  }, []);
+
+  // 2) when user logs in or out
+  useEffect(() => {
+    if (user) {
+      refreshPremium();
+    } else {
+      setPremiumUnlocked(false);
     }
-  };
-
-  /* ---------- effects ---------- */
-  useEffect(() => { refreshPremium(); }, []);                 // 1) first render
-
-  useEffect(() => {                                           // 2) login / logout
-    if (user) refreshPremium();
-    else setPremiumUnlocked(false);
   }, [user?.id]);
 
-  useEffect(() => {                                           // 3) back from checkout
-    if (searchParams?.get('checkout') === 'success') refreshPremium();
+  // 3) after returning from Stripe (?checkout=success)
+  useEffect(() => {
+    if (searchParams?.get('checkout') === 'success') {
+      refreshPremium();
+    }
   }, [searchParams]);
 
-  /* ✨ ② NEW effect — back from customer portal */
-  useEffect(() => {
-    if (searchParams?.get('portal') === 'done') refreshPremium();
-  }, [searchParams]);
 
 return (
     <html lang="en">
