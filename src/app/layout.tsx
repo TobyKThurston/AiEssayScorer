@@ -243,37 +243,37 @@ function InnerLayout({ children }: { children: ReactNode }) {
               </SignedOut>
 
               <SignedIn>
-                {/* Upgrade button – only for free users */}
-                {!premiumUnlocked && (
-                  <li>
-                    <button
-                      onClick={() =>
-                        document.dispatchEvent(
-                          new CustomEvent('open-premium-popup')
-                        )
-                      }
-                      style={{
-                        backgroundColor: '#2563eb',
-                        color: '#fff',
-                        borderRadius: '8px',
-                        padding: '6px 14px',
-                        fontWeight: 600,
-                        fontSize: '0.9rem',
-                        marginRight: '18px',
-                        cursor: 'pointer',
-                      }}
-                    >
-                      Upgrade
-                    </button>
-                  </li>
-                )}
+                  {/* Upgrade button – only for free users */}
+                  {!premiumUnlocked && (
+                    <li>
+                      <button
+                        onClick={() =>
+                          document.dispatchEvent(new CustomEvent('open-premium-popup'))
+                        }
+                        style={{
+                          backgroundColor: '#2563eb',
+                          color: '#fff',
+                          borderRadius: '8px',
+                          padding: '6px 14px',
+                          fontWeight: 600,
+                          fontSize: '0.9rem',
+                          marginRight: '18px',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        Upgrade
+                      </button>
+                    </li>
+                  )}
 
-                <li>
-                  <SignOutButton>
-                    <button>Sign Out</button>
-                  </SignOutButton>
-                </li>
-              </SignedIn>
+                  {/* “Manage” links to the new account page */}
+                  <li>
+                    <Link href="/account">
+                      <button>Manage</button>
+                    </Link>
+                  </li>
+                </SignedIn>
+
             </ul>
           </nav>
 
