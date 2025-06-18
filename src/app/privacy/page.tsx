@@ -15,7 +15,7 @@ export default function PrivacyPage() {
           Privacy&nbsp;Policy
         </h1>
         <p className="text-center text-sm text-gray-400 mb-8">
-          <strong>Effective date:</strong>&nbsp;June&nbsp;15,&nbsp;2025
+          <strong>Effective date:</strong>&nbsp;June&nbsp;18,&nbsp;2025
         </p>
 
         {/* Policy */}
@@ -131,7 +131,7 @@ export default function PrivacyPage() {
               7.&nbsp;Security
             </h2>
             <p>
-              We secure data in transit with TLS 1.2+ and at rest with
+              We secure data in transit with TLS&nbsp;1.2+ and at rest with
               industry-standard encryption. No method of storage or transmission
               is 100% secure; you use the Service at your own risk.
             </p>
@@ -143,17 +143,17 @@ export default function PrivacyPage() {
               8.&nbsp;Subscription&nbsp;&amp;&nbsp;Cancellation
             </h2>
             <p>
-              You can cancel anytime via the in-app
-              <strong> Manage&nbsp;/ Cancel </strong>button (Stripe customer
-              portal). Upon cancellation, premium features remain available
-              until the current billing period ends.
+              You can manage or cancel your subscription anytime via the in-app
+              <strong> Manage&nbsp;Billing </strong>button, which opens the
+              Stripe customer portal. Premium features stay active until the end
+              of the current billing period after cancellation.
             </p>
           </section>
 
           {/* 9. GDPR & CCPA */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-2">
-              9.&nbsp;Your&nbsp;Privacy&nbsp;Rights (GDPR / CCPA)
+              9.&nbsp;Your&nbsp;Privacy&nbsp;Rights&nbsp;(GDPR&nbsp;/&nbsp;CCPA)
             </h2>
             <p>
               Depending on your location, you may have the right to access,
@@ -166,7 +166,7 @@ export default function PrivacyPage() {
                 getivyadmit@gmail.com
               </a>
               &nbsp;with the subject&nbsp;“Privacy Request.” We will verify your
-              identity and respond within&nbsp;30 days.
+              identity and respond within&nbsp;30&nbsp;days.
             </p>
           </section>
 
