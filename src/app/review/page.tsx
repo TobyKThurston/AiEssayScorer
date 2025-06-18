@@ -310,50 +310,129 @@ useEffect(() => {
           .main-content { flex-direction: column; }
           .submit-button { align-self: stretch; }
         }
-          .premium-popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0,0,0,0.65);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            }
+          /* ===== Premium Modal (v2) ===== */
+:root {
+  --bg-primary: #000;
+  --bg-panel-start: #1f2937;
+  --bg-panel-end: #111827;
+  --accent: #3b82f6;
+  --accent-light: #b3d9ff;
+  --text-light: #ffffff;
+}
 
-            .premium-popup {
-            background: linear-gradient(145deg, #1f2937, #111827);
-            border: 1px solid #3b82f6;
-            border-radius: 24px;
-            padding: 32px;
-            width: 90%;
-            max-width: 480px;
-            color: #fff;
-            box-shadow: 0 10px 30px rgba(59,130,246,0.3);
-            text-align: center;
-            position: relative; 
-            }
+/* Overlay */
+#premium-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.75);
+  z-index: 2000;
+}
 
-            .premium-popup h2 {
-            font-size: 1.5rem;
-            color: #b3d9ff;
-            margin-bottom: 16px;
-            }
+/* Modal box */
+.modal-box {
+  position: relative;
+  width: min(90%, 520px);
+  background: linear-gradient(145deg, var(--bg-panel-start), var(--bg-panel-end));
+  border: 1px solid var(--accent);
+  border-radius: 18px;
+  padding: 32px 28px 96px;       /* bottom room for CTA */
+  color: var(--text-light);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
 
-            .premium-popup ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 24px;
-            }
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--accent-light);
+}
+.close-btn:hover { color: var(--accent); }
 
-            .premium-popup li {
-            margin-bottom: 12px;
-            font-size: 1rem;
-            line-height: 1.5;
-            color: #ccc;
-            }
+/* Headline */
+.headline {
+  font-size: 2.0rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.headline .highlight {
+font-size: 2.0rem;
+  background: linear-gradient(90deg, #93c5fd, #e0f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.headline .price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent-light);
+}
+
+/* Teaser section */
+.teaser            { font-size: 0.9rem; color: var(--accent-light); margin-bottom: 24px; }
+.teaser strong     { color: var(--text-light); }
+.teaser-list       { list-style: none; padding: 0; margin-top: 10px; display: flex; flex-direction: column; gap: 12px; }
+.teaser-list li    { background: rgba(59,130,246,0.10); padding: 10px 12px; border-radius: 10px; line-height: 1.35; }
+.teaser-label      { font-weight: 700; color: var(--accent-light); letter-spacing: .5px; }
+
+/* Benefit bubbles */
+.benefits          { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; list-style: none; padding: 0; }
+.benefits .bubble  {
+  background: rgba(59,130,246,0.15);
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  color: var(--accent-light);
+  white-space: nowrap;
+}
+
+/* Star rating & testimonial */
+.rating-wrapper { text-align: center; margin-bottom: 28px; }
+.rating         { font-size: 1.1rem; letter-spacing: 2px; color: #facc15; }
+.testimonial    { font-size: 0.8rem; color: var(--accent-light); margin-top: 4px; }
+
+/* CTA */
+.upgrade-btn {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  background: var(--accent);
+  border: none;
+  border-radius: 12px;
+  padding: 16px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(59,130,246,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.upgrade-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(59,130,246,0.4);
+}
+
+/* Mobile tweak */
+@media (max-width: 440px) {
+  .modal-box  { padding: 28px 18px 92px; }
+  .upgrade-btn{ right: 18px; bottom: 18px; padding: 14px 22px; }
+}
+
+/* --- size bump for body text --- */
+.modal-box,
+.modal-box * {
+  font-size: 1.05em;    /* everything inside grows 5 % */
+}
+
+
 
 
       `}</style>
@@ -524,31 +603,85 @@ useEffect(() => {
           </div>
         </SignedIn>
        {/* ─── Premium pop-up ───────────────────────────── */}
+{/* ─── Premium pop-up (v2) ─────────────────────── */}
 {showPremiumPopup && !premiumUnlocked && (
   <div
-    className="premium-popup-overlay"          /* backdrop */
-    onClick={() => setShowPremiumPopup(false)} /* close on backdrop */
+    id="premium-modal"
+    onClick={(e) => {
+        // close only when the click originates on the backdrop itself
+        if (e.target === e.currentTarget) setShowPremiumPopup(false);
+      }}
   >
     <div
-      className="premium-popup relative"       /* card */
-      onClick={(e) => e.stopPropagation()}     /* keep clicks inside */
+      className="modal-box"
+      /* stop clicks inside the card from closing it */
+      onClick={(e) => e.stopPropagation()}
     >
+      {/* Close (×) */}
+      <button
+        className="close-btn"
+        aria-label="Close premium dialog"
+        onClick={() => setShowPremiumPopup(false)}
+      >
+        &times;
+      </button>
 
+      {/* Headline */}
+      <h2 className="headline">
+        <span className="highlight">Get Premium! </span>
+        <small className="price">
+          Only <strong>$4.99&nbsp;/&nbsp;month</strong>
+        </small>
+      </h2>
 
-      <h2>Unlock Premium Features</h2>
-      <ul>
-        <li>Detailed Suggestions for Improvement</li>
-        <li>Unlimited Essay Submissions</li>
-        <li>Advanced AI Review with More Depth</li>
-        <li>$5 a month</li>
+      {/* Teaser */}
+      <div className="teaser">
+        <strong>Real examples of Premium suggestions:</strong>
+        <ul className="teaser-list">
+          <li>
+            <span className="teaser-label">STRUCTURE — Issue: “I learned perseverance…” </span>
+            This vague claim dilutes impact. Re-anchor the theme in a <em>scene</em>: describe the
+            2 a.m. moment you rewired the debate-club livestream after it failed, then reflect on
+            what that grit means for your future research intensity.
+          </li>
+          <li>
+            <span className="teaser-label">SCHOOL FIT — Issue: Missing Columbia references </span>
+            Thread concrete links: cite the Urban Studies <em>Community Impact Lab</em>, Professor
+            Foner’s oral-history work, and WKCR’s campus radio. Show how these resources advance
+            your journalism goals and leverage NYC’s storytelling ecosystem.
+          </li>
+          <li>
+            <em>…and more personalised fixes waiting for you inside!</em>
+          </li>
+        </ul>
+      </div>
+
+      {/* Benefits */}
+      <ul className="benefits">
+        <li className="bubble">🚀 Faster turnaround</li>
+        <li className="bubble">🎯 Custom rewrite plan</li>
+        <li className="bubble">📈 Score analytics</li>
+        <li className="bubble">📬 Priority support</li>
       </ul>
 
-      <button className="submit-button" onClick={handleUpgrade}>
+      {/* Stars + testimonial */}
+      <div className="rating-wrapper">
+        <div className="rating" aria-label="Rated 5 out of 5 stars">
+          ★ ★ ★ ★ ★
+        </div>
+        <div className="testimonial">
+          “Worth way more than $5, the rewrite plan improved my essay so much!”
+        </div>
+      </div>
+
+      {/* CTA */}
+      <button className="upgrade-btn" onClick={handleUpgrade}>
         Upgrade Now
       </button>
     </div>
   </div>
 )}
+
 
     
       </section>

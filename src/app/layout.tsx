@@ -64,12 +64,19 @@ function InnerLayout({ children }: { children: ReactNode }) {
   }, [searchParams]);
 
 
-return (
+  return (
     <html lang="en">
-     
-
-      <body>
-        {/*— Original header CSS —*/}
+        <head>
+          {/* Inter 400 / 600 / 700 */}
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+            rel="stylesheet"
+          />
+        </head>
+  
+        <body>
+          {/*— Original header CSS —*/}
+  
         <style jsx global>{`
           * {
             margin: 0;
