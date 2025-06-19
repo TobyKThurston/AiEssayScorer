@@ -126,17 +126,18 @@ useEffect(() => {
         return total / categories.length;   // 0-10 average
     }, [result]);
   
-  const getValue = (name: string) => {
-    if (!result) return 0;
-    switch (name) {
-      case 'Clarity':     return Number(result.clarity);
-      case 'Structure':   return Number(result.structure);
-      case 'Grammar':     return Number(result.grammar ?? result.overall ?? result.mechanics ?? result.grammer ?? 0);
-      case 'Originality': return Number(result.originality);
-      case 'Engagement':  return Number(result.engagement);
-      default:            return 0;
-    }
-  };
+    function getValue(name: string): number {
+        if (!result) return 0;
+        switch (name) {
+          case 'Clarity':     return Number(result.clarity);
+          case 'Structure':   return Number(result.structure);
+          case 'Grammar':     return Number(result.grammar ?? result.overall ?? result.mechanics ?? result.grammer ?? 0);
+          case 'Originality': return Number(result.originality);
+          case 'Engagement':  return Number(result.engagement);
+          default:            return 0;
+        }
+      }
+      
 
   /* ---------------- Submit -------------------- */
   const handleSubmit = async () => {
