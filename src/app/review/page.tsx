@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useUser, SignedIn, SignedOut, SignInButton } from '@clerk/nextjs';  // ⬅️ added useUser
 
 
@@ -119,10 +119,13 @@ useEffect(() => {
 
 
   const categories = ['Clarity', 'Structure', 'Grammar', 'Originality', 'Engagement'];
-  const calcOverall = () => {
-    const total = categories.reduce((sum, name) => sum + getValue(name), 0);
-    return total / categories.length;          //  divide by 5
-  };
+// --- Derived Overall Score ---
+    const overallScore = useMemo(() => {
+        if (!result) return null;           // nothing yet
+        const total = categories.reduce((sum, name) => sum + getValue(name), 0);
+        return total / categories.length;   // 0-10 average
+    }, [result]);
+  
   const getValue = (name: string) => {
     if (!result) return 0;
     switch (name) {
@@ -592,7 +595,7 @@ font-size: 2.0rem;
     {/* ── BIG overall badge ── */}
     <div className="overall-score">
       <span className="score-number">
-        {result ? Number(result.overall ?? 0).toFixed(1) : '-'}
+            {overallScore !== null ? overallScore.toFixed(1) : '-'}
       </span>
       <span className="score-label">Overall</span>
     </div>
