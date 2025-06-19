@@ -119,6 +119,10 @@ useEffect(() => {
 
 
   const categories = ['Clarity', 'Structure', 'Grammar', 'Originality', 'Engagement'];
+  const calcOverall = () => {
+    const total = categories.reduce((sum, name) => sum + getValue(name), 0);
+    return total / categories.length;          //  divide by 5
+  };
   const getValue = (name: string) => {
     if (!result) return 0;
     switch (name) {
@@ -259,18 +263,61 @@ useEffect(() => {
         .submit-button:disabled { opacity: .5; cursor: not-allowed; }
 
         /* ---------- Ratings ---------- */
-        .rating-category { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-        .category-name { flex: 1; }
-        .rating-bar { flex: 2; height: 8px; border-radius: 4px; background: #374151; overflow: hidden; position: relative; }
-        .rating-fill { height: 100%; border-radius: 4px; background: #3b82f6; transition: width 0.3s ease; }
-        .rating-bar.loading { background: #2a2e35; }
-        .rating-bar.loading::before {
-          content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-          animation: shimmer 1.5s infinite;
-        }
-        @keyframes shimmer { 100% { transform: translateX(100%); } }
-        .rating-value { width: 40px; text-align: right; font-size: .875rem; color: #888; }
+.ratings-section    { display: flex; gap: 24px; }     /* badge | list */
+
+.overall-score {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  background: linear-gradient(145deg, #1f2937, #111827);
+  border: 1px solid #3b82f6;
+  border-radius: 16px;
+  padding: 20px 16px;
+}
+.score-number       { font-size: 2.75rem; font-weight: 700; color: #3b82f6; line-height: 1; }
+.score-label        { font-size: .9rem;  color: #b3d9ff; margin-top: 4px; letter-spacing: .5px; }
+
+.ratings-list       { flex: 1; max-height: 35vh; overflow-y: auto; }
+
+.rating-category    { display: flex; gap: 10px; align-items: center; margin-bottom: 12px; }
+.category-name      { width: 90px; }                  /* keeps names in a neat column */
+
+.bar-wrapper        { display: flex; gap: 6px; align-items: center; flex: 1; }
+.rating-bar         { flex: 1; height: 8px; border-radius: 4px; background: #374151; overflow: hidden; position: relative; }
+.rating-fill        { height: 100%; border-radius: 4px; background: #3b82f6; transition: width 0.3s ease; }
+
+.rating-bar.loading { background: #2a2e35; }
+.rating-bar.loading::before {
+  content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer { 100% { transform: translateX(100%); } }
+
+.rating-value       { min-width: 45px; text-align: left; font-size: .875rem; color: #888; }
+
+@media (max-width: 480px) {
+  .ratings-section { flex-direction: column; }
+  .overall-score   { align-self: center; margin-bottom: 16px; }
+}
+.ratings-section {          /* now stacks header + columns */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;                /* space between header and columns */
+}
+
+.ratings-heading {          /* the new <h3> */
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.ratings-body {             /* badge | list row */
+  display: flex;
+  gap: 24px;
+}
+
+
 
         /* ---------- AI Review & Suggestions ---------- */
         .review-bubble h3,
@@ -535,27 +582,47 @@ font-size: 2.0rem;
 
             {/* ========== RIGHT COLUMN (Analysis) ========== */}
             <div className="analysis-section">
-              {/* Ratings */}
-              <div className="ratings-bubble bubble">
-                <h3>Essay Ratings</h3>
-                {categories.map((name) => {
-                  const value = getValue(name);
-                  const pct   = (value / 10) * 100;
-                  return (
-                    <div key={name} className="rating-category">
-                      <span className="category-name">{name}</span>
-                      <div className={`rating-bar${loading || !result ? ' loading' : ''}`}>
-                        {!loading && result && (
-                          <div className="rating-fill" style={{ width: `${pct}%` }} />
-                        )}
-                      </div>
-                      <span className="rating-value">
-                        {loading || !result ? '--/10' : `${value}/10`}
-                      </span>
-                    </div>
-                  );
-                })}
+{/* === Ratings =========================================== */}
+<div className="ratings-section bubble">
+  {/* header now sits on its own row */}
+  <h3 className="ratings-heading">Essay Ratings</h3>
+
+  {/* columns: badge | list */}
+  <div className="ratings-body">
+    {/* ── BIG overall badge ── */}
+    <div className="overall-score">
+      <span className="score-number">
+        {result ? Number(result.overall ?? 0).toFixed(1) : '-'}
+      </span>
+      <span className="score-label">Overall</span>
+    </div>
+
+    {/* ── Per-category list ── */}
+    <div className="ratings-list">
+      {categories.map((name) => {
+        const value = getValue(name);
+        const pct   = (value / 10) * 100;
+        return (
+          <div key={name} className="rating-category">
+            <span className="category-name">{name}</span>
+            <div className="bar-wrapper">
+              <div className={`rating-bar${loading || !result ? ' loading' : ''}`}>
+                {!loading && result && (
+                  <div className="rating-fill" style={{ width: `${pct}%` }} />
+                )}
               </div>
+              <span className="rating-value">
+                    {loading || !result ? '-' : `${value}/10`}
+              </span>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</div>
+
+
 
               {/* AI Review */}
               <div className="review-bubble bubble">
