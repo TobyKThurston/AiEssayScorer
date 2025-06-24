@@ -11,7 +11,7 @@ import {
   SignOutButton,
   useUser,
 } from '@clerk/nextjs';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, usePathname } from 'next/navigation';
 import React, { ReactNode, useEffect, useState, Suspense } from 'react';
 
 
@@ -33,6 +33,7 @@ function InnerLayout({ children }: { children: ReactNode }) {
 
   const { user } = useUser();             // NOW valid: you're inside ClerkProvider
   const searchParams = useSearchParams(); // OK inside client
+  const pathname = usePathname(); 
 
   // helper so we don’t duplicate fetch logic
   const refreshPremium = () => {
@@ -244,7 +245,7 @@ function InnerLayout({ children }: { children: ReactNode }) {
 
               <SignedIn>
                   {/* Upgrade button – only for free users */}
-                  {!premiumUnlocked && (
+                  {!premiumUnlocked && pathname !== '/' && (
                     <li>
                       <button
                         onClick={() =>

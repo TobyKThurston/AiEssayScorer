@@ -269,6 +269,13 @@ useEffect(() => {
         /* ---------- Ratings ---------- */
 .ratings-section    { display: flex; gap: 24px; }     /* badge | list */
 
+/* put some space under the “Essay Ratings” block */
+.ratings-section {
+  margin-bottom: 10px;      /* same 10 px you use elsewhere */
+}
+
+
+
 .overall-score {
   display: flex; flex-direction: column; align-items: center;
   justify-content: center;
