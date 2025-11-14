@@ -91,7 +91,10 @@ SCORING GUIDELINES:
 
 CRITICAL: You MUST respond with ONLY valid JSON, no additional text or markdown formatting. Use this exact structure:
 {
-  "score": <number between 0-100, be critical and consistent>,
+  "score": <number between 0-100, be critical and consistent - this is the OVERALL score>,
+  "contentScore": <number between 0-30, score for Content & Message category>,
+  "structureScore": <number between 0-25, score for Structure & Organization category>,
+  "styleScore": <number between 0-25, score for Writing Style & Voice category>,
   "strengths": ["strength 1", "strength 2", "strength 3", "strength 4", "strength 5"],
   "improvements": ["improvement 1", "improvement 2", "improvement 3", "improvement 4", "improvement 5"],
   "contentFeedback": "<detailed, critical feedback on content and message - be specific and actionable>",
@@ -106,6 +109,8 @@ CRITICAL: You MUST respond with ONLY valid JSON, no additional text or markdown 
     }
   ]
 }
+
+IMPORTANT: The overall "score" should be approximately the sum of contentScore + structureScore + styleScore + specificityScore (0-10) + grammarScore (0-10), but you only need to return contentScore, structureScore, and styleScore explicitly. The overall score reflects all categories.
 
 IMPORTANT FOR lineSuggestions:
 - Provide 3-5 specific line-by-line suggestions

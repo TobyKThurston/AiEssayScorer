@@ -15,6 +15,9 @@ export type FormData = {
 
 export type EssayRating = {
   score: number;
+  contentScore?: number;
+  structureScore?: number;
+  styleScore?: number;
   strengths: string[];
   improvements: string[];
   contentFeedback: string;
