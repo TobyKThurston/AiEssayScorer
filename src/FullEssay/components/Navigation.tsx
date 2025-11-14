@@ -24,6 +24,27 @@ export function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
+  const handleUpgrade = async () => {
+    try {
+      const response = await fetch("/api/create-checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID,
+        }),
+      });
+      const data = await response.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else if (data.error) {
+        alert(data.error);
+      }
+    } catch (error) {
+      console.error("Error creating checkout:", error);
+      alert("Failed to start checkout. Please try again.");
+    }
+  };
+
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -45,12 +66,17 @@ export function Navigation() {
             {!loading && (
               <>
                 {user ? (
-                  <button
-                    onClick={handleLogout}
-                    className="text-[#475569] hover:text-[#0F172A] transition-colors"
-                  >
-                    Logout
-                  </button>
+                  <>
+                    <Button variant="secondary" onClick={handleUpgrade}>
+                      Upgrade to Pro
+                    </Button>
+                    <button
+                      onClick={handleLogout}
+                      className="text-[#475569] hover:text-[#0F172A] transition-colors"
+                    >
+                      Logout
+                    </button>
+                  </>
                 ) : (
                   <Link href="/auth/login" className="text-[#475569] hover:text-[#0F172A] transition-colors">
                     Login
@@ -82,12 +108,17 @@ export function Navigation() {
               {!loading && (
                 <>
                   {user ? (
-                    <button
-                      onClick={handleLogout}
-                      className="text-[#475569] hover:text-[#0F172A] transition-colors py-2 text-left"
-                    >
-                      Logout
-                    </button>
+                    <>
+                      <Button variant="secondary" onClick={handleUpgrade} className="w-full">
+                        Upgrade to Pro
+                      </Button>
+                      <button
+                        onClick={handleLogout}
+                        className="text-[#475569] hover:text-[#0F172A] transition-colors py-2 text-left"
+                      >
+                        Logout
+                      </button>
+                    </>
                   ) : (
                     <Link
                       href="/auth/login"

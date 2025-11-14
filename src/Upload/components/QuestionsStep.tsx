@@ -160,14 +160,42 @@ export function QuestionsStep({ formData, updateFormData, onNext, onBack, loadin
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35 }}
         >
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between flex-wrap gap-3">
             <span className="text-sm text-[#1E40AF]">
               <strong>Tokens remaining:</strong> {tokens}
             </span>
             {tokens < 1 && (
-              <span className="text-sm text-red-600 font-medium">
-                You need at least 1 token to rate an essay
-              </span>
+              <div className="flex items-center gap-3 flex-wrap">
+                <span className="text-sm text-red-600 font-medium">
+                  You need at least 1 token to rate an essay
+                </span>
+                <Button
+                  variant="primary"
+                  onClick={async () => {
+                    try {
+                      const response = await fetch("/api/create-checkout", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID,
+                        }),
+                      });
+                      const data = await response.json();
+                      if (data.url) {
+                        window.location.href = data.url;
+                      } else if (data.error) {
+                        alert(data.error);
+                      }
+                    } catch (error) {
+                      console.error("Error creating checkout:", error);
+                      alert("Failed to start checkout. Please try again.");
+                    }
+                  }}
+                  className="text-sm"
+                >
+                  Subscribe for unlimited reviews
+                </Button>
+              </div>
             )}
           </div>
         </motion.div>

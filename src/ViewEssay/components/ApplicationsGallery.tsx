@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
-import { ChevronDown, GraduationCap, BookOpen, Award, FileText } from "lucide-react";
+import { ChevronDown, GraduationCap, BookOpen, Award, FileText, Lock } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
+import { Button } from "./Button";
 
 type Application = {
   id: string;
@@ -583,19 +585,66 @@ const mockSchools: School[] = [
 export function ApplicationsGallery() {
   const [expandedSchool, setExpandedSchool] = useState<string | null>(null);
   const [expandedApplication, setExpandedApplication] = useState<string | null>(null);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const { user } = useAuth();
+
+  useEffect(() => {
+    if (user) {
+      fetch("/api/subscription-status")
+        .then(res => res.json())
+        .then(data => {
+          setIsSubscribed(data.isSubscribed || false);
+          setLoading(false);
+        })
+        .catch(() => {
+          setIsSubscribed(false);
+          setLoading(false);
+        });
+    } else {
+      setLoading(false);
+    }
+  }, [user]);
+
+  const handleSubscribe = async () => {
+    try {
+      const response = await fetch("/api/create-checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID,
+        }),
+      });
+      const data = await response.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else if (data.error) {
+        alert(data.error);
+      }
+    } catch (error) {
+      console.error("Error creating checkout:", error);
+      alert("Failed to start checkout. Please try again.");
+    }
+  };
 
   const toggleSchool = (schoolId: string) => {
+    if (!isSubscribed && !user) {
+      return;
+    }
     setExpandedSchool(expandedSchool === schoolId ? null : schoolId);
     setExpandedApplication(null);
   };
 
   const toggleApplication = (appId: string) => {
+    if (!isSubscribed && !user) {
+      return;
+    }
     setExpandedApplication(expandedApplication === appId ? null : appId);
   };
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] pt-24 pb-16">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-16">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-16 relative">
         {/* Header */}
         <motion.div
           className="text-center mb-12"
@@ -611,8 +660,30 @@ export function ApplicationsGallery() {
           </p>
         </motion.div>
 
+        {/* Subscription Overlay */}
+        {!isSubscribed && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="absolute inset-0 bg-white/90 backdrop-blur-md z-40 flex items-center justify-center rounded-2xl"
+          >
+            <div className="bg-white rounded-2xl p-8 md:p-12 max-w-md mx-6 shadow-[0_8px_32px_rgba(0,0,0,0.12)] text-center border border-slate-200">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center mx-auto mb-4">
+                <Lock className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-2xl font-bold text-[#0F172A] mb-3">Subscribe for Access</h2>
+              <p className="text-[#64748B] mb-6">
+                Get unlimited access to view successful college applications and learn from real essays that got students into top universities.
+              </p>
+              <Button variant="primary" onClick={handleSubscribe} className="w-full">
+                Subscribe Now
+              </Button>
+            </div>
+          </motion.div>
+        )}
+
         {/* Schools List */}
-        <div className="space-y-4">
+        <div className={`space-y-4 ${!isSubscribed ? "blur-sm pointer-events-none select-none" : ""}`}>
           {mockSchools.map((school, index) => (
             <motion.div
               key={school.id}
