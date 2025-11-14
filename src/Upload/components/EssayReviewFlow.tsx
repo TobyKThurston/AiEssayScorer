@@ -53,17 +53,29 @@ export function EssayReviewFlow() {
   };
 
   const nextStep = async () => {
-    if (currentStep === 2) {
-      // Before moving to results, rate the essay
-      await rateEssay();
-    } else {
-      setCurrentStep(prev => Math.min(prev + 1, 3));
+    if (currentStep === 1) {
+      // Start rating immediately when Continue is clicked after pasting essay
+      setCurrentStep(2); // Move to questions step (which will show loading)
+      await rateEssay(); // Start rating in background
+    } else if (currentStep === 2) {
+      // If rating is already done, just move to results
+      if (rating) {
+        setCurrentStep(3);
+      } else {
+        // Otherwise wait for rating to complete
+        await rateEssay();
+      }
     }
   };
 
   const rateEssay = async () => {
     if (!formData.essayText.trim()) {
       setError("Please paste your essay first");
+      return;
+    }
+
+    // Don't start another rating if one is already in progress
+    if (loading) {
       return;
     }
 
@@ -78,6 +90,8 @@ export function EssayReviewFlow() {
         },
         body: JSON.stringify({
           essay: formData.essayText,
+          targetSchools: formData.targetSchools,
+          prompt: formData.prompt,
         }),
       });
 
@@ -88,6 +102,7 @@ export function EssayReviewFlow() {
       }
 
       setRating(data.rating);
+      // Automatically move to results when rating completes
       setCurrentStep(3);
       // Refresh tokens
       const tokenRes = await fetch("/api/tokens");

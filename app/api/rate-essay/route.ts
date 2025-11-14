@@ -17,13 +17,22 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { essay } = await request.json();
+    const { essay, targetSchools, prompt } = await request.json();
 
     if (!essay || typeof essay !== "string" || essay.trim().length === 0) {
       return NextResponse.json(
         { error: "Essay text is required" },
         { status: 400 }
       );
+    }
+
+    // Build context for the AI
+    let contextInfo = "";
+    if (targetSchools && Array.isArray(targetSchools) && targetSchools.length > 0) {
+      contextInfo += `\n\nTarget schools: ${targetSchools.join(", ")}`;
+    }
+    if (prompt && typeof prompt === "string" && prompt.trim().length > 0) {
+      contextInfo += `\n\nEssay prompt: ${prompt}`;
     }
 
     // Check user tokens
@@ -70,7 +79,7 @@ Format your response as JSON with the following structure:
         },
         {
           role: "user",
-          content: `Please rate this college admissions essay:\n\n${essay}`,
+          content: `Please rate this college admissions essay:${contextInfo}\n\n${essay}`,
         },
       ],
       response_format: { type: "json_object" },

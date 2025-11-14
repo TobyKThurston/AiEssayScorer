@@ -45,6 +45,41 @@ export function QuestionsStep({ formData, updateFormData, onNext, onBack, loadin
 
   const canProceed = formData.essayType && formData.targetSchools.length > 0;
 
+  // Show loading overlay when rating is in progress
+  if (loading) {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="space-y-8"
+      >
+        <div className="text-center mb-8">
+          <h1 className="mb-3">Analyzing your essay</h1>
+          <p className="text-[#64748B]">
+            Our AI is reading and rating your essay...
+          </p>
+        </div>
+        <div className="flex flex-col items-center justify-center py-16">
+          <motion.div
+            className="w-16 h-16 border-4 border-[#3B82F6] border-t-transparent rounded-full mb-4"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          />
+          <p className="text-[#64748B]">This may take a few moments</p>
+        </div>
+        {error && (
+          <motion.div
+            className="p-4 rounded-xl bg-red-50 border border-red-200"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <p className="text-sm text-red-600">{error}</p>
+          </motion.div>
+        )}
+      </motion.div>
+    );
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, x: 20 }}

@@ -15,18 +15,22 @@ export async function GET(request: Request) {
     if (!error && data.session) {
       // Initialize user tokens if this is their first login
       const userId = data.session.user.id;
-      const { data: existingUser } = await supabase
+      const { data: existingUser, error: checkError } = await supabase
         .from("user_tokens")
         .select("id")
         .eq("user_id", userId)
-        .single();
+        .maybeSingle();
 
-      if (!existingUser) {
-        // Give new user 1 free token
-        await supabase.from("user_tokens").insert({
+      // If user doesn't exist in user_tokens table, give them 1 free token
+      if (!existingUser && !checkError) {
+        const { error: insertError } = await supabase.from("user_tokens").insert({
           user_id: userId,
           tokens: 1,
         });
+        
+        if (insertError) {
+          console.error("Error initializing user tokens:", insertError);
+        }
       }
 
       const redirectUrl = new URL(next, siteUrl);
