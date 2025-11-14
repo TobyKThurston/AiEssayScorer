@@ -50,43 +50,54 @@ export async function POST(request: Request) {
     }
 
     // Call OpenAI to rate the essay
+    // Use gpt-4o or gpt-4-turbo which support JSON mode, fallback to gpt-4 with manual parsing
+    const systemPrompt = `You are an expert college admissions essay reviewer. Analyze the essay and provide a detailed review.
+
+CRITICAL: You MUST respond with ONLY valid JSON, no additional text or markdown formatting. Use this exact structure:
+{
+  "score": <number between 0-10>,
+  "strengths": ["strength 1", "strength 2", "strength 3"],
+  "improvements": ["improvement 1", "improvement 2", "improvement 3"],
+  "contentFeedback": "<detailed feedback on content and message>",
+  "structureFeedback": "<detailed feedback on structure and organization>",
+  "styleFeedback": "<detailed feedback on writing style and voice>",
+  "recommendation": "<final recommendation>"
+}`;
+
+    // Call OpenAI - using gpt-4 with JSON parsing (works with all models)
     const completion = await openai.chat.completions.create({
       model: "gpt-4",
       messages: [
         {
           role: "system",
-          content: `You are an expert college admissions essay reviewer. Analyze the essay and provide:
-1. Overall score (out of 10)
-2. Strengths (3-5 bullet points)
-3. Areas for improvement (3-5 bullet points)
-4. Specific feedback on:
-   - Content and message
-   - Structure and organization
-   - Writing style and voice
-   - Grammar and mechanics (if applicable)
-5. Final recommendation
-
-Format your response as JSON with the following structure:
-{
-  "score": number,
-  "strengths": string[],
-  "improvements": string[],
-  "contentFeedback": string,
-  "structureFeedback": string,
-  "styleFeedback": string,
-  "recommendation": string
-}`,
+          content: systemPrompt,
         },
         {
           role: "user",
           content: `Please rate this college admissions essay:${contextInfo}\n\n${essay}`,
         },
       ],
-      response_format: { type: "json_object" },
       temperature: 0.7,
     });
 
-    const rating = JSON.parse(completion.choices[0].message.content || "{}");
+    const responseText = completion.choices[0].message.content || "{}";
+    
+    // Extract JSON from the response (handle markdown code blocks or plain JSON)
+    let jsonText = responseText.trim();
+    
+    // Remove markdown code blocks if present
+    const jsonMatch = jsonText.match(/```(?:json)?\s*(\{[\s\S]*\})\s*```/);
+    if (jsonMatch) {
+      jsonText = jsonMatch[1];
+    } else {
+      // Try to find JSON object in the text (find the first { to the last })
+      const braceMatch = jsonText.match(/\{[\s\S]*\}/);
+      if (braceMatch) {
+        jsonText = braceMatch[0];
+      }
+    }
+
+    const rating = JSON.parse(jsonText);
 
     // Deduct token
     await supabase
