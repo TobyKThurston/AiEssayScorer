@@ -58,20 +58,6 @@ export function QuestionsStep({ formData, updateFormData, onNext, onBack, loadin
         <p className="text-[#64748B]">
           Help us provide better feedback for your essay
         </p>
-        {loading && (
-          <motion.div
-            className="mt-4 p-3 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center gap-2"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <motion.div
-              className="w-4 h-4 border-2 border-[#3B82F6] border-t-transparent rounded-full"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-            />
-            <span className="text-sm text-[#1E40AF]">Analyzing your essay in the background...</span>
-          </motion.div>
-        )}
       </div>
 
       {/* Essay Type */}
@@ -205,16 +191,16 @@ export function QuestionsStep({ formData, updateFormData, onNext, onBack, loadin
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-        <Button variant="secondary" onClick={onBack} disabled={loading}>
+        <Button variant="secondary" onClick={onBack}>
           Back
         </Button>
         <Button
           variant="primary"
           onClick={onNext}
-          disabled={!canProceed || loading || (tokens !== null && tokens !== undefined && tokens < 1)}
-          className={(!canProceed || loading || (tokens !== null && tokens !== undefined && tokens < 1)) ? "opacity-50 cursor-not-allowed" : ""}
+          disabled={!canProceed || (tokens !== null && tokens !== undefined && tokens < 1)}
+          className={(!canProceed || (tokens !== null && tokens !== undefined && tokens < 1)) ? "opacity-50 cursor-not-allowed" : ""}
         >
-          {loading ? "Analyzing Essay..." : "Analyze Essay"}
+          Analyze Essay
         </Button>
       </motion.div>
     </motion.div>
