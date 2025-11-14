@@ -110,9 +110,30 @@ export function ResultsStep({ formData, rating, onBack }: ResultsStepProps) {
         transition={{ delay: 0.2 }}
       >
         {[
-          { label: "Content", score: rating.contentScore ?? Math.round(overallScore * 0.30), maxScore: 30, icon: FileText, feedback: rating.contentFeedback },
-          { label: "Structure", score: rating.structureScore ?? Math.round(overallScore * 0.25), maxScore: 25, icon: Target, feedback: rating.structureFeedback },
-          { label: "Style", score: rating.styleScore ?? Math.round(overallScore * 0.25), maxScore: 25, icon: TrendingUp, feedback: rating.styleFeedback }
+          { 
+            label: "Content", 
+            rawScore: rating.contentScore ?? Math.round(overallScore * 0.30), 
+            maxScore: 30, 
+            scaledScore: Math.round(((rating.contentScore ?? Math.round(overallScore * 0.30)) / 30) * 100),
+            icon: FileText, 
+            feedback: rating.contentFeedback 
+          },
+          { 
+            label: "Structure", 
+            rawScore: rating.structureScore ?? Math.round(overallScore * 0.25), 
+            maxScore: 25, 
+            scaledScore: Math.round(((rating.structureScore ?? Math.round(overallScore * 0.25)) / 25) * 100),
+            icon: Target, 
+            feedback: rating.structureFeedback 
+          },
+          { 
+            label: "Style", 
+            rawScore: rating.styleScore ?? Math.round(overallScore * 0.25), 
+            maxScore: 25, 
+            scaledScore: Math.round(((rating.styleScore ?? Math.round(overallScore * 0.25)) / 25) * 100),
+            icon: TrendingUp, 
+            feedback: rating.styleFeedback 
+          }
         ].map((item, index) => (
           <motion.div
             key={item.label}
@@ -129,15 +150,15 @@ export function ResultsStep({ formData, rating, onBack }: ResultsStepProps) {
                 </div>
                 <small className="text-[#64748B]">{item.label}</small>
               </div>
-              <span className={`text-2xl ${getScoreColor(item.score)}`} style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}>
-                {item.score}/{item.maxScore}
+              <span className={`text-2xl ${getScoreColor(item.scaledScore)}`} style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}>
+                {item.scaledScore}
               </span>
             </div>
             <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
               <motion.div
-                className={`h-full bg-gradient-to-r ${getScoreBg(item.score)} rounded-full`}
+                className={`h-full bg-gradient-to-r ${getScoreBg(item.scaledScore)} rounded-full`}
                 initial={{ width: 0 }}
-                animate={{ width: `${(item.score / item.maxScore) * 100}%` }}
+                animate={{ width: `${item.scaledScore}%` }}
                 transition={{ duration: 1, delay: 0.3 + index * 0.1 }}
               />
             </div>
