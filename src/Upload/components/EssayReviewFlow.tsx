@@ -36,6 +36,7 @@ export function EssayReviewFlow() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [tokens, setTokens] = useState<number | null>(null);
+  const [showBriefLoading, setShowBriefLoading] = useState(false);
   const { user } = useAuth();
 
   useEffect(() => {
@@ -48,22 +49,38 @@ export function EssayReviewFlow() {
     }
   }, [user]);
 
+  // Auto-advance to results if rating completes while on step 2 and brief loading is shown
+  useEffect(() => {
+    if (rating && showBriefLoading && currentStep === 2) {
+      // Rating just completed, move to results
+      setTimeout(() => {
+        setShowBriefLoading(false);
+        setCurrentStep(3);
+      }, 500); // Small delay to show completion
+    }
+  }, [rating, showBriefLoading, currentStep]);
+
   const updateFormData = (data: Partial<FormData>) => {
     setFormData(prev => ({ ...prev, ...data }));
   };
 
   const nextStep = async () => {
     if (currentStep === 1) {
-      // Start rating immediately when Continue is clicked after pasting essay
-      setCurrentStep(2); // Move to questions step (which will show loading)
-      await rateEssay(); // Start rating in background
+      // Start rating in background when Continue is clicked
+      setCurrentStep(2); // Move to questions step
+      rateEssay(); // Start rating in background (don't await)
     } else if (currentStep === 2) {
-      // If rating is already done, just move to results
+      // If rating is already done, move to results immediately
       if (rating) {
         setCurrentStep(3);
       } else {
-        // Otherwise wait for rating to complete
-        await rateEssay();
+        // Rating still in progress, show brief loading screen
+        setShowBriefLoading(true);
+        // Wait a bit for rating to complete, then move to results
+        setTimeout(() => {
+          setShowBriefLoading(false);
+          setCurrentStep(3);
+        }, 2000); // Show loading for 2 seconds
       }
     }
   };
@@ -102,8 +119,7 @@ export function EssayReviewFlow() {
       }
 
       setRating(data.rating);
-      // Automatically move to results when rating completes
-      setCurrentStep(3);
+      // Don't automatically move to results - wait for user to click Continue on step 2
       // Refresh tokens
       const tokenRes = await fetch("/api/tokens");
       const tokenData = await tokenRes.json();
@@ -175,16 +191,42 @@ export function EssayReviewFlow() {
             />
           )}
           {currentStep === 2 && (
-            <QuestionsStep
-              key="questions"
-              formData={formData}
-              updateFormData={updateFormData}
-              onNext={nextStep}
-              onBack={prevStep}
-              loading={loading}
-              error={error}
-              tokens={tokens}
-            />
+            <>
+              {showBriefLoading ? (
+                <motion.div
+                  key="brief-loading"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="space-y-8"
+                >
+                  <div className="text-center mb-8">
+                    <h1 className="mb-3">Finalizing your results</h1>
+                    <p className="text-[#64748B]">
+                      Almost there...
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center justify-center py-16">
+                    <motion.div
+                      className="w-16 h-16 border-4 border-[#3B82F6] border-t-transparent rounded-full mb-4"
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                    />
+                  </div>
+                </motion.div>
+              ) : (
+                <QuestionsStep
+                  key="questions"
+                  formData={formData}
+                  updateFormData={updateFormData}
+                  onNext={nextStep}
+                  onBack={prevStep}
+                  loading={loading}
+                  error={error}
+                  tokens={tokens}
+                />
+              )}
+            </>
           )}
           {currentStep === 3 && (
             <ResultsStep
