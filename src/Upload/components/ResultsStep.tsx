@@ -24,12 +24,22 @@ export function ResultsStep({ formData, rating, onBack }: ResultsStepProps) {
 
   if (!rating) {
     return (
-      <div className="text-center py-12">
-        <p className="text-[#64748B]">No rating data available. Please try again.</p>
-        <Button variant="secondary" onClick={onBack} className="mt-4">
-          Go Back
-        </Button>
-      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="space-y-8"
+      >
+        <div className="text-center mb-8">
+          <h1 className="mb-3">Almost there...</h1>
+        </div>
+        <div className="flex flex-col items-center justify-center py-16">
+          <motion.div
+            className="w-16 h-16 border-4 border-[#3B82F6] border-t-transparent rounded-full mb-4"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          />
+        </div>
+      </motion.div>
     );
   }
 
