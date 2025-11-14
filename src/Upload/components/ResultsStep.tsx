@@ -57,6 +57,14 @@ export function ResultsStep({ formData, rating, onBack }: ResultsStepProps) {
     return "from-[#EF4444] to-[#DC2626]";
   };
 
+  const getScoreLabel = (score: number) => {
+    if (score >= 92) return "Exceptional";
+    if (score >= 85) return "Excellent";
+    if (score >= 75) return "Good";
+    if (score >= 65) return "Average";
+    return "Needs Improvement";
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, x: 20 }}
@@ -91,7 +99,7 @@ export function ResultsStep({ formData, rating, onBack }: ResultsStepProps) {
         <div className={`text-7xl mt-2 mb-2 bg-gradient-to-br ${getScoreBg(overallScore)} bg-clip-text text-transparent`} style={{ fontFamily: "var(--font-heading)", fontWeight: 800 }}>
           {overallScore}
         </div>
-        <p className="text-[#475569]">Your essay is performing well</p>
+        <p className="text-[#475569]">{getScoreLabel(overallScore)}</p>
       </motion.div>
 
       {/* Score Breakdown */}
@@ -102,9 +110,9 @@ export function ResultsStep({ formData, rating, onBack }: ResultsStepProps) {
         transition={{ delay: 0.2 }}
       >
         {[
-          { label: "Content", score: Math.round(overallScore * 0.95), icon: FileText, feedback: rating.contentFeedback },
-          { label: "Structure", score: Math.round(overallScore * 0.9), icon: Target, feedback: rating.structureFeedback },
-          { label: "Style", score: Math.round(overallScore * 0.85), icon: TrendingUp, feedback: rating.styleFeedback }
+          { label: "Content", score: Math.round(overallScore * 0.30), icon: FileText, feedback: rating.contentFeedback },
+          { label: "Structure", score: Math.round(overallScore * 0.25), icon: Target, feedback: rating.structureFeedback },
+          { label: "Style", score: Math.round(overallScore * 0.25), icon: TrendingUp, feedback: rating.styleFeedback }
         ].map((item, index) => (
           <motion.div
             key={item.label}
@@ -271,14 +279,9 @@ export function ResultsStep({ formData, rating, onBack }: ResultsStepProps) {
               <p className="text-[#475569] whitespace-pre-wrap">{rating.recommendation}</p>
             </motion.div>
 
-            {/* Mock line-by-line suggestions for now */}
-            {[
-              {
-                original: "Sample line from your essay",
-                suggestion: "Improved version with better clarity",
-                reason: "Enhance clarity and impact"
-              }
-            ].map((item, index) => (
+            {/* Line-by-line suggestions */}
+            {rating.lineSuggestions && rating.lineSuggestions.length > 0 ? (
+              rating.lineSuggestions.map((item, index) => (
               <motion.div
                 key={index}
                 className="p-6 rounded-2xl bg-white border border-slate-200 shadow-[0_4px_24px_rgba(148,163,184,0.12)] hover:shadow-[0_8px_32px_rgba(148,163,184,0.18)] transition-all duration-300"
@@ -309,7 +312,8 @@ export function ResultsStep({ formData, rating, onBack }: ResultsStepProps) {
                   </div>
                 </div>
               </motion.div>
-            ))}
+              ))
+            ) : null}
           </div>
         )}
       </motion.div>

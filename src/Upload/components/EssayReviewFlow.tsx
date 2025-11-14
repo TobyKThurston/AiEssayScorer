@@ -21,6 +21,11 @@ export type EssayRating = {
   structureFeedback: string;
   styleFeedback: string;
   recommendation: string;
+  lineSuggestions?: Array<{
+    original: string;
+    suggestion: string;
+    reason: string;
+  }>;
 };
 
 export function EssayReviewFlow() {
