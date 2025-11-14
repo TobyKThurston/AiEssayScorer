@@ -36,12 +36,24 @@ function LoginForm() {
 
     try {
       // Use environment variable for production, fallback to window.location.origin for development
-      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || window.location.origin;
-      console.log("RedirectTo is:", siteUrl);
+      let siteUrl = process.env.NEXT_PUBLIC_SITE_URL || window.location.origin;
+      
+      // Ensure siteUrl is a full URL with protocol (handle cases where env var might be missing protocol)
+      if (!siteUrl.startsWith('http://') && !siteUrl.startsWith('https://')) {
+        siteUrl = `https://${siteUrl}`;
+      }
+      
+      // Ensure we have the full callback URL
+      const fullCallbackUrl = `${siteUrl}/auth/callback`;
+      
+      console.log("RedirectTo is:", fullCallbackUrl);
+      console.log("Site URL from env:", process.env.NEXT_PUBLIC_SITE_URL);
+      console.log("Window origin:", window.location.origin);
+      
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: siteUrl,
+          redirectTo: fullCallbackUrl,
         },
       });
       if (error) throw error;
