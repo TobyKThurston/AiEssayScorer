@@ -130,7 +130,7 @@ export function ResultsStep({ formData, rating, onBack }: ResultsStepProps) {
                 <small className="text-[#64748B]">{item.label}</small>
               </div>
               <span className={`text-2xl ${getScoreColor(item.score)}`} style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}>
-                {item.score}
+                {item.score}/100
               </span>
             </div>
             <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
