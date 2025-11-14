@@ -20,15 +20,27 @@ function LoginForm() {
     }
   }, [searchParams]);
 
+  useEffect(() => {
+    // Check if user is already logged in
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) {
+        const redirect = searchParams.get("redirect") || "/";
+        router.push(redirect);
+      }
+    });
+  }, [router, searchParams, supabase]);
+
   const handleGoogleSignIn = async () => {
     setError(null);
     setLoading(true);
 
     try {
+      // Use environment variable for production, fallback to window.location.origin for development
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || window.location.origin;
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `${window.location.origin}/auth/callback`,
+          redirectTo: `${siteUrl}/auth/callback`,
         },
       });
       if (error) throw error;

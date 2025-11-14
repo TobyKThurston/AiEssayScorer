@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Button } from "./Button";
-import { FormData } from "./EssayReviewFlow";
+import { FormData, EssayRating } from "./EssayReviewFlow";
 import { 
   CheckCircle2, 
   AlertTriangle, 
@@ -15,17 +15,25 @@ import { useState } from "react";
 
 interface ResultsStepProps {
   formData: FormData;
+  rating: EssayRating | null;
   onBack: () => void;
 }
 
-export function ResultsStep({ formData, onBack }: ResultsStepProps) {
+export function ResultsStep({ formData, rating, onBack }: ResultsStepProps) {
   const [activeTab, setActiveTab] = useState<"overview" | "suggestions">("overview");
 
-  // Mock scores based on word count and content
-  const structureScore = Math.min(95, 75 + Math.floor(Math.random() * 20));
-  const evidenceScore = Math.min(92, 70 + Math.floor(Math.random() * 22));
-  const toneScore = Math.min(88, 65 + Math.floor(Math.random() * 23));
-  const overallScore = Math.round((structureScore + evidenceScore + toneScore) / 3);
+  if (!rating) {
+    return (
+      <div className="text-center py-12">
+        <p className="text-[#64748B]">No rating data available. Please try again.</p>
+        <Button variant="secondary" onClick={onBack} className="mt-4">
+          Go Back
+        </Button>
+      </div>
+    );
+  }
+
+  const overallScore = rating.score;
 
   const getScoreColor = (score: number) => {
     if (score >= 85) return "text-[#10B981]";
@@ -84,9 +92,9 @@ export function ResultsStep({ formData, onBack }: ResultsStepProps) {
         transition={{ delay: 0.2 }}
       >
         {[
-          { label: "Structure", score: structureScore, icon: FileText },
-          { label: "Evidence", score: evidenceScore, icon: Target },
-          { label: "Tone", score: toneScore, icon: TrendingUp }
+          { label: "Content", score: Math.round(overallScore * 0.95), icon: FileText, feedback: rating.contentFeedback },
+          { label: "Structure", score: Math.round(overallScore * 0.9), icon: Target, feedback: rating.structureFeedback },
+          { label: "Style", score: Math.round(overallScore * 0.85), icon: TrendingUp, feedback: rating.styleFeedback }
         ].map((item, index) => (
           <motion.div
             key={item.label}
@@ -169,18 +177,12 @@ export function ResultsStep({ formData, onBack }: ResultsStepProps) {
                 <h3>Strengths</h3>
               </div>
               <ul className="space-y-2">
-                <li className="flex items-start gap-2 text-[#475569]">
-                  <CheckCircle2 className="w-5 h-5 text-[#10B981] mt-0.5 flex-shrink-0" />
-                  <span>Clear narrative arc with strong opening hook</span>
-                </li>
-                <li className="flex items-start gap-2 text-[#475569]">
-                  <CheckCircle2 className="w-5 h-5 text-[#10B981] mt-0.5 flex-shrink-0" />
-                  <span>Effective use of specific examples and evidence</span>
-                </li>
-                <li className="flex items-start gap-2 text-[#475569]">
-                  <CheckCircle2 className="w-5 h-5 text-[#10B981] mt-0.5 flex-shrink-0" />
-                  <span>Authentic voice that reflects personal growth</span>
-                </li>
+                {rating.strengths.map((strength, index) => (
+                  <li key={index} className="flex items-start gap-2 text-[#475569]">
+                    <CheckCircle2 className="w-5 h-5 text-[#10B981] mt-0.5 flex-shrink-0" />
+                    <span>{strength}</span>
+                  </li>
+                ))}
               </ul>
             </motion.div>
 
@@ -196,35 +198,75 @@ export function ResultsStep({ formData, onBack }: ResultsStepProps) {
                 <h3>Areas for improvement</h3>
               </div>
               <ul className="space-y-2">
-                <li className="flex items-start gap-2 text-[#475569]">
-                  <AlertTriangle className="w-5 h-5 text-[#F59E0B] mt-0.5 flex-shrink-0" />
-                  <span>Consider adding more quantifiable achievements</span>
-                </li>
-                <li className="flex items-start gap-2 text-[#475569]">
-                  <AlertTriangle className="w-5 h-5 text-[#F59E0B] mt-0.5 flex-shrink-0" />
-                  <span>Conclusion could more explicitly tie to future goals</span>
-                </li>
+                {rating.improvements.map((improvement, index) => (
+                  <li key={index} className="flex items-start gap-2 text-[#475569]">
+                    <AlertTriangle className="w-5 h-5 text-[#F59E0B] mt-0.5 flex-shrink-0" />
+                    <span>{improvement}</span>
+                  </li>
+                ))}
               </ul>
             </motion.div>
           </div>
         ) : (
           <div className="space-y-4">
-            {/* Line-by-line suggestions */}
+            {/* Detailed Feedback */}
+            <motion.div
+              className="p-6 rounded-2xl bg-white border border-slate-200 shadow-[0_4px_24px_rgba(148,163,184,0.12)]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <h3 className="mb-4 flex items-center gap-2">
+                <Lightbulb className="w-5 h-5 text-[#3B82F6]" />
+                Content Feedback
+              </h3>
+              <p className="text-[#475569] whitespace-pre-wrap">{rating.contentFeedback}</p>
+            </motion.div>
+
+            <motion.div
+              className="p-6 rounded-2xl bg-white border border-slate-200 shadow-[0_4px_24px_rgba(148,163,184,0.12)]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+            >
+              <h3 className="mb-4 flex items-center gap-2">
+                <FileText className="w-5 h-5 text-[#3B82F6]" />
+                Structure Feedback
+              </h3>
+              <p className="text-[#475569] whitespace-pre-wrap">{rating.structureFeedback}</p>
+            </motion.div>
+
+            <motion.div
+              className="p-6 rounded-2xl bg-white border border-slate-200 shadow-[0_4px_24px_rgba(148,163,184,0.12)]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <h3 className="mb-4 flex items-center gap-2">
+                <TrendingUp className="w-5 h-5 text-[#3B82F6]" />
+                Style Feedback
+              </h3>
+              <p className="text-[#475569] whitespace-pre-wrap">{rating.styleFeedback}</p>
+            </motion.div>
+
+            <motion.div
+              className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 shadow-[0_4px_24px_rgba(59,130,246,0.15)]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <h3 className="mb-4 flex items-center gap-2 text-[#3B82F6]">
+                <Target className="w-5 h-5" />
+                Recommendation
+              </h3>
+              <p className="text-[#475569] whitespace-pre-wrap">{rating.recommendation}</p>
+            </motion.div>
+
+            {/* Mock line-by-line suggestions for now */}
             {[
               {
-                original: "I have always been passionate about science.",
-                suggestion: "From my first chemistry set at age eight, I've pursued scientific discovery with relentless curiosity.",
-                reason: "More specific and engaging opening"
-              },
-              {
-                original: "This experience taught me a lot.",
-                suggestion: "This experience revealed the intersection of persistence and innovation—a lesson that reshaped my approach to problem-solving.",
-                reason: "Quantify the learning and make it memorable"
-              },
-              {
-                original: "I want to study at Harvard.",
-                suggestion: "At Harvard, I aim to collaborate with the Systems Biology department to explore computational approaches to disease modeling.",
-                reason: "Be specific about why this school and what you'll contribute"
+                original: "Sample line from your essay",
+                suggestion: "Improved version with better clarity",
+                reason: "Enhance clarity and impact"
               }
             ].map((item, index) => (
               <motion.div

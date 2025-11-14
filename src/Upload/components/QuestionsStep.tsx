@@ -8,6 +8,9 @@ interface QuestionsStepProps {
   updateFormData: (data: Partial<FormData>) => void;
   onNext: () => void;
   onBack: () => void;
+  loading?: boolean;
+  error?: string | null;
+  tokens?: number | null;
 }
 
 const essayTypes = [
@@ -32,7 +35,7 @@ const targetSchools = [
   "Cornell"
 ];
 
-export function QuestionsStep({ formData, updateFormData, onNext, onBack }: QuestionsStepProps) {
+export function QuestionsStep({ formData, updateFormData, onNext, onBack, loading, error, tokens }: QuestionsStepProps) {
   const toggleSchool = (school: string) => {
     const schools = formData.targetSchools.includes(school)
       ? formData.targetSchools.filter(s => s !== school)
@@ -149,6 +152,38 @@ export function QuestionsStep({ formData, updateFormData, onNext, onBack }: Ques
         />
       </motion.div>
 
+      {/* Token Display */}
+      {tokens !== null && tokens !== undefined && (
+        <motion.div
+          className="p-4 rounded-xl bg-blue-50 border border-blue-200"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35 }}
+        >
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-[#1E40AF]">
+              <strong>Tokens remaining:</strong> {tokens}
+            </span>
+            {tokens < 1 && (
+              <span className="text-sm text-red-600 font-medium">
+                You need at least 1 token to rate an essay
+              </span>
+            )}
+          </div>
+        </motion.div>
+      )}
+
+      {/* Error Message */}
+      {error && (
+        <motion.div
+          className="p-4 rounded-xl bg-red-50 border border-red-200"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <p className="text-sm text-red-600">{error}</p>
+        </motion.div>
+      )}
+
       {/* Navigation */}
       <motion.div
         className="flex justify-between pt-4"
@@ -156,15 +191,16 @@ export function QuestionsStep({ formData, updateFormData, onNext, onBack }: Ques
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-        <Button variant="secondary" onClick={onBack}>
+        <Button variant="secondary" onClick={onBack} disabled={loading}>
           Back
         </Button>
         <Button
           variant="primary"
           onClick={onNext}
-          className={!canProceed ? "opacity-50 cursor-not-allowed" : ""}
+          disabled={!canProceed || loading || (tokens !== null && tokens !== undefined && tokens < 1)}
+          className={(!canProceed || loading || (tokens !== null && tokens !== undefined && tokens < 1)) ? "opacity-50 cursor-not-allowed" : ""}
         >
-          Analyze Essay
+          {loading ? "Analyzing Essay..." : "Analyze Essay"}
         </Button>
       </motion.div>
     </motion.div>

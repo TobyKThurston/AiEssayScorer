@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { UploadStep } from "./UploadStep";
 import { QuestionsStep } from "./QuestionsStep";
 import { ResultsStep } from "./ResultsStep";
+import { useAuth } from "@/contexts/AuthContext";
 
 export type FormData = {
   essayText: string;
@@ -10,6 +11,16 @@ export type FormData = {
   targetSchools: string[];
   wordCount: number;
   prompt: string;
+};
+
+export type EssayRating = {
+  score: number;
+  strengths: string[];
+  improvements: string[];
+  contentFeedback: string;
+  structureFeedback: string;
+  styleFeedback: string;
+  recommendation: string;
 };
 
 export function EssayReviewFlow() {
@@ -21,17 +32,77 @@ export function EssayReviewFlow() {
     wordCount: 0,
     prompt: ""
   });
+  const [rating, setRating] = useState<EssayRating | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [tokens, setTokens] = useState<number | null>(null);
+  const { user } = useAuth();
+
+  useEffect(() => {
+    // Fetch user tokens
+    if (user) {
+      fetch("/api/tokens")
+        .then(res => res.json())
+        .then(data => setTokens(data.tokens))
+        .catch(() => setTokens(0));
+    }
+  }, [user]);
 
   const updateFormData = (data: Partial<FormData>) => {
     setFormData(prev => ({ ...prev, ...data }));
   };
 
-  const nextStep = () => {
-    setCurrentStep(prev => Math.min(prev + 1, 3));
+  const nextStep = async () => {
+    if (currentStep === 2) {
+      // Before moving to results, rate the essay
+      await rateEssay();
+    } else {
+      setCurrentStep(prev => Math.min(prev + 1, 3));
+    }
+  };
+
+  const rateEssay = async () => {
+    if (!formData.essayText.trim()) {
+      setError("Please paste your essay first");
+      return;
+    }
+
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/rate-essay", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          essay: formData.essayText,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to rate essay");
+      }
+
+      setRating(data.rating);
+      setCurrentStep(3);
+      // Refresh tokens
+      const tokenRes = await fetch("/api/tokens");
+      const tokenData = await tokenRes.json();
+      setTokens(tokenData.tokens);
+    } catch (err: any) {
+      setError(err.message || "Failed to rate essay. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const prevStep = () => {
     setCurrentStep(prev => Math.max(prev - 1, 1));
+    setError(null);
   };
 
   return (
@@ -95,12 +166,16 @@ export function EssayReviewFlow() {
               updateFormData={updateFormData}
               onNext={nextStep}
               onBack={prevStep}
+              loading={loading}
+              error={error}
+              tokens={tokens}
             />
           )}
           {currentStep === 3 && (
             <ResultsStep
               key="results"
               formData={formData}
+              rating={rating}
               onBack={prevStep}
             />
           )}

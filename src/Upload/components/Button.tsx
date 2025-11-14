@@ -11,6 +11,7 @@ interface ButtonProps {
   href?: string;
   className?: string;
   icon?: boolean;
+  disabled?: boolean;
 }
 
 export function Button({ 
@@ -19,7 +20,8 @@ export function Button({
   onClick, 
   href,
   className = "",
-  icon = false 
+  icon = false,
+  disabled = false
 }: ButtonProps) {
   const baseClasses = "inline-flex items-center justify-center gap-2 transition-all duration-200 font-medium";
   
@@ -57,6 +59,7 @@ export function Button({
       <motion.button
         {...motionProps}
         onClick={onClick}
+        disabled={disabled}
       >
         {buttonContent}
       </motion.button>
@@ -67,6 +70,7 @@ export function Button({
     <motion.button
       {...motionProps}
       onClick={onClick}
+      disabled={disabled}
     >
       {buttonContent}
     </motion.button>
