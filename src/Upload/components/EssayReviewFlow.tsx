@@ -201,10 +201,7 @@ export function EssayReviewFlow() {
                   className="space-y-8"
                 >
                   <div className="text-center mb-8">
-                    <h1 className="mb-3">Finalizing your results</h1>
-                    <p className="text-[#64748B]">
-                      Almost there...
-                    </p>
+                    <h1 className="mb-3">Almost there...</h1>
                   </div>
                   <div className="flex flex-col items-center justify-center py-16">
                     <motion.div
