@@ -37,10 +37,11 @@ function LoginForm() {
     try {
       // Use environment variable for production, fallback to window.location.origin for development
       const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || window.location.origin;
+      console.log("RedirectTo is:", siteUrl);
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `${siteUrl}/auth/callback`,
+          redirectTo: siteUrl,
         },
       });
       if (error) throw error;
