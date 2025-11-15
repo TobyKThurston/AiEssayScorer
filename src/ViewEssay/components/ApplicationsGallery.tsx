@@ -585,26 +585,28 @@ const mockSchools: School[] = [
 export function ApplicationsGallery() {
   const [expandedSchool, setExpandedSchool] = useState<string | null>(null);
   const [expandedApplication, setExpandedApplication] = useState<string | null>(null);
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [loading, setLoading] = useState(true);
+  // Temporarily disabled subscription check for testing
+  const [isSubscribed, setIsSubscribed] = useState(true); // Set to true to bypass blocking
+  const [loading, setLoading] = useState(false);
   const { user } = useAuth();
 
-  useEffect(() => {
-    if (user) {
-      fetch("/api/subscription-status")
-        .then(res => res.json())
-        .then(data => {
-          setIsSubscribed(data.isSubscribed || false);
-          setLoading(false);
-        })
-        .catch(() => {
-          setIsSubscribed(false);
-          setLoading(false);
-        });
-    } else {
-      setLoading(false);
-    }
-  }, [user]);
+  // Temporarily disabled subscription check
+  // useEffect(() => {
+  //   if (user) {
+  //     fetch("/api/subscription-status")
+  //       .then(res => res.json())
+  //       .then(data => {
+  //         setIsSubscribed(data.isSubscribed || false);
+  //         setLoading(false);
+  //       })
+  //       .catch(() => {
+  //         setIsSubscribed(false);
+  //         setLoading(false);
+  //       });
+  //   } else {
+  //     setLoading(false);
+  //   }
+  // }, [user]);
 
   const handleSubscribe = async () => {
     try {
@@ -821,7 +823,10 @@ export function ApplicationsGallery() {
                                       <div className="bg-[#F8FAFC] rounded-lg p-4">
                                         <p className="text-[#475569] leading-relaxed">{essay.excerpt}</p>
                                       </div>
-                                      <Link href="/full-essay" className="mt-3 text-[#3B82F6] hover:text-[#0EA5E9] transition-colors inline-block">
+                                      <Link 
+                                        href={`/full-essay?school=${encodeURIComponent(school.name)}&student=${encodeURIComponent(app.name)}&year=${encodeURIComponent(app.year)}&major=${encodeURIComponent(app.major)}&sat=${app.sat}&gpa=${app.gpa}&essayTitle=${encodeURIComponent(essay.title)}&prompt=${encodeURIComponent(essay.prompt)}&content=${encodeURIComponent(essay.excerpt)}`}
+                                        className="mt-3 text-[#3B82F6] hover:text-[#0EA5E9] transition-colors inline-block"
+                                      >
                                         Read full essay →
                                       </Link>
                                     </motion.div>
