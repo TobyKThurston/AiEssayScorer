@@ -18,6 +18,7 @@ type Application = {
     title: string;
     prompt: string;
     excerpt: string;
+    fullContent?: string;
   }[];
 };
 
@@ -45,12 +46,36 @@ const mockSchools: School[] = [
           {
             title: "Common App Essay",
             prompt: "The lessons we take from obstacles we encounter can be fundamental to later success.",
-            excerpt: "When my robotics team's main controller failed two days before the regional competition, I learned that true engineering isn't about perfect execution—it's about creative problem-solving under pressure..."
+            excerpt: "When my robotics team's main controller failed two days before the regional competition, I learned that true engineering isn't about perfect execution—it's about creative problem-solving under pressure...",
+            fullContent: `It was 11:47 PM on a Thursday when our robot died. Not dramatically, not with sparks or smoke—just a quiet refusal to respond. The main controller, the brain we'd spent six months programming, had simply stopped working during a routine test run. Two days before regionals. Forty-eight hours before we were supposed to compete.
+
+My first thought wasn't panic, though it should have been. Instead, I felt this strange calm settle over me. As team captain, I'd spent months preparing for every possible scenario: battery failures, sensor malfunctions, code bugs. But this? A complete controller failure? This wasn't in the playbook.
+
+I called an emergency team meeting. At midnight. In my garage, surrounded by half-finished prototypes and spare parts from three years of competitions. My teammates arrived bleary-eyed but ready. That's when I knew we'd figure it out.
+
+Instead of trying to replace the controller with an identical model—which would mean reprogramming everything from scratch—we made a decision that changed how I think about engineering: we'd retrofit the robot with a different controller from an old project. Different architecture, different capabilities, different everything. It meant rewriting most of our code. Redesigning mechanical systems. Rebuilding trust in our own abilities.
+
+The next 40 hours blurred together. Coffee and code. Pizza at 3 AM. Me, hunched over my laptop, rewriting the autonomous navigation system while Maya rebuilt the sensor array and James redesigned the mechanical arm. We worked in shifts, slept in shifts, debugged in shifts. By Friday evening, we had something that worked. It wasn't pretty. It wasn't what we'd planned. But it moved. It responded. It was ours.
+
+At the competition, our robot performed flawlessly. More than that—we won the Innovation Award for creative problem-solving. But the real victory wasn't the trophy. It was understanding that engineering isn't about having perfect plans. It's about having the resilience to rebuild when plans fall apart.
+
+That experience taught me something I carry into every project now: obstacles aren't roadblocks. They're invitations to innovate. When my code breaks, when my experiments fail, when nothing goes according to plan—I remember that midnight in my garage. I remember that sometimes the best solutions come from the most unexpected places. And I remember that true engineering isn't about avoiding failure. It's about learning to rebuild, better, from whatever breaks.`
           },
           {
             title: "Why Harvard",
             prompt: "Harvard has long recognized the importance of enrolling a diverse student body.",
-            excerpt: "Harvard's unique combination of cutting-edge AI research and commitment to ethical technology development perfectly aligns with my vision of creating accessible solutions..."
+            excerpt: "Harvard's unique combination of cutting-edge AI research and commitment to ethical technology development perfectly aligns with my vision of creating accessible solutions...",
+            fullContent: `My grandmother doesn't speak English. She's lived in America for twenty years, but she's never needed to learn it—not really. She runs a small grocery store in our neighborhood, knows every customer by name, manages inventory, handles money, solves problems. All in Mandarin. All without ever touching a computer.
+
+When I started learning to code, I thought about her constantly. Here I was, building apps and websites, creating systems that could connect people across continents—but my own grandmother couldn't use any of them. Not because she wasn't capable. Not because she wasn't smart. But because nobody had built technology that worked for her.
+
+That realization changed everything. I stopped building projects that looked impressive and started building things that actually mattered. A translation app that worked offline. A grocery inventory system that used voice commands instead of typing. A video call interface so simple my grandmother could use it without asking for help.
+
+Harvard's commitment to diversity isn't just about representation—it's about building technology that serves everyone. The AI research happening at Harvard isn't just cutting-edge; it's ethical. It's accessible. It's designed with people like my grandmother in mind.
+
+I want to study computer science at Harvard because I want to be part of building the future—but a future that includes everyone. The research opportunities at the Berkman Klein Center, the collaboration with the Center for Public Interest Technology, the chance to work with professors who understand that innovation means nothing if it leaves people behind—that's what I'm looking for.
+
+My grandmother taught me that technology is only as powerful as the people it serves. At Harvard, I'll learn to build systems that serve everyone. Not just the people who speak English. Not just the people who can afford the latest devices. Everyone.`
           }
         ]
       },
@@ -65,12 +90,36 @@ const mockSchools: School[] = [
           {
             title: "Common App Essay",
             prompt: "Reflect on a time when you questioned or challenged a belief or idea.",
-            excerpt: "Growing up in a family of immigrants, I was taught that financial stability meant a stable job. But when I started my school's first microfinance club, I discovered that true economic empowerment..."
+            excerpt: "Growing up in a family of immigrants, I was taught that financial stability meant a stable job. But when I started my school's first microfinance club, I discovered that true economic empowerment...",
+            fullContent: `My father worked three jobs. Not because he wanted to—because he had to. When we immigrated from Nigeria, his engineering degree didn't transfer. So he drove for Uber during the day, worked security at night, and on weekends, he fixed computers for neighbors. Three jobs. Seventy hours a week. All so we could have what he called "stability."
+
+Stability, in our house, meant a steady paycheck. It meant never taking risks. It meant working yourself to exhaustion because that's what responsible people did. That's what I believed, too, until I met Mrs. Chen.
+
+Mrs. Chen ran a small bakery out of her apartment. She made the most incredible pastries—flaky croissants, delicate macarons, cakes that looked like art. But she couldn't get a loan. Not from a bank. Not with her credit history. Not with her income. So she stayed small. Stayed in her apartment. Stayed stuck.
+
+I started my school's first microfinance club because of Mrs. Chen. Not because I thought I could change the world—but because I thought maybe I could help one person. We pooled our lunch money, our allowance, our part-time job earnings. We made small loans. Fifty dollars here. A hundred there. To people like Mrs. Chen who just needed a chance.
+
+Mrs. Chen used her loan to buy a commercial oven. Six months later, she had a storefront. A year later, she was hiring employees. Two years later, she was teaching other immigrant women how to start their own businesses.
+
+That's when I realized my father was wrong. Not about hard work—he was right about that. But about stability. True stability isn't about avoiding risk. It's about creating opportunities. It's about building systems that let people like Mrs. Chen—people like my father—turn their skills into something more.
+
+I want to study economics because I want to understand how to build those systems. How to create financial structures that don't just preserve wealth, but create it. How to design policies that don't just protect the stable, but help the ambitious become stable.
+
+My father taught me to work hard. Mrs. Chen taught me to work smart. At Harvard, I'll learn to build systems that let everyone do both.`
           },
           {
             title: "Why Harvard",
             prompt: "What would you want your future college roommate to know about you?",
-            excerpt: "I'm the person who will debate monetary policy over late-night pizza, organize community service trips during breaks, and always have a spare charger when you need one..."
+            excerpt: "I'm the person who will debate monetary policy over late-night pizza, organize community service trips during breaks, and always have a spare charger when you need one...",
+            fullContent: `Three things you should know about me:
+
+First, I will absolutely debate monetary policy at 2 AM. I can't help it. When the Federal Reserve releases new data, I get genuinely excited. I'll wake you up to discuss quantitative easing. I'll argue about inflation rates over breakfast. I know this sounds annoying, but here's the thing: I also make really good pancakes. So if you're willing to listen to me explain why the Phillips curve is oversimplified, I'll feed you. Fair trade.
+
+Second, I'm the person who organizes things. Not in a controlling way—in a "someone has to do it" way. I'll plan the study groups, coordinate the group projects, remember everyone's birthdays. I'll be the one who knows where the best late-night food is, who has the notes from the class you missed, who remembers to bring snacks to the library. I'm basically the mom friend, but with better memes.
+
+Third, and most importantly: I believe in second chances. Not just for people—for ideas. For systems. For everything. I think the best solutions come from being willing to try again, differently. So if you're struggling with something, if you need help, if you want to try something new—I'm your person. I'll help you figure it out. I'll help you try again.
+
+Also, I have a spare charger. Always. For every device. You're welcome.`
           }
         ]
       }
@@ -92,12 +141,36 @@ const mockSchools: School[] = [
           {
             title: "Common App Essay",
             prompt: "Share an essay on any topic of your choice.",
-            excerpt: "The subway car rumbled beneath Times Square as I clutched my notebook, observing the mosaic of humanity around me. New York wasn't just a city—it was a living laboratory of human interaction..."
+            excerpt: "The subway car rumbled beneath Times Square as I clutched my notebook, observing the mosaic of humanity around me. New York wasn't just a city—it was a living laboratory of human interaction...",
+            fullContent: `The 1 train rumbles beneath Times Square, and I'm pressed against a window, notebook in hand. A woman in a business suit argues on her phone in Spanish. A teenager with headphones taps his foot to a beat only he can hear. An elderly man reads a newspaper in what looks like Arabic. A couple holds hands, not speaking, just existing together in this moving metal box.
+
+I write it all down. Not because I'm nosy—though maybe I am—but because I'm trying to understand something. How do all these people, with all their different lives, all their different stories, coexist in this one space? How do we share oxygen without sharing language? How do we respect each other's boundaries while being literally pressed against each other?
+
+New York isn't just a city to me. It's a living laboratory of human interaction. Every subway ride is a masterclass in empathy. Every street corner is a lesson in coexistence. Every conversation overheard on the bus is a reminder that everyone has a story, and most of them are more interesting than mine.
+
+I started writing because I wanted to capture these moments. Not the big moments—the graduations, the awards, the achievements. The small ones. The way a barista remembers someone's order. The way strangers help each other carry strollers up subway stairs. The way a city of millions can feel like a community when you know how to look.
+
+Political science, to me, is just applied empathy. It's understanding how systems work, yes—but more importantly, understanding how people work within those systems. How do we create structures that let everyone thrive? How do we build institutions that respect individual stories while serving collective needs?
+
+Columbia's Core Curriculum gets this. Reading the same texts, having the same conversations, but bringing different perspectives—that's what I want. Not to find the right answer, but to understand all the questions. Not to solve everything, but to learn how to ask better questions.
+
+The subway taught me that we're all just trying to get somewhere. Columbia will teach me how to make sure everyone can.`
           },
           {
             title: "Why Columbia",
             prompt: "Why are you interested in attending Columbia University?",
-            excerpt: "Columbia's Core Curriculum represents everything I believe education should be: challenging, diverse, and deeply humanistic. In a world increasingly divided, studying the great works alongside students from every background..."
+            excerpt: "Columbia's Core Curriculum represents everything I believe education should be: challenging, diverse, and deeply humanistic. In a world increasingly divided, studying the great works alongside students from every background...",
+            fullContent: `There's something powerful about reading the same book as someone else. Not just reading it—really reading it. Discussing it. Arguing about it. Finding yourself in it, even when it was written centuries ago, in a language you don't speak, by someone who lived a life you can't imagine.
+
+Columbia's Core Curriculum does this. It forces you to sit in a room with people who see the world completely differently than you do, and it makes you all read the same words. Then it makes you talk about what those words mean. Not what they meant to the author—what they mean to you. What they mean to the person sitting next to you. What they mean to the person who disagrees with everything you just said.
+
+That's what I want. Not just to learn about political systems, but to understand how different people experience those systems. Not just to study policy, but to debate it with people who've lived its consequences. Not just to read theory, but to see how it plays out in practice, in a city where theory meets reality every single day.
+
+Columbia isn't just in New York—it's of New York. The city becomes your classroom. The subway becomes your study group. The diversity of the city becomes the diversity of your education. You're not just learning about the world—you're learning in it.
+
+I want to study political science at Columbia because I want to understand how systems work. But more than that, I want to understand how people work within those systems. How do we create structures that serve everyone? How do we build institutions that respect individual stories while addressing collective needs?
+
+The Core Curriculum teaches you to think critically. New York teaches you to think practically. Together, they teach you to think differently. That's what I'm looking for.`
           }
         ]
       },
@@ -824,7 +897,7 @@ export function ApplicationsGallery() {
                                         <p className="text-[#475569] leading-relaxed">{essay.excerpt}</p>
                                       </div>
                                       <Link 
-                                        href={`/full-essay?school=${encodeURIComponent(school.name)}&student=${encodeURIComponent(app.name)}&year=${encodeURIComponent(app.year)}&major=${encodeURIComponent(app.major)}&sat=${app.sat}&gpa=${app.gpa}&essayTitle=${encodeURIComponent(essay.title)}&prompt=${encodeURIComponent(essay.prompt)}&content=${encodeURIComponent(essay.excerpt)}`}
+                                        href={`/full-essay?school=${encodeURIComponent(school.name)}&student=${encodeURIComponent(app.name)}&year=${encodeURIComponent(app.year)}&major=${encodeURIComponent(app.major)}&sat=${app.sat}&gpa=${app.gpa}&essayTitle=${encodeURIComponent(essay.title)}&prompt=${encodeURIComponent(essay.prompt)}&content=${encodeURIComponent(essay.fullContent || essay.excerpt)}`}
                                         className="mt-3 text-[#3B82F6] hover:text-[#0EA5E9] transition-colors inline-block"
                                       >
                                         Read full essay →
