@@ -1211,6 +1211,11 @@ export function ApplicationsGallery() {
   // Check if user can access content (subscribed OR has free essay available)
   const canAccessContent = isSubscribed || freeEssayViewed !== null;
 
+  // Filter schools - non-subscribed users can only see Harvard
+  const visibleSchools = isSubscribed 
+    ? mockSchools 
+    : mockSchools.filter(school => school.id === "harvard");
+
   const handleSubscribe = async () => {
     try {
       const response = await fetch("/api/create-checkout", {
@@ -1230,6 +1235,11 @@ export function ApplicationsGallery() {
       console.error("Error creating checkout:", error);
       alert("Failed to start checkout. Please try again.");
     }
+  };
+
+  const handleSubscribeClick = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    await handleSubscribe();
   };
 
   const handleEssayView = (essayId: string) => {
@@ -1336,7 +1346,7 @@ export function ApplicationsGallery() {
 
         {/* Schools List */}
         <div className="space-y-4">
-          {mockSchools.map((school, index) => (
+          {visibleSchools.map((school, index) => (
             <motion.div
               key={school.id}
               initial={{ opacity: 0, y: 20 }}
@@ -1489,27 +1499,25 @@ export function ApplicationsGallery() {
                                           );
                                         } else {
                                           return (
-                                            <button
-                                              onClick={() => {
-                                                if (freeEssayViewed) {
-                                                  setShowSubscribeModal(true);
-                                                } else {
-                                                  // Allow them to view this as their free essay
-                                                  handleEssayView(essayId);
-                                                  window.location.href = `/full-essay?school=${encodeURIComponent(school.name)}&student=${encodeURIComponent(app.name)}&year=${encodeURIComponent(app.year)}&major=${encodeURIComponent(app.major)}&sat=${app.sat}&gpa=${app.gpa}&essayTitle=${encodeURIComponent(essay.title)}&prompt=${encodeURIComponent(essay.prompt)}&content=${encodeURIComponent(essay.fullContent || essay.excerpt)}`;
-                                                }
-                                              }}
-                                              className="mt-3 flex items-center gap-2 text-[#3B82F6] hover:text-[#0EA5E9] transition-colors"
-                                            >
+                                            <div className="mt-3">
                                               {freeEssayViewed ? (
-                                                <>
+                                                <button
+                                                  onClick={handleSubscribeClick}
+                                                  className="flex items-center gap-2 text-[#3B82F6] hover:text-[#0EA5E9] transition-colors"
+                                                >
                                                   <Lock className="w-4 h-4" />
                                                   <span className="text-sm">Subscribe to view more essays</span>
-                                                </>
+                                                </button>
                                               ) : (
-                                                <span className="text-sm">Read full essay →</span>
+                                                <Link
+                                                  href={`/full-essay?school=${encodeURIComponent(school.name)}&student=${encodeURIComponent(app.name)}&year=${encodeURIComponent(app.year)}&major=${encodeURIComponent(app.major)}&sat=${app.sat}&gpa=${app.gpa}&essayTitle=${encodeURIComponent(essay.title)}&prompt=${encodeURIComponent(essay.prompt)}&content=${encodeURIComponent(essay.fullContent || essay.excerpt)}`}
+                                                  onClick={() => handleEssayView(essayId)}
+                                                  className="text-[#3B82F6] hover:text-[#0EA5E9] transition-colors inline-block"
+                                                >
+                                                  Read full essay →
+                                                </Link>
                                               )}
-                                            </button>
+                                            </div>
                                           );
                                         }
                                       })()}
