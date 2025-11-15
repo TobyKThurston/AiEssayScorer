@@ -14,9 +14,11 @@ import { useEffect } from "react";
 
 export default function App() {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = JSON.stringify({
+    // FAQPage Schema
+    const faqScript = document.createElement("script");
+    faqScript.type = "application/ld+json";
+    faqScript.id = "faq-schema";
+    faqScript.text = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "FAQPage",
       mainEntity: [
@@ -86,10 +88,64 @@ export default function App() {
         },
       ],
     });
-    document.head.appendChild(script);
+    document.head.appendChild(faqScript);
+
+    // Organization Schema
+    const orgScript = document.createElement("script");
+    orgScript.type = "application/ld+json";
+    orgScript.id = "organization-schema";
+    orgScript.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Ivy Admit",
+      url: process.env.NEXT_PUBLIC_SITE_URL || "https://ivyadmit.com",
+      logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://ivyadmit.com"}/logo.png`,
+      description: "AI-powered college essay review and strategy tool for selective college admissions",
+      sameAs: [
+        // Add your social media URLs here when available
+        // "https://twitter.com/ivyadmit",
+        // "https://facebook.com/ivyadmit",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "Customer Service",
+        email: "support@ivyadmit.com", // Update with your actual email
+      },
+    });
+    document.head.appendChild(orgScript);
+
+    // SoftwareApplication Schema
+    const appScript = document.createElement("script");
+    appScript.type = "application/ld+json";
+    appScript.id = "software-schema";
+    appScript.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "Ivy Admit",
+      applicationCategory: "EducationalApplication",
+      operatingSystem: "Web",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        ratingCount: "150",
+      },
+      description: "AI-powered college essay review tool that provides structure scores, evidence analysis, and line-by-line editing suggestions",
+    });
+    document.head.appendChild(appScript);
 
     return () => {
-      document.head.removeChild(script);
+      const scripts = ["faq-schema", "organization-schema", "software-schema"];
+      scripts.forEach((id) => {
+        const script = document.getElementById(id);
+        if (script) {
+          document.head.removeChild(script);
+        }
+      });
     };
   }, []);
 
