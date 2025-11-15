@@ -1211,10 +1211,7 @@ export function ApplicationsGallery() {
   // Check if user can access content (subscribed OR has free essay available)
   const canAccessContent = isSubscribed || freeEssayViewed !== null;
 
-  // Filter schools - non-subscribed users can only see Harvard
-  const visibleSchools = isSubscribed 
-    ? mockSchools 
-    : mockSchools.filter(school => school.id === "harvard");
+  // All schools are visible, but non-subscribed users can only access Harvard essays
 
   const handleSubscribe = async () => {
     try {
@@ -1261,15 +1258,24 @@ export function ApplicationsGallery() {
     setExpandedApplication(expandedApplication === appId ? null : appId);
   };
 
-  const canViewEssay = (essayId: string) => {
+  const canViewEssay = (essayId: string, schoolId: string) => {
     // Subscribed users can view all essays
     if (isSubscribed) return true;
-    // Non-subscribed users can view their free essay
+    // Non-subscribed users can only view Harvard essays
+    if (schoolId !== "harvard") return false;
+    // Non-subscribed users can view their free essay from Harvard
     if (freeEssayViewed === essayId) return true;
-    // Non-subscribed users can view one essay if they haven't used their free view yet
+    // Non-subscribed users can view one Harvard essay if they haven't used their free view yet
     if (!freeEssayViewed) return true;
     // Otherwise, they need to subscribe
     return false;
+  };
+
+  const canAccessSchool = (schoolId: string) => {
+    // Subscribed users can access all schools
+    if (isSubscribed) return true;
+    // Non-subscribed users can only access Harvard
+    return schoolId === "harvard";
   };
 
   return (
@@ -1346,7 +1352,9 @@ export function ApplicationsGallery() {
 
         {/* Schools List */}
         <div className="space-y-4">
-          {visibleSchools.map((school, index) => (
+          {mockSchools.map((school, index) => {
+            const isLocked = !canAccessSchool(school.id);
+            return (
             <motion.div
               key={school.id}
               initial={{ opacity: 0, y: 20 }}
@@ -1356,19 +1364,23 @@ export function ApplicationsGallery() {
               {/* School Header */}
               <button
                 onClick={() => toggleSchool(school.id)}
-                className="w-full bg-white rounded-2xl p-6 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 group"
+                className={`w-full bg-white rounded-2xl p-6 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 group ${isLocked ? "opacity-75" : ""}`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center shadow-lg">
                       <GraduationCap className="w-7 h-7 text-white" />
                     </div>
-                    <div className="text-left">
-                      <h3 className="text-[#0F172A] group-hover:text-[#3B82F6] transition-colors">
-                        {school.name}
-                      </h3>
+                    <div className="text-left flex-1">
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-[#0F172A] group-hover:text-[#3B82F6] transition-colors">
+                          {school.name}
+                        </h3>
+                        {isLocked && <Lock className="w-4 h-4 text-[#94A3B8]" />}
+                      </div>
                       <p className="text-[#64748B]">
                         {school.applications.length} {school.applications.length === 1 ? 'application' : 'applications'}
+                        {isLocked && " • Subscribe to view"}
                       </p>
                     </div>
                   </div>
@@ -1391,8 +1403,21 @@ export function ApplicationsGallery() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="mt-4 space-y-3 pl-4 md:pl-8">
-                      {school.applications.map((app) => (
+                    {isLocked ? (
+                      <div className="mt-4 pl-4 md:pl-8">
+                        <div className="bg-white rounded-xl p-6 border-2 border-dashed border-[#E2E8F0] text-center">
+                          <Lock className="w-8 h-8 text-[#94A3B8] mx-auto mb-3" />
+                          <p className="text-[#64748B] mb-4">
+                            Subscribe to view essays from {school.name}
+                          </p>
+                          <Button variant="primary" onClick={handleSubscribe} className="mx-auto">
+                            Subscribe Now
+                          </Button>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="mt-4 space-y-3 pl-4 md:pl-8">
+                        {school.applications.map((app) => (
                         <div key={app.id}>
                           {/* Application Header */}
                           <button
@@ -1485,7 +1510,7 @@ export function ApplicationsGallery() {
                                       </div>
                                       {(() => {
                                         const essayId = `${app.id}-${essayIndex}`;
-                                        const canView = canViewEssay(essayId);
+                                        const canView = canViewEssay(essayId, school.id);
                                         
                                         if (canView) {
                                           return (
@@ -1528,13 +1553,15 @@ export function ApplicationsGallery() {
                             )}
                           </AnimatePresence>
                         </div>
-                      ))}
-                    </div>
+                        ))}
+                      </div>
+                    )}
                   </motion.div>
                 )}
               </AnimatePresence>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
