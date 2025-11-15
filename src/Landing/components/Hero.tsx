@@ -76,7 +76,6 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-12">
               <Button variant="primary" href="/upload">Review your essay</Button>
               <Button variant="secondary" href="/view-essay">View other essays</Button>
-              <Button variant="secondary">See features</Button>
             </div>
 
             {/* Social proof */}
