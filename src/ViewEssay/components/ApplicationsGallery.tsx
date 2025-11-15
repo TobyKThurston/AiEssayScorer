@@ -1321,7 +1321,7 @@ export function ApplicationsGallery() {
                 </div>
                 <h2 className="text-2xl font-bold text-[#0F172A] mb-3">Subscribe for Full Access</h2>
                 <p className="text-[#64748B] mb-6">
-                  You've viewed your free essay! Subscribe to get unlimited access to all successful college applications and learn from real essays that got students into top universities.
+                  Subscribe to get unlimited access to all successful college applications and learn from real essays that got students into top universities.
                 </p>
                 <Button variant="primary" onClick={handleSubscribe} className="w-full">
                   Subscribe Now
