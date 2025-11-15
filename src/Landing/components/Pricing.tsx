@@ -1,8 +1,42 @@
+"use client";
+
 import { motion } from "motion/react";
 import { PricingCard } from "./PricingCard";
 
+type Plan = {
+  title: string;
+  price: string;
+  period?: string;
+  features: string[];
+  ctaText: string;
+  highlighted: boolean;
+  onClick?: () => void;
+  href?: string;
+};
+
 export function Pricing() {
-  const plans = [
+  const handleUpgrade = async () => {
+    try {
+      const response = await fetch("/api/create-checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID,
+        }),
+      });
+      const data = await response.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else if (data.error) {
+        alert(data.error);
+      }
+    } catch (error) {
+      console.error("Error creating checkout:", error);
+      alert("Failed to start checkout. Please try again.");
+    }
+  };
+  
+  const plans: Plan[] = [
     {
       title: "Starter",
       price: "Free",
@@ -10,10 +44,11 @@ export function Pricing() {
         "1 essay review",
         "Structure score",
         "Basic edits",
-        "Access to one free essay view"
+        "Access to your essay score"
       ],
       ctaText: "Start free",
-      highlighted: false
+      highlighted: false,
+      href: "/upload"
     },
     {
       title: "Pro",
@@ -26,7 +61,8 @@ export function Pricing() {
         "Access to other essays"
       ],
       ctaText: "Upgrade to Pro",
-      highlighted: true
+      highlighted: true,
+      onClick: handleUpgrade
     }
   ];
 
@@ -54,6 +90,8 @@ export function Pricing() {
               ctaText={plan.ctaText}
               highlighted={plan.highlighted}
               delay={index * 0.1}
+              onClick={plan.onClick}
+              href={plan.href}
             />
           ))}
         </div>

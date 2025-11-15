@@ -5,31 +5,8 @@ import { Badge } from "./Badge";
 import { Button } from "./Button";
 import { CheckCircle2, TrendingUp } from "lucide-react";
 import { useState, useEffect } from "react";
-import { useAuth } from "@/contexts/AuthContext";
 
 export function Hero() {
-  const { user } = useAuth();
-
-  const handleUpgrade = async () => {
-    try {
-      const response = await fetch("/api/create-checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID,
-        }),
-      });
-      const data = await response.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else if (data.error) {
-        alert(data.error);
-      }
-    } catch (error) {
-      console.error("Error creating checkout:", error);
-      alert("Failed to start checkout. Please try again.");
-    }
-  };
   const universities = ["Harvard", "Yale", "Princeton", "Columbia", "Penn", "Brown", "Dartmouth", "Cornell"];
   
   const rotatingWords = [
@@ -99,11 +76,6 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-12">
               <Button variant="primary" href="/upload">Review your essay</Button>
               <Button variant="secondary" href="/view-essay">View other essays</Button>
-              {user && (
-                <Button variant="secondary" onClick={handleUpgrade}>
-                  Upgrade to Pro
-                </Button>
-              )}
               <Button variant="secondary">See features</Button>
             </div>
 

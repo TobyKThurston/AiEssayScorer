@@ -10,6 +10,8 @@ interface PricingCardProps {
   ctaText: string;
   highlighted?: boolean;
   delay?: number;
+  onClick?: () => void;
+  href?: string;
 }
 
 export function PricingCard({ 
@@ -19,7 +21,9 @@ export function PricingCard({
   features, 
   ctaText, 
   highlighted = false,
-  delay = 0 
+  delay = 0,
+  onClick,
+  href
 }: PricingCardProps) {
   return (
     <motion.div
@@ -49,7 +53,12 @@ export function PricingCard({
           </li>
         ))}
       </ul>
-      <Button variant={highlighted ? "primary" : "secondary"} className="w-full">
+      <Button 
+        variant={highlighted ? "primary" : "secondary"} 
+        className="w-full"
+        onClick={onClick}
+        href={href}
+      >
         {ctaText}
       </Button>
     </motion.div>
