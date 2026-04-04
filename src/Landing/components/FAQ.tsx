@@ -47,6 +47,9 @@ export function FAQ() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 md:mb-16"
         >
+          <p className="text-xs font-semibold text-[#3B82F6] uppercase tracking-widest mb-3">
+            FAQ
+          </p>
           <h2>Frequently asked questions</h2>
         </motion.div>
 

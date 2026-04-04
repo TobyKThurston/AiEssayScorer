@@ -1,14 +1,23 @@
 import { motion } from "motion/react";
+import { Star } from "lucide-react";
 
 interface TestimonialCardProps {
   initials: string;
   name: string;
   city: string;
   quote: string;
+  school?: string;
   delay?: number;
 }
 
-export function TestimonialCard({ initials, name, city, quote, delay = 0 }: TestimonialCardProps) {
+export function TestimonialCard({
+  initials,
+  name,
+  city,
+  quote,
+  school,
+  delay = 0,
+}: TestimonialCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -16,22 +25,32 @@ export function TestimonialCard({ initials, name, city, quote, delay = 0 }: Test
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay }}
       whileHover={{ y: -4, transition: { duration: 0.2 } }}
-      className="p-6 rounded-2xl bg-white border border-slate-200 shadow-[0_4px_24px_rgba(148,163,184,0.12)] hover:shadow-[0_8px_32px_rgba(148,163,184,0.18)] hover:border-[#3B82F6]/30 transition-all duration-300"
+      className="p-6 rounded-2xl bg-white border border-slate-200 shadow-[0_4px_24px_rgba(148,163,184,0.1)] hover:shadow-[0_12px_40px_rgba(148,163,184,0.18)] hover:border-[#3B82F6]/30 transition-all duration-300 flex flex-col"
     >
-      <div className="flex items-center gap-4 mb-4">
-        <motion.div 
-          className="w-12 h-12 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center"
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.2 }}
-        >
-          <span className="text-sm font-semibold text-white">{initials}</span>
-        </motion.div>
+      {/* Stars */}
+      <div className="flex gap-0.5 mb-4">
+        {[...Array(5)].map((_, i) => (
+          <Star key={i} className="w-4 h-4 fill-[#F59E0B] text-[#F59E0B]" />
+        ))}
+      </div>
+
+      {/* Quote */}
+      <p className="text-[#475569] leading-relaxed flex-1 mb-5">
+        &ldquo;{quote}&rdquo;
+      </p>
+
+      {/* Author */}
+      <div className="flex items-center gap-3">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center flex-shrink-0">
+          <span className="text-xs font-bold text-white">{initials}</span>
+        </div>
         <div>
-          <div className="font-medium text-[#0F172A]">{name}</div>
-          <small className="text-[#64748B]">{city}</small>
+          <p className="font-semibold text-sm text-[#0F172A]">{name}</p>
+          <p className="text-xs text-[#64748B]">
+            {school ? `Admitted to ${school}` : city}
+          </p>
         </div>
       </div>
-      <p className="text-[#475569]">"{quote}"</p>
     </motion.div>
   );
 }

@@ -44,7 +44,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-6 md:pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <small className="text-[#64748B]">
-            © 2025 Ivy Admit AI. All rights reserved.
+            © 2026 Ivy Admit AI. All rights reserved.
           </small>
           <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
             <a href="#" className="text-[#64748B] hover:text-[#0F172A] transition-colors">

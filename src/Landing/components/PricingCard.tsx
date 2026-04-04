@@ -1,29 +1,35 @@
+"use client";
+
 import { motion } from "motion/react";
-import { Check } from "lucide-react";
+import { Check, Zap } from "lucide-react";
 import { Button } from "./Button";
 
 interface PricingCardProps {
   title: string;
   price: string;
   period?: string;
+  description?: string;
   features: string[];
   ctaText: string;
   highlighted?: boolean;
+  badge?: string;
   delay?: number;
   onClick?: () => void;
   href?: string;
 }
 
-export function PricingCard({ 
-  title, 
-  price, 
-  period, 
-  features, 
-  ctaText, 
+export function PricingCard({
+  title,
+  price,
+  period,
+  description,
+  features,
+  ctaText,
   highlighted = false,
+  badge,
   delay = 0,
   onClick,
-  href
+  href,
 }: PricingCardProps) {
   return (
     <motion.div
@@ -32,30 +38,83 @@ export function PricingCard({
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay }}
       whileHover={{ y: -6, transition: { duration: 0.2 } }}
-      className={`p-8 rounded-2xl border shadow-[0_4px_24px_rgba(148,163,184,0.12)] hover:shadow-[0_12px_40px_rgba(148,163,184,0.2)] transition-all duration-300 ${
-        highlighted 
-          ? "bg-gradient-to-b from-white to-[#F8FAFC] border-[#3B82F6] ring-4 ring-[#3B82F6]/10 hover:ring-[#3B82F6]/20" 
-          : "bg-white border-slate-200 hover:border-[#3B82F6]/20"
+      className={`relative p-8 rounded-2xl border transition-all duration-300 flex flex-col ${
+        highlighted
+          ? "bg-gradient-to-b from-[#1D4ED8] to-[#1E40AF] border-[#3B82F6] shadow-[0_16px_48px_rgba(29,78,216,0.3)] text-white"
+          : "bg-white border-slate-200 shadow-[0_4px_24px_rgba(148,163,184,0.1)] hover:shadow-[0_12px_40px_rgba(148,163,184,0.18)] hover:border-slate-300"
       }`}
     >
-      <h3 className="mb-2">{title}</h3>
+      {badge && (
+        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-[#F59E0B] to-[#EF4444] text-white text-xs font-semibold shadow-md">
+            <Zap className="w-3 h-3" />
+            {badge}
+          </div>
+        </div>
+      )}
+
       <div className="mb-6">
-        <span className="text-5xl text-[#0F172A]" style={{ fontFamily: "var(--font-heading)", fontWeight: 800 }}>
-          {price}
-        </span>
-        {period && <span className="text-[#64748B] ml-2">{period}</span>}
+        <p
+          className={`text-sm font-semibold uppercase tracking-widest mb-2 ${
+            highlighted ? "text-blue-200" : "text-[#64748B]"
+          }`}
+        >
+          {title}
+        </p>
+        <div className="flex items-end gap-2 mb-2">
+          <span
+            className={`text-5xl font-extrabold ${
+              highlighted ? "text-white" : "text-[#0F172A]"
+            }`}
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            {price}
+          </span>
+          {period && (
+            <span
+              className={`mb-2 text-sm ${highlighted ? "text-blue-200" : "text-[#64748B]"}`}
+            >
+              {period}
+            </span>
+          )}
+        </div>
+        {description && (
+          <p
+            className={`text-sm ${highlighted ? "text-blue-100" : "text-[#64748B]"}`}
+          >
+            {description}
+          </p>
+        )}
       </div>
-      <ul className="space-y-3 mb-8">
+
+      <ul className="space-y-3 mb-8 flex-1">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start gap-3">
-            <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
-            <span className="text-[#475569]">{feature}</span>
+            <div
+              className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
+                highlighted ? "bg-white/20" : "bg-[#DBEAFE]"
+              }`}
+            >
+              <Check
+                className={`w-3 h-3 ${highlighted ? "text-white" : "text-[#2563EB]"}`}
+              />
+            </div>
+            <span
+              className={`text-sm ${highlighted ? "text-blue-50" : "text-[#475569]"}`}
+            >
+              {feature}
+            </span>
           </li>
         ))}
       </ul>
-      <Button 
-        variant={highlighted ? "primary" : "secondary"} 
-        className="w-full"
+
+      <Button
+        variant={highlighted ? "secondary" : "secondary"}
+        className={`w-full ${
+          highlighted
+            ? "border-white/30 text-white hover:bg-white/10 hover:border-white/50"
+            : ""
+        }`}
         onClick={onClick}
         href={href}
       >

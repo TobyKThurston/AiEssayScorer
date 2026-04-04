@@ -9,6 +9,7 @@ import { useAuth } from "@/contexts/AuthContext";
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const { user, loading, signOut } = useAuth();
 
   useEffect(() => {
@@ -27,6 +28,7 @@ export function Navigation() {
   };
 
   const handleUpgrade = async () => {
+    setCheckoutError(null);
     try {
       const response = await fetch("/api/create-checkout", {
         method: "POST",
@@ -39,16 +41,16 @@ export function Navigation() {
       if (data.url) {
         window.location.href = data.url;
       } else if (data.error) {
-        alert(data.error);
+        setCheckoutError(data.error);
       }
-    } catch (error) {
-      console.error("Error creating checkout:", error);
-      alert("Failed to start checkout. Please try again.");
+    } catch {
+      setCheckoutError("Failed to start checkout. Please try again.");
     }
   };
 
   return (
-    <nav 
+    <>
+    <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-sm" : "bg-white/50 backdrop-blur-sm"
       }`}
@@ -159,5 +161,14 @@ export function Navigation() {
         )}
       </div>
     </nav>
+    {checkoutError && (
+      <div className="fixed top-16 left-0 right-0 z-40 flex justify-center px-4 pt-2 pointer-events-none">
+        <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-2 rounded-lg shadow-sm pointer-events-auto">
+          {checkoutError}
+          <button onClick={() => setCheckoutError(null)} className="ml-3 font-semibold hover:text-red-900">✕</button>
+        </div>
+      </div>
+    )}
+  </>
   );
 }
