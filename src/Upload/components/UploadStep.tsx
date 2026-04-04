@@ -89,7 +89,7 @@ export function UploadStep({ formData, updateFormData, onNext }: UploadStepProps
         <Button
           variant="primary"
           onClick={onNext}
-          className={!canProceed ? "opacity-50 cursor-not-allowed" : ""}
+          disabled={!canProceed}
         >
           Continue
         </Button>

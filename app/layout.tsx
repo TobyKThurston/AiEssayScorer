@@ -1,6 +1,20 @@
 import "./globals.css";
 import { AuthProvider } from "@/contexts/AuthContext";
+import { Inter, Inter_Tight } from "next/font/google";
 import type { Metadata } from "next";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  weight: "800",
+  variable: "--font-heading",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ivyadmit.com"),
@@ -82,7 +96,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${interTight.variable}`}>
       <body>
         <AuthProvider>{children}</AuthProvider>
       </body>

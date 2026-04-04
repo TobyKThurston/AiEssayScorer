@@ -11,6 +11,7 @@ interface QuestionsStepProps {
   loading?: boolean;
   error?: string | null;
   tokens?: number | null;
+  onCheckoutError?: (msg: string) => void;
 }
 
 const essayTypes = [
@@ -35,7 +36,7 @@ const targetSchools = [
   "Cornell"
 ];
 
-export function QuestionsStep({ formData, updateFormData, onNext, onBack, loading, error, tokens }: QuestionsStepProps) {
+export function QuestionsStep({ formData, updateFormData, onNext, onBack, loading, error, tokens, onCheckoutError }: QuestionsStepProps) {
   const toggleSchool = (school: string) => {
     const schools = formData.targetSchools.includes(school)
       ? formData.targetSchools.filter(s => s !== school)
@@ -184,11 +185,10 @@ export function QuestionsStep({ formData, updateFormData, onNext, onBack, loadin
                       if (data.url) {
                         window.location.href = data.url;
                       } else if (data.error) {
-                        alert(data.error);
+                        onCheckoutError?.(data.error);
                       }
-                    } catch (error) {
-                      console.error("Error creating checkout:", error);
-                      alert("Failed to start checkout. Please try again.");
+                    } catch {
+                      onCheckoutError?.("Failed to start checkout. Please try again.");
                     }
                   }}
                   className="text-sm"

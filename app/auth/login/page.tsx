@@ -46,10 +46,6 @@ function LoginForm() {
       // Ensure we have the full callback URL
       const fullCallbackUrl = `${siteUrl}/auth/callback`;
       
-      console.log("RedirectTo is:", fullCallbackUrl);
-      console.log("Site URL from env:", process.env.NEXT_PUBLIC_SITE_URL);
-      console.log("Window origin:", window.location.origin);
-      
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {

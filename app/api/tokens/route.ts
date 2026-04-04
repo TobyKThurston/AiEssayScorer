@@ -33,12 +33,9 @@ export async function GET() {
     }
 
     return NextResponse.json({ tokens: userTokens.tokens });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Error fetching tokens:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch tokens" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Failed to fetch tokens" }, { status: 500 });
   }
 }
 

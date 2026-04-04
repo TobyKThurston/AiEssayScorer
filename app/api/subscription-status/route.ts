@@ -26,7 +26,7 @@ export async function GET() {
       isSubscribed: !!subscription,
       subscriptionId: subscription?.stripe_subscription_id || null,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Error checking subscription status:", error);
     return NextResponse.json({ isSubscribed: false });
   }

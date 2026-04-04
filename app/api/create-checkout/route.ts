@@ -56,12 +56,10 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({ url: checkoutSession.url });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : "Failed to create checkout session";
     console.error("Error creating checkout session:", error);
-    return NextResponse.json(
-      { error: error.message || "Failed to create checkout session" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
 
