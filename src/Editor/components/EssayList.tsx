@@ -21,6 +21,7 @@ export function EssayList() {
   const [essays, setEssays] = useState<Essay[]>([]);
   const [loading, setLoading] = useState(true);
   const [creating, setCreating] = useState(false);
+  const [createError, setCreateError] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("/api/essays")
@@ -32,6 +33,7 @@ export function EssayList() {
 
   const handleNew = async () => {
     setCreating(true);
+    setCreateError(null);
     try {
       const res = await fetch("/api/essays", {
         method: "POST",
@@ -41,8 +43,12 @@ export function EssayList() {
       const data = await res.json();
       if (data.essay) {
         router.push(`/editor/${data.essay.id}`);
+        return; // keep spinner while navigating
       }
+      setCreateError(data.error || "Failed to create essay. Have you run the database migration?");
     } catch {
+      setCreateError("Failed to create essay. Please try again.");
+    } finally {
       setCreating(false);
     }
   };
@@ -68,6 +74,12 @@ export function EssayList() {
           {creating ? "Creating…" : "New Essay"}
         </button>
       </div>
+
+      {createError && (
+        <div className="mb-6 px-4 py-3 rounded-xl bg-red-50 border border-red-200 text-sm text-red-700">
+          {createError}
+        </div>
+      )}
 
       {/* List */}
       {loading ? (

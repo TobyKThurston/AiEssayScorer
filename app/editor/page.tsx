@@ -15,7 +15,7 @@ export default async function EditorListPage() {
   } = await supabase.auth.getSession();
 
   if (!session) {
-    redirect("/auth/login");
+    redirect("/auth/login?next=/editor");
   }
 
   return <EditorApp />;

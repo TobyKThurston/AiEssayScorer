@@ -24,8 +24,8 @@ function LoginForm() {
     // Check if user is already logged in
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session) {
-        const redirect = searchParams.get("redirect") || "/";
-        router.push(redirect);
+        const next = searchParams.get("next") || searchParams.get("redirect") || "/editor";
+        router.push(next);
       }
     });
   }, [router, searchParams, supabase]);
@@ -44,7 +44,8 @@ function LoginForm() {
       }
       
       // Ensure we have the full callback URL
-      const fullCallbackUrl = `${siteUrl}/auth/callback`;
+      const nextParam = searchParams.get("next") || "/editor";
+      const fullCallbackUrl = `${siteUrl}/auth/callback?next=${encodeURIComponent(nextParam)}`;
       
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",

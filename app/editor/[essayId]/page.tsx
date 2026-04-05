@@ -20,7 +20,7 @@ export default async function EditorPageRoute({
   } = await supabase.auth.getSession();
 
   if (!session) {
-    redirect("/auth/login");
+    redirect(`/auth/login?next=/editor/${essayId}`);
   }
 
   return <EditorPage essayId={essayId} />;
