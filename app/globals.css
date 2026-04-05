@@ -45,17 +45,17 @@
 
   h1 {
     font-family: var(--font-heading);
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 40px;
+    line-height: 48px;
     font-weight: 800;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     color: var(--color-text-primary);
   }
-  
+
   @media (min-width: 768px) {
     h1 {
-      font-size: 56px;
-      line-height: 64px;
+      font-size: 64px;
+      line-height: 72px;
     }
   }
 

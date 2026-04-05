@@ -13,20 +13,20 @@ interface ButtonProps {
   icon?: boolean;
 }
 
-export function Button({ 
-  variant = "primary", 
-  children, 
-  onClick, 
+export function Button({
+  variant = "primary",
+  children,
+  onClick,
   href,
   className = "",
-  icon = false 
+  icon = false
 }: ButtonProps) {
   const baseClasses = "inline-flex items-center justify-center gap-2 transition-all duration-200 font-medium";
-  
+
   const variants = {
-    primary: "px-6 py-3 rounded-2xl bg-gradient-to-b from-[#3B82F6] to-[#2563EB] text-white hover:shadow-[0_8px_24px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 active:translate-y-0",
-    secondary: "px-6 py-3 rounded-2xl border-2 border-[#3B82F6]/20 text-[#0F172A] hover:bg-[#DBEAFE]/30 hover:border-[#3B82F6]/40",
-    tertiary: "text-[#3B82F6] hover:text-[#2563EB]"
+    primary: "px-6 py-3 rounded-full bg-[#0A0A0F] text-white hover:bg-[#1e1e3f] shadow-md active:scale-[0.98]",
+    secondary: "px-6 py-3 rounded-full bg-white/40 backdrop-blur-sm border border-white/60 text-[#0F172A] hover:bg-white/60",
+    tertiary: "text-[#6366F1] hover:text-[#4F46E5]"
   };
 
   const buttonContent = (
@@ -49,17 +49,6 @@ export function Button({
           {buttonContent}
         </Link>
       </motion.div>
-    );
-  }
-
-  if (variant === "primary") {
-    return (
-      <motion.button
-        {...motionProps}
-        onClick={onClick}
-      >
-        {buttonContent}
-      </motion.button>
     );
   }
 

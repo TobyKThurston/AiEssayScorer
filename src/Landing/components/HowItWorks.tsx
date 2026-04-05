@@ -29,7 +29,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-16 md:py-24 bg-white">
+    <section id="how-it-works" className="py-16 md:py-24">
       <div className="max-w-[1200px] mx-auto px-6 md:px-16">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -38,44 +38,37 @@ export function HowItWorks() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <p className="text-xs font-semibold text-[#3B82F6] uppercase tracking-widest mb-3">
+          <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-3">
             How It Works
           </p>
           <h2>Three steps to a stronger essay</h2>
         </motion.div>
 
-        <div className="relative">
-          {/* Connector line — desktop only */}
-          <div className="hidden md:block absolute top-[52px] left-[calc(16.67%+32px)] right-[calc(16.67%+32px)] h-px bg-gradient-to-r from-[#BFDBFE] via-[#3B82F6] to-[#BFDBFE]" />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            {steps.map((step, index) => (
-              <motion.div
-                key={step.step}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="flex flex-col items-center text-center"
-              >
-                {/* Icon circle */}
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center shadow-[0_8px_24px_rgba(59,130,246,0.25)]">
-                    <step.icon className="w-7 h-7 text-white" />
-                  </div>
-                  <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-white border-2 border-[#3B82F6] text-[10px] font-bold text-[#3B82F6] flex items-center justify-center">
-                    {index + 1}
-                  </span>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.step}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="bg-white/60 backdrop-blur-md border border-white/70 rounded-2xl p-6 shadow-[0_2px_16px_rgba(99,102,241,0.06)] hover:bg-white/75 hover:shadow-[0_8px_32px_rgba(99,102,241,0.12)] transition-all duration-300"
+            >
+              {/* Step number + icon */}
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-white/60 backdrop-blur-sm border border-white/80 flex items-center justify-center">
+                  <step.icon className="w-5 h-5 text-[#6366F1]" />
                 </div>
-
-                <p className="text-xs font-semibold text-[#3B82F6] uppercase tracking-widest mb-2">
+                <span className="text-xs font-bold text-[#6366F1] uppercase tracking-widest">
                   Step {step.step}
-                </p>
-                <h3 className="mb-3">{step.title}</h3>
-                <p className="text-[#64748B] max-w-xs">{step.description}</p>
-              </motion.div>
-            ))}
-          </div>
+                </span>
+              </div>
+
+              <h3 className="mb-2">{step.title}</h3>
+              <p className="text-[#64748B] text-sm leading-relaxed">{step.description}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
