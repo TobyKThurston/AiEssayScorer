@@ -69,7 +69,7 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
-              <Button variant="primary" href="/upload">
+              <Button variant="primary" href="/editor">
                 Review your essay
                 <ArrowRight className="w-4 h-4" />
               </Button>

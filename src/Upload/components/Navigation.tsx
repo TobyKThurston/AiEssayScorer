@@ -69,6 +69,9 @@ export function Navigation() {
               <>
                 {user ? (
                   <>
+                    <Link href="/editor" className="text-[#475569] hover:text-[#0F172A] transition-colors">
+                      My Essays
+                    </Link>
                     <Button variant="secondary" onClick={handleUpgrade}>
                       Upgrade to Pro
                     </Button>
@@ -111,6 +114,13 @@ export function Navigation() {
                 <>
                   {user ? (
                     <>
+                      <Link
+                        href="/editor"
+                        className="text-[#475569] hover:text-[#0F172A] transition-colors py-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        My Essays
+                      </Link>
                       <Button variant="secondary" onClick={handleUpgrade} className="w-full">
                         Upgrade to Pro
                       </Button>

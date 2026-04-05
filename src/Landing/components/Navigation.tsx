@@ -80,6 +80,9 @@ export function Navigation() {
               <>
                 {user ? (
                   <>
+                    <Link href="/editor" className="text-[#475569] hover:text-[#0F172A] transition-colors">
+                      My Essays
+                    </Link>
                     <Button variant="secondary" onClick={handleUpgrade}>
                       Upgrade to Pro
                     </Button>
@@ -97,7 +100,7 @@ export function Navigation() {
                 )}
               </>
             )}
-            <Button variant="primary" href="/upload">Review your essay</Button>
+            <Button variant="primary" href="/editor">Review your essay</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -132,6 +135,13 @@ export function Navigation() {
                 <>
                   {user ? (
                     <>
+                      <Link
+                        href="/editor"
+                        className="text-[#475569] hover:text-[#0F172A] transition-colors py-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        My Essays
+                      </Link>
                       <Button variant="secondary" onClick={handleUpgrade} className="w-full">
                         Upgrade to Pro
                       </Button>
@@ -153,7 +163,7 @@ export function Navigation() {
                   )}
                 </>
               )}
-              <Button variant="primary" href="/upload" className="w-full mt-2">
+              <Button variant="primary" href="/editor" className="w-full mt-2">
                 Review your essay
               </Button>
             </div>
