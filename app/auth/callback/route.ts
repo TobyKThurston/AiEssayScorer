@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 export async function GET(request: Request) {
   const requestUrl = new URL(request.url);
   const code = requestUrl.searchParams.get("code");
-  const next = requestUrl.searchParams.get("next") ?? "/";
+  const next = requestUrl.searchParams.get("next") ?? "/editor";
 
   // Use environment variable for production, fallback to request origin
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || requestUrl.origin;

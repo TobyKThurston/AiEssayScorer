@@ -44,8 +44,7 @@ function LoginForm() {
       }
       
       // Ensure we have the full callback URL
-      const nextParam = searchParams.get("next") || "/editor";
-      const fullCallbackUrl = `${siteUrl}/auth/callback?next=${encodeURIComponent(nextParam)}`;
+      const fullCallbackUrl = `${siteUrl}/auth/callback`;
       
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
