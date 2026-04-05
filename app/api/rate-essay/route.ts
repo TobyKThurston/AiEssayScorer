@@ -1,27 +1,8 @@
 import { createClient } from "@/lib/supabase/server";
 import { NextResponse } from "next/server";
-import { generateText, Output } from "ai";
-import { z } from "zod";
+import OpenAI from "openai";
 
-const lineSuggestionSchema = z.object({
-  original: z.string(),
-  suggestion: z.string(),
-  reason: z.string(),
-});
-
-const ratingSchema = z.object({
-  score: z.number().min(0).max(100),
-  contentScore: z.number().min(0).max(30),
-  structureScore: z.number().min(0).max(25),
-  styleScore: z.number().min(0).max(25),
-  strengths: z.array(z.string()),
-  improvements: z.array(z.string()),
-  contentFeedback: z.string(),
-  structureFeedback: z.string(),
-  styleFeedback: z.string(),
-  recommendation: z.string(),
-  lineSuggestions: z.array(lineSuggestionSchema),
-});
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const systemPrompt = `You are a strict, expert college admissions essay reviewer with 15+ years of experience at top-tier universities. You are known for being critical, consistent, and holding essays to the highest standards. You evaluate essays using a rigorous rubric and provide actionable, specific feedback.
 
@@ -67,7 +48,22 @@ For lineSuggestions:
 - Use actual quotes from the essay for "original"
 - Focus on lines that are generic, clichéd, weak, or could be significantly improved
 - Make suggestions concrete and actionable
-- Explain why each change matters`;
+- Explain why each change matters
+
+Respond ONLY with valid JSON matching this exact shape:
+{
+  "score": number (0-100),
+  "contentScore": number (0-30),
+  "structureScore": number (0-25),
+  "styleScore": number (0-25),
+  "strengths": string[],
+  "improvements": string[],
+  "contentFeedback": string,
+  "structureFeedback": string,
+  "styleFeedback": string,
+  "recommendation": string,
+  "lineSuggestions": [{ "original": string, "suggestion": string, "reason": string }]
+}`;
 
 export async function POST(request: Request) {
   try {
@@ -89,15 +85,6 @@ export async function POST(request: Request) {
       );
     }
 
-    // Build context for the AI
-    let contextInfo = "";
-    if (targetSchools && Array.isArray(targetSchools) && targetSchools.length > 0) {
-      contextInfo += `\n\nTarget schools: ${targetSchools.join(", ")}`;
-    }
-    if (prompt && typeof prompt === "string" && prompt.trim().length > 0) {
-      contextInfo += `\n\nEssay prompt: ${prompt}`;
-    }
-
     // Check user tokens
     const { data: userTokens, error: tokenError } = await supabase
       .from("user_tokens")
@@ -107,21 +94,27 @@ export async function POST(request: Request) {
 
     if (tokenError || !userTokens || userTokens.tokens < 1) {
       return NextResponse.json(
-        {
-          error:
-            "Insufficient tokens. You need at least 1 token to rate an essay.",
-        },
+        { error: "Insufficient tokens. You need at least 1 token to rate an essay." },
         { status: 403 }
       );
     }
 
-    const { output: rating } = await generateText({
-      model: "openai/gpt-5.4",
-      output: Output.object({ schema: ratingSchema }),
-      system: systemPrompt,
-      prompt: `Please rate this college admissions essay:${contextInfo}\n\n${essay}`,
+    let userPrompt = `Please rate this college admissions essay:`;
+    if (targetSchools?.length) userPrompt += `\n\nTarget schools: ${targetSchools.join(", ")}`;
+    if (prompt?.trim()) userPrompt += `\n\nEssay prompt: ${prompt}`;
+    userPrompt += `\n\n${essay}`;
+
+    const completion = await client.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userPrompt },
+      ],
+      response_format: { type: "json_object" },
       temperature: 0.7,
     });
+
+    const rating = JSON.parse(completion.choices[0].message.content ?? "{}");
 
     // Deduct token
     await supabase
@@ -131,9 +124,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ rating });
   } catch (error: unknown) {
-    const message =
-      error instanceof Error ? error.message : "Failed to rate essay";
-    console.error("Error rating essay:", error);
+    const message = error instanceof Error ? error.message : "Failed to rate essay";
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
