@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from "@/Landing/components/ui/resizable";
 import { EssayRating } from "../types";
 import { EssayTextPanel } from "./EssayTextPanel";
 import { FeedbackPanel } from "./FeedbackPanel";
+import { WritingGuide } from "./WritingGuide";
 
 interface EditorShellProps {
   mode: "edit" | "preview";
@@ -42,7 +44,11 @@ export function EditorShell({
   onSwitchToEdit,
   onSwitchToPreview,
 }: EditorShellProps) {
-  const textPanel = (
+  const [openMetadata, setOpenMetadata] = useState(false);
+
+  const wordCount = content.trim() ? content.trim().split(/\s+/).length : 0;
+
+  const leftPanel = (
     <EssayTextPanel
       mode={mode}
       content={content}
@@ -51,6 +57,7 @@ export function EditorShell({
       essayPrompt={essayPrompt}
       rating={rating}
       activeHighlightIndex={activeHighlightIndex}
+      openMetadata={openMetadata}
       onContentChange={onContentChange}
       onMetadataChange={onMetadataChange}
       onHighlightHover={onHighlightHover}
@@ -58,27 +65,36 @@ export function EditorShell({
       onHighlightLock={onHighlightLock}
       onSwitchToEdit={onSwitchToEdit}
       onSwitchToPreview={onSwitchToPreview}
+      onMetadataForceHandled={() => setOpenMetadata(false)}
     />
   );
 
-  if (!rating) {
-    return <div className="h-full">{textPanel}</div>;
-  }
+  const rightPanel = rating ? (
+    <FeedbackPanel
+      rating={rating}
+      activeHighlightIndex={activeHighlightIndex}
+      onHoverEnter={onHighlightHover}
+      onHoverLeave={onHighlightLeave}
+      onLock={onHighlightLock}
+    />
+  ) : (
+    <WritingGuide
+      wordCount={wordCount}
+      essayType={essayType}
+      essayPrompt={essayPrompt}
+      targetSchools={targetSchools}
+      onEditContext={() => setOpenMetadata(true)}
+    />
+  );
 
   return (
     <ResizablePanelGroup direction="horizontal" className="h-full">
-      <ResizablePanel defaultSize={58} minSize={35}>
-        {textPanel}
+      <ResizablePanel defaultSize={60} minSize={38}>
+        {leftPanel}
       </ResizablePanel>
       <ResizableHandle withHandle />
-      <ResizablePanel defaultSize={42} minSize={28}>
-        <FeedbackPanel
-          rating={rating}
-          activeHighlightIndex={activeHighlightIndex}
-          onHoverEnter={onHighlightHover}
-          onHoverLeave={onHighlightLeave}
-          onLock={onHighlightLock}
-        />
+      <ResizablePanel defaultSize={40} minSize={26}>
+        {rightPanel}
       </ResizablePanel>
     </ResizablePanelGroup>
   );
