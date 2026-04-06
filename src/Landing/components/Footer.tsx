@@ -9,11 +9,12 @@ export function Footer() {
       { label: "AI Essay Review", href: "/ai-essay-review" },
       { label: "Essay Checker", href: "/college-essay-checker" },
       { label: "Common App Help", href: "/common-app-essay-help" },
+      { label: "Improve Your Essay", href: "/how-to-improve-college-essay" },
+      { label: "Essay Examples", href: "/ivy-league-essay-examples" },
     ],
     Company: [
-      { label: "About", href: "#" },
+      { label: "About", href: "/about" },
       { label: "Blog", href: "/blog" },
-      { label: "Careers", href: "#" },
       { label: "Contact", href: "mailto:support@getivyadmit.com" },
     ],
     Legal: [
