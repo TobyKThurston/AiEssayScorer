@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Lightbulb } from "lucide-react";
+import { Lightbulb, Wand2 } from "lucide-react";
+import { UpgradeGate } from "./UpgradeGate";
 
 interface FeedbackCardProps {
   index: number;
@@ -9,9 +10,14 @@ interface FeedbackCardProps {
   suggestion: string;
   reason: string;
   isActive: boolean;
+  isPro: boolean;
+  rewriteCount: number;
+  rewriteResult?: { rewritten: string; explanation: string };
+  isRewriting?: boolean;
   onHoverEnter: (index: number) => void;
   onHoverLeave: () => void;
   onLock: (index: number) => void;
+  onRewrite: (index: number, original: string, suggestion: string, reason: string) => void;
 }
 
 export function FeedbackCard({
@@ -20,9 +26,14 @@ export function FeedbackCard({
   suggestion,
   reason,
   isActive,
+  isPro,
+  rewriteCount,
+  rewriteResult,
+  isRewriting,
   onHoverEnter,
   onHoverLeave,
   onLock,
+  onRewrite,
 }: FeedbackCardProps) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -72,6 +83,34 @@ export function FeedbackCard({
           <p className="text-xs text-[#64748B] leading-snug">{reason}</p>
         </div>
       </div>
+
+      {/* Rewrite button */}
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          onRewrite(index, original, suggestion, reason);
+        }}
+        disabled={isRewriting}
+        className="mt-3 flex items-center gap-1 text-[10px] font-medium text-[#6366F1] hover:underline disabled:opacity-40"
+      >
+        <Wand2 className="w-3 h-3" />
+        {isRewriting ? "Rewriting..." : "Rewrite this"}
+      </button>
+
+      {/* Rewrite result */}
+      {rewriteResult && (
+        <UpgradeGate
+          isLocked={!isPro && rewriteCount > 3}
+          featureName="Unlimited Rewrites"
+          description="You've used your 3 free rewrites"
+        >
+          <div className="mt-2 p-2.5 rounded-lg bg-[#F0FDF4] border border-[#BBF7D0]">
+            <span className="text-[10px] font-semibold text-[#10B981] block mb-1">Rewritten</span>
+            <p className="text-sm text-[#0F172A] leading-snug">{rewriteResult.rewritten}</p>
+            <p className="text-[10px] text-[#64748B] mt-1 italic">{rewriteResult.explanation}</p>
+          </div>
+        </UpgradeGate>
+      )}
     </div>
   );
 }

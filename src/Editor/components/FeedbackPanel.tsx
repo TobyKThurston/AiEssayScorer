@@ -4,21 +4,37 @@ import { CheckCircle2, AlertTriangle, Target, FileText, TrendingUp } from "lucid
 import { EssayRating } from "../types";
 import { ScoreHeader } from "./ScoreHeader";
 import { FeedbackCard } from "./FeedbackCard";
+import { HookPanel } from "./HookPanel";
+import { AdmissionsOfficerView } from "./AdmissionsOfficerView";
 
 interface FeedbackPanelProps {
   rating: EssayRating;
   activeHighlightIndex: number | null;
+  isPro: boolean;
+  rewriteCount: number;
+  rewriteResults: Record<number, { rewritten: string; explanation: string }>;
+  rewritingIndex: number | null;
   onHoverEnter: (index: number) => void;
   onHoverLeave: () => void;
   onLock: (index: number) => void;
+  onRewrite: (index: number, original: string, suggestion: string, reason: string) => void;
+  onRegenHooks: () => void;
+  isRegenHooks: boolean;
 }
 
 export function FeedbackPanel({
   rating,
   activeHighlightIndex,
+  isPro,
+  rewriteCount,
+  rewriteResults,
+  rewritingIndex,
   onHoverEnter,
   onHoverLeave,
   onLock,
+  onRewrite,
+  onRegenHooks,
+  isRegenHooks,
 }: FeedbackPanelProps) {
   return (
     <div className="flex flex-col h-full overflow-hidden bg-[#F8FAFC]">
@@ -27,6 +43,16 @@ export function FeedbackPanel({
 
       {/* Scrollable content */}
       <div className="flex-1 overflow-y-auto p-3 space-y-3">
+        {/* Hook panel — top */}
+        {rating.hooks && (
+          <HookPanel
+            hooks={rating.hooks}
+            isPro={isPro}
+            isGenerating={isRegenHooks}
+            onRegenerate={onRegenHooks}
+          />
+        )}
+
         {/* Line suggestions */}
         {rating.lineSuggestions && rating.lineSuggestions.length > 0 && (
           <div>
@@ -42,9 +68,14 @@ export function FeedbackPanel({
                   suggestion={item.suggestion}
                   reason={item.reason}
                   isActive={activeHighlightIndex === i}
+                  isPro={isPro}
+                  rewriteCount={rewriteCount}
+                  rewriteResult={rewriteResults[i]}
+                  isRewriting={rewritingIndex === i}
                   onHoverEnter={onHoverEnter}
                   onHoverLeave={onHoverLeave}
                   onLock={onLock}
+                  onRewrite={onRewrite}
                 />
               ))}
             </div>
@@ -110,6 +141,9 @@ export function FeedbackPanel({
             </div>
           ))}
         </div>
+
+        {/* Admissions Officer View */}
+        <AdmissionsOfficerView admissionsView={rating.admissionsView} isPro={isPro} />
 
         {/* Recommendation */}
         <div className="p-3 rounded-xl bg-blue-50 border border-blue-200">

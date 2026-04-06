@@ -6,6 +6,7 @@ import { EssayRating } from "../types";
 import { EssayTextPanel } from "./EssayTextPanel";
 import { FeedbackPanel } from "./FeedbackPanel";
 import { WritingGuide } from "./WritingGuide";
+import { EssayRewritePanel } from "./EssayRewritePanel";
 
 interface EditorShellProps {
   mode: "edit" | "preview";
@@ -15,6 +16,14 @@ interface EditorShellProps {
   essayPrompt: string;
   rating: EssayRating | null;
   activeHighlightIndex: number | null;
+  isPro: boolean;
+  rewriteCount: number;
+  rewriteResults: Record<number, { rewritten: string; explanation: string }>;
+  rewritingIndex: number | null;
+  showRewritePanel: boolean;
+  isRewritingEssay: boolean;
+  essayRewriteResult: { rewritten?: string; hookPreview: string } | null;
+  isRegenHooks: boolean;
   onContentChange: (value: string) => void;
   onMetadataChange: (fields: {
     essayType?: string;
@@ -26,6 +35,10 @@ interface EditorShellProps {
   onHighlightLock: (index: number) => void;
   onSwitchToEdit: () => void;
   onSwitchToPreview: () => void;
+  onRewrite: (index: number, original: string, suggestion: string, reason: string) => void;
+  onCloseRewritePanel: () => void;
+  onApplyRewrite: (text: string) => void;
+  onRegenHooks: () => void;
 }
 
 export function EditorShell({
@@ -36,6 +49,14 @@ export function EditorShell({
   essayPrompt,
   rating,
   activeHighlightIndex,
+  isPro,
+  rewriteCount,
+  rewriteResults,
+  rewritingIndex,
+  showRewritePanel,
+  isRewritingEssay,
+  essayRewriteResult,
+  isRegenHooks,
   onContentChange,
   onMetadataChange,
   onHighlightHover,
@@ -43,6 +64,10 @@ export function EditorShell({
   onHighlightLock,
   onSwitchToEdit,
   onSwitchToPreview,
+  onRewrite,
+  onCloseRewritePanel,
+  onApplyRewrite,
+  onRegenHooks,
 }: EditorShellProps) {
   const [openMetadata, setOpenMetadata] = useState(false);
 
@@ -70,13 +95,30 @@ export function EditorShell({
   );
 
   const rightPanel = rating ? (
-    <FeedbackPanel
-      rating={rating}
-      activeHighlightIndex={activeHighlightIndex}
-      onHoverEnter={onHighlightHover}
-      onHoverLeave={onHighlightLeave}
-      onLock={onHighlightLock}
-    />
+    <div className="relative h-full">
+      <FeedbackPanel
+        rating={rating}
+        activeHighlightIndex={activeHighlightIndex}
+        isPro={isPro}
+        rewriteCount={rewriteCount}
+        rewriteResults={rewriteResults}
+        rewritingIndex={rewritingIndex}
+        onHoverEnter={onHighlightHover}
+        onHoverLeave={onHighlightLeave}
+        onLock={onHighlightLock}
+        onRewrite={onRewrite}
+        onRegenHooks={onRegenHooks}
+        isRegenHooks={isRegenHooks}
+      />
+      <EssayRewritePanel
+        isOpen={showRewritePanel}
+        onClose={onCloseRewritePanel}
+        isLoading={isRewritingEssay}
+        result={essayRewriteResult}
+        isPro={isPro}
+        onApply={onApplyRewrite}
+      />
+    </div>
   ) : (
     <WritingGuide
       wordCount={wordCount}

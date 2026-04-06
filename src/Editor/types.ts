@@ -1,3 +1,11 @@
+export type AdmissionsView = {
+  firstImpression: string;
+  strengths: string[];
+  concerns: string[];
+  blendRisk: "Low" | "Medium" | "High";
+  standoutPotential: string;
+};
+
 export type EssayRating = {
   score: number;
   contentScore?: number;
@@ -14,6 +22,12 @@ export type EssayRating = {
     suggestion: string;
     reason: string;
   }>;
+  admissionsView?: AdmissionsView;
+  hooks?: {
+    narrative: string;
+    boldStatement: string;
+    reflective: string;
+  };
 };
 
 export type Essay = {

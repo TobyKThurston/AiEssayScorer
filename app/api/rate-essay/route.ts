@@ -50,6 +50,20 @@ For lineSuggestions:
 - Make suggestions concrete and actionable
 - Explain why each change matters
 
+Also provide:
+"admissionsView": {
+  "firstImpression": one sentence capturing an AO's gut reaction when they open this essay,
+  "strengths": array of 2-3 specific things that help this applicant stand out,
+  "concerns": array of 2-3 specific things that hurt the essay or cause it to blend in,
+  "blendRisk": "Low" | "Medium" | "High" — how likely this essay gets lost in the pile,
+  "standoutPotential": one sentence on what specific change would make this memorable
+},
+"hooks": {
+  "narrative": alternative opening that drops into a specific scene, max 45 words,
+  "boldStatement": opening with a surprising or counterintuitive claim, max 45 words,
+  "reflective": opening with a question or introspective observation, max 45 words
+}
+
 Respond ONLY with valid JSON matching this exact shape:
 {
   "score": number (0-100),
@@ -62,7 +76,9 @@ Respond ONLY with valid JSON matching this exact shape:
   "structureFeedback": string,
   "styleFeedback": string,
   "recommendation": string,
-  "lineSuggestions": [{ "original": string, "suggestion": string, "reason": string }]
+  "lineSuggestions": [{ "original": string, "suggestion": string, "reason": string }],
+  "admissionsView": { "firstImpression": string, "strengths": string[], "concerns": string[], "blendRisk": "Low" | "Medium" | "High", "standoutPotential": string },
+  "hooks": { "narrative": string, "boldStatement": string, "reflective": string }
 }`;
 
 export async function POST(request: Request) {

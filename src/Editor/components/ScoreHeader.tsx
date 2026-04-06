@@ -26,6 +26,16 @@ function getScoreLabel(score: number) {
   return "Needs Improvement";
 }
 
+function getPercentile(score: number) {
+  return Math.max(1, Math.round(100 - score));
+}
+
+function getStandoutLevel(score: number): "High" | "Medium" | "Low" {
+  if (score >= 85) return "High";
+  if (score >= 70) return "Medium";
+  return "Low";
+}
+
 export { getScoreColor, getScoreBg, getScoreLabel };
 
 export function ScoreHeader({ rating }: ScoreHeaderProps) {
@@ -63,7 +73,14 @@ export function ScoreHeader({ rating }: ScoreHeaderProps) {
           <p className={`text-sm font-semibold ${getScoreColor(overallScore)}`}>
             {getScoreLabel(overallScore)}
           </p>
-          <p className="text-xs text-[#94A3B8]">Overall Score</p>
+          <p className="text-xs text-[#94A3B8]">Top {getPercentile(overallScore)}% of applicants</p>
+          <span className={`mt-1 inline-block text-[10px] font-semibold px-2 py-0.5 rounded-full ${
+            getStandoutLevel(overallScore) === "High" ? "bg-[#D1FAE5] text-[#065F46]" :
+            getStandoutLevel(overallScore) === "Medium" ? "bg-[#FEF3C7] text-[#92400E]" :
+            "bg-[#FEE2E2] text-[#991B1B]"
+          }`}>
+            Standout: {getStandoutLevel(overallScore)}
+          </span>
         </div>
       </div>
 

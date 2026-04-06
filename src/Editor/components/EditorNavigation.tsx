@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, Save, Sparkles, History, Leaf } from "lucide-react";
+import { ArrowLeft, Save, Sparkles, History, Leaf, Wand2 } from "lucide-react";
 import Link from "next/link";
-import { Essay } from "../types";
+import { Essay, EssayRating } from "../types";
 
 interface EditorNavigationProps {
   essay: Essay | null;
@@ -13,9 +13,12 @@ interface EditorNavigationProps {
   tokens: number | null;
   analyzeError: string | null;
   hasContent: boolean;
+  rating: EssayRating | null;
+  isRewritingEssay: boolean;
   onSave: () => void;
   onAnalyze: () => void;
   onShowVersionHistory: () => void;
+  onRewriteEssay: () => void;
 }
 
 export function EditorNavigation({
@@ -26,9 +29,12 @@ export function EditorNavigation({
   tokens,
   analyzeError,
   hasContent,
+  rating,
+  isRewritingEssay,
   onSave,
   onAnalyze,
   onShowVersionHistory,
+  onRewriteEssay,
 }: EditorNavigationProps) {
   const [title, setTitle] = useState(essay?.title ?? "Untitled Essay");
   const titleDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -109,6 +115,18 @@ export function EditorNavigation({
           <Save className="w-3.5 h-3.5" />
           <span className="hidden sm:inline">{isSaving ? "Saving…" : "Save"}</span>
         </button>
+
+        {/* Rewrite essay */}
+        {rating && (
+          <button
+            onClick={onRewriteEssay}
+            disabled={isRewritingEssay}
+            className="flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#6366F1] text-[#6366F1] text-xs font-medium hover:bg-[#EDE9FE] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            <Wand2 className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">{isRewritingEssay ? "Rewriting..." : "Rewrite essay"}</span>
+          </button>
+        )}
 
         {/* Analyze */}
         <button
