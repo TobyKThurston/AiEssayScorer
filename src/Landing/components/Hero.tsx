@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Badge } from "./Badge";
 import { Button } from "./Button";
 import { CheckCircle2, TrendingUp, Sparkles, Star } from "lucide-react";
 import Link from "next/link";
@@ -25,20 +24,24 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <motion.div
-              className="flex flex-wrap gap-2 mb-7"
+            <motion.p
+              className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-4 flex items-center gap-1.5"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.05 }}
             >
-              <Badge>
-                <Sparkles className="w-3 h-3 mr-1 text-[#6366F1]" />
-                AI-Powered College Admissions
-              </Badge>
-            </motion.div>
+              <Sparkles className="w-3 h-3" />
+              AI-Powered College Admissions
+            </motion.p>
 
             <motion.h1
               className="mb-6"
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "clamp(38px, 5vw, 58px)",
+                lineHeight: "1.1",
+                letterSpacing: "-0.03em",
+              }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
