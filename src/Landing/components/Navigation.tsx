@@ -56,7 +56,7 @@ export function Navigation() {
               {navLinks.map((link) => (
                 <a
                   key={link}
-                  href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={`/#${link.toLowerCase().replace(/\s+/g, "-")}`}
                   className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
                 >
                   {link}
@@ -121,7 +121,7 @@ export function Navigation() {
                 {navLinks.map((link) => (
                   <a
                     key={link}
-                    href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
+                    href={`/#${link.toLowerCase().replace(/\s+/g, "-")}`}
                     className="text-[#475569] hover:text-[#0F172A] transition-colors py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
