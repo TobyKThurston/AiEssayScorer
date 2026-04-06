@@ -3,9 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
-import { ChevronDown, GraduationCap, BookOpen, Award, FileText, Lock } from "lucide-react";
+import { ChevronDown, Lock } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
-import { Button } from "./Button";
 
 type Application = {
   id: string;
@@ -1172,12 +1171,11 @@ At UChicago, I want to explore these kinds of questions. Not just about numbers,
 ];
 
 export function ApplicationsGallery() {
-  const [expandedSchool, setExpandedSchool] = useState<string | null>(null);
+  const [activeSchool, setActiveSchool] = useState<string>("harvard");
   const [expandedApplication, setExpandedApplication] = useState<string | null>(null);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [loading, setLoading] = useState(true);
   const [freeEssayViewed, setFreeEssayViewed] = useState<string | null>(null);
-  const [showSubscribeModal, setShowSubscribeModal] = useState(false);
   const { user } = useAuth();
 
   // Check if user has viewed their free essay
@@ -1218,350 +1216,224 @@ export function ApplicationsGallery() {
       const response = await fetch("/api/create-checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID,
-        }),
+        body: JSON.stringify({ priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID }),
       });
       const data = await response.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else if (data.error) {
-        alert(data.error);
-      }
-    } catch (error) {
-      console.error("Error creating checkout:", error);
-      alert("Failed to start checkout. Please try again.");
+      if (data.url) window.location.href = data.url;
+    } catch {
+      // silent fail
     }
   };
 
-  const handleSubscribeClick = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    await handleSubscribe();
-  };
-
   const handleEssayView = (essayId: string) => {
-    // If user hasn't viewed a free essay yet, mark this one as viewed
     if (!isSubscribed && !freeEssayViewed) {
       localStorage.setItem("freeEssayViewed", essayId);
       setFreeEssayViewed(essayId);
     }
   };
 
-  const toggleSchool = (schoolId: string) => {
-    // Allow browsing schools/applications, but restrict essay viewing
-    setExpandedSchool(expandedSchool === schoolId ? null : schoolId);
-    setExpandedApplication(null);
-  };
-
-  const toggleApplication = (appId: string) => {
-    // Allow browsing schools/applications, but restrict essay viewing
-    setExpandedApplication(expandedApplication === appId ? null : appId);
-  };
-
   const canViewEssay = (essayId: string, schoolId: string) => {
-    // Subscribed users can view all essays
     if (isSubscribed) return true;
-    // Non-subscribed users can only view Harvard essays
     if (schoolId !== "harvard") return false;
-    // Non-subscribed users can view their free essay from Harvard
     if (freeEssayViewed === essayId) return true;
-    // Non-subscribed users can view one Harvard essay if they haven't used their free view yet
     if (!freeEssayViewed) return true;
-    // Otherwise, they need to subscribe
     return false;
   };
 
   const canAccessSchool = (schoolId: string) => {
-    // Subscribed users can access all schools
     if (isSubscribed) return true;
-    // Non-subscribed users can only access Harvard
     return schoolId === "harvard";
   };
 
+  const currentSchool = mockSchools.find(s => s.id === activeSchool) ?? mockSchools[0];
+  const totalApplications = mockSchools.reduce((acc, s) => acc + s.applications.length, 0);
+
+  void loading;
+
   return (
     <div className="min-h-screen bg-[#F8FAFC] pt-24 pb-16">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-16 relative">
-        {/* Header */}
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="mb-4 bg-gradient-to-r from-[#3B82F6] to-[#0EA5E9] bg-clip-text text-transparent">
-            Successful Applications
-          </h1>
-          <p className="text-[#64748B] max-w-2xl mx-auto">
-            Explore real college applications from students who got accepted to top universities. Learn from their essays, stats, and strategies.
+      <div className="max-w-[860px] mx-auto px-6 md:px-8">
+
+        {/* Page header */}
+        <div className="mb-8">
+          <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">
+            Example Essays
           </p>
-        </motion.div>
+          <h1 className="text-2xl sm:text-3xl font-bold text-[#0F172A] mb-2">
+            Essays from accepted students
+          </h1>
+          <p className="text-[#64748B] text-sm">
+            Read real essays from students admitted to Harvard, Columbia, Stanford, and MIT. See what works.
+          </p>
+        </div>
 
-        {/* Subscription Modal - Show when user clicks on locked essay */}
-        <AnimatePresence>
-          {showSubscribeModal && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-              onClick={(e) => {
-                if (e.target === e.currentTarget) {
-                  setShowSubscribeModal(false);
-                }
-              }}
-            >
-              <motion.div
-                initial={{ scale: 0.95, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.95, opacity: 0 }}
-                className="bg-white rounded-2xl p-8 md:p-12 max-w-md mx-6 shadow-[0_8px_32px_rgba(0,0,0,0.12)] text-center border border-slate-200 relative"
-              >
-                <button
-                  onClick={() => setShowSubscribeModal(false)}
-                  className="absolute top-4 right-4 text-[#94A3B8] hover:text-[#0F172A] transition-colors"
-                >
-                  ✕
-                </button>
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center mx-auto mb-4">
-                  <Lock className="w-8 h-8 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-[#0F172A] mb-3">Subscribe for Full Access</h2>
-                <p className="text-[#64748B] mb-6">
-                  Subscribe to get unlimited access to all successful college applications and learn from real essays that got students into top universities.
-                </p>
-                <Button variant="primary" onClick={handleSubscribe} className="w-full">
-                  Subscribe Now
-                </Button>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Free Essay Banner */}
+        {/* Free preview notice */}
         {!isSubscribed && !freeEssayViewed && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-6 bg-gradient-to-r from-[#3B82F6] to-[#0EA5E9] rounded-xl p-4 text-white text-center"
-          >
-            <p className="text-sm md:text-base">
-              <strong>Free Preview:</strong> View one essay for free! Click on any essay below to get started.
+          <div className="mb-6 flex items-start gap-3 bg-[#EFF6FF] border border-[#BFDBFE] rounded-xl px-4 py-3">
+            <div className="w-5 h-5 rounded-full bg-[#3B82F6] flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span className="text-white text-[10px] font-bold">1</span>
+            </div>
+            <p className="text-sm text-[#1E40AF]">
+              <strong>Free preview:</strong> Read one full essay for free. Upgrade for access to all {totalApplications} applications.
             </p>
-          </motion.div>
+          </div>
         )}
 
-        {/* Schools List */}
-        <div className="space-y-4">
-          {mockSchools.map((school, index) => {
-            const isLocked = !canAccessSchool(school.id);
+        {/* School tabs */}
+        <div className="flex gap-1 bg-slate-100 p-1 rounded-xl mb-6 overflow-x-auto">
+          {mockSchools.map(school => {
+            const accessible = canAccessSchool(school.id);
+            const isActive = activeSchool === school.id;
             return (
-            <motion.div
-              key={school.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              {/* School Header */}
               <button
-                onClick={() => toggleSchool(school.id)}
-                className={`w-full bg-white rounded-2xl p-6 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 group ${isLocked ? "opacity-75" : ""}`}
+                key={school.id}
+                onClick={() => { setActiveSchool(school.id); setExpandedApplication(null); }}
+                className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 ${
+                  isActive
+                    ? "bg-white text-[#0F172A] shadow-sm"
+                    : "text-[#64748B] hover:text-[#0F172A] hover:bg-white/50"
+                }`}
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center shadow-lg">
-                      <GraduationCap className="w-7 h-7 text-white" />
-                    </div>
-                    <div className="text-left flex-1">
-                      <div className="flex items-center gap-2">
-                        <h3 className="text-[#0F172A] group-hover:text-[#3B82F6] transition-colors">
-                          {school.name}
-                        </h3>
-                        {isLocked && <Lock className="w-4 h-4 text-[#94A3B8]" />}
-                      </div>
-                      <p className="text-[#64748B]">
-                        {school.applications.length} {school.applications.length === 1 ? 'application' : 'applications'}
-                        {isLocked && " • Subscribe to view"}
-                      </p>
-                    </div>
-                  </div>
-                  <motion.div
-                    animate={{ rotate: expandedSchool === school.id ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <ChevronDown className="w-6 h-6 text-[#94A3B8] group-hover:text-[#3B82F6] transition-colors" />
-                  </motion.div>
-                </div>
+                {!accessible && <Lock className="w-3 h-3 text-[#94A3B8]" />}
+                {school.name.split(" ")[0]}
+                <span className={`text-xs px-1.5 py-0.5 rounded-full ${
+                  isActive ? "bg-slate-100 text-[#64748B]" : "bg-white/80 text-[#94A3B8]"
+                }`}>
+                  {school.applications.length}
+                </span>
               </button>
-
-              {/* Applications List */}
-              <AnimatePresence>
-                {expandedSchool === school.id && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    {isLocked ? (
-                      <div className="mt-4 pl-4 md:pl-8">
-                        <div className="bg-white rounded-xl p-6 border-2 border-dashed border-[#E2E8F0] text-center">
-                          <Lock className="w-8 h-8 text-[#94A3B8] mx-auto mb-3" />
-                          <p className="text-[#64748B] mb-4">
-                            Subscribe to view essays from {school.name}
-                          </p>
-                          <Button variant="primary" onClick={handleSubscribe} className="mx-auto">
-                            Subscribe Now
-                          </Button>
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="mt-4 space-y-3 pl-4 md:pl-8">
-                        {school.applications.map((app) => (
-                        <div key={app.id}>
-                          {/* Application Header */}
-                          <button
-                            onClick={() => toggleApplication(app.id)}
-                            className="w-full bg-white rounded-xl p-5 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-all duration-300 group"
-                          >
-                            <div className="flex items-center justify-between mb-3">
-                              <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center text-white shadow-md">
-                                  <span className="font-semibold">{app.name.split(' ').map(n => n[0]).join('')}</span>
-                                </div>
-                                <div className="text-left">
-                                  <h4 className="text-[#0F172A] group-hover:text-[#3B82F6] transition-colors">
-                                    {app.name}
-                                  </h4>
-                                  <p className="text-[#64748B]">{app.year}</p>
-                                </div>
-                              </div>
-                              <motion.div
-                                animate={{ rotate: expandedApplication === app.id ? 180 : 0 }}
-                                transition={{ duration: 0.3 }}
-                              >
-                                <ChevronDown className="w-5 h-5 text-[#94A3B8] group-hover:text-[#3B82F6] transition-colors" />
-                              </motion.div>
-                            </div>
-
-                            {/* Stats Grid */}
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                              <div className="bg-[#F8FAFC] rounded-lg p-3 text-left">
-                                <div className="flex items-center gap-2 mb-1">
-                                  <GraduationCap className="w-4 h-4 text-[#3B82F6]" />
-                                  <span className="text-[#64748B]">Major</span>
-                                </div>
-                                <p className="text-[#0F172A]">{app.major}</p>
-                              </div>
-                              <div className="bg-[#F8FAFC] rounded-lg p-3 text-left">
-                                <div className="flex items-center gap-2 mb-1">
-                                  <Award className="w-4 h-4 text-[#3B82F6]" />
-                                  <span className="text-[#64748B]">SAT</span>
-                                </div>
-                                <p className="text-[#0F172A]">{app.sat}</p>
-                              </div>
-                              <div className="bg-[#F8FAFC] rounded-lg p-3 text-left">
-                                <div className="flex items-center gap-2 mb-1">
-                                  <BookOpen className="w-4 h-4 text-[#3B82F6]" />
-                                  <span className="text-[#64748B]">GPA</span>
-                                </div>
-                                <p className="text-[#0F172A]">{app.gpa.toFixed(2)}</p>
-                              </div>
-                              <div className="bg-[#F8FAFC] rounded-lg p-3 text-left">
-                                <div className="flex items-center gap-2 mb-1">
-                                  <FileText className="w-4 h-4 text-[#3B82F6]" />
-                                  <span className="text-[#64748B]">Essays</span>
-                                </div>
-                                <p className="text-[#0F172A]">{app.essays.length}</p>
-                              </div>
-                            </div>
-                          </button>
-
-                          {/* Essays */}
-                          <AnimatePresence>
-                            {expandedApplication === app.id && (
-                              <motion.div
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.3 }}
-                                className="overflow-hidden"
-                              >
-                                <div className="mt-3 space-y-3 pl-4 md:pl-8">
-                                  {app.essays.map((essay, essayIndex) => (
-                                    <motion.div
-                                      key={essayIndex}
-                                      initial={{ opacity: 0, y: 10 }}
-                                      animate={{ opacity: 1, y: 0 }}
-                                      transition={{ delay: essayIndex * 0.1 }}
-                                      className="bg-white rounded-lg p-5 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-slate-100"
-                                    >
-                                      <div className="flex items-start gap-3 mb-3">
-                                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center flex-shrink-0">
-                                          <FileText className="w-4 h-4 text-white" />
-                                        </div>
-                                        <div className="flex-1">
-                                          <h5 className="text-[#0F172A] mb-1">{essay.title}</h5>
-                                          <p className="text-[#94A3B8] italic">{essay.prompt}</p>
-                                        </div>
-                                      </div>
-                                      <div className="bg-[#F8FAFC] rounded-lg p-4">
-                                        <p className="text-[#475569] leading-relaxed">{essay.excerpt}</p>
-                                      </div>
-                                      {(() => {
-                                        const essayId = `${app.id}-${essayIndex}`;
-                                        const canView = canViewEssay(essayId, school.id);
-                                        
-                                        if (canView) {
-                                          return (
-                                            <Link 
-                                              href={`/full-essay?school=${encodeURIComponent(school.name)}&student=${encodeURIComponent(app.name)}&year=${encodeURIComponent(app.year)}&major=${encodeURIComponent(app.major)}&sat=${app.sat}&gpa=${app.gpa}&essayTitle=${encodeURIComponent(essay.title)}&prompt=${encodeURIComponent(essay.prompt)}&content=${encodeURIComponent(essay.fullContent || essay.excerpt)}`}
-                                              onClick={() => handleEssayView(essayId)}
-                                              className="mt-3 text-[#3B82F6] hover:text-[#0EA5E9] transition-colors inline-block"
-                                            >
-                                              Read full essay →
-                                            </Link>
-                                          );
-                                        } else {
-                                          return (
-                                            <div className="mt-3">
-                                              {freeEssayViewed ? (
-                                                <button
-                                                  onClick={handleSubscribeClick}
-                                                  className="flex items-center gap-2 text-[#3B82F6] hover:text-[#0EA5E9] transition-colors"
-                                                >
-                                                  <Lock className="w-4 h-4" />
-                                                  <span className="text-sm">Subscribe to view more essays</span>
-                                                </button>
-                                              ) : (
-                                                <Link
-                                                  href={`/full-essay?school=${encodeURIComponent(school.name)}&student=${encodeURIComponent(app.name)}&year=${encodeURIComponent(app.year)}&major=${encodeURIComponent(app.major)}&sat=${app.sat}&gpa=${app.gpa}&essayTitle=${encodeURIComponent(essay.title)}&prompt=${encodeURIComponent(essay.prompt)}&content=${encodeURIComponent(essay.fullContent || essay.excerpt)}`}
-                                                  onClick={() => handleEssayView(essayId)}
-                                                  className="text-[#3B82F6] hover:text-[#0EA5E9] transition-colors inline-block"
-                                                >
-                                                  Read full essay →
-                                                </Link>
-                                              )}
-                                            </div>
-                                          );
-                                        }
-                                      })()}
-                                    </motion.div>
-                                  ))}
-                                </div>
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
-                        </div>
-                        ))}
-                      </div>
-                    )}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
             );
           })}
+        </div>
+
+        {/* School content */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeSchool}
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
+          >
+            {!canAccessSchool(currentSchool.id) ? (
+              /* Locked state */
+              <div className="rounded-2xl bg-white border border-slate-200 px-8 py-12 text-center">
+                <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center mx-auto mb-4">
+                  <Lock className="w-4.5 h-4.5 text-[#94A3B8]" />
+                </div>
+                <h3 className="text-base font-semibold text-[#0F172A] mb-1.5">
+                  Unlock {currentSchool.name} essays
+                </h3>
+                <p className="text-sm text-[#64748B] mb-6 max-w-xs mx-auto">
+                  {currentSchool.applications.length} applications from admitted students, with full essays and stats.
+                </p>
+                <button
+                  onClick={handleSubscribe}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1a1a2e] transition-colors"
+                >
+                  Upgrade to Pro for $7/mo
+                </button>
+              </div>
+            ) : (
+              /* Applicant list */
+              <div className="space-y-2">
+                {currentSchool.applications.map((app) => {
+                  const isExpanded = expandedApplication === app.id;
+                  return (
+                    <div key={app.id} className="rounded-xl bg-white border border-slate-200 overflow-hidden">
+                      {/* Applicant header */}
+                      <button
+                        onClick={() => setExpandedApplication(isExpanded ? null : app.id)}
+                        className="w-full px-5 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors text-left"
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className="w-9 h-9 rounded-full bg-[#EEF2FF] flex items-center justify-center flex-shrink-0">
+                            <span className="text-xs font-bold text-[#6366F1]">
+                              {app.name.split(" ").map(n => n[0]).join("")}
+                            </span>
+                          </div>
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <span className="text-sm font-semibold text-[#0F172A]">{app.name}</span>
+                              <span className="text-xs text-[#94A3B8]">{app.year}</span>
+                            </div>
+                            <span className="text-xs text-[#64748B]">{app.major}</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-4">
+                          <div className="hidden sm:flex items-center gap-3 text-xs text-[#94A3B8]">
+                            <span>SAT {app.sat}</span>
+                            <span className="text-[#E2E8F0]">|</span>
+                            <span>GPA {app.gpa.toFixed(2)}</span>
+                            <span className="text-[#E2E8F0]">|</span>
+                            <span>{app.essays.length} essays</span>
+                          </div>
+                          <ChevronDown className={`w-4 h-4 text-[#CBD5E1] transition-transform duration-200 flex-shrink-0 ${isExpanded ? "rotate-180" : ""}`} />
+                        </div>
+                      </button>
+
+                      {/* Essays */}
+                      {isExpanded && (
+                        <div className="border-t border-slate-100 divide-y divide-slate-100">
+                          {app.essays.map((essay, essayIndex) => {
+                            const essayId = `${app.id}-${essayIndex}`;
+                            const canView = canViewEssay(essayId, currentSchool.id);
+                            return (
+                              <div key={essayIndex} className="px-5 py-4">
+                                <p className="text-xs font-semibold text-[#475569] uppercase tracking-wide mb-1">
+                                  {essay.title}
+                                </p>
+                                <p className="text-xs text-[#94A3B8] italic mb-3 line-clamp-1">
+                                  {essay.prompt}
+                                </p>
+                                <p className="text-sm text-[#64748B] leading-relaxed line-clamp-3">
+                                  {essay.excerpt}
+                                </p>
+                                <div className="mt-3">
+                                  {canView ? (
+                                    <Link
+                                      href={`/full-essay?school=${encodeURIComponent(currentSchool.name)}&student=${encodeURIComponent(app.name)}&year=${encodeURIComponent(app.year)}&major=${encodeURIComponent(app.major)}&sat=${app.sat}&gpa=${app.gpa}&essayTitle=${encodeURIComponent(essay.title)}&prompt=${encodeURIComponent(essay.prompt)}&content=${encodeURIComponent(essay.fullContent || essay.excerpt)}`}
+                                      onClick={() => handleEssayView(essayId)}
+                                      className="text-sm font-medium text-[#6366F1] hover:text-[#4F46E5] transition-colors"
+                                    >
+                                      Read full essay →
+                                    </Link>
+                                  ) : (
+                                    <button
+                                      onClick={handleSubscribe}
+                                      className="flex items-center gap-1.5 text-sm text-[#94A3B8] hover:text-[#6366F1] transition-colors"
+                                    >
+                                      <Lock className="w-3.5 h-3.5" />
+                                      Upgrade to read full essay
+                                    </button>
+                                  )}
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Bottom CTA */}
+        <div className="mt-10 rounded-2xl bg-white border border-slate-200 px-8 py-8 text-center">
+          <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">Get started</p>
+          <h3 className="text-lg font-bold text-[#0F172A] mb-1.5">Score your own essay</h3>
+          <p className="text-sm text-[#64748B] mb-5">
+            AI feedback on clarity, structure, and admissions impact in under 60 seconds.
+          </p>
+          <Link
+            href="/editor"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1a1a2e] transition-colors"
+          >
+            Score my essay →
+          </Link>
         </div>
       </div>
     </div>

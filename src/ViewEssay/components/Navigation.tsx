@@ -1,23 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Leaf, Menu, X } from "lucide-react";
 import Link from "next/link";
-import { Button } from "./Button";
 import { useAuth } from "@/contexts/AuthContext";
 
 export function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { user, loading, signOut } = useAuth();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const handleLogout = async () => {
     await signOut();
@@ -29,62 +19,62 @@ export function Navigation() {
       const response = await fetch("/api/create-checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID,
-        }),
+        body: JSON.stringify({ priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID }),
       });
       const data = await response.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else if (data.error) {
-        alert(data.error);
-      }
-    } catch (error) {
-      console.error("Error creating checkout:", error);
-      alert("Failed to start checkout. Please try again.");
+      if (data.url) window.location.href = data.url;
+    } catch {
+      // silent fail
     }
   };
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-sm" : "bg-white/50 backdrop-blur-sm"
-      }`}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/60 backdrop-blur-2xl border-b border-white/60">
       <div className="max-w-[1200px] mx-auto px-6 md:px-16">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 cursor-pointer">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center">
-              <Leaf className="w-5 h-5 text-white" />
+            <div className="w-9 h-9 rounded-xl bg-white/70 backdrop-blur-sm border border-white/80 shadow-sm flex items-center justify-center">
+              <Leaf className="w-4 h-4 text-[#6366F1]" />
             </div>
             <span className="font-semibold text-[#0F172A]">Ivy Admit</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {!loading && (
               <>
                 {user ? (
                   <>
-                    <Button variant="secondary" onClick={handleUpgrade}>
+                    <Link href="/editor" className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors">
+                      My Essays
+                    </Link>
+                    <button
+                      onClick={handleUpgrade}
+                      className="text-sm px-4 py-2 rounded-full bg-white/40 backdrop-blur-sm border border-white/60 text-[#0F172A] hover:bg-white/60 transition-all"
+                    >
                       Upgrade to Pro
-                    </Button>
+                    </button>
                     <button
                       onClick={handleLogout}
-                      className="text-[#475569] hover:text-[#0F172A] transition-colors"
+                      className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
                     >
                       Logout
                     </button>
                   </>
                 ) : (
-                  <Link href="/auth/login" className="text-[#475569] hover:text-[#0F172A] transition-colors">
+                  <Link href="/auth/login" className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors">
                     Login
                   </Link>
                 )}
               </>
             )}
-            <Button variant="primary" href="/upload">Review your essay</Button>
+            <Link
+              href="/editor"
+              className="text-sm px-4 py-2 rounded-full bg-[#0A0A0F] text-white hover:bg-[#1a1a2e] transition-all font-medium"
+            >
+              Score my essay
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -93,25 +83,31 @@ export function Navigation() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-slate-200">
+          <div className="lg:hidden py-4 border-t border-white/40">
             <div className="flex flex-col gap-4">
               {!loading && (
                 <>
                   {user ? (
                     <>
-                      <Button variant="secondary" onClick={handleUpgrade} className="w-full">
+                      <Link
+                        href="/editor"
+                        className="text-[#475569] hover:text-[#0F172A] transition-colors py-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        My Essays
+                      </Link>
+                      <button
+                        onClick={handleUpgrade}
+                        className="px-4 py-2 rounded-full bg-white/40 border border-white/60 text-[#0F172A] hover:bg-white/60 transition-all w-full text-center"
+                      >
                         Upgrade to Pro
-                      </Button>
+                      </button>
                       <button
                         onClick={handleLogout}
                         className="text-[#475569] hover:text-[#0F172A] transition-colors py-2 text-left"
@@ -130,9 +126,13 @@ export function Navigation() {
                   )}
                 </>
               )}
-              <Button variant="primary" href="/upload" className="w-full mt-2">
-                Review your essay
-              </Button>
+              <Link
+                href="/editor"
+                className="mt-2 px-4 py-2.5 rounded-full bg-[#0A0A0F] text-white hover:bg-[#1a1a2e] transition-all font-medium text-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Score my essay
+              </Link>
             </div>
           </div>
         )}
