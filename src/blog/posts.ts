@@ -53,6 +53,24 @@ export const posts: Post[] = [
     category: "Writing Guides",
     readTime: "5 min read",
   },
+  {
+    slug: "columbia-why-columbia-essay-core-curriculum",
+    title: "Columbia 'Why Columbia' Essay: How to Write About the Core Curriculum",
+    description:
+      "Columbia's Why Essay isn't a generic supplemental — it tests whether you actually understand the Core Curriculum and want what it demands. Here's what works, what doesn't, and the single line that separates strong Columbia supplements from forgettable ones.",
+    publishedAt: "2026-03-10",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
+  {
+    slug: "columbia-list-essay-what-are-you-reading",
+    title: "Columbia List Essay: How to Answer 'What Are You Reading, Listening To, Thinking About?'",
+    description:
+      "Columbia's list question is the most underrated part of the application. Admissions officers use it to see who you are when no one is assigning you anything. Here's exactly what to include — and the mistakes that make lists look curated rather than real.",
+    publishedAt: "2026-03-24",
+    category: "Supplemental Essays",
+    readTime: "7 min read",
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {

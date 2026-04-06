@@ -17,6 +17,10 @@ const contentMap: Record<string, () => Promise<{ default: React.ComponentType }>
     import("@/blog/content/ivy-league-essay-tips"),
   "college-essay-word-limit": () =>
     import("@/blog/content/college-essay-word-limit"),
+  "columbia-why-columbia-essay-core-curriculum": () =>
+    import("@/blog/content/columbia-why-columbia-essay-core-curriculum"),
+  "columbia-list-essay-what-are-you-reading": () =>
+    import("@/blog/content/columbia-list-essay-what-are-you-reading"),
 };
 
 export async function generateStaticParams() {
