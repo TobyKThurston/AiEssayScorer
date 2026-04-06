@@ -1,14 +1,30 @@
 import { Leaf } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
-  const footerLinks = {
-    Product: ["Features", "Pricing", "Reviews", "Updates"],
-    Company: ["About", "Blog", "Careers", "Contact"],
-    Legal: ["Privacy", "Terms", "Security", "Compliance"]
+  const footerLinks: Record<string, { label: string; href: string }[]> = {
+    Product: [
+      { label: "Features", href: "/#features" },
+      { label: "Pricing", href: "/#pricing" },
+      { label: "AI Essay Review", href: "/ai-essay-review" },
+      { label: "Essay Checker", href: "/college-essay-checker" },
+      { label: "Common App Help", href: "/common-app-essay-help" },
+    ],
+    Company: [
+      { label: "About", href: "#" },
+      { label: "Blog", href: "/blog" },
+      { label: "Careers", href: "#" },
+      { label: "Contact", href: "mailto:support@getivyadmit.com" },
+    ],
+    Legal: [
+      { label: "Privacy", href: "#" },
+      { label: "Terms", href: "#" },
+      { label: "Security", href: "#" },
+    ],
   };
 
   return (
-    <footer className="py-12 md:py-16 border-t border-slate-200 relative bg-white">
+    <footer className="py-12 md:py-16 border-t border-white/40 relative bg-gradient-to-b from-transparent to-white/30 backdrop-blur-sm">
       <div className="max-w-[1200px] mx-auto px-6 md:px-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Logo and tagline */}
@@ -27,13 +43,25 @@ export function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h3 className="mb-4 text-sm">{category}</h3>
+              <h3 className="mb-4 text-sm font-medium text-[#0F172A]">{category}</h3>
               <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-[#64748B] hover:text-[#0F172A] transition-colors">
-                      <small>{link}</small>
-                    </a>
+                {links.map((item) => (
+                  <li key={item.label}>
+                    {item.href.startsWith("mailto:") || item.href === "#" ? (
+                      <a
+                        href={item.href}
+                        className="text-[#64748B] hover:text-[#0F172A] transition-colors"
+                      >
+                        <small>{item.label}</small>
+                      </a>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="text-[#64748B] hover:text-[#0F172A] transition-colors"
+                      >
+                        <small>{item.label}</small>
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -42,7 +70,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-6 md:pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-6 md:pt-8 border-t border-white/40 flex flex-col md:flex-row justify-between items-center gap-4">
           <small className="text-[#64748B]">
             © 2026 Ivy Admit AI. All rights reserved.
           </small>

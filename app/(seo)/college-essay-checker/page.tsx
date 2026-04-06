@@ -2,18 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "College Essay Checker: Score Your Draft Before Submitting",
+  title: "College Essay Checker — Is Your Draft Ready to Submit?",
   description:
-    "Check your college essay for structure, evidence, and voice before you submit. Get an instant score breakdown and line-by-line suggestions from AI trained on Ivy League applications.",
+    "Check your college essay before you submit. Instant scores for content, structure, and voice. Catch vague evidence, weak openings, and template phrases before the deadline.",
   alternates: {
     canonical: "/college-essay-checker",
   },
   openGraph: {
-    title: "College Essay Checker: Score Your Draft Before Submitting | Ivy Admit",
+    title: "College Essay Checker — Is Your Draft Ready to Submit? | Ivy Admit",
     description:
-      "Check your college essay for structure, evidence, and voice before you submit. Get an instant score breakdown and line-by-line suggestions from AI trained on Ivy League applications.",
+      "Check your college essay before you submit. Instant scores for content, structure, and voice. Catch vague evidence, weak openings, and template phrases before the deadline.",
     url: "/college-essay-checker",
     type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "College Essay Checker — Ivy Admit" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "College Essay Checker — Is Your Draft Ready to Submit?",
+    images: ["/og-image.png"],
   },
 };
 
@@ -83,12 +89,13 @@ export default function CollegeEssayCheckerPage() {
         {/* Hero */}
         <header className="mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] leading-tight mb-4">
-            College Essay Checker: Score Your Draft Before You Submit
+            College Essay Checker: Is Your Draft Ready to Submit?
           </h1>
           <p className="text-lg text-[#475569] mb-6">
-            Know exactly where your essay stands before it reaches an admissions office. Get a
-            scored breakdown across content, structure, and voice — with specific line edits — based
-            on patterns from accepted applications to the most selective schools.
+            Before you hit submit, run your essay through the same patterns that distinguish
+            admitted applications from strong-but-generic ones. The college essay checker scores
+            your draft on content, structure, and voice — and tells you specifically what to fix
+            before the deadline.
           </p>
           <Link
             href="/editor"
@@ -207,6 +214,19 @@ export default function CollegeEssayCheckerPage() {
             claim is not yet clear enough — and that is a Voice issue worth addressing before
             submission.
           </p>
+
+          {/* Mid-page CTA */}
+          <div className="not-prose my-10 rounded-2xl bg-[#F5F3FF] border border-[#C4B5FD]/50 p-7 text-center">
+            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">Run the check — free</p>
+            <p className="text-[#0F172A] font-bold text-lg mb-3">Know if your essay is submission-ready</p>
+            <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">Paste your draft and get a scored pre-submission report in under 60 seconds. Works for personal statements, Why School essays, and short supplements.</p>
+            <Link
+              href="/editor"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1e1e3f] transition-all"
+            >
+              Check your essay free →
+            </Link>
+          </div>
 
           {/* Before / After */}
           <h2>Before and After: Evidence Specificity</h2>

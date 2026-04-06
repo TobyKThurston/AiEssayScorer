@@ -62,6 +62,9 @@ export function Navigation() {
                   {link}
                 </a>
               ))}
+              <Link href="/blog" className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors">
+                Blog
+              </Link>
               {!loading && (
                 <>
                   {user ? (
@@ -125,6 +128,13 @@ export function Navigation() {
                     {link}
                   </a>
                 ))}
+                <Link
+                  href="/blog"
+                  className="text-[#475569] hover:text-[#0F172A] transition-colors py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Blog
+                </Link>
                 {!loading && (
                   <>
                     {user ? (

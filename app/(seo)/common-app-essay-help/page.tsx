@@ -2,18 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Common App Essay Help: From Blank Page to Final Draft",
+  title: "Common App Essay Help — How to Write & Revise Your Draft",
   description:
-    "Step-by-step guidance for writing your Common App personal statement. Choose the right prompt, find your story, structure 650 words, and use AI feedback to revise effectively.",
+    "Step-by-step common app essay help: which prompt to choose, how to find your story, how to structure 650 words, and how to use AI feedback to revise fast. Free tool included.",
   alternates: {
     canonical: "/common-app-essay-help",
   },
   openGraph: {
-    title: "Common App Essay Help: From Blank Page to Final Draft | Ivy Admit",
+    title: "Common App Essay Help — How to Write & Revise Your Draft | Ivy Admit",
     description:
-      "Step-by-step guidance for writing your Common App personal statement. Choose the right prompt, find your story, structure 650 words, and use AI feedback to revise effectively.",
+      "Step-by-step common app essay help: which prompt to choose, how to find your story, how to structure 650 words, and how to use AI feedback to revise fast.",
     url: "/common-app-essay-help",
     type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Common App Essay Help — Ivy Admit" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Common App Essay Help — How to Write & Revise Your Draft",
+    images: ["/og-image.png"],
   },
 };
 
@@ -83,12 +89,13 @@ export default function CommonAppEssayHelpPage() {
         {/* Hero */}
         <header className="mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] leading-tight mb-4">
-            Common App Essay Help: From Blank Page to Final Draft
+            Common App Essay Help: Prompts, Story, Structure & Revision
           </h1>
           <p className="text-lg text-[#475569] mb-6">
             The Common App personal statement is 650 words that contextualize everything else in
-            your application. This guide walks through every stage — topic selection, first draft,
-            revision, and submission — with specific techniques for each step.
+            your application. Most students struggle not because they lack a story — but because
+            they pick the wrong one, or tell the right one poorly. This guide covers every stage:
+            topic selection, first draft, structure, and revision.
           </p>
           <Link
             href="/editor"
@@ -211,6 +218,19 @@ export default function CommonAppEssayHelpPage() {
             insight in one sentence. Combine their feedback with your scores to produce a final draft
             that is both technically strong and emotionally clear.
           </p>
+
+          {/* Mid-page CTA */}
+          <div className="not-prose my-10 rounded-2xl bg-[#F5F3FF] border border-[#C4B5FD]/50 p-7 text-center">
+            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">Get feedback — free</p>
+            <p className="text-[#0F172A] font-bold text-lg mb-3">Already have a draft? Score it now</p>
+            <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">Upload your Common App personal statement and get content, structure, and voice scores with specific line edits in under 60 seconds.</p>
+            <Link
+              href="/editor"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1e1e3f] transition-all"
+            >
+              Review your draft free →
+            </Link>
+          </div>
 
           {/* Before / After */}
           <h2>Before and After: Opening Hook</h2>

@@ -38,6 +38,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.publishedAt,
       url: `${baseUrl}/blog/${slug}`,
+      images: [{ url: `${baseUrl}/og-image.png`, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      images: [`${baseUrl}/og-image.png`],
     },
   };
 }

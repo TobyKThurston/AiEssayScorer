@@ -2,18 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How to Improve Your College Essay: A Step-by-Step Revision Guide",
+  title: "How to Improve Your College Essay — A Revision Guide",
   description:
-    "A practical revision guide for college essays. Learn the score → identify → edit → re-score loop, how to improve each dimension, and when your essay is ready to submit.",
+    "The score → identify → edit → re-score loop that improves college essays in 2–3 cycles. Specific techniques for Content, Structure, and Voice — with a free AI tool to track your progress.",
   alternates: {
     canonical: "/how-to-improve-college-essay",
   },
   openGraph: {
-    title: "How to Improve Your College Essay: A Step-by-Step Revision Guide | Ivy Admit",
+    title: "How to Improve Your College Essay — A Revision Guide | Ivy Admit",
     description:
-      "A practical revision guide for college essays. Learn the score → identify → edit → re-score loop, how to improve each dimension, and when your essay is ready to submit.",
+      "The score → identify → edit → re-score loop that improves college essays in 2–3 cycles. Specific techniques for Content, Structure, and Voice — with a free AI tool to track your progress.",
     url: "/how-to-improve-college-essay",
     type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "How to Improve Your College Essay — Ivy Admit" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Improve Your College Essay — A Revision Guide",
+    images: ["/og-image.png"],
   },
 };
 
@@ -204,6 +210,19 @@ export default function HowToImproveCollegeEssayPage() {
             reader who does not know you well can describe your essay's central insight in one
             sentence, you have achieved that goal.
           </p>
+
+          {/* Mid-page CTA */}
+          <div className="not-prose my-10 rounded-2xl bg-[#F5F3FF] border border-[#C4B5FD]/50 p-7 text-center">
+            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">Start the loop — free</p>
+            <p className="text-[#0F172A] font-bold text-lg mb-3">Score your current draft first</p>
+            <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">You can't improve what you haven't measured. Upload your draft and get Content, Structure, and Voice scores in under 60 seconds — then use this guide to target your weakest dimension.</p>
+            <Link
+              href="/editor"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1e1e3f] transition-all"
+            >
+              Score your draft free →
+            </Link>
+          </div>
 
           {/* Before / After */}
           <h2>Before and After: Essay Conclusion</h2>

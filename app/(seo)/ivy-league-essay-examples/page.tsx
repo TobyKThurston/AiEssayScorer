@@ -2,18 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Ivy League Essay Examples: Patterns From Accepted Applications",
+  title: "Ivy League Essay Examples — What Works and Why",
   description:
-    "Analyze what makes Ivy League essays work. Learn the patterns — intellectual specificity, honest reflection, and voice — that distinguish accepted applications from strong-but-generic ones.",
+    "Annotated excerpts from accepted Ivy League applications show what separates a memorable essay from a generic one. Learn the patterns — and check your own draft against them.",
   alternates: {
     canonical: "/ivy-league-essay-examples",
   },
   openGraph: {
-    title: "Ivy League Essay Examples: Patterns From Accepted Applications | Ivy Admit",
+    title: "Ivy League Essay Examples — What Works and Why | Ivy Admit",
     description:
-      "Analyze what makes Ivy League essays work. Learn the patterns — intellectual specificity, honest reflection, and voice — that distinguish accepted applications from strong-but-generic ones.",
+      "Annotated excerpts from accepted Ivy League applications show what separates a memorable essay from a generic one. Learn the patterns — and check your own draft against them.",
     url: "/ivy-league-essay-examples",
     type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ivy League Essay Examples — Ivy Admit" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ivy League Essay Examples — What Works and Why",
+    images: ["/og-image.png"],
   },
 };
 
@@ -83,13 +89,13 @@ export default function IvyLeagueEssayExamplesPage() {
         {/* Hero */}
         <header className="mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] leading-tight mb-4">
-            Ivy League Essay Examples: Patterns From Accepted Applications
+            Ivy League Essay Examples: What Works and Why
           </h1>
           <p className="text-lg text-[#475569] mb-6">
-            What separates an essay that gets read carefully from one that gets skimmed? Analysis
-            of accepted application patterns reveals two consistent features: intellectual
-            specificity and honest reflection. Here is what those look like in practice — and how
-            to replicate the pattern in your own draft.
+            Reading a full accepted essay tells you what someone wrote. Reading an annotated excerpt
+            tells you why it worked. This page breaks down real passages from accepted applications
+            to Harvard, Yale, and Princeton — scoring them and showing the exact features that make
+            them stand out. Then you can check your own draft against the same patterns.
           </p>
           <Link
             href="/editor"
@@ -163,6 +169,19 @@ export default function IvyLeagueEssayExamplesPage() {
             wrong, and then shows them sitting with that wrongness rather than immediately correcting
             it, tends to read as more authentic than the essay that uses failure as setup for triumph.
           </p>
+
+          {/* Mid-page CTA */}
+          <div className="not-prose my-10 rounded-2xl bg-[#F5F3FF] border border-[#C4B5FD]/50 p-7 text-center">
+            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">See your own scores</p>
+            <p className="text-[#0F172A] font-bold text-lg mb-3">How does your essay compare?</p>
+            <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">Upload your draft and get scored against the same patterns used here — content specificity, narrative structure, and voice consistency — in under 60 seconds.</p>
+            <Link
+              href="/editor"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1e1e3f] transition-all"
+            >
+              Score your essay free →
+            </Link>
+          </div>
 
           {/* Before / After */}
           <h2>Annotated Example: Two Excerpts Compared</h2>

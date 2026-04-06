@@ -2,18 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AI Essay Review for College Applications",
+  title: "Free AI Essay Review for College Applications",
   description:
-    "Get instant AI feedback on your college essay. Scores for content, structure, and voice with line-by-line suggestions trained on accepted Ivy League applications.",
+    "Upload your college essay and get AI feedback in under 60 seconds — content score, structure score, voice score, and line-by-line edits trained on accepted Ivy League applications.",
   alternates: {
     canonical: "/ai-essay-review",
   },
   openGraph: {
-    title: "AI Essay Review for College Applications | Ivy Admit",
+    title: "Free AI Essay Review for College Applications | Ivy Admit",
     description:
-      "Get instant AI feedback on your college essay. Scores for content, structure, and voice with line-by-line suggestions trained on accepted Ivy League applications.",
+      "Upload your college essay and get AI feedback in under 60 seconds — content score, structure score, voice score, and line-by-line edits trained on accepted applications.",
     url: "/ai-essay-review",
     type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "AI Essay Review for College Applications" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free AI Essay Review for College Applications | Ivy Admit",
+    images: ["/og-image.png"],
   },
 };
 
@@ -83,12 +89,13 @@ export default function AIEssayReviewPage() {
         {/* Hero */}
         <header className="mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] leading-tight mb-4">
-            AI Essay Review for College Applications
+            Free AI Essay Review for College Applications
           </h1>
           <p className="text-lg text-[#475569] mb-6">
-            Upload your draft and get a scored breakdown of content, structure, and voice — with
-            specific line edits — in under a minute. Trained on patterns from accepted applications
-            to Harvard, Yale, Princeton, and 50+ selective schools.
+            Most essay feedback is vague: "sounds generic," "needs more voice." AI essay review is
+            different — it scores your draft across three measurable dimensions and points to the
+            exact sentences dragging down each score. Upload your draft and get results in under
+            60 seconds.
           </p>
           <Link
             href="/editor"
@@ -202,6 +209,19 @@ export default function AIEssayReviewPage() {
             topic strategy and emotional resonance checks. The combination produces better essays than
             either alone.
           </p>
+
+          {/* Mid-page CTA */}
+          <div className="not-prose my-10 rounded-2xl bg-[#F5F3FF] border border-[#C4B5FD]/50 p-7 text-center">
+            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">Try it now — free</p>
+            <p className="text-[#0F172A] font-bold text-lg mb-3">See your essay's scores in under 60 seconds</p>
+            <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">Upload any draft — personal statement or supplement — and get Content, Structure, and Voice scores with line-level suggestions.</p>
+            <Link
+              href="/editor"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1e1e3f] transition-all"
+            >
+              Review your essay free →
+            </Link>
+          </div>
 
           {/* Before / After */}
           <h2>Before and After: Opening Sentence</h2>

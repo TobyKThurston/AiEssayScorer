@@ -5,10 +5,11 @@ import type { Metadata } from "next";
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 
 export const metadata: Metadata = {
-  title: "AI-Powered College Essay Review & Strategy Tool",
-  description: "Get expert essay feedback from AI trained on successful Ivy League applications. Score your structure, evidence, and tone. Get line-by-line edits and strategic advice to improve your college admissions essays.",
+  title: "Free AI College Essay Review — Scores & Line Edits",
+  description: "AI feedback on your college essay in under 60 seconds. Content, structure, and voice scores with line-by-line edits trained on Ivy League applications. Free to start — 20,000+ students helped.",
   keywords: [
     "college essay review",
+    "ai essay review",
     "college application essay",
     "Ivy League essay",
     "essay editing",
@@ -17,13 +18,18 @@ export const metadata: Metadata = {
     "college essay help",
     "admissions essay",
     "essay scoring",
-    "college essay advisor"
   ],
   openGraph: {
-    title: "Ivy Admit - AI-Powered College Essay Review & Strategy Tool",
-    description: "Get expert essay feedback from AI trained on successful Ivy League applications. Score your structure, evidence, and tone.",
+    title: "Free AI College Essay Review — Scores & Line Edits",
+    description: "AI feedback on your college essay in under 60 seconds. Content, structure, and voice scores with line-by-line edits trained on Ivy League applications.",
     url: "/",
     type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ivy Admit — AI College Essay Review" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free AI College Essay Review — Scores & Line Edits",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "/",

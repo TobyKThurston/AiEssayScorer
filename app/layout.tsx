@@ -17,7 +17,7 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ivyadmit.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com"),
   title: {
     default: "Ivy Admit - AI-Powered College Essay Review & Strategy Tool",
     template: "%s | Ivy Admit"
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://ivyadmit.com",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com",
     siteName: "Ivy Admit",
     title: "Ivy Admit - AI-Powered College Essay Review & Strategy Tool",
     description: "Get expert essay feedback from AI trained on successful Ivy League applications. Score your structure, evidence, and tone.",

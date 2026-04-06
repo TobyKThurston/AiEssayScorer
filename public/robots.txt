@@ -10,5 +10,5 @@ Allow: /
 Disallow: /api/
 Disallow: /auth/
 
-Sitemap: https://ivyadmit.com/sitemap.xml
+Sitemap: https://getivyadmit.com/sitemap.xml
 
