@@ -16,7 +16,7 @@ export function Pricing() {
     },
     {
       title: "Pro",
-      price: "$19",
+      price: "$7",
       period: "per month",
       features: [
         "Unlimited reviews",

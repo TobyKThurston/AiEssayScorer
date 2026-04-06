@@ -65,7 +65,7 @@ export function Pricing() {
           />
           <PricingCard
             title="Pro"
-            price="$19"
+            price="$7"
             period="/ month"
             description="Everything you need to get in."
             features={[
