@@ -7,6 +7,7 @@ import { useHighlight } from "./hooks/useHighlight";
 import { EditorNavigation } from "./components/EditorNavigation";
 import { EditorShell } from "./components/EditorShell";
 import { VersionHistory } from "./components/VersionHistory";
+import { AnalyzingOverlay } from "./components/AnalyzingOverlay";
 
 interface EditorPageProps {
   essayId: string;
@@ -29,6 +30,8 @@ export function EditorPage({ essayId }: EditorPageProps) {
   const [isDirty, setIsDirty] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [overlayDone, setOverlayDone] = useState(false);
   const [analyzeError, setAnalyzeError] = useState<string | null>(null);
   const [tokens, setTokens] = useState<number | null>(null);
   const [showVersionHistory, setShowVersionHistory] = useState(false);
@@ -108,6 +111,8 @@ export function EditorPage({ essayId }: EditorPageProps) {
     if (!essay || !content.trim()) return;
     setIsAnalyzing(true);
     setAnalyzeError(null);
+    setShowOverlay(true);
+    setOverlayDone(false);
 
     try {
       const res = await fetch("/api/rate-essay", {
@@ -123,8 +128,6 @@ export function EditorPage({ essayId }: EditorPageProps) {
       if (!res.ok) throw new Error(data.error || "Analysis failed");
 
       const newRating: EssayRating = data.rating;
-      setRating(newRating);
-      setMode("preview");
 
       // Auto-save the analyzed version
       const saveRes = await fetch("/api/essay-versions", {
@@ -151,11 +154,23 @@ export function EditorPage({ essayId }: EditorPageProps) {
         .then((r) => r.json())
         .then((d) => setTokens(d.tokens ?? 0))
         .catch(() => {});
+
+      // Signal overlay that API is done; it will call onAnimationComplete when ready
+      setRating(newRating);
+      setOverlayDone(true);
     } catch (err: unknown) {
+      setShowOverlay(false);
+      setOverlayDone(false);
       setAnalyzeError(err instanceof Error ? err.message : "Analysis failed. Please try again.");
     } finally {
       setIsAnalyzing(false);
     }
+  };
+
+  const handleOverlayComplete = () => {
+    setShowOverlay(false);
+    setOverlayDone(false);
+    setMode("preview");
   };
 
   const handleRestore = (version: EssayVersion) => {
@@ -220,6 +235,12 @@ export function EditorPage({ essayId }: EditorPageProps) {
         isOpen={showVersionHistory}
         onClose={() => setShowVersionHistory(false)}
         onRestore={handleRestore}
+      />
+
+      <AnalyzingOverlay
+        isOpen={showOverlay}
+        isDone={overlayDone}
+        onAnimationComplete={handleOverlayComplete}
       />
     </div>
   );
