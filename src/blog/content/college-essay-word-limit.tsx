@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Content() {
   return (
     <>
@@ -80,6 +82,9 @@ export default function Content() {
       </p>
       <p>
         The goal isn't to use 650 words. The goal is to have an essay where removing any word would make it worse.
+      </p>
+      <p>
+        Once your draft is in the 620–650 range, run it through the <Link href="/college-essay-checker" className="text-[#6366F1] hover:underline">college essay checker</Link> to see how word choices and structure are landing. If specific dimensions score low, the <Link href="/how-to-improve-college-essay" className="text-[#6366F1] hover:underline">revision guide</Link> walks through targeted edits for content, structure, and voice.
       </p>
     </>
   );

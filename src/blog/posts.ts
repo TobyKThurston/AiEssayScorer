@@ -10,7 +10,7 @@ export interface Post {
 export const posts: Post[] = [
   {
     slug: "how-to-write-common-app-essay",
-    title: "How to Write the Common App Personal Statement (2025–2026 Guide)",
+    title: "How to Write the Common App Personal Statement (2025–26)",
     description:
       "A step-by-step guide to writing a powerful Common App personal statement — from choosing the right prompt to final edits. Includes tips from admitted students and common mistakes to avoid.",
     publishedAt: "2025-10-14",
@@ -19,7 +19,7 @@ export const posts: Post[] = [
   },
   {
     slug: "common-app-essay-prompts-2025",
-    title: "Common App Essay Prompts 2025–2026: Which One Should You Choose?",
+    title: "Common App Essay Prompts 2025–26: Which One to Choose?",
     description:
       "Breaking down all 7 Common App essay prompts for 2025–2026 — what each one means, which students it suits best, and how to pick the prompt that gives your story the most room to breathe.",
     publishedAt: "2025-11-03",
@@ -37,7 +37,7 @@ export const posts: Post[] = [
   },
   {
     slug: "ivy-league-essay-tips",
-    title: "What Ivy League Admissions Officers Actually Look for in Your Essay",
+    title: "What Ivy League Admissions Officers Look for in Essays",
     description:
       "Analysis of patterns across hundreds of accepted essays reveals what Harvard, Yale, Princeton, and peers really want — and the mistakes that get even strong applicants rejected.",
     publishedAt: "2026-01-22",

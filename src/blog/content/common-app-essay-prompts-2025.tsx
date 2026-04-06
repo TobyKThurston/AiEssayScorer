@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Content() {
   return (
     <>
@@ -113,6 +115,9 @@ export default function Content() {
       </p>
       <p>
         If you've spent more than an hour trying to figure out which prompt to use, that's usually a sign the story isn't quite right yet — not that you're choosing between prompts incorrectly.
+      </p>
+      <p>
+        Once you've chosen your prompt and written a draft, use our <Link href="/common-app-essay-help" className="text-[#6366F1] hover:underline">Common App essay help guide</Link> to work through structure and revision — or run your draft through the <Link href="/college-essay-checker" className="text-[#6366F1] hover:underline">college essay checker</Link> to see how it scores across content, structure, and voice.
       </p>
     </>
   );

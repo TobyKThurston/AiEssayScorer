@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Content() {
   return (
     <>
@@ -79,6 +81,9 @@ export default function Content() {
       </p>
       <p>
         Essays that score below 75 on content almost always have the same problem: the reflection is thin relative to the narrative. Essays that score below 75 on voice tend to read like they were edited by someone other than the writer. Both are fixable — but you have to see the problem clearly first.
+      </p>
+      <p>
+        See annotated excerpts from accepted applications in our <Link href="/ivy-league-essay-examples" className="text-[#6366F1] hover:underline">Ivy League essay examples</Link> guide. To apply these patterns to your own draft, run it through our <Link href="/ai-essay-review" className="text-[#6366F1] hover:underline">AI essay review</Link> tool — then use the <Link href="/how-to-improve-college-essay" className="text-[#6366F1] hover:underline">revision guide</Link> to target whichever dimension scores lowest.
       </p>
     </>
   );

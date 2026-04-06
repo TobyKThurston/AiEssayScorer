@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Content() {
   return (
     <>
@@ -85,6 +87,9 @@ export default function Content() {
         <li><strong>Copying a template across schools.</strong> Admissions officers can always tell. The specific details are always slightly off.</li>
         <li><strong>Focusing only on what you'll get.</strong> Also address what you'll contribute.</li>
       </ul>
+      <p>
+        Before submitting, run both your personal statement and your supplementals through an <Link href="/ai-essay-review" className="text-[#6366F1] hover:underline">AI essay review</Link> to check for specificity and structure issues. The <Link href="/college-essay-checker" className="text-[#6366F1] hover:underline">college essay checker</Link> scores content, structure, and voice separately — useful for catching generic phrasing you've stopped noticing after multiple drafts.
+      </p>
     </>
   );
 }

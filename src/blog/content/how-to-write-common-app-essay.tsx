@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Content() {
   return (
     <>
@@ -97,7 +99,7 @@ export default function Content() {
         <li>What's missing from the picture?</li>
       </ul>
       <p>
-        Using a structured scoring tool can help you identify which dimensions — content, structure, or writing style — need the most work before your final read. A score of 85+ across all three categories is a reliable signal that your draft is in strong shape.
+        A <Link href="/college-essay-checker" className="text-[#6366F1] hover:underline">college essay checker</Link> can help you identify which dimensions — content, structure, or writing style — need the most work before your final read. A score of 85+ across all three categories is a reliable signal that your draft is in strong shape. Once you have a score, use the <Link href="/how-to-improve-college-essay" className="text-[#6366F1] hover:underline">revision guide</Link> to target whichever dimension is lowest.
       </p>
     </>
   );
