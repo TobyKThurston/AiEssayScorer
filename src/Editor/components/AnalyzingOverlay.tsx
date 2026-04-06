@@ -70,7 +70,7 @@ export function AnalyzingOverlay({ isOpen, isDone, onAnimationComplete }: Analyz
           Analyzing your essay
         </h2>
         <p className="text-center text-[#64748B] text-xs mb-8">
-          This takes about 10–20 seconds
+          This takes about 10 to 20 seconds
         </p>
 
         {/* Steps */}

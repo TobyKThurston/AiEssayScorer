@@ -138,7 +138,7 @@ export function MetadataBar({
             <div className="flex items-center gap-2 mb-2.5">
               <Target className="w-3.5 h-3.5 text-[#3B82F6]" />
               <span className="text-xs font-semibold text-[#475569]">Essay prompt</span>
-              <span className="text-xs text-[#94A3B8]">(optional — improves analysis)</span>
+              <span className="text-xs text-[#94A3B8]">(optional, improves analysis)</span>
             </div>
             <textarea
               className="w-full min-h-[80px] p-3 bg-slate-50 border border-slate-200 rounded-lg text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#3B82F6] focus:bg-white resize-none transition-colors"

@@ -11,13 +11,13 @@ interface WritingGuideProps {
 }
 
 const WORD_TARGETS: Record<string, { min: number; max: number; label: string }> = {
-  "Common App Personal Statement": { min: 250, max: 650, label: "250–650 words" },
-  "UC Personal Insight Question": { min: 50, max: 350, label: "50–350 words" },
-  "Coalition App Essay": { min: 200, max: 550, label: "200–550 words" },
-  "Supplemental Essay": { min: 50, max: 500, label: "50–500 words" },
-  "Scholarship Essay": { min: 200, max: 600, label: "200–600 words" },
+  "Common App Personal Statement": { min: 250, max: 650, label: "250to650 words" },
+  "UC Personal Insight Question": { min: 50, max: 350, label: "50to350 words" },
+  "Coalition App Essay": { min: 200, max: 550, label: "200to550 words" },
+  "Supplemental Essay": { min: 50, max: 500, label: "50to500 words" },
+  "Scholarship Essay": { min: 200, max: 600, label: "200to600 words" },
 };
-const DEFAULT_TARGET = { min: 100, max: 650, label: "100–650 words" };
+const DEFAULT_TARGET = { min: 100, max: 650, label: "100to650 words" };
 
 const ESSAY_TIPS: Record<string, { heading: string; tips: string[] }> = {
   "Common App Personal Statement": {
@@ -25,10 +25,10 @@ const ESSAY_TIPS: Record<string, { heading: string; tips: string[] }> = {
     tips: [
       'Open with a specific scene, not "I have always been..."',
       "Show your character through concrete details, not a résumé",
-      "Pick one focused story — depth beats breadth every time",
+      "Pick one focused story:depth beats breadth every time",
       "Reveal growth or a genuine shift in perspective by the end",
       'Avoid clichés: "passion for", "unique individual", "hard work"',
-      "Read it aloud — it should sound like you, not a formal essay",
+      "Read it aloud:it should sound like you, not a formal essay",
     ],
   },
   "UC Personal Insight Question": {
@@ -36,20 +36,20 @@ const ESSAY_TIPS: Record<string, { heading: string; tips: string[] }> = {
     tips: [
       "Answer the prompt directly in your very first sentence",
       "Each PIQ should highlight a different dimension of who you are",
-      "Focus on impact — what did you learn, create, or change?",
+      "Focus on impact:what did you learn, create, or change?",
       "Name real courses, clubs, mentors, or tangible outcomes",
-      "350 words is tight — every sentence must earn its place",
+      "350 words is tight:every sentence must earn its place",
       "UC values leadership, creativity, and community contribution",
     ],
   },
   "Coalition App Essay": {
     heading: "Coalition App Tips",
     tips: [
-      "550-word cap — tighter than Common App, so cut ruthlessly",
+      "550-word cap:tighter than Common App, so cut ruthlessly",
       "Show how your background or community shaped your thinking",
       "One vivid, specific story beats three abstract ones",
       "Connect your past experience to your future goals",
-      "Avoid listing accomplishments — tell the story behind one",
+      "Avoid listing accomplishments:tell the story behind one",
     ],
   },
   "Supplemental Essay": {
@@ -59,8 +59,8 @@ const ESSAY_TIPS: Record<string, { heading: string; tips: string[] }> = {
       "Name specific professors, programs, labs, or unique traditions",
       "Explain why their particular approach fits how you think",
       "Admissions officers can spot generic essays immediately",
-      "Short supplements (50–150 words) must be dense with specifics",
-      "Connect their strengths to your exact goals — not just any goals",
+      "Short supplements (50to150 words) must be dense with specifics",
+      "Connect their strengths to your exact goals:not just any goals",
     ],
   },
   "Scholarship Essay": {
@@ -70,7 +70,7 @@ const ESSAY_TIPS: Record<string, { heading: string; tips: string[] }> = {
       "Connect your story to the scholarship's values or mission",
       "Show specifically how the award enables your goals",
       "Anchor the essay in a real moment or example",
-      "Edit tightly — competitive scholarships reward every word",
+      "Edit tightly:competitive scholarships reward every word",
     ],
   },
 };
@@ -78,7 +78,7 @@ const ESSAY_TIPS: Record<string, { heading: string; tips: string[] }> = {
 const DEFAULT_TIPS = {
   heading: "Writing Tips",
   tips: [
-    "Read the prompt carefully — answer exactly what is asked",
+    "Read the prompt carefully:answer exactly what is asked",
     "Anchor the essay in one specific story or moment",
     "Show your thinking process, not just your actions",
     "End with insight, reflection, or forward momentum",
@@ -242,7 +242,7 @@ export function WritingGuide({
               onClick={onEditContext}
               className="w-full text-left text-xs text-[#94A3B8] italic hover:text-[#64748B] transition-colors"
             >
-              Paste your prompt here — the AI uses it for more targeted feedback.
+              Paste your prompt here:the AI uses it for more targeted feedback.
             </button>
           )}
         </div>
