@@ -218,7 +218,7 @@ export function ResultsStep({ formData, onBack }: ResultsStepProps) {
               },
               {
                 original: "This experience taught me a lot.",
-                suggestion: "This experience revealed the intersection of persistence and innovation—a lesson that reshaped my approach to problem-solving.",
+                suggestion: "This experience revealed the intersection of persistence and innovation, a lesson that reshaped my approach to problem-solving.",
                 reason: "Quantify the learning and make it memorable"
               },
               {

@@ -49,7 +49,7 @@ export function AdmissionsOfficerView({ admissionsView, isPro }: AdmissionsOffic
             Blend Risk: {admissionsView.blendRisk}
           </span>
 
-          {/* Strengths — always visible */}
+          {/* Strengths, always visible */}
           <ul className="space-y-1 mb-3">
             {admissionsView.strengths.map((s, i) => (
               <li key={i} className="flex gap-1.5 text-xs text-[#CBD5E1]">
@@ -59,7 +59,7 @@ export function AdmissionsOfficerView({ admissionsView, isPro }: AdmissionsOffic
             ))}
           </ul>
 
-          {/* Concerns + standout — Pro only */}
+          {/* Concerns + standout, Pro only */}
           <UpgradeGate
             isLocked={!isPro}
             featureName="Full AO Analysis"

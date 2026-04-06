@@ -35,7 +35,7 @@ export function SchoolFitPanel({ schoolFit, targetSchools, isPro }: SchoolFitPan
 
   return (
     <CollapsibleSection
-      title={`School Fit${targetSchools.length > 0 ? ` — ${targetSchools.join(", ")}` : ""}`}
+      title={`School Fit${targetSchools.length > 0 ? `: ${targetSchools.join(", ")}` : ""}`}
       icon={<School className="w-3 h-3 text-[#8B5CF6]" />}
       iconBg="bg-[#EDE9FE]"
       defaultOpen={true}
@@ -55,7 +55,7 @@ export function SchoolFitPanel({ schoolFit, targetSchools, isPro }: SchoolFitPan
         {/* Feedback */}
         <p className="text-xs text-[#64748B] leading-relaxed">{schoolFit.feedback}</p>
 
-        {/* Tips — Pro only */}
+        {/* Tips, Pro only */}
         <UpgradeGate
           isLocked={!isPro}
           featureName="School-Specific Tips"

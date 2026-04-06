@@ -113,7 +113,7 @@ export function FeedbackPanel({
                 </div>
               )}
 
-              {/* First FREE_LIMIT extended suggestions — always visible */}
+              {/* First FREE_LIMIT extended suggestions, always visible */}
               {visibleExtended.map((item, i) => (
                 <FeedbackCard
                   key={`ext-${i}`}
@@ -133,7 +133,7 @@ export function FeedbackPanel({
                 />
               ))}
 
-              {/* Remaining extended — blurred for free users */}
+              {/* Remaining extended, blurred for free users */}
               {lockedExtended.length > 0 && (
                 <UpgradeGate
                   isLocked={!isPro}
@@ -237,7 +237,7 @@ export function FeedbackPanel({
           </CollapsibleSection>
         )}
 
-        {/* 6. Hook Panel — self-managed collapse */}
+        {/* 6. Hook Panel, self-managed collapse */}
         {rating.hooks && (
           <HookPanel
             hooks={rating.hooks}
@@ -247,10 +247,10 @@ export function FeedbackPanel({
           />
         )}
 
-        {/* 7. Admissions Officer View — self-managed collapse */}
+        {/* 7. Admissions Officer View, self-managed collapse */}
         <AdmissionsOfficerView admissionsView={rating.admissionsView} isPro={isPro} />
 
-        {/* 8. Recommendation — collapsed by default */}
+        {/* 8. Recommendation, collapsed by default */}
         <CollapsibleSection
           title="Recommendation"
           icon={<Target className="w-3 h-3 text-[#3B82F6]" />}

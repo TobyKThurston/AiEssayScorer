@@ -11,7 +11,7 @@ export function Testimonials() {
       city: "Boston, MA",
       school: "Harvard",
       quote:
-        "The regional tone advice made my voice feel natural and focused. My essay finally had a real arc — and it actually got me in.",
+        "The regional tone advice made my voice feel natural and focused. My essay finally had a real arc, and it actually got me in.",
     },
     {
       initials: "MJ",

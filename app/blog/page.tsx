@@ -4,12 +4,12 @@ import { posts, formatDate } from "@/blog/posts";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "College Essay Blog — Guides, Tips & Strategy",
+  title: "College Essay Blog, Guides, Tips & Strategy",
   description:
     "In-depth guides on writing Common App essays, supplemental essays, and Ivy League applications. Written for students who want actionable advice, not generic tips.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "College Essay Blog — Guides, Tips & Strategy",
+    title: "College Essay Blog, Guides, Tips & Strategy",
     description:
       "In-depth guides on writing Common App essays, supplemental essays, and Ivy League applications. Written for students who want actionable advice, not generic tips.",
     url: "/blog",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "College Essay Blog — Guides, Tips & Strategy",
+    title: "College Essay Blog, Guides, Tips & Strategy",
     images: ["/og-image.png"],
   },
 };
@@ -47,7 +47,7 @@ export default function BlogIndex() {
           College Admissions Guides
         </h1>
         <p className="text-[#475569] text-lg leading-relaxed">
-          Practical advice on essays, applications, and strategy — written for students who want to understand what actually works.
+          Practical advice on essays, applications, and strategy, written for students who want to understand what actually works.
         </p>
       </div>
 

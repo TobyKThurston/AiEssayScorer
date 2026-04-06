@@ -141,7 +141,7 @@ Also, I have a spare charger. Always. For every device. You're welcome.`
           {
             title: "Common App Essay",
             prompt: "Share an essay on any topic of your choice.",
-            excerpt: "The subway car rumbled beneath Times Square as I clutched my notebook, observing the mosaic of humanity around me. New York wasn't just a city—it was a living laboratory of human interaction...",
+            excerpt: "The subway car rumbled beneath Times Square as I clutched my notebook, observing the mosaic of humanity around me. New York wasn't just a city, it was a living laboratory of human interaction...",
             fullContent: `The 1 train rumbles beneath Times Square, and I'm pressed against a window, notebook in hand. A woman in a business suit argues on her phone in Spanish. A teenager with headphones taps his foot to a beat only he can hear. An elderly man reads a newspaper in what looks like Arabic. A couple holds hands, not speaking, just existing together in this moving metal box.
 
 I write it all down. Not because I'm nosy. Though maybe I am. But because I'm trying to understand something. How do all these people, with all their different lives, all their different stories, coexist in this one space? How do we share oxygen without sharing language? How do we respect each other's boundaries while being literally pressed against each other?
@@ -357,7 +357,7 @@ At Columbia, I'll learn from filmmakers who've made their mark on independent ci
           {
             title: "Common App Essay",
             prompt: "Share an essay on any topic of your choice.",
-            excerpt: "To most people, math is about finding the right answer. To me, it's about discovering elegant questions. The beauty isn't in solving for x—it's in understanding why x matters...",
+            excerpt: "To most people, math is about finding the right answer. To me, it's about discovering elegant questions. The beauty isn't in solving for x, it's in understanding why x matters...",
             fullContent: `Most people think math is about finding answers. I think it's about finding questions. The most beautiful math problems aren't the ones with neat solutions. They're the ones that make you think differently. That reveal something about how the world works. That make you see patterns you never noticed before.
 
 I fell in love with math in seventh grade, when my teacher showed us how to prove that the square root of two is irrational. Not because it was useful. Not because it would help me solve real-world problems. But because it was beautiful. Because it showed me that there are truths in the world that exist independently of us. That math isn't something humans invented. It's something we discovered.
@@ -401,7 +401,7 @@ At Columbia, I'll develop the rigorous thinking skills that come from studying p
           {
             title: "Common App Essay",
             prompt: "Reflect on something that someone has done for you that has made you happy or thankful.",
-            excerpt: "My environmental science teacher didn't just teach us about climate change—she took us to the local river every week to test water quality. Those muddy mornings taught me that environmental action starts local...",
+            excerpt: "My environmental science teacher didn't just teach us about climate change, she took us to the local river every week to test water quality. Those muddy mornings taught me that environmental action starts local...",
             fullContent: `Every Tuesday morning at 7 AM, rain or shine, my environmental science teacher Ms. Rodriguez would meet us at the river. Not the clean, pretty river in the state park. The one that runs behind our school. The one that smells like industrial runoff and collects shopping carts in its bends.
 
 Most teachers would have shown us pictures of pristine rivers and told us about water quality from a textbook. Ms. Rodriguez made us test it ourselves. We'd put on waders that were too big, carry equipment that was heavier than it looked, and spend two hours collecting samples, measuring pH levels, counting macroinvertebrates. Getting muddy. Getting cold. Getting frustrated when our data didn't make sense.
@@ -542,7 +542,7 @@ Stanford's culture of collaboration, of interdisciplinary work, of thinking big 
           {
             title: "Common App Essay",
             prompt: "Share an essay on any topic of your choice.",
-            excerpt: "The chess board in front of me wasn't just a game—it was a conversation about strategy, patience, and the beauty of finding patterns in chaos...",
+            excerpt: "The chess board in front of me wasn't just a game, it was a conversation about strategy, patience, and the beauty of finding patterns in chaos...",
             fullContent: `The chess board in front of me wasn't just a game. It was a conversation. A negotiation. A dance between possibility and constraint. Every move opened some doors and closed others. Every decision had consequences I couldn't fully predict.
 
 I started playing chess when I was ten, mostly because my older brother was good at it and I wanted to beat him. But somewhere along the way, chess stopped being about winning and started being about thinking. About seeing patterns. About understanding how small decisions create big outcomes.
@@ -613,7 +613,7 @@ That's what I want to do at MIT. Not just learn about engineering. But actually 
           {
             title: "MIT Culture",
             prompt: "We know you lead a busy life, full of activities, many of which are required of you.",
-            excerpt: "What truly excites me isn't just building things—it's building things that matter. At MIT, I want to join a community where 'because we can' meets 'because we should'...",
+            excerpt: "What truly excites me isn't just building things, it's building things that matter. At MIT, I want to join a community where 'because we can' meets 'because we should'...",
             fullContent: `What excites me isn't just building things. It's building things that matter. That solve real problems. That make a difference. At MIT, I want to join a community where "because we can" meets "because we should." Where technical excellence serves a purpose. Where innovation is driven by impact, not just by possibility.
 
 I've spent countless hours in my garage workshop, building things. Wind turbines. Solar panels. Water filtration systems. Not because they were assigned. Because I wanted to understand how they work. Because I wanted to solve problems that matter.
@@ -646,7 +646,7 @@ I want to be part of a community where people are driven by curiosity and compas
           {
             title: "Common App Essay",
             prompt: "Reflect on something that someone has done for you that has made you happy or thankful.",
-            excerpt: "My debate coach didn't just teach me how to argue—she taught me how to listen. In a world of sound bites and echo chambers, that lesson changed everything...",
+            excerpt: "My debate coach didn't just teach me how to argue, she taught me how to listen. In a world of sound bites and echo chambers, that lesson changed everything...",
             fullContent: `My debate coach, Ms. Chen, didn't just teach me how to argue. She taught me how to listen. And in a world of sound bites and echo chambers, that lesson changed everything.
 
 I joined debate because I liked arguing. I liked being right. I liked winning. But Ms. Chen showed me that the best debaters aren't the ones who talk the most. They're the ones who listen the hardest. Who understand their opponent's argument better than their opponent does. Who can find the weakness not by attacking, but by understanding.
@@ -747,7 +747,7 @@ That's Princeton. A place where you can study the most fundamental questions in 
           {
             title: "Common App Essay",
             prompt: "Reflect on a time when you questioned or challenged a belief or idea.",
-            excerpt: "When I advocated for funding our school's mental health resources, I learned that effective policy isn't about being right—it's about building coalitions and finding common ground...",
+            excerpt: "When I advocated for funding our school's mental health resources, I learned that effective policy isn't about being right, it's about building coalitions and finding common ground...",
             fullContent: `I thought I was right. Our school needed better mental health resources. We had one counselor for eight hundred students. Kids were struggling. Some were in crisis. The solution was obvious: hire more counselors. What could be simpler?
 
 So I wrote a proposal. I gathered data. I made charts. I presented it to the school board. I was prepared. I was passionate. I was right.
@@ -859,7 +859,7 @@ At Penn, I'll develop the business skills to build successful enterprises. But I
           {
             title: "Common App Essay",
             prompt: "Discuss an accomplishment, event, or realization that sparked a period of personal growth.",
-            excerpt: "Volunteering at a refugee resettlement center, I realized that understanding different cultures isn't about cataloging differences—it's about recognizing our shared humanity...",
+            excerpt: "Volunteering at a refugee resettlement center, I realized that understanding different cultures isn't about cataloging differences, it's about recognizing our shared humanity...",
             fullContent: `I started volunteering at a refugee resettlement center because I wanted to help. I thought I'd be teaching English, helping people fill out forms, doing the practical things that needed to be done. And I did do those things. But I also learned something I didn't expect.
 
 I learned that understanding different cultures isn't about cataloging differences. It's about recognizing our shared humanity. About seeing that underneath all the differences in language, in customs, in experiences, we're all just people trying to make a life for ourselves and our families.
@@ -1077,7 +1077,7 @@ At Duke, I'll develop the engineering skills to build medical devices. But I'll 
           {
             title: "Common App Essay",
             prompt: "Reflect on a time when you questioned or challenged a belief or idea.",
-            excerpt: "Running my school newspaper, I learned that journalism isn't about confirming what people already believe—it's about asking uncomfortable questions and seeking truth even when it's inconvenient...",
+            excerpt: "Running my school newspaper, I learned that journalism isn't about confirming what people already believe, it's about asking uncomfortable questions and seeking truth even when it's inconvenient...",
             fullContent: `I thought journalism was about telling stories. About writing well. About getting the facts right. And it is all of those things. But it's also about something else. Something harder. Something more important.
 
 I learned this when I was running my school newspaper and we decided to investigate the school's disciplinary policies. We'd heard rumors. We'd seen patterns. We wanted to understand what was really happening.

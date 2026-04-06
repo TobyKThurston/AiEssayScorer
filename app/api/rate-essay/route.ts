@@ -58,7 +58,7 @@ Also provide:
   "firstImpression": one sentence capturing an AO's gut reaction when they open this essay,
   "strengths": array of 2-3 specific things that help this applicant stand out,
   "concerns": array of 2-3 specific things that hurt the essay or cause it to blend in,
-  "blendRisk": "Low" | "Medium" | "High" — how likely this essay gets lost in the pile,
+  "blendRisk": "Low" | "Medium" | "High", how likely this essay gets lost in the pile,
   "standoutPotential": one sentence on what specific change would make this memorable
 },
 "hooks": {

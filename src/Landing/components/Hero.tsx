@@ -18,7 +18,7 @@ export function Hero() {
     <section className="relative pt-28 md:pt-36 pb-16 md:pb-28 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 md:px-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left — text */}
+          {/* Left, text */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -120,7 +120,7 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right — glass mock card */}
+          {/* Right, glass mock card */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}

@@ -173,7 +173,7 @@ export default async function BlogPost({ params }: Props) {
             Get a score and line-by-line edits in under a minute
           </h2>
           <p className="text-[#64748B] text-sm mb-6 max-w-md mx-auto">
-            Upload your draft and get scored across content, structure, and voice — plus specific suggestions to raise every dimension.
+            Upload your draft and get scored across content, structure, and voice, plus specific suggestions to raise every dimension.
           </p>
           <Link
             href="/editor"

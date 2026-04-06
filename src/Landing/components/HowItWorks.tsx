@@ -16,7 +16,7 @@ const steps = [
     step: "02",
     title: "Get your score",
     description:
-      "Receive a score across content, structure, and style — plus an overall quality rating.",
+      "Receive a score across content, structure, and style, plus an overall quality rating.",
   },
   {
     icon: RefreshCw,

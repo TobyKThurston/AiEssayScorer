@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Common App Essay Help — How to Write & Revise Your Draft",
+  title: "Common App Essay Help, How to Write & Revise Your Draft",
   description:
     "Step-by-step common app essay help: which prompt to choose, how to find your story, how to structure 650 words, and how to use AI feedback to revise fast. Free tool included.",
   alternates: {
     canonical: "/common-app-essay-help",
   },
   openGraph: {
-    title: "Common App Essay Help — How to Write & Revise Your Draft | Ivy Admit",
+    title: "Common App Essay Help, How to Write & Revise Your Draft | Ivy Admit",
     description:
       "Step-by-step common app essay help: which prompt to choose, how to find your story, how to structure 650 words, and how to use AI feedback to revise fast.",
     url: "/common-app-essay-help",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Common App Essay Help — Ivy Admit" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Common App Essay Help, Ivy Admit" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Common App Essay Help — How to Write & Revise Your Draft",
+    title: "Common App Essay Help, How to Write & Revise Your Draft",
     images: ["/og-image.png"],
   },
 };
@@ -67,7 +67,7 @@ const faqSchema = {
       name: "Which Common App prompt should I choose?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Choose the prompt that most naturally fits your story — not the one that sounds most impressive. Admissions officers read all seven prompt responses equally. The topic and execution matter far more than the prompt number.",
+        text: "Choose the prompt that most naturally fits your story, not the one that sounds most impressive. Admissions officers read all seven prompt responses equally. The topic and execution matter far more than the prompt number.",
       },
     },
   ],
@@ -93,7 +93,7 @@ export default function CommonAppEssayHelpPage() {
           </h1>
           <p className="text-lg text-[#475569] mb-6">
             The Common App personal statement is 650 words that contextualize everything else in
-            your application. Most students struggle not because they lack a story — but because
+            your application. Most students struggle not because they lack a story, but because
             they pick the wrong one, or tell the right one poorly. This guide covers every stage:
             topic selection, first draft, structure, and revision.
           </p>
@@ -111,13 +111,13 @@ export default function CommonAppEssayHelpPage() {
           <p>
             The Common App offers seven prompts. Most applicants make the same mistake: they choose
             the prompt they think sounds most impressive and then try to force their story into it.
-            The better approach is the reverse — identify the story you most want to tell, then find
+            The better approach is the reverse, identify the story you most want to tell, then find
             the prompt it fits.
           </p>
           <p>
             Prompts 1 (background and identity), 5 (accomplishment or event), and 7 (any topic of
             your choice) are used by more than 60% of applicants. That is not because they are
-            better — it is because they are broadest. If a more specific prompt (like Prompt 3:
+            better, it is because they are broadest. If a more specific prompt (like Prompt 3:
             challenging a belief, or Prompt 4: problem-solving) fits your story more precisely, use
             it. Specificity in the prompt often produces more focused essays.
           </p>
@@ -131,7 +131,7 @@ export default function CommonAppEssayHelpPage() {
           {/* Section 2 */}
           <h2>Finding Your Story</h2>
           <p>
-            Most strong Common App essays are built from small, specific moments — not major
+            Most strong Common App essays are built from small, specific moments, not major
             accomplishments. The student who writes about the hour they spent calibrating a telescope
             is often more memorable than the student who writes about winning a national science
             competition, because the small moment carries more texture and specificity.
@@ -156,13 +156,13 @@ export default function CommonAppEssayHelpPage() {
           <ul>
             <li>
               <strong>Opening scene (~150 words):</strong> Start mid-action in a specific moment.
-              Not background, not context — the scene itself. The reader should be able to picture
+              Not background, not context, the scene itself. The reader should be able to picture
               where you are and what is happening.
             </li>
             <li>
               <strong>Development (~350 words):</strong> Move through the moment: what you noticed,
               what complicated it, what you did or thought. Include one or two specific details that
-              only you could know. Show a shift — in understanding, in approach, in what you care
+              only you could know. Show a shift, in understanding, in approach, in what you care
               about.
             </li>
             <li>
@@ -174,7 +174,7 @@ export default function CommonAppEssayHelpPage() {
           </ul>
           <p>
             This is not the only structure that works, but it is the most reliable. Deviating from
-            it requires strong intentionality — you need a good reason to start with reflection
+            it requires strong intentionality, you need a good reason to start with reflection
             rather than scene, or to end with a summary rather than a projection.
           </p>
 
@@ -203,7 +203,7 @@ export default function CommonAppEssayHelpPage() {
           <h2>Using AI Feedback to Revise Effectively</h2>
           <p>
             After a first draft, upload to Ivy Admit for a scored review before asking any human
-            reader. The AI review identifies structural and evidentiary issues quickly — issues
+            reader. The AI review identifies structural and evidentiary issues quickly, issues
             that human readers often mention only vaguely ("it feels generic") without being able
             to locate specifically.
           </p>
@@ -221,7 +221,7 @@ export default function CommonAppEssayHelpPage() {
 
           {/* Mid-page CTA */}
           <div className="not-prose my-10 rounded-2xl bg-[#F5F3FF] border border-[#C4B5FD]/50 p-7 text-center">
-            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">Get feedback — free</p>
+            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">Get feedback, free</p>
             <p className="text-[#0F172A] font-bold text-lg mb-3">Already have a draft? Score it now</p>
             <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">Upload your Common App personal statement and get content, structure, and voice scores with specific line edits in under 60 seconds.</p>
             <Link
@@ -242,16 +242,16 @@ export default function CommonAppEssayHelpPage() {
                 between two worlds. This experience shaped my identity and taught me the value of
                 bridging cultural differences."
               </p>
-              <p className="text-xs text-red-500 mt-2">Structure score: 44 — context before scene, closes with a template lesson</p>
+              <p className="text-xs text-red-500 mt-2">Structure score: 44, context before scene, closes with a template lesson</p>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-xl p-5">
               <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">After</p>
               <p className="text-[#0F172A] text-sm">
-                "My grandmother was mid-sentence when she switched from English to Tagalog — a
+                "My grandmother was mid-sentence when she switched from English to Tagalog, a
                 signal I had learned to read. She was about to say something she did not want my
                 father to understand."
               </p>
-              <p className="text-xs text-green-600 mt-2">Structure score: 91 — in-scene immediately, specific detail, implies tension</p>
+              <p className="text-xs text-green-600 mt-2">Structure score: 91, in-scene immediately, specific detail, implies tension</p>
             </div>
           </div>
 

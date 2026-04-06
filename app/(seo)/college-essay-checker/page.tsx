@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "College Essay Checker — Is Your Draft Ready to Submit?",
+  title: "College Essay Checker, Is Your Draft Ready to Submit?",
   description:
     "Check your college essay before you submit. Instant scores for content, structure, and voice. Catch vague evidence, weak openings, and template phrases before the deadline.",
   alternates: {
     canonical: "/college-essay-checker",
   },
   openGraph: {
-    title: "College Essay Checker — Is Your Draft Ready to Submit? | Ivy Admit",
+    title: "College Essay Checker, Is Your Draft Ready to Submit? | Ivy Admit",
     description:
       "Check your college essay before you submit. Instant scores for content, structure, and voice. Catch vague evidence, weak openings, and template phrases before the deadline.",
     url: "/college-essay-checker",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "College Essay Checker — Ivy Admit" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "College Essay Checker, Ivy Admit" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "College Essay Checker — Is Your Draft Ready to Submit?",
+    title: "College Essay Checker, Is Your Draft Ready to Submit?",
     images: ["/og-image.png"],
   },
 };
@@ -51,7 +51,7 @@ const faqSchema = {
       name: "Is a score above 90 enough to submit?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A score above 80 in all three dimensions generally indicates the essay is structurally sound and evidence-specific. Above 90 suggests strong differentiation. That said, essay score is one signal — school fit, extracurriculars, and grades all matter too.",
+        text: "A score above 80 in all three dimensions generally indicates the essay is structurally sound and evidence-specific. Above 90 suggests strong differentiation. That said, essay score is one signal, school fit, extracurriculars, and grades all matter too.",
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       name: "Does it work for supplement essays?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The checker works on any college essay — personal statement, Why School, activity essay, or short supplement. For shorter supplements, Content and Voice dimensions carry more weight than Structure.",
+        text: "Yes. The checker works on any college essay, personal statement, Why School, activity essay, or short supplement. For shorter supplements, Content and Voice dimensions carry more weight than Structure.",
       },
     },
   ],
@@ -94,7 +94,7 @@ export default function CollegeEssayCheckerPage() {
           <p className="text-lg text-[#475569] mb-6">
             Before you hit submit, run your essay through the same patterns that distinguish
             admitted applications from strong-but-generic ones. The college essay checker scores
-            your draft on content, structure, and voice — and tells you specifically what to fix
+            your draft on content, structure, and voice, and tells you specifically what to fix
             before the deadline.
           </p>
           <Link
@@ -110,14 +110,14 @@ export default function CollegeEssayCheckerPage() {
           <h2>What a College Essay Checker Actually Looks At</h2>
           <p>
             A good essay checker does more than flag grammar. Grammar errors are easy to fix and
-            rarely decide outcomes. The harder problems — vague evidence, weak narrative structure,
-            generic voice — are what separate essays that are read carefully from essays that get
+            rarely decide outcomes. The harder problems, vague evidence, weak narrative structure,
+            generic voice, are what separate essays that are read carefully from essays that get
             skimmed.
           </p>
           <p>
             Ivy Admit's checker scores three dimensions that predict how admissions readers respond
             to an essay. Content measures whether your evidence is specific enough to be memorable.
-            Structure measures whether the narrative moves — from an opening scene through a moment
+            Structure measures whether the narrative moves, from an opening scene through a moment
             of change to a forward-looking close. Voice measures whether the essay sounds like a
             particular person rather than a template.
           </p>
@@ -133,11 +133,11 @@ export default function CollegeEssayCheckerPage() {
             After uploading your essay, you see three scores (0–100) and a heat map of your text
             with color-coded annotations. Green highlights indicate passages that align with strong
             patterns. Orange highlights indicate opportunities for improvement. Red highlights
-            indicate consistent weaknesses — repeated constructions that lower a dimension score.
+            indicate consistent weaknesses, repeated constructions that lower a dimension score.
           </p>
           <p>
             Each annotation includes a specific suggestion, not just a label. Rather than "vague
-            evidence," you see "This sentence claims curiosity without showing a moment of it — try
+            evidence," you see "This sentence claims curiosity without showing a moment of it, try
             adding the specific observation or question that triggered it." This makes revision
             actionable rather than interpretive.
           </p>
@@ -206,18 +206,18 @@ export default function CollegeEssayCheckerPage() {
           <p>
             At that point, read the essay aloud once. If any sentence is hard to say naturally, it
             is probably too long or syntactically complicated. College essays work best as spoken
-            prose — the kind of thing you would say in a conversation, just more considered.
+            prose, the kind of thing you would say in a conversation, just more considered.
           </p>
           <p>
             Have one trusted person read the final version for emotional resonance. They should be
             able to describe your essay's central insight in one sentence. If they cannot, the core
-            claim is not yet clear enough — and that is a Voice issue worth addressing before
+            claim is not yet clear enough, and that is a Voice issue worth addressing before
             submission.
           </p>
 
           {/* Mid-page CTA */}
           <div className="not-prose my-10 rounded-2xl bg-[#F5F3FF] border border-[#C4B5FD]/50 p-7 text-center">
-            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">Run the check — free</p>
+            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">Run the check, free</p>
             <p className="text-[#0F172A] font-bold text-lg mb-3">Know if your essay is submission-ready</p>
             <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">Paste your draft and get a scored pre-submission report in under 60 seconds. Works for personal statements, Why School essays, and short supplements.</p>
             <Link
@@ -238,16 +238,16 @@ export default function CollegeEssayCheckerPage() {
                 backgrounds. I became more empathetic and learned that everyone has a story worth
                 hearing."
               </p>
-              <p className="text-xs text-red-500 mt-2">Content score: 41 — two abstract lessons, no specific person or moment</p>
+              <p className="text-xs text-red-500 mt-2">Content score: 41, two abstract lessons, no specific person or moment</p>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-xl p-5">
               <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">After</p>
               <p className="text-[#0F172A] text-sm">
                 "Mr. Torres was eighty-two and had been in room 14 for eleven days when I finally
-                figured out he wasn't ignoring me — he was hard of hearing on his left side. After
+                figured out he wasn't ignoring me, he was hard of hearing on his left side. After
                 that, I always sat on his right."
               </p>
-              <p className="text-xs text-green-600 mt-2">Content score: 89 — specific person, specific detail, shows adjustment not just awareness</p>
+              <p className="text-xs text-green-600 mt-2">Content score: 89, specific person, specific detail, shows adjustment not just awareness</p>
             </div>
           </div>
 

@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How to Improve Your College Essay — A Revision Guide",
+  title: "How to Improve Your College Essay, A Revision Guide",
   description:
-    "The score → identify → edit → re-score loop that improves college essays in 2–3 cycles. Specific techniques for Content, Structure, and Voice — with a free AI tool to track your progress.",
+    "The score → identify → edit → re-score loop that improves college essays in 2–3 cycles. Specific techniques for Content, Structure, and Voice, with a free AI tool to track your progress.",
   alternates: {
     canonical: "/how-to-improve-college-essay",
   },
   openGraph: {
-    title: "How to Improve Your College Essay — A Revision Guide | Ivy Admit",
+    title: "How to Improve Your College Essay, A Revision Guide | Ivy Admit",
     description:
-      "The score → identify → edit → re-score loop that improves college essays in 2–3 cycles. Specific techniques for Content, Structure, and Voice — with a free AI tool to track your progress.",
+      "The score → identify → edit → re-score loop that improves college essays in 2–3 cycles. Specific techniques for Content, Structure, and Voice, with a free AI tool to track your progress.",
     url: "/how-to-improve-college-essay",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "How to Improve Your College Essay — Ivy Admit" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "How to Improve Your College Essay, Ivy Admit" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "How to Improve Your College Essay — A Revision Guide",
+    title: "How to Improve Your College Essay, A Revision Guide",
     images: ["/og-image.png"],
   },
 };
@@ -43,7 +43,7 @@ const faqSchema = {
       name: "How many drafts should a college essay go through?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most essays reach a strong state in three to five revision cycles. The first draft surfaces the story. The second draft fixes structure. The third and fourth drafts sharpen evidence and voice. Avoid revising beyond the point where changes are improvements — over-editing strips out authentic voice.",
+        text: "Most essays reach a strong state in three to five revision cycles. The first draft surfaces the story. The second draft fixes structure. The third and fourth drafts sharpen evidence and voice. Avoid revising beyond the point where changes are improvements, over-editing strips out authentic voice.",
       },
     },
     {
@@ -59,15 +59,15 @@ const faqSchema = {
       name: "Should I hire a college counselor to improve my essay?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A good counselor adds value for topic strategy, school-fit assessment, and emotional resonance checks. AI review adds value for structural and evidentiary analysis. The two are complementary — use AI for measurable dimensions and a counselor for judgment calls a score cannot capture.",
+        text: "A good counselor adds value for topic strategy, school-fit assessment, and emotional resonance checks. AI review adds value for structural and evidentiary analysis. The two are complementary, use AI for measurable dimensions and a counselor for judgment calls a score cannot capture.",
       },
     },
     {
       "@type": "Question",
-      name: "My essay feels authentic but scores low — what should I do?",
+      name: "My essay feels authentic but scores low, what should I do?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Authenticity and specificity are different things. An essay can feel true to the writer while still lacking the specific details that make it legible to a reader who does not know you. Low Content scores usually mean your evidence needs more concrete grounding — not that your story is wrong.",
+        text: "Authenticity and specificity are different things. An essay can feel true to the writer while still lacking the specific details that make it legible to a reader who does not know you. Low Content scores usually mean your evidence needs more concrete grounding, not that your story is wrong.",
       },
     },
   ],
@@ -94,7 +94,7 @@ export default function HowToImproveCollegeEssayPage() {
           <p className="text-lg text-[#475569] mb-6">
             Revision is where most essays are won or lost. A first draft captures the story; revision
             makes it legible, specific, and memorable. This guide walks through a repeatable revision
-            loop that improves essays systematically — without stripping out your voice.
+            loop that improves essays systematically, without stripping out your voice.
           </p>
           <Link
             href="/editor"
@@ -108,14 +108,14 @@ export default function HowToImproveCollegeEssayPage() {
           {/* Section 1 */}
           <h2>The Revision Loop: Score → Identify → Edit → Re-Score</h2>
           <p>
-            Most students revise by feel — they read the essay, sense that something is off, change
+            Most students revise by feel, they read the essay, sense that something is off, change
             words, and repeat. This produces diminishing returns quickly because the same intuitions
             that produced the first draft produce the same kinds of edits.
           </p>
           <p>
             A structured loop breaks that cycle. First, score the essay to get an objective
             breakdown across Content, Structure, and Voice. Second, identify the weakest dimension
-            — the one furthest below 80. Third, make targeted edits to that dimension only. Fourth,
+           , the one furthest below 80. Third, make targeted edits to that dimension only. Fourth,
             re-score to confirm improvement before moving to the next dimension.
           </p>
           <p>
@@ -149,13 +149,13 @@ export default function HowToImproveCollegeEssayPage() {
           <h2>Improving Your Structure Score</h2>
           <p>
             Structure problems almost always live in the opening and closing. The middle of an
-            essay — the development section — is usually fine because writers naturally include
+            essay, the development section, is usually fine because writers naturally include
             narrative momentum when describing events in sequence. The opening and closing are
             where templates creep in.
           </p>
           <p>
             To fix a low Structure score, rewrite your opening sentence first. It should drop the
-            reader into a scene — a specific action, observation, or moment in progress. If your
+            reader into a scene, a specific action, observation, or moment in progress. If your
             opening currently begins with "I have always," "Growing up," "Ever since," or a quote,
             rewrite it to start mid-action. This single change often raises the Structure score by
             15–20 points.
@@ -163,7 +163,7 @@ export default function HowToImproveCollegeEssayPage() {
           <p>
             Then rewrite your final paragraph. It should project forward rather than look backward.
             Instead of summarizing what happened or naming the lesson learned, show how this
-            experience has changed how you approach something specific — a discipline, a
+            experience has changed how you approach something specific, a discipline, a
             relationship, a question you are still working on. Forward-looking closes score higher
             on Structure because they suggest continuity: the story is not over.
           </p>
@@ -172,7 +172,7 @@ export default function HowToImproveCollegeEssayPage() {
           <h2>Improving Your Voice Score</h2>
           <p>
             Voice is the hardest dimension to improve because the instinct to fix it is often to
-            add distinctive word choices — unusual vocabulary, literary devices, stylistic
+            add distinctive word choices, unusual vocabulary, literary devices, stylistic
             flourishes. This usually makes things worse. Performed distinctiveness reads as trying
             to sound distinctive, which is the opposite of having a voice.
           </p>
@@ -185,7 +185,7 @@ export default function HowToImproveCollegeEssayPage() {
           <p>
             After each of these edits, read the revised passage aloud. If it sounds more like
             something you would say in a conversation, the Voice score will improve. Voice is
-            not about elevated language — it is about language that sounds like a specific person.
+            not about elevated language, it is about language that sounds like a specific person.
             The specific person the essay should sound like is you, in a considered moment.
           </p>
 
@@ -205,7 +205,7 @@ export default function HowToImproveCollegeEssayPage() {
             specific schools.
           </p>
           <p>
-            The goal of revision is not perfection. It is clarity, specificity, and authenticity —
+            The goal of revision is not perfection. It is clarity, specificity, and authenticity , 
             an essay that communicates who you are to someone who has never met you. When a trusted
             reader who does not know you well can describe your essay's central insight in one
             sentence, you have achieved that goal.
@@ -213,9 +213,9 @@ export default function HowToImproveCollegeEssayPage() {
 
           {/* Mid-page CTA */}
           <div className="not-prose my-10 rounded-2xl bg-[#F5F3FF] border border-[#C4B5FD]/50 p-7 text-center">
-            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">Start the loop — free</p>
+            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">Start the loop, free</p>
             <p className="text-[#0F172A] font-bold text-lg mb-3">Score your current draft first</p>
-            <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">You can't improve what you haven't measured. Upload your draft and get Content, Structure, and Voice scores in under 60 seconds — then use this guide to target your weakest dimension.</p>
+            <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">You can't improve what you haven't measured. Upload your draft and get Content, Structure, and Voice scores in under 60 seconds, then use this guide to target your weakest dimension.</p>
             <Link
               href="/editor"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1e1e3f] transition-all"
@@ -228,23 +228,23 @@ export default function HowToImproveCollegeEssayPage() {
           <h2>Before and After: Essay Conclusion</h2>
           <div className="not-prose grid md:grid-cols-2 gap-4 my-6">
             <div className="bg-red-50 border border-red-200 rounded-xl p-5">
-              <p className="text-xs font-semibold text-red-600 uppercase tracking-wide mb-2">Before — backward-looking close</p>
+              <p className="text-xs font-semibold text-red-600 uppercase tracking-wide mb-2">Before, backward-looking close</p>
               <p className="text-[#0F172A] text-sm">
                 "This experience changed the way I see the world. I learned that hard work and
                 dedication can overcome any obstacle, and I will carry these lessons with me as
                 I pursue my future goals in college and beyond."
               </p>
-              <p className="text-xs text-red-500 mt-2">Structure score: 48 — summarizes the past, closes with generic aspiration</p>
+              <p className="text-xs text-red-500 mt-2">Structure score: 48, summarizes the past, closes with generic aspiration</p>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-xl p-5">
-              <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">After — forward-looking close</p>
+              <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">After, forward-looking close</p>
               <p className="text-[#0F172A] text-sm">
                 "I still think about that morning when the numbers finally lined up. Not because
-                it proved I was right — I had been wrong six different ways before that — but
+                it proved I was right, I had been wrong six different ways before that, but
                 because it showed me what a question looks like when you are close enough to it
                 to feel its edges. I am still looking for that feeling in other rooms."
               </p>
-              <p className="text-xs text-green-600 mt-2">Structure score: 93 — anchored in a specific moment, projects forward without resolving</p>
+              <p className="text-xs text-green-600 mt-2">Structure score: 93, anchored in a specific moment, projects forward without resolving</p>
             </div>
           </div>
 

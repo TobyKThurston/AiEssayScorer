@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Ivy League Essay Examples — What Works and Why",
+  title: "Ivy League Essay Examples, What Works and Why",
   description:
-    "Annotated excerpts from accepted Ivy League applications show what separates a memorable essay from a generic one. Learn the patterns — and check your own draft against them.",
+    "Annotated excerpts from accepted Ivy League applications show what separates a memorable essay from a generic one. Learn the patterns, and check your own draft against them.",
   alternates: {
     canonical: "/ivy-league-essay-examples",
   },
   openGraph: {
-    title: "Ivy League Essay Examples — What Works and Why | Ivy Admit",
+    title: "Ivy League Essay Examples, What Works and Why | Ivy Admit",
     description:
-      "Annotated excerpts from accepted Ivy League applications show what separates a memorable essay from a generic one. Learn the patterns — and check your own draft against them.",
+      "Annotated excerpts from accepted Ivy League applications show what separates a memorable essay from a generic one. Learn the patterns, and check your own draft against them.",
     url: "/ivy-league-essay-examples",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ivy League Essay Examples — Ivy Admit" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ivy League Essay Examples, Ivy Admit" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ivy League Essay Examples — What Works and Why",
+    title: "Ivy League Essay Examples, What Works and Why",
     images: ["/og-image.png"],
   },
 };
@@ -51,7 +51,7 @@ const faqSchema = {
       name: "What score do accepted Ivy League essays typically have?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "In our analysis, essays from admitted students at highly selective schools average above 82 across Content, Structure, and Voice. However, essays from the same pool show wide variance — some admitted students have essays with lower scores but exceptional extracurricular profiles. The essay is one factor.",
+        text: "In our analysis, essays from admitted students at highly selective schools average above 82 across Content, Structure, and Voice. However, essays from the same pool show wide variance, some admitted students have essays with lower scores but exceptional extracurricular profiles. The essay is one factor.",
       },
     },
     {
@@ -59,7 +59,7 @@ const faqSchema = {
       name: "Do I need to be extraordinary to write a strong Ivy League essay?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. The most consistently effective essays are built from ordinary moments described with extraordinary specificity. The extraordinary element is the precision of observation — not the scale of the experience.",
+        text: "No. The most consistently effective essays are built from ordinary moments described with extraordinary specificity. The extraordinary element is the precision of observation, not the scale of the experience.",
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       name: "Should I write about my biggest accomplishment?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Not necessarily. Your biggest accomplishment is already documented in your activities section and awards. The personal statement works best when it reveals something the rest of your application cannot — your inner life, your way of thinking, a moment of doubt or change.",
+        text: "Not necessarily. Your biggest accomplishment is already documented in your activities section and awards. The personal statement works best when it reveals something the rest of your application cannot, your inner life, your way of thinking, a moment of doubt or change.",
       },
     },
   ],
@@ -94,7 +94,7 @@ export default function IvyLeagueEssayExamplesPage() {
           <p className="text-lg text-[#475569] mb-6">
             Reading a full accepted essay tells you what someone wrote. Reading an annotated excerpt
             tells you why it worked. This page breaks down real passages from accepted applications
-            to Harvard, Yale, and Princeton — scoring them and showing the exact features that make
+            to Harvard, Yale, and Princeton, scoring them and showing the exact features that make
             them stand out. Then you can check your own draft against the same patterns.
           </p>
           <Link
@@ -117,7 +117,7 @@ export default function IvyLeagueEssayExamplesPage() {
           <p>
             What differentiates is the quality of observation. Accepted essays tend to notice things
             that others do not: an anomaly in a dataset, a contradiction in a conversation, a detail
-            in a place most people walk past. That noticing — and the thinking it triggers — is what
+            in a place most people walk past. That noticing, and the thinking it triggers, is what
             produces the feeling of reading about a specific person rather than an archetype.
           </p>
           <p>
@@ -138,7 +138,7 @@ export default function IvyLeagueEssayExamplesPage() {
             This pattern appears in accepted essays across all topic areas: research, sports, family,
             art, community service. The topic is secondary to the level of specific observation
             embedded in it. An essay about competitive chess that names a specific position and the
-            specific decision the writer made — and got wrong — scores higher on Content than an
+            specific decision the writer made, and got wrong, scores higher on Content than an
             essay about curing cancer that stays at the level of inspiration and aspiration.
           </p>
           <p>
@@ -153,14 +153,14 @@ export default function IvyLeagueEssayExamplesPage() {
           <p>
             The template version of the college essay ends with a lesson. "This experience taught
             me to persevere." "I learned that failure is just a step toward success." These
-            conclusions read as performed insight — the writer knows what they are supposed to have
+            conclusions read as performed insight, the writer knows what they are supposed to have
             learned and states it.
           </p>
           <p>
             Accepted essays tend to end differently: with an open question, a shift in how the
             writer approaches something, or a specific future orientation rather than a concluded
             past lesson. "I still do not fully understand why that decision felt right" is more
-            credible — and more interesting — than "I now know that trusting my instincts is the
+            credible, and more interesting, than "I now know that trusting my instincts is the
             key to leadership."
           </p>
           <p>
@@ -174,7 +174,7 @@ export default function IvyLeagueEssayExamplesPage() {
           <div className="not-prose my-10 rounded-2xl bg-[#F5F3FF] border border-[#C4B5FD]/50 p-7 text-center">
             <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">See your own scores</p>
             <p className="text-[#0F172A] font-bold text-lg mb-3">How does your essay compare?</p>
-            <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">Upload your draft and get scored against the same patterns used here — content specificity, narrative structure, and voice consistency — in under 60 seconds.</p>
+            <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">Upload your draft and get scored against the same patterns used here, content specificity, narrative structure, and voice consistency, in under 60 seconds.</p>
             <Link
               href="/editor"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1e1e3f] transition-all"
@@ -187,7 +187,7 @@ export default function IvyLeagueEssayExamplesPage() {
           <h2>Annotated Example: Two Excerpts Compared</h2>
           <div className="not-prose space-y-4 my-6">
             <div className="bg-red-50 border border-red-200 rounded-xl p-5">
-              <p className="text-xs font-semibold text-red-600 uppercase tracking-wide mb-2">Generic — Content: 39, Voice: 44</p>
+              <p className="text-xs font-semibold text-red-600 uppercase tracking-wide mb-2">Generic, Content: 39, Voice: 44</p>
               <p className="text-[#0F172A] text-sm mb-3">
                 "Working in the lab opened my eyes to the power of scientific inquiry. I learned
                 that research requires patience and resilience. Every failed experiment taught me
@@ -195,15 +195,15 @@ export default function IvyLeagueEssayExamplesPage() {
                 a real difference in the world."
               </p>
               <ul className="text-xs text-red-600 space-y-1">
-                <li>→ "opened my eyes" — template phrase, no specific moment</li>
-                <li>→ "patience and resilience" — two of the most common essay words</li>
-                <li>→ "make a real difference" — unanchored aspiration</li>
+                <li>→ "opened my eyes", template phrase, no specific moment</li>
+                <li>→ "patience and resilience", two of the most common essay words</li>
+                <li>→ "make a real difference", unanchored aspiration</li>
               </ul>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-xl p-5">
-              <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">Specific — Content: 88, Voice: 85</p>
+              <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">Specific, Content: 88, Voice: 85</p>
               <p className="text-[#0F172A] text-sm mb-3">
-                "The gel electrophoresis results were wrong again — the bands had migrated too far,
+                "The gel electrophoresis results were wrong again, the bands had migrated too far,
                 which meant the voltage was still off, which meant the last six weeks of samples
                 were probably compromised. I sat with that for a moment. Then I recalculated the
                 buffer concentration from scratch, because it was the only variable I had not

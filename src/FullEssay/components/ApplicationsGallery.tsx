@@ -40,7 +40,7 @@ const mockSchools: School[] = [
           {
             title: "Common App Essay",
             prompt: "The lessons we take from obstacles we encounter can be fundamental to later success.",
-            excerpt: "When my robotics team's main controller failed two days before the regional competition, I learned that true engineering isn't about perfect execution—it's about creative problem-solving under pressure..."
+            excerpt: "When my robotics team's main controller failed two days before the regional competition, I learned that true engineering isn't about perfect execution, it's about creative problem-solving under pressure..."
           },
           {
             title: "Why Harvard",
@@ -107,7 +107,7 @@ const mockSchools: School[] = [
           {
             title: "Common App Essay",
             prompt: "Share an essay on any topic of your choice.",
-            excerpt: "The chess board in front of me wasn't just a game—it was a conversation about strategy, patience, and the beauty of finding patterns in chaos..."
+            excerpt: "The chess board in front of me wasn't just a game, it was a conversation about strategy, patience, and the beauty of finding patterns in chaos..."
           },
           {
             title: "Intellectual Vitality",
@@ -139,7 +139,7 @@ const mockSchools: School[] = [
           {
             title: "MIT Culture",
             prompt: "We know you lead a busy life, full of activities, many of which are required of you.",
-            excerpt: "What truly excites me isn't just building things—it's building things that matter. At MIT, I want to join a community where 'because we can' meets 'because we should'..."
+            excerpt: "What truly excites me isn't just building things, it's building things that matter. At MIT, I want to join a community where 'because we can' meets 'because we should'..."
           }
         ]
       }
@@ -161,7 +161,7 @@ const mockSchools: School[] = [
           {
             title: "Common App Essay",
             prompt: "Reflect on something that someone has done for you that has made you happy or thankful.",
-            excerpt: "My debate coach didn't just teach me how to argue—she taught me how to listen. In a world of sound bites and echo chambers, that lesson changed everything..."
+            excerpt: "My debate coach didn't just teach me how to argue, she taught me how to listen. In a world of sound bites and echo chambers, that lesson changed everything..."
           },
           {
             title: "Why Yale",

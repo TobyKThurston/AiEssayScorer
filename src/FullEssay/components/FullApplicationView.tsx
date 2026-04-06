@@ -22,7 +22,7 @@ export function FullApplicationView() {
   const essay = useMemo(() => ({
     type: searchParams.get("essayTitle") || "Common App Essay",
     prompt: searchParams.get("prompt") || "The lessons we take from obstacles we encounter can be fundamental to later success.",
-    content: searchParams.get("content") || "When my robotics team's main controller failed two days before the regional competition, I learned that true engineering isn't about perfect execution—it's about creative problem-solving under pressure..."
+    content: searchParams.get("content") || "When my robotics team's main controller failed two days before the regional competition, I learned that true engineering isn't about perfect execution, it's about creative problem-solving under pressure..."
   }), [searchParams]);
   return (
     <div className="min-h-screen bg-[#F8FAFC] pt-24 pb-16">

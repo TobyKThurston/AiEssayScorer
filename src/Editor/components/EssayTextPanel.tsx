@@ -97,7 +97,7 @@ export function EssayTextPanel({
 
   return (
     <div className="flex flex-col h-full overflow-hidden bg-[#EEF2F7]">
-      {/* Mode toggle — only when analysis exists */}
+      {/* Mode toggle, only when analysis exists */}
       {rating && (
         <div className="flex items-center gap-1 px-4 py-2 bg-white border-b border-slate-200 flex-shrink-0 z-10">
           {(["edit", "preview"] as const).map((m) => (
@@ -119,7 +119,7 @@ export function EssayTextPanel({
         </div>
       )}
 
-      {/* Document area — fills remaining space, no outer scroll */}
+      {/* Document area, fills remaining space, no outer scroll */}
       <div className="flex-1 min-h-0 flex flex-col px-6 py-6">
         <div className="flex-1 min-h-0 flex flex-col max-w-[700px] w-full mx-auto">
 
@@ -158,7 +158,7 @@ export function EssayTextPanel({
               </div>
             )}
 
-            {/* Writing area — fills remaining card space */}
+            {/* Writing area, fills remaining card space */}
             <div className="flex-1 min-h-0 flex flex-col">
               {mode === "edit" ? (
                 <textarea
