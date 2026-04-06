@@ -1,12 +1,35 @@
 "use client";
 
-import { Leaf } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Leaf, Zap } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
 import { EssayList } from "./components/EssayList";
 
 export default function EditorApp() {
   const { signOut } = useAuth();
+  const [isPro, setIsPro] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/subscription-status")
+      .then((r) => r.json())
+      .then((d) => setIsPro(d.isActive === true))
+      .catch(() => {});
+  }, []);
+
+  const handleUpgrade = async () => {
+    try {
+      const res = await fetch("/api/create-checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID }),
+      });
+      const data = await res.json();
+      if (data.url) window.location.href = data.url;
+    } catch {
+      // silent fail
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
@@ -18,8 +41,17 @@ export default function EditorApp() {
           </div>
           <span className="text-sm font-semibold text-[#0F172A]">Ivy Admit</span>
         </Link>
-        <div className="ml-auto flex items-center gap-4">
-<button
+        <div className="ml-auto flex items-center gap-3">
+          {!isPro && (
+            <button
+              onClick={handleUpgrade}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-[#F59E0B] to-[#EF4444] text-white text-xs font-semibold hover:opacity-90 transition-opacity"
+            >
+              <Zap className="w-3 h-3" />
+              Upgrade to Pro
+            </button>
+          )}
+          <button
             onClick={() => signOut()}
             className="text-xs text-[#64748B] hover:text-[#0F172A] transition-colors"
           >

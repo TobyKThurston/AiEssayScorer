@@ -186,43 +186,39 @@ export function EssayTextPanel({
             <div className="px-8 py-3 border-t border-slate-100 flex items-center justify-between bg-slate-50/60 flex-shrink-0">
               <span className={`text-xs font-medium ${wcColor}`}>
                 {wordCount} word{wordCount !== 1 ? "s" : ""}
-              </span>
-              <span className="flex items-center gap-1 text-xs text-[#94A3B8]">
                 {wcStatus === "over" && (
-                  <span className="text-[#EF4444]">{wordCount - effectiveMax} over</span>
+                  <span className="ml-1.5 text-[#EF4444]">({wordCount - effectiveMax} over)</span>
                 )}
-                {wcStatus === "short" && (
-                  <span>{presetTarget.min - wordCount} to go</span>
+                {wcStatus === "short" && wordCount > 0 && (
+                  <span className="ml-1.5 text-[#94A3B8]">({presetTarget.min - wordCount} to go)</span>
                 )}
                 {wcStatus === "good" && wordCount > 0 && (
-                  <span className="text-[#10B981]">within limit</span>
+                  <span className="ml-1.5 text-[#10B981]">(within limit)</span>
                 )}
-                {wordCount > 0 && (
-                  <>
-                    <span className="mx-1 text-[#CBD5E1]">/</span>
-                    {editingLimit ? (
-                      <input
-                        type="number"
-                        className="w-14 text-xs text-[#475569] bg-white border border-[#3B82F6] rounded px-1 py-0.5 outline-none"
-                        value={limitInput}
-                        onChange={(e) => setLimitInput(e.target.value)}
-                        onBlur={commitLimit}
-                        onKeyDown={(e) => {
-                          if (e.key === "Enter") commitLimit();
-                          if (e.key === "Escape") setEditingLimit(false);
-                        }}
-                        autoFocus
-                      />
-                    ) : (
-                      <button
-                        onClick={startEditingLimit}
-                        className="text-[#94A3B8] hover:text-[#475569] transition-colors underline decoration-dotted underline-offset-2"
-                        title="Click to set word limit"
-                      >
-                        {effectiveMax}
-                      </button>
-                    )}
-                  </>
+              </span>
+              <span className="flex items-center gap-1.5 text-xs text-[#94A3B8]">
+                <span>Limit:</span>
+                {editingLimit ? (
+                  <input
+                    type="number"
+                    className="w-16 text-xs text-[#475569] bg-white border border-[#3B82F6] rounded px-1.5 py-0.5 outline-none"
+                    value={limitInput}
+                    onChange={(e) => setLimitInput(e.target.value)}
+                    onBlur={commitLimit}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") commitLimit();
+                      if (e.key === "Escape") setEditingLimit(false);
+                    }}
+                    autoFocus
+                  />
+                ) : (
+                  <button
+                    onClick={startEditingLimit}
+                    className="text-[#475569] font-medium hover:text-[#3B82F6] transition-colors underline decoration-dotted underline-offset-2"
+                    title="Click to set word limit"
+                  >
+                    {effectiveMax}
+                  </button>
                 )}
               </span>
             </div>

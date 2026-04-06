@@ -307,6 +307,7 @@ export function EditorPage({ essayId }: EditorPageProps) {
         hasContent={content.trim().length > 0}
         rating={rating}
         isRewritingEssay={isRewritingEssay}
+        isPro={isPro}
         onSave={saveDraft}
         onAnalyze={analyze}
         onShowVersionHistory={() => setShowVersionHistory(true)}

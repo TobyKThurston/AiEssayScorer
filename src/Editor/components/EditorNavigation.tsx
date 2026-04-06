@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, Save, Sparkles, History, Leaf, Wand2 } from "lucide-react";
+import { ArrowLeft, Save, Sparkles, History, Leaf, Wand2, Zap } from "lucide-react";
 import Link from "next/link";
 import { Essay, EssayRating } from "../types";
 
@@ -15,6 +15,7 @@ interface EditorNavigationProps {
   hasContent: boolean;
   rating: EssayRating | null;
   isRewritingEssay: boolean;
+  isPro: boolean;
   onSave: () => void;
   onAnalyze: () => void;
   onShowVersionHistory: () => void;
@@ -31,6 +32,7 @@ export function EditorNavigation({
   hasContent,
   rating,
   isRewritingEssay,
+  isPro,
   onSave,
   onAnalyze,
   onShowVersionHistory,
@@ -56,7 +58,22 @@ export function EditorNavigation({
     }, 600);
   };
 
-  const canAnalyze = hasContent && (tokens === null || tokens >= 1) && !isAnalyzing;
+  const outOfTokens = tokens !== null && tokens < 1;
+  const canAnalyze = hasContent && !outOfTokens && (tokens === null || tokens >= 1) && !isAnalyzing;
+
+  const handleUpgrade = async () => {
+    try {
+      const res = await fetch("/api/create-checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID }),
+      });
+      const data = await res.json();
+      if (data.url) window.location.href = data.url;
+    } catch {
+      // silent fail
+    }
+  };
 
   return (
     <>
@@ -88,9 +105,20 @@ export function EditorNavigation({
 
         {/* Token count */}
         {tokens !== null && (
-          <span className="hidden sm:inline text-xs text-[#94A3B8] flex-shrink-0">
+          <span className={`hidden sm:inline text-xs flex-shrink-0 ${outOfTokens ? "text-[#EF4444] font-medium" : "text-[#94A3B8]"}`}>
             {tokens} token{tokens !== 1 ? "s" : ""}
           </span>
+        )}
+
+        {/* Upgrade pill — always visible when not Pro */}
+        {!isPro && (
+          <button
+            onClick={handleUpgrade}
+            className="hidden sm:flex flex-shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-[#F59E0B] to-[#EF4444] text-white text-xs font-semibold hover:opacity-90 transition-opacity"
+          >
+            <Zap className="w-3 h-3" />
+            Upgrade
+          </button>
         )}
 
         {/* Version history */}
@@ -128,19 +156,29 @@ export function EditorNavigation({
           </button>
         )}
 
-        {/* Analyze */}
-        <button
-          onClick={onAnalyze}
-          disabled={!canAnalyze}
-          className={`flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-            canAnalyze
-              ? "bg-gradient-to-r from-[#3B82F6] to-[#0EA5E9] text-white shadow-[0_2px_8px_rgba(59,130,246,0.3)] hover:shadow-[0_4px_12px_rgba(59,130,246,0.4)]"
-              : "bg-slate-100 text-[#CBD5E1] cursor-not-allowed"
-          }`}
-        >
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>{isAnalyzing ? "Analyzing…" : "Analyze"}</span>
-        </button>
+        {/* Analyze / Upgrade-to-analyze */}
+        {outOfTokens ? (
+          <button
+            onClick={handleUpgrade}
+            className="flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-[#F59E0B] to-[#EF4444] text-white hover:opacity-90 transition-opacity"
+          >
+            <Zap className="w-3.5 h-3.5" />
+            <span>Upgrade to Analyze</span>
+          </button>
+        ) : (
+          <button
+            onClick={onAnalyze}
+            disabled={!canAnalyze}
+            className={`flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+              canAnalyze
+                ? "bg-gradient-to-r from-[#3B82F6] to-[#0EA5E9] text-white shadow-[0_2px_8px_rgba(59,130,246,0.3)] hover:shadow-[0_4px_12px_rgba(59,130,246,0.4)]"
+                : "bg-slate-100 text-[#CBD5E1] cursor-not-allowed"
+            }`}
+          >
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>{isAnalyzing ? "Analyzing…" : "Analyze"}</span>
+          </button>
+        )}
       </nav>
 
       {/* Analyze error banner */}
