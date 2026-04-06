@@ -57,6 +57,12 @@ export function ScoreHeader({ rating }: ScoreHeaderProps) {
       rawScore: rating.styleScore ?? Math.round(overallScore * 0.25),
       maxScore: 25,
     },
+    ...(rating.specificityScore !== undefined
+      ? [{ label: "Specificity", rawScore: rating.specificityScore, maxScore: 10 }]
+      : []),
+    ...(rating.grammarScore !== undefined
+      ? [{ label: "Grammar", rawScore: rating.grammarScore, maxScore: 10 }]
+      : []),
   ];
 
   return (
@@ -92,11 +98,12 @@ export function ScoreHeader({ rating }: ScoreHeaderProps) {
             <div key={cat.label}>
               <div className="flex items-center justify-between mb-0.5">
                 <span className="text-xs text-[#64748B]">{cat.label}</span>
-                <span className="text-xs font-semibold text-[#0F172A]">
-                  {cat.rawScore}/{cat.maxScore}
+                <span className={`text-sm font-bold ${getScoreColor(pct)}`}>
+                  {cat.rawScore}
+                  <span className="text-xs font-normal text-[#94A3B8]">/{cat.maxScore}</span>
                 </span>
               </div>
-              <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
+              <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
                 <div
                   className={`h-full bg-gradient-to-r ${getScoreBg(pct)} rounded-full`}
                   style={{ width: `${pct}%` }}

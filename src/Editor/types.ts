@@ -1,3 +1,9 @@
+export type SchoolFit = {
+  score: number;
+  feedback: string;
+  tips: string[];
+};
+
 export type AdmissionsView = {
   firstImpression: string;
   strengths: string[];
@@ -22,6 +28,9 @@ export type EssayRating = {
     suggestion: string;
     reason: string;
   }>;
+  specificityScore?: number;
+  grammarScore?: number;
+  schoolFit?: SchoolFit;
   admissionsView?: AdmissionsView;
   hooks?: {
     narrative: string;

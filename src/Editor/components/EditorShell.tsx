@@ -24,6 +24,8 @@ interface EditorShellProps {
   isRewritingEssay: boolean;
   essayRewriteResult: { rewritten?: string; hookPreview: string } | null;
   isRegenHooks: boolean;
+  extendedLineSuggestions: Array<{ original: string; suggestion: string; reason: string }>;
+  isLoadingLineSuggestions: boolean;
   onContentChange: (value: string) => void;
   onMetadataChange: (fields: {
     essayType?: string;
@@ -57,6 +59,8 @@ export function EditorShell({
   isRewritingEssay,
   essayRewriteResult,
   isRegenHooks,
+  extendedLineSuggestions,
+  isLoadingLineSuggestions,
   onContentChange,
   onMetadataChange,
   onHighlightHover,
@@ -103,6 +107,9 @@ export function EditorShell({
         rewriteCount={rewriteCount}
         rewriteResults={rewriteResults}
         rewritingIndex={rewritingIndex}
+        targetSchools={targetSchools}
+        extendedLineSuggestions={extendedLineSuggestions}
+        isLoadingLineSuggestions={isLoadingLineSuggestions}
         onHoverEnter={onHighlightHover}
         onHoverLeave={onHighlightLeave}
         onLock={onHighlightLock}

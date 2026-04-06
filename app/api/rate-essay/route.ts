@@ -50,6 +50,9 @@ For lineSuggestions:
 - Make suggestions concrete and actionable
 - Explain why each change matters
 
+For specificityScore and grammarScore: use the exact sub-scores from your rubric evaluation.
+If targetSchools are provided, include "schoolFit" with specific advice referencing each school's known values, programs, and culture. If no targetSchools, omit "schoolFit" entirely.
+
 Also provide:
 "admissionsView": {
   "firstImpression": one sentence capturing an AO's gut reaction when they open this essay,
@@ -70,6 +73,8 @@ Respond ONLY with valid JSON matching this exact shape:
   "contentScore": number (0-30),
   "structureScore": number (0-25),
   "styleScore": number (0-25),
+  "specificityScore": number (0-10),
+  "grammarScore": number (0-10),
   "strengths": string[],
   "improvements": string[],
   "contentFeedback": string,
@@ -78,8 +83,10 @@ Respond ONLY with valid JSON matching this exact shape:
   "recommendation": string,
   "lineSuggestions": [{ "original": string, "suggestion": string, "reason": string }],
   "admissionsView": { "firstImpression": string, "strengths": string[], "concerns": string[], "blendRisk": "Low" | "Medium" | "High", "standoutPotential": string },
-  "hooks": { "narrative": string, "boldStatement": string, "reflective": string }
-}`;
+  "hooks": { "narrative": string, "boldStatement": string, "reflective": string },
+  "schoolFit": { "score": number, "feedback": string, "tips": string[] }
+}
+Note: omit "schoolFit" entirely if no targetSchools were provided.`;
 
 export async function POST(request: Request) {
   try {

@@ -45,6 +45,10 @@ export function EditorPage({ essayId }: EditorPageProps) {
   const [essayRewriteResult, setEssayRewriteResult] = useState<{ rewritten?: string; hookPreview: string } | null>(null);
   const [showRewritePanel, setShowRewritePanel] = useState(false);
   const [isRegenHooks, setIsRegenHooks] = useState(false);
+  const [extendedLineSuggestions, setExtendedLineSuggestions] = useState<
+    Array<{ original: string; suggestion: string; reason: string }>
+  >([]);
+  const [isLoadingLineSuggestions, setIsLoadingLineSuggestions] = useState(false);
 
   const { activeHighlightIndex, handleHover, handleLock } = useHighlight();
 
@@ -131,9 +135,10 @@ export function EditorPage({ essayId }: EditorPageProps) {
     setAnalyzeError(null);
     setShowOverlay(true);
     setOverlayDone(false);
-    // Reset rewrite state on new analysis
+    // Reset rewrite state and extended suggestions on new analysis
     setRewriteResults({});
     setRewriteCount(0);
+    setExtendedLineSuggestions([]);
 
     try {
       const res = await fetch("/api/rate-essay", {
@@ -179,6 +184,20 @@ export function EditorPage({ essayId }: EditorPageProps) {
       // Signal overlay that API is done; it will call onAnimationComplete when ready
       setRating(newRating);
       setOverlayDone(true);
+
+      // Fire secondary line-suggestions call (non-blocking, no token cost)
+      setIsLoadingLineSuggestions(true);
+      fetch("/api/line-suggestions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ essay: content, targetSchools, prompt: essayPrompt }),
+      })
+        .then((r) => r.json())
+        .then((d) => {
+          if (d.lineSuggestions) setExtendedLineSuggestions(d.lineSuggestions);
+        })
+        .catch(() => {})
+        .finally(() => setIsLoadingLineSuggestions(false));
     } catch (err: unknown) {
       setShowOverlay(false);
       setOverlayDone(false);
@@ -311,6 +330,8 @@ export function EditorPage({ essayId }: EditorPageProps) {
           isRewritingEssay={isRewritingEssay}
           essayRewriteResult={essayRewriteResult}
           isRegenHooks={isRegenHooks}
+          extendedLineSuggestions={extendedLineSuggestions}
+          isLoadingLineSuggestions={isLoadingLineSuggestions}
           onContentChange={handleContentChange}
           onMetadataChange={handleMetadataChange}
           onHighlightHover={handleHover}
