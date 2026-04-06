@@ -56,7 +56,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.18 }}
             >
               Get clear, actionable feedback on clarity, structure, and admissions
-              impact — instantly.
+              impact, instantly.
             </motion.p>
 
             <motion.div
