@@ -6,7 +6,6 @@ import {
   Plus,
   FileText,
   Clock,
-  ChevronRight,
   Zap,
   Target,
   BookOpen,
@@ -159,13 +158,6 @@ function EmptyState({ onNew, creating }: { onNew: () => void; creating: boolean 
             <Plus className="w-4 h-4" />
             {creating ? "Creating…" : "Start Writing"}
           </button>
-          <a
-            href="/upload"
-            className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl border border-slate-200 bg-white text-[#475569] text-sm font-medium hover:border-slate-300 hover:bg-slate-50 transition-all duration-200"
-          >
-            Quick Review
-            <ChevronRight className="w-3.5 h-3.5" />
-          </a>
         </div>
       </div>
 

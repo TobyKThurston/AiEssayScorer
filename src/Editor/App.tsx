@@ -19,13 +19,7 @@ export default function EditorApp() {
           <span className="text-sm font-semibold text-[#0F172A]">Ivy Admit</span>
         </Link>
         <div className="ml-auto flex items-center gap-4">
-          <Link
-            href="/upload"
-            className="text-xs text-[#64748B] hover:text-[#0F172A] transition-colors"
-          >
-            Quick Review
-          </Link>
-          <button
+<button
             onClick={() => signOut()}
             className="text-xs text-[#64748B] hover:text-[#0F172A] transition-colors"
           >
