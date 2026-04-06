@@ -104,6 +104,17 @@ export function Hero() {
                 )
               )}
             </motion.div>
+
+            <motion.div
+              className="flex flex-wrap gap-3 mt-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <Link href="/ai-essay-review" className="text-xs text-[#6366F1] hover:underline">AI Essay Review →</Link>
+              <Link href="/college-essay-checker" className="text-xs text-[#6366F1] hover:underline">Essay Checker →</Link>
+              <Link href="/common-app-essay-help" className="text-xs text-[#6366F1] hover:underline">Common App Help →</Link>
+            </motion.div>
           </motion.div>
 
           {/* Right — glass mock card */}

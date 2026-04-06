@@ -8,6 +8,19 @@ export const metadata: Metadata = {
   description:
     "In-depth guides on writing Common App essays, supplemental essays, and Ivy League applications. Written for students who want actionable advice, not generic tips.",
   alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "College Essay Blog — Guides, Tips & Strategy",
+    description:
+      "In-depth guides on writing Common App essays, supplemental essays, and Ivy League applications. Written for students who want actionable advice, not generic tips.",
+    url: "/blog",
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ivy Admit College Essay Blog" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "College Essay Blog — Guides, Tips & Strategy",
+    images: ["/og-image.png"],
+  },
 };
 
 const categoryColors: Record<string, string> = {

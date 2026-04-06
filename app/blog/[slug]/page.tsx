@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ivyadmit.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
   return {
     title: post.title,
     description: post.description,
@@ -58,7 +58,7 @@ export default async function BlogPost({ params }: Props) {
   if (!loader) notFound();
   const { default: Content } = await loader();
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ivyadmit.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -75,6 +75,16 @@ export default async function BlogPost({ params }: Props) {
     url: `${baseUrl}/blog/${slug}`,
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${baseUrl}/blog` },
+      { "@type": "ListItem", position: 3, name: post.title, item: `${baseUrl}/blog/${slug}` },
+    ],
+  };
+
   // Adjacent posts for navigation
   const idx = posts.findIndex((p) => p.slug === slug);
   const prev = idx > 0 ? posts[idx - 1] : null;
@@ -85,6 +95,10 @@ export default async function BlogPost({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <div className="max-w-[720px] mx-auto px-6 pt-28 md:pt-36 pb-20">
