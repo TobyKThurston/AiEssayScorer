@@ -31,11 +31,11 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.05 }}
             >
               <Sparkles className="w-3 h-3" />
-              AI-Powered College Admissions
+              AI Essay Scoring
             </motion.p>
 
             <motion.h1
-              className="mb-6"
+              className="mb-4"
               style={{
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(38px, 5vw, 58px)",
@@ -46,15 +46,48 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Write essays that get you into your dream school.
+              Know where your essay stands before you submit.
             </motion.h1>
+
+            <motion.p
+              className="text-[#64748B] text-[17px] leading-relaxed mb-6"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.18 }}
+            >
+              Get clear, actionable feedback on clarity, structure, and admissions
+              impact — instantly.
+            </motion.p>
+
+            <motion.div
+              className="flex flex-col sm:flex-row gap-3 mb-4"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.26 }}
+            >
+              <Button variant="primary" href="/editor">
+                Score My Essay
+              </Button>
+              <Button variant="secondary" href="/view-essay">
+                Browse examples
+              </Button>
+            </motion.div>
+
+            <motion.p
+              className="text-xs text-[#94A3B8] mb-8"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.34 }}
+            >
+              Most first drafts score below 70. Find out where yours stands.
+            </motion.p>
 
             {/* Social proof row */}
             <motion.div
-              className="flex items-center gap-3 mb-8"
+              className="flex items-center gap-3 mb-6"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
               <div className="flex items-center">
                 {AVATARS.map((avatar, i) => (
@@ -66,39 +99,26 @@ export function Hero() {
                   </div>
                 ))}
               </div>
-              <div className="flex items-center gap-1.5">
-                <div className="flex items-center gap-0.5">
+              <div>
+                <div className="flex items-center gap-1 mb-0.5">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-3 h-3 fill-[#FBBF24] text-[#FBBF24]" />
                   ))}
+                  <span className="text-sm font-semibold text-[#0F172A] ml-1">4.8</span>
                 </div>
-                <span className="text-sm text-[#475569] font-medium">
-                  4.8 · Rated by 2,000+ students
+                <span className="text-xs text-[#94A3B8]">
+                  Average rating from 2,000+ students
                 </span>
               </div>
-            </motion.div>
-
-            <motion.div
-              className="flex flex-col sm:flex-row gap-3 mb-10"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <Button variant="primary" href="/editor">
-                Start for free
-              </Button>
-              <Button variant="secondary" href="/view-essay">
-                Browse examples
-              </Button>
             </motion.div>
 
             <motion.div
               className="flex flex-wrap items-center gap-x-6 gap-y-3"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.46 }}
             >
-              {["20,000+ students helped", "92 avg quality score", "Free to start"].map(
+              {["20,000+ essays scored", "Feedback in seconds", "Free to start"].map(
                 (item) => (
                   <div key={item} className="flex items-center gap-1.5">
                     <CheckCircle2 className="w-4 h-4 text-[#10B981] flex-shrink-0" />
@@ -202,9 +222,9 @@ export function Hero() {
                 {/* Feedback pills */}
                 <div className="space-y-2">
                   {[
-                    { type: "strength", text: "Strong personal narrative arc" },
-                    { type: "strength", text: "Concrete evidence throughout" },
-                    { type: "improve", text: "Conclusion could be more memorable" },
+                    { type: "strength", text: "Strong narrative with specific detail" },
+                    { type: "strength", text: "Distinctive voice — low blend risk" },
+                    { type: "improve", text: "Opening line could be sharper" },
                   ].map((item, i) => (
                     <motion.div
                       key={i}
@@ -258,9 +278,9 @@ export function Hero() {
                   transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 >
                   <p className="text-[10px] font-semibold text-[#059669] uppercase tracking-wider mb-0.5">
-                    Risk Check
+                    Admissions View
                   </p>
-                  <p className="text-xs text-[#475569] font-medium">No flags detected ✓</p>
+                  <p className="text-xs text-[#475569] font-medium">Blend risk: Low ✓</p>
                 </motion.div>
               </motion.div>
             </motion.div>
