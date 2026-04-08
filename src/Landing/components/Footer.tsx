@@ -18,8 +18,8 @@ export function Footer() {
       { label: "Contact", href: "mailto:support@getivyadmit.com" },
     ],
     Legal: [
-      { label: "Privacy", href: "#" },
-      { label: "Terms", href: "#" },
+      { label: "Privacy", href: "/privacy" },
+      { label: "Terms", href: "/terms" },
       { label: "Security", href: "#" },
     ],
   };
@@ -76,12 +76,12 @@ export function Footer() {
             © 2026 Ivy Admit AI. All rights reserved.
           </small>
           <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
-            <a href="#" className="text-[#64748B] hover:text-[#0F172A] transition-colors">
+            <Link href="/terms" className="text-[#64748B] hover:text-[#0F172A] transition-colors">
               <small>Terms of Service</small>
-            </a>
-            <a href="#" className="text-[#64748B] hover:text-[#0F172A] transition-colors">
+            </Link>
+            <Link href="/privacy" className="text-[#64748B] hover:text-[#0F172A] transition-colors">
               <small>Privacy Policy</small>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

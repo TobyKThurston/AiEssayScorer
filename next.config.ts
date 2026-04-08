@@ -1,7 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      { source: "/upload", destination: "/", permanent: true },
+      { source: "/view-essay", destination: "/ivy-league-essay-examples", permanent: true },
+      { source: "/account", destination: "/editor", permanent: true },
+    ];
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
