@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Navigation } from "@/Landing/components/Navigation";
+import { Footer } from "@/Landing/components/Footer";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -14,8 +16,9 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <main className="min-h-screen bg-[#F8FAFC] text-[#0F172A]">
-      <div className="mx-auto max-w-3xl px-6 py-16">
+    <div className="min-h-screen bg-[#F8FAFC] text-[#0F172A]">
+      <Navigation />
+      <main className="mx-auto max-w-3xl px-6 py-16">
         <h1 className="text-3xl font-bold mb-2">Terms of Service</h1>
         <p className="text-sm text-[#64748B] mb-10">Last updated: April 2025</p>
 
@@ -85,7 +88,8 @@ export default function TermsPage() {
             .
           </p>
         </section>
-      </div>
-    </main>
+      </main>
+      <Footer />
+    </div>
   );
 }
