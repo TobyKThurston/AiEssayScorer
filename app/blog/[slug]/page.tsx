@@ -21,6 +21,24 @@ const contentMap: Record<string, () => Promise<{ default: React.ComponentType }>
     import("@/blog/content/columbia-why-columbia-essay-core-curriculum"),
   "columbia-list-essay-what-are-you-reading": () =>
     import("@/blog/content/columbia-list-essay-what-are-you-reading"),
+  "harvard-intellectual-experience-essay": () =>
+    import("@/blog/content/harvard-intellectual-experience-essay"),
+  "harvard-roommate-essay-top-3-things": () =>
+    import("@/blog/content/harvard-roommate-essay-top-3-things"),
+  "harvard-how-use-education-future-essay": () =>
+    import("@/blog/content/harvard-how-use-education-future-essay"),
+  "yale-why-yale-essay-125-words": () =>
+    import("@/blog/content/yale-why-yale-essay-125-words"),
+  "yale-teach-a-course-essay": () =>
+    import("@/blog/content/yale-teach-a-course-essay"),
+  "yale-community-essay": () =>
+    import("@/blog/content/yale-community-essay"),
+  "dartmouth-why-dartmouth-100-words": () =>
+    import("@/blog/content/dartmouth-why-dartmouth-100-words"),
+  "dartmouth-let-your-life-speak-essay": () =>
+    import("@/blog/content/dartmouth-let-your-life-speak-essay"),
+  "dartmouth-dr-seuss-think-and-wonder-essay": () =>
+    import("@/blog/content/dartmouth-dr-seuss-think-and-wonder-essay"),
 };
 
 export async function generateStaticParams() {
