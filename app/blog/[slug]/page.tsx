@@ -39,6 +39,16 @@ const contentMap: Record<string, () => Promise<{ default: React.ComponentType }>
     import("@/blog/content/dartmouth-let-your-life-speak-essay"),
   "dartmouth-dr-seuss-think-and-wonder-essay": () =>
     import("@/blog/content/dartmouth-dr-seuss-think-and-wonder-essay"),
+  "princeton-why-princeton-essay": () =>
+    import("@/blog/content/princeton-why-princeton-essay"),
+  "princeton-what-brings-you-joy-essay": () =>
+    import("@/blog/content/princeton-what-brings-you-joy-essay"),
+  "upenn-why-penn-essay": () =>
+    import("@/blog/content/upenn-why-penn-essay"),
+  "upenn-wharton-essay-what-you-hope-to-gain": () =>
+    import("@/blog/content/upenn-wharton-essay-what-you-hope-to-gain"),
+  "upenn-community-essay": () =>
+    import("@/blog/content/upenn-community-essay"),
 };
 
 export async function generateStaticParams() {

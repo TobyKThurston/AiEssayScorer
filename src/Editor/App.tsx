@@ -34,21 +34,22 @@ export default function EditorApp() {
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
       {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 h-14 bg-white border-b border-slate-200 flex items-center px-6">
-        <Link href="/" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-md bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center">
+      <nav className="fixed top-0 left-0 right-0 z-50 h-14 bg-white border-b border-slate-200 flex items-center px-4 sm:px-6">
+        <Link href="/" className="flex items-center gap-2.5 min-w-0">
+          <div className="w-8 h-8 rounded-md bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center flex-shrink-0">
             <Leaf className="w-4 h-4 text-white" />
           </div>
-          <span className="text-sm font-semibold text-[#0F172A]">Ivy Admit</span>
+          <span className="text-sm font-semibold text-[#0F172A] truncate">Ivy Admit</span>
         </Link>
-        <div className="ml-auto flex items-center gap-3">
+        <div className="ml-auto flex items-center gap-2 sm:gap-3">
           {!isPro && (
             <button
               onClick={handleUpgrade}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-[#F59E0B] to-[#EF4444] text-white text-xs font-semibold hover:opacity-90 transition-opacity"
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-gradient-to-r from-[#F59E0B] to-[#EF4444] text-white text-xs font-semibold hover:opacity-90 transition-opacity"
             >
               <Zap className="w-3 h-3" />
-              Upgrade to Pro
+              <span className="hidden sm:inline">Upgrade to Pro</span>
+              <span className="sm:hidden">Pro</span>
             </button>
           )}
           <button

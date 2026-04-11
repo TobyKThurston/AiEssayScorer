@@ -152,6 +152,51 @@ export const posts: Post[] = [
     category: "Supplemental Essays",
     readTime: "9 min read",
   },
+  {
+    slug: "princeton-why-princeton-essay",
+    title: "Princeton 'Why Princeton' Essay: How to Write About Service and Civic Engagement",
+    description:
+      "Princeton's Why essay is the only Ivy League supplement that explicitly anchors the question in civic engagement. Here's what the service framing actually demands, the three-move structure that works at 250 words, and the mistakes that make most Princeton supplements read as generic.",
+    publishedAt: "2026-04-10",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "princeton-what-brings-you-joy-essay",
+    title: "Princeton 'What Brings You Joy?' Essay: How to Answer the Simplest, Hardest Prompt in the Ivy League",
+    description:
+      "Princeton's four-word joy prompt is the most deceptively simple essay in Ivy League admissions. Here's why writing about passion is the wrong move, the two-part structure that works at 250 words, and how to tell whether your essay sounds real or performed.",
+    publishedAt: "2026-04-10",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
+  {
+    slug: "upenn-why-penn-essay",
+    title: "Penn 'Why Penn' Essay: How to Answer 'How Did You Discover Your Intellectual and Academic Interests?'",
+    description:
+      "Penn's Why essay is the only Ivy League supplemental that asks about intellectual origin — where your interest came from, not just where you'd take it. Here's what admissions readers screen for, the three-part structure that fits 200 words, and why Penn's 'One University' model changes everything about this essay.",
+    publishedAt: "2026-04-10",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "upenn-wharton-essay-what-you-hope-to-gain",
+    title: "Wharton Essay: How to Answer 'What Do You Hope to Gain and What Will You Contribute?'",
+    description:
+      "Wharton's school-specific essay has a trap built into it: most applicants spend 350 words on the first half and rush the second. Here's why the contribution half matters as much as the gain half, the specific Wharton resources that separate strong essays from generic ones, and the structural reasoning that top admits use.",
+    publishedAt: "2026-04-10",
+    category: "Supplemental Essays",
+    readTime: "10 min read",
+  },
+  {
+    slug: "upenn-community-essay",
+    title: "Penn Community Essay: How to Answer 'How Will You Explore Community at Penn?'",
+    description:
+      "Penn's community prompt opens with a thesis — 'learning and living are not separate experiences' — and most applicants ignore it. Here's what the prompt is actually testing, how Penn's College Houses and ABCS courses work, and the structure that turns a list of clubs into a genuine community essay.",
+    publishedAt: "2026-04-10",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {

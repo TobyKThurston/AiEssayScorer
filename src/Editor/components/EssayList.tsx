@@ -101,7 +101,7 @@ export function EssayList() {
   }
 
   return (
-    <div className="max-w-[1080px] mx-auto px-6 py-10">
+    <div className="max-w-[1080px] mx-auto px-4 sm:px-6 py-6 sm:py-10">
       {createError && (
         <div className="mb-6 px-4 py-3 rounded-xl bg-red-50 border border-red-200 text-sm text-red-700">
           {createError}
@@ -127,18 +127,18 @@ export function EssayList() {
 function EmptyState({ onNew, creating }: { onNew: () => void; creating: boolean }) {
   return (
     <div className="max-w-[620px] mx-auto">
-      <div className="text-center mb-10">
+      <div className="text-center mb-8 sm:mb-10">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[#3B82F6] text-xs font-medium mb-5">
           <Sparkles className="w-3 h-3" />
           AI-powered essay review
         </div>
         <h1
-          className="text-[2rem] font-bold text-[#0F172A] mb-3 leading-tight tracking-tight"
+          className="text-[1.625rem] sm:text-[2rem] font-bold text-[#0F172A] mb-3 leading-tight tracking-tight"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           Write, review, and strengthen your college essays
         </h1>
-        <p className="text-[#64748B] text-[15px] mb-7 leading-relaxed">
+        <p className="text-[#64748B] text-sm sm:text-[15px] mb-6 sm:mb-7 leading-relaxed">
           Instant scores on clarity, structure, and admissions impact.
           Trusted by applicants targeting top schools.
         </p>
@@ -156,7 +156,7 @@ function EmptyState({ onNew, creating }: { onNew: () => void; creating: boolean 
       </div>
 
       {/* Feature row */}
-      <div className="grid grid-cols-2 gap-3 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
         {[
           { icon: Zap, label: "Line-by-line AI suggestions", color: "text-[#3B82F6]", bg: "bg-[#EFF6FF]" },
           { icon: Target, label: "Clarity and structure scores", color: "text-[#10B981]", bg: "bg-[#ECFDF5]" },
@@ -176,11 +176,11 @@ function EmptyState({ onNew, creating }: { onNew: () => void; creating: boolean 
       </div>
 
       {/* How it works */}
-      <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-[0_1px_10px_rgba(148,163,184,0.07)]">
+      <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-[0_1px_10px_rgba(148,163,184,0.07)]">
         <p className="text-[10px] font-semibold text-[#94A3B8] uppercase tracking-wider mb-5">
           How it works
         </p>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {HOW_IT_WORKS.map(({ step, title, desc }) => (
             <div key={step}>
               <div className="w-6 h-6 rounded-full bg-[#EFF6FF] flex items-center justify-center text-[10px] font-bold text-[#3B82F6] mb-3">
@@ -210,12 +210,12 @@ function FilledLayout({
   onOpen: (id: string) => void;
 }) {
   return (
-    <div className="flex gap-8 items-start">
+    <div className="flex flex-col lg:flex-row lg:gap-8 lg:items-start">
       {/* Left */}
       <div className="flex-1 min-w-0">
         {/* Header */}
-        <div className="flex items-start justify-between mb-6">
-          <div>
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+          <div className="min-w-0">
             <h1
               className="text-xl font-bold text-[#0F172A] tracking-tight"
               style={{ fontFamily: "var(--font-heading)" }}
@@ -229,7 +229,7 @@ function FilledLayout({
           <button
             onClick={onNew}
             disabled={creating}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#3B82F6] to-[#0EA5E9] text-white text-sm font-semibold shadow-[0_2px_10px_rgba(59,130,246,0.28)] hover:shadow-[0_4px_18px_rgba(59,130,246,0.4)] hover:-translate-y-px transition-all duration-200 disabled:opacity-70"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 rounded-xl bg-gradient-to-r from-[#3B82F6] to-[#0EA5E9] text-white text-sm font-semibold shadow-[0_2px_10px_rgba(59,130,246,0.28)] hover:shadow-[0_4px_18px_rgba(59,130,246,0.4)] hover:-translate-y-px transition-all duration-200 disabled:opacity-70 flex-shrink-0"
           >
             <Plus className="w-4 h-4" />
             {creating ? "Creating…" : "Start Writing"}
@@ -253,8 +253,10 @@ function FilledLayout({
       </div>
 
       {/* Right sidebar */}
-      <div className="w-[256px] flex-shrink-0 space-y-4">
-        <ReviewEssayCard essays={essays} onOpen={onOpen} />
+      <div className="w-full lg:w-[256px] lg:flex-shrink-0 mt-8 lg:mt-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+        <div className="sm:col-span-2 lg:col-span-1">
+          <ReviewEssayCard essays={essays} onOpen={onOpen} />
+        </div>
         <WhatYouGetCard />
         <HowItWorksCard />
       </div>
@@ -278,9 +280,9 @@ function EssayCard({
   return (
     <button
       onClick={() => onOpen(essay.id)}
-      className="w-full text-left px-5 py-4 rounded-2xl bg-white border border-slate-200 shadow-[0_1px_6px_rgba(148,163,184,0.06)] hover:shadow-[0_4px_20px_rgba(148,163,184,0.12)] hover:border-[#3B82F6]/25 transition-all duration-200 group"
+      className="w-full text-left px-4 sm:px-5 py-4 rounded-2xl bg-white border border-slate-200 shadow-[0_1px_6px_rgba(148,163,184,0.06)] hover:shadow-[0_4px_20px_rgba(148,163,184,0.12)] hover:border-[#3B82F6]/25 transition-all duration-200 group"
     >
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-3 sm:gap-4">
         {/* Icon */}
         <div className={`w-10 h-10 rounded-xl ${bg} flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200`}>
           <FileText className={`w-4 h-4 ${icon}`} />
@@ -288,20 +290,20 @@ function EssayCard({
 
         {/* Content */}
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-1.5">
-            <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#3B82F6] transition-colors truncate">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1.5">
+            <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#3B82F6] transition-colors truncate max-w-full">
               {essay.title}
             </p>
             <span className="flex-shrink-0 text-[10px] font-medium px-2 py-0.5 rounded-full bg-amber-50 text-amber-600 border border-amber-100">
               Not reviewed
             </span>
           </div>
-          <div className="flex items-center gap-3 text-xs text-[#94A3B8]">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-[#94A3B8]">
             <span className="flex items-center gap-1">
               <Clock className="w-3 h-3" />
               {formatDate(essay.updated_at)}
             </span>
-            <span className="text-[#CBD5E1]">·</span>
+            <span className="text-[#CBD5E1] hidden sm:inline">·</span>
             <span className="flex items-center gap-1">
               <BarChart2 className="w-3 h-3" />
               No analysis yet
@@ -329,10 +331,10 @@ function GetFeedbackNudge({
   const latest = essays[0];
 
   return (
-    <div className="mt-4 px-5 py-4 rounded-2xl border border-dashed border-slate-300 bg-slate-50 flex items-center justify-between gap-4">
+    <div className="mt-4 px-4 sm:px-5 py-4 rounded-2xl border border-dashed border-slate-300 bg-slate-50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
       <div className="flex items-start gap-3 min-w-0">
         <AlertCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
-        <div>
+        <div className="min-w-0">
           <p className="text-sm font-medium text-[#334155]">
             {essays.length === 1
               ? "Your essay hasn't been reviewed yet"
@@ -345,7 +347,7 @@ function GetFeedbackNudge({
       </div>
       <button
         onClick={() => onOpen(latest.id)}
-        className="flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-[#475569] hover:border-[#3B82F6]/40 hover:text-[#3B82F6] transition-all duration-200"
+        className="self-start sm:self-auto flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-[#475569] hover:border-[#3B82F6]/40 hover:text-[#3B82F6] transition-all duration-200"
       >
         Get Feedback
         <ArrowRight className="w-3 h-3" />

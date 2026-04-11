@@ -120,7 +120,7 @@ export function EssayTextPanel({
       )}
 
       {/* Document area, fills remaining space, no outer scroll */}
-      <div className="flex-1 min-h-0 flex flex-col px-6 py-6">
+      <div className="flex-1 min-h-0 flex flex-col px-3 sm:px-6 py-4 sm:py-6">
         <div className="flex-1 min-h-0 flex flex-col max-w-[700px] w-full mx-auto">
 
           {/* Paper card */}
@@ -128,7 +128,7 @@ export function EssayTextPanel({
 
             {/* Prompt banner (if set) */}
             {essayPrompt && (
-              <div className="px-8 py-4 bg-[#EFF6FF] border-b border-[#BFDBFE] flex-shrink-0">
+              <div className="px-5 sm:px-8 py-3 sm:py-4 bg-[#EFF6FF] border-b border-[#BFDBFE] flex-shrink-0">
                 <p className="text-[10px] font-bold text-[#3B82F6] uppercase tracking-widest mb-1">
                   Prompt
                 </p>
@@ -138,7 +138,7 @@ export function EssayTextPanel({
 
             {/* Essay type badge row */}
             {(essayType || targetSchools.length > 0) && (
-              <div className="flex items-center gap-2 px-8 py-2.5 border-b border-slate-100 flex-shrink-0 flex-wrap">
+              <div className="flex items-center gap-2 px-5 sm:px-8 py-2.5 border-b border-slate-100 flex-shrink-0 flex-wrap">
                 {essayType && (
                   <span className="px-2.5 py-0.5 rounded-full bg-slate-100 text-[#475569] text-xs font-medium">
                     {essayType}
@@ -162,14 +162,14 @@ export function EssayTextPanel({
             <div className="flex-1 min-h-0 flex flex-col">
               {mode === "edit" ? (
                 <textarea
-                  className="flex-1 min-h-0 w-full px-8 py-7 text-[15px] text-[#0F172A] bg-transparent outline-none resize-none leading-[1.85] placeholder:text-[#CBD5E1] font-[Georgia,serif]"
+                  className="flex-1 min-h-0 w-full px-5 sm:px-8 py-5 sm:py-7 text-[15px] text-[#0F172A] bg-transparent outline-none resize-none leading-[1.85] placeholder:text-[#CBD5E1] font-[Georgia,serif]"
                   placeholder={"Begin your essay here...\n\nTip: the best essays open with a specific moment or image, not a broad statement."}
                   value={content}
                   onChange={(e) => onContentChange(e.target.value)}
                   spellCheck
                 />
               ) : (
-                <div className="flex-1 min-h-0 overflow-y-auto px-8 py-7 font-[Georgia,serif] text-[15px] leading-[1.85]">
+                <div className="flex-1 min-h-0 overflow-y-auto px-5 sm:px-8 py-5 sm:py-7 font-[Georgia,serif] text-[15px] leading-[1.85]">
                   <HighlightedPreview
                     content={content}
                     lineSuggestions={rating?.lineSuggestions}
@@ -183,7 +183,7 @@ export function EssayTextPanel({
             </div>
 
             {/* Word count footer */}
-            <div className="px-8 py-3 border-t border-slate-100 flex items-center justify-between bg-slate-50/60 flex-shrink-0">
+            <div className="px-5 sm:px-8 py-3 border-t border-slate-100 flex items-center justify-between bg-slate-50/60 flex-shrink-0">
               <span className={`text-xs font-medium ${wcColor}`}>
                 {wordCount} word{wordCount !== 1 ? "s" : ""}
                 {wcStatus === "over" && (
