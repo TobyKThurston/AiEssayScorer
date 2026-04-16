@@ -197,6 +197,60 @@ export const posts: Post[] = [
     category: "Supplemental Essays",
     readTime: "9 min read",
   },
+  {
+    slug: "brown-why-brown-open-curriculum-essay",
+    title: "Brown 'Why Brown' Essay: How to Write About the Open Curriculum Without Sounding Generic",
+    description:
+      "Every applicant mentions the Open Curriculum. Almost no one explains what they'd actually do with it. Here's how to write a Brown Why essay that shows intellectual self-direction instead of excitement about freedom.",
+    publishedAt: "2026-04-12",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
+  {
+    slug: "cornell-why-cornell-essay",
+    title: "Cornell 'Why Cornell' Essay: How to Write for Your Specific College",
+    description:
+      "Cornell's Why essay is read by your specific college — Arts & Sciences, Engineering, ILR, Hotel, or one of three others. Writing about 'Cornell' generically instead of your college is the #1 mistake. Here's what each college's readers look for and the structure that works at 650 words.",
+    publishedAt: "2026-04-12",
+    category: "Supplemental Essays",
+    readTime: "10 min read",
+  },
+  {
+    slug: "stanford-what-matters-to-you-essay",
+    title: "Stanford 'What Matters to You and Why?' Essay: The Most Personal Prompt in Elite Admissions",
+    description:
+      "Stanford's signature essay has been used since the 1990s. The trap: writing about what you think Stanford wants to hear instead of what actually matters to you. Here's why the strongest essays are often about surprisingly ordinary things written with genuine depth.",
+    publishedAt: "2026-04-13",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
+  {
+    slug: "mit-something-you-do-for-pleasure-essay",
+    title: "MIT 'Tell Us About Something You Do Simply for the Pleasure of It' Essay Guide",
+    description:
+      "MIT's pleasure prompt trips up STEM applicants who try to make everything sound intellectually rigorous. MIT already knows you're smart — they want to know you're interesting. Here's how to write 200 words that show who you are when no one is evaluating you.",
+    publishedAt: "2026-04-13",
+    category: "Supplemental Essays",
+    readTime: "7 min read",
+  },
+  {
+    slug: "duke-why-duke-essay",
+    title: "Duke 'Why Duke' Essay: How to Write About Interdisciplinary Learning at 250 Words",
+    description:
+      "Duke markets Bass Connections and interdisciplinary certificates on its website, and most applicants list them right back. Here's what Duke admissions actually screens for, how to use the Trinity/Pratt split, and the three-move structure that works at 250 words.",
+    publishedAt: "2026-04-14",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
+  {
+    slug: "northwestern-why-northwestern-essay",
+    title: "Northwestern 'Why Northwestern' Essay: Writing About Flexibility Without Being Vague",
+    description:
+      "Northwestern lets undergrads take courses across any of its schools — Weinberg, McCormick, Medill, Bienen — without transferring. The essay should show what you'd do with that specific access, not just celebrate it. Here's the structure that works at 300 words.",
+    publishedAt: "2026-04-14",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {

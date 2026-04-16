@@ -5,8 +5,8 @@ import type { Metadata } from "next";
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 
 export const metadata: Metadata = {
-  title: "Free AI College Essay Review, Scores & Line Edits",
-  description: "AI feedback on your college essay in under 60 seconds. Content, structure, and voice scores with line-by-line edits trained on Ivy League applications. Free to start, 20,000+ students helped.",
+  title: "Free AI College Essay Review in 60 Seconds – Ivy Admit",
+  description: "★ 4.8/5 from 20,000+ students. Get instant scores, line-by-line edits, and admissions feedback on your college essay. Trained on real Ivy League acceptances. Free to start.",
   keywords: [
     "college essay review",
     "ai essay review",
@@ -110,10 +110,20 @@ const faqSchema = {
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${baseUrl}/#organization`,
   name: "Ivy Admit",
   url: baseUrl,
-  logo: `${baseUrl}/logo.png`,
+  logo: {
+    "@type": "ImageObject",
+    url: `${baseUrl}/icon-512.png`,
+    width: 512,
+    height: 512,
+  },
+  image: `${baseUrl}/icon-512.png`,
   description: "AI-powered college essay review and strategy tool for selective college admissions",
+  sameAs: [
+    "https://twitter.com/ivyadmit",
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Customer Service",

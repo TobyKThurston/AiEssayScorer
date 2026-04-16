@@ -20,10 +20,10 @@ const interTight = Inter_Tight({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com"),
   title: {
-    default: "Ivy Admit - AI-Powered College Essay Review & Strategy Tool",
+    default: "Ivy Admit – Free AI College Essay Review in 60 Seconds",
     template: "%s | Ivy Admit"
   },
-  description: "Get expert essay feedback from AI trained on successful Ivy League applications. Score your structure, evidence, and tone. Get line-by-line edits and strategic advice to improve your college admissions essays.",
+  description: "Free AI college essay review trained on real Ivy League acceptances. Get scores, line-by-line edits, and admissions feedback in under 60 seconds. 20,000+ students helped.",
   keywords: [
     "college essay review",
     "college application essay",
@@ -93,11 +93,53 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   category: "Education",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-96.png", sizes: "96x96", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+  },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com"}/#organization`,
+  name: "Ivy Admit",
+  alternateName: "Ivy Admit – AI College Essay Review",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com",
+  logo: {
+    "@type": "ImageObject",
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com"}/icon-512.png`,
+    width: 512,
+    height: 512,
+  },
+  image: `${process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com"}/icon-512.png`,
+  description:
+    "AI-powered college essay review and strategy tool trained on successful Ivy League applications.",
+  sameAs: [
+    "https://twitter.com/ivyadmit",
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${interTight.variable}`}>
+      <head>
+        <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body>
         <AuthProvider>{children}</AuthProvider>
         <Analytics />
