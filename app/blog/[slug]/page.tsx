@@ -61,6 +61,28 @@ const contentMap: Record<string, () => Promise<{ default: React.ComponentType }>
     import("@/blog/content/duke-why-duke-essay"),
   "northwestern-why-northwestern-essay": () =>
     import("@/blog/content/northwestern-why-northwestern-essay"),
+  "stanford-intellectual-vitality-essay": () =>
+    import("@/blog/content/stanford-intellectual-vitality-essay"),
+  "stanford-roommate-letter-essay": () =>
+    import("@/blog/content/stanford-roommate-letter-essay"),
+  "uchicago-why-uchicago-essay": () =>
+    import("@/blog/content/uchicago-why-uchicago-essay"),
+  "uchicago-uncommon-essay-prompts": () =>
+    import("@/blog/content/uchicago-uncommon-essay-prompts"),
+  "johns-hopkins-collaboration-essay": () =>
+    import("@/blog/content/johns-hopkins-collaboration-essay"),
+  "georgetown-essay-prompts-guide": () =>
+    import("@/blog/content/georgetown-essay-prompts-guide"),
+  "rice-why-rice-residential-college-essay": () =>
+    import("@/blog/content/rice-why-rice-residential-college-essay"),
+  "how-to-start-a-college-essay": () =>
+    import("@/blog/content/how-to-start-a-college-essay"),
+  "college-essay-hooks-opening-lines": () =>
+    import("@/blog/content/college-essay-hooks-opening-lines"),
+  "college-essay-topics-to-avoid": () =>
+    import("@/blog/content/college-essay-topics-to-avoid"),
+  "common-app-additional-information-guide": () =>
+    import("@/blog/content/common-app-additional-information-guide"),
 };
 
 export async function generateStaticParams() {

@@ -251,6 +251,105 @@ export const posts: Post[] = [
     category: "Supplemental Essays",
     readTime: "9 min read",
   },
+  {
+    slug: "stanford-intellectual-vitality-essay",
+    title: "Stanford Intellectual Vitality Essay: How to Answer 'Reflect on an Idea or Experience That Makes You Excited About Learning'",
+    description:
+      "Stanford uses the phrase 'intellectual vitality' deliberately — it describes a cognitive habit, not an achievement. Here's what admissions readers actually screen for, the one-idea rule, and the three-move structure that fits 250 words without feeling cramped.",
+    publishedAt: "2026-04-15",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "stanford-roommate-letter-essay",
+    title: "Stanford Roommate Letter Essay: How to Write the Most Famous Supplement in College Admissions",
+    description:
+      "The Stanford roommate note is the only college essay written to a non-admissions audience — and almost every applicant gets the register wrong. Here's why the voice change matters, the texture that separates real notes from resume paragraphs, and the details that always work.",
+    publishedAt: "2026-04-15",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "uchicago-why-uchicago-essay",
+    title: "UChicago 'Why UChicago' Essay: How to Show You Want the Life of the Mind",
+    description:
+      "UChicago's Why essay is the longest in the top tier at 400–500 words, and it has to engage with the Core Curriculum without parroting marketing copy. Here's how to read the Core correctly, the four-part structure that works at length, and the specificity test that reveals weak drafts.",
+    publishedAt: "2026-04-15",
+    category: "Supplemental Essays",
+    readTime: "10 min read",
+  },
+  {
+    slug: "uchicago-uncommon-essay-prompts",
+    title: "UChicago Uncommon Essay: How to Choose and Tackle the Strangest Prompts in College Admissions",
+    description:
+      "UChicago's Uncommon essay is the most misunderstood prompt in elite admissions. It's not a creativity test — it's a thinking test wearing a joke's clothing. Here's how to read the prompts, why the standard applicant moves fail, and the structures that let lateral thinking actually land.",
+    publishedAt: "2026-04-16",
+    category: "Supplemental Essays",
+    readTime: "10 min read",
+  },
+  {
+    slug: "johns-hopkins-collaboration-essay",
+    title: "Johns Hopkins Essay: How to Answer 'Tell Us About an Aspect of Your Identity, Background, or Story'",
+    description:
+      "Johns Hopkins redesigned its signature essay around three nouns — identity, background, story — and most applicants treat them as interchangeable. Here's what each one actually asks for, why Hopkins reads for community contribution rather than personal narrative, and the structure that works at 350 words.",
+    publishedAt: "2026-04-16",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "georgetown-essay-prompts-guide",
+    title: "Georgetown 'Why Georgetown' Essay: How to Write for a School That Values Tradition Over Flash",
+    description:
+      "Georgetown's application is the only elite application that isn't on the Common App — and its Why essay reflects a different set of values. Jesuit tradition, the cura personalis framework, and school-specific context (SFS, McDonough, NHS, College) all matter. Here's what to do and what to avoid.",
+    publishedAt: "2026-04-16",
+    category: "Supplemental Essays",
+    readTime: "10 min read",
+  },
+  {
+    slug: "rice-why-rice-residential-college-essay",
+    title: "Rice 'Why Rice' and Residential College Essay: The Two Essays That Decide Rice Applications",
+    description:
+      "Rice's supplement has two 500-word essays that carry more weight than at most peer schools. The Why Rice essay is about academic fit; the residential college essay is about community — and applicants who mix them weaken both. Here's what Rice admissions screens for in each.",
+    publishedAt: "2026-04-16",
+    category: "Supplemental Essays",
+    readTime: "10 min read",
+  },
+  {
+    slug: "how-to-start-a-college-essay",
+    title: "How to Start a College Essay: A Complete Guide to Opening Lines and First Paragraphs",
+    description:
+      "Your opening line does more work than any other sentence in your essay. Here are the five types of openings that consistently work, the ten that almost never do, and the 'start at paragraph two' trick that fixes roughly 40% of struggling drafts.",
+    publishedAt: "2026-04-16",
+    category: "Writing Guides",
+    readTime: "10 min read",
+  },
+  {
+    slug: "college-essay-hooks-opening-lines",
+    title: "College Essay Hooks: 20 Opening Lines That Actually Work (With Analysis)",
+    description:
+      "A real hook is the sentence that earns the second sentence — not a gimmick, not the most dramatic moment moved to the front. Here are 20 opening lines that work, with analysis of why each one makes the reader unable to stop reading.",
+    publishedAt: "2026-04-16",
+    category: "Writing Guides",
+    readTime: "10 min read",
+  },
+  {
+    slug: "college-essay-topics-to-avoid",
+    title: "College Essay Topics to Avoid: 12 Topics That Usually Hurt Your Application (And When They Actually Work)",
+    description:
+      "Any topic can work if the essay is genuinely good. But 12 topics have been so overused that 80% of their potential is already in the admissions reader's head before they start reading. Here's why each one usually backfires — and the narrow conditions where they still land.",
+    publishedAt: "2026-04-16",
+    category: "Writing Guides",
+    readTime: "10 min read",
+  },
+  {
+    slug: "common-app-additional-information-guide",
+    title: "The Common App 'Additional Information' Section: When to Use It, What to Write, What to Cut",
+    description:
+      "The 650-word 'Additional Information' field trips up most applicants. Fill it with another essay and you hurt your application. Leave it blank when context is missing and you hurt your application. Here's the one rule that governs it, when to use it, and what a strong entry actually looks like.",
+    publishedAt: "2026-04-16",
+    category: "Common App",
+    readTime: "9 min read",
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
