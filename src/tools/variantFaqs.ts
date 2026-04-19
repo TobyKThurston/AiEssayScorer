@@ -344,6 +344,62 @@ export function faqsForBaseTool(toolSlug: string): FAQ[] {
         answer: "Almost never. 'The Kitchen: A Meditation on Family' reads as an academic paper. Strong essay titles are one line, not two. The generator avoids this pattern.",
       },
     ],
+    "admissions-officer-simulator": [
+      {
+        question: "How accurate is the admissions officer simulator?",
+        answer: "The simulator mirrors the patterns real AOs describe (first impression, margin reactions, committee vote). It's not a real AO, but it surfaces the kind of reactions a human reader would have in ways grammar tools can't.",
+      },
+      {
+        question: "Why specify the school?",
+        answer: "Different AOs read through different lenses. Stanford's AO reads for intellectual play; Duke's reads for community fit; UChicago's reads for strangeness. Specifying tunes the simulation to that lens.",
+      },
+      {
+        question: "Will this tell me if I'll get in?",
+        answer: "No. Admissions decisions depend on the full application, institutional priorities, and a committee. This tool only evaluates how the essay itself reads, which is one of many signals.",
+      },
+    ],
+    "supplemental-essay-planner": [
+      {
+        question: "What does the planner actually produce?",
+        answer: "An essay-by-essay map across your college list: how many personal statements, long supps, short supps, which essays overlap thematically across schools, and the order to draft in.",
+      },
+      {
+        question: "How accurate are the prompts it lists?",
+        answer: "Good but not guaranteed. Colleges change prompts annually. The planner flags when it's uncertain. Always verify on each school's current application.",
+      },
+      {
+        question: "How much time can good planning save?",
+        answer: "A lot. Applicants who identify overlap can reuse one draft (with edits) for 3 to 5 schools. Applicants who write every prompt from scratch lose weeks to duplicated work.",
+      },
+    ],
+    "short-supplement-distiller": [
+      {
+        question: "Why distill to 3 different lengths?",
+        answer: "Because supplementals vary widely: 150 words (Common App short), 100 words (Stanford short takes), 50 words (Yale short answers). Having 3 lengths from your same essay lets you adapt to any short prompt fast.",
+      },
+      {
+        question: "Will the 50-word version still feel like my essay?",
+        answer: "Usually. The tool preserves your voice and your strongest concrete detail. At 50 words, the essay becomes essentially one image plus one insight, which is the right compression for that length.",
+      },
+      {
+        question: "Can I reuse the distilled versions across multiple schools?",
+        answer: "Yes, if the prompts are similar. Short supplementals often ask essentially the same question in different words (What excites you? What are you passionate about?). One distilled version can anchor multiple schools' short answers.",
+      },
+    ],
+    "essay-first-sentence-generator": [
+      {
+        question: "Why focus on just the first sentence?",
+        answer: "Admissions readers make a read/skim decision by sentence 3. The first sentence is the single highest-leverage line in any essay. Getting it right unlocks the rest.",
+      },
+      {
+        question: "Should I use these first sentences verbatim?",
+        answer: "You can, but these are seeds. The strongest drafts use one as a starting point and revise from there. A borrowed sentence can unlock your voice for the rest of the essay.",
+      },
+      {
+        question: "How long should a college essay first sentence be?",
+        answer: "Usually under 20 words. Shorter often lands harder. Every option this tool produces is capped at 25 words for that reason.",
+      },
+    ],
     "college-matchmaker-from-essay": [
       {
         question: "Can an AI actually match me to colleges from my essay?",

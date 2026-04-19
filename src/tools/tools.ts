@@ -113,6 +113,74 @@ export const tools: Tool[] = [
     ],
   },
   {
+    slug: "admissions-officer-simulator",
+    title: "Admissions Officer Simulator",
+    shortTitle: "AO Simulator",
+    description:
+      "Paste your essay and get reactions written as a real admissions officer would write them: first impression, gut reactions line-by-line, and the final verdict.",
+    seoDescription:
+      "Free AI admissions officer simulator. Reads your college essay and returns an AO's real reaction: first impression, margin notes, and final verdict.",
+    category: "Analysis",
+    outputStyle: "structured",
+    keywords: [
+      "admissions officer simulator",
+      "ao reaction essay",
+      "how does admissions read my essay",
+      "admissions committee simulator",
+    ],
+  },
+  {
+    slug: "supplemental-essay-planner",
+    title: "Supplemental Essay Planner",
+    shortTitle: "Supplemental Planner",
+    description:
+      "Paste your college list and get a planning map: which essays you need for each school, what can be adapted from one draft to another, and overlap analysis.",
+    seoDescription:
+      "Free AI supplemental essay planner. Input your college list, get a planning map with essays needed per school and overlap recommendations.",
+    category: "Planning",
+    outputStyle: "structured",
+    keywords: [
+      "supplemental essay planner",
+      "college essay planning",
+      "how to plan college essays",
+      "supplemental essay overlap",
+    ],
+  },
+  {
+    slug: "short-supplement-distiller",
+    title: "Short Supplement Distiller",
+    shortTitle: "Short Supp Distiller",
+    description:
+      "Paste a longer essay and get 50-, 100-, and 150-word versions. Useful when you need to reshape an essay for multiple supplemental word limits.",
+    seoDescription:
+      "Free AI short supplement distiller. Paste a longer draft, get 50-, 100-, and 150-word versions that preserve voice and the core moment.",
+    category: "Editing",
+    outputStyle: "streaming",
+    keywords: [
+      "short essay generator",
+      "college essay word limit shortener",
+      "50 word supplemental essay",
+      "100 word essay example",
+    ],
+  },
+  {
+    slug: "essay-first-sentence-generator",
+    title: "College Essay First Sentence Generator",
+    shortTitle: "First Sentence Generator",
+    description:
+      "The single hardest line in any college essay is the first. Paste your topic and get 7 opening-line options in different registers. Each a possible spark, not the whole draft.",
+    seoDescription:
+      "Free AI first sentence generator for college essays. Get 7 opening line options in different styles, all grounded in your actual topic.",
+    category: "Brainstorming",
+    outputStyle: "streaming",
+    keywords: [
+      "college essay first sentence",
+      "essay opening line generator",
+      "how to start my college essay",
+      "first line college essay",
+    ],
+  },
+  {
     slug: "essay-polish-pass",
     title: "Essay Polish Pass",
     shortTitle: "Polish Pass",

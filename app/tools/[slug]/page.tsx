@@ -26,6 +26,10 @@ import PolishPass from "@/tools/components/PolishPass";
 import TitleGenerator from "@/tools/components/TitleGenerator";
 import CollegeMatchmaker from "@/tools/components/CollegeMatchmaker";
 import WordRepetitionFinder from "@/tools/components/WordRepetitionFinder";
+import AOSimulator from "@/tools/components/AOSimulator";
+import SupplementalPlanner from "@/tools/components/SupplementalPlanner";
+import ShortSuppDistiller from "@/tools/components/ShortSuppDistiller";
+import FirstSentenceGenerator from "@/tools/components/FirstSentenceGenerator";
 import { RelatedTools } from "@/tools/components/RelatedTools";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { WhySchoolPage } from "@/tools/components/WhySchoolPage";
@@ -295,6 +299,10 @@ const toolComponents: Record<string, React.ComponentType> = {
   "essay-word-repetition-finder": WordRepetitionFinder,
   "college-essay-title-generator": TitleGenerator,
   "college-matchmaker-from-essay": CollegeMatchmaker,
+  "admissions-officer-simulator": AOSimulator,
+  "supplemental-essay-planner": SupplementalPlanner,
+  "short-supplement-distiller": ShortSuppDistiller,
+  "essay-first-sentence-generator": FirstSentenceGenerator,
 };
 
 export default async function ToolPage({
