@@ -5,6 +5,7 @@ import WhyCollegeBrainstormer from "@/tools/components/WhyCollegeBrainstormer";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { RelatedSchoolTools } from "@/tools/components/RelatedSchoolTools";
 import { SchoolRichSections } from "@/tools/components/SchoolRichContent";
+import { SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
 
 export function WhySchoolPage({ school }: { school: School }) {
   const wordLimit = school.whyUsWordLimit
@@ -75,7 +76,13 @@ export function WhySchoolPage({ school }: { school: School }) {
         </Link>
       </div>
 
-      <SchoolRichSections school={school} />
+      <SchoolRichSections school={school} variant="why" />
+
+      <SoftwareApplicationSchema
+        name={`Why ${school.shortName} Essay Brainstormer`}
+        description={`Free AI brainstormer for the Why ${school.shortName} supplemental essay.`}
+        path={`/tools/why-${school.slug}-essay`}
+      />
 
       <RelatedSchoolTools currentSlug={school.slug} variant="why" />
     </div>

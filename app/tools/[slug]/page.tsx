@@ -15,6 +15,9 @@ import ShowDontTell from "@/tools/components/ShowDontTell";
 import ClicheDetector from "@/tools/components/ClicheDetector";
 import WhyCollegeBrainstormer from "@/tools/components/WhyCollegeBrainstormer";
 import EssayTopicGenerator from "@/tools/components/EssayTopicGenerator";
+import WordCounter from "@/tools/components/WordCounter";
+import ReadabilityChecker from "@/tools/components/ReadabilityChecker";
+import ActivityListReviewer from "@/tools/components/ActivityListReviewer";
 import { RelatedTools } from "@/tools/components/RelatedTools";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { WhySchoolPage } from "@/tools/components/WhySchoolPage";
@@ -24,6 +27,8 @@ import { EssayTypeScorerPage } from "@/tools/components/EssayTypeScorerPage";
 import { RewriterPage } from "@/tools/components/RewriterPage";
 import { TopicPersonaPage } from "@/tools/components/TopicPersonaPage";
 import { DeconstructPromptPage } from "@/tools/components/DeconstructPromptPage";
+import { FAQSection, SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
+import { faqsForBaseTool } from "@/tools/variantFaqs";
 
 type VariantMatch =
   | { kind: "base"; toolSlug: string }
@@ -104,7 +109,6 @@ export async function generateMetadata({
         `${school.shortName} essay brainstormer`,
       ],
       alternates: { canonical: `/tools/why-${school.slug}-essay` },
-      robots: school.rich ? undefined : { index: false, follow: true },
       openGraph: {
         title,
         description,
@@ -232,7 +236,6 @@ export async function generateMetadata({
         `score my ${school.shortName} essay`,
       ],
       alternates: { canonical: `/tools/score-${school.slug}-essay` },
-      robots: school.rich ? undefined : { index: false, follow: true },
       openGraph: {
         title,
         description,
@@ -273,6 +276,9 @@ const toolComponents: Record<string, React.ComponentType> = {
   "cliche-detector": ClicheDetector,
   "why-college-brainstormer": WhyCollegeBrainstormer,
   "essay-topic-generator": EssayTopicGenerator,
+  "college-essay-word-counter": WordCounter,
+  "essay-readability-checker": ReadabilityChecker,
+  "activity-list-reviewer": ActivityListReviewer,
 };
 
 export default async function ToolPage({
@@ -372,6 +378,14 @@ export default async function ToolPage({
           Score your essay
         </Link>
       </div>
+
+      <FAQSection faqs={faqsForBaseTool(tool.slug)} heading={`${tool.shortTitle} FAQ`} />
+
+      <SoftwareApplicationSchema
+        name={tool.title}
+        description={tool.seoDescription}
+        path={`/tools/${tool.slug}`}
+      />
 
       <RelatedTools currentSlug={tool.slug} />
     </div>

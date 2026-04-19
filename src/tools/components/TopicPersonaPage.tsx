@@ -4,6 +4,8 @@ import type { TopicPersona } from "@/tools/topicPersonas";
 import EssayTopicGenerator from "@/tools/components/EssayTopicGenerator";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { RelatedTopicPersonas } from "@/tools/components/RelatedTopicPersonas";
+import { FAQSection, SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
+import { faqsForTopicPersona } from "@/tools/variantFaqs";
 
 export function TopicPersonaPage({ persona }: { persona: TopicPersona }) {
   return (
@@ -45,6 +47,17 @@ export function TopicPersonaPage({ persona }: { persona: TopicPersona }) {
           Most AI topic generators produce the same 5 ideas for everyone who types in their background. That&apos;s the opposite of what admissions reads for. This version is tuned with {persona.shortName.toLowerCase()}-specific guardrails: it actively steers away from cliches common to this group and pushes toward the kinds of small, honest specifics that actually make essays memorable.
         </p>
       </section>
+
+      <FAQSection
+        faqs={faqsForTopicPersona(persona)}
+        heading={`Topics for ${persona.shortName.toLowerCase()} FAQ`}
+      />
+
+      <SoftwareApplicationSchema
+        name={persona.displayName}
+        description={persona.seoDescription}
+        path={`/tools/topics-for-${persona.slug}`}
+      />
 
       <RelatedTopicPersonas currentSlug={persona.slug} />
     </div>

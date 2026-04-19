@@ -113,6 +113,58 @@ export const tools: Tool[] = [
     ],
   },
   {
+    slug: "college-essay-word-counter",
+    title: "College Essay Word & Character Counter",
+    shortTitle: "Word Counter",
+    description:
+      "Instant word, character, sentence, and paragraph count with Common App, UC PIQ, and supplemental limits built in. No signup, no AI, no limits.",
+    seoDescription:
+      "Free college essay word counter and character counter. Tracks Common App (650), UC PIQs (350), and supplemental limits in real time.",
+    category: "Analysis",
+    outputStyle: "structured",
+    keywords: [
+      "college essay word counter",
+      "common app word counter",
+      "essay character counter",
+      "common app 650 word counter",
+      "uc piq word counter",
+    ],
+  },
+  {
+    slug: "essay-readability-checker",
+    title: "College Essay Readability Checker",
+    shortTitle: "Readability Checker",
+    description:
+      "Instantly check your essay's reading ease, grade level, average sentence length, and passive-voice ratio. Free, no signup.",
+    seoDescription:
+      "Free college essay readability checker. Flesch reading ease, grade level, sentence length, and complexity analysis in one click.",
+    category: "Analysis",
+    outputStyle: "structured",
+    keywords: [
+      "college essay readability",
+      "flesch reading ease essay",
+      "essay grade level checker",
+      "sentence length analyzer",
+    ],
+  },
+  {
+    slug: "activity-list-reviewer",
+    title: "Common App Activity List Reviewer",
+    shortTitle: "Activity List Reviewer",
+    description:
+      "Paste all 10 Common App activities and get combined feedback: overlap, missing signals, weakest entries, and what admissions will read between the lines.",
+    seoDescription:
+      "Free Common App activity list reviewer. Analyzes all 10 activities together to surface overlap, gaps, and the story your resume actually tells.",
+    category: "Analysis",
+    outputStyle: "structured",
+    keywords: [
+      "common app activity list review",
+      "common app activities section feedback",
+      "activity list college application",
+      "common app resume review",
+    ],
+  },
+  {
     slug: "essay-topic-generator",
     title: "College Essay Topic Generator",
     shortTitle: "Topic Generator",

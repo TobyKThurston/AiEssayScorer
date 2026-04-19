@@ -5,6 +5,7 @@ import PublicScorer from "@/PublicScorer/PublicScorer";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { RelatedSchoolTools } from "@/tools/components/RelatedSchoolTools";
 import { SchoolRichSections } from "@/tools/components/SchoolRichContent";
+import { SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
 
 export function ScoreSchoolPage({ school }: { school: School }) {
   return (
@@ -72,7 +73,13 @@ export function ScoreSchoolPage({ school }: { school: School }) {
         </Link>
       </div>
 
-      <SchoolRichSections school={school} />
+      <SchoolRichSections school={school} variant="score" />
+
+      <SoftwareApplicationSchema
+        name={`${school.shortName} Essay Scorer`}
+        description={`Free AI scorer for your ${school.shortName} supplemental or personal statement.`}
+        path={`/tools/score-${school.slug}-essay`}
+      />
 
       <RelatedSchoolTools currentSlug={school.slug} variant="score" />
     </div>

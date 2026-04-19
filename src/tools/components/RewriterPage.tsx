@@ -4,6 +4,8 @@ import type { Rewriter } from "@/tools/rewriters";
 import RewriterClient from "@/tools/components/RewriterClient";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { RelatedRewriters } from "@/tools/components/RelatedRewriters";
+import { FAQSection, SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
+import { faqsForRewriter } from "@/tools/variantFaqs";
 
 export function RewriterPage({ rewriter }: { rewriter: Rewriter }) {
   return (
@@ -68,6 +70,17 @@ export function RewriterPage({ rewriter }: { rewriter: Rewriter }) {
           Score my rewritten essay
         </Link>
       </div>
+
+      <FAQSection
+        faqs={faqsForRewriter(rewriter)}
+        heading={`${rewriter.shortName} FAQ`}
+      />
+
+      <SoftwareApplicationSchema
+        name={rewriter.displayName}
+        description={rewriter.seoDescription}
+        path={`/tools/${rewriter.slug}`}
+      />
 
       <RelatedRewriters currentSlug={rewriter.slug} />
     </div>

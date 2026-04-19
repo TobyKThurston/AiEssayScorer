@@ -4,6 +4,8 @@ import type { EssayPrompt } from "@/tools/prompts";
 import EssayHookGenerator from "@/tools/components/EssayHookGenerator";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { RelatedPromptTools } from "@/tools/components/RelatedPromptTools";
+import { FAQSection, SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
+import { faqsForHookPrompt } from "@/tools/variantFaqs";
 
 export function HookPromptPage({ prompt }: { prompt: EssayPrompt }) {
   return (
@@ -58,6 +60,17 @@ export function HookPromptPage({ prompt }: { prompt: EssayPrompt }) {
           <li><span className="font-semibold text-[#0F172A]">4.</span> The hook doesn&apos;t have to be your first paragraph in the final draft. Use it to find the voice, then keep writing.</li>
         </ol>
       </section>
+
+      <FAQSection
+        faqs={faqsForHookPrompt(prompt)}
+        heading={`${prompt.shortName} hook generator FAQ`}
+      />
+
+      <SoftwareApplicationSchema
+        name={`${prompt.shortName} Hook Generator`}
+        description={`Free AI hook generator for the ${prompt.displayName}.`}
+        path={`/tools/hook-${prompt.slug}`}
+      />
 
       <RelatedPromptTools currentSlug={prompt.slug} />
     </div>

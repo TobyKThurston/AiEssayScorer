@@ -4,6 +4,8 @@ import type { EssayType } from "@/tools/essayTypes";
 import PublicScorer from "@/PublicScorer/PublicScorer";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { RelatedEssayTypeTools } from "@/tools/components/RelatedEssayTypeTools";
+import { FAQSection, SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
+import { faqsForEssayType } from "@/tools/variantFaqs";
 
 export function EssayTypeScorerPage({ essayType }: { essayType: EssayType }) {
   return (
@@ -48,6 +50,17 @@ export function EssayTypeScorerPage({ essayType }: { essayType: EssayType }) {
           <li><span className="font-semibold text-[#0F172A]">Run it twice.</span> Once on the current draft, again after the one-thing change. Compare blend risk scores.</li>
         </ul>
       </section>
+
+      <FAQSection
+        faqs={faqsForEssayType(essayType)}
+        heading={`${essayType.shortName} scorer FAQ`}
+      />
+
+      <SoftwareApplicationSchema
+        name={essayType.displayName}
+        description={`Free AI scorer tuned for ${essayType.shortName.toLowerCase()} essays.`}
+        path={`/tools/${essayType.slug}-essay-scorer`}
+      />
 
       <RelatedEssayTypeTools currentSlug={essayType.slug} />
     </div>

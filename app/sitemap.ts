@@ -39,20 +39,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const richSchools = schools.filter((s) => !!s.rich);
-
-  const schoolWhyRoutes: MetadataRoute.Sitemap = richSchools.map((school) => ({
+  const schoolWhyRoutes: MetadataRoute.Sitemap = schools.map((school) => ({
     url: `${baseUrl}/tools/why-${school.slug}-essay`,
     lastModified: new Date(),
     changeFrequency: "monthly",
-    priority: 0.8,
+    priority: school.rich ? 0.8 : 0.7,
   }));
 
-  const schoolScoreRoutes: MetadataRoute.Sitemap = richSchools.map((school) => ({
+  const schoolScoreRoutes: MetadataRoute.Sitemap = schools.map((school) => ({
     url: `${baseUrl}/tools/score-${school.slug}-essay`,
     lastModified: new Date(),
     changeFrequency: "monthly",
-    priority: 0.8,
+    priority: school.rich ? 0.8 : 0.7,
   }));
 
   const hookPromptRoutes: MetadataRoute.Sitemap = prompts.map((p) => ({
