@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical: "/privacy",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

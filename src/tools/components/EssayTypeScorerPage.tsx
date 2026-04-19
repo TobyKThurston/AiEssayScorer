@@ -6,6 +6,7 @@ import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { RelatedEssayTypeTools } from "@/tools/components/RelatedEssayTypeTools";
 import { FAQSection, SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
 import { faqsForEssayType } from "@/tools/variantFaqs";
+import { DeepEssayTypeContent } from "@/tools/components/DeepVariantContent";
 
 export function EssayTypeScorerPage({ essayType }: { essayType: EssayType }) {
   return (
@@ -50,6 +51,8 @@ export function EssayTypeScorerPage({ essayType }: { essayType: EssayType }) {
           <li><span className="font-semibold text-[#0F172A]">Run it twice.</span> Once on the current draft, again after the one-thing change. Compare blend risk scores.</li>
         </ul>
       </section>
+
+      <DeepEssayTypeContent essayType={essayType} />
 
       <FAQSection
         faqs={faqsForEssayType(essayType)}

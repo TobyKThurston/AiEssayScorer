@@ -61,7 +61,7 @@ export function Pricing() {
             ctaText="Start free"
             highlighted={false}
             delay={0}
-            href="/upload"
+            href="/try"
           />
           <PricingCard
             title="Pro"

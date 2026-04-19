@@ -6,6 +6,7 @@ import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { RelatedRewriters } from "@/tools/components/RelatedRewriters";
 import { FAQSection, SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
 import { faqsForRewriter } from "@/tools/variantFaqs";
+import { DeepRewriterContent } from "@/tools/components/DeepVariantContent";
 
 export function RewriterPage({ rewriter }: { rewriter: Rewriter }) {
   return (
@@ -70,6 +71,8 @@ export function RewriterPage({ rewriter }: { rewriter: Rewriter }) {
           Score my rewritten essay
         </Link>
       </div>
+
+      <DeepRewriterContent rewriter={rewriter} />
 
       <FAQSection
         faqs={faqsForRewriter(rewriter)}

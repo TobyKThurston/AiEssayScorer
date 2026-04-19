@@ -5,6 +5,7 @@ import WhyCollegeBrainstormer from "@/tools/components/WhyCollegeBrainstormer";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { RelatedSchoolTools } from "@/tools/components/RelatedSchoolTools";
 import { SchoolRichSections } from "@/tools/components/SchoolRichContent";
+import { DeepSchoolContent } from "@/tools/components/DeepSchoolContent";
 import { SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
 
 export function WhySchoolPage({ school }: { school: School }) {
@@ -75,6 +76,8 @@ export function WhySchoolPage({ school }: { school: School }) {
           Score my {school.shortName} essay
         </Link>
       </div>
+
+      <DeepSchoolContent school={school} variant="why" />
 
       <SchoolRichSections school={school} variant="why" />
 

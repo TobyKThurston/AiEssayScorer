@@ -13,6 +13,11 @@ export default function robots(): MetadataRoute.Robots {
           "/auth/",
           "/_next/",
           "/admin/",
+          "/editor",
+          "/editor/",
+          "/upload",
+          "/view-essay",
+          "/account",
         ],
       },
       {
@@ -21,6 +26,11 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           "/api/",
           "/auth/",
+          "/editor",
+          "/editor/",
+          "/upload",
+          "/view-essay",
+          "/account",
         ],
       },
     ],

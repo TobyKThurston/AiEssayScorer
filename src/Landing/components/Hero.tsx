@@ -68,7 +68,7 @@ export function Hero() {
               <Button variant="primary" href="/try">
                 Score My Essay
               </Button>
-              <Button variant="secondary" href="/view-essay">
+              <Button variant="secondary" href="/ivy-league-essay-examples">
                 Browse examples
               </Button>
             </motion.div>

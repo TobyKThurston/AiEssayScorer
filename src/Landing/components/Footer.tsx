@@ -12,6 +12,15 @@ export function Footer() {
       { label: "Improve Your Essay", href: "/how-to-improve-college-essay" },
       { label: "Essay Examples", href: "/ivy-league-essay-examples" },
     ],
+    Guides: [
+      { label: "How to Write the Common App Essay", href: "/blog/how-to-write-common-app-essay" },
+      { label: "Common App Prompts 2025–26", href: "/blog/common-app-essay-prompts-2025" },
+      { label: "Why This College Essay", href: "/blog/why-this-college-essay" },
+      { label: "What Ivy Admissions Look For", href: "/blog/ivy-league-essay-tips" },
+      { label: "650-Word Essay Guide", href: "/blog/college-essay-word-limit" },
+      { label: "Columbia Why Essay", href: "/blog/columbia-why-columbia-essay-core-curriculum" },
+      { label: "Columbia List Essay", href: "/blog/columbia-list-essay-what-are-you-reading" },
+    ],
     Company: [
       { label: "About", href: "/about" },
       { label: "Blog", href: "/blog" },

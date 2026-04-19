@@ -47,7 +47,7 @@ export async function POST(request: Request) {
           quantity: 1,
         },
       ],
-      success_url: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/upload?success=true`,
+      success_url: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/editor?success=true`,
       cancel_url: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/?canceled=true`,
       customer_email: session.user.email,
       metadata: {

@@ -6,6 +6,7 @@ import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { RelatedPromptTools } from "@/tools/components/RelatedPromptTools";
 import { FAQSection, SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
 import { faqsForDeconstructPrompt } from "@/tools/variantFaqs";
+import { DeepDeconstructContent } from "@/tools/components/DeepVariantContent";
 
 export function DeconstructPromptPage({ prompt }: { prompt: EssayPrompt }) {
   return (
@@ -57,6 +58,8 @@ export function DeconstructPromptPage({ prompt }: { prompt: EssayPrompt }) {
           Running the {prompt.shortName} through the deconstructor reveals the gap between the literal prompt and what admissions is really evaluating. The literal question is rarely the real one. The real one is what makes a draft stand out or blur into the pile.
         </p>
       </section>
+
+      <DeepDeconstructContent prompt={prompt} />
 
       <FAQSection
         faqs={faqsForDeconstructPrompt(prompt)}

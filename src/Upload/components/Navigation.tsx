@@ -75,7 +75,7 @@ export function Navigation() {
                 </>
               )}
               <Button size="sm" asChild>
-                <Link href="/view-essay">View other essays</Link>
+                <Link href="/ivy-league-essay-examples">View other essays</Link>
               </Button>
             </div>
 
@@ -124,7 +124,7 @@ export function Navigation() {
                   </>
                 )}
                 <Button asChild className="w-full mt-2">
-                  <Link href="/view-essay" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link href="/ivy-league-essay-examples" onClick={() => setIsMobileMenuOpen(false)}>
                     View other essays
                   </Link>
                 </Button>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical: "/terms",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

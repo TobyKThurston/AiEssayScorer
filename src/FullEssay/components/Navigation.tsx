@@ -70,7 +70,7 @@ export function Navigation() {
               </>
             )}
             <Button size="sm" asChild>
-              <Link href="/upload">Review your essay</Link>
+              <Link href="/try">Review your essay</Link>
             </Button>
           </div>
 
@@ -112,7 +112,7 @@ export function Navigation() {
                 </>
               )}
               <Button asChild className="w-full mt-2">
-                <Link href="/upload" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/try" onClick={() => setIsMobileMenuOpen(false)}>
                   Review your essay
                 </Link>
               </Button>

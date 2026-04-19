@@ -5,6 +5,7 @@ import PublicScorer from "@/PublicScorer/PublicScorer";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { RelatedSchoolTools } from "@/tools/components/RelatedSchoolTools";
 import { SchoolRichSections } from "@/tools/components/SchoolRichContent";
+import { DeepSchoolContent } from "@/tools/components/DeepSchoolContent";
 import { SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
 
 export function ScoreSchoolPage({ school }: { school: School }) {
@@ -72,6 +73,8 @@ export function ScoreSchoolPage({ school }: { school: School }) {
           Brainstorm my Why {school.shortName} essay
         </Link>
       </div>
+
+      <DeepSchoolContent school={school} variant="score" />
 
       <SchoolRichSections school={school} variant="score" />
 
