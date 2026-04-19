@@ -2,6 +2,9 @@ import { MetadataRoute } from "next";
 import { posts } from "@/blog/posts";
 import { tools } from "@/tools/tools";
 import { schools } from "@/tools/schools";
+import { prompts } from "@/tools/prompts";
+import { essayTypes } from "@/tools/essayTypes";
+import { rewriters } from "@/tools/rewriters";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
@@ -49,11 +52,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
+  const hookPromptRoutes: MetadataRoute.Sitemap = prompts.map((p) => ({
+    url: `${baseUrl}/tools/hook-${p.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  const essayTypeScorerRoutes: MetadataRoute.Sitemap = essayTypes.map((t) => ({
+    url: `${baseUrl}/tools/${t.slug}-essay-scorer`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  const rewriterRoutes: MetadataRoute.Sitemap = rewriters.map((r) => ({
+    url: `${baseUrl}/tools/${r.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
   return [
     ...staticRoutes,
     ...blogRoutes,
     ...toolRoutes,
     ...schoolWhyRoutes,
     ...schoolScoreRoutes,
+    ...hookPromptRoutes,
+    ...essayTypeScorerRoutes,
+    ...rewriterRoutes,
   ];
 }

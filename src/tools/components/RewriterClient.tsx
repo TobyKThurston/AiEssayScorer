@@ -4,15 +4,14 @@ import { useState } from "react";
 import { Sparkles, Loader2 } from "lucide-react";
 import { PaywallBanner } from "./PaywallBanner";
 
-export default function EssayHookGenerator({
-  defaultPrompt = "",
-  lockPrompt = false,
+export default function RewriterClient({
+  rewriterSlug,
+  shortName,
 }: {
-  defaultPrompt?: string;
-  lockPrompt?: boolean;
-} = {}) {
-  const [topic, setTopic] = useState("");
-  const [prompt, setPrompt] = useState(defaultPrompt);
+  rewriterSlug: string;
+  shortName: string;
+}) {
+  const [essay, setEssay] = useState("");
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -20,33 +19,29 @@ export default function EssayHookGenerator({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!topic.trim() || loading) return;
+    if (!essay.trim() || loading) return;
     setLoading(true);
     setError(null);
     setOutput("");
     setPaywall(false);
 
     try {
-      const res = await fetch("/api/tools/hook-generator", {
+      const res = await fetch("/api/tools/rewriter", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ topic, prompt }),
+        body: JSON.stringify({ rewriterSlug, essay }),
       });
-
       if (res.status === 402) {
         setPaywall(true);
         return;
       }
-
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error(data.error ?? "Something went wrong. Try again.");
+        throw new Error(data.error ?? "Something went wrong.");
       }
-
       const reader = res.body?.getReader();
       if (!reader) throw new Error("No response stream.");
       const decoder = new TextDecoder();
-
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
@@ -59,6 +54,8 @@ export default function EssayHookGenerator({
     }
   }
 
+  const wordCount = output.trim() ? output.trim().split(/\s+/).length : 0;
+
   return (
     <div className="space-y-6">
       {paywall && <PaywallBanner />}
@@ -68,48 +65,31 @@ export default function EssayHookGenerator({
       >
         <div>
           <label className="block text-sm font-semibold text-[#0F172A] mb-2">
-            What's your essay about?
+            Paste your essay draft
           </label>
-          <input
-            type="text"
-            value={topic}
-            onChange={(e) => setTopic(e.target.value)}
-            placeholder="e.g., The summer I rebuilt my grandfather's cassette collection"
-            className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition"
-            maxLength={300}
+          <textarea
+            value={essay}
+            onChange={(e) => setEssay(e.target.value)}
+            placeholder="Paste your draft here..."
+            rows={12}
+            className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition resize-none font-mono"
+            maxLength={6000}
             required
           />
-        </div>
-
-        {!lockPrompt && (
-          <div>
-            <label className="block text-sm font-semibold text-[#0F172A] mb-2">
-              Essay prompt <span className="font-normal text-[#94A3B8]">(optional)</span>
-            </label>
-            <textarea
-              value={prompt}
-              onChange={(e) => setPrompt(e.target.value)}
-              placeholder="e.g., Common App #5: Discuss an accomplishment, event, or realization..."
-              rows={3}
-              className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition resize-none"
-              maxLength={800}
-            />
+          <div className="text-xs text-[#94A3B8] mt-2">
+            {essay.length}/6000 chars
+            {essay.trim() && ` · ${essay.trim().split(/\s+/).length} words`}
           </div>
-        )}
-
+        </div>
         <button
           type="submit"
-          disabled={loading || !topic.trim()}
+          disabled={loading || !essay.trim()}
           className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#6366F1] text-white font-medium text-sm hover:bg-[#4F46E5] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? (
-            <>
-              <Loader2 className="w-4 h-4 animate-spin" /> Generating...
-            </>
+            <><Loader2 className="w-4 h-4 animate-spin" /> Rewriting...</>
           ) : (
-            <>
-              <Sparkles className="w-4 h-4" /> Generate 5 hooks
-            </>
+            <><Sparkles className="w-4 h-4" /> {shortName}</>
           )}
         </button>
       </form>
@@ -122,9 +102,12 @@ export default function EssayHookGenerator({
 
       {output && (
         <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
-          <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-4">
-            Your hooks
-          </p>
+          <div className="flex items-center justify-between mb-4">
+            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest">
+              Rewrite
+            </p>
+            <p className="text-xs text-[#94A3B8]">{wordCount} words</p>
+          </div>
           <div className="text-[#0F172A] text-[15px] leading-[1.75] whitespace-pre-wrap">
             {output}
           </div>

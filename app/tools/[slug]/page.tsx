@@ -4,6 +4,9 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { getTool, tools } from "@/tools/tools";
 import { getSchool, schools } from "@/tools/schools";
+import { getPrompt, prompts } from "@/tools/prompts";
+import { getEssayType, essayTypes } from "@/tools/essayTypes";
+import { getRewriter, rewriters } from "@/tools/rewriters";
 import EssayHookGenerator from "@/tools/components/EssayHookGenerator";
 import PromptDeconstructor from "@/tools/components/PromptDeconstructor";
 import ActivityRewriter from "@/tools/components/ActivityRewriter";
@@ -15,11 +18,17 @@ import { RelatedTools } from "@/tools/components/RelatedTools";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { WhySchoolPage } from "@/tools/components/WhySchoolPage";
 import { ScoreSchoolPage } from "@/tools/components/ScoreSchoolPage";
+import { HookPromptPage } from "@/tools/components/HookPromptPage";
+import { EssayTypeScorerPage } from "@/tools/components/EssayTypeScorerPage";
+import { RewriterPage } from "@/tools/components/RewriterPage";
 
 type VariantMatch =
   | { kind: "base"; toolSlug: string }
   | { kind: "why-school"; schoolSlug: string }
   | { kind: "score-school"; schoolSlug: string }
+  | { kind: "hook-prompt"; promptSlug: string }
+  | { kind: "essay-type-scorer"; essayTypeSlug: string }
+  | { kind: "rewriter"; rewriterSlug: string }
   | { kind: "none" };
 
 function resolveSlug(slug: string): VariantMatch {
@@ -31,15 +40,28 @@ function resolveSlug(slug: string): VariantMatch {
   if (scoreMatch && getSchool(scoreMatch[1])) {
     return { kind: "score-school", schoolSlug: scoreMatch[1] };
   }
+  const hookMatch = slug.match(/^hook-(.+)$/);
+  if (hookMatch && getPrompt(hookMatch[1])) {
+    return { kind: "hook-prompt", promptSlug: hookMatch[1] };
+  }
+  const typeMatch = slug.match(/^(.+)-essay-scorer$/);
+  if (typeMatch && getEssayType(typeMatch[1])) {
+    return { kind: "essay-type-scorer", essayTypeSlug: typeMatch[1] };
+  }
+  if (getRewriter(slug)) return { kind: "rewriter", rewriterSlug: slug };
   if (getTool(slug)) return { kind: "base", toolSlug: slug };
   return { kind: "none" };
 }
 
 export async function generateStaticParams() {
-  const baseParams = tools.map((t) => ({ slug: t.slug }));
-  const whyParams = schools.map((s) => ({ slug: `why-${s.slug}-essay` }));
-  const scoreParams = schools.map((s) => ({ slug: `score-${s.slug}-essay` }));
-  return [...baseParams, ...whyParams, ...scoreParams];
+  return [
+    ...tools.map((t) => ({ slug: t.slug })),
+    ...schools.map((s) => ({ slug: `why-${s.slug}-essay` })),
+    ...schools.map((s) => ({ slug: `score-${s.slug}-essay` })),
+    ...prompts.map((p) => ({ slug: `hook-${p.slug}` })),
+    ...essayTypes.map((t) => ({ slug: `${t.slug}-essay-scorer` })),
+    ...rewriters.map((r) => ({ slug: r.slug })),
+  ];
 }
 
 export async function generateMetadata({
@@ -73,6 +95,64 @@ export async function generateMetadata({
         images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
       },
       twitter: { card: "summary_large_image", title, images: ["/og-image.png"] },
+    };
+  }
+
+  if (match.kind === "hook-prompt") {
+    const prompt = getPrompt(match.promptSlug)!;
+    const title = `Hook Generator for ${prompt.shortName} (Free AI Tool)`;
+    const description = `Free AI hook generator for the ${prompt.displayName}. Get 5 original opening lines in different styles, tuned for this ${prompt.wordLimit}-word prompt.`;
+    return {
+      title,
+      description,
+      keywords: prompt.seoKeywords,
+      alternates: { canonical: `/tools/hook-${prompt.slug}` },
+      openGraph: {
+        title,
+        description,
+        url: `/tools/hook-${prompt.slug}`,
+        type: "website",
+        images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
+      },
+      twitter: { card: "summary_large_image", title, images: ["/og-image.png"] },
+    };
+  }
+
+  if (match.kind === "essay-type-scorer") {
+    const type = getEssayType(match.essayTypeSlug)!;
+    const title = `${type.displayName} (Free AI Review)`;
+    const description = `Free AI scorer tuned for ${type.shortName.toLowerCase()} essays. Rubric-based feedback on content, structure, voice, and specificity in under a minute.`;
+    return {
+      title,
+      description,
+      keywords: type.seoKeywords,
+      alternates: { canonical: `/tools/${type.slug}-essay-scorer` },
+      openGraph: {
+        title,
+        description,
+        url: `/tools/${type.slug}-essay-scorer`,
+        type: "website",
+        images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
+      },
+      twitter: { card: "summary_large_image", title, images: ["/og-image.png"] },
+    };
+  }
+
+  if (match.kind === "rewriter") {
+    const r = getRewriter(match.rewriterSlug)!;
+    return {
+      title: `${r.displayName} (Free AI Tool)`,
+      description: r.seoDescription,
+      keywords: r.seoKeywords,
+      alternates: { canonical: `/tools/${r.slug}` },
+      openGraph: {
+        title: r.displayName,
+        description: r.seoDescription,
+        url: `/tools/${r.slug}`,
+        type: "website",
+        images: [{ url: "/og-image.png", width: 1200, height: 630, alt: r.displayName }],
+      },
+      twitter: { card: "summary_large_image", title: r.displayName, images: ["/og-image.png"] },
     };
   }
 
@@ -149,6 +229,21 @@ export default async function ToolPage({
   if (match.kind === "score-school") {
     const school = getSchool(match.schoolSlug)!;
     return <ScoreSchoolPage school={school} />;
+  }
+
+  if (match.kind === "hook-prompt") {
+    const prompt = getPrompt(match.promptSlug)!;
+    return <HookPromptPage prompt={prompt} />;
+  }
+
+  if (match.kind === "essay-type-scorer") {
+    const essayType = getEssayType(match.essayTypeSlug)!;
+    return <EssayTypeScorerPage essayType={essayType} />;
+  }
+
+  if (match.kind === "rewriter") {
+    const rewriter = getRewriter(match.rewriterSlug)!;
+    return <RewriterPage rewriter={rewriter} />;
   }
 
   if (match.kind === "none") notFound();

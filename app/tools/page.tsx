@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { tools } from "@/tools/tools";
 import { schools, type SchoolCategory } from "@/tools/schools";
+import { prompts } from "@/tools/prompts";
+import { essayTypes } from "@/tools/essayTypes";
+import { rewriters } from "@/tools/rewriters";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -45,7 +48,17 @@ export default function ToolsIndex() {
     category: cat,
     schools: schools.filter((s) => s.category === cat),
   }));
-  const totalTools = tools.length + schools.length * 2;
+  const promptFamilies = ["Common App", "UC PIQ", "Supplemental Type"] as const;
+  const groupedPrompts = promptFamilies.map((fam) => ({
+    family: fam,
+    items: prompts.filter((p) => p.family === fam),
+  }));
+  const totalTools =
+    tools.length +
+    schools.length * 2 +
+    prompts.length +
+    essayTypes.length +
+    rewriters.length;
 
   return (
     <div className="max-w-[1200px] mx-auto px-6 md:px-16 pt-28 md:pt-36 pb-20">
@@ -138,7 +151,7 @@ export default function ToolsIndex() {
         </div>
       </section>
 
-      <section>
+      <section className="mb-16">
         <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
           <h2
             className="text-2xl font-extrabold text-[#0F172A]"
@@ -171,6 +184,92 @@ export default function ToolsIndex() {
               </div>
             )
           )}
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
+          <h2
+            className="text-2xl font-extrabold text-[#0F172A]"
+            style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
+          >
+            Hook generators by prompt
+          </h2>
+          <p className="text-sm text-[#64748B]">
+            {prompts.length} prompts. Pre-tuned hooks for Common App, UC, and supplementals.
+          </p>
+        </div>
+        <div className="space-y-8">
+          {groupedPrompts.map((group) =>
+            group.items.length === 0 ? null : (
+              <div key={group.family}>
+                <h3 className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-3">
+                  {group.family}
+                </h3>
+                <div className="grid md:grid-cols-3 gap-2">
+                  {group.items.map((p) => (
+                    <Link
+                      key={p.slug}
+                      href={`/tools/hook-${p.slug}`}
+                      className="block rounded-lg bg-white/50 backdrop-blur-sm border border-white/70 px-3 py-2.5 text-sm text-[#0F172A] hover:bg-white/80 hover:text-[#6366F1] hover:shadow-[0_2px_12px_rgba(99,102,241,0.08)] transition-all"
+                    >
+                      {p.shortName} hook
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )
+          )}
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
+          <h2
+            className="text-2xl font-extrabold text-[#0F172A]"
+            style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
+          >
+            Essay-type scorers
+          </h2>
+          <p className="text-sm text-[#64748B]">
+            {essayTypes.length} essay types. Each tuned for the quirks of that format.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-2">
+          {essayTypes.map((t) => (
+            <Link
+              key={t.slug}
+              href={`/tools/${t.slug}-essay-scorer`}
+              className="block rounded-lg bg-white/50 backdrop-blur-sm border border-white/70 px-3 py-2.5 text-sm text-[#0F172A] hover:bg-white/80 hover:text-[#6366F1] hover:shadow-[0_2px_12px_rgba(99,102,241,0.08)] transition-all"
+            >
+              {t.shortName} scorer
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
+          <h2
+            className="text-2xl font-extrabold text-[#0F172A]"
+            style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
+          >
+            Rewriters
+          </h2>
+          <p className="text-sm text-[#64748B]">
+            {rewriters.length} length and tone rewriters. Voice-preserving edits in one click.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-2">
+          {rewriters.map((r) => (
+            <Link
+              key={r.slug}
+              href={`/tools/${r.slug}`}
+              className="block rounded-lg bg-white/50 backdrop-blur-sm border border-white/70 px-3 py-2.5 text-sm text-[#0F172A] hover:bg-white/80 hover:text-[#6366F1] hover:shadow-[0_2px_12px_rgba(99,102,241,0.08)] transition-all"
+            >
+              {r.shortName}
+            </Link>
+          ))}
         </div>
       </section>
     </div>
