@@ -4,6 +4,7 @@ import type { School } from "@/tools/schools";
 import PublicScorer from "@/PublicScorer/PublicScorer";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { RelatedSchoolTools } from "@/tools/components/RelatedSchoolTools";
+import { SchoolRichSections } from "@/tools/components/SchoolRichContent";
 
 export function ScoreSchoolPage({ school }: { school: School }) {
   return (
@@ -70,6 +71,8 @@ export function ScoreSchoolPage({ school }: { school: School }) {
           Brainstorm my Why {school.shortName} essay
         </Link>
       </div>
+
+      <SchoolRichSections school={school} />
 
       <RelatedSchoolTools currentSlug={school.slug} variant="score" />
     </div>

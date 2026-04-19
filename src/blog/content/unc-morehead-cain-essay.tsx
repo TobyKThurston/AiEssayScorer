@@ -12,28 +12,28 @@ export default function Content() {
         most applicants realize.
       </p>
       <p>
-        The scholarship covers tuition, fees, books, and room and board for
-        four years. It also funds the Discovery Experience — four summers
-        with a specific structure. Summer one is outdoor leadership, often
-        with NC Outward Bound. Summer two is self-designed public service.
-        Summer three is inquiry or research, frequently abroad. Summer
-        four is a private enterprise internship. Scholars also have access
-        to the Discovery Fund, a $7,500 pool for personal projects outside
-        the four summer tracks.
+        The scholarship covers tuition, fees, books, and room and board
+        for four years. It also funds the Discovery Experience — four
+        summers with a specific structure. Summer one is outdoor
+        leadership, often with NC Outward Bound. Summer two is
+        self-designed public service. Summer three is inquiry or
+        research, often abroad. Summer four is a private enterprise
+        internship. Scholars also have the Discovery Fund, a $7,500 pool
+        for personal projects outside the four tracks.
       </p>
       <p>
-        The cohort is small — roughly 50 to 60 Scholars per class. Scholars
-        live in Chapel Hill for four years, attend regular cohort
-        programming, and enter a global alumni network. This is not a
-        scholarship in the loose sense of "a sum of money." It is a
-        four-year program with expectations, a cohort, and a culture.
+        The cohort is small — roughly 50 to 60 Scholars per class.
+        Scholars live in Chapel Hill for four years, attend regular
+        cohort programming, and enter a global alumni network. This is
+        not a scholarship in the loose sense of "a sum of money." It is
+        a four-year program with a cohort and a culture.
       </p>
       <p>
-        That culture is what the essays screen for. The selection committee
-        is not evaluating academic fit for UNC. They are evaluating whether
-        you would thrive in a structured, leadership-oriented, funded
-        four-year arc with fifty-nine other people chosen for the same
-        purpose.
+        That culture is what the essays screen for. The selection
+        committee is not evaluating academic fit for UNC. They are
+        evaluating whether you would thrive in a structured,
+        leadership-oriented four-year arc with fifty-nine other people
+        chosen for the same purpose.
       </p>
 
       <h2>Why the Morehead-Cain Essays Are Structured Differently From UNC Admissions Essays</h2>
@@ -119,52 +119,50 @@ export default function Content() {
         depth of curiosity, not breadth of competence.
       </p>
       <p>
-        The failure mode is to pick a topic that looks intellectual. Quantum
-        mechanics, geopolitics, machine learning — these read as performance
-        unless you have lived inside them for years. Pick the topic you
-        actually think about. The history of highway signage, the migration
-        of a specific bird, the grammar of a dead language, the economics of
-        a local industry — the reader feels the difference on the first
+        The failure mode is picking a topic that looks intellectual.
+        Quantum mechanics, geopolitics, machine learning — these read as
+        performance unless you have lived inside them for years. Pick
+        the topic you actually think about. The history of highway
+        signage, the grammar of a dead language, the economics of a
+        local industry — the reader feels the difference on the first
         sentence.
       </p>
       <p>
-        Structurally, the strongest versions move through three beats. A
-        specific entry point — the moment or object that pulled you in.
-        The current shape of the fascination: what you read, who you talk
-        to, what you have built or noticed or mapped. And the unresolved
-        question that keeps you going. The essay should leave the reader
-        feeling that you will still be thinking about this at thirty.
+        The strongest versions move through three beats. A specific entry
+        point — the moment or object that pulled you in. The current
+        shape of the fascination: what you read, what you have built or
+        noticed or mapped. And the unresolved question that keeps you
+        going. The essay should leave the reader feeling that you will
+        still be thinking about this at thirty.
       </p>
       <blockquote>
         "The first time I stayed late after a choir rehearsal, it was to
         argue with my director about tuning. He said the alto line was
         flat. I said it was flat on purpose — the piece was written in
-        just intonation and the thirds were supposed to sit lower than my
-        tuner thought. He told me to write it up. That was three years
-        ago. Since then I have read four books on temperament, downloaded
-        a program that retunes digital pianos, argued with my
-        string-playing friends about the gap between written and sounding
-        pitch, and built a spreadsheet comparing how six choirs handle
-        the same Byrd motet. I am not going to be a musicologist. I am
-        going to study public policy. But the thing that captivates me
-        about tuning is the idea that an entire musical culture can agree
-        on a lie — that the piano in front of me is slightly wrong in a
-        specific way, and everyone has decided not to care. I keep
-        finding versions of that agreement in other places. The way my
-        town rounds property tax assessments. The way grading scales
-        compress distributions. The way calendars pretend the year is
-        365 days. Tuning taught me to look for the convenient errors a
-        system has decided to live with, and that habit follows me into
-        every class and every book I read now."
+        just intonation, and the thirds were supposed to sit lower than
+        my tuner thought. He told me to write it up. That was three
+        years ago. Since then I have read four books on temperament,
+        downloaded a program that retunes digital pianos, and built a
+        spreadsheet comparing how six choirs handle the same Byrd motet.
+        I am not going to be a musicologist. I am going to study public
+        policy. But what captivates me about tuning is the idea that an
+        entire musical culture can agree on a lie — that the piano in
+        front of me is slightly wrong in a specific way, and everyone
+        has decided not to care. I keep finding versions of that
+        agreement elsewhere. The way my town rounds property tax
+        assessments. The way grading scales compress distributions. The
+        way calendars pretend the year is 365 days. Tuning taught me to
+        look for the convenient errors a system has decided to live
+        with, and that habit follows me into every book I read now."
       </blockquote>
 
       <h2>The "Adapt in a Tough Situation" Essay: Structure</h2>
       <p>
         The load-bearing word is <em>adapt</em>. Not <em>overcome</em>, not{" "}
-        <em>persevere</em>, not <em>push through</em>. Adaptation is about
-        changing your approach when the original plan stopped working. The
-        prompt is not asking for a resilience narrative. It is testing for
-        cognitive flexibility under pressure.
+        <em>persevere</em>. Adaptation is about changing your approach when
+        the original plan stopped working. The prompt is not asking for a
+        resilience narrative. It is testing for cognitive flexibility
+        under pressure.
       </p>
       <p>
         The strongest versions describe a specific situation — a week, a
@@ -175,11 +173,10 @@ export default function Content() {
       </p>
       <p>
         The failure mode is a general story of hardship without a pivot
-        point. If your essay could be summarized as "things got hard and I
-        worked harder," you have written resilience. Adaptation requires a
-        specific decision where you changed direction. The reader is
-        watching for that hinge. If it is not there, the essay is
-        answering a different prompt.
+        point. If your essay can be summarized as "things got hard and I
+        worked harder," you have written resilience. Adaptation requires
+        a specific decision where you changed direction. The reader is
+        watching for that hinge.
       </p>
 
       <h2>The "How Do You Define Success" Essay: Structure</h2>
@@ -206,26 +203,25 @@ export default function Content() {
 
       <h2>The "Pivotal Experience" Essay: Structure</h2>
       <p>
-        A pivotal experience does not have to be trauma, crisis, or drama.
-        A pivot is a change in direction — the moment a life vector turned.
-        That can be a single conversation with a grandparent, a book that
-        arrived at the right time, a decision to quit an activity you had
-        done for seven years, or the afternoon you realized you wanted to
-        study something different from what you had been preparing for.
+        A pivotal experience does not have to be trauma, crisis, or
+        drama. A pivot is a change in direction — the moment a life
+        vector turned. That can be a single conversation with a
+        grandparent, a book that arrived at the right time, a decision
+        to quit an activity you had done for seven years, or the
+        afternoon you realized you wanted to study something different.
       </p>
       <p>
         The structural move is to compress the pivot into a small scene
-        and then use the remaining words to trace downstream effects.
+        and use the remaining words to trace downstream effects.
         Applicants often describe a big moment without showing its
         consequences. The pivot is only pivotal if you can show the life
-        that came after it — the classes you took differently, the books
-        you read, the projects you started.
+        that came after it — classes you took differently, books you
+        read, projects you started.
       </p>
       <p>
         Do not pick the most impressive-sounding pivot. The one that
-        actually changed you is the one to write about. If it is small in
-        external terms, it can still be large in internal ones, and the
-        essay will be stronger for being honest.
+        actually changed you is the one to write about. If it is small
+        in external terms, it can still be large in internal ones.
       </p>
 
       <h2>What a Strong Morehead-Cain Essay Actually Looks Like</h2>
@@ -237,42 +233,39 @@ export default function Content() {
       <blockquote>
         "There is a bus route in my city that does not go where it should.
         The 34 runs from the east side to the hospital district, but it
-        takes a four-mile detour through an industrial park where almost no
-        one lives. I started riding it for a summer job at sixteen and
+        takes a four-mile detour through an industrial park where almost
+        no one lives. I started riding it for a summer job at sixteen and
         found the detour baffling. I asked the driver. He said the route
-        had always been that way. I asked my supervisor. Same answer. I
-        eventually filed a public records request with the transit
-        authority and learned the detour was added in 1987 to serve a
-        factory that closed in 1994. The route never got updated. Since
-        then I have become, embarrassingly, a person who reads transit
-        meeting minutes. I have learned that almost every city has
-        artifacts like the 34 — routes, rules, timetables that outlived
-        the reason they exist. I have mapped three of them in my own city.
-        I have written to two council members and gotten one response. The
-        thing that captivates me is not the bus route itself. It is the
-        question of how long a system can carry a dead requirement before
-        anyone notices. I want to study urban policy because I suspect
-        most cities are running on decisions that nobody alive made, and
-        someone has to be the person who goes back and asks why. I am not
-        fully sure that is a job. I think it might be a disposition I will
-        have to build a job around. I am willing to do that."
+        had always been that way. I filed a public records request with
+        the transit authority and learned the detour was added in 1987
+        to serve a factory that closed in 1994. The route never got
+        updated. Since then I have become, embarrassingly, a person who
+        reads transit meeting minutes. Almost every city has artifacts
+        like the 34 — routes, rules, timetables that outlived the reason
+        they exist. I have mapped three of them in my city, written to
+        two council members, and gotten one reply. What captivates me is
+        not the bus route. It is the question of how long a system can
+        carry a dead requirement before anyone notices. I want to study
+        urban policy because I suspect most cities are running on
+        decisions nobody alive made, and someone has to be the person
+        who goes back and asks why. I am not sure that is a job. I think
+        it might be a disposition I will have to build a job around. I
+        am willing to do that."
       </blockquote>
       <p>
         This works because it earns every beat. The entry point is
         specific and dated. The current shape of the fascination (records
-        request, meeting minutes, three mapped routes, two letters, one
-        reply) is evidenced, not claimed. The unresolved question is
-        genuinely unresolved — the writer does not pretend to know what
-        the job is yet. A reader can picture this person at a cohort
-        dinner explaining why the 34 bus mattered, and that picture is
-        what the selection committee is building a class around.
+        request, three mapped routes, two letters, one reply) is
+        evidenced, not claimed. The unresolved question is genuinely
+        unresolved. A reader can picture this person at a cohort dinner
+        explaining why the 34 bus mattered, and that picture is what the
+        selection committee is building a class around.
       </p>
       <p>
         Notice what the essay does not do. It does not list credentials.
         It does not frame the writer as a future leader. It does not
         mention UNC or the Morehead-Cain. The reader infers leadership,
-        curiosity, and cohort fit from the prose itself. That inference
-        is always stronger than the claim.
+        curiosity, and cohort fit from the prose itself.
       </p>
 
       <h2>Common Mistakes Across All Prompts</h2>
@@ -321,10 +314,9 @@ export default function Content() {
           have to be a person who would thrive in it.
         </li>
         <li>
-          <strong>Over-polishing.</strong> Essays that sound workshopped
-          to death lose the voice that distinguishes one Scholar from
-          another. The ones that stand out sound like specific humans,
-          not edited drafts.
+          <strong>Over-polishing.</strong> Essays workshopped to death
+          lose the voice that distinguishes Scholars. The ones that
+          stand out sound like specific humans.
         </li>
       </ul>
 
@@ -333,24 +325,21 @@ export default function Content() {
         The Morehead-Cain is a separate application filed through the
         foundation, not UNC admissions. Nomination comes from your high
         school or a regional partner. Once nominated, you submit a
-        written application with additional essays. A subset of nominees
-        advance to semifinalist status, and a smaller subset advance to
-        Finals Weekend in Chapel Hill.
+        written application with additional essays. A subset advance to
+        semifinalist status, and a smaller subset advance to Finals
+        Weekend in Chapel Hill.
       </p>
       <p>
         Being a Morehead-Cain finalist does not guarantee UNC admission.
         The two decisions are made separately. In practice, strong
-        Morehead-Cain finalists are almost always admitted to UNC, but
-        the decisions are technically independent. Your UNC application
-        still matters. The Morehead-Cain essays are an additional layer,
-        not a replacement.
+        finalists are almost always admitted to UNC, but the decisions
+        are technically independent. Your UNC application still matters.
       </p>
       <p>
-        One practical implication: do not recycle content between the
-        two applications. UNC supplements should show fit for UNC.
-        Morehead-Cain essays should show fit for the Morehead-Cain
-        program. The audiences overlap in some values but differ in
-        rubric.
+        Do not recycle content between the two applications. UNC
+        supplements should show fit for UNC. Morehead-Cain essays should
+        show fit for the Morehead-Cain program. The audiences overlap in
+        some values but differ in rubric.
       </p>
 
       <p>

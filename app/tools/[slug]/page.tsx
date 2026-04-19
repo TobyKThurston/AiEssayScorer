@@ -7,6 +7,7 @@ import { getSchool, schools } from "@/tools/schools";
 import { getPrompt, prompts } from "@/tools/prompts";
 import { getEssayType, essayTypes } from "@/tools/essayTypes";
 import { getRewriter, rewriters } from "@/tools/rewriters";
+import { getTopicPersona, topicPersonas } from "@/tools/topicPersonas";
 import EssayHookGenerator from "@/tools/components/EssayHookGenerator";
 import PromptDeconstructor from "@/tools/components/PromptDeconstructor";
 import ActivityRewriter from "@/tools/components/ActivityRewriter";
@@ -21,14 +22,18 @@ import { ScoreSchoolPage } from "@/tools/components/ScoreSchoolPage";
 import { HookPromptPage } from "@/tools/components/HookPromptPage";
 import { EssayTypeScorerPage } from "@/tools/components/EssayTypeScorerPage";
 import { RewriterPage } from "@/tools/components/RewriterPage";
+import { TopicPersonaPage } from "@/tools/components/TopicPersonaPage";
+import { DeconstructPromptPage } from "@/tools/components/DeconstructPromptPage";
 
 type VariantMatch =
   | { kind: "base"; toolSlug: string }
   | { kind: "why-school"; schoolSlug: string }
   | { kind: "score-school"; schoolSlug: string }
   | { kind: "hook-prompt"; promptSlug: string }
+  | { kind: "deconstruct-prompt"; promptSlug: string }
   | { kind: "essay-type-scorer"; essayTypeSlug: string }
   | { kind: "rewriter"; rewriterSlug: string }
+  | { kind: "topic-persona"; personaSlug: string }
   | { kind: "none" };
 
 function resolveSlug(slug: string): VariantMatch {
@@ -44,9 +49,17 @@ function resolveSlug(slug: string): VariantMatch {
   if (hookMatch && getPrompt(hookMatch[1])) {
     return { kind: "hook-prompt", promptSlug: hookMatch[1] };
   }
+  const deconstructMatch = slug.match(/^deconstruct-(.+)$/);
+  if (deconstructMatch && getPrompt(deconstructMatch[1])) {
+    return { kind: "deconstruct-prompt", promptSlug: deconstructMatch[1] };
+  }
   const typeMatch = slug.match(/^(.+)-essay-scorer$/);
   if (typeMatch && getEssayType(typeMatch[1])) {
     return { kind: "essay-type-scorer", essayTypeSlug: typeMatch[1] };
+  }
+  const personaMatch = slug.match(/^topics-for-(.+)$/);
+  if (personaMatch && getTopicPersona(personaMatch[1])) {
+    return { kind: "topic-persona", personaSlug: personaMatch[1] };
   }
   if (getRewriter(slug)) return { kind: "rewriter", rewriterSlug: slug };
   if (getTool(slug)) return { kind: "base", toolSlug: slug };
@@ -59,8 +72,12 @@ export async function generateStaticParams() {
     ...schools.map((s) => ({ slug: `why-${s.slug}-essay` })),
     ...schools.map((s) => ({ slug: `score-${s.slug}-essay` })),
     ...prompts.map((p) => ({ slug: `hook-${p.slug}` })),
+    ...prompts
+      .filter((p) => p.family === "Common App")
+      .map((p) => ({ slug: `deconstruct-${p.slug}` })),
     ...essayTypes.map((t) => ({ slug: `${t.slug}-essay-scorer` })),
     ...rewriters.map((r) => ({ slug: r.slug })),
+    ...topicPersonas.map((p) => ({ slug: `topics-for-${p.slug}` })),
   ];
 }
 
@@ -87,6 +104,7 @@ export async function generateMetadata({
         `${school.shortName} essay brainstormer`,
       ],
       alternates: { canonical: `/tools/why-${school.slug}-essay` },
+      robots: school.rich ? undefined : { index: false, follow: true },
       openGraph: {
         title,
         description,
@@ -156,6 +174,49 @@ export async function generateMetadata({
     };
   }
 
+  if (match.kind === "topic-persona") {
+    const p = getTopicPersona(match.personaSlug)!;
+    return {
+      title: `${p.displayName} (Free AI Tool)`,
+      description: p.seoDescription,
+      keywords: p.seoKeywords,
+      alternates: { canonical: `/tools/topics-for-${p.slug}` },
+      openGraph: {
+        title: p.displayName,
+        description: p.seoDescription,
+        url: `/tools/topics-for-${p.slug}`,
+        type: "website",
+        images: [{ url: "/og-image.png", width: 1200, height: 630, alt: p.displayName }],
+      },
+      twitter: { card: "summary_large_image", title: p.displayName, images: ["/og-image.png"] },
+    };
+  }
+
+  if (match.kind === "deconstruct-prompt") {
+    const prompt = getPrompt(match.promptSlug)!;
+    const title = `${prompt.shortName} Prompt Deconstructor (Free AI Tool)`;
+    const description = `Free AI breakdown of the ${prompt.displayName}. See the hidden question, angles that work, mistakes to avoid, and what admissions really evaluates.`;
+    return {
+      title,
+      description,
+      keywords: [
+        `${prompt.shortName} prompt breakdown`,
+        `${prompt.shortName} analysis`,
+        `how to answer ${prompt.shortName}`,
+        ...prompt.seoKeywords,
+      ],
+      alternates: { canonical: `/tools/deconstruct-${prompt.slug}` },
+      openGraph: {
+        title,
+        description,
+        url: `/tools/deconstruct-${prompt.slug}`,
+        type: "website",
+        images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
+      },
+      twitter: { card: "summary_large_image", title, images: ["/og-image.png"] },
+    };
+  }
+
   if (match.kind === "score-school") {
     const school = getSchool(match.schoolSlug)!;
     const title = `${school.shortName} Essay Scorer (Free AI Review)`;
@@ -171,6 +232,7 @@ export async function generateMetadata({
         `score my ${school.shortName} essay`,
       ],
       alternates: { canonical: `/tools/score-${school.slug}-essay` },
+      robots: school.rich ? undefined : { index: false, follow: true },
       openGraph: {
         title,
         description,
@@ -244,6 +306,16 @@ export default async function ToolPage({
   if (match.kind === "rewriter") {
     const rewriter = getRewriter(match.rewriterSlug)!;
     return <RewriterPage rewriter={rewriter} />;
+  }
+
+  if (match.kind === "topic-persona") {
+    const persona = getTopicPersona(match.personaSlug)!;
+    return <TopicPersonaPage persona={persona} />;
+  }
+
+  if (match.kind === "deconstruct-prompt") {
+    const prompt = getPrompt(match.promptSlug)!;
+    return <DeconstructPromptPage prompt={prompt} />;
   }
 
   if (match.kind === "none") notFound();

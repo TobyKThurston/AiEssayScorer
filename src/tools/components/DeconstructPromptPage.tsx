@@ -1,0 +1,62 @@
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+import type { EssayPrompt } from "@/tools/prompts";
+import PromptDeconstructor from "@/tools/components/PromptDeconstructor";
+import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
+import { RelatedPromptTools } from "@/tools/components/RelatedPromptTools";
+
+export function DeconstructPromptPage({ prompt }: { prompt: EssayPrompt }) {
+  return (
+    <div className="max-w-[900px] mx-auto px-6 md:px-16 pt-28 md:pt-36 pb-20">
+      <Link
+        href="/tools"
+        className="inline-flex items-center gap-1.5 text-sm text-[#6366F1] hover:gap-2 transition-all mb-6"
+      >
+        <ArrowLeft className="w-4 h-4" /> All tools
+      </Link>
+
+      <ToolSwitcher currentSlug="prompt-deconstructor" />
+
+      <div className="mb-10">
+        <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-3">
+          Prompt deconstructor
+        </p>
+        <h1
+          className="mb-4 text-[#0F172A]"
+          style={{ fontSize: "36px", lineHeight: "44px", fontFamily: "var(--font-heading)", letterSpacing: "-0.02em" }}
+        >
+          {prompt.shortName} Prompt Deconstructor
+        </h1>
+        <p className="text-[#475569] text-lg leading-relaxed max-w-2xl">
+          Break down the {prompt.displayName} into its hidden question, angles that work, traps that sink drafts, and signals admissions reads between the lines. Pre-loaded with the full prompt so you can go straight to the analysis.
+        </p>
+      </div>
+
+      <div className="mb-8 rounded-2xl bg-[#F5F3FF] border border-[#E0E7FF] p-6">
+        <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">
+          The full prompt
+        </p>
+        <p className="text-[#0F172A] text-[15px] leading-relaxed italic">
+          &quot;{prompt.fullPrompt}&quot;
+        </p>
+        <p className="text-xs text-[#64748B] mt-3">Word limit: {prompt.wordLimit}</p>
+      </div>
+
+      <PromptDeconstructor defaultPromptText={prompt.fullPrompt} lockPromptText />
+
+      <section className="mt-14">
+        <h2
+          className="text-lg font-extrabold text-[#0F172A] mb-3"
+          style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
+        >
+          What this tells you about the {prompt.shortName}
+        </h2>
+        <p className="text-[#475569] text-[15px] leading-relaxed">
+          Running the {prompt.shortName} through the deconstructor reveals the gap between the literal prompt and what admissions is really evaluating. The literal question is rarely the real one. The real one is what makes a draft stand out or blur into the pile.
+        </p>
+      </section>
+
+      <RelatedPromptTools currentSlug={prompt.slug} />
+    </div>
+  );
+}

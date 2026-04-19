@@ -12,9 +12,15 @@ interface Breakdown {
   onePieceOfAdvice: string;
 }
 
-export default function PromptDeconstructor() {
+export default function PromptDeconstructor({
+  defaultPromptText = "",
+  lockPromptText = false,
+}: {
+  defaultPromptText?: string;
+  lockPromptText?: boolean;
+} = {}) {
   const [school, setSchool] = useState("");
-  const [promptText, setPromptText] = useState("");
+  const [promptText, setPromptText] = useState(defaultPromptText);
   const [result, setResult] = useState<Breakdown | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -69,20 +75,22 @@ export default function PromptDeconstructor() {
           />
         </div>
 
-        <div>
-          <label className="block text-sm font-semibold text-[#0F172A] mb-2">
-            Paste the supplemental prompt
-          </label>
-          <textarea
-            value={promptText}
-            onChange={(e) => setPromptText(e.target.value)}
-            placeholder="e.g., Tell us about something that is meaningful to you and why. (250 words)"
-            rows={5}
-            className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition resize-none"
-            maxLength={1500}
-            required
-          />
-        </div>
+        {!lockPromptText && (
+          <div>
+            <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+              Paste the supplemental prompt
+            </label>
+            <textarea
+              value={promptText}
+              onChange={(e) => setPromptText(e.target.value)}
+              placeholder="e.g., Tell us about something that is meaningful to you and why. (250 words)"
+              rows={5}
+              className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition resize-none"
+              maxLength={1500}
+              required
+            />
+          </div>
+        )}
 
         <button
           type="submit"

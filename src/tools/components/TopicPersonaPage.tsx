@@ -1,0 +1,52 @@
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+import type { TopicPersona } from "@/tools/topicPersonas";
+import EssayTopicGenerator from "@/tools/components/EssayTopicGenerator";
+import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
+import { RelatedTopicPersonas } from "@/tools/components/RelatedTopicPersonas";
+
+export function TopicPersonaPage({ persona }: { persona: TopicPersona }) {
+  return (
+    <div className="max-w-[900px] mx-auto px-6 md:px-16 pt-28 md:pt-36 pb-20">
+      <Link
+        href="/tools"
+        className="inline-flex items-center gap-1.5 text-sm text-[#6366F1] hover:gap-2 transition-all mb-6"
+      >
+        <ArrowLeft className="w-4 h-4" /> All tools
+      </Link>
+
+      <ToolSwitcher currentSlug="essay-topic-generator" />
+
+      <div className="mb-10">
+        <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-3">
+          Topic generator for {persona.shortName.toLowerCase()}
+        </p>
+        <h1
+          className="mb-4 text-[#0F172A]"
+          style={{ fontSize: "36px", lineHeight: "44px", fontFamily: "var(--font-heading)", letterSpacing: "-0.02em" }}
+        >
+          {persona.displayName}
+        </h1>
+        <p className="text-[#475569] text-lg leading-relaxed max-w-2xl">
+          {persona.description}
+        </p>
+      </div>
+
+      <EssayTopicGenerator personaContext={persona.contextForAi} />
+
+      <section className="mt-14">
+        <h2
+          className="text-lg font-extrabold text-[#0F172A] mb-3"
+          style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
+        >
+          Why generic topic generators don&apos;t work for {persona.shortName.toLowerCase()}
+        </h2>
+        <p className="text-[#475569] text-[15px] leading-relaxed">
+          Most AI topic generators produce the same 5 ideas for everyone who types in their background. That&apos;s the opposite of what admissions reads for. This version is tuned with {persona.shortName.toLowerCase()}-specific guardrails: it actively steers away from cliches common to this group and pushes toward the kinds of small, honest specifics that actually make essays memorable.
+        </p>
+      </section>
+
+      <RelatedTopicPersonas currentSlug={persona.slug} />
+    </div>
+  );
+}

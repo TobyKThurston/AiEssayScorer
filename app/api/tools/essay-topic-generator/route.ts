@@ -11,10 +11,12 @@ export async function POST(request: Request) {
 
   let background = "";
   let quirks = "";
+  let personaContext = "";
   try {
     const body = await request.json();
     background = String(body.background ?? "").slice(0, 1500).trim();
     quirks = String(body.quirks ?? "").slice(0, 800).trim();
+    personaContext = String(body.personaContext ?? "").slice(0, 1200).trim();
   } catch {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
@@ -52,7 +54,7 @@ Rules:
         },
         {
           role: "user",
-          content: `Background: ${background}\nQuirks: ${quirks || "(none given)"}`,
+          content: `${personaContext ? `Persona context: ${personaContext}\n\n` : ""}Background: ${background}\nQuirks: ${quirks || "(none given)"}`,
         },
       ],
     });

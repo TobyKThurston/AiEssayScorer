@@ -6,6 +6,19 @@ export type SchoolCategory =
   | "Top Tech / STEM"
   | "Selective Private";
 
+export interface SchoolFAQ {
+  question: string;
+  answer: string;
+}
+
+export interface SchoolRichContent {
+  currentPrompts: string[];
+  openingAngles: string[];
+  commonMistakes: string[];
+  admitContext: string;
+  faq: SchoolFAQ[];
+}
+
 export interface School {
   slug: string;
   name: string;
@@ -16,23 +29,468 @@ export interface School {
   category: SchoolCategory;
   knownFor: string;
   whyUsWordLimit?: number;
+  rich?: SchoolRichContent;
+}
+
+export function hasRichContent(school: School): boolean {
+  return !!school.rich;
 }
 
 export const schools: School[] = [
-  { slug: "harvard", name: "Harvard University", shortName: "Harvard", location: "Cambridge, Massachusetts", state: "Massachusetts", type: "Private", category: "Ivy League", knownFor: "the residential Houses system, the Harvard Yard freshman experience, and cross-school resources across Harvard College, FAS, and the grad schools", whyUsWordLimit: 150 },
-  { slug: "yale", name: "Yale University", shortName: "Yale", location: "New Haven, Connecticut", state: "Connecticut", type: "Private", category: "Ivy League", knownFor: "the 14 residential colleges, the Directed Studies program, and Yale's unusually strong arts and theater ecosystem", whyUsWordLimit: 125 },
-  { slug: "princeton", name: "Princeton University", shortName: "Princeton", location: "Princeton, New Jersey", state: "New Jersey", type: "Private", category: "Ivy League", knownFor: "its senior thesis requirement, the undergraduate focus, the eating clubs, and the no-loan financial aid policy", whyUsWordLimit: 250 },
-  { slug: "stanford", name: "Stanford University", shortName: "Stanford", location: "Stanford, California", state: "California", type: "Private", category: "Elite Private", knownFor: "interdisciplinary research, d.school design thinking, Silicon Valley proximity, and the open undergraduate curriculum", whyUsWordLimit: 100 },
-  { slug: "mit", name: "Massachusetts Institute of Technology", shortName: "MIT", location: "Cambridge, Massachusetts", state: "Massachusetts", type: "Private", category: "Top Tech / STEM", knownFor: "hands-on UROP research, the hack culture, IAP independent activities period, and deep interdisciplinary engineering", whyUsWordLimit: 250 },
-  { slug: "columbia", name: "Columbia University", shortName: "Columbia", location: "New York, New York", state: "New York", type: "Private", category: "Ivy League", knownFor: "the Core Curriculum, its location in Manhattan, and cross-registration with Barnard and Juilliard", whyUsWordLimit: 150 },
-  { slug: "upenn", name: "University of Pennsylvania", shortName: "Penn", location: "Philadelphia, Pennsylvania", state: "Pennsylvania", type: "Private", category: "Ivy League", knownFor: "the One University Policy that lets undergrads take classes across Wharton, Engineering, Nursing, and the College", whyUsWordLimit: 200 },
-  { slug: "cornell", name: "Cornell University", shortName: "Cornell", location: "Ithaca, New York", state: "New York", type: "Private", category: "Ivy League", knownFor: "seven distinct undergraduate colleges, its agricultural and hotel school legacies, and the 'any person, any study' motto", whyUsWordLimit: 650 },
-  { slug: "brown", name: "Brown University", shortName: "Brown", location: "Providence, Rhode Island", state: "Rhode Island", type: "Private", category: "Ivy League", knownFor: "the Open Curriculum, S/NC grade option, and the PLME and Brown-RISD dual degree programs", whyUsWordLimit: 200 },
-  { slug: "dartmouth", name: "Dartmouth College", shortName: "Dartmouth", location: "Hanover, New Hampshire", state: "New Hampshire", type: "Private", category: "Ivy League", knownFor: "the D-Plan quarter system, the rural setting, the first-year seminars, and outdoorsy culture", whyUsWordLimit: 100 },
-  { slug: "duke", name: "Duke University", shortName: "Duke", location: "Durham, North Carolina", state: "North Carolina", type: "Private", category: "Elite Private", knownFor: "Trinity College and Pratt Engineering, DukeEngage, and the tight undergraduate community", whyUsWordLimit: 250 },
+  {
+    slug: "harvard",
+    name: "Harvard University",
+    shortName: "Harvard",
+    location: "Cambridge, Massachusetts",
+    state: "Massachusetts",
+    type: "Private",
+    category: "Ivy League",
+    knownFor: "the residential Houses system, the Harvard Yard freshman experience, and cross-school resources across Harvard College, FAS, and the grad schools",
+    whyUsWordLimit: 150,
+    rich: {
+      admitContext: "Harvard admits roughly 3 to 4 percent of applicants and reads holistically. Reviewers see tens of thousands of academically qualified applicants, so the supplementals are where fit and character do the work.",
+      currentPrompts: [
+        "Harvard has long recognized the importance of student body diversity of all kinds. We welcome you to write about distinctive aspects of your background, personal development or the intellectual interests you might bring to your Harvard classmates.",
+        "Briefly describe an intellectual experience that was important to you.",
+        "Briefly describe any of your extracurricular activities, employment experience, travel, or family responsibilities that has shaped who you are.",
+        "How do you hope to use your Harvard education in the future?",
+        "Top 3 things your roommates might like to know about you.",
+      ],
+      openingAngles: [
+        "Start mid-thought, inside a specific room or activity that reveals how you think (a physics lab, a kitchen prep line, your grandmother's living room). Let the reader walk in on you.",
+        "Open with a claim that sounds small but is load-bearing for you (a rule you made for yourself, a belief you changed, a question you can't put down). Then earn it.",
+        "Anchor to one object, routine, or artifact that only makes sense if they understand your life. Don't explain it for three lines. Show them using it.",
+      ],
+      commonMistakes: [
+        "Writing one long essay about Harvard's prestige or history instead of three crisp supplementals that each reveal a different facet of you.",
+        "Using the intellectual experience supplemental to list AP classes or awards. The prompt asks about a single experience and how you think, not what you've accomplished.",
+        "Turning the roommate essay into a resume list ('I'm passionate about X, Y, Z'). The prompt is a voice test. Be specific, slightly weird, funny if that's you.",
+      ],
+      faq: [
+        { question: "How many Harvard supplemental essays are required?", answer: "Harvard requires five short supplementals in addition to the Common App personal statement. Four are 150 words; one is three bullet points for roommates." },
+        { question: "What word limit does the Harvard 'Why Us' style essay have?", answer: "Each short supplemental is capped at roughly 150 words. There is no long 'Why Harvard' essay, so density and specificity matter more than length." },
+        { question: "What do Harvard admissions officers look for in the essays?", answer: "Harvard reviewers read for intellectual curiosity that shows up in concrete behavior, a distinctive voice, and evidence that you will add something specific to a House, classroom, or residential community." },
+        { question: "Do I need to name specific Harvard programs?", answer: "Only if they genuinely fit your story. Harvard's short supplementals reward specificity about you more than name-dropping. A real class, professor, or concentration works well, but never forced." },
+        { question: "How strict is the Harvard essay word limit?", answer: "Treat the 150-word caps as firm. Readers see tens of thousands of applications and notice when essays run long. Cut adverbs and throat-clearing before you cut scene detail." },
+      ],
+    },
+  },
+  {
+    slug: "yale",
+    name: "Yale University",
+    shortName: "Yale",
+    location: "New Haven, Connecticut",
+    state: "Connecticut",
+    type: "Private",
+    category: "Ivy League",
+    knownFor: "the 14 residential colleges, the Directed Studies program, and Yale's unusually strong arts and theater ecosystem",
+    whyUsWordLimit: 125,
+    rich: {
+      admitContext: "Yale admits roughly 4 to 5 percent of applicants and requires several short supplementals on top of the Common App essay. Most Yale applicants are academically qualified; the essays are where voice and fit decide.",
+      currentPrompts: [
+        "What are you most passionate about and why? (about 35 words)",
+        "Students at Yale have plenty of time to explore their academic interests before committing to one or more major fields of study. Many students either modify their original academic direction or change their minds entirely. As of this moment, what academic areas seem to fit your interests or goals most comfortably? (about 35 words)",
+        "Why Yale? (about 125 words)",
+        "Reflect on a community to which you feel connected. (400 words)",
+        "Reflect on something that has given you great satisfaction. (400 words, choose one of two)",
+      ],
+      openingAngles: [
+        "For the 125-word Why Yale, open with a specific Yale thing you've already done before applying: a lecture on YouTube, a seminar reading list on OCI, a conversation with a current student. Show the evidence of interest.",
+        "Open the community essay in the middle of an action. Don't explain the community first, then tell a story. Start in the doing, then let the community become clear.",
+        "For Yale's short 35-word prompts, choose one image or artifact and trust it. No setup, no 'what I'm about to tell you.' Give them the thing.",
+      ],
+      commonMistakes: [
+        "Writing a 'Why Yale' that mentions the Directed Studies program without showing any knowledge of what it actually requires (a year of ancient and modern philosophy, literature, and historical texts).",
+        "Confusing the community essay with a 'hardship' essay. Yale asks about connection, not overcoming.",
+        "Treating the 35-word prompts as throwaway. Admissions reads them closely because they reveal self-awareness.",
+      ],
+      faq: [
+        { question: "How many Yale supplemental essays are there?", answer: "Yale typically requires five supplementals: three short 35-word answers, the 125-word Why Yale, and one 400-word long essay (choice of prompts)." },
+        { question: "What is a good length for the Yale 'Why Yale' essay?", answer: "Stay at or under the 125-word cap. Reviewers notice when essays run long, and the tight limit is itself a test of precision." },
+        { question: "What is Yale looking for in the community essay?", answer: "A specific community (not 'society'), a specific role you played in it, and evidence that you show up for people beyond yourself. Reflection matters more than the community's prestige." },
+        { question: "Can I mention Yale's residential college system in my essay?", answer: "Yes, but only if you have a specific reason. Saying you love the residential colleges is thin. Naming a tradition you would participate in and why is stronger." },
+        { question: "Do my Yale supplementals need to connect to a major?", answer: "The 35-word academic-interests prompt does, but the others don't need a major. A coherent identity across the supplementals matters more than forcing every essay toward one major." },
+      ],
+    },
+  },
+  {
+    slug: "princeton",
+    name: "Princeton University",
+    shortName: "Princeton",
+    location: "Princeton, New Jersey",
+    state: "New Jersey",
+    type: "Private",
+    category: "Ivy League",
+    knownFor: "its senior thesis requirement, the undergraduate focus, the eating clubs, and the no-loan financial aid policy",
+    whyUsWordLimit: 250,
+    rich: {
+      admitContext: "Princeton admits roughly 4 to 5 percent and has a distinctive undergraduate focus: almost every class is taught by ladder faculty, and the senior thesis is required in nearly every major.",
+      currentPrompts: [
+        "As a research institution that also prides itself on its liberal arts curriculum, Princeton allows students to explore areas across the humanities and the arts, the natural sciences, and the social sciences. What academic areas most pique your curiosity, and how do the programs offered at Princeton suit your particular interests?",
+        "Princeton values community and encourages students, faculty, staff and leadership to engage in respectful conversations that challenge their perspectives. Share a time when you participated in a conversation that challenged you.",
+        "Princeton has a longstanding commitment to service and civic engagement. Tell us how your story intersects (or will intersect) with these ideals.",
+        "What is a new skill you would like to learn in college?",
+        "What brings you joy?",
+        "What song represents the soundtrack of your life at this moment?",
+      ],
+      openingAngles: [
+        "Open the academic-curiosity essay at the seam where two fields meet in your life (coding plus music theory, economics plus farming, etc.). Princeton's thesis model rewards students who think across boundaries.",
+        "For the 'conversation that challenged you' essay, start in the middle of disagreement and let the scene play before you zoom out. Don't spoil the outcome in the first line.",
+        "For the short 'brings you joy' and 'song soundtrack' prompts, pick something small and unexpected. Generic answers (family, travel) get lost. Be specific enough that it couldn't be someone else's answer.",
+      ],
+      commonMistakes: [
+        "Writing the academic essay as a tour of Princeton's departments. The prompt asks how Princeton fits your interests, not the other way around.",
+        "Using the service essay as a list of volunteer hours. Princeton wants to see ideals embodied in specific decisions, not hours logged.",
+        "Treating the short answers as filler. Admissions reads them as voice tests. A tired answer here can sink an otherwise strong file.",
+      ],
+      faq: [
+        { question: "How many Princeton supplemental essays are required?", answer: "Typically three longer essays plus three short answers, though the exact configuration varies year to year. Check the current Princeton supplement directly." },
+        { question: "How long is the Princeton Why School essay?", answer: "Princeton's academic-interest essay runs about 250 words, shorter than many peer schools, so packing it with specific Princeton details matters more than eloquence." },
+        { question: "Does everyone at Princeton really write a senior thesis?", answer: "Nearly every A.B. student and many B.S.E. students complete a senior thesis. This is the clearest structural difference between Princeton and many peers, and it's worth engaging with seriously in your essay." },
+        { question: "Should I mention specific Princeton professors?", answer: "Only if you have actual interest in their work. A professor named without context reads as list-building. A professor named because of a paper you've read reads as fit." },
+        { question: "Do Princeton essays need to reference the eating clubs?", answer: "No. The eating clubs are a well-known feature of Princeton social life, but mentioning them without a personal angle is surface-level. Write about something you actually care about." },
+      ],
+    },
+  },
+  {
+    slug: "stanford",
+    name: "Stanford University",
+    shortName: "Stanford",
+    location: "Stanford, California",
+    state: "California",
+    type: "Private",
+    category: "Elite Private",
+    knownFor: "interdisciplinary research, d.school design thinking, Silicon Valley proximity, and the open undergraduate curriculum",
+    whyUsWordLimit: 100,
+    rich: {
+      admitContext: "Stanford admits roughly 4 percent, one of the lowest rates in the US. Stanford's supplement is heavy on short, personality-driven prompts (the Short Takes) plus three 250-word essays, so voice matters as much as intellectual fit.",
+      currentPrompts: [
+        "The Stanford community is deeply curious and driven to learn in and out of the classroom. Reflect on an idea or experience that makes you genuinely excited about learning.",
+        "Virtually all of Stanford's undergraduates live on campus. Write a note to your future roommate that reveals something about you or that will help your roommate and you to get to know each other better.",
+        "Briefly describe an extracurricular activity or work experience you have been involved in that has been particularly meaningful to you.",
+        "What is the most significant challenge that society faces today?",
+        "How did you spend your last two summers?",
+        "What historical moment or event do you wish you could have witnessed?",
+        "Briefly describe one of your favorite memories.",
+        "Name one thing you are looking forward to experiencing at Stanford.",
+      ],
+      openingAngles: [
+        "For the intellectual-excitement essay, start with a question you got obsessed with that has no real answer. Stanford rewards the kind of curiosity that keeps going even when the problem doesn't pay off.",
+        "For the roommate letter, open with a specific weird detail they'd learn about you (what you do at 2am, what's always on your desk, the running joke you have with yourself). Voice over information.",
+        "For the short takes, resist the impulse to sound smart. Stanford reads these as a bullshit detector. Say the real answer, even if it sounds unremarkable on paper.",
+      ],
+      commonMistakes: [
+        "Writing the roommate letter as a resume ('I'm a hard worker, I'm curious, I like hiking'). Stanford reads it as a voice test.",
+        "Picking 'climate change' or 'mental health' for the society challenge without a concrete angle. If you don't have an unusual take, pick something smaller you actually care about.",
+        "Making the Short Takes cute. Clever-for-its-own-sake falls flat when admissions reads thousands of them.",
+      ],
+      faq: [
+        { question: "How many Stanford supplemental essays are there?", answer: "Three 250-word essays plus five Short Takes (50 words each). Eight writing opportunities total, each with a distinct job." },
+        { question: "How long is the Stanford roommate essay?", answer: "250 words. Treat it as fiction-writing discipline: concrete details over declared traits." },
+        { question: "What is the Stanford admissions rate?", answer: "Roughly 4 percent, among the lowest in the US. The essays do a lot of the work past the academic threshold." },
+        { question: "Should my Stanford essays reference Silicon Valley?", answer: "Only if you have a specific reason. Mentioning Silicon Valley without engagement reads as a cliché. A specific startup, research lab, or class beats a region name." },
+        { question: "Can I repurpose Stanford essays for other schools?", answer: "The intellectual-curiosity essay often works elsewhere with small edits. The roommate letter and Short Takes are Stanford-specific and usually can't be reused." },
+      ],
+    },
+  },
+  {
+    slug: "mit",
+    name: "Massachusetts Institute of Technology",
+    shortName: "MIT",
+    location: "Cambridge, Massachusetts",
+    state: "Massachusetts",
+    type: "Private",
+    category: "Top Tech / STEM",
+    knownFor: "hands-on UROP research, the hack culture, IAP independent activities period, and deep interdisciplinary engineering",
+    whyUsWordLimit: 250,
+    rich: {
+      admitContext: "MIT admits roughly 4 to 5 percent and does not use the Common App. Applicants apply via MIT's own portal and answer five 200 to 250-word essays plus a set of short fields about activities and community.",
+      currentPrompts: [
+        "We know you lead a busy life, full of activities, many of which are required of you. Tell us about something you do simply for the pleasure of it.",
+        "Describe the world you come from (for example, your family, school, community, city, or town). How has that world shaped your dreams and aspirations?",
+        "MIT brings people with diverse backgrounds together to collaborate, from tackling the world's biggest challenges to lending a helping hand. Describe one way you have contributed to your community, whether in your family, the classroom, your neighborhood, etc.",
+        "Tell us about a significant challenge you've faced (that you feel comfortable sharing) or something that didn't go according to plan. How did you manage the situation?",
+        "How has the world you come from shaped your dreams and aspirations?",
+      ],
+      openingAngles: [
+        "MIT's essays reward specificity and a doing mindset. Open inside an action: the tools on your desk, the mess of a project, the part you kept iterating.",
+        "For the 'simple pleasure' essay, pick something that sounds unimpressive on paper and commit to it. MIT reads this prompt as a way to see how you think when no one is watching.",
+        "For the challenge essay, focus 70 percent on your behavior after the plan broke, not the challenge itself. MIT is testing you as a problem-solver.",
+      ],
+      commonMistakes: [
+        "Writing the 'pleasure' essay about something resume-adjacent (coding, robotics, competition math). MIT already knows that side of you. The prompt asks for what you do without a product.",
+        "Writing the community essay about global issues you're passionate about in the abstract. MIT specifies 'contributed' for a reason.",
+        "Over-polishing the challenge essay into a redemption arc. MIT values honest reflection over a tidy narrative.",
+      ],
+      faq: [
+        { question: "Does MIT use the Common App?", answer: "No. MIT applications go through MIT's own portal, with its own set of essays and short fields." },
+        { question: "How many MIT essays are there?", answer: "Five short essays (200 to 250 words each) plus short answers about your activities, community, and background." },
+        { question: "What is a UROP and should I mention it?", answer: "UROP is MIT's Undergraduate Research Opportunities Program, one of the largest in the country. You can mention it if you have a real research interest, but it's a common reference, so specificity about your interest matters more." },
+        { question: "How does MIT evaluate essays differently from peer schools?", answer: "MIT reads for a builder mindset: what you've actually done, how you recover when things break, and evidence that you learn by doing. Narrative polish matters less than honesty and specificity." },
+        { question: "Can I write about competition wins in MIT essays?", answer: "Yes, but only if the essay is about what you did with and after the competition. A list of wins without insight usually doesn't help." },
+      ],
+    },
+  },
+  {
+    slug: "columbia",
+    name: "Columbia University",
+    shortName: "Columbia",
+    location: "New York, New York",
+    state: "New York",
+    type: "Private",
+    category: "Ivy League",
+    knownFor: "the Core Curriculum, its location in Manhattan, and cross-registration with Barnard and Juilliard",
+    whyUsWordLimit: 150,
+    rich: {
+      admitContext: "Columbia admits roughly 4 percent and has a famously rigorous Core Curriculum required of all undergraduates. Columbia's supplement features three list-style prompts (books, sources, experiences) plus three short essays, including the 150-word Why Columbia.",
+      currentPrompts: [
+        "List the titles of the books, essays, poetry, short stories or plays you read outside of academic courses that you enjoyed most during secondary/high school.",
+        "List the titles of the print, electronic publications and websites you read regularly.",
+        "List the movies, albums, shows, museums, lectures, events at your school or other entertainments you enjoyed most in the past year.",
+        "A hallmark of the Columbia experience is being able to learn and live in a community with a wide range of perspectives. How do you believe this will form a critical aspect of your undergraduate experience?",
+        "What attracts you to your preferred areas of study at Columbia College or Columbia Engineering?",
+        "Why are you interested in attending Columbia University? (150 words)",
+      ],
+      openingAngles: [
+        "For the lists, lean into the interesting, not the impressive. Columbia reviewers read these to get a read on how you think, not to verify you've read Infinite Jest.",
+        "For the 150-word Why Columbia, anchor to the Core. It's the one element of Columbia that every applicant has to reckon with, so show you've actually thought about a specific Core course and what arguing with it would feel like.",
+        "For the community essay, don't talk about New York City abstractly. Pick a specific neighborhood, museum, or artistic tradition you'd engage with from campus.",
+      ],
+      commonMistakes: [
+        "Filling the book list with prestige titles you skimmed. Columbia's readers catch this.",
+        "Writing the Why Columbia as 'NYC is amazing.' Columbia is not NYU. Engage with the Core or stay home.",
+        "Treating the 'community' essay as a diversity essay. The prompt is about how you would engage with other perspectives on Columbia's campus, not your own background.",
+      ],
+      faq: [
+        { question: "What is the Columbia Core Curriculum?", answer: "A required set of small-seminar courses every Columbia College undergrad takes, covering ancient and modern texts, art, music, science, and a required writing course. It's the single most distinctive feature of a Columbia education." },
+        { question: "How long is the Why Columbia essay?", answer: "150 words. The shortest Why Essay among the Ivies except for Harvard's short supplementals, so density is everything." },
+        { question: "Do I have to apply to Columbia College or Columbia Engineering separately?", answer: "Yes. You pick one at the time of application and the prompts differ slightly. Transferring between undergraduate schools after admission is possible but not guaranteed." },
+        { question: "What should the list prompts look like?", answer: "Columbia expects genuine, somewhat quirky lists that reveal your taste. A very safe list full of canonical titles with no personal throughline reads as curated." },
+        { question: "Can I mention Columbia's location in NYC?", answer: "Yes, but specifically. A Columbia student who mentions a particular lecture series at the 92nd Street Y or a museum they'd audit paper at is grounded. 'I love NYC' is not." },
+      ],
+    },
+  },
+  {
+    slug: "upenn",
+    name: "University of Pennsylvania",
+    shortName: "Penn",
+    location: "Philadelphia, Pennsylvania",
+    state: "Pennsylvania",
+    type: "Private",
+    category: "Ivy League",
+    knownFor: "the One University Policy that lets undergrads take classes across Wharton, Engineering, Nursing, and the College",
+    whyUsWordLimit: 200,
+    rich: {
+      admitContext: "Penn admits roughly 6 percent overall, but the acceptance rate at its individual undergraduate schools varies sharply. Wharton and specialized programs like M&T, Huntsman, and LSM are meaningfully more selective.",
+      currentPrompts: [
+        "Write a short thank-you note to someone you have not yet thanked and would like to acknowledge.",
+        "How will you explore community at Penn?",
+        "Considering the specific undergraduate school you have selected, how will you explore your academic and intellectual interests at the University of Pennsylvania?",
+      ],
+      openingAngles: [
+        "For the thank-you note, pick someone your reader will not expect: a bus driver, a sibling's friend, the person who ran the counter at your Saturday job. The freshness beats the intimacy.",
+        "For the community essay, pick one Penn community you actually want to join (a specific club, project house, or cross-school collaboration) and show what you'd contribute.",
+        "For the school-specific academic essay, name a Penn course you've actually looked up on the course catalog. Penn readers want to see you've gone past the admissions brochure.",
+      ],
+      commonMistakes: [
+        "Writing a generic Wharton essay that could work for any business school. Wharton's reviewers want to see engagement with specific programs (OIDD, Huntsman, social impact majors).",
+        "Confusing the thank-you note with a personal statement. Keep it tight, specific, and conversational.",
+        "Conflating the four undergraduate schools. Saying you want to apply because of Wharton but submitting through CAS is a clear tell of a rushed application.",
+      ],
+      faq: [
+        { question: "What is Penn's One University Policy?", answer: "Penn undergraduates can take classes across all four undergraduate schools (Wharton, Engineering, Nursing, and the College), making cross-disciplinary study a structural feature rather than a requested exception." },
+        { question: "How long is the Penn academic essay?", answer: "About 200 words, which is shorter than many peer schools. Reviewers expect concentrated specificity rather than a survey of Penn's offerings." },
+        { question: "Do I need to pick a major when applying to Penn?", answer: "You apply to one of the four undergraduate schools and indicate an intended concentration. Some specialized programs (M&T, Huntsman, LSM, VIPER, NHCM) require a separate application." },
+        { question: "How competitive is Wharton?", answer: "Wharton's admit rate is roughly 6 percent or lower in many years, substantially below Penn's already-selective overall number. Strong quantitative preparation and a specific business interest matter." },
+        { question: "Can I mention specific professors in my Penn essay?", answer: "Yes, but a named professor should connect to something you've read or a course you've looked up. Names without substance read as list-building." },
+      ],
+    },
+  },
+  {
+    slug: "cornell",
+    name: "Cornell University",
+    shortName: "Cornell",
+    location: "Ithaca, New York",
+    state: "New York",
+    type: "Private",
+    category: "Ivy League",
+    knownFor: "seven distinct undergraduate colleges, its agricultural and hotel school legacies, and the 'any person, any study' motto",
+    whyUsWordLimit: 650,
+    rich: {
+      admitContext: "Cornell's seven undergraduate colleges have substantially different admit rates. CALS, Human Ecology, and ILR are often (but not always) somewhat less selective than the College of Arts and Sciences or Dyson. You apply to one specific college.",
+      currentPrompts: [
+        "College of Agriculture and Life Sciences: Why are you drawn to studying the major you have selected? Please discuss how your interests and related experiences have influenced your choice. How will an education from the College of Agriculture and Life Sciences (CALS) at Cornell University specifically serve to support your learning, growth, and the pursuit of your goals?",
+        "College of Arts and Sciences: At Cornell, we aim to bring people together to think about the world's most enduring and pressing questions. Describe a question that excites you about the world.",
+        "College of Engineering: Why do you want to study engineering? Why do you want to study engineering at Cornell specifically?",
+        "Dyson Business School: The readings on Dyson's website indicate that applicants should connect their interests to Dyson's specific programs. Share an experience that has positioned you to succeed in Dyson's unique environment.",
+        "ILR: Describe your intellectual interests, their evolution, and what makes them exciting to you.",
+      ],
+      openingAngles: [
+        "Open with a specific experience that led you toward your intended major, grounded in a place (a farm, a lab, a factory, a newsroom, a family business). Cornell's college-specific prompts want to see a real origin story.",
+        "Name a Cornell program specific to your college (the Dyson Business Minor, the Meinig Family Cornell National Scholars, the Cornell Tradition). Generic Cornell references get lost across seven schools.",
+        "If you're applying to CALS or ILR, be clear about why not the College of Arts and Sciences. Cornell reviewers want to see intent behind the college choice.",
+      ],
+      commonMistakes: [
+        "Applying to CALS or Human Ecology because they're perceived as 'easier,' then writing a supplement that reveals you actually want Arts & Sciences.",
+        "Writing a long Why Cornell essay (up to 650 words) as if it's the Common App personal statement. The prompt asks about fit, not your origin story.",
+        "Mentioning 'any person, any study' as if it's a substitute for specific engagement with a program. It's famous; it's also cliché.",
+      ],
+      faq: [
+        { question: "How many undergraduate colleges does Cornell have?", answer: "Seven: Arts and Sciences, Agriculture and Life Sciences (CALS), Engineering, Dyson (business), Human Ecology, ILR (industrial and labor relations), and Architecture, Art, and Planning." },
+        { question: "How long is the Cornell Why Essay?", answer: "Up to 650 words, longer than many Ivies. The length invites genuine engagement with a specific college's programs, not filler." },
+        { question: "Can I transfer between Cornell undergraduate colleges after admission?", answer: "Internal transfers are possible but not guaranteed. Admissions officers notice if your supplement suggests a mismatch with the college you applied to." },
+        { question: "Does Cornell evaluate students by undergraduate college?", answer: "Yes. Each college has its own admissions committee and its own culture. Dyson and Engineering have distinct criteria from CALS or ILR." },
+        { question: "What does 'any person, any study' actually mean at Cornell?", answer: "It's Ezra Cornell's founding motto describing his vision for a university open to any student and any subject. On paper it explains the seven-college structure. In an essay, it's name-check content unless you pair it with a specific program you'd pursue." },
+      ],
+    },
+  },
+  {
+    slug: "brown",
+    name: "Brown University",
+    shortName: "Brown",
+    location: "Providence, Rhode Island",
+    state: "Rhode Island",
+    type: "Private",
+    category: "Ivy League",
+    knownFor: "the Open Curriculum, S/NC grade option, and the PLME and Brown-RISD dual degree programs",
+    whyUsWordLimit: 200,
+    rich: {
+      admitContext: "Brown admits roughly 5 percent. The Open Curriculum is Brown's defining structural feature: there are no general education requirements, and students can take any course Satisfactory/No Credit. Brown's three supplemental essays all test whether you'd actually use that freedom.",
+      currentPrompts: [
+        "Brown's Open Curriculum allows students to explore broadly while also diving deeply into their academic pursuits. Tell us about any academic interests that excite you, and how you might use the Open Curriculum to pursue them while also embracing topics with which you are unfamiliar.",
+        "Students entering Brown often find that making their home on College Hill naturally invites reflection on where they came from. Share how an aspect of your growing up has inspired or challenged you, and what unique contributions this might allow you to make to the Brown community.",
+        "Brown students care deeply about their work and the world around them. Students find contentment, satisfaction, and meaning in daily interactions and major discoveries. Whether big or small, mundane or spectacular, tell us about something that brings you joy.",
+      ],
+      openingAngles: [
+        "For the Open Curriculum essay, name two or three specific courses (with codes if you know them) you'd take in your first year and explain what makes the combination interesting. Avoid listing one course per department.",
+        "For the 'where you came from' essay, open in a specific place (a kitchen, a drive to school, a weekly family ritual). Don't lead with a thesis about your background.",
+        "For the 'joy' essay, pick something small and strange. Brown rewards specificity over importance.",
+      ],
+      commonMistakes: [
+        "Writing the Open Curriculum essay as 'I want to explore.' Everyone applying to Brown wants to explore. The prompt asks how, with what courses.",
+        "Treating the identity essay as a hardship essay. Brown asks how your background will shape your contribution, not how you overcame it.",
+        "Making the joy essay too ambitious (end world hunger, meet Obama). The prompt rewards a real, smaller-scale joy.",
+      ],
+      faq: [
+        { question: "What is the Brown Open Curriculum?", answer: "Brown has no general education requirements. Students design their own course of study and can take any class Satisfactory/No Credit instead of for a letter grade. This is Brown's defining academic feature." },
+        { question: "How long are Brown's supplemental essays?", answer: "Three essays, each around 200 to 250 words. The Open Curriculum essay usually runs a bit longer than the other two." },
+        { question: "What is PLME at Brown?", answer: "The Program in Liberal Medical Education, an 8-year combined BS/MD program with its own separate application essays and one of the most selective admit rates in the country." },
+        { question: "Can I apply to Brown-RISD Dual Degree?", answer: "Yes. The Brown-RISD Dual Degree is a 5-year program requiring separate applications to both Brown and RISD, plus a distinct set of essays. The admit rate is extremely low." },
+        { question: "Should I mention S/NC grading in my Brown essay?", answer: "Only if you have a specific reason it matters to you (exploring a subject outside your major, balancing a heavy course load). Mentioning it as a generic perk reads as surface-level." },
+      ],
+    },
+  },
+  {
+    slug: "dartmouth",
+    name: "Dartmouth College",
+    shortName: "Dartmouth",
+    location: "Hanover, New Hampshire",
+    state: "New Hampshire",
+    type: "Private",
+    category: "Ivy League",
+    knownFor: "the D-Plan quarter system, the rural setting, the first-year seminars, and outdoorsy culture",
+    whyUsWordLimit: 100,
+    rich: {
+      admitContext: "Dartmouth admits roughly 6 percent. Dartmouth is the smallest and most undergraduate-focused Ivy, with a distinctive D-Plan (four-term academic year students customize) and a strong outdoor culture in rural New Hampshire.",
+      currentPrompts: [
+        "Required: Dartmouth celebrates the ways in which its profound sense of place informs its profound sense of purpose. As you seek admission to Dartmouth's Class of 2029, what aspects of the College's academic program, community, or campus environment attract your interest?",
+        "Choice of prompts including: 'Celebrate your nerdy side.'",
+        "Choice: 'Be the kind of ancestor you'd be proud of.'",
+        "Choice: 'What excites you?'",
+        "Choice: Dr. Seuss (Dartmouth Class of 1925) said, 'Think and wonder, wonder and think.' What do you wonder and think about?",
+      ],
+      openingAngles: [
+        "For the Why Dartmouth, name a D-Plan configuration you'd actually use (e.g., a specific off-term you'd use for field research or an internship). The D-Plan is Dartmouth's signature, and readers want to see real engagement.",
+        "For the 'nerdy side' prompt, pick something truly niche. This is a voice test, and Dartmouth readers see thousands of 'I love chess' answers.",
+        "For the 'excites you' prompt, lead with the specific thing, not the emotion. 'The way starling flocks make shapes you can predict with math' beats 'I'm passionate about biology.'",
+      ],
+      commonMistakes: [
+        "Writing a Why Dartmouth about the outdoor program (DOC, First-Year Trips) without any actual outdoor experience. Dartmouth readers see this at scale.",
+        "Confusing the D-Plan with just a quarter system. It's the flexibility of off-terms that's distinctive, not the four-term year alone.",
+        "Treating the 'nerdy side' prompt as an opportunity to brag. Vulnerability beats polish here.",
+      ],
+      faq: [
+        { question: "What is the Dartmouth D-Plan?", answer: "A flexible four-term academic year (summer is the D-Plan's sophomore term by default) that lets students take off-terms for research, internships, jobs, or travel. Most Dartmouth students don't follow a standard fall-winter-spring pattern." },
+        { question: "How long is the Why Dartmouth essay?", answer: "About 100 words. Dartmouth's Why essay is one of the shortest in the Ivy League, so density matters." },
+        { question: "Is Dartmouth really that outdoorsy?", answer: "Yes and no. The outdoor culture is strong and the DOC is one of the largest college outing clubs. But plenty of Dartmouth students don't hike. The culture is there if you want it, not required." },
+        { question: "What is First-Year Trips at Dartmouth?", answer: "An optional pre-orientation program where ~90 percent of incoming students go on a 5-day outdoor trip led by upperclass students. It's culturally central but not required." },
+        { question: "How selective is Dartmouth compared to other Ivies?", answer: "Dartmouth admits around 6 percent, comparable to Brown and Penn but less selective than Harvard, Yale, and Princeton by percentage." },
+      ],
+    },
+  },
+  {
+    slug: "duke",
+    name: "Duke University",
+    shortName: "Duke",
+    location: "Durham, North Carolina",
+    state: "North Carolina",
+    type: "Private",
+    category: "Elite Private",
+    knownFor: "Trinity College and Pratt Engineering, DukeEngage, and the tight undergraduate community",
+    whyUsWordLimit: 250,
+    rich: {
+      admitContext: "Duke admits roughly 5 to 6 percent. Duke undergraduates apply to one of two schools, Trinity (arts and sciences) or Pratt (engineering), and the two have distinct cultures and admission patterns.",
+      currentPrompts: [
+        "What is your sense of Duke as a university and a community, and why do you consider it a good match for you? If there's something in particular about our offerings that attracts you, feel free to share that as well.",
+        "Optional: Share with us something you feel is important about you to help us know you better.",
+        "Optional: We believe a wide range of personal perspectives, beliefs, and lived experiences are essential to making Duke a vibrant and meaningful living and learning community. Feel free to share with us anything in this context that might help us better understand you and what you might bring to our community.",
+      ],
+      openingAngles: [
+        "For the Why Duke, decide before you write whether you're applying to Trinity or Pratt and ground your essay in that school's specific courses, faculty, or structure.",
+        "Use DukeEngage, the Duke Research Scholars program, or a specific Bass Connections project as evidence of fit. Every applicant mentions Duke's balance of academics and community, so concrete programs make the essay stand out.",
+        "For the community essay, take Duke's phrasing seriously. 'Living and learning community' is deliberate, and Duke reviewers want to see you engaging with what it would mean to live on campus, not just attend classes.",
+      ],
+      commonMistakes: [
+        "Writing a Why Duke about basketball. Duke readers see this at scale.",
+        "Applying to Pratt without any engineering background or interest reflected in your application.",
+        "Writing the optional essays as if they're required and padding them with filler. If you don't have something real to add, submitting without them is fine.",
+      ],
+      faq: [
+        { question: "What is the difference between Trinity and Pratt at Duke?", answer: "Trinity is Duke's College of Arts & Sciences (most majors). Pratt is Duke's engineering school (BME, ECE, CE, ME, and a few interdisciplinary tracks). You apply to one when you submit." },
+        { question: "How long is the Why Duke essay?", answer: "About 250 words, comparable to most peer schools. The prompt asks both why Duke and why you're a good match, so balance both." },
+        { question: "Can I switch between Trinity and Pratt after admission?", answer: "Internal transfer is possible but not guaranteed. Admissions notices if your essays feel like they belong in the other school." },
+        { question: "What is DukeEngage?", answer: "A summer service program where Duke funds and places students in domestic and international community engagement projects. Roughly half of Duke undergraduates participate." },
+        { question: "Should I mention Duke's Basketball culture in my essay?", answer: "Almost never. It's the most common mention Duke readers see. If you have a genuine reason (you played high school ball and want to walk on), fine. Otherwise pick something else." },
+      ],
+    },
+  },
   { slug: "northwestern", name: "Northwestern University", shortName: "Northwestern", location: "Evanston, Illinois", state: "Illinois", type: "Private", category: "Elite Private", knownFor: "the quarter system, the Medill School of Journalism, and interdisciplinary programs like MMSS and ISP", whyUsWordLimit: 300 },
   { slug: "johns-hopkins", name: "Johns Hopkins University", shortName: "Johns Hopkins", location: "Baltimore, Maryland", state: "Maryland", type: "Private", category: "Elite Private", knownFor: "its world-leading biomedical research, the Applied Physics Lab, and deep opportunities in public health" },
-  { slug: "chicago", name: "University of Chicago", shortName: "UChicago", location: "Chicago, Illinois", state: "Illinois", type: "Private", category: "Elite Private", knownFor: "the Core, the life of the mind culture, and its quirky supplemental essay prompts", whyUsWordLimit: 650 },
+  {
+    slug: "chicago",
+    name: "University of Chicago",
+    shortName: "UChicago",
+    location: "Chicago, Illinois",
+    state: "Illinois",
+    type: "Private",
+    category: "Elite Private",
+    knownFor: "the Core, the life of the mind culture, and its quirky supplemental essay prompts",
+    whyUsWordLimit: 650,
+    rich: {
+      admitContext: "UChicago admits roughly 5 percent and is famous for its quirky 'Uncommon Essay' prompts written and voted on by current students each year. The Uncommon Essay is as important as any other part of the application.",
+      currentPrompts: [
+        "How does the University of Chicago, as you know it now, satisfy your desire for a particular kind of learning, community, and future?",
+        "Uncommon Essay: Choose one of the unusual prompts written by current UChicago students each year, or design your own prompt. Prompts typically reward strange questions, counter-intuitive connections, and genuine intellectual play.",
+      ],
+      openingAngles: [
+        "For the Why UChicago, anchor to the Core. Name specific Core sequences you'd take and what excites you about a class where the instructor refuses to accept your first answer. That's the Core experience in practice.",
+        "For the Uncommon Essay, pick a prompt that scares you a little. UChicago rewards intellectual risk-taking, and readers can tell when a student went with the safest option.",
+        "Take the Uncommon Essay literally and seriously at the same time. The prompts are absurd by design. Answer them as if they're real questions, and the weirder your actual thought process, the better.",
+      ],
+      commonMistakes: [
+        "Writing a joke essay for the Uncommon prompt because 'UChicago is quirky.' Quirky for quirk's sake is obvious and lands flat.",
+        "Writing a Why UChicago that describes the Core in general terms instead of engaging with a specific Core sequence.",
+        "Confusing 'life of the mind' with 'I read a lot.' UChicago reads this every year. Show a question you cannot stop arguing with, not a reading list.",
+      ],
+      faq: [
+        { question: "What is the Uncommon Essay at UChicago?", answer: "A supplemental essay written in response to one of several unusual prompts (typically written by current UChicago students) or a student-designed prompt. It has no word limit and is read as a major signal of intellectual character." },
+        { question: "How long should the Uncommon Essay be?", answer: "There is no official word limit, but most strong Uncommon Essays land between 500 and 1,000 words. Length should match the argument, not be forced." },
+        { question: "What is the UChicago Core?", answer: "A required general education sequence covering humanities, civilizations, arts, social sciences, and biological/physical sciences. Classes are small and discussion-driven, and the Core is UChicago's defining academic feature." },
+        { question: "Should my Uncommon Essay be funny?", answer: "It can be if that's your voice. It should never be funny at the expense of substance. Reviewers remember essays where the humor earns the insight, not the other way around." },
+        { question: "Is UChicago test-optional?", answer: "UChicago went permanently test-optional in 2018, well ahead of most peer schools. Scores are evaluated when submitted but not required." },
+      ],
+    },
+  },
   { slug: "caltech", name: "California Institute of Technology", shortName: "Caltech", location: "Pasadena, California", state: "California", type: "Private", category: "Top Tech / STEM", knownFor: "its tiny class sizes, the Honor Code, JPL, and the deepest undergraduate research culture in STEM" },
   { slug: "rice", name: "Rice University", shortName: "Rice", location: "Houston, Texas", state: "Texas", type: "Private", category: "Elite Private", knownFor: "the residential college system, the small undergraduate size, and the Texas Medical Center proximity", whyUsWordLimit: 150 },
   { slug: "vanderbilt", name: "Vanderbilt University", shortName: "Vanderbilt", location: "Nashville, Tennessee", state: "Tennessee", type: "Private", category: "Elite Private", knownFor: "the residential colleges on The Martha Rivers Ingram Commons, Immersion Vanderbilt, and Nashville music scene", whyUsWordLimit: 400 },

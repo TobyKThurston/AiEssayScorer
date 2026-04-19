@@ -5,6 +5,7 @@ import { schools, type SchoolCategory } from "@/tools/schools";
 import { prompts } from "@/tools/prompts";
 import { essayTypes } from "@/tools/essayTypes";
 import { rewriters } from "@/tools/rewriters";
+import { topicPersonas } from "@/tools/topicPersonas";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -53,12 +54,16 @@ export default function ToolsIndex() {
     family: fam,
     items: prompts.filter((p) => p.family === fam),
   }));
+  const richSchools = schools.filter((s) => !!s.rich);
+  const commonAppPrompts = prompts.filter((p) => p.family === "Common App");
   const totalTools =
     tools.length +
-    schools.length * 2 +
+    richSchools.length * 2 +
     prompts.length +
     essayTypes.length +
-    rewriters.length;
+    rewriters.length +
+    topicPersonas.length +
+    commonAppPrompts.length;
 
   return (
     <div className="max-w-[1200px] mx-auto px-6 md:px-16 pt-28 md:pt-36 pb-20">
@@ -248,7 +253,7 @@ export default function ToolsIndex() {
         </div>
       </section>
 
-      <section>
+      <section className="mb-16">
         <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
           <h2
             className="text-2xl font-extrabold text-[#0F172A]"
@@ -268,6 +273,56 @@ export default function ToolsIndex() {
               className="block rounded-lg bg-white/50 backdrop-blur-sm border border-white/70 px-3 py-2.5 text-sm text-[#0F172A] hover:bg-white/80 hover:text-[#6366F1] hover:shadow-[0_2px_12px_rgba(99,102,241,0.08)] transition-all"
             >
               {r.shortName}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
+          <h2
+            className="text-2xl font-extrabold text-[#0F172A]"
+            style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
+          >
+            Topic generators by applicant type
+          </h2>
+          <p className="text-sm text-[#64748B]">
+            {topicPersonas.length} persona-tuned generators. Each actively avoids the cliches of its group.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-2">
+          {topicPersonas.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/tools/topics-for-${p.slug}`}
+              className="block rounded-lg bg-white/50 backdrop-blur-sm border border-white/70 px-3 py-2.5 text-sm text-[#0F172A] hover:bg-white/80 hover:text-[#6366F1] hover:shadow-[0_2px_12px_rgba(99,102,241,0.08)] transition-all"
+            >
+              Topics for {p.shortName}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
+          <h2
+            className="text-2xl font-extrabold text-[#0F172A]"
+            style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
+          >
+            Common App prompt deconstructors
+          </h2>
+          <p className="text-sm text-[#64748B]">
+            {commonAppPrompts.length} deep-dives into the hidden question behind each Common App prompt.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-2">
+          {commonAppPrompts.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/tools/deconstruct-${p.slug}`}
+              className="block rounded-lg bg-white/50 backdrop-blur-sm border border-white/70 px-3 py-2.5 text-sm text-[#0F172A] hover:bg-white/80 hover:text-[#6366F1] hover:shadow-[0_2px_12px_rgba(99,102,241,0.08)] transition-all"
+            >
+              Deconstruct {p.shortName}
             </Link>
           ))}
         </div>

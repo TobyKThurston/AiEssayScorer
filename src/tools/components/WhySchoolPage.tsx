@@ -4,6 +4,7 @@ import type { School } from "@/tools/schools";
 import WhyCollegeBrainstormer from "@/tools/components/WhyCollegeBrainstormer";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { RelatedSchoolTools } from "@/tools/components/RelatedSchoolTools";
+import { SchoolRichSections } from "@/tools/components/SchoolRichContent";
 
 export function WhySchoolPage({ school }: { school: School }) {
   const wordLimit = school.whyUsWordLimit
@@ -73,6 +74,8 @@ export function WhySchoolPage({ school }: { school: School }) {
           Score my {school.shortName} essay
         </Link>
       </div>
+
+      <SchoolRichSections school={school} />
 
       <RelatedSchoolTools currentSlug={school.slug} variant="why" />
     </div>

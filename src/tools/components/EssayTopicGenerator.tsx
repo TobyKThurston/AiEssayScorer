@@ -11,7 +11,11 @@ interface Topic {
   whyItWorks: string;
 }
 
-export default function EssayTopicGenerator() {
+export default function EssayTopicGenerator({
+  personaContext = "",
+}: {
+  personaContext?: string;
+} = {}) {
   const [background, setBackground] = useState("");
   const [quirks, setQuirks] = useState("");
   const [topics, setTopics] = useState<Topic[]>([]);
@@ -31,7 +35,7 @@ export default function EssayTopicGenerator() {
       const res = await fetch("/api/tools/essay-topic-generator", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ background, quirks }),
+        body: JSON.stringify({ background, quirks, personaContext }),
       });
       if (res.status === 402) {
         setPaywall(true);

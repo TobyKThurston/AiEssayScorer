@@ -5,6 +5,7 @@ import { schools } from "@/tools/schools";
 import { prompts } from "@/tools/prompts";
 import { essayTypes } from "@/tools/essayTypes";
 import { rewriters } from "@/tools/rewriters";
+import { topicPersonas } from "@/tools/topicPersonas";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
@@ -38,18 +39,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const schoolWhyRoutes: MetadataRoute.Sitemap = schools.map((school) => ({
+  const richSchools = schools.filter((s) => !!s.rich);
+
+  const schoolWhyRoutes: MetadataRoute.Sitemap = richSchools.map((school) => ({
     url: `${baseUrl}/tools/why-${school.slug}-essay`,
     lastModified: new Date(),
     changeFrequency: "monthly",
-    priority: 0.75,
+    priority: 0.8,
   }));
 
-  const schoolScoreRoutes: MetadataRoute.Sitemap = schools.map((school) => ({
+  const schoolScoreRoutes: MetadataRoute.Sitemap = richSchools.map((school) => ({
     url: `${baseUrl}/tools/score-${school.slug}-essay`,
     lastModified: new Date(),
     changeFrequency: "monthly",
-    priority: 0.75,
+    priority: 0.8,
   }));
 
   const hookPromptRoutes: MetadataRoute.Sitemap = prompts.map((p) => ({
@@ -73,6 +76,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
+  const topicPersonaRoutes: MetadataRoute.Sitemap = topicPersonas.map((p) => ({
+    url: `${baseUrl}/tools/topics-for-${p.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  const deconstructRoutes: MetadataRoute.Sitemap = prompts
+    .filter((p) => p.family === "Common App")
+    .map((p) => ({
+      url: `${baseUrl}/tools/deconstruct-${p.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.75,
+    }));
+
   return [
     ...staticRoutes,
     ...blogRoutes,
@@ -82,5 +101,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...hookPromptRoutes,
     ...essayTypeScorerRoutes,
     ...rewriterRoutes,
+    ...topicPersonaRoutes,
+    ...deconstructRoutes,
   ];
 }
