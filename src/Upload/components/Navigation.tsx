@@ -1,24 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Leaf, Menu, X } from "lucide-react";
 import Link from "next/link";
-import { Button } from "./Button";
+import { Button } from "./ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 
 export function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const { user, loading, signOut } = useAuth();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const handleLogout = async () => {
     await signOut();
@@ -48,116 +39,108 @@ export function Navigation() {
 
   return (
     <>
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-sm" : "bg-white/50 backdrop-blur-sm"
-      }`}
-    >
-      <div className="max-w-[1200px] mx-auto px-6 md:px-16">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 cursor-pointer">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center">
-              <Leaf className="w-5 h-5 text-white" />
-            </div>
-            <span className="font-semibold text-[#0F172A]">Ivy Admit</span>
-          </Link>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-16">
+          <div className="flex items-center justify-between h-16">
+            <Link href="/" className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-md bg-slate-100 border border-slate-200 flex items-center justify-center">
+                <Leaf className="w-4 h-4 text-[#6366F1]" />
+              </div>
+              <span className="font-semibold text-slate-900">Ivy Admit</span>
+            </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {!loading && (
-              <>
-                {user ? (
-                  <>
-                    <Link href="/editor" className="text-[#475569] hover:text-[#0F172A] transition-colors">
-                      My Essays
-                    </Link>
-                    <Button variant="secondary" onClick={handleUpgrade}>
-                      Upgrade to Pro
-                    </Button>
-                    <button
-                      onClick={handleLogout}
-                      className="text-[#475569] hover:text-[#0F172A] transition-colors"
-                    >
-                      Logout
-                    </button>
-                  </>
-                ) : (
-                  <Link href="/auth/login" className="text-[#475569] hover:text-[#0F172A] transition-colors">
-                    Login
-                  </Link>
-                )}
-              </>
-            )}
-            <Button variant="primary" href="/view-essay">View other essays</Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-[#0F172A]"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-slate-200">
-            <div className="flex flex-col gap-4">
+            <div className="hidden lg:flex items-center gap-6">
               {!loading && (
                 <>
                   {user ? (
                     <>
-                      <Link
-                        href="/editor"
-                        className="text-[#475569] hover:text-[#0F172A] transition-colors py-2"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
+                      <Link href="/editor" className="text-sm text-slate-600 hover:text-slate-900">
                         My Essays
                       </Link>
-                      <Button variant="secondary" onClick={handleUpgrade} className="w-full">
+                      <Button variant="outline" size="sm" onClick={handleUpgrade}>
                         Upgrade to Pro
                       </Button>
                       <button
                         onClick={handleLogout}
-                        className="text-[#475569] hover:text-[#0F172A] transition-colors py-2 text-left"
+                        className="text-sm text-slate-600 hover:text-slate-900"
                       >
                         Logout
                       </button>
                     </>
                   ) : (
-                    <Link
-                      href="/auth/login"
-                      className="text-[#475569] hover:text-[#0F172A] transition-colors py-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
+                    <Link href="/auth/login" className="text-sm text-slate-600 hover:text-slate-900">
                       Login
                     </Link>
                   )}
                 </>
               )}
-              <Button variant="primary" href="/view-essay" className="w-full mt-2">
-                View other essays
+              <Button size="sm" asChild>
+                <Link href="/view-essay">View other essays</Link>
               </Button>
             </div>
+
+            <button
+              className="lg:hidden p-2 text-slate-900"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
-        )}
-      </div>
-    </nav>
-    {checkoutError && (
-      <div className="fixed top-16 left-0 right-0 z-40 flex justify-center px-4 pt-2 pointer-events-none">
-        <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-2 rounded-lg shadow-sm pointer-events-auto">
-          {checkoutError}
-          <button onClick={() => setCheckoutError(null)} className="ml-3 font-semibold hover:text-red-900">✕</button>
+
+          {isMobileMenuOpen && (
+            <div className="lg:hidden pb-4 pt-2 border-t border-slate-200">
+              <div className="flex flex-col gap-1">
+                {!loading && (
+                  <>
+                    {user ? (
+                      <>
+                        <Link
+                          href="/editor"
+                          className="text-slate-700 hover:text-slate-900 py-2"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          My Essays
+                        </Link>
+                        <Button variant="outline" onClick={handleUpgrade} className="w-full mt-2">
+                          Upgrade to Pro
+                        </Button>
+                        <button
+                          onClick={handleLogout}
+                          className="text-slate-700 hover:text-slate-900 py-2 text-left"
+                        >
+                          Logout
+                        </button>
+                      </>
+                    ) : (
+                      <Link
+                        href="/auth/login"
+                        className="text-slate-700 hover:text-slate-900 py-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Login
+                      </Link>
+                    )}
+                  </>
+                )}
+                <Button asChild className="w-full mt-2">
+                  <Link href="/view-essay" onClick={() => setIsMobileMenuOpen(false)}>
+                    View other essays
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
-      </div>
-    )}
+      </nav>
+      {checkoutError && (
+        <div className="fixed top-16 left-0 right-0 z-40 flex justify-center px-4 pt-2 pointer-events-none">
+          <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-2 rounded-lg shadow-sm pointer-events-auto">
+            {checkoutError}
+            <button onClick={() => setCheckoutError(null)} className="ml-3 font-semibold hover:text-red-900">✕</button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

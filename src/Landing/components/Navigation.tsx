@@ -1,31 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { useState } from "react";
 import { Leaf, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { Button } from "./ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
   const { user, loading, signOut } = useAuth();
-
-  const { scrollY } = useScroll();
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 24);
-  });
-
-  // Close the mobile menu if the viewport grows past the mobile breakpoint
-  useEffect(() => {
-    const mq = window.matchMedia("(min-width: 1024px)");
-    const onChange = () => {
-      if (mq.matches) setIsMobileMenuOpen(false);
-    };
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
 
   const navLinks = ["Features", "How it works", "Pricing", "FAQ"];
 
@@ -57,150 +41,89 @@ export function Navigation() {
 
   return (
     <>
-      <motion.div
-        className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none"
-        initial={false}
-        animate={{
-          paddingTop: scrolled ? 12 : 0,
-          paddingLeft: scrolled ? 12 : 0,
-          paddingRight: scrolled ? 12 : 0,
-        }}
-        transition={{ type: "spring", stiffness: 260, damping: 30, mass: 0.8 }}
-      >
-        <motion.nav
-          className="relative pointer-events-auto w-full"
-          initial={false}
-          animate={{
-            maxWidth: scrolled ? 980 : 1280,
-            borderRadius: scrolled ? 20 : 0,
-            backgroundColor: scrolled
-              ? "rgba(255,255,255,0.72)"
-              : "rgba(255,255,255,0.55)",
-            boxShadow: scrolled
-              ? "0 10px 40px -12px rgba(30, 41, 89, 0.18), 0 2px 8px -2px rgba(30, 41, 89, 0.08), inset 0 1px 0 rgba(255,255,255,0.75)"
-              : "0 1px 0 rgba(255,255,255,0.6)",
-          }}
-          style={{ backdropFilter: "blur(24px)", WebkitBackdropFilter: "blur(24px)" }}
-          transition={{ type: "spring", stiffness: 260, damping: 30, mass: 0.8 }}
-        >
-          {/* Animated border */}
-          <motion.div
-            className="absolute inset-0 rounded-[inherit] pointer-events-none"
-            initial={false}
-            animate={{
-              borderColor: scrolled
-                ? "rgba(255,255,255,0.85)"
-                : "rgba(255,255,255,0.6)",
-            }}
-            style={{ border: "1px solid" }}
-            transition={{ duration: 0.25 }}
-          />
-          {/* Top highlight shimmer */}
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent pointer-events-none" />
-
-        <div className="relative max-w-[1200px] mx-auto px-6 md:px-10 lg:px-12">
-          <motion.div
-            className="flex items-center justify-between"
-            initial={false}
-            animate={{ height: scrolled ? 56 : 72 }}
-            transition={{ type: "spring", stiffness: 260, damping: 30, mass: 0.8 }}
-          >
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 cursor-pointer group">
-              <motion.div
-                className="rounded-xl bg-white/70 backdrop-blur-sm border border-white/80 shadow-sm flex items-center justify-center group-hover:shadow-md transition-shadow"
-                initial={false}
-                animate={{
-                  width: scrolled ? 32 : 36,
-                  height: scrolled ? 32 : 36,
-                }}
-                transition={{ type: "spring", stiffness: 260, damping: 30 }}
-              >
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-12">
+          <div className="flex items-center justify-between h-16">
+            <Link href="/" className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-md bg-slate-100 border border-slate-200 flex items-center justify-center">
                 <Leaf className="w-4 h-4 text-[#6366F1]" />
-              </motion.div>
-              <span className="font-semibold text-[#0F172A] tracking-tight">Ivy Admit</span>
+              </div>
+              <span className="font-semibold text-slate-900">Ivy Admit</span>
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-6">
               {navLinks.map((link) => (
                 <a
                   key={link}
                   href={`/#${link.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
+                  className="text-sm text-slate-600 hover:text-slate-900"
                 >
                   {link}
                 </a>
               ))}
-              <Link href="/blog" className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors">
+              <Link href="/tools" className="text-sm text-slate-600 hover:text-slate-900">
+                Tools
+              </Link>
+              <Link href="/blog" className="text-sm text-slate-600 hover:text-slate-900">
                 Blog
               </Link>
               {user && !loading ? (
                 <>
-                  <Link href="/editor" className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors">
+                  <Link href="/editor" className="text-sm text-slate-600 hover:text-slate-900">
                     My Essays
                   </Link>
-                  <button
-                    onClick={handleUpgrade}
-                    className="text-sm px-4 py-2 rounded-full bg-white/40 backdrop-blur-sm border border-white/60 text-[#0F172A] hover:bg-white/60 transition-all"
-                  >
+                  <Button variant="outline" size="sm" onClick={handleUpgrade}>
                     Upgrade to Pro
-                  </button>
+                  </Button>
                   <button
                     onClick={handleLogout}
-                    className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
+                    className="text-sm text-slate-600 hover:text-slate-900"
                   >
                     Logout
                   </button>
                 </>
-              ) : !user && !loading ? (
-                <Link href="/auth/login" className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors">
-                  Login
-                </Link>
               ) : (
-                <Link href="/auth/login" className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors">
+                <Link href="/auth/login" className="text-sm text-slate-600 hover:text-slate-900">
                   Login
                 </Link>
               )}
-              <Link
-                href="/editor"
-                className="text-sm px-4 py-2 rounded-full bg-[#0A0A0F] text-white hover:bg-[#1a1a2e] transition-all font-medium"
-              >
-                Review your essay
-              </Link>
+              <Button size="sm" asChild>
+                <Link href="/try">Review your essay</Link>
+              </Button>
             </div>
 
-            {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 text-[#0F172A]"
+              className="lg:hidden p-2 text-slate-900"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
-          </motion.div>
+          </div>
 
-          {/* Mobile Menu */}
           {isMobileMenuOpen && (
-            <div className="lg:hidden pb-4 pt-2 border-t border-white/40">
-              <div className="flex flex-col gap-4">
+            <div className="lg:hidden pb-4 pt-2 border-t border-slate-200">
+              <div className="flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <a
                     key={link}
                     href={`/#${link.toLowerCase().replace(/\s+/g, "-")}`}
-                    className="text-[#475569] hover:text-[#0F172A] transition-colors py-2"
+                    className="text-slate-700 hover:text-slate-900 py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link}
                   </a>
                 ))}
                 <Link
+                  href="/tools"
+                  className="text-slate-700 hover:text-slate-900 py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Tools
+                </Link>
+                <Link
                   href="/blog"
-                  className="text-[#475569] hover:text-[#0F172A] transition-colors py-2"
+                  className="text-slate-700 hover:text-slate-900 py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Blog
@@ -209,20 +132,17 @@ export function Navigation() {
                   <>
                     <Link
                       href="/editor"
-                      className="text-[#475569] hover:text-[#0F172A] transition-colors py-2"
+                      className="text-slate-700 hover:text-slate-900 py-2"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       My Essays
                     </Link>
-                    <button
-                      onClick={handleUpgrade}
-                      className="px-4 py-2 rounded-full bg-white/40 border border-white/60 text-[#0F172A] hover:bg-white/60 transition-all w-full text-center"
-                    >
+                    <Button variant="outline" onClick={handleUpgrade} className="w-full mt-2">
                       Upgrade to Pro
-                    </button>
+                    </Button>
                     <button
                       onClick={handleLogout}
-                      className="text-[#475569] hover:text-[#0F172A] transition-colors py-2 text-left"
+                      className="text-slate-700 hover:text-slate-900 py-2 text-left"
                     >
                       Logout
                     </button>
@@ -230,25 +150,22 @@ export function Navigation() {
                 ) : (
                   <Link
                     href="/auth/login"
-                    className="text-[#475569] hover:text-[#0F172A] transition-colors py-2"
+                    className="text-slate-700 hover:text-slate-900 py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Login
                   </Link>
                 )}
-                <Link
-                  href="/editor"
-                  className="mt-2 px-4 py-2.5 rounded-full bg-[#0A0A0F] text-white hover:bg-[#1a1a2e] transition-all font-medium text-center"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Review your essay
-                </Link>
+                <Button asChild className="w-full mt-2">
+                  <Link href="/try" onClick={() => setIsMobileMenuOpen(false)}>
+                    Review your essay
+                  </Link>
+                </Button>
               </div>
             </div>
           )}
         </div>
-        </motion.nav>
-      </motion.div>
+      </nav>
       {checkoutError && (
         <div className="fixed top-20 left-0 right-0 z-40 flex justify-center px-4 pt-2 pointer-events-none">
           <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-2 rounded-lg shadow-sm pointer-events-auto">
