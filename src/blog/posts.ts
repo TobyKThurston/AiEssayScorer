@@ -350,6 +350,240 @@ export const posts: Post[] = [
     category: "Common App",
     readTime: "9 min read",
   },
+  {
+    slug: "mit-contribute-to-community-essay",
+    title: "MIT Community Essay: How to Answer 'Describe One Way You Have Contributed to Your Community'",
+    description:
+      "MIT's 250-word community essay looks like a standard diversity prompt but isn't. The word 'contributed' is load-bearing. Here's what MIT admissions screens for, why scale matters less than specificity, and the three-move structure that works at 200–250 words.",
+    publishedAt: "2026-04-17",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "mit-challenge-you-faced-essay",
+    title: "MIT Challenge Essay: How to Answer 'How Did You Manage a Situation or Challenge That You Didn't Expect?'",
+    description:
+      "MIT's challenge prompt is the only supplemental in elite admissions that explicitly asks about unexpected failure. It's not a redemption arc — it's a test of how you behave when the plan breaks. Here's the four-move structure and what separates strong drafts from the sports-injury default.",
+    publishedAt: "2026-04-17",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "caltech-stem-short-answers-essay",
+    title: "Caltech Supplemental Essays: How to Answer the STEM Short Answer Prompts",
+    description:
+      "Caltech's supplement is the most STEM-filtered in elite admissions — and its voice is unlike any other school's. Here's how its prompts differ from MIT's, what 'intellectual curiosity' actually requires at Caltech, and the technical specificity that separates strong drafts from polished ones.",
+    publishedAt: "2026-04-17",
+    category: "Supplemental Essays",
+    readTime: "10 min read",
+  },
+  {
+    slug: "vanderbilt-why-vanderbilt-essay",
+    title: "Vanderbilt Essay: How to Write About an Extracurricular Activity That Was Meaningful to You (250 Words)",
+    description:
+      "Vanderbilt's only required supplemental fuses the activity-reflection question with the school-fit question into one 250-word essay. Here's why picking the highest-status activity is usually the wrong move, what Vanderbilt actually screens for, and the three-move structure that works.",
+    publishedAt: "2026-04-17",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "tufts-why-tufts-essay",
+    title: "Tufts Supplemental Essays: 'Why Tufts,' 'Let Your Life Speak,' and 'Tell Us a Story' Guide",
+    description:
+      "Tufts rewards a different voice than any other elite school — specific, quirky, a little willing to be strange. Here's what the Jumbo Essays blog reveals about what Tufts readers respond to, how the Why Tufts short answer differs from peer prompts, and what makes the longer essays land.",
+    publishedAt: "2026-04-17",
+    category: "Supplemental Essays",
+    readTime: "10 min read",
+  },
+  {
+    slug: "usc-describe-yourself-three-words-essay",
+    title: "USC Short Answers: How to Answer 'Describe Yourself in Three Words' (and the Rest)",
+    description:
+      "USC's short answers look easy and aren't. 'Describe yourself in three words' is the most important signal in the application after the long essays. Here's the overused-words list to avoid, the three-word categories that work, and the coherence test for the full short-answer set.",
+    publishedAt: "2026-04-17",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
+  {
+    slug: "princeton-song-soundtrack-essay",
+    title: "Princeton 'Song That Represents the Soundtrack of Your Life' Essay (50 Words)",
+    description:
+      "Princeton's song prompt is 50 words and asks about 'this moment' specifically — not your life. Here's why 'Don't Stop Believin'' always fails, what songs tend to work, and the two-part structure that fits the word count.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "5 min read",
+  },
+  {
+    slug: "princeton-new-skill-essay",
+    title: "Princeton 'New Skill You'd Like to Learn in College' Essay (50 Words)",
+    description:
+      "Princeton's new-skill prompt is the only place in the Ivy-plus supplement where resume-aligned answers actively hurt you. Here's why off-axis picks work, the 50-word structure, and the skills admissions readers are quietly tired of.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "5 min read",
+  },
+  {
+    slug: "stanford-short-takes-guide",
+    title: "Stanford Short Takes: How to Write Ten 50-Word Answers That Actually Work",
+    description:
+      "Applicants spend 80% of their Stanford time on the three long essays and 20% on the ten Short Takes — that ratio is upside-down. Here's how Stanford reads the set, the overlap trap that kills most Short Takes, and do/don't examples for the most common prompts.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "harvard-extracurricular-activity-essay",
+    title: "Harvard Extracurricular / Work / Travel / Family Responsibilities Essay (150 Words)",
+    description:
+      "Harvard's 150-word 'activities, employment, travel, or family responsibilities' essay is where the activities list comes to life. The word 'shaped' is the whole test. Here's what readers screen for, why family responsibilities are underused, and the structure that fits 150 words.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "7 min read",
+  },
+  {
+    slug: "uc-personal-insight-questions-guide",
+    title: "UC Personal Insight Questions: How to Pick and Answer the Four PIQs (350 Words Each)",
+    description:
+      "The UC PIQs carry the entire personality weight of the application — no interviews, no letters, no test scores. Here's how to pick the four that cover the most distinct ground, the trap inside each prompt, and what UC readers actually weight at 350 words.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "11 min read",
+  },
+  {
+    slug: "brown-plme-essay-guide",
+    title: "Brown PLME Essay Guide: How to Write the Two Essays for the 8-Year BS/MD Program",
+    description:
+      "Brown's Program in Liberal Medical Education admits ~3% of applicants. The two essays test maturity about medicine and genuine engagement with Brown's Open Curriculum. Here's what readers screen for, why 'I want to help people' fails, and how to connect medicine to the Open Curriculum specifically.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "10 min read",
+  },
+  {
+    slug: "duke-trinity-pratt-essay-difference",
+    title: "Duke Trinity vs Pratt Essay: How the School-Specific Supplement Differs",
+    description:
+      "Duke's supplement isn't 'Why Duke' — it's 'Why This Duke School.' Trinity and Pratt have different prompts, different readers, and radically different admit rates. Here's the right approach for each, the specific resources that matter, and the signals that tell readers you don't understand the structure.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "cornell-engineering-essay-guide",
+    title: "Cornell Engineering Essay: How to Write the College-Specific Why for Cornell Engineering",
+    description:
+      "Cornell Engineering applicants get a distinct prompt, read by engineering-college admissions who know the field. Generic 'I love problem-solving' hits them 10,000 times. Here's the specific Cornell resources that matter — project teams, Duffield labs, Meinig — and the structure that works.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "10 min read",
+  },
+  {
+    slug: "nyu-why-nyu-essay",
+    title: "NYU 'Why NYU' Essay: How to Write About Your Specific School, Program, and Campus",
+    description:
+      "NYU admits to specific schools (CAS, Stern, Tisch, Tandon, Gallatin, Steinhardt) and specific campuses (NY, Abu Dhabi, Shanghai). Writing about 'NYU' abstractly fails — the prompt literally asks which program. Here's how to hit the program-specific signal without defaulting to 'I love New York City.'",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "cmu-why-cmu-essay",
+    title: "Carnegie Mellon 'Why CMU' Essay: How to Write About Your Intended Area of Study",
+    description:
+      "CMU's 300-word supplement is technically about the origin of your interest, but readers are also checking for fit with CMU's intensely collaborative, interdisciplinary culture. Here's why 'ever since I was young I loved coding' fails, and the CMU-specific programs worth naming — BXA, IDeATe, Robotics Institute, Tepper.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
+  {
+    slug: "emory-why-emory-essay",
+    title: "Emory 'Why Emory' Essay: How to Write About Academic Areas You'd Explore",
+    description:
+      "Emory's Why essay asks about academic interests, but readers are screening for genuine engagement with Emory's specific structure — the Oxford/Atlanta dual campus, Goizueta, Rollins, the CDC and Carter Center partnerships. Here's what to name and what to cut.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "7 min read",
+  },
+  {
+    slug: "washu-why-washu-essay",
+    title: "WashU 'Why Washington University in St. Louis' Essay (200 Words)",
+    description:
+      "WashU recently added a required Why essay after years without one. At 200 words, you can't list. Here's why naming a school is non-optional, how WashU's cross-divisional majors work, and the 'Midwest charm' trap to avoid.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "7 min read",
+  },
+  {
+    slug: "swarthmore-why-swarthmore-essay",
+    title: "Swarthmore 'Why Swarthmore' Essay: How to Write About Honors and the Tri-Co",
+    description:
+      "Swarthmore's Honors Program is structurally unique in U.S. liberal arts — seminar + external examiner. Applicants who treat Swat as 'a chill LAC' misfire. Here's how to engage with the Honors model, the Tri-College Consortium, and the Quaker culture that shapes the classroom.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
+  {
+    slug: "pomona-why-pomona-essay",
+    title: "Pomona 'Why Pomona' Essay: Writing About the 5Cs Without Sounding Like a Tourist",
+    description:
+      "Pomona is in Claremont, not LA — and the 5-College Consortium is the structural heart of the experience. Here's how to engage with Pomona specifically (not 'West Coast Ivy'), what to do with the 5C cross-registration, and why praising the weather sinks most drafts.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
+  {
+    slug: "williams-why-williams-essay",
+    title: "Williams Tutorial Essay: How to Write About a Two-Student Oxford-Style Tutorial",
+    description:
+      "Williams's signature prompt asks applicants to propose a tutorial — one professor, one other student, Oxford model. It's not a Why Williams essay. Here's how to name the partner friction, pick a defensible topic, and write a proposal that sounds like a real course, not a pitch.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "boston-college-why-bc-essay",
+    title: "Boston College 'Why BC' Essay: Writing About Jesuit Formation Without Pandering",
+    description:
+      "BC is Jesuit like Georgetown, but more overtly Catholic in ethos. You don't need to be Catholic, but writing without awareness of cura personalis, magis, and men-and-women-for-others reads as tone-deaf. Here's how to engage with PULSE, Perspectives, and the Core — and how BC differs from Georgetown and BU.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "columbia-intended-major-essay",
+    title: "Columbia 'What Attracted You to Your Intended Areas of Study?' Essay (200 Words)",
+    description:
+      "Columbia separates the intended-major prompt from the Core Curriculum essay. This one should drill into the specific field — a question, a sub-field, not a general passion. CC vs SEAS changes the essay. Here's the structure that works and the 'my journey to loving X' trap.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "7 min read",
+  },
+  {
+    slug: "umich-community-essay",
+    title: "Michigan Community Essay: How to Answer 'Describe a Community to Which You Belong'",
+    description:
+      "Michigan's community essay often differentiates in-state vs out-of-state applicants with similar stats. The word 'belong' — not 'led' or 'founded' — is the whole test. Here's why leadership is the default trap, and how to pick a community that isn't college-application-friendly.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
+  {
+    slug: "uva-application-couldnt-capture-essay",
+    title: "UVA 'What Your Application Couldn't Capture' Essay: How to Answer the Hidden-Side Prompt",
+    description:
+      "UVA's 'what would we miss?' prompt is not a confessional slot. It's a place for something small, distinctive, and not elsewhere — the routine, the collecting habit, the niche expertise. Here's why profundity fails and what textured, specific topics tend to work.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
+  {
+    slug: "barnard-why-womens-college-essay",
+    title: "Barnard 'Why a Women's College?' Essay: Writing About Barnard vs Columbia",
+    description:
+      "Barnard's women's-college prompt filters for applicants who understand Barnard as its own institution — not a back-door to Columbia. Here's what the women's-college pedagogy actually means in the classroom, the nine ways to engage with Columbia, and the stated-feminism-without-substance trap.",
+    publishedAt: "2026-04-18",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {

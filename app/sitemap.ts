@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { posts } from "@/blog/posts";
+import { tools } from "@/tools/tools";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
@@ -7,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/tools`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/try`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.95 },
     { url: `${baseUrl}/ai-essay-review`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/college-essay-checker`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/common-app-essay-help`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
@@ -24,5 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...blogRoutes];
+  const toolRoutes: MetadataRoute.Sitemap = tools.map((tool) => ({
+    url: `${baseUrl}/tools/${tool.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...blogRoutes, ...toolRoutes];
 }

@@ -83,6 +83,58 @@ const contentMap: Record<string, () => Promise<{ default: React.ComponentType }>
     import("@/blog/content/college-essay-topics-to-avoid"),
   "common-app-additional-information-guide": () =>
     import("@/blog/content/common-app-additional-information-guide"),
+  "mit-contribute-to-community-essay": () =>
+    import("@/blog/content/mit-contribute-to-community-essay"),
+  "mit-challenge-you-faced-essay": () =>
+    import("@/blog/content/mit-challenge-you-faced-essay"),
+  "caltech-stem-short-answers-essay": () =>
+    import("@/blog/content/caltech-stem-short-answers-essay"),
+  "vanderbilt-why-vanderbilt-essay": () =>
+    import("@/blog/content/vanderbilt-why-vanderbilt-essay"),
+  "tufts-why-tufts-essay": () =>
+    import("@/blog/content/tufts-why-tufts-essay"),
+  "usc-describe-yourself-three-words-essay": () =>
+    import("@/blog/content/usc-describe-yourself-three-words-essay"),
+  "princeton-song-soundtrack-essay": () =>
+    import("@/blog/content/princeton-song-soundtrack-essay"),
+  "princeton-new-skill-essay": () =>
+    import("@/blog/content/princeton-new-skill-essay"),
+  "stanford-short-takes-guide": () =>
+    import("@/blog/content/stanford-short-takes-guide"),
+  "harvard-extracurricular-activity-essay": () =>
+    import("@/blog/content/harvard-extracurricular-activity-essay"),
+  "uc-personal-insight-questions-guide": () =>
+    import("@/blog/content/uc-personal-insight-questions-guide"),
+  "brown-plme-essay-guide": () =>
+    import("@/blog/content/brown-plme-essay-guide"),
+  "duke-trinity-pratt-essay-difference": () =>
+    import("@/blog/content/duke-trinity-pratt-essay-difference"),
+  "cornell-engineering-essay-guide": () =>
+    import("@/blog/content/cornell-engineering-essay-guide"),
+  "nyu-why-nyu-essay": () =>
+    import("@/blog/content/nyu-why-nyu-essay"),
+  "cmu-why-cmu-essay": () =>
+    import("@/blog/content/cmu-why-cmu-essay"),
+  "emory-why-emory-essay": () =>
+    import("@/blog/content/emory-why-emory-essay"),
+  "washu-why-washu-essay": () =>
+    import("@/blog/content/washu-why-washu-essay"),
+  "swarthmore-why-swarthmore-essay": () =>
+    import("@/blog/content/swarthmore-why-swarthmore-essay"),
+  "pomona-why-pomona-essay": () =>
+    import("@/blog/content/pomona-why-pomona-essay"),
+  "williams-why-williams-essay": () =>
+    import("@/blog/content/williams-why-williams-essay"),
+  "boston-college-why-bc-essay": () =>
+    import("@/blog/content/boston-college-why-bc-essay"),
+  "columbia-intended-major-essay": () =>
+    import("@/blog/content/columbia-intended-major-essay"),
+  "umich-community-essay": () =>
+    import("@/blog/content/umich-community-essay"),
+  "uva-application-couldnt-capture-essay": () =>
+    import("@/blog/content/uva-application-couldnt-capture-essay"),
+  "barnard-why-womens-college-essay": () =>
+    import("@/blog/content/barnard-why-womens-college-essay"),
 };
 
 export async function generateStaticParams() {
