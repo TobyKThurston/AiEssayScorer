@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { getTool, tools } from "@/tools/tools";
+import { getSchool, schools } from "@/tools/schools";
 import EssayHookGenerator from "@/tools/components/EssayHookGenerator";
 import PromptDeconstructor from "@/tools/components/PromptDeconstructor";
 import ActivityRewriter from "@/tools/components/ActivityRewriter";
@@ -12,9 +13,33 @@ import WhyCollegeBrainstormer from "@/tools/components/WhyCollegeBrainstormer";
 import EssayTopicGenerator from "@/tools/components/EssayTopicGenerator";
 import { RelatedTools } from "@/tools/components/RelatedTools";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
+import { WhySchoolPage } from "@/tools/components/WhySchoolPage";
+import { ScoreSchoolPage } from "@/tools/components/ScoreSchoolPage";
+
+type VariantMatch =
+  | { kind: "base"; toolSlug: string }
+  | { kind: "why-school"; schoolSlug: string }
+  | { kind: "score-school"; schoolSlug: string }
+  | { kind: "none" };
+
+function resolveSlug(slug: string): VariantMatch {
+  const whyMatch = slug.match(/^why-(.+)-essay$/);
+  if (whyMatch && getSchool(whyMatch[1])) {
+    return { kind: "why-school", schoolSlug: whyMatch[1] };
+  }
+  const scoreMatch = slug.match(/^score-(.+)-essay$/);
+  if (scoreMatch && getSchool(scoreMatch[1])) {
+    return { kind: "score-school", schoolSlug: scoreMatch[1] };
+  }
+  if (getTool(slug)) return { kind: "base", toolSlug: slug };
+  return { kind: "none" };
+}
 
 export async function generateStaticParams() {
-  return tools.map((t) => ({ slug: t.slug }));
+  const baseParams = tools.map((t) => ({ slug: t.slug }));
+  const whyParams = schools.map((s) => ({ slug: `why-${s.slug}-essay` }));
+  const scoreParams = schools.map((s) => ({ slug: `score-${s.slug}-essay` }));
+  return [...baseParams, ...whyParams, ...scoreParams];
 }
 
 export async function generateMetadata({
@@ -23,26 +48,79 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const tool = getTool(slug);
-  if (!tool) return {};
-  return {
-    title: tool.title,
-    description: tool.seoDescription,
-    keywords: tool.keywords,
-    alternates: { canonical: `/tools/${tool.slug}` },
-    openGraph: {
+  const match = resolveSlug(slug);
+
+  if (match.kind === "why-school") {
+    const school = getSchool(match.schoolSlug)!;
+    const title = `"Why ${school.shortName}" Essay Brainstormer (Free AI Tool)`;
+    const description = `Free AI brainstormer for the Why ${school.shortName} supplemental essay. Get specific professors, courses, programs, and ${school.shortName}-specific angles tied to your intended major.`;
+    return {
+      title,
+      description,
+      keywords: [
+        `why ${school.shortName} essay`,
+        `why ${school.name} essay`,
+        `${school.shortName} supplemental essay`,
+        `${school.shortName} why us essay examples`,
+        `${school.shortName} essay brainstormer`,
+      ],
+      alternates: { canonical: `/tools/why-${school.slug}-essay` },
+      openGraph: {
+        title,
+        description,
+        url: `/tools/why-${school.slug}-essay`,
+        type: "website",
+        images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
+      },
+      twitter: { card: "summary_large_image", title, images: ["/og-image.png"] },
+    };
+  }
+
+  if (match.kind === "score-school") {
+    const school = getSchool(match.schoolSlug)!;
+    const title = `${school.shortName} Essay Scorer (Free AI Review)`;
+    const description = `Free AI scorer for your ${school.shortName} supplemental or personal statement. Get a rubric-based score, strengths, and the one change that would make your ${school.shortName} essay stand out.`;
+    return {
+      title,
+      description,
+      keywords: [
+        `${school.shortName} essay scorer`,
+        `${school.shortName} essay review`,
+        `${school.shortName} essay feedback`,
+        `${school.name} essay grader`,
+        `score my ${school.shortName} essay`,
+      ],
+      alternates: { canonical: `/tools/score-${school.slug}-essay` },
+      openGraph: {
+        title,
+        description,
+        url: `/tools/score-${school.slug}-essay`,
+        type: "website",
+        images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
+      },
+      twitter: { card: "summary_large_image", title, images: ["/og-image.png"] },
+    };
+  }
+
+  if (match.kind === "base") {
+    const tool = getTool(match.toolSlug)!;
+    return {
       title: tool.title,
       description: tool.seoDescription,
-      url: `/tools/${tool.slug}`,
-      type: "website",
-      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: tool.title }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: tool.title,
-      images: ["/og-image.png"],
-    },
-  };
+      keywords: tool.keywords,
+      alternates: { canonical: `/tools/${tool.slug}` },
+      openGraph: {
+        title: tool.title,
+        description: tool.seoDescription,
+        url: `/tools/${tool.slug}`,
+        type: "website",
+        images: [{ url: "/og-image.png", width: 1200, height: 630, alt: tool.title }],
+      },
+      twitter: { card: "summary_large_image", title: tool.title, images: ["/og-image.png"] },
+    };
+  }
+
+  return {};
 }
 
 const toolComponents: Record<string, React.ComponentType> = {
@@ -61,9 +139,21 @@ export default async function ToolPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const tool = getTool(slug);
-  if (!tool) notFound();
+  const match = resolveSlug(slug);
 
+  if (match.kind === "why-school") {
+    const school = getSchool(match.schoolSlug)!;
+    return <WhySchoolPage school={school} />;
+  }
+
+  if (match.kind === "score-school") {
+    const school = getSchool(match.schoolSlug)!;
+    return <ScoreSchoolPage school={school} />;
+  }
+
+  if (match.kind === "none") notFound();
+
+  const tool = getTool(match.toolSlug)!;
   const Component = toolComponents[tool.slug];
   if (!Component) notFound();
 
@@ -109,7 +199,7 @@ export default async function ToolPage({
           Paste your draft, get line-by-line feedback, a rubric score, and suggested rewrites in under 60 seconds.
         </p>
         <Link
-          href="/editor"
+          href="/try"
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#6366F1] text-white font-medium text-sm hover:bg-[#4F46E5] transition-colors"
         >
           Score your essay

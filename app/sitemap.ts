@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { posts } from "@/blog/posts";
 import { tools } from "@/tools/tools";
+import { schools } from "@/tools/schools";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
@@ -34,5 +35,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...blogRoutes, ...toolRoutes];
+  const schoolWhyRoutes: MetadataRoute.Sitemap = schools.map((school) => ({
+    url: `${baseUrl}/tools/why-${school.slug}-essay`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  const schoolScoreRoutes: MetadataRoute.Sitemap = schools.map((school) => ({
+    url: `${baseUrl}/tools/score-${school.slug}-essay`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  return [
+    ...staticRoutes,
+    ...blogRoutes,
+    ...toolRoutes,
+    ...schoolWhyRoutes,
+    ...schoolScoreRoutes,
+  ];
 }

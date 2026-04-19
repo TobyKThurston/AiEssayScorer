@@ -18,10 +18,16 @@ interface Rating {
   standoutMove: string;
 }
 
-export default function PublicScorer() {
+export default function PublicScorer({
+  defaultSchools = "",
+  lockSchools = false,
+}: {
+  defaultSchools?: string;
+  lockSchools?: boolean;
+} = {}) {
   const [essay, setEssay] = useState("");
   const [prompt, setPrompt] = useState("");
-  const [schools, setSchools] = useState("");
+  const [schools, setSchools] = useState(defaultSchools);
   const [rating, setRating] = useState<Rating | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -105,19 +111,21 @@ export default function PublicScorer() {
               maxLength={1500}
             />
           </div>
-          <div>
-            <label className="block text-sm font-semibold text-[#0F172A] mb-2">
-              Target schools <span className="font-normal text-[#94A3B8]">(comma separated, optional)</span>
-            </label>
-            <input
-              type="text"
-              value={schools}
-              onChange={(e) => setSchools(e.target.value)}
-              placeholder="e.g., Stanford, Duke, Pomona"
-              className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition"
-              maxLength={400}
-            />
-          </div>
+          {!lockSchools && (
+            <div>
+              <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+                Target schools <span className="font-normal text-[#94A3B8]">(comma separated, optional)</span>
+              </label>
+              <input
+                type="text"
+                value={schools}
+                onChange={(e) => setSchools(e.target.value)}
+                placeholder="e.g., Stanford, Duke, Pomona"
+                className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition"
+                maxLength={400}
+              />
+            </div>
+          )}
         </div>
 
         <button

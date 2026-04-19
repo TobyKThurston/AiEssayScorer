@@ -36,10 +36,10 @@ export default function Content() {
       <p>
         Applicants hear "greatest" and reach for the biggest credential on
         their activities list. The state-ranked debater picks debate. The
-        first-chair violinist picks violin. The USAMO qualifier picks math.
-        These are perfectly reasonable choices only if the applicant also has
-        a real, traceable development story for them. Otherwise the essay
-        becomes a list of awards with a title sentence at the top.
+        first-chair violinist picks violin. These are reasonable choices only
+        if the applicant also has a real, traceable development story.
+        Otherwise the essay becomes a list of awards with a title sentence at
+        the top.
       </p>
       <p>
         The stronger move is to pick the talent with the richest development
@@ -47,14 +47,12 @@ export default function Content() {
         second-tier skill with a clear origin, clear growth moments, and a
         clear way it shows up in your current life outperforms a trophy talent
         with no story attached. UC readers are screening for the arc, not the
-        accolade. They already have your activities list. They already know
-        you ranked third in the state. The essay is where you tell them how
-        you got good, and where it lives in your everyday thinking.
+        accolade. They already have your activities list. The essay is where
+        you tell them how you got good.
       </p>
       <p>
-        "Greatest" in this prompt means "most developed" or "most
-        demonstrated," not "most decorated." Read it that way and the topic
-        selection problem gets easier.
+        "Greatest" in this prompt means "most developed," not "most
+        decorated." Read it that way and topic selection gets easier.
       </p>
 
       <h2>What UC Readers Are Actually Screening For</h2>
@@ -116,47 +114,39 @@ export default function Content() {
         The prompt says "talent or skill," which is broader than most
         applicants realize. A talent is a capacity, not an accomplishment. An
         accomplishment is a line on your activities list. A capacity is a
-        repeatable thing your brain or hands or voice can do. Those two
-        categories overlap sometimes, but not always, and the applicants who
-        understand the difference write better PIQ #3s.
+        repeatable thing your brain or hands or voice can do. The applicants
+        who understand the difference write better PIQ #3s.
       </p>
       <p>
-        Consider three applicants and three legitimate topic choices.
+        Consider three applicants.
       </p>
       <p>
         The first is a competitive swimmer with a state medal. Her obvious
         topic is swimming. Her better topic might be her capacity for reading
         a coach's body language — a skill she built by watching three
         different coaches across four years and learning, by micro-signal,
-        when to push and when to conserve. That is a specific skill, it has a
-        clear development arc, and it shows up in places other than the pool
-        (she uses the same read on teachers and on her boss at the coffee
-        shop).
+        when to push and when to conserve. That skill has a clear development
+        arc and shows up in places other than the pool.
       </p>
       <p>
-        The second is a first-generation student with a cashier job. He has
-        no trophies, no medals, no rankings. His talent is voice mimicry — he
-        can reproduce accents and speech rhythms after hearing them once. He
-        developed it translating between his Tagalog-speaking grandmother and
-        the DMV, his school counselor, and the insurance company. That
-        capacity is more interesting than most prestige talents, and the
-        development arc is built into the life.
+        The second is a first-generation student with a cashier job and no
+        trophies. His talent is voice mimicry — he can reproduce accents and
+        speech rhythms after hearing them once. He developed it translating
+        between his Tagalog-speaking grandmother and the DMV, his school
+        counselor, and the insurance company.
       </p>
       <p>
         The third is a self-taught cook who has never worked in a restaurant.
-        Her talent is reverse-engineering recipes by taste. She can eat a dish
-        once at a restaurant and produce a usable version of it at home within
-        three tries. She developed this during the pandemic when her
-        grandmother's favorite Sichuan place closed, and she has demonstrated
-        it across sixty-plus dishes she now keeps in a notebook. No award, no
-        competition, no external validation — and a completely workable PIQ
-        #3.
+        Her talent is reverse-engineering recipes by taste. She developed it
+        during the pandemic when her grandmother's favorite Sichuan place
+        closed, and has demonstrated it across sixty-plus dishes in a
+        notebook. No award, no competition — and a workable PIQ #3.
       </p>
       <p>
         None of those three talents are leadership, research, or music. None
-        of them would appear on a resume as a credential. All three would
-        write a stronger 350-word essay than the same student writing about
-        their most decorated activity.
+        would appear on a resume. All three would write a stronger 350-word
+        essay than the same student writing about their most decorated
+        activity.
       </p>
 
       <h2>The Structure That Works at 350 Words</h2>
@@ -300,17 +290,15 @@ export default function Content() {
         </li>
         <li>
           <strong>Treating the essay as a resume paragraph.</strong> The PIQ is
-          not a cover letter. It is not a statement of qualifications. It is a
-          short, specific, vivid account of one capacity. Voice matters.
-          Scenes matter. Specificity matters. Resume prose signals that you
-          did not understand the assignment.
+          not a statement of qualifications. It is a short, specific, vivid
+          account of one capacity. Resume prose signals that you did not
+          understand the assignment.
         </li>
         <li>
-          <strong>Ignoring the "over time" language.</strong> The prompt asks
-          how you developed and demonstrated the talent over time. A skill you
-          picked up last summer can work, but you need to show real
-          development inside that compressed window. "Over time" does not have
-          to mean years, but it has to mean more than a single event.
+          <strong>Ignoring the "over time" language.</strong> A skill you
+          picked up last summer can work, but you need real development
+          inside that window. "Over time" does not have to mean years, but it
+          has to mean more than a single event.
         </li>
       </ul>
 
@@ -320,24 +308,22 @@ export default function Content() {
         together, and readers notice overlap fast. If you used your primary
         activity — orchestra, soccer, robotics, your research lab — in PIQ #1
         (leadership) or PIQ #2 (creative expression), do not use the same
-        activity as your talent in PIQ #3. The redundancy costs you. You will
-        have burned two of your four slots showing different angles on the
-        same thing when you could have shown four different things.
+        activity in PIQ #3. You will have burned two slots showing different
+        angles on the same thing.
       </p>
       <p>
         The same logic applies the other direction. If your strongest talent
         naturally fits under PIQ #3, do not also use it in PIQ #6 (academic
-        subject) or PIQ #7 (community contribution). Keep each PIQ on its own
-        subject. Readers do not give you credit twice for one skill.
+        subject) or PIQ #7 (community contribution). Readers do not give you
+        credit twice for one skill.
       </p>
       <p>
         The cleanest way to coordinate is to sketch all four topics before you
-        draft any of them. Write one sentence per PIQ describing the subject
-        of that essay. If any two sentences share the same noun, rework until
-        they do not. Your four PIQs should touch four different parts of your
-        life. PIQ #3 is the best slot for a specific, portable skill that
-        does not fit anywhere else — the kind of capacity that does not make
-        it onto a resume but shows up everywhere in how you actually operate.
+        draft any of them. Write one sentence per PIQ. If any two sentences
+        share the same noun, rework. PIQ #3 is the best slot for a specific,
+        portable skill that does not fit anywhere else — the kind of capacity
+        that does not make it onto a resume but shows up everywhere in how you
+        actually operate.
       </p>
       <p>
         When your PIQ #3 draft is ready, run it through our{" "}

@@ -13,8 +13,14 @@ interface BrainstormResult {
   researchTips: string[];
 }
 
-export default function WhyCollegeBrainstormer() {
-  const [school, setSchool] = useState("");
+export default function WhyCollegeBrainstormer({
+  defaultSchool = "",
+  lockSchool = false,
+}: {
+  defaultSchool?: string;
+  lockSchool?: boolean;
+} = {}) {
+  const [school, setSchool] = useState(defaultSchool);
   const [major, setMajor] = useState("");
   const [interests, setInterests] = useState("");
   const [result, setResult] = useState<BrainstormResult | null>(null);
@@ -57,19 +63,21 @@ export default function WhyCollegeBrainstormer() {
         onSubmit={handleSubmit}
         className="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5"
       >
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-sm font-semibold text-[#0F172A] mb-2">School</label>
-            <input
-              type="text"
-              value={school}
-              onChange={(e) => setSchool(e.target.value)}
-              placeholder="e.g., Brown, Vanderbilt, USC"
-              className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition"
-              maxLength={100}
-              required
-            />
-          </div>
+        <div className={lockSchool ? "" : "grid md:grid-cols-2 gap-4"}>
+          {!lockSchool && (
+            <div>
+              <label className="block text-sm font-semibold text-[#0F172A] mb-2">School</label>
+              <input
+                type="text"
+                value={school}
+                onChange={(e) => setSchool(e.target.value)}
+                placeholder="e.g., Brown, Vanderbilt, USC"
+                className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition"
+                maxLength={100}
+                required
+              />
+            </div>
+          )}
           <div>
             <label className="block text-sm font-semibold text-[#0F172A] mb-2">Intended major</label>
             <input

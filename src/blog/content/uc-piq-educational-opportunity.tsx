@@ -33,6 +33,17 @@ export default function Content() {
         Additional Comments section. This essay carries its own weight
         regardless of campus. It is not a place to hedge.
       </p>
+      <p>
+        One more thing about the word count. UC is strict about 350.
+        Readers do not reward essays that go over, and the online portal
+        will not let you submit a PIQ longer than 350 words. The cap is a
+        ceiling, not a target — essays that land between 320 and 350 words
+        tend to be the most polished. Below 300 usually means the writer
+        did not develop the "what I did" section enough. Above 340 with
+        weak content usually means the writer padded. Aim for 340 to 350
+        words of substance, and cut any sentence that is not doing real
+        work.
+      </p>
 
       <h2>Why This Prompt Is Really Two Prompts</h2>
       <p>
@@ -65,6 +76,23 @@ export default function Content() {
         sentence, whether it is an opportunity essay or a barrier essay, the
         essay has not picked a lane yet. Rewrite from the lane you want to
         commit to. Cut everything that belongs to the other one.
+      </p>
+      <p>
+        A second test. Read your draft and underline every sentence that
+        names a specific action, program, or result. If the underlined
+        sentences, read alone, still tell a coherent story, your lane is
+        working. If the underlined sentences are split evenly between two
+        different stories, you have a hybrid. The fix is not to blend them
+        harder. The fix is to delete one.
+      </p>
+      <p>
+        How do you pick which lane? Choose the one where your material is
+        strongest, not the one you think will impress more. A vivid barrier
+        essay outperforms a vague opportunity essay every time, and a
+        specific opportunity essay outperforms a generic barrier essay
+        every time. Admissions readers are not ranking barriers against
+        opportunities. They are ranking essays against essays. The lane
+        matters less than the specificity inside the lane.
       </p>
 
       <h2>What Counts as an Educational Opportunity</h2>
@@ -104,6 +132,17 @@ export default function Content() {
         outperform a brand-name summer institute described in vague terms
         every single time.
       </p>
+      <p>
+        The quiet rule is that the opportunity has to have been
+        discretionary. Something you had to apply for, seek out, travel to,
+        or otherwise choose. Defaults do not count. If everyone at your
+        high school took the same honors track and you were simply enrolled
+        in it, the honors track is not your opportunity. If, on the other
+        hand, you audited a graduate-level linguistics seminar at the
+        nearest state university because your high school did not offer
+        anything past Spanish IV, that is an opportunity — and a strong
+        one, because the agency is unmistakable.
+      </p>
 
       <h2>What Counts as an Educational Barrier</h2>
       <p>
@@ -139,6 +178,16 @@ export default function Content() {
         advanced coursework is an educational barrier. The link to learning
         has to be explicit. If it is not, the essay belongs under PIQ #5
         (Challenge), not here.
+      </p>
+      <p>
+        The subtler test is whether the barrier required academic
+        problem-solving. A barrier essay should show you making learning
+        decisions under constraint — which textbook to use when your
+        school had none, how to prepare for an AP exam your school did not
+        offer the class for, how to keep studying when your home was not
+        quiet. If the reader cannot point to a specific academic decision
+        you made in response to the barrier, the essay has not made the
+        link.
       </p>
 
       <h2>What UC Readers Are Actually Screening For</h2>
@@ -228,6 +277,16 @@ export default function Content() {
         between these sections. If your "what I did" section is under 100
         words, the essay is underdeveloped. If it is over 200 words, you
         have probably left out the growth and the forward look.
+      </p>
+      <p>
+        One structural note about openings. UC readers are reading dozens
+        of PIQs in a session. A cold-open detail — a named program, a
+        named class, a named moment — is faster than a throat-clearing
+        sentence. "My mother was diagnosed with stage III lymphoma the
+        week I started sophomore year" is a cold open. "Throughout my high
+        school career, I have faced many challenges" is throat-clearing.
+        The first costs you nothing and earns you attention. The second
+        costs you 13 words you cannot afford.
       </p>
 
       <h2>What a Strong Educational Opportunity PIQ Actually Looks Like</h2>
