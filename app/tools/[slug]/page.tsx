@@ -18,6 +18,10 @@ import EssayTopicGenerator from "@/tools/components/EssayTopicGenerator";
 import WordCounter from "@/tools/components/WordCounter";
 import ReadabilityChecker from "@/tools/components/ReadabilityChecker";
 import ActivityListReviewer from "@/tools/components/ActivityListReviewer";
+import OutlineGenerator from "@/tools/components/OutlineGenerator";
+import ConclusionGenerator from "@/tools/components/ConclusionGenerator";
+import BragSheetGenerator from "@/tools/components/BragSheetGenerator";
+import InterviewPrep from "@/tools/components/InterviewPrep";
 import { RelatedTools } from "@/tools/components/RelatedTools";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { WhySchoolPage } from "@/tools/components/WhySchoolPage";
@@ -279,6 +283,10 @@ const toolComponents: Record<string, React.ComponentType> = {
   "college-essay-word-counter": WordCounter,
   "essay-readability-checker": ReadabilityChecker,
   "activity-list-reviewer": ActivityListReviewer,
+  "essay-outline-generator": OutlineGenerator,
+  "essay-conclusion-generator": ConclusionGenerator,
+  "recommendation-brag-sheet": BragSheetGenerator,
+  "college-interview-prep-questions": InterviewPrep,
 };
 
 export default async function ToolPage({

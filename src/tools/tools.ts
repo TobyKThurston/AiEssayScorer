@@ -113,6 +113,74 @@ export const tools: Tool[] = [
     ],
   },
   {
+    slug: "essay-outline-generator",
+    title: "College Essay Outline Generator",
+    shortTitle: "Outline Generator",
+    description:
+      "Turn your topic and prompt into a structured essay outline: hook, scene beats, reflection points, and a landing line. Free, no signup.",
+    seoDescription:
+      "Free college essay outline generator. Input a topic and prompt, get a structured 4-beat outline with hook, scene, reflection, and landing line.",
+    category: "Planning",
+    outputStyle: "structured",
+    keywords: [
+      "college essay outline generator",
+      "common app essay outline",
+      "how to outline a college essay",
+      "personal statement outline",
+    ],
+  },
+  {
+    slug: "essay-conclusion-generator",
+    title: "College Essay Conclusion Generator",
+    shortTitle: "Conclusion Generator",
+    description:
+      "Paste your essay body and get 3 conclusion options in different styles: reflective, scene-based, and forward-looking. No more stuck endings.",
+    seoDescription:
+      "Free college essay conclusion generator. Paste your essay body, get 3 conclusion options tailored to your draft, not generic templates.",
+    category: "Editing",
+    outputStyle: "streaming",
+    keywords: [
+      "college essay conclusion generator",
+      "how to end a college essay",
+      "essay ending examples",
+      "personal statement conclusion",
+    ],
+  },
+  {
+    slug: "recommendation-brag-sheet",
+    title: "Recommendation Letter Brag Sheet Generator",
+    shortTitle: "Brag Sheet Generator",
+    description:
+      "Organize your accomplishments, stories, and values into a brag sheet your teacher can actually use to write a strong recommendation letter.",
+    seoDescription:
+      "Free AI brag sheet generator for recommendation letters. Turn your experiences into the organized talking points teachers need to write a standout letter.",
+    category: "Planning",
+    outputStyle: "structured",
+    keywords: [
+      "brag sheet generator",
+      "recommendation letter brag sheet",
+      "teacher recommendation cheat sheet",
+      "college rec letter prep",
+    ],
+  },
+  {
+    slug: "college-interview-prep-questions",
+    title: "College Interview Prep Question Generator",
+    shortTitle: "Interview Prep",
+    description:
+      "Paste your application essays or activities and get the 10 most likely interview questions a college interviewer would ask, based on your actual application.",
+    seoDescription:
+      "Free college interview question generator. Get 10 likely interview questions tailored to your application essays and activities.",
+    category: "Planning",
+    outputStyle: "structured",
+    keywords: [
+      "college interview questions",
+      "college interview prep",
+      "alumni interview questions",
+      "college admissions interview practice",
+    ],
+  },
+  {
     slug: "college-essay-word-counter",
     title: "College Essay Word & Character Counter",
     shortTitle: "Word Counter",

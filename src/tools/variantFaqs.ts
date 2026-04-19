@@ -246,6 +246,62 @@ export function faqsForBaseTool(toolSlug: string): FAQ[] {
         answer: "Yes. The Common App explicitly invites work, care, and family responsibilities in the activities section. These often strengthen an applicant who might otherwise look thin on traditional activities.",
       },
     ],
+    "essay-outline-generator": [
+      {
+        question: "What makes a good college essay outline?",
+        answer: "A 4-beat structure usually works: hook, scene beats, reflection points, landing line. The outline generator produces this structure tied to your specific topic, with word allocation suggestions per section.",
+      },
+      {
+        question: "Should I always outline before writing my essay?",
+        answer: "Most strong drafts either outline or heavily revise from an exploratory first draft. If you write better by outlining, this tool gives you a scaffold. If you write better by drafting first, use it as a diagnostic after draft 1 to check your structure.",
+      },
+      {
+        question: "Can I outline for a supplemental essay, not just the personal statement?",
+        answer: "Yes. Set the word limit to match the supplemental (150, 250, 350, etc.) and the outline rebalances section lengths accordingly.",
+      },
+    ],
+    "essay-conclusion-generator": [
+      {
+        question: "How long should a college essay conclusion be?",
+        answer: "Most strong conclusions run 3 to 5 sentences. Shorter often feels abrupt; much longer usually means you're summarizing instead of landing.",
+      },
+      {
+        question: "Should a college essay conclusion restate my thesis?",
+        answer: "No. College essays are not argumentative essays. The conclusion should land an image, return to a scene, or point forward concretely — not summarize what you just wrote.",
+      },
+      {
+        question: "Why three conclusion options instead of one?",
+        answer: "Because the 'right' ending depends on the tone you want to leave with. The generator produces one reflective, one scene-based, and one forward-looking option so you can pick the register that fits your voice.",
+      },
+    ],
+    "recommendation-brag-sheet": [
+      {
+        question: "What is a brag sheet for a recommendation letter?",
+        answer: "A document you give your teacher (or counselor) that collects stories, moments, and qualities they could draw from when writing your letter. The best brag sheets are organized and scannable so your teacher can pick the 2 or 3 anchors they'll use.",
+      },
+      {
+        question: "Do teachers actually use brag sheets?",
+        answer: "Yes. Teachers write many rec letters each cycle. A specific, well-organized brag sheet is a gift: it reminds them of moments they'd forgotten and gives them quote-ready language.",
+      },
+      {
+        question: "How long should a brag sheet be?",
+        answer: "1 to 2 pages. Long enough to give the teacher real material, short enough that they'll actually read it. This generator outputs that length by default.",
+      },
+    ],
+    "college-interview-prep-questions": [
+      {
+        question: "What will the generator read when I paste my materials?",
+        answer: "The generator treats your pasted essays and activities as the interviewer's context. Alumni interviewers typically read the application before the conversation, so the questions mimic what they would naturally probe.",
+      },
+      {
+        question: "Should I rehearse answers to these questions word-for-word?",
+        answer: "No. The goal is to know your material well enough to answer fluently, not to recite. Focus on the 'strong answer approach' structure, then improvise within it.",
+      },
+      {
+        question: "Do all schools require interviews?",
+        answer: "Many selective private colleges offer optional alumni interviews; very few require them. Even when optional, scheduling one is usually a positive signal and gives you a chance to add context.",
+      },
+    ],
   };
 
   return [...(specific[toolSlug] ?? []), ...common];
