@@ -302,6 +302,62 @@ export function faqsForBaseTool(toolSlug: string): FAQ[] {
         answer: "Many selective private colleges offer optional alumni interviews; very few require them. Even when optional, scheduling one is usually a positive signal and gives you a chance to add context.",
       },
     ],
+    "essay-polish-pass": [
+      {
+        question: "What does the polish pass fix in my essay?",
+        answer: "Grammar, punctuation, redundant phrasing, weak verbs, passive voice, obvious cliches, and bumpy transitions. It's a comprehensive copy edit in a single pass that preserves your voice and content.",
+      },
+      {
+        question: "Will the polish pass rewrite the meaning of my essay?",
+        answer: "No. The system prompt locks the model to preserve your voice, content, and argument. It's explicitly prohibited from inventing facts, scenes, or reflection not already in the draft.",
+      },
+      {
+        question: "Is this just an AI grammar checker?",
+        answer: "It goes further. Standard grammar checkers catch punctuation and subject-verb agreement. This pass also replaces weak verbs, cuts filler, flags cliches, and smooths transitions, all calibrated for college admissions writing.",
+      },
+    ],
+    "essay-word-repetition-finder": [
+      {
+        question: "How does the repetition finder work?",
+        answer: "It runs entirely in your browser. No AI, no uploads. It counts word frequencies, identifies weak verbs (was, had, got, made), and flags common filler phrases (really, very, a lot). Results appear instantly.",
+      },
+      {
+        question: "What's a good word variety percentage?",
+        answer: "60 percent or higher (unique words divided by total words) generally signals healthy variety. Below 45 percent often means you're repeating yourself, even if the repetition feels natural when you read it aloud.",
+      },
+      {
+        question: "Why does the tool flag weak verbs?",
+        answer: "Verbs like 'was,' 'had,' and 'got' flatten prose. They signal that the writer chose a neutral option rather than the right one. 'My hand shook' beats 'I was nervous' on every essay rubric.",
+      },
+    ],
+    "college-essay-title-generator": [
+      {
+        question: "Do I always need a title for my college essay?",
+        answer: "No. The Common App personal statement does not use a title. Some schools (Tufts short takes, Lafayette, a few others) do ask for titles. Use this tool when a title is required or when you want a working title for brainstorming.",
+      },
+      {
+        question: "What makes a strong college essay title?",
+        answer: "Short (3 to 7 words), concrete (a specific object or image), and not explanatory. A title that summarizes the essay is weaker than one that creates curiosity. The generator produces 5 options across different styles so you can pick the register.",
+      },
+      {
+        question: "Should my title have a colon-subtitle structure?",
+        answer: "Almost never. 'The Kitchen: A Meditation on Family' reads as an academic paper. Strong essay titles are one line, not two. The generator avoids this pattern.",
+      },
+    ],
+    "college-matchmaker-from-essay": [
+      {
+        question: "Can an AI actually match me to colleges from my essay?",
+        answer: "Partially. The essay reveals voice, values, and intellectual texture, which are real signals of college fit. The AI matches on those signals and ideally tiers by stats. This is a starting point for your list, not a replacement for actual research.",
+      },
+      {
+        question: "Are the tier ratings accurate?",
+        answer: "They're rough guesses based on the essay and your stats if provided. Real admissions predictions need a full application context (GPA, course rigor, demographics, specific extracurricular strength). Use the tiers as starting hypotheses.",
+      },
+      {
+        question: "Why does the tool suggest schools to avoid?",
+        answer: "Because fit runs both ways. If your essay voice suggests you'd hate pre-professional culture, a heavily pre-business school may not be for you even if your stats fit. The tool flags school types (not specific names) that your essay suggests would be uncomfortable.",
+      },
+    ],
   };
 
   return [...(specific[toolSlug] ?? []), ...common];

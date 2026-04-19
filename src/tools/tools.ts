@@ -113,6 +113,74 @@ export const tools: Tool[] = [
     ],
   },
   {
+    slug: "essay-polish-pass",
+    title: "Essay Polish Pass",
+    shortTitle: "Polish Pass",
+    description:
+      "One-click comprehensive edit: grammar, flow, cliches, and weak word choices all tightened in a single pass. Voice preserved.",
+    seoDescription:
+      "Free AI college essay polish pass. Grammar, flow, cliches, and weak phrasing all fixed in one streaming edit. Voice preserved.",
+    category: "Editing",
+    outputStyle: "streaming",
+    keywords: [
+      "college essay polish",
+      "essay editor ai",
+      "comprehensive essay edit",
+      "essay grammar and flow",
+    ],
+  },
+  {
+    slug: "essay-word-repetition-finder",
+    title: "Essay Word Repetition & Weak Word Finder",
+    shortTitle: "Repetition Finder",
+    description:
+      "Find the 10 words you use too often, weak verbs, and passive phrasing in your college essay. Pure JS, runs instantly, no AI call.",
+    seoDescription:
+      "Free college essay word repetition and weak-word finder. Surfaces overused words, weak verbs, and passive voice patterns in seconds.",
+    category: "Analysis",
+    outputStyle: "structured",
+    keywords: [
+      "essay repetition checker",
+      "overused words essay",
+      "weak verbs essay",
+      "college essay word variety",
+    ],
+  },
+  {
+    slug: "college-essay-title-generator",
+    title: "College Essay Title Generator",
+    shortTitle: "Title Generator",
+    description:
+      "Some supplementals ask for essay titles. Paste your draft, get 5 title options that capture the essay without giving everything away.",
+    seoDescription:
+      "Free AI college essay title generator. Get 5 title options tailored to your draft for supplementals that require titles.",
+    category: "Brainstorming",
+    outputStyle: "streaming",
+    keywords: [
+      "college essay title generator",
+      "essay title ideas",
+      "supplemental essay titles",
+      "personal statement title",
+    ],
+  },
+  {
+    slug: "college-matchmaker-from-essay",
+    title: "College Matchmaker From Your Essay",
+    shortTitle: "College Matchmaker",
+    description:
+      "Paste your personal statement and get 10 US college suggestions matched to the voice, values, and intellectual interests your essay reveals.",
+    seoDescription:
+      "Free AI college matchmaker. Paste your personal statement, get 10 schools that match the voice and interests your essay actually shows.",
+    category: "Planning",
+    outputStyle: "structured",
+    keywords: [
+      "college match tool",
+      "college matchmaker ai",
+      "schools that fit me",
+      "college fit finder",
+    ],
+  },
+  {
     slug: "essay-outline-generator",
     title: "College Essay Outline Generator",
     shortTitle: "Outline Generator",

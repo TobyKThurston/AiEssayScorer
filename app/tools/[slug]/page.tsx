@@ -22,6 +22,10 @@ import OutlineGenerator from "@/tools/components/OutlineGenerator";
 import ConclusionGenerator from "@/tools/components/ConclusionGenerator";
 import BragSheetGenerator from "@/tools/components/BragSheetGenerator";
 import InterviewPrep from "@/tools/components/InterviewPrep";
+import PolishPass from "@/tools/components/PolishPass";
+import TitleGenerator from "@/tools/components/TitleGenerator";
+import CollegeMatchmaker from "@/tools/components/CollegeMatchmaker";
+import WordRepetitionFinder from "@/tools/components/WordRepetitionFinder";
 import { RelatedTools } from "@/tools/components/RelatedTools";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 import { WhySchoolPage } from "@/tools/components/WhySchoolPage";
@@ -287,6 +291,10 @@ const toolComponents: Record<string, React.ComponentType> = {
   "essay-conclusion-generator": ConclusionGenerator,
   "recommendation-brag-sheet": BragSheetGenerator,
   "college-interview-prep-questions": InterviewPrep,
+  "essay-polish-pass": PolishPass,
+  "essay-word-repetition-finder": WordRepetitionFinder,
+  "college-essay-title-generator": TitleGenerator,
+  "college-matchmaker-from-essay": CollegeMatchmaker,
 };
 
 export default async function ToolPage({
