@@ -31,21 +31,21 @@ export function PricingCard({
       className={`p-8 rounded-2xl border shadow-[0_4px_24px_rgba(148,163,184,0.12)] hover:shadow-[0_12px_40px_rgba(148,163,184,0.2)] transition-all duration-300 ${
         highlighted 
           ? "bg-gradient-to-b from-white to-[#F8FAFC] border-[#3B82F6] ring-4 ring-[#3B82F6]/10 hover:ring-[#3B82F6]/20" 
-          : "bg-white border-slate-200 hover:border-[#3B82F6]/20"
+          : "bg-white border-hair hover:border-[#3B82F6]/20"
       }`}
     >
       <h3 className="mb-2">{title}</h3>
       <div className="mb-6">
-        <span className="text-5xl text-[#0F172A]" style={{ fontFamily: "var(--font-heading)", fontWeight: 800 }}>
+        <span className="text-5xl text-ink" style={{ fontFamily: "var(--font-heading)", fontWeight: 800 }}>
           {price}
         </span>
-        {period && <span className="text-[#64748B] ml-2">{period}</span>}
+        {period && <span className="text-pencil ml-2">{period}</span>}
       </div>
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start gap-3">
             <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
-            <span className="text-[#475569]">{feature}</span>
+            <span className="text-ink-2">{feature}</span>
           </li>
         ))}
       </ul>

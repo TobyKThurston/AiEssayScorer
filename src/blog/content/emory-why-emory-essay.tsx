@@ -417,7 +417,7 @@ export default function Content() {
 
       <p>
         When your Why Emory draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to pressure-test whether the essay you wrote could have been
@@ -428,7 +428,7 @@ export default function Content() {
         what specific engagement looks like — read our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why This College guide
         </Link>
@@ -437,7 +437,7 @@ export default function Content() {
         tighter word count, our{" "}
         <Link
           href="/blog/upenn-why-penn-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Penn Why Penn guide
         </Link>{" "}

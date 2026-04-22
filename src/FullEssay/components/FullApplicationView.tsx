@@ -25,7 +25,7 @@ export function FullApplicationView() {
     content: searchParams.get("content") || "When my robotics team's main controller failed two days before the regional competition, I learned that true engineering isn't about perfect execution, it's about creative problem-solving under pressure..."
   }), [searchParams]);
   return (
-    <div className="min-h-screen bg-[#F8FAFC] pt-24 pb-16">
+    <div className="min-h-screen bg-paper pt-24 pb-16">
       <div className="max-w-[900px] mx-auto px-6">
         {/* Back Button */}
         <motion.div
@@ -35,7 +35,7 @@ export function FullApplicationView() {
         >
           <Link
             href="/ivy-league-essay-examples"
-            className="flex items-center gap-2 text-[#64748B] hover:text-[#3B82F6] transition-colors mb-8 group"
+            className="flex items-center gap-2 text-pencil hover:text-oxblood transition-colors mb-8 group"
           >
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
             <span>Back to all applications</span>
@@ -50,50 +50,50 @@ export function FullApplicationView() {
           className="bg-white rounded-2xl p-8 shadow-[0_4px_16px_rgba(0,0,0,0.06)] mb-8"
         >
           <div className="flex items-start gap-6 mb-6">
-            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center text-white shadow-lg flex-shrink-0">
+            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-oxblood to-forest flex items-center justify-center text-white shadow-lg flex-shrink-0">
               <span className="text-2xl">{studentProfile.name.split(' ').map(n => n[0]).join('')}</span>
             </div>
             <div className="flex-1">
               <h1 className="mb-2">{studentProfile.name}</h1>
-              <div className="flex flex-wrap items-center gap-2 text-[#64748B]">
+              <div className="flex flex-wrap items-center gap-2 text-pencil">
                 <span>{studentProfile.year}</span>
                 <span>•</span>
                 <span>{studentProfile.major}</span>
                 <span>•</span>
-                <span className="text-[#3B82F6] font-medium">{studentProfile.school}</span>
+                <span className="text-oxblood font-medium">{studentProfile.school}</span>
               </div>
             </div>
           </div>
 
           {/* Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-[#F8FAFC] rounded-xl p-4">
+            <div className="bg-paper rounded-xl p-4">
               <div className="flex items-center gap-2 mb-2">
-                <Award className="w-5 h-5 text-[#3B82F6]" />
-                <span className="text-[#64748B]">SAT Score</span>
+                <Award className="w-5 h-5 text-oxblood" />
+                <span className="text-pencil">SAT Score</span>
               </div>
-              <p className="text-[#0F172A]">{studentProfile.sat}</p>
+              <p className="text-ink">{studentProfile.sat}</p>
             </div>
-            <div className="bg-[#F8FAFC] rounded-xl p-4">
+            <div className="bg-paper rounded-xl p-4">
               <div className="flex items-center gap-2 mb-2">
-                <BookOpen className="w-5 h-5 text-[#3B82F6]" />
-                <span className="text-[#64748B]">GPA</span>
+                <BookOpen className="w-5 h-5 text-oxblood" />
+                <span className="text-pencil">GPA</span>
               </div>
-              <p className="text-[#0F172A]">{studentProfile.gpa.toFixed(2)}</p>
+              <p className="text-ink">{studentProfile.gpa.toFixed(2)}</p>
             </div>
-            <div className="bg-[#F8FAFC] rounded-xl p-4">
+            <div className="bg-paper rounded-xl p-4">
               <div className="flex items-center gap-2 mb-2">
-                <GraduationCap className="w-5 h-5 text-[#3B82F6]" />
-                <span className="text-[#64748B]">Major</span>
+                <GraduationCap className="w-5 h-5 text-oxblood" />
+                <span className="text-pencil">Major</span>
               </div>
-              <p className="text-[#0F172A]">{studentProfile.major}</p>
+              <p className="text-ink">{studentProfile.major}</p>
             </div>
-            <div className="bg-[#F8FAFC] rounded-xl p-4">
+            <div className="bg-paper rounded-xl p-4">
               <div className="flex items-center gap-2 mb-2">
-                <FileText className="w-5 h-5 text-[#3B82F6]" />
-                <span className="text-[#64748B]">School</span>
+                <FileText className="w-5 h-5 text-oxblood" />
+                <span className="text-pencil">School</span>
               </div>
-              <p className="text-[#0F172A] text-sm">{studentProfile.school}</p>
+              <p className="text-ink text-sm">{studentProfile.school}</p>
             </div>
           </div>
         </motion.div>
@@ -105,7 +105,7 @@ export function FullApplicationView() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="space-y-6"
         >
-          <h2 className="text-[#0F172A] mb-6">Essay</h2>
+          <h2 className="text-ink mb-6">Essay</h2>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -115,19 +115,19 @@ export function FullApplicationView() {
           >
             {/* Essay Header */}
             <div className="flex items-start gap-4 mb-6 pb-6 border-b border-slate-100">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center flex-shrink-0 shadow-md">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-oxblood to-forest flex items-center justify-center flex-shrink-0 shadow-md">
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <div className="flex-1">
-                <h3 className="text-[#0F172A] mb-2">{essay.type}</h3>
-                <p className="text-[#64748B] italic leading-relaxed">{essay.prompt}</p>
+                <h3 className="text-ink mb-2">{essay.type}</h3>
+                <p className="text-pencil italic leading-relaxed">{essay.prompt}</p>
               </div>
             </div>
 
             {/* Essay Content */}
             <div className="prose prose-slate max-w-none">
               {essay.content.split('\n\n').map((paragraph, pIndex) => (
-                <p key={pIndex} className="text-[#475569] leading-relaxed mb-4 last:mb-0">
+                <p key={pIndex} className="text-ink-2 leading-relaxed mb-4 last:mb-0">
                   {paragraph}
                 </p>
               ))}

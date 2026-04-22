@@ -20,7 +20,7 @@ export default function Content() {
         study" answer, the{" "}
         <Link
           href="/blog/mit-something-you-do-for-pleasure-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "something you do for pleasure"
         </Link>{" "}
@@ -222,7 +222,7 @@ export default function Content() {
         different work. If your{" "}
         <Link
           href="/blog/mit-something-you-do-for-pleasure-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           pleasure essay
         </Link>{" "}
@@ -235,14 +235,14 @@ export default function Content() {
       </p>
       <p>
         Before submitting, run your draft through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to pressure-test whether the contribution is concrete enough. For
         the companion MIT guide, see our{" "}
         <Link
           href="/blog/mit-something-you-do-for-pleasure-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           MIT pleasure essay guide
         </Link>
@@ -250,14 +250,14 @@ export default function Content() {
         our{" "}
         <Link
           href="/blog/yale-community-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Yale community essay guide
         </Link>{" "}
         and our{" "}
         <Link
           href="/blog/upenn-community-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Penn community essay guide
         </Link>

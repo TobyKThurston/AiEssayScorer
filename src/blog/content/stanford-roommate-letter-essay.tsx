@@ -367,14 +367,14 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the voice actually reads as a letter rather than an
         essay. If you are also working on the Stanford values prompt, our{" "}
         <Link
           href="/blog/stanford-what-matters-to-you-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           What Matters to You and Why guide
         </Link>{" "}
@@ -384,7 +384,7 @@ export default function Content() {
         actually reads — read our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Ivy League essay guide
         </Link>

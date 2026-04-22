@@ -167,10 +167,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const categoryColors: Record<string, string> = {
-  "Writing Guides": "bg-[#EDE9FE] text-[#6D28D9]",
-  "Common App": "bg-[#DBEAFE] text-[#1D4ED8]",
-  "Supplemental Essays": "bg-[#FCE7F3] text-[#BE185D]",
-  "Ivy League": "bg-[#D1FAE5] text-[#065F46]",
+  "Writing Guides": "bg-paper-2 text-oxblood",
+  "Common App": "bg-paper-2 text-oxblood",
+  "Supplemental Essays": "bg-paper-2 text-oxblood",
+  "Ivy League": "bg-paper-2 text-forest",
 };
 
 export default async function BlogPost({ params }: Props) {
@@ -229,7 +229,7 @@ export default async function BlogPost({ params }: Props) {
         {/* Back link */}
         <Link
           href="/blog"
-          className="inline-flex items-center gap-1.5 text-sm text-[#6366F1] hover:text-[#4F46E5] transition-colors mb-10"
+          className="inline-flex items-center gap-1.5 text-sm text-oxblood hover:text-oxblood-2 transition-colors mb-10"
         >
           <ArrowLeft className="w-4 h-4" />
           All articles
@@ -239,11 +239,11 @@ export default async function BlogPost({ params }: Props) {
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-5">
             <span
-              className={`text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[post.category] ?? "bg-slate-100 text-slate-600"}`}
+              className={`text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[post.category] ?? "bg-paper-2 text-ink-2"}`}
             >
               {post.category}
             </span>
-            <span className="flex items-center gap-1 text-xs text-[#94A3B8]">
+            <span className="flex items-center gap-1 text-xs text-pencil">
               <Clock className="w-3 h-3" />
               {post.readTime}
             </span>
@@ -263,7 +263,7 @@ export default async function BlogPost({ params }: Props) {
             {post.title}
           </h1>
 
-          <p className="text-[#64748B] text-sm">
+          <p className="text-pencil text-sm">
             {formatDate(post.publishedAt)} · Ivy Admit
           </p>
         </div>
@@ -274,8 +274,8 @@ export default async function BlogPost({ params }: Props) {
         </article>
 
         {/* CTA box */}
-        <div className="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_8px_32px_rgba(99,102,241,0.10)] p-8 mb-14 text-center">
-          <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-3">
+        <div className="rounded-2xl bg-cream border border-hair shadow-[0_8px_32px_rgba(99,102,241,0.10)] p-8 mb-14 text-center">
+          <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-3">
             Ready to improve your essay?
           </p>
           <h2
@@ -290,12 +290,12 @@ export default async function BlogPost({ params }: Props) {
           >
             Get a score and line-by-line edits in under a minute
           </h2>
-          <p className="text-[#64748B] text-sm mb-6 max-w-md mx-auto">
+          <p className="text-pencil text-sm mb-6 max-w-md mx-auto">
             Upload your draft and get scored across content, structure, and voice, plus specific suggestions to raise every dimension.
           </p>
           <Link
             href="/editor"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1e1e3f] transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-ink text-white text-sm font-medium hover:bg-oxblood transition-all"
           >
             Review your essay free
             <ArrowRight className="w-4 h-4" />
@@ -304,16 +304,16 @@ export default async function BlogPost({ params }: Props) {
 
         {/* Post navigation */}
         {(prev || next) && (
-          <div className="flex items-start justify-between gap-6 pt-8 border-t border-white/40">
+          <div className="flex items-start justify-between gap-6 pt-8 border-t border-hair">
             {prev ? (
               <Link
                 href={`/blog/${prev.slug}`}
                 className="flex-1 group"
               >
-                <p className="text-xs text-[#94A3B8] mb-1 flex items-center gap-1">
+                <p className="text-xs text-pencil mb-1 flex items-center gap-1">
                   <ArrowLeft className="w-3 h-3" /> Previous
                 </p>
-                <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#6366F1] transition-colors leading-snug">
+                <p className="text-sm font-semibold text-ink group-hover:text-oxblood transition-colors leading-snug">
                   {prev.title}
                 </p>
               </Link>
@@ -325,10 +325,10 @@ export default async function BlogPost({ params }: Props) {
                 href={`/blog/${next.slug}`}
                 className="flex-1 text-right group"
               >
-                <p className="text-xs text-[#94A3B8] mb-1 flex items-center justify-end gap-1">
+                <p className="text-xs text-pencil mb-1 flex items-center justify-end gap-1">
                   Next <ArrowRight className="w-3 h-3" />
                 </p>
-                <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#6366F1] transition-colors leading-snug">
+                <p className="text-sm font-semibold text-ink group-hover:text-oxblood transition-colors leading-snug">
                   {next.title}
                 </p>
               </Link>

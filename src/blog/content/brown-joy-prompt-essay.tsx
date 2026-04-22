@@ -314,7 +314,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the daily-practice beat is actually doing more work
@@ -322,7 +322,7 @@ export default function Content() {
         Curriculum supplement, our{" "}
         <Link
           href="/blog/brown-why-brown-open-curriculum-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Brown Open Curriculum essay guide
         </Link>{" "}
@@ -331,7 +331,7 @@ export default function Content() {
         as well, compare both joy prompts side by side with our{" "}
         <Link
           href="/blog/princeton-what-brings-you-joy-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Princeton joy essay guide
         </Link>{" "}

@@ -331,7 +331,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether both halves of the prompt are actually answered and
@@ -339,7 +339,7 @@ export default function Content() {
         Before you finalize, read our{" "}
         <Link
           href="/blog/upenn-why-penn-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why Penn essay guide
         </Link>{" "}
@@ -347,7 +347,7 @@ export default function Content() {
         you are still working through the rest of the Penn application, our{" "}
         <Link
           href="/blog/upenn-community-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Penn community essay guide
         </Link>{" "}

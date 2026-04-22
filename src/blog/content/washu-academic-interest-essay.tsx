@@ -339,14 +339,14 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check that the WashU specifics actually land rather than read as
         decoration. If you are also working on the paired supplement, our{" "}
         <Link
           href="/blog/washu-why-washu-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why WashU essay guide
         </Link>{" "}
@@ -357,7 +357,7 @@ export default function Content() {
         read our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why This College essay guide
         </Link>

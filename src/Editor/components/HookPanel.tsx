@@ -33,7 +33,7 @@ function CopyButton({ text }: { text: string }) {
   return (
     <button
       onClick={handleCopy}
-      className="flex items-center gap-1 text-[10px] text-[#64748B] hover:text-[#0F172A] transition-colors"
+      className="flex items-center gap-1 text-[10px] text-pencil hover:text-ink transition-colors"
       title="Copy to clipboard"
     >
       {copied ? (
@@ -55,7 +55,7 @@ export function HookPanel({ hooks, isPro, isGenerating, onRegenerate }: HookPane
   const activeHookText = hooks[activeTab];
 
   return (
-    <div className="rounded-xl bg-white border border-slate-200 overflow-hidden">
+    <div className="rounded-xl bg-white border border-hair overflow-hidden">
       {/* Header */}
       <button
         onClick={() => setIsOpen((v) => !v)}
@@ -63,11 +63,11 @@ export function HookPanel({ hooks, isPro, isGenerating, onRegenerate }: HookPane
       >
         <div className="flex items-center gap-2">
           <div className="w-5 h-5 rounded-md bg-[#EDE9FE] flex items-center justify-center">
-            <Sparkles className="w-3 h-3 text-[#6366F1]" />
+            <Sparkles className="w-3 h-3 text-oxblood" />
           </div>
-          <span className="text-xs font-semibold text-[#475569]">Alternative Hooks</span>
+          <span className="text-xs font-semibold text-ink-2">Alternative Hooks</span>
         </div>
-        <span className="text-[10px] text-[#94A3B8]">{isOpen ? "▲" : "▼"}</span>
+        <span className="text-[10px] text-pencil">{isOpen ? "▲" : "▼"}</span>
       </button>
 
       {isOpen && (
@@ -80,8 +80,8 @@ export function HookPanel({ hooks, isPro, isGenerating, onRegenerate }: HookPane
                 onClick={() => setActiveTab(key)}
                 className={`flex-1 text-[10px] font-medium py-1 rounded-md transition-colors ${
                   activeTab === key
-                    ? "bg-[#6366F1] text-white"
-                    : "bg-slate-100 text-[#64748B] hover:bg-slate-200"
+                    ? "bg-oxblood text-white"
+                    : "bg-paper-2 text-pencil hover:bg-slate-200"
                 }`}
               >
                 {label}
@@ -92,7 +92,7 @@ export function HookPanel({ hooks, isPro, isGenerating, onRegenerate }: HookPane
           {/* Content */}
           {activeTab === "narrative" ? (
             <div className="space-y-1.5">
-              <p className="text-xs text-[#0F172A] leading-relaxed">{hooks.narrative}</p>
+              <p className="text-xs text-ink leading-relaxed">{hooks.narrative}</p>
               <div className="flex justify-end">
                 <CopyButton text={hooks.narrative} />
               </div>
@@ -104,7 +104,7 @@ export function HookPanel({ hooks, isPro, isGenerating, onRegenerate }: HookPane
               description="Unlock Bold Statement and Reflective hooks"
             >
               <div className="space-y-1.5">
-                <p className="text-xs text-[#0F172A] leading-relaxed">
+                <p className="text-xs text-ink leading-relaxed">
                   {activeHookText ?? "Hook not available"}
                 </p>
                 <div className="flex justify-end">
@@ -119,7 +119,7 @@ export function HookPanel({ hooks, isPro, isGenerating, onRegenerate }: HookPane
             <button
               onClick={onRegenerate}
               disabled={isGenerating}
-              className="flex items-center gap-1 text-[10px] font-medium text-[#6366F1] hover:underline disabled:opacity-40"
+              className="flex items-center gap-1 text-[10px] font-medium text-oxblood hover:underline disabled:opacity-40"
             >
               <RefreshCw className={`w-3 h-3 ${isGenerating ? "animate-spin" : ""}`} />
               {isGenerating ? "Regenerating..." : "Regenerate"}

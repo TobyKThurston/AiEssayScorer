@@ -56,10 +56,10 @@ export default function EssayTopicGenerator({
       {paywall && <PaywallBanner />}
       <form
         onSubmit={handleSubmit}
-        className="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5"
+        className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5"
       >
         <div>
-          <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+          <label className="block text-sm font-semibold text-ink mb-2">
             Your background, activities, and interests
           </label>
           <textarea
@@ -67,28 +67,28 @@ export default function EssayTopicGenerator({
             onChange={(e) => setBackground(e.target.value)}
             placeholder="e.g., I'm a first-gen student, I work 15 hrs/week at my family's restaurant, I'm on math team, I teach myself Korean..."
             rows={5}
-            className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition resize-none"
+            className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none"
             maxLength={1500}
             required
           />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-[#0F172A] mb-2">
-            Quirks, small obsessions, or specific moments <span className="font-normal text-[#94A3B8]">(the good stuff)</span>
+          <label className="block text-sm font-semibold text-ink mb-2">
+            Quirks, small obsessions, or specific moments <span className="font-normal text-pencil">(the good stuff)</span>
           </label>
           <textarea
             value={quirks}
             onChange={(e) => setQuirks(e.target.value)}
             placeholder="e.g., I collect receipts from every restaurant I eat at, I reread the same book every summer, I argued with my grandma for two years about sourdough..."
             rows={3}
-            className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition resize-none"
+            className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none"
             maxLength={800}
           />
         </div>
         <button
           type="submit"
           disabled={loading || !background.trim()}
-          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#6366F1] text-white font-medium text-sm hover:bg-[#4F46E5] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl btn btn-sm btn-brand transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? (
             <><Loader2 className="w-4 h-4 animate-spin" /> Thinking...</>
@@ -99,7 +99,7 @@ export default function EssayTopicGenerator({
       </form>
 
       {error && (
-        <div className="rounded-xl bg-[#FEF2F2] border border-[#FECACA] p-4 text-sm text-[#B91C1C]">
+        <div className="rounded-xl bg-[#FAEEEA] border border-[#E8C9C2] p-4 text-sm text-[#B91C1C]">
           {error}
         </div>
       )}
@@ -109,24 +109,24 @@ export default function EssayTopicGenerator({
           {topics.map((t, i) => (
             <div
               key={i}
-              className="rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6"
+              className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6"
             >
               <div className="flex items-center gap-3 mb-3">
-                <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-[#D1FAE5] text-[#065F46]">
+                <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-forest">
                   <Lightbulb className="w-4 h-4" />
                 </span>
-                <h3 className="text-[17px] font-extrabold text-[#0F172A]" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}>
+                <h3 className="text-[17px] font-extrabold text-ink" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}>
                   {t.title}
                 </h3>
               </div>
-              <p className="text-[#0F172A] text-[14.5px] leading-relaxed mb-3">{t.pitch}</p>
+              <p className="text-ink text-[14.5px] leading-relaxed mb-3">{t.pitch}</p>
               <div className="flex flex-wrap gap-2 mb-3">
-                <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-[#DBEAFE] text-[#1D4ED8]">
+                <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-paper-2 text-oxblood">
                   Best fit: {t.bestPromptFit}
                 </span>
               </div>
-              <p className="text-sm text-[#475569] leading-relaxed border-l-2 border-[#E0E7FF] pl-3">
-                <span className="font-semibold text-[#0F172A]">Why it works: </span>
+              <p className="text-sm text-ink-2 leading-relaxed border-l-2 border-hair pl-3">
+                <span className="font-semibold text-ink">Why it works: </span>
                 {t.whyItWorks}
               </p>
             </div>

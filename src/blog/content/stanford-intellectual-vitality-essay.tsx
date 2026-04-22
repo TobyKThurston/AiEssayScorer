@@ -353,21 +353,21 @@ export default function Content() {
 
       <p>
         Once your draft is in decent shape, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to pressure-test whether your specificity and depth are landing.
         For the companion Stanford essays, see our guides on{" "}
         <Link
           href="/blog/stanford-what-matters-to-you-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "What Matters to You, and Why?"
         </Link>{" "}
         and the{" "}
         <Link
           href="/blog/stanford-roommate-letter-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Stanford roommate letter
         </Link>
@@ -375,7 +375,7 @@ export default function Content() {
         supplement, our{" "}
         <Link
           href="/blog/harvard-intellectual-experience-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Harvard intellectual experience guide
         </Link>{" "}
@@ -383,7 +383,7 @@ export default function Content() {
         broader principles that apply across elite supplements, read our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Ivy League essay guide
         </Link>

@@ -88,10 +88,10 @@ export default function CollegeEssayCheckerPage() {
 
         {/* Hero */}
         <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] leading-tight mb-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-ink leading-tight mb-4">
             College Essay Checker: Is Your Draft Ready to Submit?
           </h1>
-          <p className="text-lg text-[#475569] mb-6">
+          <p className="text-lg text-ink-2 mb-6">
             Before you hit submit, run your essay through the same patterns that distinguish
             admitted applications from strong-but-generic ones. The college essay checker scores
             your draft on content, structure, and voice, and tells you specifically what to fix
@@ -99,7 +99,7 @@ export default function CollegeEssayCheckerPage() {
           </p>
           <Link
             href="/editor"
-            className="inline-block px-6 py-3 rounded-full bg-[#0A0A0F] text-white font-medium hover:bg-[#1a1a2e] transition-all"
+            className="inline-block px-6 py-3 rounded-full bg-ink text-white font-medium hover:bg-oxblood transition-all"
           >
             Check your essay free →
           </Link>
@@ -216,13 +216,13 @@ export default function CollegeEssayCheckerPage() {
           </p>
 
           {/* Mid-page CTA */}
-          <div className="not-prose my-10 rounded-2xl bg-[#F5F3FF] border border-[#C4B5FD]/50 p-7 text-center">
-            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">Run the check, free</p>
-            <p className="text-[#0F172A] font-bold text-lg mb-3">Know if your essay is submission-ready</p>
-            <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">Paste your draft and get a scored pre-submission report in under 60 seconds. Works for personal statements, Why School essays, and short supplements.</p>
+          <div className="not-prose my-10 rounded-2xl bg-cream border border-[#C4B5FD]/50 p-7 text-center">
+            <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-2">Run the check, free</p>
+            <p className="text-ink font-bold text-lg mb-3">Know if your essay is submission-ready</p>
+            <p className="text-pencil text-sm mb-5 max-w-md mx-auto">Paste your draft and get a scored pre-submission report in under 60 seconds. Works for personal statements, Why School essays, and short supplements.</p>
             <Link
               href="/editor"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1e1e3f] transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-ink text-white text-sm font-medium hover:bg-oxblood transition-all"
             >
               Check your essay free →
             </Link>
@@ -231,23 +231,23 @@ export default function CollegeEssayCheckerPage() {
           {/* Before / After */}
           <h2>Before and After: Evidence Specificity</h2>
           <div className="not-prose grid md:grid-cols-2 gap-4 my-6">
-            <div className="bg-red-50 border border-red-200 rounded-xl p-5">
-              <p className="text-xs font-semibold text-red-600 uppercase tracking-wide mb-2">Before</p>
-              <p className="text-[#0F172A] text-sm">
+            <div className="bg-[#FAEEEA] border border-[#E8C9C2] rounded-xl p-5">
+              <p className="text-xs font-semibold text-oxblood uppercase tracking-wide mb-2">Before</p>
+              <p className="text-ink text-sm">
                 "Volunteering at the hospital taught me how to connect with people from different
                 backgrounds. I became more empathetic and learned that everyone has a story worth
                 hearing."
               </p>
-              <p className="text-xs text-red-500 mt-2">Content score: 41, two abstract lessons, no specific person or moment</p>
+              <p className="text-xs text-oxblood-2 mt-2">Content score: 41, two abstract lessons, no specific person or moment</p>
             </div>
-            <div className="bg-green-50 border border-green-200 rounded-xl p-5">
-              <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">After</p>
-              <p className="text-[#0F172A] text-sm">
+            <div className="bg-[#EAF2E8] border border-[#C6D6BC] rounded-xl p-5">
+              <p className="text-xs font-semibold text-forest uppercase tracking-wide mb-2">After</p>
+              <p className="text-ink text-sm">
                 "Mr. Torres was eighty-two and had been in room 14 for eleven days when I finally
                 figured out he wasn't ignoring me, he was hard of hearing on his left side. After
                 that, I always sat on his right."
               </p>
-              <p className="text-xs text-green-600 mt-2">Content score: 89, specific person, specific detail, shows adjustment not just awareness</p>
+              <p className="text-xs text-forest mt-2">Content score: 89, specific person, specific detail, shows adjustment not just awareness</p>
             </div>
           </div>
 
@@ -257,36 +257,36 @@ export default function CollegeEssayCheckerPage() {
             {faqSchema.mainEntity.map((item) => (
               <details
                 key={item.name}
-                className="border border-slate-200 rounded-xl px-5 py-4 bg-white/60"
+                className="border border-hair rounded-xl px-5 py-4 bg-cream"
               >
-                <summary className="font-medium text-[#0F172A] cursor-pointer">
+                <summary className="font-medium text-ink cursor-pointer">
                   {item.name}
                 </summary>
-                <p className="mt-3 text-[#475569] text-sm">{item.acceptedAnswer.text}</p>
+                <p className="mt-3 text-ink-2 text-sm">{item.acceptedAnswer.text}</p>
               </details>
             ))}
           </div>
 
           {/* Internal links */}
-          <div className="not-prose mt-12 pt-8 border-t border-slate-200">
-            <p className="text-sm text-[#64748B] mb-4">Continue reading</p>
+          <div className="not-prose mt-12 pt-8 border-t border-hair">
+            <p className="text-sm text-pencil mb-4">Continue reading</p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/editor" className="px-4 py-2 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1a1a2e] transition-all">
+              <Link href="/editor" className="px-4 py-2 rounded-full bg-ink text-white text-sm font-medium hover:bg-oxblood transition-all">
                 Check your essay
               </Link>
-              <Link href="/ai-essay-review" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/ai-essay-review" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 AI Essay Review
               </Link>
-              <Link href="/how-to-improve-college-essay" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/how-to-improve-college-essay" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 How to Improve Your Essay
               </Link>
-              <Link href="/common-app-essay-help" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/common-app-essay-help" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 Common App Essay Help
               </Link>
-              <Link href="/ivy-league-essay-examples" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/ivy-league-essay-examples" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 Ivy League Essay Examples
               </Link>
-              <Link href="/blog" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/blog" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 Blog
               </Link>
             </div>

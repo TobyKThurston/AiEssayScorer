@@ -134,35 +134,35 @@ export default function Content() {
       <p>
         Draft this one alongside the Core essay and compare them side by
         side — they should not overlap. Run both through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         for voice and specificity. For the companion Columbia prompts,
         see our{" "}
         <Link
           href="/blog/columbia-why-columbia-essay-core-curriculum"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Columbia Core Curriculum essay guide
         </Link>{" "}
         and{" "}
         <Link
           href="/blog/columbia-list-essay-what-are-you-reading"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Columbia list essay guide
         </Link>
         . For broader framing, read our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "Why This College" guide
         </Link>{" "}
         and{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Ivy League essay tips
         </Link>

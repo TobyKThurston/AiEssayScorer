@@ -339,7 +339,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the essay reads as Notre Dame-specific rather than
@@ -348,7 +348,7 @@ export default function Content() {
         means, and how to avoid the generic trap — read our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why This College essay guide
         </Link>
@@ -357,7 +357,7 @@ export default function Content() {
         Jesuit tradition — our{" "}
         <Link
           href="/blog/georgetown-essay-prompts-guide"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Georgetown essay prompts guide
         </Link>{" "}

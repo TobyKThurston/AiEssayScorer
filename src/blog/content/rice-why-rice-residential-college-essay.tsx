@@ -149,7 +149,7 @@ export default function Content() {
       </p>
 
       <p>
-        Before submitting, run both Rice supplements through our <Link href="/editor" className="text-[#6366F1] hover:underline">AI essay review tool</Link> to check that the two essays cover different sides of you and that every sentence carries Rice-specific content. For the underlying framework behind any Why essay, see our <Link href="/blog/why-this-college-essay" className="text-[#6366F1] hover:underline">Why This College guide</Link>. For how peer schools handle community prompts, read our <Link href="/blog/yale-community-essay" className="text-[#6366F1] hover:underline">Yale community essay guide</Link>. And for broader patterns across competitive supplements, see our <Link href="/blog/ivy-league-essay-tips" className="text-[#6366F1] hover:underline">Ivy League essay analysis</Link>.
+        Before submitting, run both Rice supplements through our <Link href="/editor" className="text-oxblood hover:underline">AI essay review tool</Link> to check that the two essays cover different sides of you and that every sentence carries Rice-specific content. For the underlying framework behind any Why essay, see our <Link href="/blog/why-this-college-essay" className="text-oxblood hover:underline">Why This College guide</Link>. For how peer schools handle community prompts, read our <Link href="/blog/yale-community-essay" className="text-oxblood hover:underline">Yale community essay guide</Link>. And for broader patterns across competitive supplements, see our <Link href="/blog/ivy-league-essay-tips" className="text-oxblood hover:underline">Ivy League essay analysis</Link>.
       </p>
     </>
   );

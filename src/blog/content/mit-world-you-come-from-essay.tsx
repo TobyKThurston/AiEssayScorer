@@ -363,7 +363,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the world is actually specific and the
@@ -371,14 +371,14 @@ export default function Content() {
         the other MIT short answers, our{" "}
         <Link
           href="/blog/mit-contribute-to-community-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           MIT Contribute to Community guide
         </Link>{" "}
         covers the action-inside-a-community essay, and our{" "}
         <Link
           href="/blog/mit-challenge-you-faced-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           MIT Challenge You Faced guide
         </Link>{" "}

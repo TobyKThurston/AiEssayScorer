@@ -47,8 +47,8 @@ export default function ReadabilityChecker() {
     const passiveRatio = (passiveMatches.length / sentenceCount) * 100;
 
     let band = "College-ready";
-    let bandColor = "text-[#065F46]";
-    let bandBg = "bg-[#D1FAE5]";
+    let bandColor = "text-forest";
+    let bandBg = "bg-paper-2";
     if (fleschKincaidGrade >= 14) {
       band = "Dense / graduate-level";
       bandColor = "text-[#92400E]";
@@ -57,8 +57,8 @@ export default function ReadabilityChecker() {
       band = "College-ready";
     } else if (fleschKincaidGrade >= 8) {
       band = "Accessible";
-      bandColor = "text-[#1D4ED8]";
-      bandBg = "bg-[#DBEAFE]";
+      bandColor = "text-oxblood";
+      bandBg = "bg-paper-2";
     } else {
       band = "Too casual for admissions";
       bandColor = "text-[#B91C1C]";
@@ -83,8 +83,8 @@ export default function ReadabilityChecker() {
 
   return (
     <div className="space-y-6">
-      <div className="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
-        <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+      <div className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+        <label className="block text-sm font-semibold text-ink mb-2">
           Paste your essay draft
         </label>
         <textarea
@@ -92,13 +92,13 @@ export default function ReadabilityChecker() {
           onChange={(e) => setText(e.target.value)}
           placeholder="Paste your essay here. The analysis runs live."
           rows={12}
-          className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition resize-none font-mono"
+          className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none font-mono"
         />
       </div>
 
       {analysis && (
         <>
-          <div className="rounded-2xl bg-gradient-to-br from-[#6366F1] to-[#4F46E5] p-8 text-white">
+          <div className="rounded-2xl bg-gradient-to-br from-oxblood to-oxblood-2 p-8 text-white">
             <p className="text-xs font-semibold uppercase tracking-widest mb-2 opacity-80">
               Reading difficulty
             </p>
@@ -169,23 +169,23 @@ function Metric({
 }) {
   const pct = Math.min(100, Math.round((value / Math.max(1, max)) * 100));
   return (
-    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
       <div className="flex items-center gap-2 mb-3">
-        <span className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-[#EDE9FE] text-[#6D28D9]">
+        <span className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-paper-2 text-oxblood">
           {icon}
         </span>
-        <span className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">{label}</span>
+        <span className="text-xs font-semibold text-pencil uppercase tracking-wider">{label}</span>
       </div>
-      <p className="text-3xl font-extrabold text-[#0F172A] mb-3" style={{ fontFamily: "var(--font-heading)" }}>
+      <p className="text-3xl font-extrabold text-ink mb-3" style={{ fontFamily: "var(--font-heading)" }}>
         {value}{unit}
       </p>
-      <div className="h-1.5 rounded-full bg-slate-100 overflow-hidden mb-2">
+      <div className="h-1.5 rounded-full bg-paper-2 overflow-hidden mb-2">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-[#6366F1] to-[#8B5CF6]"
+          className="h-full rounded-full bg-gradient-to-r from-oxblood to-[#8B5CF6]"
           style={{ width: `${pct}%` }}
         />
       </div>
-      <p className="text-xs text-[#64748B]">{note}</p>
+      <p className="text-xs text-pencil">{note}</p>
     </div>
   );
 }

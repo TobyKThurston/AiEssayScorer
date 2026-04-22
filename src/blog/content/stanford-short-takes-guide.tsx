@@ -167,27 +167,27 @@ export default function Content() {
 
       <p>
         Run your draft through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         for voice and specificity. For Stanford's long essays, see our{" "}
         <Link
           href="/blog/stanford-what-matters-to-you-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "What Matters to You" guide
         </Link>
         ,{" "}
         <Link
           href="/blog/stanford-intellectual-vitality-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "Intellectual Vitality" guide
         </Link>
         , and{" "}
         <Link
           href="/blog/stanford-roommate-letter-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Roommate Letter guide
         </Link>

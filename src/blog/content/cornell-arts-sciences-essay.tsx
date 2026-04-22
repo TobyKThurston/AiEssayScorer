@@ -333,7 +333,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the lens actually runs through the whole piece
@@ -342,7 +342,7 @@ export default function Content() {
         Cornell supplement across colleges, read our{" "}
         <Link
           href="/blog/cornell-why-cornell-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Cornell "why Cornell" guide
         </Link>
@@ -352,7 +352,7 @@ export default function Content() {
         college-essay voice — read our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           why this college essay guide
         </Link>

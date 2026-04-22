@@ -342,7 +342,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the 150 words are actually doing new work or just
@@ -350,7 +350,7 @@ export default function Content() {
         the school-fit short answer, our{" "}
         <Link
           href="/blog/notre-dame-why-notre-dame-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why Notre Dame essay guide
         </Link>{" "}
@@ -360,7 +360,7 @@ export default function Content() {
         short, read our{" "}
         <Link
           href="/blog/common-app-additional-information-guide"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Common App Additional Information guide
         </Link>

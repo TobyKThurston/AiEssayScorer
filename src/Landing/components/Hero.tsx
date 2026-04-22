@@ -1,292 +1,58 @@
 "use client";
 
-import { motion } from "motion/react";
-import { Button } from "./Button";
-import { CheckCircle2, TrendingUp, Sparkles, Star } from "lucide-react";
 import Link from "next/link";
-
-const AVATARS = [
-  { initials: "SL", bg: "from-[#818CF8] to-[#6366F1]" },
-  { initials: "MK", bg: "from-[#34D399] to-[#059669]" },
-  { initials: "AT", bg: "from-[#F472B6] to-[#DB2777]" },
-  { initials: "RJ", bg: "from-[#FBBF24] to-[#D97706]" },
-  { initials: "CW", bg: "from-[#60A5FA] to-[#2563EB]" },
-];
+import { Container } from "@/design/Container";
+import { HeroDemo } from "./HeroDemo";
 
 export function Hero() {
   return (
-    <section className="relative pt-28 md:pt-36 pb-16 md:pb-28 overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-16 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left, text */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <motion.p
-              className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-4 flex items-center gap-1.5"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.05 }}
-            >
-              <Sparkles className="w-3 h-3" />
-              AI Essay Scoring
-            </motion.p>
-
-            <motion.h1
-              className="mb-4"
-              style={{
-                fontFamily: "var(--font-heading)",
-                fontSize: "clamp(38px, 5vw, 58px)",
-                lineHeight: "1.1",
-                letterSpacing: "-0.03em",
-              }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              Know where your essay stands before you submit.
-            </motion.h1>
-
-            <motion.p
-              className="text-[#64748B] text-[17px] leading-relaxed mb-6"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.18 }}
-            >
-              Get clear, actionable feedback on clarity, structure, and admissions
-              impact, instantly.
-            </motion.p>
-
-            <motion.div
-              className="flex flex-col sm:flex-row gap-3 mb-4"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.26 }}
-            >
-              <Button variant="primary" href="/try">
-                Score My Essay
-              </Button>
-              <Button variant="secondary" href="/ivy-league-essay-examples">
-                Browse examples
-              </Button>
-            </motion.div>
-
-            <motion.p
-              className="text-xs text-[#94A3B8] mb-8"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.34 }}
-            >
-              Most first drafts score below 70. Find out where yours stands.
-            </motion.p>
-
-            {/* Social proof row */}
-            <motion.div
-              className="flex items-center gap-3 mb-6"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <div className="flex items-center">
-                {AVATARS.map((avatar, i) => (
-                  <div
-                    key={avatar.initials}
-                    className={`w-8 h-8 rounded-full bg-gradient-to-br ${avatar.bg} flex items-center justify-center text-white text-[10px] font-bold ring-2 ring-white ${i !== 0 ? "-ml-2" : ""}`}
-                  >
-                    {avatar.initials}
-                  </div>
-                ))}
-              </div>
-              <div>
-                <div className="flex items-center gap-1 mb-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3 h-3 fill-[#FBBF24] text-[#FBBF24]" />
-                  ))}
-                  <span className="text-sm font-semibold text-[#0F172A] ml-1">4.8</span>
-                </div>
-                <span className="text-xs text-[#94A3B8]">
-                  Average rating from 2,000+ students
-                </span>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="flex flex-wrap items-center gap-x-6 gap-y-3"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.46 }}
-            >
-              {["20,000+ essays scored", "Feedback in seconds", "Free to start"].map(
-                (item) => (
-                  <div key={item} className="flex items-center gap-1.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#10B981] flex-shrink-0" />
-                    <span className="text-sm text-[#64748B]">{item}</span>
-                  </div>
-                )
-              )}
-            </motion.div>
-
-            <motion.div
-              className="flex flex-wrap gap-3 mt-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              <Link href="/ai-essay-review" className="text-xs text-[#6366F1] hover:underline">AI Essay Review →</Link>
-              <Link href="/college-essay-checker" className="text-xs text-[#6366F1] hover:underline">Essay Checker →</Link>
-              <Link href="/common-app-essay-help" className="text-xs text-[#6366F1] hover:underline">Common App Help →</Link>
-            </motion.div>
-          </motion.div>
-
-          {/* Right, glass mock card */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="relative"
-          >
-            {/* Bob animation wrapper */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="relative"
-            >
-              <div className="relative rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_8px_32px_rgba(99,102,241,0.12)] p-7 overflow-hidden">
-                {/* Subtle top accent */}
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#818CF8] via-[#6366F1] to-[#60A5FA]" />
-
-                <div className="flex items-start justify-between mb-5">
-                  <div>
-                    <p className="text-xs font-semibold text-[#64748B] uppercase tracking-widest mb-1">
-                      Essay Score
-                    </p>
-                    <div className="flex items-end gap-2">
-                      <motion.span
-                        className="text-6xl font-extrabold bg-gradient-to-br from-[#6366F1] to-[#60A5FA] bg-clip-text text-transparent"
-                        style={{ fontFamily: "var(--font-heading)" }}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.5, type: "spring" }}
-                      >
-                        92
-                      </motion.span>
-                      <span className="text-sm text-[#10B981] font-semibold mb-2 flex items-center gap-1">
-                        <TrendingUp className="w-3.5 h-3.5" />
-                        Excellent
-                      </span>
-                    </div>
-                  </div>
-                  <div className="w-10 h-10 rounded-xl bg-white/60 backdrop-blur-sm border border-white/80 flex items-center justify-center">
-                    <Sparkles className="w-5 h-5 text-[#6366F1]" />
-                  </div>
-                </div>
-
-                {/* Overall bar */}
-                <div className="h-2 bg-white/40 rounded-full mb-6 overflow-hidden">
-                  <motion.div
-                    className="h-full bg-gradient-to-r from-[#6366F1] to-[#60A5FA] rounded-full"
-                    initial={{ width: 0 }}
-                    animate={{ width: "92%" }}
-                    transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
-                  />
-                </div>
-
-                {/* Category breakdown */}
-                <div className="space-y-3 mb-6">
-                  {[
-                    { label: "Content & Message", score: 28, max: 30 },
-                    { label: "Structure", score: 21, max: 25 },
-                    { label: "Writing Style", score: 23, max: 25 },
-                  ].map((cat, i) => (
-                    <div key={cat.label}>
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-xs text-[#64748B]">{cat.label}</span>
-                        <span className="text-xs font-semibold text-[#0F172A]">
-                          {cat.score}/{cat.max}
-                        </span>
-                      </div>
-                      <div className="h-1.5 bg-white/40 rounded-full overflow-hidden">
-                        <motion.div
-                          className="h-full bg-gradient-to-r from-[#818CF8] to-[#60A5FA] rounded-full"
-                          initial={{ width: 0 }}
-                          animate={{ width: `${(cat.score / cat.max) * 100}%` }}
-                          transition={{ duration: 1, delay: 0.7 + i * 0.1, ease: "easeOut" }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Feedback pills */}
-                <div className="space-y-2">
-                  {[
-                    { type: "strength", text: "Strong narrative with specific detail" },
-                    { type: "strength", text: "Distinctive voice — low blend risk" },
-                    { type: "improve", text: "Opening line could be sharper" },
-                  ].map((item, i) => (
-                    <motion.div
-                      key={i}
-                      className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium ${
-                        item.type === "strength"
-                          ? "bg-[#F0FDF4]/80 text-[#166534]"
-                          : "bg-[#FEF3C7]/80 text-[#92400E]"
-                      }`}
-                      initial={{ opacity: 0, x: -8 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 1 + i * 0.1 }}
-                    >
-                      <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" />
-                      {item.text}
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Floating chip 1 */}
-              <motion.div
-                className="absolute -bottom-4 -left-4 md:-left-8 bg-white/70 backdrop-blur-xl rounded-xl border border-white/80 shadow-[0_8px_24px_rgba(99,102,241,0.15)] px-4 py-3 max-w-[220px]"
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2 }}
-                style={{ animation: "none" }}
-              >
-                <motion.div
-                  animate={{ y: [0, -6, 0] }}
-                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                >
-                  <p className="text-[10px] font-semibold text-[#6366F1] uppercase tracking-wider mb-0.5">
-                    Line Suggestion
-                  </p>
-                  <p className="text-xs text-[#475569] leading-snug">
-                    Replace &ldquo;passionate about&rdquo; →{" "}
-                    <span className="font-semibold text-[#0F172A]">&ldquo;driven by&rdquo;</span>
-                  </p>
-                </motion.div>
-              </motion.div>
-
-              {/* Floating chip 2 */}
-              <motion.div
-                className="absolute -top-4 -right-4 md:-right-6 bg-white/70 backdrop-blur-xl rounded-xl border border-white/80 shadow-[0_8px_24px_rgba(99,102,241,0.15)] px-4 py-3"
-                initial={{ opacity: 0, y: -12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.4 }}
-              >
-                <motion.div
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                >
-                  <p className="text-[10px] font-semibold text-[#059669] uppercase tracking-wider mb-0.5">
-                    Admissions View
-                  </p>
-                  <p className="text-xs text-[#475569] font-medium">Blend risk: Low ✓</p>
-                </motion.div>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+    <section className="pt-12 md:pt-16 pb-16 md:pb-20 border-b border-hair">
+      <Container>
+        <div className="flex items-center justify-between gap-4 pb-4 font-mono text-[11px] uppercase tracking-[0.16em] text-pencil">
+          <span>Vol. IV · The Applicant&apos;s Review · Early Action 2026</span>
+          <span className="hidden md:inline">Est. 2023 · 20,417 essays reviewed</span>
         </div>
-      </div>
+        <hr className="rule" />
+
+        <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-14 pt-10 md:pt-14">
+          <div>
+            <h1 className="text-ink">
+              Know where your essay <em className="italic text-oxblood">stands</em> before you submit.
+            </h1>
+            <p className="mt-6 md:mt-7 text-[17px] md:text-[18.5px] leading-[1.55] text-ink-2 max-w-[48ch]">
+              AI feedback trained on real Ivy League acceptances. Score your content, structure,
+              and voice in under 60 seconds.{" "}
+              <em className="italic text-oxblood">It&apos;s still your essay. Just louder.</em>
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link href="/try" className="btn btn-lg btn-brand">
+                Score my essay — free <span aria-hidden>→</span>
+              </Link>
+              <Link href="/ivy-league-essay-examples" className="btn btn-lg btn-ghost">
+                Browse sample scores
+              </Link>
+            </div>
+
+            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-ink-2">
+              {[
+                "No signup to start",
+                "Feedback in under 60s",
+                "Keeps your voice",
+              ].map((m) => (
+                <li key={m} className="flex items-center gap-2">
+                  <span className="w-1 h-1 rounded-full bg-oxblood" />
+                  {m}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <HeroDemo />
+          </div>
+        </div>
+      </Container>
     </section>
   );
 }

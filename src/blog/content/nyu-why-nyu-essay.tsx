@@ -133,21 +133,21 @@ export default function Content() {
 
       <p>
         Run your draft through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check for specificity and school-naming accuracy. For the
         broader framework, read our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "Why This College" essay guide
         </Link>{" "}
         and our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Ivy League essay tips
         </Link>

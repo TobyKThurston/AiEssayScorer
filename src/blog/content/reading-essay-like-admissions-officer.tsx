@@ -393,7 +393,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the opening paragraph actually does the work a
@@ -401,14 +401,14 @@ export default function Content() {
         that shape{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           what Ivy admissions actually reads for
         </Link>
         , and for the line-level craft behind{" "}
         <Link
           href="/blog/college-essay-hooks-opening-lines"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           opening lines that earn the next sentence
         </Link>

@@ -41,7 +41,7 @@ export function PricingCard({
       className={`relative p-8 rounded-2xl border transition-all duration-300 flex flex-col ${
         highlighted
           ? "bg-gradient-to-b from-[#1D4ED8] to-[#1E40AF] border-[#3B82F6] shadow-[0_16px_48px_rgba(29,78,216,0.3)] text-white"
-          : "bg-white border-slate-200 shadow-[0_4px_24px_rgba(148,163,184,0.1)] hover:shadow-[0_12px_40px_rgba(148,163,184,0.18)] hover:border-slate-300"
+          : "bg-white border-hair shadow-[0_4px_24px_rgba(148,163,184,0.1)] hover:shadow-[0_12px_40px_rgba(148,163,184,0.18)] hover:border-slate-300"
       }`}
     >
       {badge && (
@@ -56,7 +56,7 @@ export function PricingCard({
       <div className="mb-6">
         <p
           className={`text-sm font-semibold uppercase tracking-widest mb-2 ${
-            highlighted ? "text-blue-200" : "text-[#64748B]"
+            highlighted ? "text-blue-200" : "text-pencil"
           }`}
         >
           {title}
@@ -64,7 +64,7 @@ export function PricingCard({
         <div className="flex items-end gap-2 mb-2">
           <span
             className={`text-5xl font-extrabold ${
-              highlighted ? "text-white" : "text-[#0F172A]"
+              highlighted ? "text-white" : "text-ink"
             }`}
             style={{ fontFamily: "var(--font-heading)" }}
           >
@@ -72,7 +72,7 @@ export function PricingCard({
           </span>
           {period && (
             <span
-              className={`mb-2 text-sm ${highlighted ? "text-blue-200" : "text-[#64748B]"}`}
+              className={`mb-2 text-sm ${highlighted ? "text-blue-200" : "text-pencil"}`}
             >
               {period}
             </span>
@@ -80,7 +80,7 @@ export function PricingCard({
         </div>
         {description && (
           <p
-            className={`text-sm ${highlighted ? "text-blue-100" : "text-[#64748B]"}`}
+            className={`text-sm ${highlighted ? "text-blue-100" : "text-pencil"}`}
           >
             {description}
           </p>
@@ -92,15 +92,15 @@ export function PricingCard({
           <li key={index} className="flex items-start gap-3">
             <div
               className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                highlighted ? "bg-white/20" : "bg-[#DBEAFE]"
+                highlighted ? "bg-white/20" : "bg-paper-2"
               }`}
             >
               <Check
-                className={`w-3 h-3 ${highlighted ? "text-white" : "text-[#2563EB]"}`}
+                className={`w-3 h-3 ${highlighted ? "text-white" : "text-oxblood"}`}
               />
             </div>
             <span
-              className={`text-sm ${highlighted ? "text-blue-50" : "text-[#475569]"}`}
+              className={`text-sm ${highlighted ? "text-blue-50" : "text-ink-2"}`}
             >
               {feature}
             </span>

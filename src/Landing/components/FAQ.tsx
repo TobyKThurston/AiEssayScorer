@@ -1,62 +1,55 @@
-import { motion } from "motion/react";
-import { Accordion } from "./Accordion";
+"use client";
+
+import { useState } from "react";
+import { Container } from "@/design/Container";
+import { SectionHead } from "@/design/SectionHead";
+import { FAQ_ITEMS } from "./faqData";
 
 export function FAQ() {
-  const faqs = [
-    {
-      question: "What is Ivy Admit?",
-      answer: "Ivy Admit is an essay review and strategy tool for selective college admissions. You upload a draft or prompt, receive scores for structure, evidence, and tone, and get specific edit suggestions. It is built by students admitted to Ivy League schools and does not write essays for you."
-    },
-    {
-      question: "How does it improve my application?",
-      answer: "It analyzes drafts against patterns in successful applications and returns a structure score, line-by-line suggestions, and an evidence checklist. Regional tailoring helps match style preferences of your assigned reading team."
-    },
-    {
-      question: "Is it allowed and ethical?",
-      answer: "Yes. Ivy Admit is an editing and coaching tool. You remain the author and approve every change. The tool avoids ghostwriting and focuses on clarity, structure, and evidence so your submission remains original."
-    },
-    {
-      question: "Do you store or sell my data?",
-      answer: "Your drafts are private to your account, stored securely, and never sold. You can delete documents and associated metadata at any time from settings."
-    },
-    {
-      question: "How fast are reviews?",
-      answer: "Most first-pass analyses return in under a minute. Deep rewrite suggestions generate within a few minutes for standard-length drafts."
-    },
-    {
-      question: "Pricing and cancellation",
-      answer: "Starter is free with limited reviews. Pro is a monthly plan with unlimited reviews, regional tailoring, and risk guardrails. You can cancel anytime from billing. First-time Pro purchases are refundable within 7 days if no more than one full review was used."
-    },
-    {
-      question: "Counselor/teacher use",
-      answer: "Yes. Team seats support shared folders, role-based access, and comment threads so counselors can manage multiple students."
-    },
-    {
-      question: "Does it work beyond Ivy schools?",
-      answer: "Yes. The structure and evidence checks work for selective schools and scholarship essays. You can set a target school list to adjust tone and topic risk."
-    }
-  ];
+  const [open, setOpen] = useState<number>(0);
 
   return (
-    <section id="faq" className="py-16 md:py-24 relative">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-16">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12 md:mb-16"
-        >
-          <p className="text-xs font-semibold text-[#3B82F6] uppercase tracking-widest mb-3">
-            FAQ
-          </p>
-          <h2>Frequently asked questions</h2>
-        </motion.div>
+    <section id="faq" className="py-24 md:py-28 border-t border-hair">
+      <Container>
+        <SectionHead
+          num="§08"
+          eyebrow="Frequently asked"
+          title={<>Questions students <em className="italic text-oxblood">actually</em> ask.</>}
+          intro="The ones that come up most often when a student or counselor evaluates Ivy Admit for the first time."
+        />
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion items={faqs} />
+        <div className="mt-12 max-w-[820px]">
+          {FAQ_ITEMS.map((f, i) => {
+            const isOpen = open === i;
+            return (
+              <div key={i} className="border-t border-hair last:border-b">
+                <button
+                  onClick={() => setOpen(isOpen ? -1 : i)}
+                  aria-expanded={isOpen}
+                  className="w-full flex items-start justify-between gap-4 text-left py-5"
+                >
+                  <span className="font-serif text-[20px] md:text-[22px] leading-[1.25] text-ink">
+                    {f.q}
+                  </span>
+                  <span
+                    className="font-mono text-[18px] text-oxblood mt-0.5 transition-transform shrink-0"
+                    style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0)" }}
+                    aria-hidden
+                  >
+                    +
+                  </span>
+                </button>
+                <div
+                  className="overflow-hidden transition-[max-height,margin] duration-300 ease-out"
+                  style={{ maxHeight: isOpen ? 400 : 0, marginBottom: isOpen ? 20 : 0 }}
+                >
+                  <p className="text-[15.5px] text-ink-2 leading-[1.7] max-w-[70ch]">{f.a}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -1,52 +1,68 @@
-"use client";
+import { Container } from "@/design/Container";
 
-import { motion } from "motion/react";
-import { Users, TrendingUp, Zap } from "lucide-react";
+const AVATARS = [
+  { bg: "var(--color-oxblood)", initials: "SK" },
+  { bg: "var(--color-forest)", initials: "MJ" },
+  { bg: "var(--color-gold)", initials: "AL" },
+  { bg: "var(--color-ink)", initials: "DP" },
+  { bg: "var(--color-oxblood-2)", initials: "JR" },
+];
 
-const stats = [
-  { icon: Users, value: "20,000+", label: "students improved drafts" },
-  { icon: TrendingUp, value: "92 avg", label: "post-edit quality score" },
-  { icon: Zap, value: "7 min", label: "median time to first edit" },
+const STATS = [
+  { value: "20,417", label: "Essays reviewed" },
+  { value: "+18 pts", label: "Average score lift" },
+  { value: "< 60s", label: "Median time to first score" },
 ];
 
 export function ProofStrip() {
   return (
-    <section className="py-12 md:py-16">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="bg-white/40 backdrop-blur-xl border border-white/60 rounded-2xl shadow-[0_8px_32px_rgba(99,102,241,0.08)] px-8 py-8"
-        >
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-center gap-4"
-              >
-                <div className="w-12 h-12 rounded-xl bg-white/60 backdrop-blur-sm border border-white/80 flex items-center justify-center flex-shrink-0">
-                  <stat.icon className="w-5 h-5 text-[#6366F1]" />
-                </div>
-                <div>
-                  <p
-                    className="text-3xl font-extrabold text-[#0F172A]"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    {stat.value}
-                  </p>
-                  <p className="text-[#64748B] text-sm">{stat.label}</p>
-                </div>
-              </motion.div>
+    <section className="bg-paper-2 border-b border-hair">
+      <Container>
+        <div className="py-7 grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-6 md:gap-10 items-center">
+          <div className="flex items-center gap-4">
+            <div className="flex">
+              {AVATARS.map((a, i) => (
+                <span
+                  key={i}
+                  className="w-[34px] h-[34px] rounded-full border-2 border-paper-2 flex items-center justify-center font-serif text-[13px] text-paper"
+                  style={{
+                    background: a.bg,
+                    marginLeft: i === 0 ? 0 : -8,
+                    zIndex: AVATARS.length - i,
+                  }}
+                >
+                  {a.initials}
+                </span>
+              ))}
+            </div>
+            <div>
+              <div className="flex gap-0.5 text-gold text-sm leading-none">
+                {"★★★★★".split("").map((s, i) => (
+                  <span key={i}>{s}</span>
+                ))}
+              </div>
+              <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.14em] text-pencil">
+                4.8 from 2,000+ students
+              </p>
+            </div>
+          </div>
+
+          <hr className="hidden md:block rule" />
+
+          <div className="grid grid-cols-3 gap-6 md:gap-10">
+            {STATS.map((s) => (
+              <div key={s.label}>
+                <p className="font-serif text-[20px] md:text-[22px] text-ink leading-none">
+                  {s.value}
+                </p>
+                <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-pencil">
+                  {s.label}
+                </p>
+              </div>
             ))}
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </Container>
     </section>
   );
 }

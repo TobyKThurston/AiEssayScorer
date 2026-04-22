@@ -326,7 +326,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the voice actually sounds like celebration instead
@@ -334,7 +334,7 @@ export default function Content() {
         our{" "}
         <Link
           href="/blog/dartmouth-why-dartmouth-100-words"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why Dartmouth guide
         </Link>{" "}
@@ -342,7 +342,7 @@ export default function Content() {
         And if you are torn between the rotating prompts, our{" "}
         <Link
           href="/blog/dartmouth-let-your-life-speak-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Let Your Life Speak guide
         </Link>{" "}

@@ -296,7 +296,7 @@ export function EditorPage({ essayId }: EditorPageProps) {
   }
 
   return (
-    <div className="fixed inset-0 flex flex-col bg-[#F8FAFC]">
+    <div className="fixed inset-0 flex flex-col bg-paper-2">
       <EditorNavigation
         essay={essay}
         isDirty={isDirty}

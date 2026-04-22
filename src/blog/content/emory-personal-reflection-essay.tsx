@@ -337,7 +337,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the paragraph is carrying real specificity at 150
@@ -345,7 +345,7 @@ export default function Content() {
         read our{" "}
         <Link
           href="/blog/emory-why-emory-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why Emory essay guide
         </Link>
@@ -353,7 +353,7 @@ export default function Content() {
         this short, our guide to{" "}
         <Link
           href="/blog/college-essay-hooks-opening-lines"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           college essay hooks and opening lines
         </Link>{" "}

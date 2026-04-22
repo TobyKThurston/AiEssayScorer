@@ -48,8 +48,8 @@ const HOW_IT_WORKS = [
 ];
 
 const CARD_COLORS = [
-  { bg: "bg-[#EFF6FF]", icon: "text-[#3B82F6]" },
-  { bg: "bg-[#F5F3FF]", icon: "text-[#8B5CF6]" },
+  { bg: "bg-[#EFF6FF]", icon: "text-oxblood" },
+  { bg: "bg-cream", icon: "text-[#8B5CF6]" },
   { bg: "bg-[#ECFDF5]", icon: "text-[#10B981]" },
 ];
 
@@ -128,17 +128,17 @@ function EmptyState({ onNew, creating }: { onNew: () => void; creating: boolean 
   return (
     <div className="max-w-[620px] mx-auto">
       <div className="text-center mb-8 sm:mb-10">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[#3B82F6] text-xs font-medium mb-5">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-oxblood text-xs font-medium mb-5">
           <Sparkles className="w-3 h-3" />
           AI-powered essay review
         </div>
         <h1
-          className="text-[1.625rem] sm:text-[2rem] font-bold text-[#0F172A] mb-3 leading-tight tracking-tight"
+          className="text-[1.625rem] sm:text-[2rem] font-bold text-ink mb-3 leading-tight tracking-tight"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           Write, review, and strengthen your college essays
         </h1>
-        <p className="text-[#64748B] text-sm sm:text-[15px] mb-6 sm:mb-7 leading-relaxed">
+        <p className="text-pencil text-sm sm:text-[15px] mb-6 sm:mb-7 leading-relaxed">
           Instant scores on clarity, structure, and admissions impact.
           Trusted by applicants targeting top schools.
         </p>
@@ -150,7 +150,7 @@ function EmptyState({ onNew, creating }: { onNew: () => void; creating: boolean 
           <Plus className="w-4 h-4" />
           {creating ? "Creating…" : "Start Writing"}
         </button>
-        <p className="text-xs text-[#94A3B8] mt-4">
+        <p className="text-xs text-pencil mt-4">
           Top applicants revise their essays multiple times. Start now.
         </p>
       </div>
@@ -158,36 +158,36 @@ function EmptyState({ onNew, creating }: { onNew: () => void; creating: boolean 
       {/* Feature row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
         {[
-          { icon: Zap, label: "Line-by-line AI suggestions", color: "text-[#3B82F6]", bg: "bg-[#EFF6FF]" },
+          { icon: Zap, label: "Line-by-line AI suggestions", color: "text-oxblood", bg: "bg-[#EFF6FF]" },
           { icon: Target, label: "Clarity and structure scores", color: "text-[#10B981]", bg: "bg-[#ECFDF5]" },
-          { icon: BookOpen, label: "School fit analysis", color: "text-[#8B5CF6]", bg: "bg-[#F5F3FF]" },
+          { icon: BookOpen, label: "School fit analysis", color: "text-[#8B5CF6]", bg: "bg-cream" },
           { icon: Star, label: "Admissions officer perspective", color: "text-[#F59E0B]", bg: "bg-[#FFFBEB]" },
         ].map(({ icon: Icon, label, color, bg }) => (
           <div
             key={label}
-            className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white border border-slate-200 shadow-[0_1px_6px_rgba(148,163,184,0.07)]"
+            className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white border border-hair shadow-[0_1px_6px_rgba(148,163,184,0.07)]"
           >
             <div className={`w-7 h-7 rounded-lg ${bg} flex items-center justify-center flex-shrink-0`}>
               <Icon className={`w-3.5 h-3.5 ${color}`} />
             </div>
-            <span className="text-xs font-medium text-[#475569]">{label}</span>
+            <span className="text-xs font-medium text-ink-2">{label}</span>
           </div>
         ))}
       </div>
 
       {/* How it works */}
-      <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-[0_1px_10px_rgba(148,163,184,0.07)]">
-        <p className="text-[10px] font-semibold text-[#94A3B8] uppercase tracking-wider mb-5">
+      <div className="bg-white border border-hair rounded-2xl p-5 sm:p-6 shadow-[0_1px_10px_rgba(148,163,184,0.07)]">
+        <p className="text-[10px] font-semibold text-pencil uppercase tracking-wider mb-5">
           How it works
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {HOW_IT_WORKS.map(({ step, title, desc }) => (
             <div key={step}>
-              <div className="w-6 h-6 rounded-full bg-[#EFF6FF] flex items-center justify-center text-[10px] font-bold text-[#3B82F6] mb-3">
+              <div className="w-6 h-6 rounded-full bg-[#EFF6FF] flex items-center justify-center text-[10px] font-bold text-oxblood mb-3">
                 {step}
               </div>
-              <p className="text-sm font-semibold text-[#0F172A] mb-1 leading-snug">{title}</p>
-              <p className="text-[11px] text-[#64748B] leading-relaxed">{desc}</p>
+              <p className="text-sm font-semibold text-ink mb-1 leading-snug">{title}</p>
+              <p className="text-[11px] text-pencil leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
@@ -217,12 +217,12 @@ function FilledLayout({
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
           <div className="min-w-0">
             <h1
-              className="text-xl font-bold text-[#0F172A] tracking-tight"
+              className="text-xl font-bold text-ink tracking-tight"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               My Essays
             </h1>
-            <p className="text-sm text-[#64748B] mt-0.5">
+            <p className="text-sm text-pencil mt-0.5">
               Write, review, and strengthen your application
             </p>
           </div>
@@ -280,7 +280,7 @@ function EssayCard({
   return (
     <button
       onClick={() => onOpen(essay.id)}
-      className="w-full text-left px-4 sm:px-5 py-4 rounded-2xl bg-white border border-slate-200 shadow-[0_1px_6px_rgba(148,163,184,0.06)] hover:shadow-[0_4px_20px_rgba(148,163,184,0.12)] hover:border-[#3B82F6]/25 transition-all duration-200 group"
+      className="w-full text-left px-4 sm:px-5 py-4 rounded-2xl bg-white border border-hair shadow-[0_1px_6px_rgba(148,163,184,0.06)] hover:shadow-[0_4px_20px_rgba(148,163,184,0.12)] hover:border-[#3B82F6]/25 transition-all duration-200 group"
     >
       <div className="flex items-center gap-3 sm:gap-4">
         {/* Icon */}
@@ -291,14 +291,14 @@ function EssayCard({
         {/* Content */}
         <div className="flex-1 min-w-0">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1.5">
-            <p className="text-sm font-semibold text-[#0F172A] group-hover:text-[#3B82F6] transition-colors truncate max-w-full">
+            <p className="text-sm font-semibold text-ink group-hover:text-oxblood transition-colors truncate max-w-full">
               {essay.title}
             </p>
             <span className="flex-shrink-0 text-[10px] font-medium px-2 py-0.5 rounded-full bg-amber-50 text-amber-600 border border-amber-100">
               Not reviewed
             </span>
           </div>
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-[#94A3B8]">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-pencil">
             <span className="flex items-center gap-1">
               <Clock className="w-3 h-3" />
               {formatDate(essay.updated_at)}
@@ -312,7 +312,7 @@ function EssayCard({
         </div>
 
         {/* Arrow */}
-        <ArrowRight className="w-4 h-4 text-[#CBD5E1] group-hover:text-[#3B82F6] group-hover:translate-x-0.5 transition-all duration-200 flex-shrink-0" />
+        <ArrowRight className="w-4 h-4 text-[#CBD5E1] group-hover:text-oxblood group-hover:translate-x-0.5 transition-all duration-200 flex-shrink-0" />
       </div>
     </button>
   );
@@ -335,19 +335,19 @@ function GetFeedbackNudge({
       <div className="flex items-start gap-3 min-w-0">
         <AlertCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
         <div className="min-w-0">
-          <p className="text-sm font-medium text-[#334155]">
+          <p className="text-sm font-medium text-ink-2">
             {essays.length === 1
               ? "Your essay hasn't been reviewed yet"
               : `${essays.length} essays haven't been reviewed yet`}
           </p>
-          <p className="text-xs text-[#94A3B8] mt-0.5">
+          <p className="text-xs text-pencil mt-0.5">
             Open an essay and run an analysis to see how it scores.
           </p>
         </div>
       </div>
       <button
         onClick={() => onOpen(latest.id)}
-        className="self-start sm:self-auto flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-[#475569] hover:border-[#3B82F6]/40 hover:text-[#3B82F6] transition-all duration-200"
+        className="self-start sm:self-auto flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white border border-hair text-xs font-semibold text-ink-2 hover:border-[#3B82F6]/40 hover:text-oxblood transition-all duration-200"
       >
         Get Feedback
         <ArrowRight className="w-3 h-3" />
@@ -393,15 +393,15 @@ function ReviewEssayCard({
 
 function WhatYouGetCard() {
   const features = [
-    { icon: Zap, label: "Line-by-line AI suggestions", color: "text-[#3B82F6]" },
+    { icon: Zap, label: "Line-by-line AI suggestions", color: "text-oxblood" },
     { icon: Target, label: "Clarity and structure scores", color: "text-[#10B981]" },
     { icon: BookOpen, label: "School fit analysis", color: "text-[#8B5CF6]" },
     { icon: Star, label: "Admissions officer view", color: "text-[#F59E0B]" },
   ];
 
   return (
-    <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-[0_1px_6px_rgba(148,163,184,0.06)]">
-      <p className="text-[10px] font-semibold text-[#94A3B8] uppercase tracking-wider mb-4">
+    <div className="bg-white border border-hair rounded-2xl p-5 shadow-[0_1px_6px_rgba(148,163,184,0.06)]">
+      <p className="text-[10px] font-semibold text-pencil uppercase tracking-wider mb-4">
         What you get
       </p>
       <ul className="space-y-3">
@@ -410,7 +410,7 @@ function WhatYouGetCard() {
             <div className={`w-6 h-6 rounded-md bg-slate-50 flex items-center justify-center flex-shrink-0`}>
               <Icon className={`w-3 h-3 ${color}`} />
             </div>
-            <span className="text-xs text-[#475569] font-medium">{label}</span>
+            <span className="text-xs text-ink-2 font-medium">{label}</span>
           </li>
         ))}
       </ul>
@@ -420,19 +420,19 @@ function WhatYouGetCard() {
 
 function HowItWorksCard() {
   return (
-    <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-[0_1px_6px_rgba(148,163,184,0.06)]">
-      <p className="text-[10px] font-semibold text-[#94A3B8] uppercase tracking-wider mb-4">
+    <div className="bg-white border border-hair rounded-2xl p-5 shadow-[0_1px_6px_rgba(148,163,184,0.06)]">
+      <p className="text-[10px] font-semibold text-pencil uppercase tracking-wider mb-4">
         How it works
       </p>
       <div className="space-y-4">
         {HOW_IT_WORKS.map(({ step, title, desc }, i) => (
           <div key={step} className="flex items-start gap-3">
-            <div className="w-5 h-5 rounded-full bg-[#EFF6FF] flex items-center justify-center text-[10px] font-bold text-[#3B82F6] flex-shrink-0 mt-0.5">
+            <div className="w-5 h-5 rounded-full bg-[#EFF6FF] flex items-center justify-center text-[10px] font-bold text-oxblood flex-shrink-0 mt-0.5">
               {step}
             </div>
             <div className="flex-1">
               <p className="text-xs font-semibold text-[#1E293B]">{title}</p>
-              <p className="text-[11px] text-[#94A3B8] leading-relaxed mt-0.5">{desc}</p>
+              <p className="text-[11px] text-pencil leading-relaxed mt-0.5">{desc}</p>
             </div>
             {i < HOW_IT_WORKS.length - 1 && (
               <div className="absolute" />

@@ -106,7 +106,7 @@ export default function Content() {
         in detail in our{" "}
         <Link
           href="/blog/dartmouth-let-your-life-speak-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Dartmouth "Let Your Life Speak" guide
         </Link>
@@ -289,28 +289,28 @@ export default function Content() {
       </p>
       <p>
         Once you have a draft, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check for voice authenticity and specificity. For related
         prompts at other schools, see our{" "}
         <Link
           href="/blog/dartmouth-let-your-life-speak-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Dartmouth Let Your Life Speak guide
         </Link>
         , our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why This College guide
         </Link>
         , and our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Ivy League essay analysis
         </Link>

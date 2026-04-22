@@ -366,7 +366,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether your 125 words are actually institutionally specific
@@ -374,7 +374,7 @@ export default function Content() {
         you are also working on Yale's main supplement, read our{" "}
         <Link
           href="/blog/yale-why-yale-essay-125-words"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Yale "Why Yale" essay guide
         </Link>{" "}
@@ -382,7 +382,7 @@ export default function Content() {
         prompt every Yale applicant answers, our{" "}
         <Link
           href="/blog/yale-community-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Yale community essay guide
         </Link>{" "}

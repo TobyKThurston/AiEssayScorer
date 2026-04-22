@@ -1,19 +1,28 @@
 import "./globals.css";
 import { AuthProvider } from "@/contexts/AuthContext";
-import { Inter, Inter_Tight } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 
-const inter = Inter({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-body",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-fraunces",
   display: "swap",
 });
 
-const interTight = Inter_Tight({
+const inter = Inter({
   subsets: ["latin"],
-  weight: "800",
-  variable: "--font-heading",
+  weight: ["400", "500", "600"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono-font",
   display: "swap",
 });
 
@@ -132,7 +141,7 @@ const organizationSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${interTight.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${fraunces.variable} ${inter.variable} ${jetBrainsMono.variable}`}>
       <head>
         <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
         <script

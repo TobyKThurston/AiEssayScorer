@@ -262,21 +262,21 @@ export default function Content() {
 
       <p>
         Before submitting, run your Cornell supplement through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         for line-by-line feedback on specificity and structure. For the
         underlying framework behind all Why essays, see our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why This College guide
         </Link>
         . For broader patterns across all eight Ivy League schools, read our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Ivy League essay tips
         </Link>

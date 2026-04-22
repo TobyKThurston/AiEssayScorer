@@ -14,14 +14,14 @@ interface AccordionItemProps {
 function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProps) {
   return (
     <motion.div
-      className="border-b border-slate-200"
+      className="border-b border-hair"
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.3 }}
     >
       <button
-        className="w-full py-6 flex items-center justify-between text-left hover:text-[#3B82F6] transition-colors group"
+        className="w-full py-6 flex items-center justify-between text-left hover:text-oxblood transition-colors group"
         onClick={onToggle}
         aria-expanded={isOpen}
       >
@@ -33,7 +33,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
           transition={{ duration: 0.3 }}
           className="flex-shrink-0"
         >
-          <ChevronDown className="w-5 h-5 text-[#64748B] group-hover:text-[#3B82F6]" />
+          <ChevronDown className="w-5 h-5 text-pencil group-hover:text-oxblood" />
         </motion.div>
       </button>
       <AnimatePresence>
@@ -45,7 +45,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-[#475569]">{answer}</p>
+            <p className="pb-6 text-ink-2">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>

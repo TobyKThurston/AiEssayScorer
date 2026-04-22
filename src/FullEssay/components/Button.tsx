@@ -24,9 +24,9 @@ export function Button({
   const baseClasses = "inline-flex items-center justify-center gap-2 transition-all duration-200 font-medium";
   
   const variants = {
-    primary: "px-6 py-3 rounded-2xl bg-gradient-to-b from-[#3B82F6] to-[#2563EB] text-white hover:shadow-[0_8px_24px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 active:translate-y-0",
-    secondary: "px-6 py-3 rounded-2xl border-2 border-[#3B82F6]/20 text-[#0F172A] hover:bg-[#DBEAFE]/30 hover:border-[#3B82F6]/40",
-    tertiary: "text-[#3B82F6] hover:text-[#2563EB]"
+    primary: "px-6 py-3 rounded-2xl bg-gradient-to-b from-oxblood to-[#2563EB] text-white hover:shadow-[0_8px_24px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 active:translate-y-0",
+    secondary: "px-6 py-3 rounded-2xl border-2 border-[#3B82F6]/20 text-ink hover:bg-paper-2/30 hover:border-[#3B82F6]/40",
+    tertiary: "text-oxblood hover:text-oxblood"
   };
 
   const buttonContent = (

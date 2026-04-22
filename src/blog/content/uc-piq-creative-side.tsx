@@ -322,7 +322,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether your creative practice is actually showing up as
@@ -331,7 +331,7 @@ export default function Content() {
         rubric actually weights depth against breadth — read our{" "}
         <Link
           href="/blog/uc-personal-insight-questions-guide"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           UC Personal Insight Questions guide
         </Link>
@@ -339,7 +339,7 @@ export default function Content() {
         have to name the practice without announcing it, our{" "}
         <Link
           href="/blog/college-essay-hooks-opening-lines"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           college essay hooks and opening lines guide
         </Link>{" "}

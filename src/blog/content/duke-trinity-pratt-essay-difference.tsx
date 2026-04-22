@@ -207,21 +207,21 @@ export default function Content() {
 
       <p>
         Run your draft through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         for specificity and voice. For the broader Duke supplement
         strategy, see our{" "}
         <Link
           href="/blog/duke-why-duke-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Duke essay guide
         </Link>
         . For the general structure of school-specific writing, read our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "Why This College" guide
         </Link>

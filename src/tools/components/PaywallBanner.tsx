@@ -3,7 +3,7 @@ import { Sparkles, Check } from "lucide-react";
 
 export function PaywallBanner() {
   return (
-    <div className="rounded-2xl bg-gradient-to-br from-[#6366F1] via-[#7C3AED] to-[#8B5CF6] p-7 text-white shadow-[0_8px_32px_rgba(99,102,241,0.3)]">
+    <div className="rounded-2xl bg-gradient-to-br from-oxblood via-[#7C3AED] to-[#8B5CF6] p-7 text-white shadow-[0_8px_32px_rgba(99,102,241,0.3)]">
       <div className="flex items-center gap-2 mb-3">
         <Sparkles className="w-4 h-4" />
         <p className="text-xs font-semibold uppercase tracking-widest opacity-90">
@@ -31,7 +31,7 @@ export function PaywallBanner() {
       </ul>
       <Link
         href="/editor"
-        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-[#6366F1] font-semibold text-sm hover:bg-white/95 transition-colors"
+        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-oxblood font-semibold text-sm hover:bg-white/95 transition-colors"
       >
         Upgrade to Pro
       </Link>

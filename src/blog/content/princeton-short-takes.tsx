@@ -332,14 +332,14 @@ export default function Content() {
 
       <p>
         When your three short takes are drafted, run them through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check voice, specificity, and whether the set coheres. If
         you are still shaping the longer Princeton supplement, our{" "}
         <Link
           href="/blog/princeton-why-princeton-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why Princeton guide
         </Link>{" "}
@@ -347,7 +347,7 @@ export default function Content() {
         intellectual direction, and our{" "}
         <Link
           href="/blog/princeton-what-brings-you-joy-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           What Brings You Joy guide
         </Link>{" "}

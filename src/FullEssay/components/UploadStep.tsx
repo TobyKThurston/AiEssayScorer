@@ -32,7 +32,7 @@ export function UploadStep({ formData, updateFormData, onNext }: UploadStepProps
     >
       <div className="text-center mb-8">
         <h1 className="mb-3">Paste your essay</h1>
-        <p className="text-[#64748B]">
+        <p className="text-pencil">
           Copy and paste your essay text below to get started
         </p>
       </div>
@@ -44,7 +44,7 @@ export function UploadStep({ formData, updateFormData, onNext }: UploadStepProps
         transition={{ delay: 0.1 }}
       >
         <textarea
-          className="w-full min-h-[400px] p-6 bg-transparent border-none outline-none resize-none text-[#0F172A] placeholder:text-[#94A3B8]"
+          className="w-full min-h-[400px] p-6 bg-transparent border-none outline-none resize-none text-ink placeholder:text-pencil"
           placeholder="Paste your essay here..."
           value={formData.essayText}
           onChange={handleTextChange}
@@ -54,17 +54,17 @@ export function UploadStep({ formData, updateFormData, onNext }: UploadStepProps
 
       {/* Word count indicator */}
       <motion.div
-        className="flex items-center justify-between p-4 rounded-xl bg-white border border-slate-200"
+        className="flex items-center justify-between p-4 rounded-xl bg-white border border-hair"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
         <div className="flex items-center gap-2">
-          <FileText className="w-5 h-5 text-[#3B82F6]" />
-          <small className="text-[#64748B]">Word count</small>
+          <FileText className="w-5 h-5 text-oxblood" />
+          <small className="text-pencil">Word count</small>
         </div>
         <span className={`font-semibold ${
-          formData.wordCount >= 50 ? "text-[#3B82F6]" : "text-[#94A3B8]"
+          formData.wordCount >= 50 ? "text-oxblood" : "text-pencil"
         }`}>
           {formData.wordCount} words
         </span>
@@ -72,7 +72,7 @@ export function UploadStep({ formData, updateFormData, onNext }: UploadStepProps
 
       {formData.wordCount > 0 && formData.wordCount < 50 && (
         <motion.p
-          className="text-sm text-[#F59E0B] text-center"
+          className="text-sm text-gold text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >

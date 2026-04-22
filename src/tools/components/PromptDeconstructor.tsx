@@ -59,25 +59,25 @@ export default function PromptDeconstructor({
       {paywall && <PaywallBanner />}
       <form
         onSubmit={handleSubmit}
-        className="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5"
+        className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5"
       >
         <div>
-          <label className="block text-sm font-semibold text-[#0F172A] mb-2">
-            School <span className="font-normal text-[#94A3B8]">(optional)</span>
+          <label className="block text-sm font-semibold text-ink mb-2">
+            School <span className="font-normal text-pencil">(optional)</span>
           </label>
           <input
             type="text"
             value={school}
             onChange={(e) => setSchool(e.target.value)}
             placeholder="e.g., Stanford, Duke, Columbia"
-            className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition"
+            className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition"
             maxLength={100}
           />
         </div>
 
         {!lockPromptText && (
           <div>
-            <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+            <label className="block text-sm font-semibold text-ink mb-2">
               Paste the supplemental prompt
             </label>
             <textarea
@@ -85,7 +85,7 @@ export default function PromptDeconstructor({
               onChange={(e) => setPromptText(e.target.value)}
               placeholder="e.g., Tell us about something that is meaningful to you and why. (250 words)"
               rows={5}
-              className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition resize-none"
+              className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none"
               maxLength={1500}
               required
             />
@@ -95,7 +95,7 @@ export default function PromptDeconstructor({
         <button
           type="submit"
           disabled={loading || !promptText.trim()}
-          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#6366F1] text-white font-medium text-sm hover:bg-[#4F46E5] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl btn btn-sm btn-brand transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? (
             <>
@@ -110,7 +110,7 @@ export default function PromptDeconstructor({
       </form>
 
       {error && (
-        <div className="rounded-xl bg-[#FEF2F2] border border-[#FECACA] p-4 text-sm text-[#B91C1C]">
+        <div className="rounded-xl bg-[#FAEEEA] border border-[#E8C9C2] p-4 text-sm text-[#B91C1C]">
           {error}
         </div>
       )}
@@ -123,7 +123,7 @@ export default function PromptDeconstructor({
             accent="#6D28D9"
             accentBg="#EDE9FE"
           >
-            <p className="text-[#0F172A] leading-relaxed">{result.hiddenQuestion}</p>
+            <p className="text-ink leading-relaxed">{result.hiddenQuestion}</p>
           </ResultCard>
 
           <ResultCard
@@ -134,8 +134,8 @@ export default function PromptDeconstructor({
           >
             <ul className="space-y-2">
               {result.recommendedAngles.map((a, i) => (
-                <li key={i} className="flex gap-2 text-[#0F172A] leading-relaxed">
-                  <span className="text-[#065F46] font-semibold">{i + 1}.</span>
+                <li key={i} className="flex gap-2 text-ink leading-relaxed">
+                  <span className="text-forest font-semibold">{i + 1}.</span>
                   <span>{a}</span>
                 </li>
               ))}
@@ -150,8 +150,8 @@ export default function PromptDeconstructor({
           >
             <ul className="space-y-2">
               {result.whatToAvoid.map((a, i) => (
-                <li key={i} className="flex gap-2 text-[#0F172A] leading-relaxed">
-                  <span className="text-[#BE185D]">•</span>
+                <li key={i} className="flex gap-2 text-ink leading-relaxed">
+                  <span className="text-oxblood">•</span>
                   <span>{a}</span>
                 </li>
               ))}
@@ -168,7 +168,7 @@ export default function PromptDeconstructor({
               {result.keywordsToInclude.map((k, i) => (
                 <span
                   key={i}
-                  className="text-xs font-medium px-2.5 py-1 rounded-full bg-[#DBEAFE] text-[#1D4ED8]"
+                  className="text-xs font-medium px-2.5 py-1 rounded-full bg-paper-2 text-oxblood"
                 >
                   {k}
                 </span>
@@ -176,7 +176,7 @@ export default function PromptDeconstructor({
             </div>
           </ResultCard>
 
-          <div className="rounded-2xl bg-gradient-to-br from-[#6366F1] to-[#4F46E5] p-7 text-white">
+          <div className="rounded-2xl bg-gradient-to-br from-oxblood to-oxblood-2 p-7 text-white">
             <p className="text-xs font-semibold uppercase tracking-widest mb-2 opacity-80">
               The one thing
             </p>
@@ -202,7 +202,7 @@ function ResultCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
       <div className="flex items-center gap-2 mb-4">
         <span
           className="inline-flex items-center justify-center w-7 h-7 rounded-lg"
@@ -211,7 +211,7 @@ function ResultCard({
           {icon}
         </span>
         <h3
-          className="text-sm font-extrabold text-[#0F172A] uppercase tracking-wider"
+          className="text-sm font-extrabold text-ink uppercase tracking-wider"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {title}

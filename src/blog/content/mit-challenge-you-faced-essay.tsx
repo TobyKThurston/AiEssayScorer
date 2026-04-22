@@ -229,21 +229,21 @@ export default function Content() {
       </p>
       <p>
         Before submitting, run your draft through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to pressure-test whether the challenge and response are specific
         enough. For the other MIT supplements, see our guides on the{" "}
         <Link
           href="/blog/mit-something-you-do-for-pleasure-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           pleasure essay
         </Link>{" "}
         and the{" "}
         <Link
           href="/blog/mit-contribute-to-community-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           community contribution essay
         </Link>

@@ -158,28 +158,28 @@ export default function Content() {
 
       <p>
         Run your draft through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         for voice and specificity. For the companion Princeton short
         answer, see our{" "}
         <Link
           href="/blog/princeton-new-skill-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Princeton "new skill" essay guide
         </Link>
         . For the other Princeton supplements, read our{" "}
         <Link
           href="/blog/princeton-what-brings-you-joy-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "What Brings You Joy" guide
         </Link>{" "}
         and{" "}
         <Link
           href="/blog/princeton-why-princeton-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "Why Princeton" guide
         </Link>

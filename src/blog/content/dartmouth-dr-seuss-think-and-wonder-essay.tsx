@@ -105,13 +105,13 @@ export default function Content() {
 
       <h2>How This Essay Fits With the Rest of the Dartmouth Supplement</h2>
       <p>
-        Your Dartmouth supplement is small: a 100-word Why essay and two 250-word longer essays. Each has to pull its weight. The Dr. Seuss essay is where you show how you think. Your <Link href="/blog/dartmouth-why-dartmouth-100-words" className="text-[#6366F1] hover:underline">Why Dartmouth essay</Link> is where you show academic fit. If you also write the <Link href="/blog/dartmouth-let-your-life-speak-essay" className="text-[#6366F1] hover:underline">"Let Your Life Speak" prompt</Link>, that's where you show where you came from.
+        Your Dartmouth supplement is small: a 100-word Why essay and two 250-word longer essays. Each has to pull its weight. The Dr. Seuss essay is where you show how you think. Your <Link href="/blog/dartmouth-why-dartmouth-100-words" className="text-oxblood hover:underline">Why Dartmouth essay</Link> is where you show academic fit. If you also write the <Link href="/blog/dartmouth-let-your-life-speak-essay" className="text-oxblood hover:underline">"Let Your Life Speak" prompt</Link>, that's where you show where you came from.
       </p>
       <p>
         A good way to test whether you're choosing the right longer essays: ask whether the three Dartmouth responses together cover three different dimensions of you. If the Dr. Seuss essay and your Common App personal statement are both about the same interest, rewrite one. Dartmouth reads the whole application as a set and rewards range.
       </p>
       <p>
-        Before submitting, run your Dartmouth supplement through our <Link href="/editor" className="text-[#6366F1] hover:underline">AI essay review tool</Link> to check coherence across responses. For the broader patterns that appear in Ivy League supplements, read our <Link href="/blog/ivy-league-essay-tips" className="text-[#6366F1] hover:underline">Ivy League essay analysis</Link>. For a comparison with similar "how do you think" prompts at peer schools, see our <Link href="/blog/harvard-intellectual-experience-essay" className="text-[#6366F1] hover:underline">Harvard intellectual experience essay guide</Link>, which covers the same territory from a different angle.
+        Before submitting, run your Dartmouth supplement through our <Link href="/editor" className="text-oxblood hover:underline">AI essay review tool</Link> to check coherence across responses. For the broader patterns that appear in Ivy League supplements, read our <Link href="/blog/ivy-league-essay-tips" className="text-oxblood hover:underline">Ivy League essay analysis</Link>. For a comparison with similar "how do you think" prompts at peer schools, see our <Link href="/blog/harvard-intellectual-experience-essay" className="text-oxblood hover:underline">Harvard intellectual experience essay guide</Link>, which covers the same territory from a different angle.
       </p>
     </>
   );

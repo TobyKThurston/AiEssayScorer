@@ -108,7 +108,7 @@ export default function Content() {
         The Core is premised on the idea that a biochemist who has read and argued about Homer's <em>Iliad</em> is a better scientist and a more complete person than one who hasn't. Your list is evidence of whether you already believe that.
       </p>
       <p>
-        For a deeper understanding of how Columbia evaluates intellectual identity across the whole application, read our <Link href="/blog/columbia-why-columbia-essay-core-curriculum" className="text-[#6366F1] hover:underline">Columbia Why Columbia essay guide</Link>. For patterns that Columbia shares with other selective schools, see our <Link href="/blog/ivy-league-essay-tips" className="text-[#6366F1] hover:underline">Ivy League essay analysis</Link>. And to pressure-test your actual Columbia essays before submitting, run them through our <Link href="/editor" className="text-[#6366F1] hover:underline">AI essay review tool</Link>, which scores content, structure, and voice and gives you specific line-level edits.
+        For a deeper understanding of how Columbia evaluates intellectual identity across the whole application, read our <Link href="/blog/columbia-why-columbia-essay-core-curriculum" className="text-oxblood hover:underline">Columbia Why Columbia essay guide</Link>. For patterns that Columbia shares with other selective schools, see our <Link href="/blog/ivy-league-essay-tips" className="text-oxblood hover:underline">Ivy League essay analysis</Link>. And to pressure-test your actual Columbia essays before submitting, run them through our <Link href="/editor" className="text-oxblood hover:underline">AI essay review tool</Link>, which scores content, structure, and voice and gives you specific line-level edits.
       </p>
     </>
   );

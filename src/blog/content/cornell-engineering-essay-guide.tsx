@@ -209,14 +209,14 @@ export default function Content() {
 
       <p>
         Run your draft through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         for specificity and voice. For the broader Cornell strategy
         across colleges, see our{" "}
         <Link
           href="/blog/cornell-why-cornell-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Cornell essay guide
         </Link>
@@ -224,7 +224,7 @@ export default function Content() {
         read our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "Why This College" guide
         </Link>

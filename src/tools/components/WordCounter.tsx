@@ -33,8 +33,8 @@ export default function WordCounter() {
 
   return (
     <div className="space-y-6">
-      <div className="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
-        <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+      <div className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+        <label className="block text-sm font-semibold text-ink mb-2">
           Paste or type your essay
         </label>
         <textarea
@@ -42,7 +42,7 @@ export default function WordCounter() {
           onChange={(e) => setText(e.target.value)}
           placeholder="Start typing or paste your draft here. Counts update live."
           rows={14}
-          className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition resize-none font-mono"
+          className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none font-mono"
         />
       </div>
 
@@ -53,9 +53,9 @@ export default function WordCounter() {
         <StatCard icon={<Clock className="w-4 h-4" />} label="Read time" value={`${stats.readingMinutes} min`} subLabel={`${stats.paragraphs} paragraphs`} />
       </div>
 
-      <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+      <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
         <h2
-          className="text-lg font-extrabold text-[#0F172A] mb-4"
+          className="text-lg font-extrabold text-ink mb-4"
           style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
         >
           Common college essay limits
@@ -70,14 +70,14 @@ export default function WordCounter() {
             return (
               <div key={limit.name}>
                 <div className="flex items-center justify-between text-sm mb-1">
-                  <span className="text-[#475569]">{limit.name}</span>
-                  <span className={over ? "text-[#B91C1C] font-semibold" : "text-[#0F172A] font-semibold"}>
+                  <span className="text-ink-2">{limit.name}</span>
+                  <span className={over ? "text-[#B91C1C] font-semibold" : "text-ink font-semibold"}>
                     {current}/{cap} {unit}
                   </span>
                 </div>
-                <div className="h-1.5 rounded-full bg-slate-100 overflow-hidden">
+                <div className="h-1.5 rounded-full bg-paper-2 overflow-hidden">
                   <div
-                    className={`h-full rounded-full ${over ? "bg-[#DC2626]" : "bg-gradient-to-r from-[#6366F1] to-[#8B5CF6]"}`}
+                    className={`h-full rounded-full ${over ? "bg-[#DC2626]" : "bg-gradient-to-r from-oxblood to-[#8B5CF6]"}`}
                     style={{ width: `${pct}%` }}
                   />
                 </div>
@@ -102,17 +102,17 @@ function StatCard({
   subLabel?: string;
 }) {
   return (
-    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5">
+    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5">
       <div className="flex items-center gap-2 mb-2">
-        <span className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-[#EDE9FE] text-[#6D28D9]">
+        <span className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-paper-2 text-oxblood">
           {icon}
         </span>
-        <span className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">{label}</span>
+        <span className="text-xs font-semibold text-pencil uppercase tracking-wider">{label}</span>
       </div>
-      <p className="text-2xl font-extrabold text-[#0F172A]" style={{ fontFamily: "var(--font-heading)" }}>
+      <p className="text-2xl font-extrabold text-ink" style={{ fontFamily: "var(--font-heading)" }}>
         {value}
       </p>
-      {subLabel && <p className="text-xs text-[#94A3B8] mt-1">{subLabel}</p>}
+      {subLabel && <p className="text-xs text-pencil mt-1">{subLabel}</p>}
     </div>
   );
 }

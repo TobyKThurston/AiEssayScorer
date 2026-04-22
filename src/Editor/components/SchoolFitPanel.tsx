@@ -29,7 +29,7 @@ export function SchoolFitPanel({ schoolFit, targetSchools, isPro }: SchoolFitPan
   const badge = (
     <span className={`text-xs font-bold ${getSchoolFitColor(schoolFit.score)}`}>
       {schoolFit.score}
-      <span className="text-[10px] font-normal text-[#94A3B8]">/10</span>
+      <span className="text-[10px] font-normal text-pencil">/10</span>
     </span>
   );
 
@@ -44,7 +44,7 @@ export function SchoolFitPanel({ schoolFit, targetSchools, isPro }: SchoolFitPan
       <div className="mt-1 space-y-2">
         {/* Score bar */}
         <div>
-          <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+          <div className="h-2 bg-paper-2 rounded-full overflow-hidden">
             <div
               className={`h-full bg-gradient-to-r ${getSchoolFitBarGradient(schoolFit.score)} rounded-full`}
               style={{ width: `${pct}%` }}
@@ -53,7 +53,7 @@ export function SchoolFitPanel({ schoolFit, targetSchools, isPro }: SchoolFitPan
         </div>
 
         {/* Feedback */}
-        <p className="text-xs text-[#64748B] leading-relaxed">{schoolFit.feedback}</p>
+        <p className="text-xs text-pencil leading-relaxed">{schoolFit.feedback}</p>
 
         {/* Tips, Pro only */}
         <UpgradeGate
@@ -63,7 +63,7 @@ export function SchoolFitPanel({ schoolFit, targetSchools, isPro }: SchoolFitPan
         >
           <ul className="space-y-1.5 mt-1">
             {schoolFit.tips.map((tip, i) => (
-              <li key={i} className="flex items-start gap-1.5 text-xs text-[#475569]">
+              <li key={i} className="flex items-start gap-1.5 text-xs text-ink-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#8B5CF6] mt-1.5 flex-shrink-0" />
                 <span>{tip}</span>
               </li>

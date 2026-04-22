@@ -50,9 +50,9 @@ export default function ConclusionGenerator() {
   return (
     <div className="space-y-6">
       {paywall && <PaywallBanner />}
-      <form onSubmit={handleSubmit} className="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5">
+      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5">
         <div>
-          <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+          <label className="block text-sm font-semibold text-ink mb-2">
             Paste your essay body (everything except the conclusion)
           </label>
           <textarea
@@ -60,25 +60,25 @@ export default function ConclusionGenerator() {
             onChange={(e) => setEssay(e.target.value)}
             placeholder="Paste your essay up to the point where you need a conclusion..."
             rows={14}
-            className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition resize-none font-mono"
+            className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none font-mono"
             maxLength={6000}
             required
           />
-          <div className="text-xs text-[#94A3B8] mt-2">{essay.length}/6000 chars</div>
+          <div className="text-xs text-pencil mt-2">{essay.length}/6000 chars</div>
         </div>
-        <button type="submit" disabled={loading || !essay.trim()} className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#6366F1] text-white font-medium text-sm hover:bg-[#4F46E5] transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+        <button type="submit" disabled={loading || !essay.trim()} className="inline-flex items-center gap-2 px-5 py-3 rounded-xl btn btn-sm btn-brand transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
           {loading ? <><Loader2 className="w-4 h-4 animate-spin" /> Generating...</> : <><Sparkles className="w-4 h-4" /> Generate 3 conclusions</>}
         </button>
       </form>
 
       {error && (
-        <div className="rounded-xl bg-[#FEF2F2] border border-[#FECACA] p-4 text-sm text-[#B91C1C]">{error}</div>
+        <div className="rounded-xl bg-[#FAEEEA] border border-[#E8C9C2] p-4 text-sm text-[#B91C1C]">{error}</div>
       )}
 
       {output && (
-        <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
-          <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-4">Three conclusions</p>
-          <div className="text-[#0F172A] text-[15px] leading-[1.75] whitespace-pre-wrap">{output}</div>
+        <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+          <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-4">Three conclusions</p>
+          <div className="text-ink text-[15px] leading-[1.75] whitespace-pre-wrap">{output}</div>
         </div>
       )}
     </div>

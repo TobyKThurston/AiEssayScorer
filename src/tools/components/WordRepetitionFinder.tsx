@@ -97,9 +97,9 @@ export default function WordRepetitionFinder() {
 
   return (
     <div className="space-y-6">
-      <div className="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
-        <label className="block text-sm font-semibold text-[#0F172A] mb-2">Paste your essay</label>
-        <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="Paste your essay. Analysis runs entirely in your browser, live." rows={12} className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition resize-none font-mono" />
+      <div className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+        <label className="block text-sm font-semibold text-ink mb-2">Paste your essay</label>
+        <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="Paste your essay. Analysis runs entirely in your browser, live." rows={12} className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none font-mono" />
       </div>
 
       {analysis && (
@@ -113,7 +113,7 @@ export default function WordRepetitionFinder() {
           <Section icon={<Repeat className="w-4 h-4" />} title="Top 10 overused words" empty={analysis.overused.length === 0 ? "No words used 3+ times. Strong variety." : null}>
             <div className="flex flex-wrap gap-2">
               {analysis.overused.map((o) => (
-                <span key={o.word} className="text-sm px-3 py-1.5 rounded-full bg-[#FCE7F3] text-[#BE185D] font-medium">
+                <span key={o.word} className="text-sm px-3 py-1.5 rounded-full bg-paper-2 text-oxblood font-medium">
                   {o.word} <span className="opacity-70">×{o.count}</span>
                 </span>
               ))}
@@ -128,7 +128,7 @@ export default function WordRepetitionFinder() {
                 </span>
               ))}
             </div>
-            <p className="text-xs text-[#64748B] mt-3 leading-relaxed">
+            <p className="text-xs text-pencil mt-3 leading-relaxed">
               Weak verbs (was, had, made, got) flatten sentences. Replace them with specific verbs whenever the context allows: not &quot;I was nervous&quot; but &quot;my hand shook&quot;.
             </p>
           </Section>
@@ -141,7 +141,7 @@ export default function WordRepetitionFinder() {
                 </span>
               ))}
             </div>
-            <p className="text-xs text-[#64748B] mt-3 leading-relaxed">
+            <p className="text-xs text-pencil mt-3 leading-relaxed">
               Words like &quot;really,&quot; &quot;very,&quot; and &quot;just&quot; weaken claims. Cut them unless they're doing real work.
             </p>
           </Section>
@@ -153,22 +153,22 @@ export default function WordRepetitionFinder() {
 
 function Metric({ label, value, sub }: { label: string; value: string; sub?: string }) {
   return (
-    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5">
-      <p className="text-xs font-semibold text-[#64748B] uppercase tracking-wider mb-1">{label}</p>
-      <p className="text-2xl font-extrabold text-[#0F172A]" style={{ fontFamily: "var(--font-heading)" }}>{value}</p>
-      {sub && <p className="text-xs text-[#94A3B8] mt-0.5">{sub}</p>}
+    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5">
+      <p className="text-xs font-semibold text-pencil uppercase tracking-wider mb-1">{label}</p>
+      <p className="text-2xl font-extrabold text-ink" style={{ fontFamily: "var(--font-heading)" }}>{value}</p>
+      {sub && <p className="text-xs text-pencil mt-0.5">{sub}</p>}
     </div>
   );
 }
 
 function Section({ icon, title, empty, children }: { icon: React.ReactNode; title: string; empty: string | null; children: React.ReactNode }) {
   return (
-    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
       <div className="flex items-center gap-2 mb-4">
-        <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-[#EDE9FE] text-[#6D28D9]">{icon}</span>
-        <h3 className="text-sm font-extrabold text-[#0F172A] uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>{title}</h3>
+        <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-oxblood">{icon}</span>
+        <h3 className="text-sm font-extrabold text-ink uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>{title}</h3>
       </div>
-      {empty ? <p className="text-sm text-[#065F46]">{empty}</p> : children}
+      {empty ? <p className="text-sm text-forest">{empty}</p> : children}
     </div>
   );
 }

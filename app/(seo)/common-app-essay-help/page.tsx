@@ -88,10 +88,10 @@ export default function CommonAppEssayHelpPage() {
 
         {/* Hero */}
         <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] leading-tight mb-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-ink leading-tight mb-4">
             Common App Essay Help: Prompts, Story, Structure & Revision
           </h1>
-          <p className="text-lg text-[#475569] mb-6">
+          <p className="text-lg text-ink-2 mb-6">
             The Common App personal statement is 650 words that contextualize everything else in
             your application. Most students struggle not because they lack a story, but because
             they pick the wrong one, or tell the right one poorly. This guide covers every stage:
@@ -99,7 +99,7 @@ export default function CommonAppEssayHelpPage() {
           </p>
           <Link
             href="/editor"
-            className="inline-block px-6 py-3 rounded-full bg-[#0A0A0F] text-white font-medium hover:bg-[#1a1a2e] transition-all"
+            className="inline-block px-6 py-3 rounded-full bg-ink text-white font-medium hover:bg-oxblood transition-all"
           >
             Review your draft free →
           </Link>
@@ -220,13 +220,13 @@ export default function CommonAppEssayHelpPage() {
           </p>
 
           {/* Mid-page CTA */}
-          <div className="not-prose my-10 rounded-2xl bg-[#F5F3FF] border border-[#C4B5FD]/50 p-7 text-center">
-            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">Get feedback, free</p>
-            <p className="text-[#0F172A] font-bold text-lg mb-3">Already have a draft? Score it now</p>
-            <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">Upload your Common App personal statement and get content, structure, and voice scores with specific line edits in under 60 seconds.</p>
+          <div className="not-prose my-10 rounded-2xl bg-cream border border-[#C4B5FD]/50 p-7 text-center">
+            <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-2">Get feedback, free</p>
+            <p className="text-ink font-bold text-lg mb-3">Already have a draft? Score it now</p>
+            <p className="text-pencil text-sm mb-5 max-w-md mx-auto">Upload your Common App personal statement and get content, structure, and voice scores with specific line edits in under 60 seconds.</p>
             <Link
               href="/editor"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1e1e3f] transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-ink text-white text-sm font-medium hover:bg-oxblood transition-all"
             >
               Review your draft free →
             </Link>
@@ -235,23 +235,23 @@ export default function CommonAppEssayHelpPage() {
           {/* Before / After */}
           <h2>Before and After: Opening Hook</h2>
           <div className="not-prose grid md:grid-cols-2 gap-4 my-6">
-            <div className="bg-red-50 border border-red-200 rounded-xl p-5">
-              <p className="text-xs font-semibold text-red-600 uppercase tracking-wide mb-2">Before</p>
-              <p className="text-[#0F172A] text-sm">
+            <div className="bg-[#FAEEEA] border border-[#E8C9C2] rounded-xl p-5">
+              <p className="text-xs font-semibold text-oxblood uppercase tracking-wide mb-2">Before</p>
+              <p className="text-ink text-sm">
                 "Growing up in a household where two languages were spoken, I always felt caught
                 between two worlds. This experience shaped my identity and taught me the value of
                 bridging cultural differences."
               </p>
-              <p className="text-xs text-red-500 mt-2">Structure score: 44, context before scene, closes with a template lesson</p>
+              <p className="text-xs text-oxblood-2 mt-2">Structure score: 44, context before scene, closes with a template lesson</p>
             </div>
-            <div className="bg-green-50 border border-green-200 rounded-xl p-5">
-              <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">After</p>
-              <p className="text-[#0F172A] text-sm">
+            <div className="bg-[#EAF2E8] border border-[#C6D6BC] rounded-xl p-5">
+              <p className="text-xs font-semibold text-forest uppercase tracking-wide mb-2">After</p>
+              <p className="text-ink text-sm">
                 "My grandmother was mid-sentence when she switched from English to Tagalog, a
                 signal I had learned to read. She was about to say something she did not want my
                 father to understand."
               </p>
-              <p className="text-xs text-green-600 mt-2">Structure score: 91, in-scene immediately, specific detail, implies tension</p>
+              <p className="text-xs text-forest mt-2">Structure score: 91, in-scene immediately, specific detail, implies tension</p>
             </div>
           </div>
 
@@ -261,36 +261,36 @@ export default function CommonAppEssayHelpPage() {
             {faqSchema.mainEntity.map((item) => (
               <details
                 key={item.name}
-                className="border border-slate-200 rounded-xl px-5 py-4 bg-white/60"
+                className="border border-hair rounded-xl px-5 py-4 bg-cream"
               >
-                <summary className="font-medium text-[#0F172A] cursor-pointer">
+                <summary className="font-medium text-ink cursor-pointer">
                   {item.name}
                 </summary>
-                <p className="mt-3 text-[#475569] text-sm">{item.acceptedAnswer.text}</p>
+                <p className="mt-3 text-ink-2 text-sm">{item.acceptedAnswer.text}</p>
               </details>
             ))}
           </div>
 
           {/* Internal links */}
-          <div className="not-prose mt-12 pt-8 border-t border-slate-200">
-            <p className="text-sm text-[#64748B] mb-4">Continue reading</p>
+          <div className="not-prose mt-12 pt-8 border-t border-hair">
+            <p className="text-sm text-pencil mb-4">Continue reading</p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/editor" className="px-4 py-2 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1a1a2e] transition-all">
+              <Link href="/editor" className="px-4 py-2 rounded-full bg-ink text-white text-sm font-medium hover:bg-oxblood transition-all">
                 Review your draft
               </Link>
-              <Link href="/ivy-league-essay-examples" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/ivy-league-essay-examples" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 Ivy League Essay Examples
               </Link>
-              <Link href="/how-to-improve-college-essay" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/how-to-improve-college-essay" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 How to Improve Your Essay
               </Link>
-              <Link href="/ai-essay-review" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/ai-essay-review" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 AI Essay Review
               </Link>
-              <Link href="/college-essay-checker" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/college-essay-checker" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 College Essay Checker
               </Link>
-              <Link href="/blog" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/blog" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 Blog
               </Link>
             </div>

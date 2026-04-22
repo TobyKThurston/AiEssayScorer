@@ -77,7 +77,7 @@ export function HighlightedPreview({
   return (
     <div
       ref={containerRef}
-      className="w-full h-full p-4 text-[#0F172A] text-sm leading-relaxed whitespace-pre-wrap font-mono overflow-y-auto"
+      className="w-full h-full p-4 text-ink text-sm leading-relaxed whitespace-pre-wrap font-mono overflow-y-auto"
     >
       {segments.map((seg, i) => {
         if (seg.highlightIndex === undefined) {

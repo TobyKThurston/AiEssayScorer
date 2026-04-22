@@ -272,19 +272,19 @@ export default function Content() {
 
       <p>
         The right topic is the one that lets your voice come through. If you want a second set of eyes on whether your current draft is working, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           essay editor
         </Link>{" "}
         for structural feedback. For more on the Common App process itself, see our guides on{" "}
-        <Link href="/blog/how-to-write-common-app-essay" className="text-[#6366F1] hover:underline">
+        <Link href="/blog/how-to-write-common-app-essay" className="text-oxblood hover:underline">
           how to write the Common App essay
         </Link>
         ,{" "}
-        <Link href="/blog/how-to-start-a-college-essay" className="text-[#6366F1] hover:underline">
+        <Link href="/blog/how-to-start-a-college-essay" className="text-oxblood hover:underline">
           how to start a college essay
         </Link>
         , and the{" "}
-        <Link href="/blog/common-app-essay-prompts-2025" className="text-[#6366F1] hover:underline">
+        <Link href="/blog/common-app-essay-prompts-2025" className="text-oxblood hover:underline">
           2025 Common App prompts
         </Link>
         . The right topic is already in your life. It is almost always smaller than you think.

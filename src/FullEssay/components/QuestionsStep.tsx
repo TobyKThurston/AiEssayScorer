@@ -52,21 +52,21 @@ export function QuestionsStep({ formData, updateFormData, onNext, onBack }: Ques
     >
       <div className="text-center mb-8">
         <h1 className="mb-3">Tell us more</h1>
-        <p className="text-[#64748B]">
+        <p className="text-pencil">
           Help us provide better feedback for your essay
         </p>
       </div>
 
       {/* Essay Type */}
       <motion.div
-        className="p-6 rounded-2xl bg-white border border-slate-200 shadow-[0_4px_24px_rgba(148,163,184,0.12)]"
+        className="p-6 rounded-2xl bg-white border border-hair shadow-[0_4px_24px_rgba(148,163,184,0.12)]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
       >
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#DBEAFE] to-[#BFDBFE] flex items-center justify-center">
-            <FileQuestion className="w-5 h-5 text-[#3B82F6]" />
+            <FileQuestion className="w-5 h-5 text-oxblood" />
           </div>
           <h3>Essay type</h3>
         </div>
@@ -77,13 +77,13 @@ export function QuestionsStep({ formData, updateFormData, onNext, onBack }: Ques
               onClick={() => updateFormData({ essayType: type })}
               className={`p-4 rounded-xl border-2 text-left transition-all duration-200 ${
                 formData.essayType === type
-                  ? "border-[#3B82F6] bg-[#DBEAFE]/20 shadow-[0_4px_16px_rgba(59,130,246,0.15)]"
-                  : "border-slate-200 hover:border-[#3B82F6]/30 hover:bg-slate-50"
+                  ? "border-[#3B82F6] bg-paper-2/20 shadow-[0_4px_16px_rgba(59,130,246,0.15)]"
+                  : "border-hair hover:border-[#3B82F6]/30 hover:bg-slate-50"
               }`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span className={formData.essayType === type ? "text-[#3B82F6]" : "text-[#475569]"}>
+              <span className={formData.essayType === type ? "text-oxblood" : "text-ink-2"}>
                 {type}
               </span>
             </motion.button>
@@ -93,18 +93,18 @@ export function QuestionsStep({ formData, updateFormData, onNext, onBack }: Ques
 
       {/* Target Schools */}
       <motion.div
-        className="p-6 rounded-2xl bg-white border border-slate-200 shadow-[0_4px_24px_rgba(148,163,184,0.12)]"
+        className="p-6 rounded-2xl bg-white border border-hair shadow-[0_4px_24px_rgba(148,163,184,0.12)]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#DBEAFE] to-[#BFDBFE] flex items-center justify-center">
-            <GraduationCap className="w-5 h-5 text-[#3B82F6]" />
+            <GraduationCap className="w-5 h-5 text-oxblood" />
           </div>
           <h3>Target schools</h3>
         </div>
-        <p className="text-[#64748B] mb-4">
+        <p className="text-pencil mb-4">
           <small>Select all that apply for regional tailoring</small>
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -114,13 +114,13 @@ export function QuestionsStep({ formData, updateFormData, onNext, onBack }: Ques
               onClick={() => toggleSchool(school)}
               className={`p-3 rounded-xl border-2 text-center transition-all duration-200 ${
                 formData.targetSchools.includes(school)
-                  ? "border-[#3B82F6] bg-[#DBEAFE]/20 shadow-[0_4px_16px_rgba(59,130,246,0.15)]"
-                  : "border-slate-200 hover:border-[#3B82F6]/30 hover:bg-slate-50"
+                  ? "border-[#3B82F6] bg-paper-2/20 shadow-[0_4px_16px_rgba(59,130,246,0.15)]"
+                  : "border-hair hover:border-[#3B82F6]/30 hover:bg-slate-50"
               }`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span className={formData.targetSchools.includes(school) ? "text-[#3B82F6]" : "text-[#475569]"}>
+              <span className={formData.targetSchools.includes(school) ? "text-oxblood" : "text-ink-2"}>
                 {school}
               </span>
             </motion.button>
@@ -130,19 +130,19 @@ export function QuestionsStep({ formData, updateFormData, onNext, onBack }: Ques
 
       {/* Essay Prompt (Optional) */}
       <motion.div
-        className="p-6 rounded-2xl bg-white border border-slate-200 shadow-[0_4px_24px_rgba(148,163,184,0.12)]"
+        className="p-6 rounded-2xl bg-white border border-hair shadow-[0_4px_24px_rgba(148,163,184,0.12)]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
       >
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#DBEAFE] to-[#BFDBFE] flex items-center justify-center">
-            <Target className="w-5 h-5 text-[#3B82F6]" />
+            <Target className="w-5 h-5 text-oxblood" />
           </div>
-          <h3>Essay prompt <span className="text-[#94A3B8]">(optional)</span></h3>
+          <h3>Essay prompt <span className="text-pencil">(optional)</span></h3>
         </div>
         <textarea
-          className="w-full min-h-[100px] p-4 bg-[#F8FAFC] border border-slate-200 rounded-xl outline-none resize-none text-[#0F172A] placeholder:text-[#94A3B8] focus:border-[#3B82F6] focus:bg-white transition-all"
+          className="w-full min-h-[100px] p-4 bg-paper border border-hair rounded-xl outline-none resize-none text-ink placeholder:text-pencil focus:border-[#3B82F6] focus:bg-white transition-all"
           placeholder="Paste the essay prompt here for context..."
           value={formData.prompt}
           onChange={(e) => updateFormData({ prompt: e.target.value })}

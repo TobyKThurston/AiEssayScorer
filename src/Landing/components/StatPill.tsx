@@ -15,10 +15,10 @@ export function StatPill({ value, label }: StatPillProps) {
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.05 }}
     >
-      <div className="text-4xl md:text-5xl mb-2 pb-1 bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] bg-clip-text text-transparent" style={{ fontFamily: "var(--font-heading)", fontWeight: 800 }}>
+      <div className="text-4xl md:text-5xl mb-2 pb-1 bg-gradient-to-br from-oxblood to-forest bg-clip-text text-transparent" style={{ fontFamily: "var(--font-heading)", fontWeight: 800 }}>
         {value}
       </div>
-      <small className="text-[#64748B]">{label}</small>
+      <small className="text-pencil">{label}</small>
     </motion.div>
   );
 }

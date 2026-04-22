@@ -62,7 +62,7 @@ export function Pricing() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center mt-8 text-[#64748B]"
+          className="text-center mt-8 text-pencil"
         >
           <small>30-day money-back guarantee. Cancel anytime.</small>
         </motion.p>

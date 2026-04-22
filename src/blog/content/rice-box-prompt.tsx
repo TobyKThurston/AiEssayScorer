@@ -378,14 +378,14 @@ export default function Content() {
       <p>
         When you have picked your image and drafted your caption, run the
         caption through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether it extends the image rather than explains it. If
         you are still working on your other Rice supplements, our{" "}
         <Link
           href="/blog/rice-why-rice-residential-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why Rice and residential college essay guide
         </Link>{" "}
@@ -395,7 +395,7 @@ export default function Content() {
         how admissions actually reads — read our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Ivy League essay guide
         </Link>

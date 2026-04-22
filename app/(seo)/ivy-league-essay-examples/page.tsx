@@ -88,10 +88,10 @@ export default function IvyLeagueEssayExamplesPage() {
 
         {/* Hero */}
         <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] leading-tight mb-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-ink leading-tight mb-4">
             Ivy League Essay Examples: What Works and Why
           </h1>
-          <p className="text-lg text-[#475569] mb-6">
+          <p className="text-lg text-ink-2 mb-6">
             Reading a full accepted essay tells you what someone wrote. Reading an annotated excerpt
             tells you why it worked. This page breaks down real passages from accepted applications
             to Harvard, Yale, and Princeton, scoring them and showing the exact features that make
@@ -99,7 +99,7 @@ export default function IvyLeagueEssayExamplesPage() {
           </p>
           <Link
             href="/editor"
-            className="inline-block px-6 py-3 rounded-full bg-[#0A0A0F] text-white font-medium hover:bg-[#1a1a2e] transition-all"
+            className="inline-block px-6 py-3 rounded-full bg-ink text-white font-medium hover:bg-oxblood transition-all"
           >
             Score your essay against these patterns →
           </Link>
@@ -171,13 +171,13 @@ export default function IvyLeagueEssayExamplesPage() {
           </p>
 
           {/* Mid-page CTA */}
-          <div className="not-prose my-10 rounded-2xl bg-[#F5F3FF] border border-[#C4B5FD]/50 p-7 text-center">
-            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">See your own scores</p>
-            <p className="text-[#0F172A] font-bold text-lg mb-3">How does your essay compare?</p>
-            <p className="text-[#64748B] text-sm mb-5 max-w-md mx-auto">Upload your draft and get scored against the same patterns used here, content specificity, narrative structure, and voice consistency, in under 60 seconds.</p>
+          <div className="not-prose my-10 rounded-2xl bg-cream border border-[#C4B5FD]/50 p-7 text-center">
+            <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-2">See your own scores</p>
+            <p className="text-ink font-bold text-lg mb-3">How does your essay compare?</p>
+            <p className="text-pencil text-sm mb-5 max-w-md mx-auto">Upload your draft and get scored against the same patterns used here, content specificity, narrative structure, and voice consistency, in under 60 seconds.</p>
             <Link
               href="/editor"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1e1e3f] transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-ink text-white text-sm font-medium hover:bg-oxblood transition-all"
             >
               Score your essay free →
             </Link>
@@ -186,30 +186,30 @@ export default function IvyLeagueEssayExamplesPage() {
           {/* Before / After */}
           <h2>Annotated Example: Two Excerpts Compared</h2>
           <div className="not-prose space-y-4 my-6">
-            <div className="bg-red-50 border border-red-200 rounded-xl p-5">
-              <p className="text-xs font-semibold text-red-600 uppercase tracking-wide mb-2">Generic, Content: 39, Voice: 44</p>
-              <p className="text-[#0F172A] text-sm mb-3">
+            <div className="bg-[#FAEEEA] border border-[#E8C9C2] rounded-xl p-5">
+              <p className="text-xs font-semibold text-oxblood uppercase tracking-wide mb-2">Generic, Content: 39, Voice: 44</p>
+              <p className="text-ink text-sm mb-3">
                 "Working in the lab opened my eyes to the power of scientific inquiry. I learned
                 that research requires patience and resilience. Every failed experiment taught me
                 something new and pushed me closer to my goal of becoming a scientist who makes
                 a real difference in the world."
               </p>
-              <ul className="text-xs text-red-600 space-y-1">
+              <ul className="text-xs text-oxblood space-y-1">
                 <li>→ "opened my eyes", template phrase, no specific moment</li>
                 <li>→ "patience and resilience", two of the most common essay words</li>
                 <li>→ "make a real difference", unanchored aspiration</li>
               </ul>
             </div>
-            <div className="bg-green-50 border border-green-200 rounded-xl p-5">
-              <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">Specific, Content: 88, Voice: 85</p>
-              <p className="text-[#0F172A] text-sm mb-3">
+            <div className="bg-[#EAF2E8] border border-[#C6D6BC] rounded-xl p-5">
+              <p className="text-xs font-semibold text-forest uppercase tracking-wide mb-2">Specific, Content: 88, Voice: 85</p>
+              <p className="text-ink text-sm mb-3">
                 "The gel electrophoresis results were wrong again, the bands had migrated too far,
                 which meant the voltage was still off, which meant the last six weeks of samples
                 were probably compromised. I sat with that for a moment. Then I recalculated the
                 buffer concentration from scratch, because it was the only variable I had not
                 questioned yet."
               </p>
-              <ul className="text-xs text-green-600 space-y-1">
+              <ul className="text-xs text-forest space-y-1">
                 <li>→ Specific technique named (gel electrophoresis, voltage, buffer concentration)</li>
                 <li>→ Stakes made concrete (six weeks of samples)</li>
                 <li>→ Shows the thinking process, not just the outcome</li>
@@ -251,36 +251,36 @@ export default function IvyLeagueEssayExamplesPage() {
             {faqSchema.mainEntity.map((item) => (
               <details
                 key={item.name}
-                className="border border-slate-200 rounded-xl px-5 py-4 bg-white/60"
+                className="border border-hair rounded-xl px-5 py-4 bg-cream"
               >
-                <summary className="font-medium text-[#0F172A] cursor-pointer">
+                <summary className="font-medium text-ink cursor-pointer">
                   {item.name}
                 </summary>
-                <p className="mt-3 text-[#475569] text-sm">{item.acceptedAnswer.text}</p>
+                <p className="mt-3 text-ink-2 text-sm">{item.acceptedAnswer.text}</p>
               </details>
             ))}
           </div>
 
           {/* Internal links */}
-          <div className="not-prose mt-12 pt-8 border-t border-slate-200">
-            <p className="text-sm text-[#64748B] mb-4">Continue reading</p>
+          <div className="not-prose mt-12 pt-8 border-t border-hair">
+            <p className="text-sm text-pencil mb-4">Continue reading</p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/editor" className="px-4 py-2 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1a1a2e] transition-all">
+              <Link href="/editor" className="px-4 py-2 rounded-full bg-ink text-white text-sm font-medium hover:bg-oxblood transition-all">
                 Score your essay
               </Link>
-              <Link href="/common-app-essay-help" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/common-app-essay-help" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 Common App Essay Help
               </Link>
-              <Link href="/how-to-improve-college-essay" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/how-to-improve-college-essay" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 How to Improve Your Essay
               </Link>
-              <Link href="/ai-essay-review" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/ai-essay-review" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 AI Essay Review
               </Link>
-              <Link href="/college-essay-checker" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/college-essay-checker" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 College Essay Checker
               </Link>
-              <Link href="/blog" className="px-4 py-2 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60">
+              <Link href="/blog" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 Blog
               </Link>
             </div>

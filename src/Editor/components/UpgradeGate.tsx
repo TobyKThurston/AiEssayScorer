@@ -24,11 +24,11 @@ export function UpgradeGate({ isLocked, featureName, description, children }: Up
     <div className="relative">
       <div className="blur-[3px] pointer-events-none select-none">{children}</div>
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/70 rounded-xl backdrop-blur-sm">
-        <p className="text-xs font-semibold text-[#0F172A] mb-0.5">{featureName}</p>
-        <p className="text-[10px] text-[#64748B] mb-2.5 text-center px-3">{description}</p>
+        <p className="text-xs font-semibold text-ink mb-0.5">{featureName}</p>
+        <p className="text-[10px] text-pencil mb-2.5 text-center px-3">{description}</p>
         <button
           onClick={handleUpgrade}
-          className="px-4 py-1.5 rounded-full bg-[#0A0A0F] text-white text-xs font-medium hover:bg-[#1e1e3f] transition-all"
+          className="px-4 py-1.5 rounded-full bg-ink text-white text-xs font-medium hover:bg-[#1e1e3f] transition-all"
         >
           Unlock Pro
         </button>

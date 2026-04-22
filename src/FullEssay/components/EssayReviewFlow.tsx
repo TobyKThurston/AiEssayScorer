@@ -35,7 +35,7 @@ export function EssayReviewFlow() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] pt-24 pb-16">
+    <div className="min-h-screen bg-paper pt-24 pb-16">
       <div className="max-w-[900px] mx-auto px-6">
         {/* Progress indicator */}
         <motion.div 
@@ -50,8 +50,8 @@ export function EssayReviewFlow() {
                 <motion.div
                   className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                     currentStep >= step
-                      ? "bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] text-white shadow-[0_4px_16px_rgba(59,130,246,0.3)]"
-                      : "bg-white border-2 border-slate-200 text-[#94A3B8]"
+                      ? "bg-gradient-to-br from-oxblood to-forest text-white shadow-[0_4px_16px_rgba(59,130,246,0.3)]"
+                      : "bg-white border-2 border-hair text-pencil"
                   }`}
                   whileHover={{ scale: 1.05 }}
                 >
@@ -59,7 +59,7 @@ export function EssayReviewFlow() {
                 </motion.div>
                 {step < 3 && (
                   <div className={`w-56 h-1 mx-4 rounded-full transition-all duration-500 ${
-                    currentStep > step ? "bg-gradient-to-r from-[#3B82F6] to-[#0EA5E9]" : "bg-slate-200"
+                    currentStep > step ? "bg-gradient-to-r from-oxblood to-forest" : "bg-slate-200"
                   }`} />
                 )}
               </div>
@@ -67,13 +67,13 @@ export function EssayReviewFlow() {
           </div>
           <div className="flex justify-center gap-64">
             <div className="text-center w-24">
-              <small className={currentStep >= 1 ? "text-[#3B82F6]" : "text-[#94A3B8]"}>Upload Essay</small>
+              <small className={currentStep >= 1 ? "text-oxblood" : "text-pencil"}>Upload Essay</small>
             </div>
             <div className="text-center w-24">
-              <small className={currentStep >= 2 ? "text-[#3B82F6]" : "text-[#94A3B8]"}>Answer Questions</small>
+              <small className={currentStep >= 2 ? "text-oxblood" : "text-pencil"}>Answer Questions</small>
             </div>
             <div className="text-center w-24">
-              <small className={currentStep >= 3 ? "text-[#3B82F6]" : "text-[#94A3B8]"}>View Results</small>
+              <small className={currentStep >= 3 ? "text-oxblood" : "text-pencil"}>View Results</small>
             </div>
           </div>
         </motion.div>

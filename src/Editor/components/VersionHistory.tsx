@@ -46,14 +46,14 @@ export function VersionHistory({ essayId, isOpen, onClose, onRestore }: VersionH
       />
       {/* Drawer */}
       <div className="fixed right-0 top-0 bottom-0 z-50 w-80 bg-white shadow-2xl flex flex-col">
-        <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200">
+        <div className="flex items-center justify-between px-4 py-3 border-b border-hair">
           <div className="flex items-center gap-2">
-            <History className="w-4 h-4 text-[#3B82F6]" />
-            <span className="text-sm font-semibold text-[#0F172A]">Version History</span>
+            <History className="w-4 h-4 text-oxblood" />
+            <span className="text-sm font-semibold text-ink">Version History</span>
           </div>
           <button
             onClick={onClose}
-            className="p-1 rounded-md text-[#94A3B8] hover:text-[#0F172A] hover:bg-slate-100 transition-colors"
+            className="p-1 rounded-md text-pencil hover:text-ink hover:bg-paper-2 transition-colors"
           >
             <X className="w-4 h-4" />
           </button>
@@ -67,7 +67,7 @@ export function VersionHistory({ essayId, isOpen, onClose, onRestore }: VersionH
           ) : versions.length === 0 ? (
             <div className="text-center py-10">
               <Clock className="w-8 h-8 text-[#CBD5E1] mx-auto mb-2" />
-              <p className="text-sm text-[#94A3B8]">No saved versions yet.</p>
+              <p className="text-sm text-pencil">No saved versions yet.</p>
               <p className="text-xs text-[#CBD5E1] mt-1">Save a draft to create a version.</p>
             </div>
           ) : (
@@ -78,24 +78,24 @@ export function VersionHistory({ essayId, isOpen, onClose, onRestore }: VersionH
                   onRestore(v);
                   onClose();
                 }}
-                className="w-full text-left px-3 py-3 rounded-xl border border-slate-200 hover:border-[#3B82F6]/40 hover:bg-slate-50 transition-all group"
+                className="w-full text-left px-3 py-3 rounded-xl border border-hair hover:border-[#3B82F6]/40 hover:bg-slate-50 transition-all group"
               >
                 <div className="flex items-start justify-between gap-2">
                   <div>
-                    <p className="text-xs font-semibold text-[#0F172A] group-hover:text-[#3B82F6] transition-colors">
+                    <p className="text-xs font-semibold text-ink group-hover:text-oxblood transition-colors">
                       Version {v.version_number}
                       {v.label && (
-                        <span className="ml-1.5 text-[#94A3B8] font-normal">· {v.label}</span>
+                        <span className="ml-1.5 text-pencil font-normal">· {v.label}</span>
                       )}
                     </p>
-                    <p className="text-xs text-[#94A3B8] mt-0.5">{formatDate(v.created_at)}</p>
+                    <p className="text-xs text-pencil mt-0.5">{formatDate(v.created_at)}</p>
                     {v.analysis && (
                       <p className="text-xs text-[#10B981] mt-0.5">
                         Score: {v.analysis.score}
                       </p>
                     )}
                   </div>
-                  <span className="text-xs text-[#94A3B8] mt-0.5 flex-shrink-0">
+                  <span className="text-xs text-pencil mt-0.5 flex-shrink-0">
                     {v.content.trim().split(/\s+/).length} words
                   </span>
                 </div>

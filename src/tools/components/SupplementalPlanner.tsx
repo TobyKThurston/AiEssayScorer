@@ -16,7 +16,7 @@ interface Result {
 }
 
 const DIFFICULTY: Record<string, string> = {
-  easy: "bg-[#D1FAE5] text-[#065F46]",
+  easy: "bg-paper-2 text-forest",
   medium: "bg-[#FEF3C7] text-[#92400E]",
   hard: "bg-[#FEE2E2] text-[#B91C1C]",
 };
@@ -53,25 +53,25 @@ export default function SupplementalPlanner() {
   return (
     <div className="space-y-6">
       {paywall && <PaywallBanner />}
-      <form onSubmit={handleSubmit} className="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5">
+      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5">
         <div>
-          <label className="block text-sm font-semibold text-[#0F172A] mb-2">Your college list</label>
-          <textarea value={collegeList} onChange={(e) => setCollegeList(e.target.value)} placeholder="One school per line or comma-separated. e.g., Stanford, Harvard, UChicago, Duke, Northwestern, UMich, Pomona, UT Austin" rows={6} className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition resize-none" maxLength={1500} required />
+          <label className="block text-sm font-semibold text-ink mb-2">Your college list</label>
+          <textarea value={collegeList} onChange={(e) => setCollegeList(e.target.value)} placeholder="One school per line or comma-separated. e.g., Stanford, Harvard, UChicago, Duke, Northwestern, UMich, Pomona, UT Austin" rows={6} className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none" maxLength={1500} required />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-[#0F172A] mb-2">Intended major <span className="font-normal text-[#94A3B8]">(optional)</span></label>
-          <input type="text" value={major} onChange={(e) => setMajor(e.target.value)} placeholder="e.g., Computer Science, Philosophy, Molecular Biology" className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition" maxLength={200} />
+          <label className="block text-sm font-semibold text-ink mb-2">Intended major <span className="font-normal text-pencil">(optional)</span></label>
+          <input type="text" value={major} onChange={(e) => setMajor(e.target.value)} placeholder="e.g., Computer Science, Philosophy, Molecular Biology" className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition" maxLength={200} />
         </div>
-        <button type="submit" disabled={loading || !collegeList.trim()} className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#6366F1] text-white font-medium text-sm hover:bg-[#4F46E5] transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+        <button type="submit" disabled={loading || !collegeList.trim()} className="inline-flex items-center gap-2 px-5 py-3 rounded-xl btn btn-sm btn-brand transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
           {loading ? <><Loader2 className="w-4 h-4 animate-spin" /> Planning...</> : <><Sparkles className="w-4 h-4" /> Plan my supplementals</>}
         </button>
       </form>
 
-      {error && <div className="rounded-xl bg-[#FEF2F2] border border-[#FECACA] p-4 text-sm text-[#B91C1C]">{error}</div>}
+      {error && <div className="rounded-xl bg-[#FAEEEA] border border-[#E8C9C2] p-4 text-sm text-[#B91C1C]">{error}</div>}
 
       {result && (
         <div className="space-y-4">
-          <div className="rounded-2xl bg-gradient-to-br from-[#6366F1] to-[#4F46E5] p-7 text-white">
+          <div className="rounded-2xl bg-gradient-to-br from-oxblood to-oxblood-2 p-7 text-white">
             <p className="text-xs font-semibold uppercase tracking-widest mb-2 opacity-80">Total essay load</p>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3 text-center mt-4">
               <Stat n={result.totalEssayLoad.personalStatement} label="Personal statement" />
@@ -82,68 +82,68 @@ export default function SupplementalPlanner() {
             </div>
           </div>
 
-          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
             <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-[#EDE9FE] text-[#6D28D9]"><Layers className="w-4 h-4" /></span>
-              <h3 className="text-sm font-extrabold text-[#0F172A] uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>Overlap clusters: one draft covers multiple schools</h3>
+              <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-oxblood"><Layers className="w-4 h-4" /></span>
+              <h3 className="text-sm font-extrabold text-ink uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>Overlap clusters: one draft covers multiple schools</h3>
             </div>
             <div className="space-y-3">
               {result.overlapPlan.map((o, i) => (
-                <div key={i} className="rounded-xl bg-[#F5F3FF] border border-[#E0E7FF] p-4">
-                  <p className="font-semibold text-[#0F172A] mb-1">{o.cluster}</p>
+                <div key={i} className="rounded-xl bg-cream border border-hair p-4">
+                  <p className="font-semibold text-ink mb-1">{o.cluster}</p>
                   <div className="flex flex-wrap gap-1.5 mb-2">
-                    {o.schools.map((s) => <span key={s} className="text-xs font-medium px-2 py-0.5 rounded-full bg-white text-[#6366F1] border border-[#E0E7FF]">{s}</span>)}
+                    {o.schools.map((s) => <span key={s} className="text-xs font-medium px-2 py-0.5 rounded-full bg-white text-oxblood border border-hair">{s}</span>)}
                   </div>
-                  <p className="text-sm text-[#475569] leading-relaxed">{o.oneDraftCoversAll}</p>
+                  <p className="text-sm text-ink-2 leading-relaxed">{o.oneDraftCoversAll}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
             <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-[#DBEAFE] text-[#1D4ED8]"><School className="w-4 h-4" /></span>
-              <h3 className="text-sm font-extrabold text-[#0F172A] uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>By school</h3>
+              <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-oxblood"><School className="w-4 h-4" /></span>
+              <h3 className="text-sm font-extrabold text-ink uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>By school</h3>
             </div>
             <div className="space-y-4">
               {result.bySchool.map((sp, i) => (
-                <div key={i} className="border-l-2 border-[#E0E7FF] pl-4">
-                  <p className="font-semibold text-[#0F172A] mb-2">{sp.school}</p>
+                <div key={i} className="border-l-2 border-hair pl-4">
+                  <p className="font-semibold text-ink mb-2">{sp.school}</p>
                   <div className="space-y-1.5 mb-2">
                     {sp.essays.map((e, j) => (
                       <div key={j} className="flex items-start gap-2 text-sm">
                         <span className={`text-[10px] font-semibold uppercase px-1.5 py-0.5 rounded mt-0.5 flex-shrink-0 ${DIFFICULTY[e.difficulty] ?? DIFFICULTY.medium}`}>{e.difficulty}</span>
-                        <span className="text-[#0F172A]"><span className="font-medium">{e.wordLimit}:</span> {e.prompt}</span>
+                        <span className="text-ink"><span className="font-medium">{e.wordLimit}:</span> {e.prompt}</span>
                       </div>
                     ))}
                   </div>
-                  {sp.reuseFromOtherSchools && <p className="text-xs text-[#64748B] italic">Reuse tip: {sp.reuseFromOtherSchools}</p>}
+                  {sp.reuseFromOtherSchools && <p className="text-xs text-pencil italic">Reuse tip: {sp.reuseFromOtherSchools}</p>}
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
             <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-[#D1FAE5] text-[#065F46]"><ListOrdered className="w-4 h-4" /></span>
-              <h3 className="text-sm font-extrabold text-[#0F172A] uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>Order of operations</h3>
+              <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-forest"><ListOrdered className="w-4 h-4" /></span>
+              <h3 className="text-sm font-extrabold text-ink uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>Order of operations</h3>
             </div>
             <ol className="space-y-2">
               {result.orderOfOperations.map((step, i) => (
-                <li key={i} className="flex gap-2 text-[14.5px] text-[#0F172A] leading-relaxed">
-                  <span className="font-semibold text-[#065F46]">{i + 1}.</span>
+                <li key={i} className="flex gap-2 text-[14.5px] text-ink leading-relaxed">
+                  <span className="font-semibold text-forest">{i + 1}.</span>
                   <span>{step}</span>
                 </li>
               ))}
             </ol>
           </div>
 
-          <div className="rounded-2xl bg-[#FEF2F2] border border-[#FECACA] p-5">
+          <div className="rounded-2xl bg-[#FAEEEA] border border-[#E8C9C2] p-5">
             <div className="flex items-center gap-2 mb-1">
               <AlertCircle className="w-4 h-4 text-[#B91C1C]" />
               <p className="text-xs font-semibold text-[#B91C1C] uppercase tracking-widest">Hardest school</p>
             </div>
-            <p className="text-[14.5px] text-[#0F172A] leading-relaxed">{result.hardestSchool}</p>
+            <p className="text-[14.5px] text-ink leading-relaxed">{result.hardestSchool}</p>
           </div>
         </div>
       )}
@@ -153,7 +153,7 @@ export default function SupplementalPlanner() {
 
 function Stat({ n, label, highlight = false }: { n: number; label: string; highlight?: boolean }) {
   return (
-    <div className={highlight ? "rounded-xl bg-white text-[#4F46E5] p-3" : ""}>
+    <div className={highlight ? "rounded-xl bg-white text-oxblood-2 p-3" : ""}>
       <p className="text-3xl font-extrabold" style={{ fontFamily: "var(--font-heading)" }}>{n}</p>
       <p className="text-[11px] opacity-90 mt-0.5">{label}</p>
     </div>

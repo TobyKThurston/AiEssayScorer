@@ -164,7 +164,7 @@ export default function Content() {
       </p>
 
       <p>
-        Before submitting, run your UChicago supplement through our <Link href="/editor" className="text-[#6366F1] hover:underline">AI essay review tool</Link> to catch the voice problems that are easy to miss on a reread. For the companion piece of the UChicago supplement, see our guide to the <Link href="/blog/uchicago-why-uchicago-essay" className="text-[#6366F1] hover:underline">Why UChicago essay</Link>. For broader patterns across selective supplements, read our <Link href="/blog/ivy-league-essay-tips" className="text-[#6366F1] hover:underline">Ivy League essay analysis</Link>.
+        Before submitting, run your UChicago supplement through our <Link href="/editor" className="text-oxblood hover:underline">AI essay review tool</Link> to catch the voice problems that are easy to miss on a reread. For the companion piece of the UChicago supplement, see our guide to the <Link href="/blog/uchicago-why-uchicago-essay" className="text-oxblood hover:underline">Why UChicago essay</Link>. For broader patterns across selective supplements, read our <Link href="/blog/ivy-league-essay-tips" className="text-oxblood hover:underline">Ivy League essay analysis</Link>.
       </p>
     </>
   );

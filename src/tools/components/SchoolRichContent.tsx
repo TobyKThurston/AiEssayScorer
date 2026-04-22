@@ -153,12 +153,12 @@ export function SchoolRichSections({
 
       <section className="mt-16">
         <h2
-          className="text-2xl font-extrabold text-[#0F172A] mb-3"
+          className="text-2xl font-extrabold text-ink mb-3"
           style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
         >
           Context on {school.shortName} admissions
         </h2>
-        <p className="text-[#475569] text-[15px] leading-relaxed max-w-2xl">
+        <p className="text-ink-2 text-[15px] leading-relaxed max-w-2xl">
           {rich.admitContext}
         </p>
       </section>
@@ -166,24 +166,24 @@ export function SchoolRichSections({
       {hasHandCuratedPrompts ? (
         <section className="mt-12">
           <h2
-            className="text-2xl font-extrabold text-[#0F172A] mb-4"
+            className="text-2xl font-extrabold text-ink mb-4"
             style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
           >
             Current {school.shortName} supplemental prompts
           </h2>
-          <p className="text-[#475569] text-sm leading-relaxed mb-4">
+          <p className="text-ink-2 text-sm leading-relaxed mb-4">
             These are the prompts {school.shortName} has recently used. Always verify against the official {school.shortName} application before submitting.
           </p>
           <div className="space-y-3">
             {rich.currentPrompts.map((p, i) => (
               <div
                 key={i}
-                className="rounded-xl bg-white/60 backdrop-blur-xl border border-white/70 p-5"
+                className="rounded-xl bg-cream border border-hair p-5"
               >
-                <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-2">
+                <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-2">
                   Prompt {i + 1}
                 </p>
-                <p className="text-[#0F172A] text-[14.5px] leading-relaxed italic">&quot;{p}&quot;</p>
+                <p className="text-ink text-[14.5px] leading-relaxed italic">&quot;{p}&quot;</p>
               </div>
             ))}
           </div>
@@ -191,19 +191,19 @@ export function SchoolRichSections({
       ) : (
         <section className="mt-12">
           <h2
-            className="text-2xl font-extrabold text-[#0F172A] mb-3"
+            className="text-2xl font-extrabold text-ink mb-3"
             style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
           >
             Find the current {school.shortName} supplemental prompts
           </h2>
-          <p className="text-[#475569] text-[15px] leading-relaxed max-w-2xl mb-4">
+          <p className="text-ink-2 text-[15px] leading-relaxed max-w-2xl mb-4">
             {school.shortName} updates its supplemental prompts each admissions cycle. We do not publish a copy here because outdated prompts in your essay are a red flag to reviewers. Pull the current prompts straight from the official {school.name} application.
           </p>
           <a
             href={officialPromptsSearch}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/60 backdrop-blur-xl border border-white/70 text-[#0F172A] font-medium text-sm hover:bg-white/80 hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-cream border border-hair text-ink font-medium text-sm hover:bg-cream hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all"
           >
             Find this year&apos;s {school.shortName} prompts →
           </a>
@@ -212,7 +212,7 @@ export function SchoolRichSections({
 
       <section className="mt-12">
         <h2
-          className="text-2xl font-extrabold text-[#0F172A] mb-4"
+          className="text-2xl font-extrabold text-ink mb-4"
           style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
         >
           Three opening angles that work for {school.shortName}
@@ -221,9 +221,9 @@ export function SchoolRichSections({
           {rich.openingAngles.map((a, i) => (
             <li
               key={i}
-              className="rounded-xl bg-white/60 backdrop-blur-xl border border-white/70 p-5 text-[#0F172A] text-[15px] leading-relaxed"
+              className="rounded-xl bg-cream border border-hair p-5 text-ink text-[15px] leading-relaxed"
             >
-              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#EDE9FE] text-[#6D28D9] text-xs font-bold mr-2 align-text-top">
+              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-paper-2 text-oxblood text-xs font-bold mr-2 align-text-top">
                 {i + 1}
               </span>
               {a}
@@ -234,7 +234,7 @@ export function SchoolRichSections({
 
       <section className="mt-12">
         <h2
-          className="text-2xl font-extrabold text-[#0F172A] mb-4"
+          className="text-2xl font-extrabold text-ink mb-4"
           style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
         >
           Mistakes {school.shortName} reviewers see every year
@@ -243,10 +243,10 @@ export function SchoolRichSections({
           {rich.commonMistakes.map((m, i) => (
             <li
               key={i}
-              className="flex gap-3 rounded-xl bg-[#FEF2F2] border border-[#FECACA] p-5"
+              className="flex gap-3 rounded-xl bg-[#FAEEEA] border border-[#E8C9C2] p-5"
             >
               <span className="text-[#B91C1C] font-bold flex-shrink-0">→</span>
-              <span className="text-[#0F172A] text-[15px] leading-relaxed">{m}</span>
+              <span className="text-ink text-[15px] leading-relaxed">{m}</span>
             </li>
           ))}
         </ul>
@@ -254,7 +254,7 @@ export function SchoolRichSections({
 
       <section className="mt-12">
         <h2
-          className="text-2xl font-extrabold text-[#0F172A] mb-4"
+          className="text-2xl font-extrabold text-ink mb-4"
           style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
         >
           {school.shortName} essay FAQ
@@ -263,13 +263,13 @@ export function SchoolRichSections({
           {rich.faq.map((q, i) => (
             <details
               key={i}
-              className="group rounded-xl bg-white/60 backdrop-blur-xl border border-white/70 p-5"
+              className="group rounded-xl bg-cream border border-hair p-5"
             >
-              <summary className="cursor-pointer list-none flex items-center justify-between text-[#0F172A] font-semibold text-[15px]">
+              <summary className="cursor-pointer list-none flex items-center justify-between text-ink font-semibold text-[15px]">
                 {q.question}
-                <span className="text-[#6366F1] text-xl group-open:rotate-45 transition-transform">+</span>
+                <span className="text-oxblood text-xl group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <p className="text-[#475569] text-[14.5px] leading-relaxed mt-3">
+              <p className="text-ink-2 text-[14.5px] leading-relaxed mt-3">
                 {q.answer}
               </p>
             </details>

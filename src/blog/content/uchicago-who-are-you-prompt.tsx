@@ -359,14 +359,14 @@ export default function Content() {
 
       <p>
         When your Option 1 draft is close, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the topic is actually bounded and the voice reads
         as your own. For the other half of the UChicago supplement, our{" "}
         <Link
           href="/blog/uchicago-why-uchicago-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why UChicago guide
         </Link>{" "}
@@ -375,7 +375,7 @@ export default function Content() {
         weighing Option 1 against the Uncommon prompts, our{" "}
         <Link
           href="/blog/uchicago-uncommon-essay-prompts"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           guide to the Uncommon prompts
         </Link>{" "}

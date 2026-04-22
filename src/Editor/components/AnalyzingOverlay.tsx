@@ -66,10 +66,10 @@ export function AnalyzingOverlay({ isOpen, isDone, onAnimationComplete }: Analyz
           </div>
         </div>
 
-        <h2 className="text-center text-[#0F172A] font-semibold text-base mb-1">
+        <h2 className="text-center text-ink font-semibold text-base mb-1">
           Analyzing your essay
         </h2>
-        <p className="text-center text-[#64748B] text-xs mb-8">
+        <p className="text-center text-pencil text-xs mb-8">
           This takes about 10 to 20 seconds
         </p>
 
@@ -94,7 +94,7 @@ export function AnalyzingOverlay({ isOpen, isDone, onAnimationComplete }: Analyz
                     done
                       ? "text-[#10B981] line-through decoration-[#10B981]/40"
                       : active
-                      ? "text-[#0F172A] font-medium"
+                      ? "text-ink font-medium"
                       : "text-[#CBD5E1]"
                   }`}
                 >

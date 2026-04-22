@@ -324,7 +324,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether it actually surfaces material beyond what the rest
@@ -332,7 +332,7 @@ export default function Content() {
         PIQs, which to pick, and how to sequence them, read our{" "}
         <Link
           href="/blog/uc-personal-insight-questions-guide"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           UC Personal Insight Questions guide
         </Link>
@@ -341,7 +341,7 @@ export default function Content() {
         read our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Ivy League essay guide
         </Link>

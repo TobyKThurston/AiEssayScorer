@@ -134,27 +134,27 @@ export default function Content() {
 
       <p>
         Test your draft in our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         for specificity and voice. For the broader framework, see our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why This College essay guide
         </Link>
         . For a short-form liberal arts comparison, read the{" "}
         <Link
           href="/blog/dartmouth-why-dartmouth-100-words"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Dartmouth 100-word guide
         </Link>{" "}
         and the{" "}
         <Link
           href="/blog/brown-why-brown-open-curriculum-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Brown open curriculum guide
         </Link>

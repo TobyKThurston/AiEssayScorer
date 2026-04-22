@@ -79,7 +79,7 @@ export default function Content() {
       </p>
 
       <p>
-        Before submitting, run your Duke Why essay through our <Link href="/editor" className="text-[#6366F1] hover:underline">AI essay review tool</Link> for line-by-line feedback on specificity and structure. For a broader framework on how to approach any Why This College essay, see our <Link href="/blog/why-this-college-essay" className="text-[#6366F1] hover:underline">complete Why This College guide</Link>. For patterns and strategies across all eight Ivy League schools, read our <Link href="/blog/ivy-league-essay-tips" className="text-[#6366F1] hover:underline">Ivy League essay tips</Link>.
+        Before submitting, run your Duke Why essay through our <Link href="/editor" className="text-oxblood hover:underline">AI essay review tool</Link> for line-by-line feedback on specificity and structure. For a broader framework on how to approach any Why This College essay, see our <Link href="/blog/why-this-college-essay" className="text-oxblood hover:underline">complete Why This College guide</Link>. For patterns and strategies across all eight Ivy League schools, read our <Link href="/blog/ivy-league-essay-tips" className="text-oxblood hover:underline">Ivy League essay tips</Link>.
       </p>
     </>
   );

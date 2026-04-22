@@ -12,8 +12,8 @@ export function ToolSwitcher({ currentSlug }: { currentSlug: string }) {
             href={`/tools/${tool.slug}`}
             className={
               active
-                ? "text-xs font-semibold px-3 py-1.5 rounded-full bg-[#6366F1] text-white"
-                : "text-xs font-medium px-3 py-1.5 rounded-full bg-white/70 text-[#475569] border border-white/70 hover:bg-white hover:text-[#0F172A] transition-colors"
+                ? "text-xs font-semibold px-3 py-1.5 rounded-full bg-oxblood text-white"
+                : "text-xs font-medium px-3 py-1.5 rounded-full bg-white/70 text-ink-2 border border-hair hover:bg-white hover:text-ink transition-colors"
             }
           >
             {tool.shortTitle}

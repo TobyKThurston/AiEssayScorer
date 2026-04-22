@@ -364,7 +364,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether it reads as a CALS fit essay rather than a generic
@@ -372,7 +372,7 @@ export default function Content() {
         or coordinating across multiple drafts, our{" "}
         <Link
           href="/blog/cornell-why-cornell-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Cornell essay overview by college
         </Link>{" "}
@@ -381,7 +381,7 @@ export default function Content() {
         university, read our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "Why This College" essay guide
         </Link>

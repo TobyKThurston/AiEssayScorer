@@ -338,7 +338,7 @@ export default function Content() {
 
       <p>
         When your Oxford supplement is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the voice reads as Oxford-specific or drifts into
@@ -346,7 +346,7 @@ export default function Content() {
         Emory approach for the Atlanta campus, our{" "}
         <Link
           href="/blog/emory-why-emory-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why Emory essay guide
         </Link>{" "}
@@ -354,7 +354,7 @@ export default function Content() {
         principles that apply to every school-specific supplement, read our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why This College essay guide
         </Link>

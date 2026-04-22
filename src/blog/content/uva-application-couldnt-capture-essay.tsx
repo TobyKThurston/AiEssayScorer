@@ -101,7 +101,7 @@ export default function Content() {
           share, it belongs in the{" "}
           <Link
             href="/blog/common-app-additional-information-guide"
-            className="text-[#6366F1] hover:underline"
+            className="text-oxblood hover:underline"
           >
             Additional Information section
           </Link>
@@ -160,20 +160,20 @@ export default function Content() {
 
       <p>
         Run your draft through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         for voice and specificity. For related reading, see our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "Why This College" guide
         </Link>{" "}
         and our{" "}
         <Link
           href="/blog/college-essay-word-limit"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           college essay word limit guide
         </Link>
@@ -181,7 +181,7 @@ export default function Content() {
         read our{" "}
         <Link
           href="/blog/common-app-additional-information-guide"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Common App Additional Information guide
         </Link>

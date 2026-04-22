@@ -341,14 +341,14 @@ export default function Content() {
 
       <p>
         When your ten rows are drafted, run the whole section through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check for weak verbs, missing numbers, and repeated patterns across
         entries. For the overflow space below the grid, our{" "}
         <Link
           href="/blog/common-app-additional-information-guide"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Additional Information guide
         </Link>{" "}
@@ -356,7 +356,7 @@ export default function Content() {
         personal statement that sits alongside these ten rows, read our{" "}
         <Link
           href="/blog/how-to-write-common-app-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Common App essay guide
         </Link>

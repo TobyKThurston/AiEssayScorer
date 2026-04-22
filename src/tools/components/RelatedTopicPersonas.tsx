@@ -7,7 +7,7 @@ export function RelatedTopicPersonas({ currentSlug }: { currentSlug: string }) {
   return (
     <section className="mt-16">
       <h2
-        className="text-xl font-extrabold text-[#0F172A] mb-5"
+        className="text-xl font-extrabold text-ink mb-5"
         style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
       >
         Topic generators for other types of applicants
@@ -17,12 +17,12 @@ export function RelatedTopicPersonas({ currentSlug }: { currentSlug: string }) {
           <Link
             key={p.slug}
             href={`/tools/topics-for-${p.slug}`}
-            className="flex items-center justify-between rounded-xl bg-white/60 backdrop-blur-xl border border-white/70 px-4 py-3 hover:bg-white/80 hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all group"
+            className="flex items-center justify-between rounded-xl bg-cream border border-hair px-4 py-3 hover:bg-cream hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all group"
           >
-            <p className="text-[#0F172A] font-semibold text-sm group-hover:text-[#6366F1] transition-colors">
+            <p className="text-ink font-semibold text-sm group-hover:text-oxblood transition-colors">
               Topics for {p.shortName}
             </p>
-            <ArrowRight className="w-4 h-4 text-[#6366F1] opacity-0 group-hover:opacity-100 transition-opacity" />
+            <ArrowRight className="w-4 h-4 text-oxblood opacity-0 group-hover:opacity-100 transition-opacity" />
           </Link>
         ))}
       </div>

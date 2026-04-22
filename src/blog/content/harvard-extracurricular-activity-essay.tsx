@@ -147,28 +147,28 @@ export default function Content() {
 
       <p>
         Run your draft through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         for voice and specificity. For Harvard's other supplements, see
         our{" "}
         <Link
           href="/blog/harvard-intellectual-experience-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "Intellectual Experience" guide
         </Link>
         ,{" "}
         <Link
           href="/blog/harvard-roommate-essay-top-3-things"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Roommate essay guide
         </Link>
         , and{" "}
         <Link
           href="/blog/harvard-how-use-education-future-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "How Use Education" guide
         </Link>

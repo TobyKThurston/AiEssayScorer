@@ -339,7 +339,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether your narrow question is actually narrow and whether
@@ -348,7 +348,7 @@ export default function Content() {
         our{" "}
         <Link
           href="/blog/uc-personal-insight-questions-guide"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           UC Personal Insight Questions guide
         </Link>
@@ -356,7 +356,7 @@ export default function Content() {
         is…" — fix the first sentence first, using our{" "}
         <Link
           href="/blog/college-essay-hooks-opening-lines"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           college essay hooks guide
         </Link>

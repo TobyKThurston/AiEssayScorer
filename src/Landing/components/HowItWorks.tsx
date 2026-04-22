@@ -1,76 +1,50 @@
-"use client";
+import { Container } from "@/design/Container";
+import { SectionHead } from "@/design/SectionHead";
 
-import { motion } from "motion/react";
-import { Upload, Target, RefreshCw } from "lucide-react";
-
-const steps = [
+const STEPS = [
   {
-    icon: Upload,
-    step: "01",
-    title: "Paste your essay",
-    description:
-      "Drop in your draft, note the target schools, and optionally paste the prompt for context.",
+    num: "01",
+    title: "Paste your draft.",
+    body:
+      "Drop in any version — first draft or final polish. We accept Common App essays, supplementals, and short answers from 50 to 2,000 words.",
   },
   {
-    icon: Target,
-    step: "02",
-    title: "Get your score",
-    description:
-      "Receive a score across content, structure, and style, plus an overall quality rating.",
+    num: "02",
+    title: "Get scored on a real rubric.",
+    body:
+      "Content, structure, voice, school fit, and mechanics. The same rubric trained on thousands of accepted applications.",
   },
   {
-    icon: RefreshCw,
-    step: "03",
-    title: "Apply the edits",
-    description:
-      "Use the line-by-line suggestions to sharpen your voice and raise your score before you submit.",
+    num: "03",
+    title: "Fix what matters most.",
+    body:
+      "Line-by-line edits, risk flags, and one standout move. Accept what helps, ignore what doesn't. You stay the author.",
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-16 md:py-24">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-16">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-14"
-        >
-          <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-3">
-            How It Works
-          </p>
-          <h2>Three steps to a stronger essay</h2>
-        </motion.div>
+    <section id="how" className="py-24 md:py-28 border-t border-hair">
+      <Container>
+        <SectionHead
+          num="§03"
+          eyebrow="How it works"
+          title={<>From paste to <em className="italic text-oxblood">publishable</em> in three reads.</>}
+          intro="The whole point is to close the gap between your draft and an admissions reader's view of it — fast."
+        />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {steps.map((step, index) => (
-            <motion.div
-              key={step.step}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="bg-white/60 backdrop-blur-md border border-white/70 rounded-2xl p-6 shadow-[0_2px_16px_rgba(99,102,241,0.06)] hover:bg-white/75 hover:shadow-[0_8px_32px_rgba(99,102,241,0.12)] transition-all duration-300"
-            >
-              {/* Step number + icon */}
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-12 h-12 rounded-xl bg-white/60 backdrop-blur-sm border border-white/80 flex items-center justify-center">
-                  <step.icon className="w-5 h-5 text-[#6366F1]" />
-                </div>
-                <span className="text-xs font-bold text-[#6366F1] uppercase tracking-widest">
-                  Step {step.step}
-                </span>
-              </div>
-
-              <h3 className="mb-2">{step.title}</h3>
-              <p className="text-[#64748B] text-sm leading-relaxed">{step.description}</p>
-            </motion.div>
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {STEPS.map((s) => (
+            <div key={s.num} className="paper-card p-8">
+              <p className="font-serif italic text-[56px] leading-none text-oxblood opacity-90 mb-5">
+                {s.num}
+              </p>
+              <h3 className="font-serif text-[22px] leading-[1.2] text-ink mb-3">{s.title}</h3>
+              <p className="text-[14.5px] text-ink-2 leading-[1.6]">{s.body}</p>
+            </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

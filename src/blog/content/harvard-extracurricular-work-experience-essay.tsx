@@ -319,7 +319,7 @@ export default function Content() {
       </p>
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the three-move structure is actually on the
@@ -328,14 +328,14 @@ export default function Content() {
         are working on the rest of Harvard's short answers, our{" "}
         <Link
           href="/blog/harvard-intellectual-experience-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Harvard intellectual experience essay guide
         </Link>{" "}
         walks through the 200-word ideas prompt, and our{" "}
         <Link
           href="/blog/harvard-roommate-essay-top-3-things"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Harvard roommate essay guide
         </Link>{" "}

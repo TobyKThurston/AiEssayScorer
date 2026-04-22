@@ -29,13 +29,13 @@ export function AdmissionsOfficerView({ admissionsView, isPro }: AdmissionsOffic
         className="w-full flex items-center justify-between p-3 hover:bg-white/5 transition-colors"
       >
         <div className="flex items-center gap-2">
-          <Eye className="w-3.5 h-3.5 text-[#94A3B8]" />
+          <Eye className="w-3.5 h-3.5 text-pencil" />
           <span className="text-xs font-semibold text-white uppercase tracking-wider">
             Admissions Officer View
           </span>
         </div>
         <ChevronDown
-          className={`w-3.5 h-3.5 text-[#94A3B8] transition-transform duration-200 ${
+          className={`w-3.5 h-3.5 text-pencil transition-transform duration-200 ${
             isOpen ? "rotate-180" : ""
           }`}
         />

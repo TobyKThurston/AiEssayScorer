@@ -8,12 +8,12 @@ function Section({ heading, children }: { heading: string; children: React.React
   return (
     <section className="mt-12">
       <h2
-        className="text-2xl font-extrabold text-[#0F172A] mb-3"
+        className="text-2xl font-extrabold text-ink mb-3"
         style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
       >
         {heading}
       </h2>
-      <div className="text-[#475569] text-[15px] leading-relaxed max-w-2xl space-y-3">{children}</div>
+      <div className="text-ink-2 text-[15px] leading-relaxed max-w-2xl space-y-3">{children}</div>
     </section>
   );
 }
@@ -25,10 +25,10 @@ function RelatedGrid({ items }: { items: { href: string; label: string; kicker: 
         <Link
           key={item.href}
           href={item.href}
-          className="rounded-xl bg-white/60 backdrop-blur-xl border border-white/70 p-4 hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all"
+          className="rounded-xl bg-cream border border-hair p-4 hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all"
         >
-          <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-1">{item.kicker}</p>
-          <p className="text-[#0F172A] text-[14.5px] font-semibold">{item.label}</p>
+          <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-1">{item.kicker}</p>
+          <p className="text-ink text-[14.5px] font-semibold">{item.label}</p>
         </Link>
       ))}
     </div>
@@ -137,11 +137,11 @@ export function DeepHookPromptContent({ prompt }: { prompt: EssayPrompt }) {
       </Section>
       <Section heading={`Five hook modes that work for ${prompt.shortName}`}>
         <ol className="space-y-2 list-decimal list-outside pl-5">
-          <li><span className="font-semibold text-[#0F172A]">Scene.</span> Drop the reader into a specific moment with no setup.</li>
-          <li><span className="font-semibold text-[#0F172A]">Object.</span> Open on one concrete thing that only makes sense inside your life.</li>
-          <li><span className="font-semibold text-[#0F172A]">Question.</span> A real question you cannot answer yet. Avoid rhetorical questions.</li>
-          <li><span className="font-semibold text-[#0F172A]">Dialogue.</span> One line of real speech, no explanation of who said it.</li>
-          <li><span className="font-semibold text-[#0F172A]">Claim.</span> A small, slightly surprising claim that you spend the essay earning.</li>
+          <li><span className="font-semibold text-ink">Scene.</span> Drop the reader into a specific moment with no setup.</li>
+          <li><span className="font-semibold text-ink">Object.</span> Open on one concrete thing that only makes sense inside your life.</li>
+          <li><span className="font-semibold text-ink">Question.</span> A real question you cannot answer yet. Avoid rhetorical questions.</li>
+          <li><span className="font-semibold text-ink">Dialogue.</span> One line of real speech, no explanation of who said it.</li>
+          <li><span className="font-semibold text-ink">Claim.</span> A small, slightly surprising claim that you spend the essay earning.</li>
         </ol>
       </Section>
       <Section heading={`Pitfalls at the ${wordLimit}-word length`}>

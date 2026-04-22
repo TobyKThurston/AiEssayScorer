@@ -188,7 +188,7 @@ export function ApplicationsGallery() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] pt-24 pb-16">
+    <div className="min-h-screen bg-paper pt-24 pb-16">
       <div className="max-w-[1200px] mx-auto px-6 md:px-16">
         {/* Header */}
         <motion.div
@@ -197,10 +197,10 @@ export function ApplicationsGallery() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="mb-4 bg-gradient-to-r from-[#3B82F6] to-[#0EA5E9] bg-clip-text text-transparent">
+          <h1 className="mb-4 bg-gradient-to-r from-oxblood to-forest bg-clip-text text-transparent">
             Successful Applications
           </h1>
-          <p className="text-[#64748B] max-w-2xl mx-auto">
+          <p className="text-pencil max-w-2xl mx-auto">
             Explore real college applications from students who got accepted to top universities. Learn from their essays, stats, and strategies.
           </p>
         </motion.div>
@@ -221,14 +221,14 @@ export function ApplicationsGallery() {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center shadow-lg">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-oxblood to-forest flex items-center justify-center shadow-lg">
                       <span className="text-3xl">{school.logo}</span>
                     </div>
                     <div className="text-left">
-                      <h3 className="text-[#0F172A] group-hover:text-[#3B82F6] transition-colors">
+                      <h3 className="text-ink group-hover:text-oxblood transition-colors">
                         {school.name}
                       </h3>
-                      <p className="text-[#64748B]">
+                      <p className="text-pencil">
                         {school.applications.length} {school.applications.length === 1 ? 'application' : 'applications'}
                       </p>
                     </div>
@@ -237,7 +237,7 @@ export function ApplicationsGallery() {
                     animate={{ rotate: expandedSchool === school.id ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <ChevronDown className="w-6 h-6 text-[#94A3B8] group-hover:text-[#3B82F6] transition-colors" />
+                    <ChevronDown className="w-6 h-6 text-pencil group-hover:text-oxblood transition-colors" />
                   </motion.div>
                 </div>
               </button>
@@ -262,53 +262,53 @@ export function ApplicationsGallery() {
                           >
                             <div className="flex items-center justify-between mb-3">
                               <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center text-white shadow-md">
+                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-oxblood to-forest flex items-center justify-center text-white shadow-md">
                                   <span className="font-semibold">{app.name.split(' ').map(n => n[0]).join('')}</span>
                                 </div>
                                 <div className="text-left">
-                                  <h4 className="text-[#0F172A] group-hover:text-[#3B82F6] transition-colors">
+                                  <h4 className="text-ink group-hover:text-oxblood transition-colors">
                                     {app.name}
                                   </h4>
-                                  <p className="text-[#64748B]">{app.year}</p>
+                                  <p className="text-pencil">{app.year}</p>
                                 </div>
                               </div>
                               <motion.div
                                 animate={{ rotate: expandedApplication === app.id ? 180 : 0 }}
                                 transition={{ duration: 0.3 }}
                               >
-                                <ChevronDown className="w-5 h-5 text-[#94A3B8] group-hover:text-[#3B82F6] transition-colors" />
+                                <ChevronDown className="w-5 h-5 text-pencil group-hover:text-oxblood transition-colors" />
                               </motion.div>
                             </div>
 
                             {/* Stats Grid */}
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                              <div className="bg-[#F8FAFC] rounded-lg p-3 text-left">
+                              <div className="bg-paper rounded-lg p-3 text-left">
                                 <div className="flex items-center gap-2 mb-1">
-                                  <GraduationCap className="w-4 h-4 text-[#3B82F6]" />
-                                  <span className="text-[#64748B]">Major</span>
+                                  <GraduationCap className="w-4 h-4 text-oxblood" />
+                                  <span className="text-pencil">Major</span>
                                 </div>
-                                <p className="text-[#0F172A]">{app.major}</p>
+                                <p className="text-ink">{app.major}</p>
                               </div>
-                              <div className="bg-[#F8FAFC] rounded-lg p-3 text-left">
+                              <div className="bg-paper rounded-lg p-3 text-left">
                                 <div className="flex items-center gap-2 mb-1">
-                                  <Award className="w-4 h-4 text-[#3B82F6]" />
-                                  <span className="text-[#64748B]">SAT</span>
+                                  <Award className="w-4 h-4 text-oxblood" />
+                                  <span className="text-pencil">SAT</span>
                                 </div>
-                                <p className="text-[#0F172A]">{app.sat}</p>
+                                <p className="text-ink">{app.sat}</p>
                               </div>
-                              <div className="bg-[#F8FAFC] rounded-lg p-3 text-left">
+                              <div className="bg-paper rounded-lg p-3 text-left">
                                 <div className="flex items-center gap-2 mb-1">
-                                  <BookOpen className="w-4 h-4 text-[#3B82F6]" />
-                                  <span className="text-[#64748B]">GPA</span>
+                                  <BookOpen className="w-4 h-4 text-oxblood" />
+                                  <span className="text-pencil">GPA</span>
                                 </div>
-                                <p className="text-[#0F172A]">{app.gpa.toFixed(2)}</p>
+                                <p className="text-ink">{app.gpa.toFixed(2)}</p>
                               </div>
-                              <div className="bg-[#F8FAFC] rounded-lg p-3 text-left">
+                              <div className="bg-paper rounded-lg p-3 text-left">
                                 <div className="flex items-center gap-2 mb-1">
-                                  <FileText className="w-4 h-4 text-[#3B82F6]" />
-                                  <span className="text-[#64748B]">Essays</span>
+                                  <FileText className="w-4 h-4 text-oxblood" />
+                                  <span className="text-pencil">Essays</span>
                                 </div>
-                                <p className="text-[#0F172A]">{app.essays.length}</p>
+                                <p className="text-ink">{app.essays.length}</p>
                               </div>
                             </div>
                           </button>
@@ -333,18 +333,18 @@ export function ApplicationsGallery() {
                                       className="bg-white rounded-lg p-5 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-slate-100"
                                     >
                                       <div className="flex items-start gap-3 mb-3">
-                                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center flex-shrink-0">
+                                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-oxblood to-forest flex items-center justify-center flex-shrink-0">
                                           <FileText className="w-4 h-4 text-white" />
                                         </div>
                                         <div className="flex-1">
-                                          <h5 className="text-[#0F172A] mb-1">{essay.title}</h5>
-                                          <p className="text-[#94A3B8] italic">{essay.prompt}</p>
+                                          <h5 className="text-ink mb-1">{essay.title}</h5>
+                                          <p className="text-pencil italic">{essay.prompt}</p>
                                         </div>
                                       </div>
-                                      <div className="bg-[#F8FAFC] rounded-lg p-4">
-                                        <p className="text-[#475569] leading-relaxed">{essay.excerpt}</p>
+                                      <div className="bg-paper rounded-lg p-4">
+                                        <p className="text-ink-2 leading-relaxed">{essay.excerpt}</p>
                                       </div>
-                                      <button className="mt-3 text-[#3B82F6] hover:text-[#0EA5E9] transition-colors">
+                                      <button className="mt-3 text-oxblood hover:text-[#0EA5E9] transition-colors">
                                         Read full essay →
                                       </button>
                                     </motion.div>

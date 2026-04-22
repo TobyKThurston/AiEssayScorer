@@ -23,10 +23,10 @@ export function EssayRewritePanel({
   if (!isOpen) return null;
 
   return (
-    <div className="absolute right-0 top-0 h-full w-[380px] z-20 bg-white shadow-2xl flex flex-col border-l border-slate-200">
+    <div className="absolute right-0 top-0 h-full w-[380px] z-20 bg-white shadow-2xl flex flex-col border-l border-hair">
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200 flex-shrink-0">
-        <span className="text-sm font-semibold text-[#0F172A]">Rewritten Essay</span>
+      <div className="flex items-center justify-between px-4 py-3 border-b border-hair flex-shrink-0">
+        <span className="text-sm font-semibold text-ink">Rewritten Essay</span>
         <div className="flex items-center gap-2">
           {isPro && result?.rewritten && (
             <button
@@ -38,7 +38,7 @@ export function EssayRewritePanel({
           )}
           <button
             onClick={onClose}
-            className="p-1 rounded-lg text-[#64748B] hover:bg-slate-100 transition-colors"
+            className="p-1 rounded-lg text-pencil hover:bg-paper-2 transition-colors"
           >
             <X className="w-4 h-4" />
           </button>
@@ -50,24 +50,24 @@ export function EssayRewritePanel({
         {isLoading ? (
           <div className="flex flex-col items-center justify-center h-full gap-3">
             <div className="w-6 h-6 border-2 border-[#6366F1] border-t-transparent rounded-full animate-spin" />
-            <p className="text-sm text-[#64748B]">Rewriting your essay...</p>
+            <p className="text-sm text-pencil">Rewriting your essay...</p>
           </div>
         ) : result ? (
           <div>
             {isPro && result.rewritten ? (
-              <p className="text-sm text-[#0F172A] leading-relaxed whitespace-pre-wrap">
+              <p className="text-sm text-ink leading-relaxed whitespace-pre-wrap">
                 {result.rewritten}
               </p>
             ) : (
               <div className="space-y-3">
-                <p className="text-sm text-[#0F172A] leading-relaxed">{result.hookPreview}</p>
+                <p className="text-sm text-ink leading-relaxed">{result.hookPreview}</p>
                 <UpgradeGate
                   isLocked={true}
                   featureName="Full Essay Rewrite"
                   description="Unlock the complete rewritten version"
                 >
                   <div className="space-y-2">
-                    <p className="text-sm text-[#0F172A] leading-relaxed opacity-60 select-none">
+                    <p className="text-sm text-ink leading-relaxed opacity-60 select-none">
                       {Array(8)
                         .fill(
                           "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -81,7 +81,7 @@ export function EssayRewritePanel({
           </div>
         ) : (
           <div className="flex items-center justify-center h-full">
-            <p className="text-sm text-[#94A3B8]">No result yet</p>
+            <p className="text-sm text-pencil">No result yet</p>
           </div>
         )}
       </div>

@@ -341,7 +341,7 @@ export default function Content() {
 
       <p>
         When your list is drafted, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the specificity actually reads as specific and
@@ -350,7 +350,7 @@ export default function Content() {
         reading" list, our{" "}
         <Link
           href="/blog/columbia-list-essay-what-are-you-reading"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Columbia current-reading list guide
         </Link>{" "}
@@ -359,7 +359,7 @@ export default function Content() {
         Core Curriculum fits you specifically, read our{" "}
         <Link
           href="/blog/columbia-why-columbia-essay-core-curriculum"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why Columbia and the Core Curriculum guide
         </Link>

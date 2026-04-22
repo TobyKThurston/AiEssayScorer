@@ -100,13 +100,13 @@ export default function Content() {
 
       <h2>How the Community Essay Fits Into the Full Yale Supplement</h2>
       <p>
-        Yale's supplement reads as a whole. Your short takes, including the <Link href="/blog/yale-teach-a-course-essay" className="text-[#6366F1] hover:underline">course title prompt</Link>, reveal your intellectual range. Your <Link href="/blog/yale-why-yale-essay-125-words" className="text-[#6366F1] hover:underline">Why Yale essay</Link> reveals your fit with Yale's academic structure. The 400-word longer essays — including the community essay — are where Yale gets a fuller portrait of who you are outside classrooms.
+        Yale's supplement reads as a whole. Your short takes, including the <Link href="/blog/yale-teach-a-course-essay" className="text-oxblood hover:underline">course title prompt</Link>, reveal your intellectual range. Your <Link href="/blog/yale-why-yale-essay-125-words" className="text-oxblood hover:underline">Why Yale essay</Link> reveals your fit with Yale's academic structure. The 400-word longer essays — including the community essay — are where Yale gets a fuller portrait of who you are outside classrooms.
       </p>
       <p>
         The community essay should not duplicate your Common App personal statement. If the personal statement gives Yale one vertical slice of your life, the community essay should give them a different vertical slice. Together, they should add up to a person Yale can see clearly, not two different versions of the same story.
       </p>
       <p>
-        Before submitting any of your Yale essays, run them through our <Link href="/editor" className="text-[#6366F1] hover:underline">AI essay review tool</Link> for line-by-line feedback on specificity, structure, and voice. For the broader patterns Yale shares with other selective schools, read our <Link href="/blog/ivy-league-essay-tips" className="text-[#6366F1] hover:underline">Ivy League essay analysis</Link>. And if you haven't yet finalized your Common App personal statement, our <Link href="/blog/how-to-write-common-app-essay" className="text-[#6366F1] hover:underline">Common App guide</Link> covers the structural decisions that make the supplementals easier to write.
+        Before submitting any of your Yale essays, run them through our <Link href="/editor" className="text-oxblood hover:underline">AI essay review tool</Link> for line-by-line feedback on specificity, structure, and voice. For the broader patterns Yale shares with other selective schools, read our <Link href="/blog/ivy-league-essay-tips" className="text-oxblood hover:underline">Ivy League essay analysis</Link>. And if you haven't yet finalized your Common App personal statement, our <Link href="/blog/how-to-write-common-app-essay" className="text-oxblood hover:underline">Common App guide</Link> covers the structural decisions that make the supplementals easier to write.
       </p>
     </>
   );

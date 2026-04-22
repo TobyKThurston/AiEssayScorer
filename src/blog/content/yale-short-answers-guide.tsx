@@ -307,14 +307,14 @@ export default function Content() {
 
       <p>
         When your Short Takes are drafted, run the set through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         and check whether the answers sound like one person. If you are
         also writing the 125-word Yale essay, our{" "}
         <Link
           href="/blog/yale-why-yale-essay-125-words"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why Yale in 125 words guide
         </Link>{" "}
@@ -322,7 +322,7 @@ export default function Content() {
         And for the 35-word teach-a-course prompt specifically, read our{" "}
         <Link
           href="/blog/yale-teach-a-course-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Yale teach-a-course essay guide
         </Link>

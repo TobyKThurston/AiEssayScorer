@@ -341,14 +341,14 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the Princeton-specific paragraph is actually doing
         the work the prompt requires. For the companion supplement, our{" "}
         <Link
           href="/blog/princeton-why-princeton-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why Princeton essay guide
         </Link>{" "}
@@ -357,7 +357,7 @@ export default function Content() {
         alongside both, see our{" "}
         <Link
           href="/blog/princeton-what-brings-you-joy-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "What Brings You Joy" guide
         </Link>

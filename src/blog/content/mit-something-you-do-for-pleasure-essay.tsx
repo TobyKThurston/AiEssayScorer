@@ -80,7 +80,7 @@ export default function Content() {
       </p>
 
       <p>
-        When your draft is ready, run it through our <Link href="/editor" className="text-[#6366F1] hover:underline">AI essay review tool</Link> to check whether your 200 words are doing enough specific, concrete work — or whether they've drifted into the vague, impressive-sounding territory this prompt is designed to reject. For broader strategy on how MIT's short answers fit together with the rest of your application, read our <Link href="/blog/ivy-league-essay-tips" className="text-[#6366F1] hover:underline">Ivy League essay tips</Link>.
+        When your draft is ready, run it through our <Link href="/editor" className="text-oxblood hover:underline">AI essay review tool</Link> to check whether your 200 words are doing enough specific, concrete work — or whether they've drifted into the vague, impressive-sounding territory this prompt is designed to reject. For broader strategy on how MIT's short answers fit together with the rest of your application, read our <Link href="/blog/ivy-league-essay-tips" className="text-oxblood hover:underline">Ivy League essay tips</Link>.
       </p>
     </>
   );

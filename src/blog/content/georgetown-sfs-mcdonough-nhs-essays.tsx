@@ -381,7 +381,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether your school-specific essay actually reads as
@@ -389,7 +389,7 @@ export default function Content() {
         Georgetown requires, our{" "}
         <Link
           href="/blog/georgetown-essay-prompts-guide"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Georgetown essay prompts guide
         </Link>{" "}
@@ -399,7 +399,7 @@ export default function Content() {
         university, our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why This College essay guide
         </Link>{" "}

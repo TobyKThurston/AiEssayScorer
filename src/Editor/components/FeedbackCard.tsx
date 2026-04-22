@@ -49,7 +49,7 @@ export function FeedbackCard({
       className={`p-4 rounded-xl border-2 cursor-pointer transition-all duration-150 ${
         isActive
           ? "border-[#3B82F6] bg-[#EFF6FF] shadow-[0_4px_16px_rgba(59,130,246,0.15)]"
-          : "border-slate-200 bg-white hover:border-[#3B82F6]/40 hover:bg-slate-50"
+          : "border-hair bg-white hover:border-[#3B82F6]/40 hover:bg-slate-50"
       }`}
       onMouseEnter={() => onHoverEnter(index)}
       onMouseLeave={onHoverLeave}
@@ -58,29 +58,29 @@ export function FeedbackCard({
       <div className="flex items-start gap-2.5 mb-3">
         <div
           className={`w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5 ${
-            isActive ? "bg-[#DBEAFE]" : "bg-slate-100"
+            isActive ? "bg-[#DBEAFE]" : "bg-paper-2"
           }`}
         >
           <Lightbulb
-            className={`w-3.5 h-3.5 ${isActive ? "text-[#3B82F6]" : "text-[#94A3B8]"}`}
+            className={`w-3.5 h-3.5 ${isActive ? "text-oxblood" : "text-pencil"}`}
           />
         </div>
-        <span className="text-xs font-semibold text-[#94A3B8] uppercase tracking-wider mt-1">
+        <span className="text-xs font-semibold text-pencil uppercase tracking-wider mt-1">
           Line {index + 1}
         </span>
       </div>
 
       <div className="space-y-2 text-sm">
         <div>
-          <span className="text-xs text-[#94A3B8] block mb-0.5">Original</span>
-          <p className="text-[#64748B] italic leading-snug line-clamp-3">{original}</p>
+          <span className="text-xs text-pencil block mb-0.5">Original</span>
+          <p className="text-pencil italic leading-snug line-clamp-3">{original}</p>
         </div>
         <div>
-          <span className="text-xs text-[#3B82F6] block mb-0.5">Suggested</span>
-          <p className="text-[#0F172A] leading-snug">{suggestion}</p>
+          <span className="text-xs text-oxblood block mb-0.5">Suggested</span>
+          <p className="text-ink leading-snug">{suggestion}</p>
         </div>
         <div className="pt-2 border-t border-slate-100">
-          <p className="text-xs text-[#64748B] leading-snug">{reason}</p>
+          <p className="text-xs text-pencil leading-snug">{reason}</p>
         </div>
       </div>
 
@@ -91,7 +91,7 @@ export function FeedbackCard({
           onRewrite(index, original, suggestion, reason);
         }}
         disabled={isRewriting}
-        className="mt-3 flex items-center gap-1 text-[10px] font-medium text-[#6366F1] hover:underline disabled:opacity-40"
+        className="mt-3 flex items-center gap-1 text-[10px] font-medium text-oxblood hover:underline disabled:opacity-40"
       >
         <Wand2 className="w-3 h-3" />
         {isRewriting ? "Rewriting..." : "Rewrite this"}
@@ -106,8 +106,8 @@ export function FeedbackCard({
         >
           <div className="mt-2 p-2.5 rounded-lg bg-[#F0FDF4] border border-[#BBF7D0]">
             <span className="text-[10px] font-semibold text-[#10B981] block mb-1">Rewritten</span>
-            <p className="text-sm text-[#0F172A] leading-snug">{rewriteResult.rewritten}</p>
-            <p className="text-[10px] text-[#64748B] mt-1 italic">{rewriteResult.explanation}</p>
+            <p className="text-sm text-ink leading-snug">{rewriteResult.rewritten}</p>
+            <p className="text-[10px] text-pencil mt-1 italic">{rewriteResult.explanation}</p>
           </div>
         </UpgradeGate>
       )}

@@ -340,7 +340,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether both summers are specific enough and whether
@@ -348,7 +348,7 @@ export default function Content() {
         working on the Stanford roommate prompt, our{" "}
         <Link
           href="/blog/stanford-roommate-letter-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Stanford roommate letter guide
         </Link>{" "}
@@ -356,7 +356,7 @@ export default function Content() {
         the Stanford values essay, read our{" "}
         <Link
           href="/blog/stanford-what-matters-to-you-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           What Matters to You and Why guide
         </Link>

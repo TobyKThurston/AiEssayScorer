@@ -111,13 +111,13 @@ export default function Content() {
         The Dartmouth supplement is small — a 100-word Why essay and two longer 250-word essays chosen from quote-based prompts. Because there are so few opportunities, each essay has to do different work.
       </p>
       <p>
-        The "Let Your Life Speak" essay should cover autobiographical territory. Your <Link href="/blog/dartmouth-why-dartmouth-100-words" className="text-[#6366F1] hover:underline">Why Dartmouth essay</Link> should cover academic fit. Your second longer essay — whether you pick the <Link href="/blog/dartmouth-dr-seuss-think-and-wonder-essay" className="text-[#6366F1] hover:underline">Dr. Seuss "Think and Wonder" prompt</Link> or another option — should reveal a different dimension of how you think.
+        The "Let Your Life Speak" essay should cover autobiographical territory. Your <Link href="/blog/dartmouth-why-dartmouth-100-words" className="text-oxblood hover:underline">Why Dartmouth essay</Link> should cover academic fit. Your second longer essay — whether you pick the <Link href="/blog/dartmouth-dr-seuss-think-and-wonder-essay" className="text-oxblood hover:underline">Dr. Seuss "Think and Wonder" prompt</Link> or another option — should reveal a different dimension of how you think.
       </p>
       <p>
         A useful test: read your Common App personal statement and your Dartmouth "Let Your Life Speak" essay back to back. If they cover the same ground, rewrite one of them. Dartmouth reads the full application as a single portrait, and repetition costs you a dimension of the portrait you could otherwise be showing.
       </p>
       <p>
-        Before submitting any of your Dartmouth essays, run them through our <Link href="/editor" className="text-[#6366F1] hover:underline">AI essay review tool</Link> for feedback on specificity, structure, and voice. For the patterns Dartmouth shares with its Ivy peers, read our <Link href="/blog/ivy-league-essay-tips" className="text-[#6366F1] hover:underline">Ivy League essay analysis</Link>. And if you're still deciding which Common App prompt to pair with your Dartmouth supplement, our <Link href="/blog/common-app-essay-prompts-2025" className="text-[#6366F1] hover:underline">Common App prompts guide</Link> walks through each option.
+        Before submitting any of your Dartmouth essays, run them through our <Link href="/editor" className="text-oxblood hover:underline">AI essay review tool</Link> for feedback on specificity, structure, and voice. For the patterns Dartmouth shares with its Ivy peers, read our <Link href="/blog/ivy-league-essay-tips" className="text-oxblood hover:underline">Ivy League essay analysis</Link>. And if you're still deciding which Common App prompt to pair with your Dartmouth supplement, our <Link href="/blog/common-app-essay-prompts-2025" className="text-oxblood hover:underline">Common App prompts guide</Link> walks through each option.
       </p>
     </>
   );

@@ -338,14 +338,14 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether every clause is load-bearing at 100 words. If you
         are also working on the MIT challenge prompt, our{" "}
         <Link
           href="/blog/mit-challenge-you-faced-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           MIT challenge short answer guide
         </Link>{" "}
@@ -354,7 +354,7 @@ export default function Content() {
         would actually add to the MIT community — read our{" "}
         <Link
           href="/blog/mit-contribute-to-community-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           MIT contribute-to-community guide
         </Link>

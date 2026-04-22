@@ -26,16 +26,16 @@ export default function TryPage() {
   return (
     <div className="max-w-[900px] mx-auto px-6 md:px-16 pt-28 md:pt-36 pb-20">
       <div className="mb-10">
-        <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-3">
+        <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-3">
           Free AI essay score
         </p>
         <h1
-          className="mb-4 text-[#0F172A]"
+          className="mb-4 text-ink"
           style={{ fontSize: "40px", lineHeight: "48px", fontFamily: "var(--font-heading)", letterSpacing: "-0.02em" }}
         >
           Get your essay scored in 60 seconds. No signup.
         </h1>
-        <p className="text-[#475569] text-lg leading-relaxed max-w-2xl">
+        <p className="text-ink-2 text-lg leading-relaxed max-w-2xl">
           Paste your personal statement or supplemental essay and get a rubric-based score plus top strengths and improvements. One free review per day, no account needed.
         </p>
       </div>
@@ -44,7 +44,7 @@ export default function TryPage() {
 
       <section className="mt-16">
         <h2
-          className="text-xl font-extrabold text-[#0F172A] mb-5"
+          className="text-xl font-extrabold text-ink mb-5"
           style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
         >
           Or try one of our free tools

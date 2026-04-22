@@ -133,7 +133,7 @@ export function DeepSchoolContent({ school, variant }: { school: School; variant
     <>
       <section className="mt-16">
         <h2
-          className="text-2xl font-extrabold text-[#0F172A] mb-4"
+          className="text-2xl font-extrabold text-ink mb-4"
           style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
         >
           {school.shortName} at a glance
@@ -142,12 +142,12 @@ export function DeepSchoolContent({ school, variant }: { school: School; variant
           {facts.map((f) => (
             <div
               key={f.label}
-              className="rounded-xl bg-white/60 backdrop-blur-xl border border-white/70 p-4"
+              className="rounded-xl bg-cream border border-hair p-4"
             >
-              <dt className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-1">
+              <dt className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-1">
                 {f.label}
               </dt>
-              <dd className="text-[#0F172A] text-[14.5px] leading-relaxed">{f.value}</dd>
+              <dd className="text-ink text-[14.5px] leading-relaxed">{f.value}</dd>
             </div>
           ))}
         </dl>
@@ -155,25 +155,25 @@ export function DeepSchoolContent({ school, variant }: { school: School; variant
 
       <section className="mt-12">
         <h2
-          className="text-2xl font-extrabold text-[#0F172A] mb-3"
+          className="text-2xl font-extrabold text-ink mb-3"
           style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
         >
           Structural template for a {limitLabel} &quot;Why {school.shortName}&quot; draft
         </h2>
-        <p className="text-[#475569] text-[15px] leading-relaxed mb-5 max-w-2xl">
+        <p className="text-ink-2 text-[15px] leading-relaxed mb-5 max-w-2xl">
           Word count is the hardest constraint in the &quot;Why {school.shortName}&quot; essay. Here&apos;s how a strong draft at this length distributes its budget.
         </p>
         <div className="space-y-3">
           {breakdown.map((b) => (
             <div
               key={b.label}
-              className="rounded-xl bg-white/60 backdrop-blur-xl border border-white/70 p-5"
+              className="rounded-xl bg-cream border border-hair p-5"
             >
               <div className="flex items-baseline justify-between gap-3 mb-2">
-                <span className="text-[#0F172A] font-semibold text-[15px]">{b.label.replace("${school.shortName}", school.shortName)}</span>
-                <span className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest">{b.words}</span>
+                <span className="text-ink font-semibold text-[15px]">{b.label.replace("${school.shortName}", school.shortName)}</span>
+                <span className="text-xs font-semibold text-oxblood uppercase tracking-widest">{b.words}</span>
               </div>
-              <p className="text-[#475569] text-[14.5px] leading-relaxed">{b.purpose.replace(/\$\{school\.shortName\}/g, school.shortName)}</p>
+              <p className="text-ink-2 text-[14.5px] leading-relaxed">{b.purpose.replace(/\$\{school\.shortName\}/g, school.shortName)}</p>
             </div>
           ))}
         </div>
@@ -181,27 +181,27 @@ export function DeepSchoolContent({ school, variant }: { school: School; variant
 
       <section className="mt-12">
         <h2
-          className="text-2xl font-extrabold text-[#0F172A] mb-3"
+          className="text-2xl font-extrabold text-ink mb-3"
           style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
         >
           {strategy.heading}
         </h2>
-        <p className="text-[#475569] text-[15px] leading-relaxed max-w-2xl">{strategy.body}</p>
+        <p className="text-ink-2 text-[15px] leading-relaxed max-w-2xl">{strategy.body}</p>
       </section>
 
       <section className="mt-12">
         <h2
-          className="text-2xl font-extrabold text-[#0F172A] mb-3"
+          className="text-2xl font-extrabold text-ink mb-3"
           style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
         >
           {location.heading}
         </h2>
-        <p className="text-[#475569] text-[15px] leading-relaxed max-w-2xl">{location.body}</p>
+        <p className="text-ink-2 text-[15px] leading-relaxed max-w-2xl">{location.body}</p>
       </section>
 
       <section className="mt-12">
         <h2
-          className="text-2xl font-extrabold text-[#0F172A] mb-4"
+          className="text-2xl font-extrabold text-ink mb-4"
           style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
         >
           More {school.shortName} resources
@@ -209,35 +209,35 @@ export function DeepSchoolContent({ school, variant }: { school: School; variant
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link
             href={variant === "why" ? `/tools/score-${school.slug}-essay` : `/tools/why-${school.slug}-essay`}
-            className="rounded-xl bg-white/60 backdrop-blur-xl border border-white/70 p-4 hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all"
+            className="rounded-xl bg-cream border border-hair p-4 hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all"
           >
-            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-1">
+            <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-1">
               {variant === "why" ? "Score" : "Brainstorm"}
             </p>
-            <p className="text-[#0F172A] text-[14.5px] font-semibold">
+            <p className="text-ink text-[14.5px] font-semibold">
               {variant === "why" ? `${school.shortName} Essay Scorer` : `Why ${school.shortName} Brainstormer`}
             </p>
           </Link>
           <Link
             href="/tools/essay-hook-generator"
-            className="rounded-xl bg-white/60 backdrop-blur-xl border border-white/70 p-4 hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all"
+            className="rounded-xl bg-cream border border-hair p-4 hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all"
           >
-            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-1">Tool</p>
-            <p className="text-[#0F172A] text-[14.5px] font-semibold">Essay Hook Generator</p>
+            <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-1">Tool</p>
+            <p className="text-ink text-[14.5px] font-semibold">Essay Hook Generator</p>
           </Link>
           <Link
             href="/tools/cliche-detector"
-            className="rounded-xl bg-white/60 backdrop-blur-xl border border-white/70 p-4 hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all"
+            className="rounded-xl bg-cream border border-hair p-4 hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all"
           >
-            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-1">Tool</p>
-            <p className="text-[#0F172A] text-[14.5px] font-semibold">Cliche Detector</p>
+            <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-1">Tool</p>
+            <p className="text-ink text-[14.5px] font-semibold">Cliche Detector</p>
           </Link>
           <Link
             href="/blog/why-this-college-essay"
-            className="rounded-xl bg-white/60 backdrop-blur-xl border border-white/70 p-4 hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all"
+            className="rounded-xl bg-cream border border-hair p-4 hover:shadow-[0_4px_20px_rgba(99,102,241,0.08)] transition-all"
           >
-            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-1">Guide</p>
-            <p className="text-[#0F172A] text-[14.5px] font-semibold">How to Write the &quot;Why This College&quot; Essay</p>
+            <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-1">Guide</p>
+            <p className="text-ink text-[14.5px] font-semibold">How to Write the &quot;Why This College&quot; Essay</p>
           </Link>
         </div>
       </section>

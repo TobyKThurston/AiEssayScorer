@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Container } from "@/design/Container";
+import { Eyebrow } from "@/design/Eyebrow";
+import { Rule } from "@/design/Rule";
 
 export const metadata: Metadata = {
   title: "About Ivy Admit, AI College Essay Review",
@@ -17,41 +20,19 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="max-w-[720px] mx-auto px-6 pt-28 md:pt-36 pb-20">
-      <h1
-        className="mb-4"
-        style={{
-          fontFamily: "var(--font-heading)",
-          fontSize: "clamp(32px, 5vw, 48px)",
-          lineHeight: "1.15",
-          fontWeight: 800,
-          letterSpacing: "-0.03em",
-          color: "#0F172A",
-        }}
-      >
-        About Ivy Admit
-      </h1>
-      <p className="text-[#475569] text-lg leading-relaxed mb-14">
-        An AI-powered essay review tool built by students who went through the same process, and
-        wanted a faster, more honest way to get feedback.
-      </p>
+    <Container className="pt-20 md:pt-28 pb-24">
+      <div className="max-w-[720px]">
+        <Eyebrow num="§01">About</Eyebrow>
+        <h1 className="mt-4 font-serif text-[48px] md:text-[72px] leading-[1] tracking-[-0.025em] text-ink">
+          Why we built <em className="italic text-oxblood">Ivy Admit</em>.
+        </h1>
+        <p className="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-ink-2">
+          An AI-powered essay review tool built by students who went through the same process, and
+          wanted a faster, more honest way to get feedback.
+        </p>
 
-      <div className="space-y-12">
-        {/* Mission */}
-        <section>
-          <h2
-            className="mb-4"
-            style={{
-              fontFamily: "var(--font-heading)",
-              fontSize: "22px",
-              fontWeight: 700,
-              letterSpacing: "-0.02em",
-              color: "#0F172A",
-            }}
-          >
-            Why we built it
-          </h2>
-          <div className="prose prose-slate max-w-none">
+        <div className="mt-14 space-y-12">
+          <Section heading="Why we built it">
             <p>
               College essay feedback is scarce and unevenly distributed. Students with access to
               college counselors, private advisors, and alumni networks get dozens of revision
@@ -59,41 +40,26 @@ export default function AboutPage() {
             </p>
             <p>
               Ivy Admit exists to close that gap. We trained on patterns from successful
-              applications, essays that earned admission to Harvard, Yale, Princeton, MIT, and 50+
-              other selective schools, and built a scoring and feedback engine that gives every
-              student access to the same quality of structural analysis that a good counselor
+              applications — essays that earned admission to Harvard, Yale, Princeton, MIT, and
+              fifty other selective schools — and built a scoring and feedback engine that gives
+              every student access to the same quality of structural analysis that a good counselor
               provides.
             </p>
-            <p>
-              We do not write essays for you. We help you write a better one yourself.
-            </p>
-          </div>
-        </section>
+            <p>We do not write essays for you. We help you write a better one yourself.</p>
+          </Section>
 
-        {/* How it works */}
-        <section>
-          <h2
-            className="mb-4"
-            style={{
-              fontFamily: "var(--font-heading)",
-              fontSize: "22px",
-              fontWeight: 700,
-              letterSpacing: "-0.02em",
-              color: "#0F172A",
-            }}
-          >
-            How it works
-          </h2>
-          <div className="prose prose-slate max-w-none">
+          <Section heading="How it works">
             <p>
-              Upload your draft. Our model scores it across three dimensions, Content, Structure,
-              and Voice, on a 0–100 scale calibrated against accepted application patterns. Each
+              Upload your draft. Our model scores it across three dimensions — content, structure,
+              and voice — on a 0–100 scale calibrated against accepted-application patterns. Each
               score comes with a breakdown of which specific sentences or paragraphs are dragging
               it down and why.
             </p>
             <p>
-              Content measures specificity and evidence. Structure measures narrative arc, whether
-              the essay moves forward or restates itself. Voice measures distinctiveness and
+              <em className="italic text-oxblood">Content</em> measures specificity and evidence.{" "}
+              <em className="italic text-oxblood">Structure</em> measures narrative arc — whether
+              the essay moves forward or restates itself.{" "}
+              <em className="italic text-oxblood">Voice</em> measures distinctiveness and
               consistency. Each can fail independently, so the scores tell you exactly where to
               focus your revision.
             </p>
@@ -101,56 +67,50 @@ export default function AboutPage() {
               Re-upload after each revision pass. Scores update in real time. Most students see
               meaningful improvement within two to three cycles.
             </p>
-          </div>
-        </section>
+          </Section>
 
-        {/* Trust */}
-        <section>
-          <h2
-            className="mb-4"
-            style={{
-              fontFamily: "var(--font-heading)",
-              fontSize: "22px",
-              fontWeight: 700,
-              letterSpacing: "-0.02em",
-              color: "#0F172A",
-            }}
-          >
-            Privacy and integrity
-          </h2>
-          <div className="prose prose-slate max-w-none">
+          <Section heading="Privacy and integrity">
             <p>
               Your essays are private to your account, stored securely, and never sold or shared.
               You can delete any document and its associated data at any time from settings.
             </p>
             <p>
-              Ivy Admit is a coaching and editing tool. Every suggestion is a recommendation, you
+              Ivy Admit is a coaching and editing tool. Every suggestion is a recommendation — you
               approve or reject every change. The essay you submit is yours. We are not a
               ghostwriting service, and the feedback we provide is designed to strengthen your
               writing, not replace it.
             </p>
-          </div>
-        </section>
-      </div>
+          </Section>
+        </div>
 
-      {/* CTA */}
-      <div className="mt-16 pt-10 border-t border-white/40">
-        <p className="text-sm text-[#64748B] mb-4">Ready to improve your essay?</p>
-        <div className="flex flex-wrap gap-3">
-          <Link
-            href="/editor"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A0A0F] text-white text-sm font-medium hover:bg-[#1e1e3f] transition-all"
-          >
-            Review your essay free
-          </Link>
-          <Link
-            href="/blog"
-            className="inline-flex items-center px-6 py-3 rounded-full border border-slate-200 text-sm text-[#475569] hover:text-[#0F172A] hover:border-slate-400 transition-all bg-white/60"
-          >
-            Read the blog
-          </Link>
+        <div className="mt-16 pt-8 border-t border-hair">
+          <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-pencil mb-4">
+            Ready to improve your essay?
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/try" className="btn btn-lg btn-brand">
+              Score my essay — free
+            </Link>
+            <Link href="/blog" className="btn btn-lg btn-ghost">
+              Read the blog
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </Container>
+  );
+}
+
+function Section({ heading, children }: { heading: string; children: React.ReactNode }) {
+  return (
+    <section>
+      <h2 className="font-serif text-[28px] md:text-[34px] leading-[1.15] tracking-[-0.015em] text-ink mb-4">
+        {heading}
+      </h2>
+      <Rule />
+      <div className="mt-5 text-[16px] md:text-[17px] leading-[1.7] text-ink-2 space-y-4">
+        {children}
+      </div>
+    </section>
   );
 }

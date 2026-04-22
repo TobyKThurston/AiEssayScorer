@@ -112,7 +112,7 @@ export default function Content() {
       </p>
 
       <p>
-        Before submitting your Georgetown supplement, run all three essays through our <Link href="/editor" className="text-[#6366F1] hover:underline">AI essay review tool</Link> to check for reflection depth and specificity across the set. For the underlying logic of Why essays that use substantial word counts well, see our <Link href="/blog/why-this-college-essay" className="text-[#6366F1] hover:underline">Why This College guide</Link>. And for how Georgetown's approach compares to the Ivy League's, read our <Link href="/blog/ivy-league-essay-tips" className="text-[#6366F1] hover:underline">Ivy League essay analysis</Link>.
+        Before submitting your Georgetown supplement, run all three essays through our <Link href="/editor" className="text-oxblood hover:underline">AI essay review tool</Link> to check for reflection depth and specificity across the set. For the underlying logic of Why essays that use substantial word counts well, see our <Link href="/blog/why-this-college-essay" className="text-oxblood hover:underline">Why This College guide</Link>. And for how Georgetown's approach compares to the Ivy League's, read our <Link href="/blog/ivy-league-essay-tips" className="text-oxblood hover:underline">Ivy League essay analysis</Link>.
       </p>
     </>
   );

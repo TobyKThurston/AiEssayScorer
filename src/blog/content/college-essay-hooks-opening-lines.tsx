@@ -214,7 +214,7 @@ export default function Content() {
       </p>
 
       <p>
-        Once you have your hook, draft the rest of your essay and run it through the <Link href="/editor" className="text-[#6366F1] hover:underline">Ivy Admit essay editor</Link> for line-level feedback. For more on getting started, read <Link href="/blog/how-to-start-a-college-essay" className="text-[#6366F1] hover:underline">how to start a college essay</Link> and the full guide on <Link href="/blog/how-to-write-common-app-essay" className="text-[#6366F1] hover:underline">how to write the Common App essay</Link>. Before you commit to a topic, make sure it is not on our list of <Link href="/blog/college-essay-topics-to-avoid" className="text-[#6366F1] hover:underline">college essay topics to avoid</Link>.
+        Once you have your hook, draft the rest of your essay and run it through the <Link href="/editor" className="text-oxblood hover:underline">Ivy Admit essay editor</Link> for line-level feedback. For more on getting started, read <Link href="/blog/how-to-start-a-college-essay" className="text-oxblood hover:underline">how to start a college essay</Link> and the full guide on <Link href="/blog/how-to-write-common-app-essay" className="text-oxblood hover:underline">how to write the Common App essay</Link>. Before you commit to a topic, make sure it is not on our list of <Link href="/blog/college-essay-topics-to-avoid" className="text-oxblood hover:underline">college essay topics to avoid</Link>.
       </p>
     </>
   );

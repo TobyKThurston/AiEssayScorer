@@ -60,27 +60,27 @@ function LoginForm() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] flex items-center justify-center px-6 py-16">
+    <div className="min-h-screen bg-paper flex items-center justify-center px-6 py-16">
       <div className="max-w-md w-full">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 justify-center mb-8">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center">
+          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-oxblood to-forest flex items-center justify-center">
             <Leaf className="w-5 h-5 text-white" />
           </div>
-          <span className="font-semibold text-[#0F172A] text-xl">Ivy Admit</span>
+          <span className="font-semibold text-ink text-xl">Ivy Admit</span>
         </Link>
 
         {/* Login Card */}
         <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h1 className="text-2xl font-bold text-[#0F172A] mb-2">
+          <h1 className="text-2xl font-bold text-ink mb-2">
             Welcome Back
           </h1>
-          <p className="text-[#64748B] mb-6">
+          <p className="text-pencil mb-6">
             Sign in with your Google account to continue
           </p>
 
           {error && (
-            <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-600 text-sm">
+            <div className="mb-4 p-3 bg-[#FAEEEA] border border-[#E8C9C2] rounded-lg text-oxblood text-sm">
               {error}
             </div>
           )}
@@ -88,7 +88,7 @@ function LoginForm() {
           <button
             onClick={handleGoogleSignIn}
             disabled={loading}
-            className="w-full px-6 py-3 rounded-2xl border-2 border-slate-200 bg-white text-[#0F172A] hover:bg-slate-50 hover:border-slate-300 active:translate-y-0 transition-all duration-200 font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+            className="w-full px-6 py-3 rounded-2xl border-2 border-hair bg-white text-ink hover:bg-slate-50 hover:border-slate-300 active:translate-y-0 transition-all duration-200 font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
           >
             {loading ? (
               <>
@@ -131,7 +131,7 @@ function LoginForm() {
 export default function LoginPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-[#F8FAFC] flex items-center justify-center">
+      <div className="min-h-screen bg-paper flex items-center justify-center">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#3B82F6]"></div>
       </div>
     }>

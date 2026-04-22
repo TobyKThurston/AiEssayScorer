@@ -66,7 +66,7 @@ export function ScoreHeader({ rating }: ScoreHeaderProps) {
   ];
 
   return (
-    <div className="p-4 border-b border-slate-200 bg-white">
+    <div className="p-4 border-b border-hair bg-white">
       {/* Score row */}
       <div className="flex items-center gap-3 mb-3">
         <div
@@ -79,7 +79,7 @@ export function ScoreHeader({ rating }: ScoreHeaderProps) {
           <p className={`text-sm font-semibold ${getScoreColor(overallScore)}`}>
             {getScoreLabel(overallScore)}
           </p>
-          <p className="text-xs text-[#94A3B8]">Top {getPercentile(overallScore)}% of applicants</p>
+          <p className="text-xs text-pencil">Top {getPercentile(overallScore)}% of applicants</p>
           <span className={`mt-1 inline-block text-[10px] font-semibold px-2 py-0.5 rounded-full ${
             getStandoutLevel(overallScore) === "High" ? "bg-[#D1FAE5] text-[#065F46]" :
             getStandoutLevel(overallScore) === "Medium" ? "bg-[#FEF3C7] text-[#92400E]" :
@@ -97,13 +97,13 @@ export function ScoreHeader({ rating }: ScoreHeaderProps) {
           return (
             <div key={cat.label}>
               <div className="flex items-center justify-between mb-0.5">
-                <span className="text-xs text-[#64748B]">{cat.label}</span>
+                <span className="text-xs text-pencil">{cat.label}</span>
                 <span className={`text-sm font-bold ${getScoreColor(pct)}`}>
                   {cat.rawScore}
-                  <span className="text-xs font-normal text-[#94A3B8]">/{cat.maxScore}</span>
+                  <span className="text-xs font-normal text-pencil">/{cat.maxScore}</span>
                 </span>
               </div>
-              <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div className="h-2 bg-paper-2 rounded-full overflow-hidden">
                 <div
                   className={`h-full bg-gradient-to-r ${getScoreBg(pct)} rounded-full`}
                   style={{ width: `${pct}%` }}

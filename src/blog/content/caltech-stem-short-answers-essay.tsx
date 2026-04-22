@@ -282,28 +282,28 @@ export default function Content() {
       </p>
       <p>
         Before submitting, run your Caltech short answers through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check for technical specificity. For the closest comparison
         at another elite STEM program, see our{" "}
         <Link
           href="/blog/mit-something-you-do-for-pleasure-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           MIT pleasure essay guide
         </Link>
         , our{" "}
         <Link
           href="/blog/mit-contribute-to-community-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           MIT community essay guide
         </Link>
         , and our{" "}
         <Link
           href="/blog/mit-challenge-you-faced-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           MIT challenge essay guide
         </Link>

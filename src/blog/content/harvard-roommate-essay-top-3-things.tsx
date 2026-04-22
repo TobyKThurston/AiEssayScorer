@@ -88,13 +88,13 @@ export default function Content() {
 
       <h2>How the Roommate Essay Fits Into the Full Harvard Application</h2>
       <p>
-        The roommate essay is the short answer most unlike the others. Your <Link href="/blog/harvard-intellectual-experience-essay" className="text-[#6366F1] hover:underline">intellectual experience essay</Link> shows how you think. Your extracurricular essay shows where you've been. Your "how will you use your Harvard education" answer shows where you want to go. The roommate essay shows what it is like to share space with you right now.
+        The roommate essay is the short answer most unlike the others. Your <Link href="/blog/harvard-intellectual-experience-essay" className="text-oxblood hover:underline">intellectual experience essay</Link> shows how you think. Your extracurricular essay shows where you've been. Your "how will you use your Harvard education" answer shows where you want to go. The roommate essay shows what it is like to share space with you right now.
       </p>
       <p>
         That is why it functions as a ballast for the entire supplement. A Harvard application with a strong roommate essay reads as coming from a fully realized person. A Harvard application with a generic roommate essay reads as coming from a strong student who has not yet figured out how to be specific about themselves.
       </p>
       <p>
-        Before submitting, run all five of your Harvard short answers through our <Link href="/editor" className="text-[#6366F1] hover:underline">AI essay review tool</Link> to check whether each one reveals genuinely different territory. For the full picture of how Harvard weighs these short answers against the Common App personal statement, read our <Link href="/blog/ivy-league-essay-tips" className="text-[#6366F1] hover:underline">Ivy League essay analysis</Link>. And if you're still deciding which Common App prompt to pair with your Harvard supplement, our <Link href="/blog/common-app-essay-prompts-2025" className="text-[#6366F1] hover:underline">Common App prompts guide</Link> walks through each option.
+        Before submitting, run all five of your Harvard short answers through our <Link href="/editor" className="text-oxblood hover:underline">AI essay review tool</Link> to check whether each one reveals genuinely different territory. For the full picture of how Harvard weighs these short answers against the Common App personal statement, read our <Link href="/blog/ivy-league-essay-tips" className="text-oxblood hover:underline">Ivy League essay analysis</Link>. And if you're still deciding which Common App prompt to pair with your Harvard supplement, our <Link href="/blog/common-app-essay-prompts-2025" className="text-oxblood hover:underline">Common App prompts guide</Link> walks through each option.
       </p>
     </>
   );

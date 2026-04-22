@@ -348,7 +348,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the academic-impact link is actually on the
@@ -357,7 +357,7 @@ export default function Content() {
         prompts work together and which four to pick, see our{" "}
         <Link
           href="/blog/uc-personal-insight-questions-guide"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           UC PIQ overview
         </Link>
@@ -365,7 +365,7 @@ export default function Content() {
         to{" "}
         <Link
           href="/blog/college-essay-topics-to-avoid"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           topics to avoid in college essays
         </Link>{" "}

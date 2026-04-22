@@ -61,10 +61,10 @@ export default function RewriterClient({
       {paywall && <PaywallBanner />}
       <form
         onSubmit={handleSubmit}
-        className="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5"
+        className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5"
       >
         <div>
-          <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+          <label className="block text-sm font-semibold text-ink mb-2">
             Paste your essay draft
           </label>
           <textarea
@@ -72,11 +72,11 @@ export default function RewriterClient({
             onChange={(e) => setEssay(e.target.value)}
             placeholder="Paste your draft here..."
             rows={12}
-            className="w-full rounded-xl border border-[#E2E8F0] bg-white/80 px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition resize-none font-mono"
+            className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none font-mono"
             maxLength={6000}
             required
           />
-          <div className="text-xs text-[#94A3B8] mt-2">
+          <div className="text-xs text-pencil mt-2">
             {essay.length}/6000 chars
             {essay.trim() && ` · ${essay.trim().split(/\s+/).length} words`}
           </div>
@@ -84,7 +84,7 @@ export default function RewriterClient({
         <button
           type="submit"
           disabled={loading || !essay.trim()}
-          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#6366F1] text-white font-medium text-sm hover:bg-[#4F46E5] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl btn btn-sm btn-brand transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? (
             <><Loader2 className="w-4 h-4 animate-spin" /> Rewriting...</>
@@ -95,20 +95,20 @@ export default function RewriterClient({
       </form>
 
       {error && (
-        <div className="rounded-xl bg-[#FEF2F2] border border-[#FECACA] p-4 text-sm text-[#B91C1C]">
+        <div className="rounded-xl bg-[#FAEEEA] border border-[#E8C9C2] p-4 text-sm text-[#B91C1C]">
           {error}
         </div>
       )}
 
       {output && (
-        <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+        <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
           <div className="flex items-center justify-between mb-4">
-            <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest">
+            <p className="text-xs font-semibold text-oxblood uppercase tracking-widest">
               Rewrite
             </p>
-            <p className="text-xs text-[#94A3B8]">{wordCount} words</p>
+            <p className="text-xs text-pencil">{wordCount} words</p>
           </div>
-          <div className="text-[#0F172A] text-[15px] leading-[1.75] whitespace-pre-wrap">
+          <div className="text-ink text-[15px] leading-[1.75] whitespace-pre-wrap">
             {output}
           </div>
         </div>

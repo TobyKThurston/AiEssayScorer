@@ -68,14 +68,14 @@ export function MetadataBar({
   ];
 
   return (
-    <div className="border-t border-slate-200 bg-white">
+    <div className="border-t border-hair bg-white">
       <button
-        className="w-full flex items-center justify-between px-4 py-2.5 text-xs text-[#64748B] hover:bg-slate-50 transition-colors"
+        className="w-full flex items-center justify-between px-4 py-2.5 text-xs text-pencil hover:bg-slate-50 transition-colors"
         onClick={() => setIsOpen((v) => !v)}
       >
         <span className="flex items-center gap-2 min-w-0">
-          <span className="font-semibold text-[#475569] flex-shrink-0">Essay context</span>
-          <span className="truncate text-[#94A3B8]">{summaryParts.join(" · ")}</span>
+          <span className="font-semibold text-ink-2 flex-shrink-0">Essay context</span>
+          <span className="truncate text-pencil">{summaryParts.join(" · ")}</span>
         </span>
         {isOpen ? (
           <ChevronUp className="w-3.5 h-3.5 flex-shrink-0 ml-2" />
@@ -89,8 +89,8 @@ export function MetadataBar({
           {/* Essay type */}
           <div className="pt-4">
             <div className="flex items-center gap-2 mb-2.5">
-              <FileQuestion className="w-3.5 h-3.5 text-[#3B82F6]" />
-              <span className="text-xs font-semibold text-[#475569]">Essay type</span>
+              <FileQuestion className="w-3.5 h-3.5 text-oxblood" />
+              <span className="text-xs font-semibold text-ink-2">Essay type</span>
             </div>
             <div className="grid grid-cols-2 gap-1.5">
               {essayTypes.map((type) => (
@@ -99,8 +99,8 @@ export function MetadataBar({
                   onClick={() => onChange({ essayType: type })}
                   className={`px-2.5 py-2 rounded-lg border text-xs text-left transition-all leading-snug ${
                     essayType === type
-                      ? "border-[#3B82F6] bg-[#EFF6FF] text-[#2563EB] font-medium"
-                      : "border-slate-200 text-[#475569] hover:border-[#3B82F6]/40 hover:bg-slate-50"
+                      ? "border-[#3B82F6] bg-[#EFF6FF] text-oxblood font-medium"
+                      : "border-hair text-ink-2 hover:border-[#3B82F6]/40 hover:bg-slate-50"
                   }`}
                 >
                   {type}
@@ -112,9 +112,9 @@ export function MetadataBar({
           {/* Target schools */}
           <div>
             <div className="flex items-center gap-2 mb-2.5">
-              <GraduationCap className="w-3.5 h-3.5 text-[#3B82F6]" />
-              <span className="text-xs font-semibold text-[#475569]">Target schools</span>
-              <span className="text-xs text-[#94A3B8]">(select all that apply)</span>
+              <GraduationCap className="w-3.5 h-3.5 text-oxblood" />
+              <span className="text-xs font-semibold text-ink-2">Target schools</span>
+              <span className="text-xs text-pencil">(select all that apply)</span>
             </div>
             <div className="flex flex-wrap gap-1.5">
               {SCHOOLS.map((school) => (
@@ -123,8 +123,8 @@ export function MetadataBar({
                   onClick={() => toggleSchool(school)}
                   className={`px-2.5 py-1 rounded-full border text-xs transition-all ${
                     targetSchools.includes(school)
-                      ? "border-[#3B82F6] bg-[#EFF6FF] text-[#2563EB] font-medium"
-                      : "border-slate-200 text-[#475569] hover:border-[#3B82F6]/40 hover:bg-slate-50"
+                      ? "border-[#3B82F6] bg-[#EFF6FF] text-oxblood font-medium"
+                      : "border-hair text-ink-2 hover:border-[#3B82F6]/40 hover:bg-slate-50"
                   }`}
                 >
                   {school}
@@ -136,12 +136,12 @@ export function MetadataBar({
           {/* Prompt */}
           <div>
             <div className="flex items-center gap-2 mb-2.5">
-              <Target className="w-3.5 h-3.5 text-[#3B82F6]" />
-              <span className="text-xs font-semibold text-[#475569]">Essay prompt</span>
-              <span className="text-xs text-[#94A3B8]">(optional, improves analysis)</span>
+              <Target className="w-3.5 h-3.5 text-oxblood" />
+              <span className="text-xs font-semibold text-ink-2">Essay prompt</span>
+              <span className="text-xs text-pencil">(optional, improves analysis)</span>
             </div>
             <textarea
-              className="w-full min-h-[80px] p-3 bg-slate-50 border border-slate-200 rounded-lg text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#3B82F6] focus:bg-white resize-none transition-colors"
+              className="w-full min-h-[80px] p-3 bg-slate-50 border border-hair rounded-lg text-sm text-ink placeholder:text-pencil outline-none focus:border-[#3B82F6] focus:bg-white resize-none transition-colors"
               placeholder="Paste the essay prompt here for more targeted feedback..."
               value={essayPrompt}
               onChange={(e) => onChange({ essayPrompt: e.target.value })}

@@ -1,96 +1,73 @@
-"use client";
+import { Container } from "@/design/Container";
+import { SectionHead } from "@/design/SectionHead";
 
-import { motion } from "motion/react";
-import { MapPin, Database, BookOpen, Edit3, ClipboardCheck, Shield } from "lucide-react";
-
-const features = [
+const FEATURES = [
   {
-    icon: MapPin,
+    num: "01",
     title: "Regional tailoring",
-    description:
-      "Match the reading style of your assigned team. Adjust tone, cadence, and emphasis region by region.",
-    iconColor: "text-[#6366F1]",
+    body:
+      "Adjust tone and topic risk for your assigned reading region. An essay that lands in New England often misses in California.",
   },
   {
-    icon: Database,
+    num: "02",
     title: "Accepted-app patterns",
-    description:
-      "Mine linguistic and structural patterns from real admitted applications across the Ivy League and beyond.",
-    iconColor: "text-[#7C3AED]",
+    body:
+      "Compare against structural patterns from thousands of real Ivy and T20 acceptances — not generic best-practice advice.",
   },
   {
-    icon: BookOpen,
+    num: "03",
     title: "Strategy library",
-    description:
-      "Battle-tested playbooks for narrative arcs, topic selection, and prestige signals that resonate.",
-    iconColor: "text-[#BE185D]",
+    body:
+      "150+ free tools: prompt deconstructors, hook generators, cliche detectors, and school-specific brainstormers.",
   },
   {
-    icon: Edit3,
+    num: "04",
     title: "Line-by-line edits",
-    description:
-      "Targeted rewrites with clear rationale. Keep your authentic voice while raising clarity and impact.",
-    iconColor: "text-[#047857]",
+    body:
+      "Specific rewrites with the original, the suggested change, and a one-line rationale — so you can accept or reject each one.",
   },
   {
-    icon: ClipboardCheck,
+    num: "05",
     title: "Evidence checklist",
-    description:
-      "Turn vague claims into concrete proof. Quantify outcomes and document achievements the right way.",
-    iconColor: "text-[#B45309]",
+    body:
+      "Flags claims without backing. Readers want scenes, verbs, and artifacts — not adjectives.",
   },
   {
-    icon: Shield,
+    num: "06",
     title: "Risk guardrails",
-    description:
-      "Flag tone risks and topic hazards before you submit. Know what hurts before it's too late.",
-    iconColor: "text-[#DC2626]",
+    body:
+      "Blend risk, AI-voice detection, and topic flags. Know what admissions readers will notice before they do.",
   },
 ];
 
 export function ValueProps() {
   return (
-    <section id="features" className="py-16 md:py-24">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-16">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12 md:mb-16"
-        >
-          <p className="text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-3">
-            Features
-          </p>
-          <h2>Why students pick Ivy Admit</h2>
-          <p className="text-[#64748B] mt-3 max-w-xl mx-auto">
-            Every feature is built around one goal: helping your authentic story
-            stand out to the right readers.
-          </p>
-        </motion.div>
+    <section id="features" className="py-24 md:py-28">
+      <Container>
+        <SectionHead
+          num="§02"
+          eyebrow="AI Essay Scoring"
+          title={<>The craft of getting in, <em className="italic text-oxblood">without losing your voice.</em></>}
+          intro="Six capabilities that make Ivy Admit different from generic AI essay tools. Built by students who actually got in."
+        />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="p-6 rounded-2xl bg-white/50 backdrop-blur-md border border-white/70 shadow-[0_2px_16px_rgba(99,102,241,0.06)] hover:bg-white/70 hover:shadow-[0_8px_32px_rgba(99,102,241,0.12)] transition-all duration-300"
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-hair">
+          {FEATURES.map((f) => (
+            <div
+              key={f.num}
+              className="border-r border-b border-hair p-8 md:p-9 transition-colors hover:bg-cream"
             >
-              <div className="w-11 h-11 rounded-xl bg-white/60 backdrop-blur-sm border border-white/80 flex items-center justify-center mb-4">
-                <feature.icon className={`w-5 h-5 ${feature.iconColor}`} />
-              </div>
-              <h3 className="text-base mb-2">{feature.title}</h3>
-              <p className="text-[#64748B] text-sm leading-relaxed">
-                {feature.description}
+              <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-pencil mb-5">
+                Feature · {f.num}
               </p>
-            </motion.div>
+              <h3 className="font-serif text-[22px] md:text-[24px] leading-[1.2] text-ink mb-3">
+                {f.title}
+              </h3>
+              <p className="text-[14.5px] text-ink-2 leading-[1.6]">{f.body}</p>
+            </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

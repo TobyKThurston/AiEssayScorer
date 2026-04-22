@@ -24,9 +24,9 @@ export function Button({
   const baseClasses = "inline-flex items-center justify-center gap-2 transition-all duration-200 font-medium";
 
   const variants = {
-    primary: "px-6 py-3 rounded-full bg-[#0A0A0F] text-white hover:bg-[#1e1e3f] shadow-md active:scale-[0.98]",
-    secondary: "px-6 py-3 rounded-full bg-white/40 backdrop-blur-sm border border-white/60 text-[#0F172A] hover:bg-white/60",
-    tertiary: "text-[#6366F1] hover:text-[#4F46E5]"
+    primary: "px-6 py-3 rounded-full bg-ink text-white hover:bg-oxblood shadow-md active:scale-[0.98]",
+    secondary: "px-6 py-3 rounded-full bg-cream backdrop-blur-sm border border-white/60 text-ink hover:bg-cream",
+    tertiary: "text-oxblood hover:text-oxblood-2"
   };
 
   const buttonContent = (

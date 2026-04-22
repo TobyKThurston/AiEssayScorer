@@ -209,7 +209,7 @@ export default function Content() {
       </p>
 
       <p>
-        If you want structured feedback on whether your additional information entry adds signal or noise, run it through our <Link href="/editor" className="text-[#6366F1] hover:underline">essay editor</Link> before submitting. For broader guidance, see our guides to <Link href="/blog/how-to-write-common-app-essay" className="text-[#6366F1] hover:underline">writing the Common App personal statement</Link>, the <Link href="/blog/common-app-essay-prompts-2025" className="text-[#6366F1] hover:underline">2025 Common App prompts</Link>, and <Link href="/blog/college-essay-word-limit" className="text-[#6366F1] hover:underline">how to think about college essay word limits</Link>.
+        If you want structured feedback on whether your additional information entry adds signal or noise, run it through our <Link href="/editor" className="text-oxblood hover:underline">essay editor</Link> before submitting. For broader guidance, see our guides to <Link href="/blog/how-to-write-common-app-essay" className="text-oxblood hover:underline">writing the Common App personal statement</Link>, the <Link href="/blog/common-app-essay-prompts-2025" className="text-oxblood hover:underline">2025 Common App prompts</Link>, and <Link href="/blog/college-essay-word-limit" className="text-oxblood hover:underline">how to think about college essay word limits</Link>.
       </p>
     </>
   );

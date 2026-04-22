@@ -157,27 +157,27 @@ export default function Content() {
 
       <p>
         Run your draft through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         for specificity and fit. For the companion "Why" essay, see our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "Why This College" guide
         </Link>
         . For the Columbia comparison, read our{" "}
         <Link
           href="/blog/columbia-why-columbia-essay-core-curriculum"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Columbia Core Curriculum essay guide
         </Link>
         . For broader strategy, see our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Ivy League essay tips
         </Link>

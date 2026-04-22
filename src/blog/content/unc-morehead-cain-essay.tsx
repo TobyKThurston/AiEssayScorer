@@ -344,7 +344,7 @@ export default function Content() {
 
       <p>
         When your Morehead-Cain drafts are ready, run them through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check for voice consistency, cohort-readiness, and whether each
@@ -352,7 +352,7 @@ export default function Content() {
         our{" "}
         <Link
           href="/blog/unc-why-unc-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Why UNC essay guide
         </Link>{" "}
@@ -363,7 +363,7 @@ export default function Content() {
         our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Ivy League essay guide
         </Link>

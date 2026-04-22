@@ -83,13 +83,13 @@ export default function Content() {
 
       <h2>How the Wharton Essay Fits With the Rest of the Penn Application</h2>
       <p>
-        Penn reads the Wharton essay alongside the <Link href="/blog/upenn-why-penn-essay" className="text-[#6366F1] hover:underline">Why Penn essay</Link>, the Common App personal statement, and the activities list. The Why Penn essay should establish your broader intellectual interests. The Wharton essay should go one level deeper into the business dimension. There should be no redundancy between them — ideally, the Wharton essay picks up where the Why Penn essay stops and adds the layer that only applies to Wharton specifically.
+        Penn reads the Wharton essay alongside the <Link href="/blog/upenn-why-penn-essay" className="text-oxblood hover:underline">Why Penn essay</Link>, the Common App personal statement, and the activities list. The Why Penn essay should establish your broader intellectual interests. The Wharton essay should go one level deeper into the business dimension. There should be no redundancy between them — ideally, the Wharton essay picks up where the Why Penn essay stops and adds the layer that only applies to Wharton specifically.
       </p>
       <p>
-        If you're also working on the <Link href="/blog/upenn-community-essay" className="text-[#6366F1] hover:underline">Penn community essay</Link>, keep the contribution halves distinct. The Wharton contribution should be about what you'd add to the academic and professional community inside the business school. The community essay should be about how you engage with people — a different kind of contribution entirely.
+        If you're also working on the <Link href="/blog/upenn-community-essay" className="text-oxblood hover:underline">Penn community essay</Link>, keep the contribution halves distinct. The Wharton contribution should be about what you'd add to the academic and professional community inside the business school. The community essay should be about how you engage with people — a different kind of contribution entirely.
       </p>
       <p>
-        Before submitting, run your full Penn supplement through our <Link href="/editor" className="text-[#6366F1] hover:underline">AI essay review tool</Link> for line-by-line feedback on specificity and structure. For the broader Why essay principles, see our <Link href="/blog/why-this-college-essay" className="text-[#6366F1] hover:underline">Why This College guide</Link>. And for how Penn's supplement compares to its Ivy League peers, our <Link href="/blog/ivy-league-essay-tips" className="text-[#6366F1] hover:underline">Ivy League essay analysis</Link> covers the patterns that hold across all eight schools.
+        Before submitting, run your full Penn supplement through our <Link href="/editor" className="text-oxblood hover:underline">AI essay review tool</Link> for line-by-line feedback on specificity and structure. For the broader Why essay principles, see our <Link href="/blog/why-this-college-essay" className="text-oxblood hover:underline">Why This College guide</Link>. And for how Penn's supplement compares to its Ivy League peers, our <Link href="/blog/ivy-league-essay-tips" className="text-oxblood hover:underline">Ivy League essay analysis</Link> covers the patterns that hold across all eight schools.
       </p>
     </>
   );

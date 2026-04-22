@@ -316,7 +316,7 @@ export default function Content() {
       </p>
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the three moves are actually doing their jobs in the
@@ -324,7 +324,7 @@ export default function Content() {
         our{" "}
         <Link
           href="/blog/upenn-why-penn-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Penn "Why Penn" essay guide
         </Link>{" "}
@@ -332,7 +332,7 @@ export default function Content() {
         duplicating what the nursing essay already covers, and our{" "}
         <Link
           href="/blog/upenn-community-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Penn community essay guide
         </Link>{" "}

@@ -338,7 +338,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check whether the leadership signals actually come through under
@@ -346,7 +346,7 @@ export default function Content() {
         and how they fit together, read our{" "}
         <Link
           href="/blog/uc-personal-insight-questions-guide"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           UC Personal Insight Questions overview
         </Link>
@@ -355,7 +355,7 @@ export default function Content() {
         and showing — read our guide to{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           what elite admissions officers look for
         </Link>

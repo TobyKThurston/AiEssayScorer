@@ -225,14 +225,14 @@ export default function Content() {
 
       <p>
         Run each 350-word response through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         for specificity and voice. If you're deciding how tight to trim,
         our{" "}
         <Link
           href="/blog/college-essay-word-limit"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           word-limit guide
         </Link>{" "}
@@ -241,7 +241,7 @@ export default function Content() {
         supplements, see our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "Why This College" guide
         </Link>

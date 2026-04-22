@@ -332,7 +332,7 @@ export default function Content() {
 
       <p>
         When your draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to see whether the voice is landing before the second paragraph or
@@ -340,7 +340,7 @@ export default function Content() {
         our guide to{" "}
         <Link
           href="/blog/college-essay-hooks-opening-lines"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           20 opening lines that work
         </Link>{" "}
@@ -349,7 +349,7 @@ export default function Content() {
         compressed into a 250-word format, our{" "}
         <Link
           href="/blog/stanford-roommate-letter-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Stanford roommate letter guide
         </Link>{" "}

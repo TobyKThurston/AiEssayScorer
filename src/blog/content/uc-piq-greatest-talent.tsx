@@ -327,7 +327,7 @@ export default function Content() {
       </p>
       <p>
         When your PIQ #3 draft is ready, run it through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to test whether the development arc is actually doing work or just
@@ -335,14 +335,14 @@ export default function Content() {
         how to coordinate across all of them, read our{" "}
         <Link
           href="/blog/uc-personal-insight-questions-guide"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           UC Personal Insight Questions guide
         </Link>
         . And before you commit to a topic for any PIQ, skim our list of{" "}
         <Link
           href="/blog/college-essay-topics-to-avoid"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           college essay topics to avoid
         </Link>{" "}

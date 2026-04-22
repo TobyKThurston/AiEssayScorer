@@ -128,21 +128,21 @@ export default function Content() {
 
       <p>
         Run your draft through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check for school-naming accuracy and filler. For the broader
         framework, read our{" "}
         <Link
           href="/blog/why-this-college-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           "Why This College" essay guide
         </Link>
         . For tight word-limit discipline, see our{" "}
         <Link
           href="/blog/college-essay-word-limit"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           word limit guide
         </Link>

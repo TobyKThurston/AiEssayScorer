@@ -255,28 +255,28 @@ export default function Content() {
       <p>
         Once your short answers and essays are drafted, run your USC
         supplement through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         to check voice and specificity. For short-answer-adjacent
         prompts at other schools, see our{" "}
         <Link
           href="/blog/yale-teach-a-course-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Yale teach-a-course short answer guide
         </Link>{" "}
         and our{" "}
         <Link
           href="/blog/columbia-list-essay-what-are-you-reading"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Columbia list essay guide
         </Link>
         . For the broader principles behind short-form prompts, read our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Ivy League essay analysis
         </Link>

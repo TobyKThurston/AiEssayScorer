@@ -158,27 +158,27 @@ export default function Content() {
 
       <p>
         Run your draft through our{" "}
-        <Link href="/editor" className="text-[#6366F1] hover:underline">
+        <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}
         for specificity and voice. For comparison, read our{" "}
         <Link
           href="/blog/upenn-community-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           UPenn community essay guide
         </Link>{" "}
         and{" "}
         <Link
           href="/blog/yale-community-essay"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           Yale community essay guide
         </Link>
         . For more on word and character counts, see our{" "}
         <Link
           href="/blog/college-essay-word-limit"
-          className="text-[#6366F1] hover:underline"
+          className="text-oxblood hover:underline"
         >
           college essay word limit guide
         </Link>
