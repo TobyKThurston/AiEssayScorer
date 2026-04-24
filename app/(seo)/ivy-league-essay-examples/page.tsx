@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Ivy League Essay Examples, What Works and Why",
@@ -84,6 +85,14 @@ export default function IvyLeagueEssayExamplesPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Guides", href: "/blog" },
+            { label: "Ivy League Essay Examples" },
+          ]}
         />
 
         {/* Hero */}
@@ -282,6 +291,18 @@ export default function IvyLeagueEssayExamplesPage() {
               </Link>
               <Link href="/blog" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 Blog
+              </Link>
+              <Link href="/tools" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                All Free Tools
+              </Link>
+              <Link href="/tools/college-matchmaker-from-essay" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                College Matchmaker
+              </Link>
+              <Link href="/tools/essay-outline-generator" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                Essay Outline Generator
+              </Link>
+              <Link href="/tools/admissions-officer-simulator" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                Admissions Officer Simulator
               </Link>
             </div>
           </div>

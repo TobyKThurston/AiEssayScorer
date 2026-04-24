@@ -58,7 +58,7 @@ export function Footer() {
           </div>
           {COLUMNS.map((col) => (
             <div key={col.heading}>
-              <h5 className="eyebrow mb-4">{col.heading}</h5>
+              <h2 className="eyebrow mb-4">{col.heading}</h2>
               <ul className="space-y-2.5">
                 {col.links.map((l) => (
                   <li key={l.label}>

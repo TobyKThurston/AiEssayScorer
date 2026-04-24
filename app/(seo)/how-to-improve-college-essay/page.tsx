@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "How to Improve Your College Essay, A Revision Guide",
@@ -84,6 +85,14 @@ export default function HowToImproveCollegeEssayPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Guides", href: "/blog" },
+            { label: "Improve Your College Essay" },
+          ]}
         />
 
         {/* Hero */}
@@ -285,6 +294,18 @@ export default function HowToImproveCollegeEssayPage() {
               </Link>
               <Link href="/blog" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 Blog
+              </Link>
+              <Link href="/tools" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                All Free Tools
+              </Link>
+              <Link href="/tools/show-dont-tell" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                Show-Don&apos;t-Tell Converter
+              </Link>
+              <Link href="/tools/short-supplement-distiller" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                Short-Supplement Distiller
+              </Link>
+              <Link href="/tools/essay-polish-pass" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                Essay Polish Pass
               </Link>
             </div>
           </div>

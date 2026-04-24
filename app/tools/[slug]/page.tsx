@@ -32,6 +32,7 @@ import ShortSuppDistiller from "@/tools/components/ShortSuppDistiller";
 import FirstSentenceGenerator from "@/tools/components/FirstSentenceGenerator";
 import { RelatedTools } from "@/tools/components/RelatedTools";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
+import { Breadcrumbs } from "@/design/Breadcrumbs";
 import { WhySchoolPage } from "@/tools/components/WhySchoolPage";
 import { ScoreSchoolPage } from "@/tools/components/ScoreSchoolPage";
 import { HookPromptPage } from "@/tools/components/HookPromptPage";
@@ -128,7 +129,7 @@ export async function generateMetadata({
         type: "website",
         images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
       },
-      twitter: { card: "summary_large_image", title, images: ["/og-image.png"] },
+      twitter: { card: "summary_large_image", title, description, images: ["/og-image.png"] },
     };
   }
 
@@ -148,7 +149,7 @@ export async function generateMetadata({
         type: "website",
         images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
       },
-      twitter: { card: "summary_large_image", title, images: ["/og-image.png"] },
+      twitter: { card: "summary_large_image", title, description, images: ["/og-image.png"] },
     };
   }
 
@@ -168,7 +169,7 @@ export async function generateMetadata({
         type: "website",
         images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
       },
-      twitter: { card: "summary_large_image", title, images: ["/og-image.png"] },
+      twitter: { card: "summary_large_image", title, description, images: ["/og-image.png"] },
     };
   }
 
@@ -186,7 +187,7 @@ export async function generateMetadata({
         type: "website",
         images: [{ url: "/og-image.png", width: 1200, height: 630, alt: r.displayName }],
       },
-      twitter: { card: "summary_large_image", title: r.displayName, images: ["/og-image.png"] },
+      twitter: { card: "summary_large_image", title: r.displayName, description: r.seoDescription, images: ["/og-image.png"] },
     };
   }
 
@@ -204,7 +205,7 @@ export async function generateMetadata({
         type: "website",
         images: [{ url: "/og-image.png", width: 1200, height: 630, alt: p.displayName }],
       },
-      twitter: { card: "summary_large_image", title: p.displayName, images: ["/og-image.png"] },
+      twitter: { card: "summary_large_image", title: p.displayName, description: p.seoDescription, images: ["/og-image.png"] },
     };
   }
 
@@ -229,7 +230,7 @@ export async function generateMetadata({
         type: "website",
         images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
       },
-      twitter: { card: "summary_large_image", title, images: ["/og-image.png"] },
+      twitter: { card: "summary_large_image", title, description, images: ["/og-image.png"] },
     };
   }
 
@@ -255,7 +256,7 @@ export async function generateMetadata({
         type: "website",
         images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
       },
-      twitter: { card: "summary_large_image", title, images: ["/og-image.png"] },
+      twitter: { card: "summary_large_image", title, description, images: ["/og-image.png"] },
     };
   }
 
@@ -273,7 +274,7 @@ export async function generateMetadata({
         type: "website",
         images: [{ url: "/og-image.png", width: 1200, height: 630, alt: tool.title }],
       },
-      twitter: { card: "summary_large_image", title: tool.title, images: ["/og-image.png"] },
+      twitter: { card: "summary_large_image", title: tool.title, description: tool.seoDescription, images: ["/og-image.png"] },
     };
   }
 
@@ -356,6 +357,13 @@ export default async function ToolPage({
 
   return (
     <div className="max-w-[900px] mx-auto px-6 md:px-16 pt-28 md:pt-36 pb-20">
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Tools", href: "/tools" },
+          { label: tool.shortTitle || tool.title },
+        ]}
+      />
       <Link
         href="/tools"
         className="inline-flex items-center gap-1.5 text-sm text-oxblood hover:gap-2 transition-all mb-6"

@@ -2,19 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import {
   Plus,
-  FileText,
   Clock,
-  Zap,
-  Target,
-  BookOpen,
-  ArrowRight,
-  Star,
-  CheckCircle2,
-  Sparkles,
   BarChart2,
   AlertCircle,
+  ArrowRight,
 } from "lucide-react";
 import { Essay } from "../types";
 
@@ -32,25 +26,26 @@ function formatDate(dateStr: string) {
 const HOW_IT_WORKS = [
   {
     step: "1",
-    title: "Write or paste your draft",
-    desc: "Start fresh or drop in an existing essay.",
+    title: "Draft or paste",
+    desc: "Start fresh, or drop in an existing essay you're revising.",
   },
   {
     step: "2",
     title: "Run an analysis",
-    desc: "Scores on content, structure, clarity, and school fit.",
+    desc: "Rubric-based scores for content, structure, clarity, and fit.",
   },
   {
     step: "3",
-    title: "Apply improvements",
-    desc: "Line-level rewrites you can apply in one click.",
+    title: "Apply rewrites",
+    desc: "One-click line-level rewrites that keep your voice intact.",
   },
 ];
 
-const CARD_COLORS = [
-  { bg: "bg-[#EFF6FF]", icon: "text-oxblood" },
-  { bg: "bg-cream", icon: "text-[#8B5CF6]" },
-  { bg: "bg-[#ECFDF5]", icon: "text-[#10B981]" },
+const DELIVERABLES = [
+  "Line-by-line AI suggestions",
+  "Content, structure, clarity scores",
+  "School-fit analysis",
+  "Admissions officer perspective",
 ];
 
 export function EssayList() {
@@ -82,11 +77,9 @@ export function EssayList() {
         router.push(`/editor/${data.essay.id}`);
         return;
       }
-      setCreateError(
-        data.error || "Failed to create essay. Have you run the database migration?"
-      );
+      setCreateError(data.error || "Couldn't create the essay. Database migrations up to date?");
     } catch {
-      setCreateError("Failed to create essay. Please try again.");
+      setCreateError("Couldn't create the essay. Please try again.");
     } finally {
       setCreating(false);
     }
@@ -94,19 +87,19 @@ export function EssayList() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center py-32">
-        <div className="w-6 h-6 border-2 border-[#3B82F6] border-t-transparent rounded-full animate-spin" />
+      <div className="flex items-center justify-center py-40">
+        <div className="w-6 h-6 border-2 border-oxblood border-t-transparent rounded-full animate-spin" />
       </div>
     );
   }
 
   return (
-    <div className="max-w-[1080px] mx-auto px-4 sm:px-6 py-6 sm:py-10">
-      {createError && (
-        <div className="mb-6 px-4 py-3 rounded-xl bg-red-50 border border-red-200 text-sm text-red-700">
+    <div className="container-editorial pt-12 md:pt-16 pb-24">
+      {createError ? (
+        <div className="mb-8 px-4 py-3 border border-oxblood/30 bg-oxblood/5 text-sm text-oxblood">
           {createError}
         </div>
-      )}
+      ) : null}
 
       {essays.length === 0 ? (
         <EmptyState onNew={handleNew} creating={creating} />
@@ -126,68 +119,66 @@ export function EssayList() {
 
 function EmptyState({ onNew, creating }: { onNew: () => void; creating: boolean }) {
   return (
-    <div className="max-w-[620px] mx-auto">
-      <div className="text-center mb-8 sm:mb-10">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-oxblood text-xs font-medium mb-5">
-          <Sparkles className="w-3 h-3" />
-          AI-powered essay review
-        </div>
-        <h1
-          className="text-[1.625rem] sm:text-[2rem] font-bold text-ink mb-3 leading-tight tracking-tight"
-          style={{ fontFamily: "var(--font-heading)" }}
-        >
-          Write, review, and strengthen your college essays
+    <div className="max-w-[820px] mx-auto">
+      <div className="mb-12 md:mb-16">
+        <p className="eyebrow mb-5">
+          <span className="num">§</span> The Workshop
+        </p>
+        <h1 className="font-serif text-[44px] md:text-[68px] leading-[1.02] tracking-[-0.025em] text-ink mb-6">
+          A quiet room for your <em className="italic text-oxblood">best draft</em>.
         </h1>
-        <p className="text-pencil text-sm sm:text-[15px] mb-6 sm:mb-7 leading-relaxed">
-          Instant scores on clarity, structure, and admissions impact.
-          Trusted by applicants targeting top schools.
+        <p className="text-[17px] md:text-[18px] leading-[1.6] text-ink-2 max-w-[56ch] mb-8">
+          Ivy Admit scores your essay across content, structure, and voice — then points to the
+          exact sentences worth rewriting. Start a new draft or paste one in.
         </p>
         <button
           onClick={onNew}
           disabled={creating}
-          className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-gradient-to-r from-[#3B82F6] to-[#0EA5E9] text-white text-sm font-semibold shadow-[0_2px_16px_rgba(59,130,246,0.35)] hover:shadow-[0_6px_24px_rgba(59,130,246,0.45)] hover:-translate-y-px transition-all duration-200 disabled:opacity-70"
+          className="btn btn-lg btn-ink disabled:opacity-60"
         >
-          <Plus className="w-4 h-4" />
-          {creating ? "Creating…" : "Start Writing"}
+          <Plus className="w-4 h-4 mr-1.5 inline-block" />
+          {creating ? "Creating…" : "Start a new essay"}
         </button>
-        <p className="text-xs text-pencil mt-4">
-          Top applicants revise their essays multiple times. Start now.
-        </p>
       </div>
 
-      {/* Feature row */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-        {[
-          { icon: Zap, label: "Line-by-line AI suggestions", color: "text-oxblood", bg: "bg-[#EFF6FF]" },
-          { icon: Target, label: "Clarity and structure scores", color: "text-[#10B981]", bg: "bg-[#ECFDF5]" },
-          { icon: BookOpen, label: "School fit analysis", color: "text-[#8B5CF6]", bg: "bg-cream" },
-          { icon: Star, label: "Admissions officer perspective", color: "text-[#F59E0B]", bg: "bg-[#FFFBEB]" },
-        ].map(({ icon: Icon, label, color, bg }) => (
-          <div
-            key={label}
-            className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white border border-hair shadow-[0_1px_6px_rgba(148,163,184,0.07)]"
-          >
-            <div className={`w-7 h-7 rounded-lg ${bg} flex items-center justify-center flex-shrink-0`}>
-              <Icon className={`w-3.5 h-3.5 ${color}`} />
-            </div>
-            <span className="text-xs font-medium text-ink-2">{label}</span>
-          </div>
-        ))}
+      <hr className="rule mb-12" />
+
+      <div className="grid grid-cols-12 gap-8 md:gap-12">
+        <div className="col-span-12 md:col-span-4">
+          <p className="eyebrow mb-4">
+            <span className="num">◦</span> What you get
+          </p>
+        </div>
+        <div className="col-span-12 md:col-span-8">
+          <ul className="divide-y divide-[color:var(--color-hair)] border-y border-hair">
+            {DELIVERABLES.map((label, i) => (
+              <li key={label} className="flex items-baseline gap-6 py-4">
+                <span className="font-mono text-[10.5px] uppercase tracking-[0.18em] text-oxblood/70 shrink-0 w-8">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="font-serif text-[18px] md:text-[20px] text-ink">{label}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
-      {/* How it works */}
-      <div className="bg-white border border-hair rounded-2xl p-5 sm:p-6 shadow-[0_1px_10px_rgba(148,163,184,0.07)]">
-        <p className="text-[10px] font-semibold text-pencil uppercase tracking-wider mb-5">
-          How it works
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <div className="mt-14 grid grid-cols-12 gap-8 md:gap-12">
+        <div className="col-span-12 md:col-span-4">
+          <p className="eyebrow mb-4">
+            <span className="num">◦</span> How it works
+          </p>
+        </div>
+        <div className="col-span-12 md:col-span-8 space-y-8">
           {HOW_IT_WORKS.map(({ step, title, desc }) => (
-            <div key={step}>
-              <div className="w-6 h-6 rounded-full bg-[#EFF6FF] flex items-center justify-center text-[10px] font-bold text-oxblood mb-3">
+            <div key={step} className="flex gap-6">
+              <span className="font-serif italic text-oxblood text-[32px] leading-none shrink-0 w-8">
                 {step}
+              </span>
+              <div>
+                <p className="font-serif text-[20px] text-ink mb-1.5 leading-snug">{title}</p>
+                <p className="text-[15px] text-ink-2 leading-relaxed max-w-[48ch]">{desc}</p>
               </div>
-              <p className="text-sm font-semibold text-ink mb-1 leading-snug">{title}</p>
-              <p className="text-[11px] text-pencil leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
@@ -210,207 +201,172 @@ function FilledLayout({
   onOpen: (id: string) => void;
 }) {
   return (
-    <div className="flex flex-col lg:flex-row lg:gap-8 lg:items-start">
-      {/* Left */}
-      <div className="flex-1 min-w-0">
-        {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
-          <div className="min-w-0">
-            <h1
-              className="text-xl font-bold text-ink tracking-tight"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              My Essays
+    <div className="grid grid-cols-12 gap-8 md:gap-12 items-start">
+      <div className="col-span-12 lg:col-span-8">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-10">
+          <div>
+            <p className="eyebrow mb-3">
+              <span className="num">§</span> My Essays
+            </p>
+            <h1 className="font-serif text-[36px] md:text-[48px] leading-[1.05] tracking-[-0.02em] text-ink">
+              The <em className="italic text-oxblood">current</em> drafts.
             </h1>
-            <p className="text-sm text-pencil mt-0.5">
-              Write, review, and strengthen your application
+            <p className="text-[15px] text-ink-2 mt-2">
+              {essays.length} draft{essays.length === 1 ? "" : "s"} in progress
             </p>
           </div>
           <button
             onClick={onNew}
             disabled={creating}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 rounded-xl bg-gradient-to-r from-[#3B82F6] to-[#0EA5E9] text-white text-sm font-semibold shadow-[0_2px_10px_rgba(59,130,246,0.28)] hover:shadow-[0_4px_18px_rgba(59,130,246,0.4)] hover:-translate-y-px transition-all duration-200 disabled:opacity-70 flex-shrink-0"
+            className="btn btn-sm btn-ink self-start sm:self-end disabled:opacity-60"
           >
-            <Plus className="w-4 h-4" />
-            {creating ? "Creating…" : "Start Writing"}
+            <Plus className="w-3.5 h-3.5 mr-1.5 inline-block" />
+            {creating ? "Creating…" : "New essay"}
           </button>
         </div>
 
-        {/* Essay list */}
-        <div className="space-y-2.5">
-          {essays.map((essay, i) => (
-            <EssayCard key={essay.id} essay={essay} colorIndex={i % 3} onOpen={onOpen} />
+        <ul className="divide-y divide-[color:var(--color-hair)] border-y border-hair">
+          {essays.map((essay) => (
+            <EssayRow key={essay.id} essay={essay} onOpen={onOpen} />
           ))}
-        </div>
+        </ul>
 
-        {/* Below-list nudge */}
-        <GetFeedbackNudge essays={essays} onOpen={onOpen} />
+        <UnreviewedNudge essays={essays} onOpen={onOpen} />
 
-        {/* Credibility line */}
-        <p className="text-[11px] text-[#CBD5E1] text-center mt-5">
-          Small improvements to your essay can significantly impact admissions outcomes.
+        <p className="mt-10 text-[12px] font-mono uppercase tracking-[0.14em] text-pencil">
+          Small edits compound. Score, revise, re-score.
         </p>
       </div>
 
-      {/* Right sidebar */}
-      <div className="w-full lg:w-[256px] lg:flex-shrink-0 mt-8 lg:mt-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
-        <div className="sm:col-span-2 lg:col-span-1">
-          <ReviewEssayCard essays={essays} onOpen={onOpen} />
-        </div>
-        <WhatYouGetCard />
+      <aside className="col-span-12 lg:col-span-4 lg:sticky lg:top-[90px] space-y-10">
+        <ReviewLatestCard essays={essays} onOpen={onOpen} />
+        <DeliverablesCard />
         <HowItWorksCard />
-      </div>
+      </aside>
     </div>
   );
 }
 
-/* ─── Essay card ─── */
+/* ─── Essay row ─── */
 
-function EssayCard({
+function EssayRow({
   essay,
-  colorIndex,
   onOpen,
 }: {
   essay: Essay;
-  colorIndex: number;
   onOpen: (id: string) => void;
 }) {
-  const { bg, icon } = CARD_COLORS[colorIndex];
-
   return (
-    <button
-      onClick={() => onOpen(essay.id)}
-      className="w-full text-left px-4 sm:px-5 py-4 rounded-2xl bg-white border border-hair shadow-[0_1px_6px_rgba(148,163,184,0.06)] hover:shadow-[0_4px_20px_rgba(148,163,184,0.12)] hover:border-[#3B82F6]/25 transition-all duration-200 group"
-    >
-      <div className="flex items-center gap-3 sm:gap-4">
-        {/* Icon */}
-        <div className={`w-10 h-10 rounded-xl ${bg} flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200`}>
-          <FileText className={`w-4 h-4 ${icon}`} />
-        </div>
-
-        {/* Content */}
-        <div className="flex-1 min-w-0">
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1.5">
-            <p className="text-sm font-semibold text-ink group-hover:text-oxblood transition-colors truncate max-w-full">
-              {essay.title}
-            </p>
-            <span className="flex-shrink-0 text-[10px] font-medium px-2 py-0.5 rounded-full bg-amber-50 text-amber-600 border border-amber-100">
-              Not reviewed
-            </span>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-pencil">
-            <span className="flex items-center gap-1">
+    <li>
+      <button
+        onClick={() => onOpen(essay.id)}
+        className="w-full text-left group grid grid-cols-[auto_1fr_auto] items-baseline gap-6 py-5 -mx-3 px-3 hover:bg-cream/60 transition-colors"
+      >
+        <span className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-oxblood/80 shrink-0 w-[62px]">
+          Draft
+        </span>
+        <div className="min-w-0">
+          <p className="font-serif text-[20px] md:text-[22px] leading-[1.2] text-ink group-hover:text-oxblood transition-colors truncate">
+            {essay.title}
+          </p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1.5 text-[12px] font-mono uppercase tracking-[0.14em] text-pencil">
+            <span className="flex items-center gap-1.5">
               <Clock className="w-3 h-3" />
               {formatDate(essay.updated_at)}
             </span>
-            <span className="text-[#CBD5E1] hidden sm:inline">·</span>
-            <span className="flex items-center gap-1">
+            <span className="flex items-center gap-1.5">
               <BarChart2 className="w-3 h-3" />
-              No analysis yet
+              Open to review
             </span>
           </div>
         </div>
-
-        {/* Arrow */}
-        <ArrowRight className="w-4 h-4 text-[#CBD5E1] group-hover:text-oxblood group-hover:translate-x-0.5 transition-all duration-200 flex-shrink-0" />
-      </div>
-    </button>
+        <span className="shrink-0 text-oxblood opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 inline-block transition-all">
+          →
+        </span>
+      </button>
+    </li>
   );
 }
 
-/* ─── Below-list nudge ─── */
+/* ─── Unreviewed nudge ─── */
 
-function GetFeedbackNudge({
+function UnreviewedNudge({
   essays,
   onOpen,
 }: {
   essays: Essay[];
   onOpen: (id: string) => void;
 }) {
-  if (essays.length === 0) return null;
   const latest = essays[0];
+  if (!latest) return null;
 
   return (
-    <div className="mt-4 px-4 sm:px-5 py-4 rounded-2xl border border-dashed border-slate-300 bg-slate-50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
-      <div className="flex items-start gap-3 min-w-0">
-        <AlertCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
-        <div className="min-w-0">
-          <p className="text-sm font-medium text-ink-2">
-            {essays.length === 1
-              ? "Your essay hasn't been reviewed yet"
-              : `${essays.length} essays haven't been reviewed yet`}
+    <div className="mt-8 border-l-2 border-oxblood pl-5 py-3">
+      <div className="flex items-start gap-3">
+        <AlertCircle className="w-4 h-4 text-oxblood shrink-0 mt-1" />
+        <div className="flex-1">
+          <p className="font-serif text-[17px] text-ink leading-snug">
+            Ready to score a draft?
           </p>
-          <p className="text-xs text-pencil mt-0.5">
-            Open an essay and run an analysis to see how it scores.
+          <p className="text-[13px] text-pencil mt-1 mb-3">
+            Open an essay and run an analysis to see how it holds up.
           </p>
+          <button
+            onClick={() => onOpen(latest.id)}
+            className="inline-flex items-center gap-1.5 text-[13px] font-mono uppercase tracking-[0.14em] text-oxblood hover:text-oxblood-2 transition-colors"
+          >
+            Review latest <ArrowRight className="w-3 h-3" />
+          </button>
         </div>
       </div>
+    </div>
+  );
+}
+
+/* ─── Sidebar cards ─── */
+
+function ReviewLatestCard({
+  essays,
+  onOpen,
+}: {
+  essays: Essay[];
+  onOpen: (id: string) => void;
+}) {
+  const latest = essays[0];
+  if (!latest) return null;
+
+  return (
+    <div className="paper-card p-6">
+      <p className="eyebrow mb-4">
+        <span className="num">◦</span> Recommended
+      </p>
+      <p className="font-serif text-[22px] leading-[1.2] text-ink mb-3">
+        Score your <em className="italic text-oxblood">latest</em> draft.
+      </p>
+      <p className="text-[14px] text-ink-2 leading-relaxed mb-5">
+        Instant rubric-based feedback on content, structure, clarity, and admissions fit.
+      </p>
       <button
         onClick={() => onOpen(latest.id)}
-        className="self-start sm:self-auto flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white border border-hair text-xs font-semibold text-ink-2 hover:border-[#3B82F6]/40 hover:text-oxblood transition-all duration-200"
+        className="btn btn-sm btn-brand w-full justify-center"
       >
-        Get Feedback
-        <ArrowRight className="w-3 h-3" />
+        Open &quot;{latest.title}&quot;
       </button>
     </div>
   );
 }
 
-/* ─── Sidebar panels ─── */
-
-function ReviewEssayCard({
-  essays,
-  onOpen,
-}: {
-  essays: Essay[];
-  onOpen: (id: string) => void;
-}) {
-  const latest = essays[0];
-
+function DeliverablesCard() {
   return (
-    <div className="rounded-2xl overflow-hidden border border-[#1E3A5F]/10 bg-gradient-to-br from-[#0F172A] to-[#1E3A5F]">
-      <div className="p-5">
-        <p className="text-[10px] font-semibold text-white/40 uppercase tracking-wider mb-2">
-          Recommended
-        </p>
-        <p className="text-sm font-semibold text-white mb-1.5 leading-snug">
-          See how strong your essay actually is
-        </p>
-        <p className="text-[11px] text-white/55 leading-relaxed mb-4">
-          Instant scores on clarity, structure, and admissions impact.
-        </p>
-        <button
-          onClick={() => onOpen(latest.id)}
-          className="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-[#3B82F6] text-white text-xs font-semibold hover:bg-[#2563EB] transition-colors"
-        >
-          <BarChart2 className="w-3.5 h-3.5" />
-          Review Latest Essay
-        </button>
-      </div>
-    </div>
-  );
-}
-
-function WhatYouGetCard() {
-  const features = [
-    { icon: Zap, label: "Line-by-line AI suggestions", color: "text-oxblood" },
-    { icon: Target, label: "Clarity and structure scores", color: "text-[#10B981]" },
-    { icon: BookOpen, label: "School fit analysis", color: "text-[#8B5CF6]" },
-    { icon: Star, label: "Admissions officer view", color: "text-[#F59E0B]" },
-  ];
-
-  return (
-    <div className="bg-white border border-hair rounded-2xl p-5 shadow-[0_1px_6px_rgba(148,163,184,0.06)]">
-      <p className="text-[10px] font-semibold text-pencil uppercase tracking-wider mb-4">
-        What you get
+    <div>
+      <p className="eyebrow mb-4">
+        <span className="num">◦</span> What you get
       </p>
-      <ul className="space-y-3">
-        {features.map(({ icon: Icon, label, color }) => (
-          <li key={label} className="flex items-center gap-2.5">
-            <div className={`w-6 h-6 rounded-md bg-slate-50 flex items-center justify-center flex-shrink-0`}>
-              <Icon className={`w-3 h-3 ${color}`} />
-            </div>
-            <span className="text-xs text-ink-2 font-medium">{label}</span>
+      <ul className="space-y-2.5">
+        {DELIVERABLES.map((label) => (
+          <li key={label} className="flex items-baseline gap-3">
+            <span className="font-mono text-[10px] text-oxblood/70">→</span>
+            <span className="font-serif text-[16px] text-ink-2 leading-snug">{label}</span>
           </li>
         ))}
       </ul>
@@ -420,26 +376,29 @@ function WhatYouGetCard() {
 
 function HowItWorksCard() {
   return (
-    <div className="bg-white border border-hair rounded-2xl p-5 shadow-[0_1px_6px_rgba(148,163,184,0.06)]">
-      <p className="text-[10px] font-semibold text-pencil uppercase tracking-wider mb-4">
-        How it works
+    <div>
+      <p className="eyebrow mb-4">
+        <span className="num">◦</span> How it works
       </p>
-      <div className="space-y-4">
-        {HOW_IT_WORKS.map(({ step, title, desc }, i) => (
-          <div key={step} className="flex items-start gap-3">
-            <div className="w-5 h-5 rounded-full bg-[#EFF6FF] flex items-center justify-center text-[10px] font-bold text-oxblood flex-shrink-0 mt-0.5">
+      <ol className="space-y-4">
+        {HOW_IT_WORKS.map(({ step, title, desc }) => (
+          <li key={step} className="flex gap-4">
+            <span className="font-serif italic text-oxblood text-[22px] leading-none shrink-0 w-5">
               {step}
+            </span>
+            <div>
+              <p className="font-serif text-[16px] text-ink leading-snug">{title}</p>
+              <p className="text-[13px] text-pencil leading-relaxed mt-0.5">{desc}</p>
             </div>
-            <div className="flex-1">
-              <p className="text-xs font-semibold text-[#1E293B]">{title}</p>
-              <p className="text-[11px] text-pencil leading-relaxed mt-0.5">{desc}</p>
-            </div>
-            {i < HOW_IT_WORKS.length - 1 && (
-              <div className="absolute" />
-            )}
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
+      <Link
+        href="/blog"
+        className="mt-5 inline-flex items-center gap-1.5 text-[12px] font-mono uppercase tracking-[0.14em] text-oxblood hover:text-oxblood-2 transition-colors"
+      >
+        Read the guides <ArrowRight className="w-3 h-3" />
+      </Link>
     </div>
   );
 }

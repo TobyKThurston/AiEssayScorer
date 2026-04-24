@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { Breadcrumbs } from "@/design/Breadcrumbs";
 import type { School } from "@/tools/schools";
 import PublicScorer from "@/PublicScorer/PublicScorer";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
@@ -11,6 +12,13 @@ import { SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
 export function ScoreSchoolPage({ school }: { school: School }) {
   return (
     <div className="max-w-[900px] mx-auto px-6 md:px-16 pt-28 md:pt-36 pb-20">
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Tools", href: "/tools" },
+          { label: `${school.shortName} Scorer` },
+        ]}
+      />
       <Link
         href="/tools"
         className="inline-flex items-center gap-1.5 text-sm text-oxblood hover:gap-2 transition-all mb-6"

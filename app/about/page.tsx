@@ -4,6 +4,8 @@ import { Container } from "@/design/Container";
 import { Eyebrow } from "@/design/Eyebrow";
 import { Rule } from "@/design/Rule";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
+
 export const metadata: Metadata = {
   title: "About Ivy Admit, AI College Essay Review",
   description:
@@ -15,12 +17,48 @@ export const metadata: Metadata = {
       "Ivy Admit is an AI-powered college essay review tool built by students admitted to Harvard, Yale, and Princeton. Learn how it works and why we built it.",
     url: "/about",
     type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "About Ivy Admit — AI College Essay Review" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Ivy Admit, AI College Essay Review",
+    description:
+      "AI-powered college essay review built by students admitted to Harvard, Yale, and Princeton.",
+    images: ["/og-image.png"],
+  },
+};
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": `${baseUrl}/about#aboutpage`,
+  url: `${baseUrl}/about`,
+  name: "About Ivy Admit",
+  description:
+    "Ivy Admit is an AI-powered college essay review tool built by students admitted to Harvard, Yale, and Princeton.",
+  mainEntity: { "@id": `${baseUrl}/#organization` },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+    { "@type": "ListItem", position: 2, name: "About", item: `${baseUrl}/about` },
+  ],
 };
 
 export default function AboutPage() {
   return (
     <Container className="pt-20 md:pt-28 pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="max-w-[720px]">
         <Eyebrow num="§01">About</Eyebrow>
         <h1 className="mt-4 font-serif text-[48px] md:text-[72px] leading-[1] tracking-[-0.025em] text-ink">

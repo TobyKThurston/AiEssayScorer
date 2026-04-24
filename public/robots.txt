@@ -4,11 +4,21 @@ Disallow: /api/
 Disallow: /auth/
 Disallow: /_next/
 Disallow: /admin/
+Disallow: /editor
+Disallow: /editor/
+Disallow: /upload
+Disallow: /view-essay
+Disallow: /account
 
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
 Disallow: /auth/
+Disallow: /editor
+Disallow: /editor/
+Disallow: /upload
+Disallow: /view-essay
+Disallow: /account
 
 Sitemap: https://getivyadmit.com/sitemap.xml
 

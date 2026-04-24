@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "College Essay Checker, Is Your Draft Ready to Submit?",
@@ -84,6 +85,14 @@ export default function CollegeEssayCheckerPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Guides", href: "/blog" },
+            { label: "College Essay Checker" },
+          ]}
         />
 
         {/* Hero */}
@@ -288,6 +297,18 @@ export default function CollegeEssayCheckerPage() {
               </Link>
               <Link href="/blog" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 Blog
+              </Link>
+              <Link href="/tools" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                All Free Tools
+              </Link>
+              <Link href="/tools/essay-polish-pass" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                Essay Polish Pass
+              </Link>
+              <Link href="/tools/essay-word-repetition-finder" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                Word Repetition Finder
+              </Link>
+              <Link href="/tools/cliche-detector" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                Cliché Detector
               </Link>
             </div>
           </div>

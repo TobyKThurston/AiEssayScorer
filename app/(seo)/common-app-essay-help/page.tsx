@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Common App Essay Help, How to Write & Revise Your Draft",
@@ -84,6 +85,14 @@ export default function CommonAppEssayHelpPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Guides", href: "/blog" },
+            { label: "Common App Essay Help" },
+          ]}
         />
 
         {/* Hero */}
@@ -292,6 +301,18 @@ export default function CommonAppEssayHelpPage() {
               </Link>
               <Link href="/blog" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 Blog
+              </Link>
+              <Link href="/tools" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                All Free Tools
+              </Link>
+              <Link href="/tools/essay-outline-generator" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                Essay Outline Generator
+              </Link>
+              <Link href="/tools/essay-first-sentence-generator" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                First-Sentence Generator
+              </Link>
+              <Link href="/tools/essay-conclusion-generator" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                Essay Conclusion Generator
               </Link>
             </div>
           </div>

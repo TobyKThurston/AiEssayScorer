@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { posts, formatDate } from "@/blog/posts";
 import { ArrowRight } from "lucide-react";
+import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "College Essay Blog, Guides, Tips & Strategy",
@@ -30,14 +31,53 @@ const categoryColors: Record<string, string> = {
   "Ivy League": "bg-paper-2 text-forest",
 };
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
+
 export default function BlogIndex() {
   const sorted = [...posts].sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   );
   const [featured, ...rest] = sorted;
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${baseUrl}/blog#blog`,
+    url: `${baseUrl}/blog`,
+    name: "Ivy Admit College Essay Blog",
+    description:
+      "Practical advice on essays, applications, and strategy for selective college admissions.",
+    publisher: { "@id": `${baseUrl}/#organization` },
+    blogPost: sorted.slice(0, 20).map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.description,
+      url: `${baseUrl}/blog/${post.slug}`,
+      datePublished: new Date(post.publishedAt).toISOString(),
+      author: { "@type": "Organization", name: "Ivy Admit" },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${baseUrl}/blog` },
+    ],
+  };
+
   return (
     <div className="max-w-[1200px] mx-auto px-6 md:px-16 pt-28 md:pt-36 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Blog" }]} />
       {/* Header */}
       <div className="mb-14 max-w-2xl">
         <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-3">
@@ -81,6 +121,7 @@ export default function BlogIndex() {
       </Link>
 
       {/* Rest of posts */}
+      <h2 className="sr-only">More articles</h2>
       <div className="grid md:grid-cols-2 gap-5">
         {rest.map((post) => (
           <Link
@@ -113,6 +154,30 @@ export default function BlogIndex() {
           </Link>
         ))}
       </div>
+
+      <section className="mt-20 pt-12 border-t border-hair grid grid-cols-12 gap-6 md:gap-10">
+        <div className="col-span-12 md:col-span-4">
+          <p className="eyebrow">
+            <span className="num">§</span> The workshop
+          </p>
+        </div>
+        <div className="col-span-12 md:col-span-8">
+          <h2 className="font-serif text-[30px] md:text-[42px] leading-[1.1] tracking-[-0.02em] text-ink mb-5">
+            Words are <em className="italic text-oxblood">moved</em>, not written.
+          </h2>
+          <p className="text-ink-2 text-[17px] leading-[1.6] max-w-[56ch] mb-8">
+            Brainstorm, outline, polish, or score a draft. Every tool is free, no signup, tuned against the same patterns these guides are built from.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/tools" className="btn btn-lg btn-ink">
+              Browse all free tools <ArrowRight className="w-4 h-4 ml-1 inline-block" />
+            </Link>
+            <Link href="/try" className="btn btn-lg btn-ghost">
+              Score my essay
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

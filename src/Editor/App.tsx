@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Leaf, Zap } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
+import { Wordmark } from "@/design/Brand";
 import { EssayList } from "./components/EssayList";
 
 export default function EditorApp() {
@@ -32,38 +32,46 @@ export default function EditorApp() {
   };
 
   return (
-    <div className="min-h-screen bg-paper-2">
-      {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 h-14 bg-white border-b border-hair flex items-center px-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-2.5 min-w-0">
-          <div className="w-8 h-8 rounded-md bg-gradient-to-br from-[#3B82F6] to-[#0EA5E9] flex items-center justify-center flex-shrink-0">
-            <Leaf className="w-4 h-4 text-white" />
+    <div className="min-h-screen bg-paper">
+      <nav
+        className="sticky top-0 z-50 border-b border-hair"
+        style={{
+          background: "rgba(245,240,230,0.86)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+        }}
+      >
+        <div className="container-editorial">
+          <div className="flex items-center justify-between h-[66px] gap-4">
+            <Link href="/" className="flex items-center">
+              <Wordmark />
+            </Link>
+            <div className="hidden sm:flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.16em] text-pencil">
+              <span className="text-oxblood">◦</span>
+              <span>My Essays</span>
+            </div>
+            <div className="flex items-center gap-3">
+              {!isPro ? (
+                <button onClick={handleUpgrade} className="btn btn-sm btn-brand">
+                  Upgrade to Pro
+                </button>
+              ) : (
+                <span className="hidden sm:inline font-mono text-[10.5px] uppercase tracking-[0.16em] text-forest">
+                  ◦ Pro
+                </span>
+              )}
+              <button
+                onClick={() => signOut()}
+                className="text-[14px] text-ink-2 hover:text-oxblood transition-colors"
+              >
+                Sign out
+              </button>
+            </div>
           </div>
-          <span className="text-sm font-semibold text-ink truncate">Ivy Admit</span>
-        </Link>
-        <div className="ml-auto flex items-center gap-2 sm:gap-3">
-          {!isPro && (
-            <button
-              onClick={handleUpgrade}
-              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-gradient-to-r from-[#F59E0B] to-[#EF4444] text-white text-xs font-semibold hover:opacity-90 transition-opacity"
-            >
-              <Zap className="w-3 h-3" />
-              <span className="hidden sm:inline">Upgrade to Pro</span>
-              <span className="sm:hidden">Pro</span>
-            </button>
-          )}
-          <button
-            onClick={() => signOut()}
-            className="text-xs text-pencil hover:text-ink transition-colors"
-          >
-            Logout
-          </button>
         </div>
       </nav>
 
-      <div className="pt-14">
-        <EssayList />
-      </div>
+      <EssayList />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { posts, getPost, formatDate } from "@/blog/posts";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
+import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -214,6 +215,20 @@ export default async function BlogPost({ params }: Props) {
   const prev = idx > 0 ? posts[idx - 1] : null;
   const next = idx < posts.length - 1 ? posts[idx + 1] : null;
 
+  // Related posts by category (excluding current), fallback to most recent
+  const sameCategory = posts
+    .filter((p) => p.slug !== slug && p.category === post.category)
+    .slice(0, 3);
+  const related =
+    sameCategory.length >= 3
+      ? sameCategory
+      : [
+          ...sameCategory,
+          ...posts
+            .filter((p) => p.slug !== slug && !sameCategory.some((s) => s.slug === p.slug))
+            .slice(0, 3 - sameCategory.length),
+        ];
+
   return (
     <>
       <script
@@ -226,6 +241,13 @@ export default async function BlogPost({ params }: Props) {
       />
 
       <div className="max-w-[720px] mx-auto px-6 pt-28 md:pt-36 pb-20">
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: post.title },
+          ]}
+        />
         {/* Back link */}
         <Link
           href="/blog"
@@ -301,6 +323,63 @@ export default async function BlogPost({ params }: Props) {
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
+
+        {/* Related tools */}
+        <section className="mb-14 pt-10 border-t border-hair">
+          <p className="eyebrow mb-4">
+            <span className="num">§</span> Free tools to keep going
+          </p>
+          <h2 className="font-serif text-[26px] md:text-[30px] leading-[1.15] tracking-[-0.015em] text-ink mb-6">
+            Brainstorm, outline, or <em className="italic text-oxblood">polish</em> a draft.
+          </h2>
+          <ul className="flex flex-wrap gap-x-6 gap-y-3 font-serif text-[17px]">
+            {[
+              { href: "/tools/essay-outline-generator", label: "Essay Outline Generator" },
+              { href: "/tools/essay-polish-pass", label: "Essay Polish Pass" },
+              { href: "/tools/essay-word-repetition-finder", label: "Word Repetition Finder" },
+              { href: "/tools/essay-first-sentence-generator", label: "First-Sentence Generator" },
+              { href: "/tools", label: "All free tools" },
+            ].map((t) => (
+              <li key={t.href}>
+                <Link
+                  href={t.href}
+                  className="text-ink-2 hover:text-oxblood transition-colors underline underline-offset-[6px] decoration-[color:var(--color-hair)] hover:decoration-oxblood"
+                >
+                  {t.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Related posts */}
+        {related.length > 0 && (
+          <section className="mb-14 pt-10 border-t border-hair">
+            <p className="eyebrow mb-4">
+              <span className="num">◦</span> Related reading
+            </p>
+            <ul className="divide-y divide-[color:var(--color-hair)]">
+              {related.map((r) => (
+                <li key={r.slug}>
+                  <Link
+                    href={`/blog/${r.slug}`}
+                    className="group grid grid-cols-[auto_1fr_auto] items-baseline gap-6 py-5 -mx-3 px-3 hover:bg-cream/60 transition-colors"
+                  >
+                    <span className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-oxblood/80 shrink-0 min-w-[84px]">
+                      {r.category}
+                    </span>
+                    <p className="font-serif text-[18px] md:text-[20px] leading-[1.25] text-ink group-hover:text-oxblood transition-colors">
+                      {r.title}
+                    </p>
+                    <span className="font-mono text-[11px] text-pencil group-hover:text-oxblood group-hover:translate-x-0.5 inline-block transition-all shrink-0">
+                      →
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {/* Post navigation */}
         {(prev || next) && (

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Free AI Essay Review for College Applications",
@@ -84,6 +85,14 @@ export default function AIEssayReviewPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Guides", href: "/blog" },
+            { label: "AI Essay Review" },
+          ]}
         />
 
         {/* Hero */}
@@ -282,6 +291,15 @@ export default function AIEssayReviewPage() {
               </Link>
               <Link href="/blog" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
                 Blog
+              </Link>
+              <Link href="/tools" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                All Free Tools
+              </Link>
+              <Link href="/tools/essay-outline-generator" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                Essay Outline Generator
+              </Link>
+              <Link href="/tools/essay-word-repetition-finder" className="px-4 py-2 rounded-full border border-hair text-sm text-ink-2 hover:text-ink hover:border-ink transition-all bg-cream">
+                Word Repetition Finder
               </Link>
             </div>
           </div>
