@@ -25,12 +25,19 @@ export function Hero() {
               <em className="italic text-oxblood">It&apos;s still your essay. Just louder.</em>
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/try" className="btn btn-lg btn-brand">
-                Score my essay — free <span aria-hidden>→</span>
+            <div className="mt-7 flex flex-col sm:flex-row sm:flex-wrap items-start gap-4">
+              <Link
+                href="/editor"
+                className="btn btn-brand group relative w-full sm:w-auto justify-center text-[18px] md:text-[19px] font-semibold px-8 py-5 md:px-10 md:py-6 shadow-[0_8px_24px_-8px_rgba(124,28,28,0.45)] hover:shadow-[0_12px_32px_-8px_rgba(124,28,28,0.55)] hover:-translate-y-0.5 active:translate-y-0 transition-all"
+              >
+                Score my essay — free
+                <span aria-hidden className="ml-1 transition-transform group-hover:translate-x-1">→</span>
               </Link>
-              <Link href="/ivy-league-essay-examples" className="btn btn-lg btn-ghost">
-                Browse sample scores
+              <Link
+                href="/ivy-league-essay-examples"
+                className="btn btn-ghost text-[13.5px] underline-offset-4 hover:underline"
+              >
+                or browse sample scores
               </Link>
             </div>
 
