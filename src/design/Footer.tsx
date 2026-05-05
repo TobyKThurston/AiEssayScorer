@@ -49,7 +49,7 @@ export function Footer() {
   return (
     <footer className="border-t border-hair bg-paper">
       <div className="container-editorial py-14 md:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-[1.2fr_1fr_1fr_1fr_1fr] gap-10 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-[1.2fr_1fr_1.6fr_0.8fr_0.8fr] gap-10 md:gap-12">
           <div className="col-span-2 md:col-span-1">
             <Wordmark />
             <p className="mt-5 font-serif italic text-[17px] leading-[1.45] text-ink-2 max-w-[280px]">
