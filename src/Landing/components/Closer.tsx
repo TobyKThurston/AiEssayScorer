@@ -3,27 +3,29 @@ import { Container } from "@/design/Container";
 
 export function Closer() {
   return (
-    <section className="bg-paper-2 border-t border-b border-hair">
+    <section className="bg-ink text-paper border-t border-b border-hair">
       <Container>
-        <div className="py-24 md:py-32 text-center">
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-pencil">
-            <span className="text-oxblood mr-2.5">§09</span>Close the gap
+        <div className="py-28 md:py-36 text-center relative">
+          <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-paper-3">
+            <span className="text-oxblood mr-2">§07</span>The Forecast
           </p>
-          <h2 className="mt-6 font-serif text-[48px] md:text-[80px] lg:text-[96px] leading-[0.98] tracking-[-0.025em] text-ink max-w-[20ch] mx-auto">
-            Admit smarter. <em className="italic text-oxblood">Your</em> essay, louder.
+          <h2 className="mt-7 font-serif text-[56px] md:text-[88px] lg:text-[112px] leading-[0.92] tracking-[-0.03em] text-paper max-w-[14ch] mx-auto">
+            Stop <em className="italic text-gold">guessing</em>.
           </h2>
-          <p className="mt-7 text-[16.5px] md:text-[18px] leading-[1.55] text-ink-2 max-w-[56ch] mx-auto">
-            Score your first draft in under 60 seconds, free. See exactly what a selective-admissions
-            reader will notice — before they do.
+          <p className="mt-7 font-serif text-[19px] md:text-[21px] leading-[1.4] text-paper-3 max-w-[34ch] mx-auto">
+            One short form. One honest number. For every school on your list.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link href="/try" className="btn btn-lg btn-brand">
-              Score my essay — free
-            </Link>
-            <Link href="/tools" className="btn btn-lg btn-ghost">
-              Browse tools
+          <div className="mt-10 flex justify-center">
+            <Link
+              href="/odds"
+              className="btn btn-brand text-[18px] md:text-[19px] font-semibold px-10 py-5 md:px-12 md:py-6 shadow-[0_14px_40px_-10px_rgba(124,28,28,0.7)] hover:-translate-y-0.5 transition-all"
+            >
+              Calculate my odds →
             </Link>
           </div>
+          <p className="mt-7 font-mono text-[11px] uppercase tracking-[0.18em] text-paper-3">
+            $9 / month · Cancel anytime · Includes the essay grader
+          </p>
         </div>
       </Container>
     </section>

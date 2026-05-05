@@ -1,48 +1,66 @@
+import Link from "next/link";
 import { Container } from "@/design/Container";
-import { SectionHead } from "@/design/SectionHead";
 
 const STEPS = [
   {
     num: "01",
-    title: "Paste your draft.",
-    body:
-      "Drop in any version — first draft or final polish. We accept Common App essays, supplementals, and short answers from 50 to 2,000 words.",
+    title: "Tell us about you.",
+    body: "SAT, GPA, where you're from, your top activities. 90 seconds.",
   },
   {
     num: "02",
-    title: "Get scored on a real rubric.",
-    body:
-      "Content, structure, voice, school fit, and mechanics. The same rubric trained on thousands of accepted applications.",
+    title: "Pick your schools.",
+    body: "Up to ten. We score your odds at each, individually.",
   },
   {
     num: "03",
-    title: "Fix what matters most.",
-    body:
-      "Line-by-line edits, risk flags, and one standout move. Accept what helps, ignore what doesn't. You stay the author.",
+    title: "See your number.",
+    body: "An honest admit %, a Reach/Match/Safety tier, and why.",
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section id="how" className="py-24 md:py-28 border-t border-hair">
+    <section id="how" className="py-24 md:py-32 border-t border-hair">
       <Container>
-        <SectionHead
-          num="§03"
-          eyebrow="How it works"
-          title={<>From paste to <em className="italic text-oxblood">publishable</em> in three reads.</>}
-          intro="The whole point is to close the gap between your draft and an admissions reader's view of it — fast."
-        />
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-10 md:gap-16 items-start">
+          <div>
+            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-oxblood mb-4">
+              §02 · The Process
+            </p>
+            <h2 className="font-serif text-[40px] md:text-[52px] leading-[0.98] tracking-[-0.02em] text-ink">
+              Three steps.
+              <br />
+              <em className="italic text-oxblood">One number.</em>
+            </h2>
+            <p className="mt-5 text-[15px] leading-[1.55] text-ink-2 max-w-[36ch]">
+              No essay required to start. The number you see is the one we'd give a counselor.
+            </p>
+            <Link
+              href="/odds"
+              className="inline-flex items-center gap-1 mt-6 text-[14px] text-oxblood hover:text-oxblood-2 underline-offset-4 hover:underline font-medium"
+            >
+              Begin →
+            </Link>
+          </div>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {STEPS.map((s) => (
-            <div key={s.num} className="paper-card p-8">
-              <p className="font-serif italic text-[56px] leading-none text-oxblood opacity-90 mb-5">
-                {s.num}
-              </p>
-              <h3 className="font-serif text-[22px] leading-[1.2] text-ink mb-3">{s.title}</h3>
-              <p className="text-[14.5px] text-ink-2 leading-[1.6]">{s.body}</p>
-            </div>
-          ))}
+          <ol className="space-y-0 border-t border-hair">
+            {STEPS.map((s) => (
+              <li key={s.num} className="grid grid-cols-[auto_1fr] gap-6 md:gap-10 py-7 border-b border-hair">
+                <span className="font-serif italic text-[44px] md:text-[52px] leading-none text-oxblood/80">
+                  {s.num}
+                </span>
+                <div>
+                  <h3 className="font-serif text-[22px] md:text-[24px] leading-[1.15] text-ink">
+                    {s.title}
+                  </h3>
+                  <p className="mt-2 text-[14.5px] text-ink-2 leading-[1.55] max-w-[44ch]">
+                    {s.body}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </Container>
     </section>

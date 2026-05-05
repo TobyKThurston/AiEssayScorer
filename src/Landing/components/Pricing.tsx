@@ -1,43 +1,22 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import { Container } from "@/design/Container";
 import { SectionHead } from "@/design/SectionHead";
 
 export function Pricing() {
-  const [err, setErr] = useState<string | null>(null);
-
-  const handleUpgrade = async () => {
-    setErr(null);
-    try {
-      const res = await fetch("/api/create-checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID }),
-      });
-      const data = await res.json();
-      if (data.url) window.location.href = data.url;
-      else setErr(data.error ?? "Could not start checkout.");
-    } catch {
-      setErr("Network error. Please try again.");
-    }
-  };
-
   return (
     <section id="pricing" className="py-24 md:py-28 border-t border-hair">
       <Container>
         <SectionHead
           num="§06"
           eyebrow="Pricing"
-          title={<>Start free. Upgrade when you&apos;re <em className="italic text-oxblood">serious</em>.</>}
-          intro="First scoring pass is free, no signup. Full line-by-line edits and unlimited drafts are $7 a month."
+          title={<>One simple plan. Unlocks <em className="italic text-oxblood">everything</em>.</>}
+          intro="Free tools to learn. $9 a month to see your real admit chance and unlock the full editor."
         />
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="paper-card p-8 md:p-10 flex flex-col">
-            <h3 className="font-serif text-[26px] text-ink">Starter</h3>
-            <p className="mt-1 text-[14.5px] text-ink-2">For one-off drafts and first reads.</p>
+            <h3 className="font-serif text-[26px] text-ink">Free</h3>
+            <p className="mt-1 text-[14.5px] text-ink-2">Try the essay grader, no signup.</p>
 
             <div className="mt-6 flex items-baseline gap-2">
               <span className="font-serif text-[64px] leading-none text-ink">Free</span>
@@ -45,7 +24,7 @@ export function Pricing() {
 
             <ul className="mt-6 space-y-3 text-[14.5px] text-ink-2">
               {[
-                "1 essay scored per day",
+                "1 essay graded per day",
                 "Rubric score + first-impression",
                 "Top 3 improvements",
                 "Access to all 150+ free tools",
@@ -57,8 +36,8 @@ export function Pricing() {
               ))}
             </ul>
 
-            <Link href="/try" className="btn btn-ghost mt-7 justify-center">
-              Start free
+            <Link href="/essay-grader" className="btn btn-ghost mt-7 justify-center">
+              Grade my essay
             </Link>
           </div>
 
@@ -72,7 +51,7 @@ export function Pricing() {
 
             <div className="mt-6 flex items-baseline gap-2">
               <span className="font-serif text-[64px] leading-none text-paper">
-                <em className="italic text-gold">$</em>7
+                <em className="italic text-gold">$</em>9
               </span>
               <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-paper-3">
                 / month
@@ -81,11 +60,12 @@ export function Pricing() {
 
             <ul className="mt-6 space-y-3 text-[14.5px] text-paper-3">
               {[
-                "Unlimited essay scoring",
-                "Full line-by-line edits with rationale",
-                "Regional tailoring & risk flags",
-                "Version history in the editor",
-                "Priority model for faster feedback",
+                "Per-school admit % + tier (Reach/Match/Safety)",
+                "Multi-school odds in one calculation",
+                "Unlimited essay grading + line edits",
+                "Full editor with version history",
+                "Every premium tool unlocked",
+                "Cancel anytime",
               ].map((f) => (
                 <li
                   key={f}
@@ -98,10 +78,9 @@ export function Pricing() {
               ))}
             </ul>
 
-            <button onClick={handleUpgrade} className="btn btn-brand mt-7 justify-center">
-              Upgrade to Pro
-            </button>
-            {err ? <p className="mt-3 font-mono text-[11px] text-oxblood">{err}</p> : null}
+            <Link href="/odds" className="btn btn-brand mt-7 justify-center">
+              Calculate my odds
+            </Link>
             <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-3">
               30-day money-back guarantee
             </p>

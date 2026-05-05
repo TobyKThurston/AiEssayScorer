@@ -7,8 +7,8 @@ import { Wordmark } from "./Brand";
 import { useAuth } from "@/contexts/AuthContext";
 
 const NAV_LINKS: { label: string; href: string }[] = [
-  { label: "Features", href: "/#features" },
-  { label: "How it works", href: "/#how" },
+  { label: "Odds Calculator", href: "/odds" },
+  { label: "Essay Grader", href: "/essay-grader" },
   { label: "Tools", href: "/tools" },
   { label: "Blog", href: "/blog" },
   { label: "Pricing", href: "/#pricing" },
@@ -87,8 +87,8 @@ export function Nav() {
                   Sign in
                 </Link>
               )}
-              <Link href="/try" className="btn btn-sm btn-ink">
-                Score my essay
+              <Link href="/odds" className="btn btn-sm btn-ink">
+                Calculate my odds
               </Link>
             </div>
 
@@ -146,11 +146,11 @@ export function Nav() {
                   </Link>
                 )}
                 <Link
-                  href="/try"
+                  href="/odds"
                   onClick={() => setOpen(false)}
                   className="btn btn-ink mt-3 w-full justify-center"
                 >
-                  Score my essay
+                  Calculate my odds
                 </Link>
               </div>
             </div>
