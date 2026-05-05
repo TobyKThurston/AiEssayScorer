@@ -18,7 +18,7 @@ export function Closer() {
           <div className="mt-10 flex justify-center">
             <Link
               href="/odds"
-              className="btn btn-brand text-[18px] md:text-[19px] font-semibold px-10 py-5 md:px-12 md:py-6 shadow-[0_14px_40px_-10px_rgba(124,28,28,0.7)] hover:-translate-y-0.5 transition-all"
+              className="btn btn-brand text-[18px] md:text-[19px] font-semibold px-10 py-5 md:px-12 md:py-6 shadow-[0_14px_40px_-10px_rgba(124,28,28,0.7)] hover:-translate-y-0.5 [transition-property:transform,background-color,color,border-color,box-shadow] [transition-duration:200ms] [transition-timing-function:cubic-bezier(0.2,0,0,1)]"
             >
               Calculate my odds →
             </Link>

@@ -145,9 +145,15 @@
     padding: 12px 20px;
     border-radius: var(--radius, 4px);
     border: 1px solid transparent;
-    transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transition-property: transform, background-color, color, border-color, box-shadow;
+    transition-duration: 0.15s;
+    transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
     cursor: pointer;
     line-height: 1;
+    will-change: transform;
+  }
+  .btn:active:not(:disabled) {
+    transform: scale(0.96);
   }
   .btn-lg { padding: 14px 22px; font-size: 15px; }
   .btn-sm { padding: 9px 14px; font-size: 13px; }

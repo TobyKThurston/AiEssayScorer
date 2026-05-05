@@ -118,7 +118,7 @@ export function OddsFlow() {
         <div className="flex items-center justify-between gap-4 pb-4 font-mono text-[11px] uppercase tracking-[0.16em] text-pencil">
           <span>The Admit Forecast · Confidential Worksheet</span>
           {isWizard ? (
-            <span>
+            <span className="tabular-nums">
               Step {visibleStepIndex + 1} / {STEPS.length}
             </span>
           ) : null}
@@ -493,7 +493,7 @@ function StepSchools({
                 {s.shortName}
                 <button
                   onClick={() => toggle(slug)}
-                  className="text-oxblood hover:text-oxblood-2"
+                  className="relative text-oxblood hover:text-oxblood-2 after:absolute after:-inset-3 after:content-['']"
                   aria-label={`Remove ${s.name}`}
                 >
                   ✕
@@ -538,7 +538,7 @@ function StepSchools({
         )}
       </div>
 
-      <p className="mt-3 text-[12px] text-pencil">
+      <p className="mt-3 text-[12px] text-pencil tabular-nums">
         {profile.schoolSlugs.length} / 10 selected
       </p>
 
@@ -598,7 +598,8 @@ function StepActivities({
               {profile.activities.length > 1 ? (
                 <button
                   onClick={() => remove(i)}
-                  className="text-[12px] text-pencil hover:text-oxblood"
+                  className="relative text-[12px] text-pencil hover:text-oxblood after:absolute after:-inset-3 after:content-['']"
+                  aria-label={`Remove activity ${i + 1}`}
                 >
                   Remove
                 </button>
@@ -692,7 +693,7 @@ function StepActivities({
                   key={tier}
                   type="button"
                   onClick={() => updateActivity(i, { tier })}
-                  className={`px-2 py-2 text-[12px] font-medium border transition-colors ${
+                  className={`min-h-[40px] px-2 text-[12px] font-medium border transition-[background-color,color,border-color] duration-150 active:scale-[0.96] ${
                     a.tier === tier
                       ? "border-oxblood bg-[#FAEEEA] text-oxblood"
                       : "border-hair text-ink-2 hover:border-ink-2"
@@ -712,7 +713,7 @@ function StepActivities({
       {profile.activities.length < 5 ? (
         <button
           onClick={add}
-          className="mt-4 text-[13px] text-oxblood hover:text-oxblood-2 underline-offset-4 hover:underline"
+          className="mt-4 inline-flex items-center min-h-[40px] px-1 text-[13px] text-oxblood hover:text-oxblood-2 underline-offset-4 hover:underline"
         >
           + Add another activity
         </button>
@@ -909,7 +910,7 @@ function StepPaywall({
 
       <div className="border border-oxblood bg-[#FAEEEA] p-6 mb-6">
         <div className="flex items-baseline gap-1.5 mb-3">
-          <span className="text-[40px] font-serif text-oxblood leading-none">$7</span>
+          <span className="text-[40px] font-serif text-oxblood leading-none tabular-nums">$7</span>
           <span className="text-[14px] text-ink-2">/ month</span>
         </div>
         <ul className="space-y-2 text-[14px] text-ink-2">
@@ -958,28 +959,34 @@ function StepReveal({ result }: { result: OddsResult | null }) {
   if (!result) return null;
   return (
     <div className="space-y-4">
-      {result.schools.map((s) => (
-        <PaperCard key={s.slug}>
-          <div className="flex items-baseline justify-between gap-4">
-            <div>
-              <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-pencil">
-                {s.tier}
+      {result.schools.map((s, i) => (
+        <div
+          key={s.slug}
+          className="reveal-card"
+          style={{ animationDelay: `${i * 90}ms` }}
+        >
+          <PaperCard>
+            <div className="flex items-baseline justify-between gap-4">
+              <div>
+                <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-pencil">
+                  {s.tier}
+                </div>
+                <h3 className="text-ink text-[22px] font-serif mt-1">{s.name}</h3>
               </div>
-              <h3 className="text-ink text-[22px] font-serif mt-1">{s.name}</h3>
-            </div>
-            <div className="text-right">
-              <div className="text-[44px] font-serif text-oxblood leading-none">
-                {s.percent}%
+              <div className="text-right">
+                <div className="text-[44px] font-serif text-oxblood leading-none tabular-nums">
+                  {s.percent}%
+                </div>
+                <div className="text-[11px] text-pencil mt-1">admit chance</div>
               </div>
-              <div className="text-[11px] text-pencil mt-1">admit chance</div>
             </div>
-          </div>
-          <ul className="mt-4 pt-4 border-t border-hair space-y-1.5 text-[14px] text-ink-2">
-            {s.factors.map((f, i) => (
-              <li key={i}>· {f}</li>
-            ))}
-          </ul>
-        </PaperCard>
+            <ul className="mt-4 pt-4 border-t border-hair space-y-1.5 text-[14px] text-ink-2">
+              {s.factors.map((f, idx) => (
+                <li key={idx}>· {f}</li>
+              ))}
+            </ul>
+          </PaperCard>
+        </div>
       ))}
 
       <div className="text-center pt-6">
@@ -987,6 +994,21 @@ function StepReveal({ result }: { result: OddsResult | null }) {
           Grade my essay next →
         </Link>
       </div>
+
+      <style jsx>{`
+        .reveal-card {
+          opacity: 0;
+          transform: translateY(8px);
+          animation: reveal-in 0.5s cubic-bezier(0.2, 0, 0, 1) forwards;
+          will-change: transform, opacity;
+        }
+        @keyframes reveal-in {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </div>
   );
 }

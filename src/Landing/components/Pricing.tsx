@@ -50,7 +50,7 @@ export function Pricing() {
             <p className="mt-1 text-[14.5px] text-paper-3">Everything you need to get in.</p>
 
             <div className="mt-6 flex items-baseline gap-2">
-              <span className="font-serif text-[64px] leading-none text-paper">
+              <span className="font-serif text-[64px] leading-none text-paper tabular-nums">
                 <em className="italic text-gold">$</em>7
               </span>
               <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-paper-3">

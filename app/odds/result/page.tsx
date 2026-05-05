@@ -128,7 +128,7 @@ export default async function OddsResultPage({
                       </h3>
                     </div>
                     <div className="text-right">
-                      <div className="text-[44px] font-serif text-oxblood leading-none">
+                      <div className="text-[44px] font-serif text-oxblood leading-none tabular-nums">
                         {s.percent}%
                       </div>
                       <div className="text-[11px] text-pencil mt-1">
