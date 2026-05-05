@@ -15,8 +15,8 @@ export default function Content() {
       <p>
         The word "optional" does the heaviest lifting on the entire Duke
         application, and it is the word most applicants misread. At Duke's
-        selectivity — single-digit admit rate, a pool stacked with
-        valedictorians — "optional" is a filter. Students who leave the
+        selectivity - single-digit admit rate, a pool stacked with
+        valedictorians - "optional" is a filter. Students who leave the
         optional section blank are not penalized on paper. They are simply
         outperformed by the applicants who used the space. If your competition
         wrote two 250-word essays that revealed something real, and you wrote
@@ -74,8 +74,8 @@ export default function Content() {
         the most common unforced error.
       </p>
       <p>
-        If your Common App personal statement is identity-heavy — a family
-        story, a cultural arc, a language — skip the "perspectives, values,
+        If your Common App personal statement is identity-heavy - a family
+        story, a cultural arc, a language - skip the "perspectives, values,
         stories, and experiences" prompt. It will re-tread the same ground
         in lower resolution. If your activities list is dominated by one
         commitment and that commitment already has a clear narrative on the
@@ -110,15 +110,15 @@ export default function Content() {
         The load-bearing word is "challenged," not "changed." The belief
         does not need to flip. Many of the strongest versions of this essay
         end with a belief that survived the challenge but in a more honest
-        form — qualified, narrower, held with less confidence. Duke is
+        form - qualified, narrower, held with less confidence. Duke is
         looking for how you think under pressure, not a conversion story.
       </p>
       <p>
         Structure: open with the specific moment the challenge happened.
         Name the belief clearly before the moment arrives. Walk the reader
         through the seconds or minutes in which you realized the belief was
-        under strain. Describe your real response — not the response you
-        wish you had — and then the follow-on thinking over the days or
+        under strain. Describe your real response - not the response you
+        wish you had - and then the follow-on thinking over the days or
         weeks after. Land on where you are now. Surprise reads well here.
         If your reader can predict the ending from the opening paragraph,
         rewrite.
@@ -131,18 +131,18 @@ export default function Content() {
           "Share a time that has been true in your life and what you
           learned"
         </em>{" "}
-        — referring to including perspectives different from your own.
+        - referring to including perspectives different from your own.
       </p>
       <p>
         Load-bearing phrase: "perspectives different from your own." This
         is not the disagreement prompt. It is the engagement prompt. Duke
         wants to see how you behave when you are in a room with someone who
-        does not see the world the way you do — a classmate, a family
+        does not see the world the way you do - a classmate, a family
         member, a teammate, a stranger in a workplace.
       </p>
       <p>
         Structure: one concrete encounter. Start in the scene. Describe the
-        other person's view with care — flattening them is the failure
+        other person's view with care - flattening them is the failure
         mode. Show your actual internal reaction (annoyance, confusion,
         slow interest) rather than the sanitized version. End with what
         changed in your thinking, your behavior, or your sense of the topic.
@@ -164,8 +164,8 @@ export default function Content() {
         danger is obvious: do not repeat the Common App. If your Common App
         already tells the story of your grandmother, your immigration, your
         injury, or your hometown, pick a different register here. Use a
-        smaller unit — a single tradition, a single argument in your
-        family, a single phrase a coach uses, a single neighborhood — and
+        smaller unit - a single tradition, a single argument in your
+        family, a single phrase a coach uses, a single neighborhood - and
         drill in.
       </p>
       <p>
@@ -193,7 +193,7 @@ export default function Content() {
         you noticed from that vantage point.
       </p>
       <p>
-        The strongest versions of this essay are about a specific moment —
+        The strongest versions of this essay are about a specific moment -
         a first day at a new job, a camp where you were the only person
         from your background, a family gathering where you realized you
         had grown apart from the people in it, a classroom where your
@@ -205,7 +205,7 @@ export default function Content() {
       <p>
         Structure: place the reader in the moment. Name the gap. Describe
         what you saw or understood because of the gap. Close with what the
-        experience made possible — a habit, a skill, a sensitivity — not
+        experience made possible - a habit, a skill, a sensitivity - not
         what it cost you.
       </p>
 
@@ -246,7 +246,7 @@ export default function Content() {
         same topic, in the out-round that morning. He wasn't accusing anyone.
         He just wanted to know what debate was for. I did not have an answer
         that felt honest. For the rest of the season I kept running both
-        sides — that is how the activity works — but I started writing down,
+        sides - that is how the activity works - but I started writing down,
         in the margins of my flow, what I actually thought about each
         resolution before prep began. It didn't change my record. It changed
         what I thought I was doing when I argued. I still believe debate
@@ -256,8 +256,8 @@ export default function Content() {
         is a skill but not a conviction. I keep the notebook."
       </blockquote>
       <p>
-        That works because it stays inside one moment — a hallway, a novice,
-        a question — and treats the challenge as real. The belief is not
+        That works because it stays inside one moment - a hallway, a novice,
+        a question - and treats the challenge as real. The belief is not
         overturned. It is narrowed, qualified, and honestly held. The essay
         does not end with a lesson about open-mindedness. It ends with a
         notebook, which is a concrete artifact of changed behavior.
@@ -302,7 +302,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Picking two similar prompts.</strong> Writing both the
-          belief-challenged and different-perspective essays is redundant —
+          belief-challenged and different-perspective essays is redundant -
           they test near-identical cognitive traits. Pair prompts from
           different domains.
         </li>
@@ -322,7 +322,7 @@ export default function Content() {
       <h2>How the Optional Essays Coordinate With Why Duke</h2>
       <p>
         The Why Duke essay is an institutional-fit essay. It should talk
-        about Duke — specific programs, specific faculty, specific
+        about Duke - specific programs, specific faculty, specific
         structures (Focus clusters, Bass Connections, Program II, Trinity's
         curriculum shape). The optional essays are personal. They should
         not talk about Duke at all. If an optional essay mentions Duke
@@ -333,9 +333,9 @@ export default function Content() {
         Think of the full Duke supplement as a three- or four-part
         portrait. Why Duke handles fit. The optional essays handle
         character, range, and mind. Coordinate them on purpose. A
-        well-built Duke application tells admissions four things —
+        well-built Duke application tells admissions four things -
         academic shape (Common App), institutional fit (Why Duke),
-        intellectual life (optional one), personal life (optional two) —
+        intellectual life (optional one), personal life (optional two) -
         with minimal overlap. That is the application that gets defended
         in committee.
       </p>
@@ -355,8 +355,8 @@ export default function Content() {
           Why Duke essay guide
         </Link>
         . And for the broader principles that apply across every elite
-        supplement — how admissions actually reads, how specificity
-        compounds, how to coordinate essays across an application — read
+        supplement - how admissions actually reads, how specificity
+        compounds, how to coordinate essays across an application - read
         our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"

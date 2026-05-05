@@ -27,7 +27,7 @@ export default function Content() {
         The essay is short, specific, and required. It does not overlap with
         the Common App personal statement, the Why Princeton prompt, or the
         joy short takes. It has its own job, and that job is narrow: convince
-        Princeton that you belong in engineering at Princeton specifically —
+        Princeton that you belong in engineering at Princeton specifically -
         not engineering in general, not engineering at MIT, not a generic STEM
         program.
       </p>
@@ -59,7 +59,7 @@ export default function Content() {
       </p>
       <p>
         The prompt also has a structural asymmetry. It names three
-        deliverables — interest, experience, and Princeton fit — and the word
+        deliverables - interest, experience, and Princeton fit - and the word
         count forces you to compress all three. You cannot treat this as a
         four-paragraph essay. You have roughly three moves, maybe four, and
         every sentence has to carry weight.
@@ -91,7 +91,7 @@ export default function Content() {
         <li>
           <strong>Readiness for the humanities and social science load.</strong>{" "}
           Princeton engineers take seven courses outside engineering, math,
-          and science — a heavier non-technical requirement than most peer
+          and science - a heavier non-technical requirement than most peer
           BSE programs. A student who resents humanities classes will feel
           the weight of that requirement for four years.
         </li>
@@ -99,7 +99,7 @@ export default function Content() {
           <strong>Evidence of sustained technical engagement.</strong> One
           project described in specificity reads more convincingly than a
           list of programs attended. The prompt asks for "experiences in or
-          exposure to engineering" — exposure is fine, but the description
+          exposure to engineering" - exposure is fine, but the description
           of it needs to show what you actually did.
         </li>
         <li>
@@ -132,16 +132,16 @@ export default function Content() {
         move into a corporate engineering role, and treat undergrad as a
         credentialing step is not the target reader for Princeton BSE
         admissions. A student who wants to spend a year working closely with
-        a professor on a problem — and who would enjoy doing that more than
-        taking another course — is. The essay does not need to announce
+        a professor on a problem - and who would enjoy doing that more than
+        taking another course - is. The essay does not need to announce
         "I want to write a senior thesis" in those words. It needs to read
         like it came from a writer who would find that experience appealing
         rather than burdensome.
       </p>
       <p>
         One practical consequence: if the Princeton programs you name in the
-        essay are ones that lead naturally to thesis work — a research center,
-        a lab-connected department, a faculty specialty — the essay feels
+        essay are ones that lead naturally to thesis work - a research center,
+        a lab-connected department, a faculty specialty - the essay feels
         aligned. If the programs you name are purely pedagogical (course
         sequences, club activities), the essay underuses the Princeton fit
         move.
@@ -158,7 +158,7 @@ export default function Content() {
           <strong>Origin of engineering interest (about 50 words).</strong>{" "}
           One or two sentences establishing where the interest started. Avoid
           the childhood-Lego opening unless you can make it distinctive in a
-          single line. The goal here is compression — get to the present
+          single line. The goal here is compression - get to the present
           tense quickly.
         </li>
         <li>
@@ -166,25 +166,25 @@ export default function Content() {
           80 words).</strong> One project, one internship, one research
           experience, one self-taught build. Name what you did, what you
           learned, and what question the experience left open. The open
-          question is the bridge to Princeton — the thing you still want to
+          question is the bridge to Princeton - the thing you still want to
           work on.
         </li>
         <li>
           <strong>One Princeton department or resource and why it fits
           (about 100 words).</strong> This is where the essay earns its
-          keep. Pick one department — Chemical and Biological Engineering,
+          keep. Pick one department - Chemical and Biological Engineering,
           Computer Science, Mechanical and Aerospace Engineering, Operations
-          Research and Financial Engineering, or one of the others — and
+          Research and Financial Engineering, or one of the others - and
           name one specific feature that connects to your interest. The
           Andlinger Center for Energy and the Environment, the Center for
           Statistics and Machine Learning, the Keller Center for Innovation
-          in Engineering Education, the senior thesis requirement — any of
+          in Engineering Education, the senior thesis requirement - any of
           these is fair game if the connection is honest.
         </li>
         <li>
           <strong>A closing beat on Princeton's distinct engineering-in-a-
           liberal-arts context (about 20 words).</strong> One sentence that
-          acknowledges you understand what Princeton BSE actually is — not
+          acknowledges you understand what Princeton BSE actually is - not
           just a technical degree, but a technical degree inside a liberal
           arts university. This sentence signals informed fit without
           taking up space you cannot spare.
@@ -215,7 +215,7 @@ export default function Content() {
         Last summer I worked on a solar microgrid prototype at a community
         lab near my school. I was in charge of a tiny piece: logging load
         data every ten seconds and building a regression that predicted the
-        next hour of demand. The model was bad. The process was not — I
+        next hour of demand. The model was bad. The process was not - I
         learned how messy real-world energy data is, and how much of the
         interesting engineering happens at the boundary between a physical
         system and the statistics you use to describe it.
@@ -225,7 +225,7 @@ export default function Content() {
         Financial Engineering, combined with coursework through the Center
         for Statistics and Machine Learning, would let me take the kind of
         energy-systems problem I bumped into last summer and actually study
-        it — ideally through a senior thesis in that area.
+        it - ideally through a senior thesis in that area.
         <br />
         <br />
         I also want the other seven courses. I want the essays and the
@@ -234,7 +234,7 @@ export default function Content() {
       </blockquote>
       <p>
         That draft works because every move is doing its job. The opening is
-        compressed — one anecdote, one takeaway, forty-five words total. The
+        compressed - one anecdote, one takeaway, forty-five words total. The
         experience paragraph names a specific project and, more importantly,
         names a specific open question (the boundary between physical
         systems and statistical models). That open question is what the
@@ -301,8 +301,8 @@ export default function Content() {
         <li>
           <strong>Ending on a Princeton platitude.</strong> "I cannot
           wait to join the Princeton engineering community" adds
-          nothing. Close with something concrete — the thesis, the
-          department, the combination — rather than a closing line
+          nothing. Close with something concrete - the thesis, the
+          department, the combination - rather than a closing line
           lifted from the viewbook.
         </li>
       </ul>
@@ -317,7 +317,7 @@ export default function Content() {
       </p>
       <p>
         The Why Princeton essay is where you discuss the university as a
-        whole — residential colleges, the precept system, the broader
+        whole - residential colleges, the precept system, the broader
         intellectual culture, the undergraduate focus. The BSE essay is not
         the place to repeat any of that. If a Princeton feature belongs
         equally well in the Why Princeton essay, move it there, and use the
@@ -330,8 +330,8 @@ export default function Content() {
         that is specific and confident rather than whimsical.
       </p>
       <p>
-        The rest of your application — the activities list, the Common App
-        essay, the recommendations — will carry a lot of the engineering
+        The rest of your application - the activities list, the Common App
+        essay, the recommendations - will carry a lot of the engineering
         evidence. The BSE essay is not where you prove you have done
         engineering things; it is where you explain why Princeton's version
         of the degree is the right place to keep doing them. Trust the rest

@@ -35,7 +35,7 @@ export default function Content() {
         activities list. They can see the name of the club, the number of
         hours per week, the years of involvement, and the leadership title.
         They have the résumé bullet. What the activities list cannot show
-        them is what the activity did to you — the internal work, the change
+        them is what the activity did to you - the internal work, the change
         in how you think, the moment you remember at 11 p.m. on a Tuesday.
         This essay is asking for that. It is not asking what the activity
         is. It is asking what the activity did.
@@ -59,7 +59,7 @@ export default function Content() {
         <li>
           <strong>Specificity over title.</strong> The word "president" adds
           nothing a reader cannot see on the activities list. A specific
-          moment, a specific object, a specific sentence someone said — those
+          moment, a specific object, a specific sentence someone said - those
           are what communicate that the activity was real.
         </li>
         <li>
@@ -71,8 +71,8 @@ export default function Content() {
         <li>
           <strong>A moment, not an overview.</strong> Essays that describe
           "what I do in this activity" read as résumé prose in paragraph
-          form. Essays that describe a single Tuesday afternoon — one
-          conversation, one failure, one decision — read as lived
+          form. Essays that describe a single Tuesday afternoon - one
+          conversation, one failure, one decision - read as lived
           experience.
         </li>
         <li>
@@ -89,8 +89,8 @@ export default function Content() {
         </li>
         <li>
           <strong>Real interior language.</strong> Princeton readers notice
-          when applicants use interior verbs honestly — worried, realized,
-          doubted, wanted, avoided — rather than performance verbs —
+          when applicants use interior verbs honestly - worried, realized,
+          doubted, wanted, avoided - rather than performance verbs -
           spearheaded, championed, delivered. The interior voice is what this
           essay rewards.
         </li>
@@ -107,7 +107,7 @@ export default function Content() {
         The best topic is the activity with the richest specific-moment and
         the deepest internal change. Those two qualities rarely live in the
         most prestigious line of your résumé. They usually live in something
-        smaller and stranger — the thing you did on Sunday mornings, the
+        smaller and stranger - the thing you did on Sunday mornings, the
         weekly shift at a pantry, the four-year habit of walking your
         neighbor's dog, the family-business website you have maintained since
         you were twelve, the accompanying you did for a community choir.
@@ -127,7 +127,7 @@ export default function Content() {
         per class, has an activities culture that rewards depth. The
         Princeton Tigerlily, the Daily Princetonian, Business Today, the
         Princeton Debate Panel, the public service organizations that run
-        through every residential college — these are small enough that
+        through every residential college - these are small enough that
         genuine commitment is visible and posturing is not. The extracurricular
         essay is a sorting tool. Readers are using it to distinguish
         applicants who will actually show up on a Tuesday night from those
@@ -177,7 +177,7 @@ export default function Content() {
       <h2>What a Strong Princeton Extracurricular Essay Actually Looks Like</h2>
       <p>
         Here is the shape of a response that works. This is not a real
-        applicant's essay, and the activity is deliberately unflashy — no
+        applicant's essay, and the activity is deliberately unflashy - no
         title, no prestige, no quantifiable impact. Notice how the specific
         detail and interior honesty do all the work:
       </p>
@@ -191,13 +191,13 @@ export default function Content() {
         understood that the closet was not for me. I think about that
         morning when I notice how much of my life I measure by whether
         something is being observed. I now try, not always successfully, to
-        do more of the work that nobody is tracking — reading the book
+        do more of the work that nobody is tracking - reading the book
         nobody assigned, calling the grandmother who cannot use email,
         stacking the cans on the quiet side of the hallway."
       </blockquote>
       <p>
         That response works because it refuses every easy move. The activity
-        is not impressive on the list — it is a Saturday shift at a church
+        is not impressive on the list - it is a Saturday shift at a church
         pantry. There is no title. The writer does not claim to have
         transformed the program, built a nonprofit, or mentored anyone. What
         the essay does have is a specific morning (the man, the cans, the
@@ -258,7 +258,7 @@ export default function Content() {
         <li>
           <strong>Virtue signaling.</strong> Any sentence that announces
           you are compassionate, selfless, a leader, or a servant to others
-          is virtue signaling, not character. Describe behavior — what you
+          is virtue signaling, not character. Describe behavior - what you
           did, when, and what it cost. Let the reader draw the conclusion.
         </li>
         <li>
@@ -272,7 +272,7 @@ export default function Content() {
         <li>
           <strong>Missing the "meaningful to you" clause.</strong> The prompt
           says "particularly meaningful to you." Not important to the
-          community, not impactful on the world, not impressive to readers —
+          community, not impactful on the world, not impressive to readers -
           meaningful to you. An essay that explains why the activity
           matters to the community but never locates the personal meaning
           has answered a different question.
@@ -307,7 +307,7 @@ export default function Content() {
       </p>
       <p>
         The second rule is: the extracurricular essay should be the most
-        interior of the four. Why Princeton is forward-looking — how you
+        interior of the four. Why Princeton is forward-looking - how you
         will use Princeton's residential colleges, independent study
         structure, and civic tradition. The joy essay is light, specific,
         and fast. The short takes are quick character signals. This one is
@@ -320,8 +320,8 @@ export default function Content() {
         of the application. If your activities list is heavy on debate,
         Model UN, and student government, an extracurricular essay about
         another prestigious leadership role adds nothing new. An essay about
-        the quieter activity on your list — the food pantry, the tutoring,
-        the family business website, the summer shift at a camp — creates
+        the quieter activity on your list - the food pantry, the tutoring,
+        the family business website, the summer shift at a camp - creates
         dimensional contrast and shows the reader a different room. If your
         activities list is already quiet and domestic, the opposite applies:
         use the extracurricular essay to add depth to an activity the
@@ -344,8 +344,8 @@ export default function Content() {
           Why Princeton essay guide
         </Link>{" "}
         walks through how to use Princeton's residential colleges and civic
-        tradition without name-dropping. And for the 50-word joy prompt —
-        the hardest short answer in the Princeton supplement — read our{" "}
+        tradition without name-dropping. And for the 50-word joy prompt -
+        the hardest short answer in the Princeton supplement - read our{" "}
         <Link
           href="/blog/princeton-what-brings-you-joy-essay"
           className="text-oxblood hover:underline"

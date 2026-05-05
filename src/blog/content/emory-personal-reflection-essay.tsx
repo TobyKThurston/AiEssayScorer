@@ -43,7 +43,7 @@ export default function Content() {
       <p>
         Most applicants default to Option 1 (identity). Identity feels
         important, universal, safe. It is also the option that produces the
-        highest volume of flat essays in the Emory pool — not because identity
+        highest volume of flat essays in the Emory pool - not because identity
         is a bad topic, but because the default identity essay at 150 words
         reads like a demographic summary: "As a Korean American, I have always
         lived between two cultures..." Admissions reads hundreds of these.
@@ -60,13 +60,13 @@ export default function Content() {
         identity in a way nobody else could describe, Option 1 works.
       </p>
       <p>
-        Option 2 often wins because it has inherent storytelling structure —
+        Option 2 often wins because it has inherent storytelling structure -
         a decision has a before, a process, and an after. Built-in structure
         is a gift at 150 words; it keeps the paragraph from drifting abstract.
         Option 3 reads well for STEM-humanities pair-ups, because an
         intellectual experience at the seam between two fields gives
         admissions something they have not seen. Option 1 works best when
-        the identity is narrower than a demographic category — a family role,
+        the identity is narrower than a demographic category - a family role,
         a bilingual slip, a regional accent, a specific inheritance.
       </p>
 
@@ -141,7 +141,7 @@ export default function Content() {
         at home he would have said 'aunt.' I learned from him that language
         can be a costume you put on to be taken seriously, and also that this
         costume is exhausting. Now when I answer a call from a number I do
-        not recognize, I hear myself doing it — the slight clip, the more
+        not recognize, I hear myself doing it - the slight clip, the more
         formal 'hello.' I catch it and make myself slow down, because I
         decided at some point that I did not want to inherit the exhaustion.
         My identity is not a category. It is a set of small decisions I make
@@ -160,7 +160,7 @@ export default function Content() {
       <p>
         The process is the specific evidence. What did you read? Who did you
         talk to? What position did you hold first, and what changed it? Where
-        did you feel the doubt? The decision can be small — which research
+        did you feel the doubt? The decision can be small - which research
         project to pursue, whether to leave a leadership role, whether to tell
         a friend an unpopular truth. The size of the decision does not matter.
         The visibility of the process does.
@@ -174,7 +174,7 @@ export default function Content() {
       <blockquote>
         "In October I quit the debate team. I had been captain for a year. The
         decision took six weeks because I kept reopening the question. I made
-        a list — twice — of reasons to stay: loyalty to my coach, an unfinished
+        a list - twice - of reasons to stay: loyalty to my coach, an unfinished
         argument about municipal zoning, the fear of what the other seniors
         would think. Then a list of reasons to leave, which kept producing the
         same answer: I had stopped being curious. I was performing confidence
@@ -198,15 +198,15 @@ export default function Content() {
         Name the book. Name the class. Name the project. "A philosophy course
         I took" is worthless. "Professor Lin's third lecture on Rawls" is
         usable. "A novel" is worthless. "The last forty pages of Beloved" is
-        usable. The specificity signals that the experience was real — that
+        usable. The specificity signals that the experience was real - that
         you are not reverse-engineering an impressive-sounding intellectual
         history from a vague memory.
       </p>
       <p>
         The load-bearing clause is "influenced how you view the world." The
         essay must end somewhere different from where it began. If your worldview
-        did not change — if you encountered a book and came away with the same
-        beliefs, just more of them — pick another prompt. The worldview shift
+        did not change - if you encountered a book and came away with the same
+        beliefs, just more of them - pick another prompt. The worldview shift
         does not need to be dramatic. It needs to be specific and actually
         yours.
       </p>
@@ -215,7 +215,7 @@ export default function Content() {
         year, on a bus from Asheville. The story is narrated by a linguist who
         perceives time non-linearly after learning an alien language. I had
         been taught that language is a tool for describing thought. Chiang's
-        premise is that language can restructure thought — that grammar can
+        premise is that language can restructure thought - that grammar can
         be a kind of metaphysics. I did not buy every claim. But I started
         watching my own sentences differently. In Spanish class I noticed that
         future and past use the same subjunctive mood; I had known this for
@@ -234,20 +234,20 @@ export default function Content() {
       </p>
       <ol>
         <li>
-          <strong>Specific hook — the moment or identity detail (roughly 50
+          <strong>Specific hook - the moment or identity detail (roughly 50
           words).</strong> Drop the reader into scene. A concrete image, a
           piece of dialogue, an object, a date. No setup. No context paragraph.
           The scene IS the context.
         </li>
         <li>
-          <strong>Unpacking — what happened, what you did, what you thought
+          <strong>Unpacking - what happened, what you did, what you thought
           (roughly 70 words).</strong> The middle of the paragraph is where
           the reflection lives. Move between action and thought. Show the
           process of working something out, not the conclusion of having
           worked it out.
         </li>
         <li>
-          <strong>Implication — how it shapes you now (roughly 30 words).</strong>{" "}
+          <strong>Implication - how it shapes you now (roughly 30 words).</strong>{" "}
           One or two sentences at the end that connect the moment to a current
           behavior, a current belief, or a current question. Do not moralize.
           Do not summarize. End on a specific consequence, not a general
@@ -265,8 +265,8 @@ export default function Content() {
         </li>
         <li>
           <strong>Abstract reflection with no moment (any option).</strong>{" "}
-          Paragraphs that float above scene — "I have always valued hard work,
-          and I have learned through many experiences that..." — read as
+          Paragraphs that float above scene - "I have always valued hard work,
+          and I have learned through many experiences that..." - read as
           empty. At this length, abstraction is fatal.
         </li>
         <li>
@@ -309,7 +309,7 @@ export default function Content() {
       <h2>How This Essay Coordinates With the Emory Why Essay</h2>
       <p>
         Emory's two supplements are designed to play different roles. The Why
-        Emory essay is institutional fit — Oxford campus, Emory Scholars, QTM,
+        Emory essay is institutional fit - Oxford campus, Emory Scholars, QTM,
         Goizueta, the Center for Ethics, the Pre-Health infrastructure, the
         specific humanities and STEM faculty you want to work with. That essay
         is about Emory. The personal reflection is about you. The only overlap
@@ -319,7 +319,7 @@ export default function Content() {
         Before drafting the reflection, look at what your Why Emory essay is
         already saying. If Why Emory is built around your interest in QTM and
         computational social science, do not pick Option 3 and write about a
-        statistics book — you have already signaled the intellectual lane. Use
+        statistics book - you have already signaled the intellectual lane. Use
         the reflection to show a different dimension: a family identity, a
         difficult decision, a humanities encounter. If Why Emory leans humanities,
         flip the reflection toward science or toward a personal-life topic.

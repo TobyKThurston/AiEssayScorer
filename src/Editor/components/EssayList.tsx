@@ -128,7 +128,7 @@ function EmptyState({ onNew, creating }: { onNew: () => void; creating: boolean 
           A quiet room for your <em className="italic text-oxblood">best draft</em>.
         </h1>
         <p className="text-[17px] md:text-[18px] leading-[1.6] text-ink-2 max-w-[56ch] mb-8">
-          Ivy Admit scores your essay across content, structure, and voice — then points to the
+          Ivy Admit scores your essay across content, structure, and voice - then points to the
           exact sentences worth rewriting. Start a new draft or paste one in.
         </p>
         <button

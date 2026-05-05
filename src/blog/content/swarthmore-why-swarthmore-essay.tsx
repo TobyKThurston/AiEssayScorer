@@ -28,7 +28,7 @@ export default function Content() {
           capped at around eight students, culminating in oral and
           written exams graded by{" "}
           <em>external examiners</em> from other universities. This
-          model — borrowed from Oxford — is nearly unique in American
+          model - borrowed from Oxford - is nearly unique in American
           higher education.
         </li>
         <li>
@@ -54,14 +54,14 @@ export default function Content() {
       </p>
       <p>
         This does not mean performing suffering. It means naming
-        something you actually want to wrestle with — a seminar topic,
+        something you actually want to wrestle with - a seminar topic,
         a thesis question, a professor whose book you've read.
       </p>
 
       <h2>Example That Works</h2>
       <blockquote>
         "I want to take Honors seminars in political theory with an
-        external examiner reading my final work — not because I enjoy
+        external examiner reading my final work - not because I enjoy
         being graded by strangers, but because my current school has
         no mechanism for telling me whether my arguments hold up
         outside the room I wrote them in. I want the room to get

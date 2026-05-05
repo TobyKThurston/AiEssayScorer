@@ -33,7 +33,7 @@ export default function Content() {
         of quirky earnestness. Its mascot is an elephant named Jumbo
         after P.T. Barnum's favorite circus animal. Its admissions
         communications are written in a voice that is self-consciously
-        human — jokes, asides, frequent Oxford commas. Applicants who
+        human - jokes, asides, frequent Oxford commas. Applicants who
         write Tufts essays in a polished, generic Common App voice lose
         the essay before they start.
       </p>
@@ -51,7 +51,7 @@ export default function Content() {
       <h2>The Why Tufts Short Answer (100–150 Words)</h2>
       <p>
         The Why Tufts answer is one of the shortest Why essays at any
-        elite school — roughly the same size as Yale's 125-word Why,
+        elite school - roughly the same size as Yale's 125-word Why,
         though Tufts's admissions office is more forgiving about going
         slightly over. The compression is the whole test. At 150 words,
         you cannot list features. You cannot tell your origin story. You
@@ -93,8 +93,8 @@ export default function Content() {
           <strong>Residential life and community.</strong> Tufts's
           residential culture is smaller and more intentionally
           community-oriented than most R1 universities. If this is a fit
-          for you, naming it specifically — a particular program or
-          residence — does real work.
+          for you, naming it specifically - a particular program or
+          residence - does real work.
         </li>
       </ul>
 
@@ -110,18 +110,18 @@ export default function Content() {
         >
           Dartmouth "Let Your Life Speak" guide
         </Link>
-        . The underlying Quaker principle — that your life tells a truth
-        about you more reliably than your intentions do — applies equally
+        . The underlying Quaker principle - that your life tells a truth
+        about you more reliably than your intentions do - applies equally
         here.
       </p>
       <p>
         The difference at Tufts is tone. Where Dartmouth's readers value
         weight and sincerity in this essay, Tufts readers tolerate and
         sometimes reward a lighter register. A Tufts "Let your life
-        speak" essay can be specific and small — about the six years you
+        speak" essay can be specific and small - about the six years you
         have been making handmade cards for everyone's birthday, or
         about why you organize your bookshelf by color rather than
-        author — if the essay earns its claim.
+        author - if the essay earns its claim.
       </p>
 
       <h2>The "Tell Us a Story" Essay</h2>
@@ -137,7 +137,7 @@ export default function Content() {
         story describes something that happened to you, or that you did,
         and lets the reader infer the kind of person you are. The
         strongest Tufts story essays are short narratives with
-        beginnings, middles, and ends — not reflections. They often
+        beginnings, middles, and ends - not reflections. They often
         focus on a single day, a single conversation, a single
         unexpected moment.
       </p>
@@ -219,7 +219,7 @@ export default function Content() {
         research paper last spring and realized she is at Tufts, which
         is the closest thing to a direct answer to 'what are you doing
         next' that I have in my life. I also want to live somewhere I
-        can keep walking places — Medford's scale is closer to how I
+        can keep walking places - Medford's scale is closer to how I
         already move through the world than the other schools on my
         list."
       </blockquote>
@@ -246,7 +246,7 @@ export default function Content() {
         <li>
           <strong>Over-polishing.</strong> If the essay sounds like a
           final magazine draft, the voice is usually wrong. Tufts
-          tolerates — even rewards — sentences that sound like the
+          tolerates - even rewards - sentences that sound like the
           way an actual person writes when they are thinking.
         </li>
         <li>

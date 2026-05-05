@@ -21,7 +21,7 @@ export default function Content() {
         simple. It is not.
       </p>
       <p>
-        At 150 words — roughly seven to ten sentences — you have almost no
+        At 150 words - roughly seven to ten sentences - you have almost no
         room to recover from a wrong move. The prompt contains two explicit
         demands (interests plus experiences, and the impact frame) and one
         implicit demand (specific fluency with Penn Nursing as an
@@ -45,7 +45,7 @@ export default function Content() {
         arts college. It does not work here. If your essay treats Penn Nursing
         as a place where you will learn to be a nurse and then go be a nurse,
         you have answered half the prompt. Penn Nursing wants evidence that
-        you understand the leverage the degree provides — that a BSN from Penn
+        you understand the leverage the degree provides - that a BSN from Penn
         is a credential for clinical practice, yes, but also a platform for
         research, global health work, health-systems leadership, and policy
         change. "Impact" in this essay means impact at that scale, not just
@@ -54,8 +54,8 @@ export default function Content() {
       <p>
         That reframing changes what belongs in the 150 words. A story about
         why you love caring for people is not enough. A story that also
-        reveals a structural observation — about disparities, about how care
-        is delivered, about why your patient is embedded in a larger system —
+        reveals a structural observation - about disparities, about how care
+        is delivered, about why your patient is embedded in a larger system -
         starts to answer the prompt Penn Nursing is actually asking.
       </p>
 
@@ -96,7 +96,7 @@ export default function Content() {
           Pennsylvania, Children's Hospital of Philadelphia, and Penn
           Presbyterian Medical Center. Those are demanding environments. The
           essay should signal that you understand what you are signing up for
-          — the hours, the emotional load, the pace. Romanticizing the role
+          - the hours, the emotional load, the pace. Romanticizing the role
           reads as naive. Naming the difficulty reads as serious.
         </li>
         <li>
@@ -105,7 +105,7 @@ export default function Content() {
           profession with its own epistemology, its own ethics, and its own
           clinical authority. Applicants who write the essay as if nursing is
           a consolation prize for students who could not get into medical
-          school — or worse, a stepping stone to medical school — get filtered
+          school - or worse, a stepping stone to medical school - get filtered
           out. Penn Nursing admits students who have chosen the profession on
           its own terms.
         </li>
@@ -114,8 +114,8 @@ export default function Content() {
           why the School of Nursing. "The School of Nursing" here means Penn
           Nursing, not nursing programs in general. Generic nursing appeals
           do not answer the question. A single, well-chosen Penn Nursing
-          feature — Hillman, NHCM, the Center for Global Women's Health, the
-          One University Policy — is what turns a generic essay into a Penn
+          feature - Hillman, NHCM, the Center for Global Women's Health, the
+          One University Policy - is what turns a generic essay into a Penn
           essay.
         </li>
       </ul>
@@ -134,7 +134,7 @@ export default function Content() {
           the reader can see it. The job of this move is to establish that
           your interest in nursing is grounded in something real, not in an
           abstract pull toward "helping people." The failure mode is
-          genericity — a paragraph about family illness that could have been
+          genericity - a paragraph about family illness that could have been
           written by any applicant in the pool, with no concrete detail that
           makes it yours.
         </li>
@@ -146,7 +146,7 @@ export default function Content() {
           the 4+1 sub-matriculation to the MSN. Pick what actually connects
           to the experience in move one. The job is to show that you have
           done the research and that your fit is mechanical, not vibes-based.
-          The failure mode is a name-drop with no connective tissue — listing
+          The failure mode is a name-drop with no connective tissue - listing
           three Penn Nursing features in a row without explaining why any of
           them matter to you.
         </li>
@@ -156,13 +156,13 @@ export default function Content() {
           want to work at. This is where the essay answers the second half of
           the prompt. The job is to make the impact claim specific enough to
           be believable and modest enough to be credible. The failure mode is
-          abstraction — "I want to make a difference in health care" — which
+          abstraction - "I want to make a difference in health care" - which
           evaporates on contact with admissions readers.
         </li>
       </ol>
       <p>
         60 plus 60 plus 30 is 150 words, the floor of the word count. If you
-        go to 180 or 200, expand move two — Penn-specific material is where
+        go to 180 or 200, expand move two - Penn-specific material is where
         the essay earns the length. Do not expand move one. A longer origin
         story is not a better origin story.
       </p>
@@ -192,7 +192,7 @@ export default function Content() {
       </blockquote>
       <p>
         That example works because every sentence is doing a job. The opening
-        scene is specific — a name, a place, a concrete detail (forty
+        scene is specific - a name, a place, a concrete detail (forty
         minutes, wet sheets) that no other applicant can reproduce. The
         middle turn is the one most applicants miss: the writer shifts from
         individual care to system observation inside the same paragraph. The
@@ -240,8 +240,8 @@ export default function Content() {
           <strong>No named Penn Nursing feature.</strong> An essay that could
           have been written about any nursing school is an essay Penn Nursing
           does not need to admit. At least one specific Penn Nursing feature
-          — Hillman, NHCM, a specific rotation site, the Center for Global
-          Women's Health, the One University Policy, the 4+1 — has to appear
+          - Hillman, NHCM, a specific rotation site, the Center for Global
+          Women's Health, the One University Policy, the 4+1 - has to appear
           and has to connect to something earlier in the essay.
         </li>
         <li>
@@ -252,7 +252,7 @@ export default function Content() {
           inside the Wharton BS is a separate thing. If you want the business
           side of health care, NHCM is the correct reference. If you do not
           actually want to be a nurse, NHCM is not the workaround you think
-          it is — NHCM students are nursing students who also take Wharton
+          it is - NHCM students are nursing students who also take Wharton
           coursework, not Wharton students who take nursing electives.
         </li>
         <li>
@@ -265,7 +265,7 @@ export default function Content() {
           <strong>Treating nursing as a stepping stone.</strong> Related to
           the pre-med failure mode but broader. Some applicants frame nursing
           as a path to hospital administration, public-health leadership, or
-          policy work — and then skip past the clinical identity in the
+          policy work - and then skip past the clinical identity in the
           process. Penn Nursing wants applicants who see the clinical work as
           the source of the expertise, not as an obstacle on the way to
           something else. Even if you eventually want to lead a health system,
@@ -295,7 +295,7 @@ export default function Content() {
       </p>
       <p>
         The Penn "why" essay is your <strong>institutional fit</strong> essay
-        — why Penn's intellectual community, its One University Policy, its
+        - why Penn's intellectual community, its One University Policy, its
         specific courses and labs, match the kind of learner you are. If your
         Penn "why" essay turns into a second nursing essay, you have wasted
         one of your three prompts. Some Penn Nursing material can appear

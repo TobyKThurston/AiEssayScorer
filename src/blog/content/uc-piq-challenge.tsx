@@ -82,7 +82,7 @@ export default function Content() {
           be resilient") is not a step. Setting up a weekly call with a
           counselor, building a study schedule around chemotherapy
           appointments, teaching yourself calculus after missing two
-          months of school — those are steps.
+          months of school - those are steps.
         </li>
         <li>
           <strong>The academic-impact link, stated explicitly.</strong>{" "}
@@ -105,7 +105,7 @@ export default function Content() {
         </li>
         <li>
           <strong>No false redemption arc.</strong> If the challenge is
-          ongoing — and most significant challenges are — do not pretend
+          ongoing - and most significant challenges are - do not pretend
           you have conquered it. Honest partial recovery reads as
           mature. "And now I am stronger than ever" reads as a
           performance.
@@ -172,7 +172,7 @@ export default function Content() {
           literally asks for. Name actions. First I did X. When that did
           not work, I did Y. I set up Z with my counselor. I started
           doing A on Sunday nights. Use verbs. Use sequence. The failure
-          mode is abstraction — describing your emotional journey
+          mode is abstraction - describing your emotional journey
           instead of your behavior. The reader is checking a box called
           "evidence of agency." Make that box easy to check.
         </li>
@@ -193,7 +193,7 @@ export default function Content() {
           (roughly 40 words).</strong> One short reflection. Not a
           triumphant conclusion. Not "and this is why I am ready for
           UCLA." Something honest about the skill, the habit, or the
-          perspective you now carry. The failure mode is bloat — an
+          perspective you now carry. The failure mode is bloat - an
           overwritten final paragraph that tries to make meaning the
           rest of the essay already made.
         </li>
@@ -215,9 +215,9 @@ export default function Content() {
         "In the summer before tenth grade, my father was diagnosed with
         early-onset Parkinson's. My mother had to pick up a second
         shift, and because I have two younger siblings, the morning
-        routine — getting them to school, handling my father's
+        routine - getting them to school, handling my father's
         medication schedule, managing the calls from his doctors in
-        Spanish — became mine. I was fourteen. The first two steps I
+        Spanish - became mine. I was fourteen. The first two steps I
         tried did not work. I tried to keep my full course load and my
         full extracurricular schedule and just sleep less; I fell
         asleep in Algebra II and got my first C. I tried doing
@@ -369,7 +369,7 @@ export default function Content() {
         >
           topics to avoid in college essays
         </Link>{" "}
-        — a few of the most common PIQ #5 subjects land on that list.
+        - a few of the most common PIQ #5 subjects land on that list.
       </p>
     </>
   );

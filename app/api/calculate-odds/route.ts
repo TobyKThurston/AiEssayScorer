@@ -11,7 +11,7 @@ const systemPrompt = `You are a senior college admissions consultant who has rea
 
 Inputs you will receive:
 - Applicant profile (test scores, GPA scale + value, location, demographics, hooks, intended major, essay self-rating)
-- Activities list with self-rated tiers 1-4 (1 = national/international recognition; 4 = participation-level)
+- Activities list with self-rated tiers 1-4 (1 = national/international recognition; 4 = participation-level), plus role, hours/week, years involved, and a short description of what they actually did. Use the description to judge depth and authenticity, not just the tier.
 - A target school with its known selectivity tier
 
 Calibration (very important):
@@ -128,7 +128,7 @@ export async function POST(request: Request) {
 
     const scored: SchoolOdds[] = await Promise.all(
       targetSchools.map(async (school) => {
-        const descriptor = `${school.name} (${school.shortName}) — ${school.type}, ${school.category}, located in ${school.location}. Known for: ${school.knownFor}.`;
+        const descriptor = `${school.name} (${school.shortName}) - ${school.type}, ${school.category}, located in ${school.location}. Known for: ${school.knownFor}.`;
         const r = await scoreOneSchool(profile, descriptor);
         return {
           slug: school.slug,

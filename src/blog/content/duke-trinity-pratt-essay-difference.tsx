@@ -10,12 +10,12 @@ export default function Content() {
       </p>
       <ul>
         <li>
-          <strong>Trinity College of Arts &amp; Sciences</strong> — the
+          <strong>Trinity College of Arts &amp; Sciences</strong> - the
           larger school, covering humanities, social sciences, and
           natural sciences.
         </li>
         <li>
-          <strong>Pratt School of Engineering</strong> — the engineering
+          <strong>Pratt School of Engineering</strong> - the engineering
           school.
         </li>
       </ul>
@@ -29,7 +29,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Pratt applicants</strong> write about why engineering
-          — and why Pratt specifically.
+          - and why Pratt specifically.
         </li>
       </ul>
       <p>
@@ -51,7 +51,7 @@ export default function Content() {
         <li>
           <strong>Applicants are read by the school they applied
           to.</strong> A Trinity essay that reads like it should have
-          been a Pratt essay — or vice versa — signals the applicant
+          been a Pratt essay - or vice versa - signals the applicant
           doesn't understand the structure they're applying into.
         </li>
         <li>
@@ -66,7 +66,7 @@ export default function Content() {
       <h2>What Trinity Readers Want</h2>
       <p>
         Trinity's prompt is about an academic interest. Not a career
-        plan. Not a major. An interest — which means something narrower
+        plan. Not a major. An interest - which means something narrower
         and more specific than a discipline.
       </p>
       <p>
@@ -80,7 +80,7 @@ export default function Content() {
         <li>
           <strong>Interdisciplinary Certificates.</strong> Duke offers
           certificates like Global Health, Policy Journalism and Media
-          Studies, Documentary Studies, and Ethics — name one if it
+          Studies, Documentary Studies, and Ethics - name one if it
           genuinely fits.
         </li>
         <li>
@@ -92,7 +92,7 @@ export default function Content() {
         <li>
           <strong>Program II.</strong> Duke's design-your-own-major
           pathway. Only mention this if you have a real, specific
-          proposal — otherwise it reads as a dodge.
+          proposal - otherwise it reads as a dodge.
         </li>
         <li>
           <strong>Specific faculty or courses.</strong> A named professor
@@ -105,7 +105,7 @@ export default function Content() {
         "I want to study why some languages encode the color blue as a
         shade of green. In high school Spanish I noticed my teacher
         correcting my 'verde' for a color I'd have called 'blue' in
-        English — and it turned into a yearlong side project on basic
+        English - and it turned into a yearlong side project on basic
         color term acquisition. At Duke I'd take LING 204 (Sociolinguistics)
         and try to get into Prof. Edna Andrews's FOCUS cluster in
         Cognition &amp; the Brain to pressure-test whether color
@@ -129,7 +129,7 @@ export default function Content() {
         The "why engineering" piece is where generic applicants lose
         ground. "I love problem-solving" hits Pratt readers constantly
         and means nothing. They want the <strong>specific kind of
-        problem</strong> you gravitate toward — hardware, infrastructure,
+        problem</strong> you gravitate toward - hardware, infrastructure,
         biomedical, computational, energy, materials.
       </p>
 
@@ -142,7 +142,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Bass Connections for engineers.</strong> Pratt
-          students join Bass Connections teams — specific project-based
+          students join Bass Connections teams - specific project-based
           research across disciplines. Name a team.
         </li>
         <li>
@@ -172,7 +172,7 @@ export default function Content() {
           <strong>Treating Trinity as "I haven't decided my
           major" yet.</strong> Trinity doesn't require a major
           declaration. But the essay is not a place to signal
-          indecision — it's a place to show one specific interest deeply.
+          indecision - it's a place to show one specific interest deeply.
         </li>
         <li>
           <strong>Mentioning Duke basketball, Cameron Crazies, or the
@@ -200,8 +200,8 @@ export default function Content() {
       </p>
       <p>
         If yes, it's not specific enough. Add at least two Duke-only
-        details — a course number, a program name, a professor, a lab,
-        a project team — until the essay would fail if you swapped in
+        details - a course number, a program name, a professor, a lab,
+        a project team - until the essay would fail if you swapped in
         another school.
       </p>
 

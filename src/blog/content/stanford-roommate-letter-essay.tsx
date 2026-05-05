@@ -9,7 +9,7 @@ export default function Content() {
         <em>
           "Virtually all Stanford students live on campus. Write a note to your
           future roommate that reveals something about you or that will help
-          your roommate — and us — know you better."
+          your roommate - and us - know you better."
         </em>{" "}
         The word limit is 250 words.
       </p>
@@ -23,7 +23,7 @@ export default function Content() {
         the Ivy-plus tier.
       </p>
       <p>
-        At 250 words — roughly 12 to 18 sentences — you have enough space to
+        At 250 words - roughly 12 to 18 sentences - you have enough space to
         sound like a human being and not enough space to hide. The constraint
         is the point. Stanford does not want a polished introduction. They want
         a note. Those two things are not the same, and almost every failure
@@ -45,14 +45,14 @@ export default function Content() {
         Common App personal statement. They choose vocabulary that sounds
         impressive. They emphasize achievements. They end with language about
         contributing to Stanford's community. Admissions readers see this
-        immediately — the voice is wrong, the addressee is wrong, and the
+        immediately - the voice is wrong, the addressee is wrong, and the
         essay becomes another resume paragraph in a different costume.
       </p>
       <p>
         The fictional-addressee convention is what creates the specific voice
         this essay needs. When you actually imagine you are writing to a real
-        future roommate — someone your age, someone who is going to see you in
-        the morning, someone who does not care about your extracurriculars —
+        future roommate - someone your age, someone who is going to see you in
+        the morning, someone who does not care about your extracurriculars -
         the prose softens, the vocabulary simplifies, the jokes appear, and
         the essay starts to sound like a person. That shift is the entire
         assignment. The admissions committee reads the note over the
@@ -113,7 +113,7 @@ export default function Content() {
         Consider the same sentence written two ways. Admissions voice: "I have
         a tendency to stay awake late into the evening reading literature, and
         I would like to inform you that I may occasionally keep a lamp
-        illuminated past midnight." Roommate voice: "Fair warning — I read in
+        illuminated past midnight." Roommate voice: "Fair warning - I read in
         bed until 1 a.m. most nights, and I promise to use the tiny booklight
         I got for exactly this reason." The content is identical. The voice
         is different. The second one sounds like a human writing to another
@@ -123,16 +123,16 @@ export default function Content() {
         The specific register markers that make the roommate voice work are
         worth naming. Contractions (it's, I'm, don't) do most of the lifting.
         Parenthetical asides show a mind in motion rather than on display.
-        Minor self-deprecation — admitting you are a little bit messy, a
+        Minor self-deprecation - admitting you are a little bit messy, a
         little bit loud in the morning, a little bit obsessed with some
-        unimportant thing — communicates groundedness without fishing for
+        unimportant thing - communicates groundedness without fishing for
         reassurance. Small physical details (the specific booklight, the
         specific tea you drink, the specific song stuck in your head) ground
         the essay in a real body, not an application persona. And a
-        willingness to share a weird preference — that you genuinely like the
+        willingness to share a weird preference - that you genuinely like the
         smell of old books, or that you keep a running list of good
         sandwiches, or that you only listen to one album on repeat for
-        weeks — is what makes you memorable.
+        weeks - is what makes you memorable.
       </p>
       <p>
         There is a simple prose-level rule here: if a sentence could have
@@ -173,7 +173,7 @@ export default function Content() {
         <li>
           <strong>One or two quirks that reveal personality.</strong> A weird
           collection, a daily ritual, a food obsession, a strong opinion
-          about something minor — these are the lines your reader will
+          about something minor - these are the lines your reader will
           remember. Not a resume quirk ("I taught myself Mandarin") but a
           domestic one ("I have opinions about the correct way to make
           oatmeal"). Specificity is the whole game. "I like coffee" is
@@ -201,7 +201,7 @@ export default function Content() {
       <p>
         <strong>Opening line (one sentence, maybe two).</strong> The job of
         the opening is to establish voice immediately. Do not use "Hi
-        roommate!" or "Hey future roomie!" — both signal that you are
+        roommate!" or "Hey future roomie!" - both signal that you are
         performing the prompt rather than writing inside it. A stronger
         opening drops the reader into a detail or a running thought. For
         example: "Before you unpack, there are two things you should know
@@ -214,18 +214,18 @@ export default function Content() {
         <strong>Body (roughly 200 words).</strong> This is where the logistics
         and the personality live. Move quickly. Cover sleep, one or two
         shared-space preferences, one or two personal quirks, and something
-        about how you relate to people — but do not treat these as a
+        about how you relate to people - but do not treat these as a
         checklist. Weave them. A sentence about how you study quietly past
         midnight can lead into a sentence about the podcast you listen to
         when you can't sleep, which can lead into a line about how you make
-        friends. The failure mode of the body is inventory prose — a
+        friends. The failure mode of the body is inventory prose - a
         numbered list of facts in paragraph form. The body should read like
         a person thinking on paper, not a form being filled out.
       </p>
       <p>
         <strong>Closing line (one sentence).</strong> The closing invites
         interaction without forcing warmth. Avoid "I can't wait to meet you"
-        — it is the most common closing in the applicant pool and adds
+        - it is the most common closing in the applicant pool and adds
         nothing. A stronger close points forward to something concrete: a
         question you will actually ask them, a dish you will make them the
         first week, a thing you want to know about them. The failure mode of
@@ -241,16 +241,16 @@ export default function Content() {
       </p>
       <blockquote>
         "Two things you should know before move-in. The first is that I make
-        playlists for moods I cannot quite name — one for the specific kind
+        playlists for moods I cannot quite name - one for the specific kind
         of tired where you've been in the library too long, one for when it's
         raining but not hard, one called 'okay fine I'll do the reading.' If
         you ever want one, I'll make it. The second is that I read in bed,
-        usually until 1 a.m., and usually something embarrassing — I am
+        usually until 1 a.m., and usually something embarrassing - I am
         currently two hundred pages into a book about the history of the
         canal system in northern England, which I cannot defend. I have a
         clip-on booklight and a standing agreement with myself to be quiet.
-        I am messy about books — they will live in small towers on my side
-        of the floor — but I am weirdly obsessive about the kitchen and will
+        I am messy about books - they will live in small towers on my side
+        of the floor - but I am weirdly obsessive about the kitchen and will
         almost certainly wash your dishes without being asked, which you can
         stop me from doing by just doing them yourself. I run cold, so the
         window will probably be closed unless you open it. I'm an introvert
@@ -331,7 +331,7 @@ export default function Content() {
         out loud to a friend who does not know it is for college. If they can
         tell it is a college essay within the first two sentences, rewrite.
         If they laugh once, ask a follow-up question, or say "yeah, that
-        sounds like you" — you are on the right track. If they would
+        sounds like you" - you are on the right track. If they would
         plausibly send a letter like this to someone they were about to live
         with, you have written the essay Stanford is actually asking for.
       </p>
@@ -339,7 +339,7 @@ export default function Content() {
         The reverse test is also useful. Imagine your future roommate reading
         this and writing back. Would they have anything to respond to?
         Generic letters produce nothing to reply to. Specific letters prompt
-        real replies — about the book, the playlist, the cold room, the
+        real replies - about the book, the playlist, the cold room, the
         dishes. If the essay invites a response, it is doing its job.
       </p>
 
@@ -349,7 +349,7 @@ export default function Content() {
         and Why" is the values essay. The Stanford short responses include
         intellectual vitality, meaningful activity, and the note to your
         future roommate. These essays should not overlap in content, in
-        topic, or — especially — in voice. The roommate letter is the one
+        topic, or - especially - in voice. The roommate letter is the one
         place where a casual register is not only allowed but required.
       </p>
       <p>
@@ -357,7 +357,7 @@ export default function Content() {
         already saying about you. If "What Matters to You" is about a
         relationship with your grandmother, the roommate letter should not
         also be about family. If your activities list is dominated by music,
-        the letter should reveal a different side — maybe the domestic side,
+        the letter should reveal a different side - maybe the domestic side,
         maybe the social side, maybe an unrelated obsession. Coordinate
         before drafting. The roommate letter's job is to show admissions
         something they would not otherwise see. If it echoes the rest of the
@@ -380,8 +380,8 @@ export default function Content() {
         </Link>{" "}
         walks through how to find a topic that is specific enough to work at
         250 words. And for the broader principles that apply across every
-        Ivy and elite supplement — voice, specificity, how admissions
-        actually reads — read our{" "}
+        Ivy and elite supplement - voice, specificity, how admissions
+        actually reads - read our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
           className="text-oxblood hover:underline"

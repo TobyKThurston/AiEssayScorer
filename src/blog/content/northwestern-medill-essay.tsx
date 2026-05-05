@@ -6,7 +6,7 @@ export default function Content() {
       <h2>The Medill Prompt and Its Framing</h2>
       <p>
         Northwestern's Medill School of Journalism, Media, Integrated Marketing
-        Communications — founded in 1921 — asks applicants to write a
+        Communications - founded in 1921 - asks applicants to write a
         supplement that sits on top of the standard Northwestern Why essay.
         The exact wording rotates. The underlying question does not. Medill
         wants to know three things: why journalism or IMC, why Medill
@@ -27,7 +27,7 @@ export default function Content() {
       <p>
         Most supplemental essays reward aspiration. Medill rewards practice.
         The school is looking for evidence that you are already a journalist
-        or communicator — not that you want to become one after four years of
+        or communicator - not that you want to become one after four years of
         instruction. The essays that land are written by applicants who have
         reported, published, produced, or campaigned. The essays that do not
         land are written by applicants who love reading the news and believe
@@ -47,8 +47,8 @@ export default function Content() {
         video, run a social-impact campaign, or written for their school
         paper will find this essay hard to write convincingly. That is not a
         coincidence. The prompt is screening for practice. If you have no
-        practice yet, the honest play is to start now — this spring, this
-        summer — rather than paper over the gap with ambitious language.
+        practice yet, the honest play is to start now - this spring, this
+        summer - rather than paper over the gap with ambitious language.
       </p>
 
       <h2>What Medill Admissions Is Actually Screening For</h2>
@@ -89,7 +89,7 @@ export default function Content() {
           <strong>Readiness for Chicago and the quarter system.</strong>{" "}
           Northwestern runs on ten-week quarters. The Journalism Residency
           depends on that rhythm. The pace is faster than a semester. Essays
-          that acknowledge this — even briefly — read as informed.
+          that acknowledge this - even briefly - read as informed.
         </li>
         <li>
           <strong>A reason Medill specifically, not Northwestern
@@ -113,7 +113,7 @@ export default function Content() {
         students to newsrooms in DC, New York, Chicago, and other cities for
         an entire quarter, working as reporters on deadline. Knight Lab, a
         tech-journalism innovation hub, is where students build the tools
-        journalism uses — interactive timelines, data visualizations, story
+        journalism uses - interactive timelines, data visualizations, story
         formats that did not exist last year. Medill in DC is a common
         destination for students who want political or policy reporting at
         scale.
@@ -136,7 +136,7 @@ export default function Content() {
         If you do not know which side of this line you fall on, you are not
         ready to write the essay. Figure that out first. An applicant who
         writes about wanting to cover city council meetings and also launch
-        ad campaigns for a skincare brand is not demonstrating range — they
+        ad campaigns for a skincare brand is not demonstrating range - they
         are demonstrating unfamiliarity with what Medill actually offers.
       </p>
 
@@ -151,7 +151,7 @@ export default function Content() {
           <strong>Origin of your practice, anchored to a specific piece
           you've made (about 150 words).</strong> Name the story, podcast
           episode, video, newsletter, or campaign. Give it a title or a
-          subject. Describe what you had to do to make it — the sources you
+          subject. Describe what you had to do to make it - the sources you
           called, the footage you cut, the analytics you ran, the edit you
           fought with your adviser over. This is your evidence. Without it,
           the rest of the essay floats.
@@ -175,12 +175,12 @@ export default function Content() {
           in DC matters for political reporters. Medill in Qatar matters for
           international reporters. Spiegel Research Center matters for IMC
           applicants who want data fluency. Name the resources correctly,
-          and show why each one fits your project — not why it exists.
+          and show why each one fits your project - not why it exists.
         </li>
         <li>
           <strong>What you would bring to Medill (about 50 words).</strong>{" "}
           Short. One or two sentences. Your existing practice, your beat,
-          your publication, your obsession — offered back to the school as
+          your publication, your obsession - offered back to the school as
           something you will keep doing, not something you are about to
           start. Avoid the language of contribution. Describe the work.
         </li>
@@ -189,7 +189,7 @@ export default function Content() {
       <h2>What a Strong Medill Essay Actually Looks Like</h2>
       <p>
         Here is the shape of a Medill essay that works. This is a fictional
-        applicant. The point is the texture — specific pieces, specific
+        applicant. The point is the texture - specific pieces, specific
         beats, specific resources, used together.
       </p>
       <blockquote>
@@ -207,7 +207,7 @@ export default function Content() {
         subscribers, most of them parents, and I publish every other Tuesday.
       </blockquote>
       <blockquote>
-        I want to cover local infrastructure — the quiet systems that decide
+        I want to cover local infrastructure - the quiet systems that decide
         whose kids get to school, whose streets flood, whose neighborhoods
         get broadband. The stories are boring until they are not, and by
         then they are usually too late. My beat is the two years before it
@@ -217,8 +217,8 @@ export default function Content() {
         This is why Medill. The Teaching Newsroom would put me on the desk
         in my first quarter, filing on Evanston and Chicago neighborhoods
         where the same infrastructure questions play out at a scale I have
-        not worked at. The Journalism Residency — the quarter-long
-        placement — is the part of the Medill degree I cannot get anywhere
+        not worked at. The Journalism Residency - the quarter-long
+        placement - is the part of the Medill degree I cannot get anywhere
         else; a placement in DC through Medill in DC would let me work
         alongside reporters covering the federal infrastructure
         appropriations that my district depends on, and a Chicago
@@ -236,8 +236,8 @@ export default function Content() {
       <p>
         That essay works because every sentence commits. The publication has
         a name. The origin story is a specific incident with a specific
-        source. The beat is narrow enough to be actionable — local
-        infrastructure, two years before the headline — and wide enough to
+        source. The beat is narrow enough to be actionable - local
+        infrastructure, two years before the headline - and wide enough to
         sustain four years of coursework. Three Medill resources appear: the
         Teaching Newsroom, the Journalism Residency (with Medill in DC and a
         Chicago placement both named), and Knight Lab. Each one is tied to
@@ -290,7 +290,7 @@ export default function Content() {
           <strong>Treating Medill as Northwestern generic.</strong> The
           quarter system, the reporting-first culture, the way Medill
           students typically pair Medill with a Weinberg or McCormick
-          double major or minor — these are Medill-specific features, not
+          double major or minor - these are Medill-specific features, not
           general Northwestern ones. Essays that treat the two
           interchangeably miss the school's actual shape.
         </li>
@@ -315,7 +315,7 @@ export default function Content() {
         Northwestern applicants also write a standard Why Northwestern
         essay. These two prompts are read together and should not duplicate
         each other. The Why Northwestern essay is the place for the broader
-        fit — the quarter system's rhythm, the Chicago-adjacent location,
+        fit - the quarter system's rhythm, the Chicago-adjacent location,
         the culture of students who pair a humanities or STEM major with a
         professional school, the academic combinations Medill students
         typically build with Weinberg or McCormick, student publications,
@@ -351,9 +351,9 @@ export default function Content() {
           Why Northwestern guide
         </Link>{" "}
         walks through how to divide content between the two essays. And
-        for the general logic behind every school-specific supplement —
+        for the general logic behind every school-specific supplement -
         how to name resources, tie them to practice, and avoid the generic
-        trap — read our{" "}
+        trap - read our{" "}
         <Link
           href="/blog/why-this-college-essay"
           className="text-oxblood hover:underline"

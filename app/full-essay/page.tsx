@@ -2,10 +2,10 @@ import FullEssayApp from "@/FullEssay/App";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "College Essay Example — Real Ivy League Acceptance",
+  title: "College Essay Example - Real Ivy League Acceptance",
   description: "Read a successful college application essay example. Learn from real essays that got students into Harvard, Yale, Princeton, and other top universities.",
   openGraph: {
-    title: "College Essay Example — Real Ivy League Acceptance",
+    title: "College Essay Example - Real Ivy League Acceptance",
     description: "Read a successful college application essay example. Learn from real essays that got students into Harvard, Yale, Princeton, and other top universities.",
     url: "/full-essay",
     type: "website",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "College Essay Example — Real Ivy League Acceptance",
+    title: "College Essay Example - Real Ivy League Acceptance",
     description: "Read a successful college application essay example that got students into top universities.",
     images: ["/og-image.png"],
   },

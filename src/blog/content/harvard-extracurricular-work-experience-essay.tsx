@@ -18,7 +18,7 @@ export default function Content() {
       </p>
       <p>
         One hundred and fifty words is a brutal constraint. It is roughly
-        eight to twelve sentences — about the length of a long text message.
+        eight to twelve sentences - about the length of a long text message.
         There is no room for an introduction, a thesis, a conclusion, or any
         of the throat-clearing that larger word counts forgive. Every clause
         has to work. Most applicants treat the prompt like a mini version of
@@ -104,7 +104,7 @@ export default function Content() {
         <li>
           <strong>Signs the activity actually costs something.</strong>{" "}
           Unrewarded labor, early mornings, repeated failures, or family
-          obligations that cut into other things you wanted to do — these
+          obligations that cut into other things you wanted to do - these
           are the details that distinguish real engagement from
           resume-building. Readers notice them instantly.
         </li>
@@ -136,18 +136,18 @@ export default function Content() {
           the diner alone, a regular walked in at 10:52 p.m. and ordered
           soup." The job of this move is to ground the essay in real
           sensory detail so the rest of the paragraph has somewhere to sit.
-          The failure mode is abstraction — describing the activity at the
+          The failure mode is abstraction - describing the activity at the
           level of its mission statement.
         </li>
         <li>
           <strong>Move 2: What changed in you (roughly 50–70 words).</strong>{" "}
           This is the causal center of the essay. Name the specific shift
-          — a habit, a fear you lost, a belief you had to revise, a way
+          - a habit, a fear you lost, a belief you had to revise, a way
           you now listen, a thing you noticed you were good at, a thing
           you noticed you were bad at. Be concrete. "I learned leadership"
           is not a shift; it is a category. "I learned that I become
           useless when I am hungry, and I now eat before I try to make
-          decisions" is a shift. The failure mode is grand claims — the
+          decisions" is a shift. The failure mode is grand claims - the
           essay pretending the activity transformed your entire worldview.
         </li>
         <li>
@@ -156,7 +156,7 @@ export default function Content() {
           you now do differently because of Move 2? This move is what
           separates a reflection essay from a memoir paragraph. The reader
           should be able to picture you acting on the change in your daily
-          life. The failure mode is the retrospective wrap-up — a final
+          life. The failure mode is the retrospective wrap-up - a final
           sentence that restates the lesson without showing it in motion.
         </li>
       </ol>
@@ -175,7 +175,7 @@ export default function Content() {
       <blockquote>
         "I spent four summers working the register at my uncle's laundromat
         on 82nd Street. The customers who came in at 6 a.m. were mostly
-        night-shift nurses, and they did not want conversation — they wanted
+        night-shift nurses, and they did not want conversation - they wanted
         their whites folded into the blue bag, the towels into the white
         one, and their quarters counted out before they asked. The first
         summer, I tried to be friendly. By the second summer, I learned
@@ -189,8 +189,8 @@ export default function Content() {
       <p>
         That example works because it is anchored in one place, one shift,
         one worker. The opening sentence names the activity and locates it
-        in space. The second and third sentences provide texture — the
-        night-shift nurses, the color-coded bags, the quarters — that no
+        in space. The second and third sentences provide texture - the
+        night-shift nurses, the color-coded bags, the quarters - that no
         generic paragraph could contain. The middle pivots to an actual
         cause-and-effect beat: the writer tried something, it did not work,
         and they updated. The shift is concrete and a little
@@ -203,7 +203,7 @@ export default function Content() {
         The example is also notable for what it does not do. It does not
         list Harvard's Houses. It does not mention Phillips Brooks House
         Association. It does not reach for the Kennedy School or the IOP.
-        Those would be the wrong instincts here — the prompt is not asking
+        Those would be the wrong instincts here - the prompt is not asking
         what you will do at Harvard. It is asking what shaped you before
         Harvard. The only place that future-facing language belongs is the
         Harvard "how do you hope to use your education" essay, which is a
@@ -259,7 +259,7 @@ export default function Content() {
         <li>
           <strong>Performing humility.</strong> "I am still learning"
           and "I am not the best, but I try my hardest" are versions of
-          the same move — performing modesty while signaling you want
+          the same move - performing modesty while signaling you want
           credit for it. Readers see through this in one sentence. The
           fix is to describe a specific failure or limitation without
           commenting on how humble describing it makes you.
@@ -286,9 +286,9 @@ export default function Content() {
         The intellectual experience essay is about ideas. It is the place
         where a specific book, class, problem, or intellectual encounter
         shifted the way you think. It lives in the realm of the mind. The
-        roommate essay is about personality — how you are to live with,
+        roommate essay is about personality - how you are to live with,
         what your habits reveal, how you show up in shared space. The
-        future-use essay is about direction — what you hope to do with
+        future-use essay is about direction - what you hope to do with
         what Harvard offers. This one, the extracurricular essay, is about
         an activity and what it did to you.
       </p>
@@ -323,7 +323,7 @@ export default function Content() {
           AI essay review tool
         </Link>{" "}
         to check whether the three-move structure is actually on the
-        page — whether a reader can identify the activity, the shift,
+        page - whether a reader can identify the activity, the shift,
         and the present-tense behavior without having to guess. If you
         are working on the rest of Harvard's short answers, our{" "}
         <Link

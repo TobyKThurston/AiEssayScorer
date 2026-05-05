@@ -13,7 +13,7 @@ export default function Content() {
         with a second prompt option about what you hope to contribute to the
         Vanderbilt community. The word limit is 250 words. This is
         Vanderbilt's only required supplement, which means it carries the
-        load of everything the supplement does at other schools combined —
+        load of everything the supplement does at other schools combined -
         Why Vanderbilt fit, personal character, and community orientation.
       </p>
       <p>
@@ -31,7 +31,7 @@ export default function Content() {
         acceptance rate sits in the 5–7% range depending on the cycle. The
         committee cannot interview most of them. This essay is the
         primary tool the committee uses to differentiate between
-        academically strong applicants who all look similar on paper —
+        academically strong applicants who all look similar on paper -
         most of whom have perfect or near-perfect grades, strong test
         scores, and a full activities list.
       </p>
@@ -40,7 +40,7 @@ export default function Content() {
         activities list lets you describe roughly ten activities in ten
         lines apiece. Vanderbilt is asking what happens when you have to
         pick one and go deep. What the committee reads for is not the
-        activity itself — they can see your activities list already. What
+        activity itself - they can see your activities list already. What
         they read for is which activity you picked, and what that choice
         reveals.
       </p>
@@ -102,7 +102,7 @@ export default function Content() {
         <strong>Pick the activity with the most specific scenes
         available.</strong> When you close your eyes and think about
         which activity in your life has produced the most vivid memories
-        — the clearest sensory details, the most particular people — that
+        - the clearest sensory details, the most particular people - that
         is often the strongest topic. Vanderbilt essays live or die on
         scene-level specificity.
       </p>
@@ -131,7 +131,7 @@ export default function Content() {
         <strong>Move one: a specific scene from the activity (60–90
         words).</strong> Open with the activity in motion, not with a
         summary of what the activity is. The reader should be inside a
-        particular moment by the end of the second sentence — a
+        particular moment by the end of the second sentence - a
         practice, a shift, a meeting, an event. Name the people, the
         place, and the time of day if relevant.
       </p>
@@ -142,7 +142,7 @@ export default function Content() {
         What has the activity taught you to notice, what habits has it
         built, what has it cost you and what has it given you? The
         strongest versions include one detail that a casual observer
-        could not have guessed — the small thing that changed in year
+        could not have guessed - the small thing that changed in year
         three, the specific conversation that rearranged how you saw
         the work.
       </p>
@@ -180,8 +180,8 @@ export default function Content() {
         <br /><br />
         This is the thing I do that no one at my school knows about,
         and I am bringing it to college with me because I think what I
-        have gotten from those Sundays — patience and the ability to
-        be useful without needing credit — is probably the most
+        have gotten from those Sundays - patience and the ability to
+        be useful without needing credit - is probably the most
         durable thing I know how to do."
       </blockquote>
       <p>
@@ -225,8 +225,8 @@ export default function Content() {
         </li>
         <li>
           <strong>Writing as though the activity is the only
-          important thing in your life.</strong> Overclaiming — "this
-          activity is my whole identity" — reads as thin. The best
+          important thing in your life.</strong> Overclaiming - "this
+          activity is my whole identity" - reads as thin. The best
           essays present the activity as one genuinely important
           thread, not the whole rope.
         </li>

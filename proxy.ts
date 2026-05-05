@@ -4,7 +4,7 @@ import { createClient } from "@/lib/supabase/middleware";
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Only protect the authenticated app — everything else is public
+  // Only protect the authenticated app - everything else is public
   if (!pathname.startsWith("/editor")) {
     return NextResponse.next();
   }

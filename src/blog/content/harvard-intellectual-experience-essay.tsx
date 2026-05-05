@@ -8,7 +8,7 @@ export default function Content() {
         Harvard's application includes five required short essays, each capped at roughly 200 words. One of them reads: <em>"Briefly describe an intellectual experience that was important to you."</em> That's the entire prompt. There is no scaffolding, no suggested structure, and no guidance about what counts as "intellectual."
       </p>
       <p>
-        The absence of guidance is the point. Harvard wants to see what you choose when no one is telling you what counts. Students who default to classroom achievements — "winning my Science Olympiad event," "earning a 5 on AP Lit" — almost always get cut here because those answers describe outcomes, not experiences. The prompt is specifically about the <em>experience</em>, not the accolade that came with it.
+        The absence of guidance is the point. Harvard wants to see what you choose when no one is telling you what counts. Students who default to classroom achievements - "winning my Science Olympiad event," "earning a 5 on AP Lit" - almost always get cut here because those answers describe outcomes, not experiences. The prompt is specifically about the <em>experience</em>, not the accolade that came with it.
       </p>
       <p>
         In practice, a good Harvard intellectual experience essay describes a moment where your thinking changed, and explains what changed about it. That's harder than it sounds in 200 words.
@@ -47,8 +47,8 @@ export default function Content() {
       <ol>
         <li><strong>The trigger (2–3 sentences).</strong> What were you reading, hearing, working on, arguing about? Start inside the scene. Name the specific book, paper, problem, or conversation by title. Do not generalize.</li>
         <li><strong>The tension (2–3 sentences).</strong> What did you think before? What did the experience complicate? This is the hinge of the essay. If this section is abstract, the essay is abstract.</li>
-        <li><strong>The turn (2–3 sentences).</strong> What do you now think that you didn't think before? This doesn't have to be a neat resolution — it can be an open question — but it has to be a genuine change.</li>
-        <li><strong>The aftermath (1–2 sentences).</strong> How has this shaped what you're doing now or what you want to do next? Not a platitude. A specific downstream effect — a class you took, a book you picked up, a project you started.</li>
+        <li><strong>The turn (2–3 sentences).</strong> What do you now think that you didn't think before? This doesn't have to be a neat resolution - it can be an open question - but it has to be a genuine change.</li>
+        <li><strong>The aftermath (1–2 sentences).</strong> How has this shaped what you're doing now or what you want to do next? Not a platitude. A specific downstream effect - a class you took, a book you picked up, a project you started.</li>
       </ol>
       <p>
         That's eight to eleven sentences total, roughly 200 words if each sentence does real work. If you find yourself over the limit, the first things to cut are adjectives, adverbs, and any sentence that starts with "I have always" or "Ever since."
@@ -71,7 +71,7 @@ export default function Content() {
         <li><strong>Starting with biography.</strong> "Ever since I was young, I have been fascinated by..." is a 200-word death sentence. Start inside the experience.</li>
         <li><strong>Describing the experience without describing the shift.</strong> If your essay could end with "and it was really interesting," you haven't answered the prompt. The prompt asks why it was important, which means what it changed.</li>
         <li><strong>Overlapping with your Common App personal statement.</strong> Harvard reads all five short answers together. If your personal statement is about a specific research project, don't write your intellectual experience essay about the same project. Use the short answer to reveal a different facet of your thinking.</li>
-        <li><strong>Ending with a generic ambition.</strong> "This is why I want to study X at Harvard" is the weakest possible ending because it pivots to the future and abandons the experience. Instead, close by showing a small, concrete downstream consequence — the next book you picked up, the question you're still sitting with.</li>
+        <li><strong>Ending with a generic ambition.</strong> "This is why I want to study X at Harvard" is the weakest possible ending because it pivots to the future and abandons the experience. Instead, close by showing a small, concrete downstream consequence - the next book you picked up, the question you're still sitting with.</li>
         <li><strong>Treating it as a writing sample.</strong> This is not the place for poetic prose or literary flourish. It's the place for clarity and specificity. Save voice-forward writing for your personal statement.</li>
       </ul>
 
@@ -91,7 +91,7 @@ export default function Content() {
         Harvard requires five short answers in total. They are read as a set, and the admissions committee is looking for a coherent portrait of an intellectually alive person, not five disconnected responses. The intellectual experience essay should sit in conversation with the other four without duplicating them.
       </p>
       <p>
-        A useful rule: if your <Link href="/blog/harvard-roommate-essay-top-3-things" className="text-oxblood hover:underline">roommate essay</Link> reveals your personality, your extracurricular essay reveals your environment, and your "use your education in the future" essay reveals your direction, then your intellectual experience essay should reveal your <em>interior</em> — the kind of thinking you do when no one is watching and no one is grading.
+        A useful rule: if your <Link href="/blog/harvard-roommate-essay-top-3-things" className="text-oxblood hover:underline">roommate essay</Link> reveals your personality, your extracurricular essay reveals your environment, and your "use your education in the future" essay reveals your direction, then your intellectual experience essay should reveal your <em>interior</em> - the kind of thinking you do when no one is watching and no one is grading.
       </p>
       <p>
         Before submitting any of your Harvard short answers, run your full application through our <Link href="/editor" className="text-oxblood hover:underline">AI essay review tool</Link> to get line-by-line feedback on specificity, structure, and voice. For the broader patterns Harvard shares with other selective schools, read our <Link href="/blog/ivy-league-essay-tips" className="text-oxblood hover:underline">Ivy League essay analysis</Link>. And if you're also applying to Columbia, the <Link href="/blog/columbia-why-columbia-essay-core-curriculum" className="text-oxblood hover:underline">Columbia Why Essay guide</Link> covers the related challenge of writing short, high-specificity responses under a tight word limit.

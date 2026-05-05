@@ -20,7 +20,7 @@ export default function Content() {
         habit test.
       </p>
       <p>
-        At 250 words — about twelve to sixteen sentences — you have room for
+        At 250 words - about twelve to sixteen sentences - you have room for
         one specific thing, one honest origin, and one set of real habits.
         That is it. There is no room to list interests, no room to build a
         thesis, and no room to explain what joy means to you in the abstract.
@@ -32,7 +32,7 @@ export default function Content() {
       <p>
         Princeton also asks a joy prompt, and the two prompts look similar on
         first read. They are not the same prompt. The Princeton version is
-        about where joy sits in your identity — what it says about you that
+        about where joy sits in your identity - what it says about you that
         this particular thing makes you happy. The Brown version adds a
         specific clause that changes the whole assignment:{" "}
         <em>how do you take it with you in your daily life.</em> That phrase
@@ -66,7 +66,7 @@ export default function Content() {
       <ul>
         <li>
           <strong>A specific, non-prestige joy.</strong> "The joy of
-          research," "the joy of leadership," "the joy of competition" — all
+          research," "the joy of leadership," "the joy of competition" - all
           of these fail immediately. Brown wants a joy that is small, real,
           and not resume-adjacent. The further your joy is from your
           activities list, the better it reads.
@@ -108,7 +108,7 @@ export default function Content() {
       <h2>What to Pick: Joy That Actually Holds Up</h2>
       <p>
         Most applicants pick the wrong kind of joy on the first draft. The
-        most common wrong pick is joy attached to an achievement — winning
+        most common wrong pick is joy attached to an achievement - winning
         the tournament, getting into the program, finishing the project. That
         kind of joy is real, but it is not a joy you can carry with you in
         your daily life. It is a joy that happened once. It does not survive
@@ -123,7 +123,7 @@ export default function Content() {
         in a specific chair, with a specific kind of tea. Fishing with a
         grandparent in summers you have now mostly outgrown but still
         preserve in how you pay attention. Cooking a dish your family has
-        made for generations. A specific kind of weather — the first cold
+        made for generations. A specific kind of weather - the first cold
         day, a particular quality of afternoon light.
       </p>
       <p>
@@ -145,7 +145,7 @@ export default function Content() {
         <li>
           <strong>A specific image or instance of the joy (about 50 words).</strong>{" "}
           Open with the thing itself happening. Not a definition of the joy
-          and not a thesis about the joy — the joy in motion. A specific
+          and not a thesis about the joy - the joy in motion. A specific
           morning, a specific Sunday, a specific kitchen. The job of the
           opening is to drop the reader into the practice before they know
           where the practice came from.
@@ -160,7 +160,7 @@ export default function Content() {
         <li>
           <strong>Daily-practice carry: how it shows up now (about 100 words).</strong>{" "}
           This is the beat that answers the prompt. How does the joy survive
-          in your current life — not in theory, but on a Tuesday? Where, when,
+          in your current life - not in theory, but on a Tuesday? Where, when,
           with whom, in what room, at what hour? Specific sensory details do
           the heavy lifting here. If this beat is shorter than the origin
           beat, the essay is not yet finished.
@@ -212,7 +212,7 @@ export default function Content() {
         time, the second cup left near the fridge. None of that could be
         written by a generic applicant. The reader can picture the kitchen
         and picture the hour. Crucially, the essay does not end with a
-        lesson. The last sentence is a preference, not a thesis — and that
+        lesson. The last sentence is a preference, not a thesis - and that
         restraint is exactly what the prompt is asking for.
       </p>
       <p>
@@ -246,8 +246,8 @@ export default function Content() {
         </li>
         <li>
           <strong>Performed wholesomeness.</strong> A joy chosen because it
-          sounds wholesome on paper — volunteering at the animal shelter,
-          journaling by candlelight, sunsets — will read as performance
+          sounds wholesome on paper - volunteering at the animal shelter,
+          journaling by candlelight, sunsets - will read as performance
           unless the specifics are genuinely yours. If you would not
           describe this joy unprompted to a close friend, do not write it
           here.
@@ -283,7 +283,7 @@ export default function Content() {
 
       <h2>How This Essay Coordinates With the Rest of Your Brown Application</h2>
       <p>
-        Brown asks several short supplemental prompts in a given cycle — the
+        Brown asks several short supplemental prompts in a given cycle - the
         Open Curriculum prompt, the joy prompt, a community prompt, and one
         more. They are read together. The coordination question is the same
         every year: does this applicant show the reader four different sides
@@ -297,7 +297,7 @@ export default function Content() {
         neuroscience, the joy essay should not also be about music. If your
         community essay is about cooking for your family, the joy essay
         should not also be about a kitchen ritual. The joy prompt is where
-        admissions meets the domestic, private side of you — the side that
+        admissions meets the domestic, private side of you - the side that
         does not appear in activities, does not appear in intellectual
         interests, and does not appear in community service. Used correctly,
         it is the part of the Brown application that adds a dimension none

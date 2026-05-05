@@ -16,10 +16,10 @@ export default function Content() {
       <p>
         This is the catch-all Personal Insight Question. UC applicants pick
         four of the eight PIQs, and this one sits at the end of the list as
-        the open slot — the prompt designed specifically for the story that
+        the open slot - the prompt designed specifically for the story that
         does not fit the other seven. That framing is load-bearing. It
         changes what the prompt is asking for and what makes an answer
-        strong or weak. At 350 words — roughly 18 to 25 sentences — you have
+        strong or weak. At 350 words - roughly 18 to 25 sentences - you have
         enough space to develop one distinctive story with real detail, and
         not enough to summarize your life. The constraint is the prompt's
         way of telling you to pick one thing.
@@ -45,7 +45,7 @@ export default function Content() {
         different PIQ.
       </p>
 
-      <h2>When to Pick PIQ #8 — and When Not To</h2>
+      <h2>When to Pick PIQ #8 - and When Not To</h2>
       <p>
         Pick PIQ #8 if you have a distinct story, circumstance, or sustained
         practice that genuinely does not fit inside any of the other seven
@@ -53,7 +53,7 @@ export default function Content() {
         skill, an educational opportunity, a significant challenge, a favorite
         subject, and community contribution. If your story clearly belongs
         under one of those headings, write it there. PIQ #8 is for the
-        material those seven headings leave out — the distinctive context,
+        material those seven headings leave out - the distinctive context,
         the unusual upbringing, the hidden practice, the angle of view that
         does not have a natural home elsewhere.
       </p>
@@ -91,7 +91,7 @@ export default function Content() {
         <li>
           <strong>Evidence of a coherent perspective.</strong> The response
           should add up to something. One unified story, one sustained
-          practice, or one angle of view — not three unrelated facts
+          practice, or one angle of view - not three unrelated facts
           competing for space.
         </li>
         <li>
@@ -125,8 +125,8 @@ export default function Content() {
           grandparent that explains something about how you think. A
           multi-lingual upbringing with its specific cultural pressures. A
           family business you grew up inside. A neighborhood with a specific
-          culture — the particular block, the particular diner, the
-          particular commute — that the rest of your application cannot
+          culture - the particular block, the particular diner, the
+          particular commute - that the rest of your application cannot
           convey. Context-based PIQs work when the context is specific enough
           that no generic applicant could copy it.
         </li>
@@ -192,7 +192,7 @@ export default function Content() {
           50 words).</strong> One or two sentences. Not pandering, not a
           list of UC programs, not a generic sentence about the "UC
           community." A specific sense of what you would do with this
-          material on a UC campus — a kind of class you would take, a kind
+          material on a UC campus - a kind of class you would take, a kind
           of person you would look for, a kind of project you would start.
         </li>
       </ol>
@@ -235,14 +235,14 @@ export default function Content() {
         specific place (Modesto, the preparation room, the arrangement
         office), and translates the origin into measurable present behavior
         (group projects, debates, essay writing). The closing does not
-        pander. It describes a specific kind of moment — a seminar going
-        quiet — and claims a specific skill for it. Nothing in that response
+        pander. It describes a specific kind of moment - a seminar going
+        quiet - and claims a specific skill for it. Nothing in that response
         restates an activities list. Nothing could be cut and pasted into
         another applicant's file.
       </p>
       <p>
         The second reason the example works is voice. It is the same voice
-        you can imagine in the applicant's other three PIQs — observational,
+        you can imagine in the applicant's other three PIQs - observational,
         grounded, willing to be specific about unusual material. A reader
         finishing all four essays would feel they had met one person, not
         four.
@@ -305,9 +305,9 @@ export default function Content() {
         UC asks you to pick four PIQs out of eight. Treat the four as a
         portfolio. Each response should occupy a different corner of your
         identity. If you have already covered your distinctive context,
-        practice, or angle under one of the other seven PIQs — leadership,
+        practice, or angle under one of the other seven PIQs - leadership,
         creativity, talent, educational opportunity, challenge, favorite
-        subject, community — then PIQ #8 has nothing distinctive left to
+        subject, community - then PIQ #8 has nothing distinctive left to
         carry. Pick a different fourth prompt.
       </p>
       <p>
@@ -337,7 +337,7 @@ export default function Content() {
           UC Personal Insight Questions guide
         </Link>
         . And for the broader principles that apply across every elite
-        supplement — voice, specificity, and how admissions actually reads —
+        supplement - voice, specificity, and how admissions actually reads -
         read our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"

@@ -29,7 +29,7 @@ export default function Content() {
         </li>
       </ul>
       <p>
-        These are read by a dedicated PLME committee — not generic Brown
+        These are read by a dedicated PLME committee - not generic Brown
         admissions. The readers include Brown medical faculty. They can
         tell the difference between a student who has thought carefully
         about medicine and one who hasn't.
@@ -47,7 +47,7 @@ export default function Content() {
           <strong>Genuine Open Curriculum engagement.</strong> Not
           generic praise of a "liberal arts medical education." Specific
           non-pre-med courses you want to take, and a believable reason
-          why you — a future doctor — want to take them.
+          why you - a future doctor - want to take them.
         </li>
       </ul>
 
@@ -56,7 +56,7 @@ export default function Content() {
       <h2>The Bar Is Higher Than You Think</h2>
       <p>
         Most PLME applicants have decent clinical exposure. Shadowing,
-        volunteering, hospital work — the committee assumes you have
+        volunteering, hospital work - the committee assumes you have
         some. The essay is not a resume of those experiences.
       </p>
       <p>
@@ -72,7 +72,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Names a specific tension in medicine you've noticed.</strong>{" "}
-          Not solved — noticed.
+          Not solved - noticed.
         </li>
         <li>
           <strong>Shows you know medicine is hard.</strong> Not in a
@@ -92,7 +92,7 @@ export default function Content() {
         it was its own room until I watched Dr. M. walk a patient into
         it and close the door. When she came out twenty minutes later,
         she sat at the nurses' station and didn't speak for a while.
-        That's the part of medicine I want to understand — not the
+        That's the part of medicine I want to understand - not the
         diagnosis, but what it takes to carry what you know into that
         room, again."
       </blockquote>
@@ -111,7 +111,7 @@ export default function Content() {
         </li>
         <li>
           <strong>The "my family member is a doctor" origin story
-          without deeper content.</strong> It's not disqualifying — but
+          without deeper content.</strong> It's not disqualifying - but
           if the essay stops at "I grew up around medicine," it's not
           doing work.
         </li>
@@ -137,7 +137,7 @@ export default function Content() {
       <p>
         The Open Curriculum means no distribution requirements, no
         required core. If your entire plan is to take organic chemistry,
-        biochem, physiology, and physics — the committee will ask why
+        biochem, physiology, and physics - the committee will ask why
         you need the Open Curriculum at all.
       </p>
 
@@ -147,12 +147,12 @@ export default function Content() {
           <strong>Specific non-pre-med courses or concentrations you
           want to take.</strong> Name them. "Medical Anthropology,"
           "Contemplative Studies," "History of the Body," "Science and
-          Religion," a concentration in Ethnic Studies — whatever is
+          Religion," a concentration in Ethnic Studies - whatever is
           actually true for you.
         </li>
         <li>
           <strong>A reason those courses matter to the doctor you want
-          to become.</strong> Not a vague "well-roundedness" claim — a
+          to become.</strong> Not a vague "well-roundedness" claim - a
           specific link.
         </li>
         <li>

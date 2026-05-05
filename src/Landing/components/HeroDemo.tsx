@@ -121,9 +121,9 @@ function DemoChrome() {
 
 function DemoTabs({ mode }: { mode: Mode }) {
   const tabs: { id: Mode | "done"; label: string; match: Mode[] }[] = [
-    { id: "paste", label: "01 — Paste", match: ["paste"] },
-    { id: "scoring", label: "02 — Score", match: ["scoring"] },
-    { id: "done", label: "03 — Result", match: ["result", "gated"] },
+    { id: "paste", label: "01 - Paste", match: ["paste"] },
+    { id: "scoring", label: "02 - Score", match: ["scoring"] },
+    { id: "done", label: "03 - Result", match: ["result", "gated"] },
   ];
   return (
     <div className="flex gap-6 border-b border-hair">
@@ -222,9 +222,9 @@ function ResultState({ rating, onReset }: { rating: Rating; onReset: () => void 
 
   const band =
     (rating.score ?? 0) >= 90
-      ? "Excellent — top 8%"
+      ? "Excellent - top 8%"
       : (rating.score ?? 0) >= 82
-        ? "Strong — top 25%"
+        ? "Strong - top 25%"
         : (rating.score ?? 0) >= 72
           ? "Solid draft"
           : "Needs work";

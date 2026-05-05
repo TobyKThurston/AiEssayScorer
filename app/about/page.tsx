@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Ivy Admit is an AI-powered college essay review tool built by students admitted to Harvard, Yale, and Princeton. Learn how it works and why we built it.",
     url: "/about",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "About Ivy Admit — AI College Essay Review" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "About Ivy Admit - AI College Essay Review" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -78,8 +78,8 @@ export default function AboutPage() {
             </p>
             <p>
               Ivy Admit exists to close that gap. We trained on patterns from successful
-              applications — essays that earned admission to Harvard, Yale, Princeton, MIT, and
-              fifty other selective schools — and built a scoring and feedback engine that gives
+              applications - essays that earned admission to Harvard, Yale, Princeton, MIT, and
+              fifty other selective schools - and built a scoring and feedback engine that gives
               every student access to the same quality of structural analysis that a good counselor
               provides.
             </p>
@@ -88,14 +88,14 @@ export default function AboutPage() {
 
           <Section heading="How it works">
             <p>
-              Upload your draft. Our model scores it across three dimensions — content, structure,
-              and voice — on a 0–100 scale calibrated against accepted-application patterns. Each
+              Upload your draft. Our model scores it across three dimensions - content, structure,
+              and voice - on a 0–100 scale calibrated against accepted-application patterns. Each
               score comes with a breakdown of which specific sentences or paragraphs are dragging
               it down and why.
             </p>
             <p>
               <em className="italic text-oxblood">Content</em> measures specificity and evidence.{" "}
-              <em className="italic text-oxblood">Structure</em> measures narrative arc — whether
+              <em className="italic text-oxblood">Structure</em> measures narrative arc - whether
               the essay moves forward or restates itself.{" "}
               <em className="italic text-oxblood">Voice</em> measures distinctiveness and
               consistency. Each can fail independently, so the scores tell you exactly where to
@@ -113,7 +113,7 @@ export default function AboutPage() {
               You can delete any document and its associated data at any time from settings.
             </p>
             <p>
-              Ivy Admit is a coaching and editing tool. Every suggestion is a recommendation — you
+              Ivy Admit is a coaching and editing tool. Every suggestion is a recommendation - you
               approve or reject every change. The essay you submit is yours. We are not a
               ghostwriting service, and the feedback we provide is designed to strengthen your
               writing, not replace it.
@@ -127,7 +127,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/try" className="btn btn-lg btn-brand">
-              Score my essay — free
+              Score my essay - free
             </Link>
             <Link href="/blog" className="btn btn-lg btn-ghost">
               Read the blog

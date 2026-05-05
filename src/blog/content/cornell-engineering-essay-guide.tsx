@@ -7,7 +7,7 @@ export default function Content() {
       <p>
         Cornell requires a college-specific supplemental essay. Every
         applicant writes for the specific undergraduate college they're
-        applying to — Arts &amp; Sciences, Engineering, CALS, ILR,
+        applying to - Arts &amp; Sciences, Engineering, CALS, ILR,
         Dyson, Human Ecology, or Architecture.
       </p>
       <p>
@@ -25,7 +25,7 @@ export default function Content() {
       <p>
         This is the most important structural fact of the Cornell
         Engineering supplement: it's read by{" "}
-        <strong>engineering-college admissions</strong> — not a central
+        <strong>engineering-college admissions</strong> - not a central
         committee. The readers know the field.
       </p>
       <p>
@@ -55,15 +55,15 @@ export default function Content() {
       </p>
       <ul>
         <li>
-          <strong>Mechanical</strong> — energy systems, robotics, fluid
+          <strong>Mechanical</strong> - energy systems, robotics, fluid
           dynamics, materials.
         </li>
         <li>
-          <strong>Electrical &amp; Computer</strong> — hardware, signal
+          <strong>Electrical &amp; Computer</strong> - hardware, signal
           processing, integrated systems.
         </li>
         <li>
-          <strong>Biomedical (Meinig School)</strong> — the standalone
+          <strong>Biomedical (Meinig School)</strong> - the standalone
           BME school at Cornell, one of the department's structural
           strengths.
         </li>
@@ -75,7 +75,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Operations Research &amp; Information Engineering
-          (ORIE)</strong> — distinct from CS.
+          (ORIE)</strong> - distinct from CS.
         </li>
         <li>
           <strong>Materials Science &amp; Engineering</strong>.
@@ -84,7 +84,7 @@ export default function Content() {
       <p>
         If you can't name a plausible primary major by the end of this
         essay, readers assume you're undecided about engineering
-        itself — which is different from being undecided about a major.
+        itself - which is different from being undecided about a major.
       </p>
 
       <h2>What a Strong Opening Does</h2>
@@ -99,7 +99,7 @@ export default function Content() {
         every April. We can't afford the electric pump the next village
         uses, so my uncle rigs a hand-crank system that fails at least
         twice a season. Last summer I spent three weeks sketching a
-        gravity-fed holding tank that wouldn't need a pump at all —
+        gravity-fed holding tank that wouldn't need a pump at all -
         and learning, painfully, that I didn't know nearly enough
         fluid mechanics to know if my sketches were wrong or just
         ugly. That's why I want to study Mechanical Engineering at
@@ -116,7 +116,7 @@ export default function Content() {
       <ul>
         <li>
           <strong>Project teams.</strong> Cornell's project team
-          ecosystem is genuinely distinct — CUAir (autonomous aerial
+          ecosystem is genuinely distinct - CUAir (autonomous aerial
           vehicles), Cornell Racing (formula SAE), DEMRT (Cornell Design
           &amp; Engineering Management for Renewable Technology), Baja
           SAE, Mars Rover, CUAUV. Name one that matches your problem.
@@ -124,7 +124,7 @@ export default function Content() {
         <li>
           <strong>First-year engineering design immersion.</strong>{" "}
           Cornell's first-year engineering experience includes a
-          design-focused introduction — reference it honestly if it
+          design-focused introduction - reference it honestly if it
           aligns.
         </li>
         <li>
@@ -147,7 +147,7 @@ export default function Content() {
         </li>
       </ul>
 
-      <h2>Why Cornell Engineering — Not Other CS-Heavy Schools</h2>
+      <h2>Why Cornell Engineering - Not Other CS-Heavy Schools</h2>
       <p>
         If your essay would work equally well for MIT, Stanford,
         Berkeley, or CMU, it's not a Cornell Engineering essay yet.
@@ -176,7 +176,7 @@ export default function Content() {
         <li>
           <strong>Treating this as "Why Cornell."</strong> It's Why
           Cornell <em>Engineering</em>. Big Red culture, the Gorges,
-          Ithaca's food scene — not the focus.
+          Ithaca's food scene - not the focus.
         </li>
         <li>
           <strong>Listing three different majors you're considering.</strong>{" "}

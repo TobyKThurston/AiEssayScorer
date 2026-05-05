@@ -129,7 +129,7 @@ export default function Content() {
           you drive a sibling to therapy every Wednesday, if you translate
           medical appointments for a parent, if you handle the family's
           bills because you are the first one who learned the language of
-          them — these are dimensions that do not appear anywhere else in
+          them - these are dimensions that do not appear anywhere else in
           the application and matter enormously to how a reader understands
           you.
         </li>
@@ -157,7 +157,7 @@ export default function Content() {
         <li>
           <strong>A way of thinking you bring to the world.</strong> Harder
           to pull off, but powerful when it works. A genuine mental habit
-          that shapes how you see things — the way you always count the
+          that shapes how you see things - the way you always count the
           syllables in sentences, the way you map every conversation into
           a spreadsheet afterwards, the way you categorize people by the
           books they read. This works only if you can land it in a single
@@ -186,7 +186,7 @@ export default function Content() {
           The middle does the explaining. What is this thing? How often
           does it happen? Who is involved? What is the shape of it in your
           life? This is where the concrete scene widens into context, but
-          only as much as the word count allows. Keep naming things — the
+          only as much as the word count allows. Keep naming things - the
           specific day, the specific object, the specific person, the
           specific outcome.
         </li>
@@ -212,7 +212,7 @@ export default function Content() {
       </p>
       <blockquote>
         "Every Sunday after Mass, my grandfather and I make coffee the way
-        his father made it in Naples — a small stovetop moka pot, water
+        his father made it in Naples - a small stovetop moka pot, water
         filled exactly to the valve, grounds packed level with a spoon, heat
         just low enough that the pot hisses rather than sputters. He has
         been teaching me since I was nine. He does not speak much English.
@@ -227,8 +227,8 @@ export default function Content() {
       <p>
         That paragraph works because it is specific at every level. The
         coffee has a named origin, a named object, a named technique, a
-        named correction ritual. The relationship has a shape — forty
-        words, the same eight steps — that the reader can feel without
+        named correction ritual. The relationship has a shape - forty
+        words, the same eight steps - that the reader can feel without
         having it announced. The closing does not claim a virtue. It names
         a habit ("I pay attention accordingly") and leaves the reader to
         extend the inference. Nothing in the paragraph could have come from
@@ -307,7 +307,7 @@ export default function Content() {
         Notre Dame's supplement in recent seasons includes the Why Notre
         Dame short answer (around 150 words), a longer essay chosen from a
         set of options about beliefs, communities, or the change you hope
-        to make, and a cluster of short answers — the catch-all among
+        to make, and a cluster of short answers - the catch-all among
         them. Each of these does a different job. The essays are read
         together. Duplication across them wastes space.
       </p>
@@ -319,14 +319,14 @@ export default function Content() {
         Now look at the map. What dimension of you is still missing? The
         answer to that question is the topic of the catch-all. If you
         cannot identify a gap, the catch-all may not need to exist as a
-        full paragraph — one clean sentence or a blank response is better
+        full paragraph - one clean sentence or a blank response is better
         than 150 words of repetition.
       </p>
       <p>
         The longer supplement is the essay where values, communities, and
         convictions live. The personal statement carries your main
         narrative. The Why Notre Dame carries school fit. The catch-all
-        carries everything else — the family role, the cultural practice,
+        carries everything else - the family role, the cultural practice,
         the private hobby, the mental habit. Keep each container doing its
         own job. The application reads better when the essays coordinate
         rather than echo.

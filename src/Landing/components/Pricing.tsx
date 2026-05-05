@@ -10,7 +10,7 @@ export function Pricing() {
           num="§06"
           eyebrow="Pricing"
           title={<>One simple plan. Unlocks <em className="italic text-oxblood">everything</em>.</>}
-          intro="Free tools to learn. $9 a month to see your real admit chance and unlock the full editor."
+          intro="Free tools to learn. $7 a month to see your real admit chance and unlock an essay reviewer tuned to every school on your list."
         />
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -51,7 +51,7 @@ export function Pricing() {
 
             <div className="mt-6 flex items-baseline gap-2">
               <span className="font-serif text-[64px] leading-none text-paper">
-                <em className="italic text-gold">$</em>9
+                <em className="italic text-gold">$</em>7
               </span>
               <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-paper-3">
                 / month
@@ -62,6 +62,7 @@ export function Pricing() {
               {[
                 "Per-school admit % + tier (Reach/Match/Safety)",
                 "Multi-school odds in one calculation",
+                "Essay reviewer tuned to each school you applied to",
                 "Unlimited essay grading + line edits",
                 "Full editor with version history",
                 "Every premium tool unlocked",

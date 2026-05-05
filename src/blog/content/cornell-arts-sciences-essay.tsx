@@ -72,7 +72,7 @@ export default function Content() {
         </li>
         <li>
           <strong>A specific throughline.</strong> The prompt offers three
-          lenses — interests, community, identity. The essay needs at least
+          lenses - interests, community, identity. The essay needs at least
           one of them to run through the whole piece. A list of unrelated
           enthusiasms is not a throughline.
         </li>
@@ -86,7 +86,7 @@ export default function Content() {
         <li>
           <strong>Awareness of the structure.</strong> A&S has a First-Year
           Writing Seminar requirement, a distribution requirement, and a
-          major. Applicants who reference this structure — even glancingly —
+          major. Applicants who reference this structure - even glancingly -
           signal that they have done more than skim the homepage.
         </li>
         <li>
@@ -113,10 +113,10 @@ export default function Content() {
       </p>
       <p>
         Stronger essays often pick a less obvious lens. An essay grounded in
-        community — a neighborhood, a family structure, a local institution,
-        a language community, a team, a congregation — is harder to
-        duplicate. An essay grounded in identity — a heritage, a disability,
-        a first-generation status, a queer reading, a regional self — is
+        community - a neighborhood, a family structure, a local institution,
+        a language community, a team, a congregation - is harder to
+        duplicate. An essay grounded in identity - a heritage, a disability,
+        a first-generation status, a queer reading, a regional self - is
         even harder to duplicate. Both of these lenses force the writer to
         be specific in a way "interests" does not require.
       </p>
@@ -126,7 +126,7 @@ export default function Content() {
         community that nobody else in the applicant pool could write, that
         is your lens. If the only thing you can say about your community
         is "I grew up in the suburbs," go back to interests. The test is
-        specificity, not novelty. Combining lenses works if they connect —
+        specificity, not novelty. Combining lenses works if they connect -
         an applicant whose interest in linguistics grew out of being a
         child of immigrants is using two fused lenses. Pasting a community
         paragraph onto an academic-interest paragraph with no connective
@@ -168,9 +168,9 @@ export default function Content() {
           <strong>How you would broaden and deepen (~150 words).</strong>{" "}
           This is the move most applicants skip. The prompt explicitly
           asks for both directions. Name one existing commitment you
-          would deepen — a field you already care about, where A&S offers
+          would deepen - a field you already care about, where A&S offers
           more than you can access now. Name one direction you would
-          broaden into — a department or topic you do not yet know well
+          broaden into - a department or topic you do not yet know well
           but expect to be changed by. Performing & Media Arts, STS, and
           History are common broadening destinations because they cross
           disciplinary lines without requiring prior expertise. Whatever
@@ -182,7 +182,7 @@ export default function Content() {
           community shows up in the student you expect to be at Cornell.
           If you opened with an identity, close with what that identity
           gains from the breadth A&S offers. The failure mode of the
-          closing is abstraction — a sentence about curiosity as a
+          closing is abstraction - a sentence about curiosity as a
           lifelong journey. Keep it concrete.
         </li>
       </ol>
@@ -195,7 +195,7 @@ export default function Content() {
       <blockquote>
         "The town I grew up in has one stoplight, two churches, and a
         Carnegie library that has been open since 1907. The librarian, Mrs.
-        Ahearn, keeps a clipboard of requests — not for books the library
+        Ahearn, keeps a clipboard of requests - not for books the library
         doesn't have, but for books she thinks a specific person ought to
         read. I have been on the clipboard since I was nine. The last four
         titles she picked for me were about river systems, parliamentary
@@ -209,8 +209,8 @@ export default function Content() {
         <br />
         At Cornell A&S, I want to keep reading that way. I plan to major
         in Government, but not political science in the narrow sense. I
-        want to understand how small institutions — libraries, town
-        councils, churches — actually run the republic at the level I
+        want to understand how small institutions - libraries, town
+        councils, churches - actually run the republic at the level I
         grew up inside. I would pair Government with History and, later,
         Science and Technology Studies, because the version of civic
         life I saw at home was also shaped by infrastructure: who had
@@ -223,7 +223,7 @@ export default function Content() {
         <br />
         <br />
         I want to deepen my work in Government through undergraduate
-        research — local-government data is underused, and I would like
+        research - local-government data is underused, and I would like
         to learn the methods to use it. I want to broaden into
         Performing & Media Arts. I have never taken a theater class.
         The town I come from has no theater. The clipboard has not
@@ -234,8 +234,8 @@ export default function Content() {
         clipboard than the one I came in with."
       </blockquote>
       <p>
-        That example works because the lens — community, specifically the
-        librarian and the clipboard — runs through every paragraph. The
+        That example works because the lens - community, specifically the
+        librarian and the clipboard - runs through every paragraph. The
         A&S-specific move names real resources (Government, History,
         STS, First-Year Writing Seminar, Performing & Media Arts,
         undergraduate research) and explains why each one connects to
@@ -245,8 +245,8 @@ export default function Content() {
         returns to the clipboard without stating a theme. Notice what
         the example does not do. It does not mention medical school. It
         does not announce a career. It does not use the word curiosity
-        as a tagline. The curiosity is enacted by the essay itself —
-        a narrator who reads what a librarian hands them — rather than
+        as a tagline. The curiosity is enacted by the essay itself -
+        a narrator who reads what a librarian hands them - rather than
         declared.
       </p>
 
@@ -265,7 +265,7 @@ export default function Content() {
         </li>
         <li>
           <strong>No broaden-AND-deepen structure.</strong> Most drafts
-          only show one direction — usually deepening an existing
+          only show one direction - usually deepening an existing
           interest. The prompt asks for both. If the reader cannot point
           to a "broaden" sentence and a "deepen" sentence, the essay has
           skipped half the assignment.
@@ -307,8 +307,8 @@ export default function Content() {
       <h2>How This Essay Coordinates With Cornell's Other Requirements</h2>
       <p>
         Cornell's supplement works differently from most Ivy schools.
-        Applicants write one college-specific essay — in this case the A&S
-        essay — plus the Common App personal statement. That is the entire
+        Applicants write one college-specific essay - in this case the A&S
+        essay - plus the Common App personal statement. That is the entire
         long-form writing load for the Cornell application. Every other
         Ivy asks for multiple supplements. Cornell asks for one per
         college, and your A&S essay is carrying the full weight of
@@ -322,7 +322,7 @@ export default function Content() {
         together. Repeating yourself wastes the one chance to show a
         second side of the narrator. Second, every piece of fit argument
         you want Cornell to see has to live in this 650 words. Readers
-        expect density here — named departments, named programs, named
+        expect density here - named departments, named programs, named
         directions. Generality is more expensive in this essay than at
         schools with multiple supplements, because you only get one
         shot. A&S Career Services exists, and referencing it is allowed,
@@ -347,9 +347,9 @@ export default function Content() {
           Cornell "why Cornell" guide
         </Link>
         . And for the underlying principles that apply to every
-        school-specific supplement — how admissions reads fit, how to
+        school-specific supplement - how admissions reads fit, how to
         name resources without dumping them, how to avoid the generic
-        college-essay voice — read our{" "}
+        college-essay voice - read our{" "}
         <Link
           href="/blog/why-this-college-essay"
           className="text-oxblood hover:underline"

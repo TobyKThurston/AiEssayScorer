@@ -10,8 +10,8 @@ export default function Content() {
           "The Box is a longstanding tradition that invites you to submit an
           image that appeals to you. What image would you select and why?"
         </em>{" "}
-        In its current form, the applicant uploads a single image — not a
-        collage, not a composite — and writes an optional caption of up to
+        In its current form, the applicant uploads a single image - not a
+        collage, not a composite - and writes an optional caption of up to
         150 words explaining the choice.
       </p>
       <p>
@@ -33,8 +33,8 @@ export default function Content() {
         The Box is a tradition that dates back decades, when applicants
         literally mailed a physical box to Rice. The prompt has evolved, but
         the intent has not. Rice is small. Rice's admissions office reads
-        closely. And Rice has decided that visual choice — what you look at,
-        what you keep, what you photograph, what you point a camera at —
+        closely. And Rice has decided that visual choice - what you look at,
+        what you keep, what you photograph, what you point a camera at -
         reveals something that prose does not.
       </p>
       <p>
@@ -51,7 +51,7 @@ export default function Content() {
         select a single frame that communicates more than its literal
         content. A photograph of a specific kitchen table at a specific time
         of day communicates something that a paragraph about "family
-        dinners" never could. Rice is asking whether you can see — and
+        dinners" never could. Rice is asking whether you can see - and
         whether what you see is distinctly yours.
       </p>
       <p>
@@ -96,8 +96,8 @@ export default function Content() {
           <strong>Coherence with the rest of the application.</strong> The
           Box should sit next to your other essays without duplicating them.
           The best submissions reveal a side of you that did not fit
-          elsewhere — a domestic side, an aesthetic side, a private
-          enthusiasm — but still sound like the same person who wrote the
+          elsewhere - a domestic side, an aesthetic side, a private
+          enthusiasm - but still sound like the same person who wrote the
           Common App essay.
         </li>
         <li>
@@ -141,7 +141,7 @@ export default function Content() {
           library where you study. Place is a legitimate subject because
           place is load-bearing for most eighteen-year-olds. Risk: avoid
           tourist photography. A skyline, a famous landmark, or a national
-          park is not a place that shaped you — it's a place anyone could
+          park is not a place that shaped you - it's a place anyone could
           have been.
         </li>
         <li>
@@ -223,12 +223,12 @@ export default function Content() {
         The caption is not the essay. It is a caption. If the image is the
         subject and the caption is the frame, then the frame should not
         become the painting. A useful rule: the image should carry roughly
-        60 percent of the work. The caption adds the remaining 40 — the
+        60 percent of the work. The caption adds the remaining 40 - the
         context, the history, the angle a viewer cannot get from looking.
       </p>
       <p>
         Three things the caption should do. First, give the reader the
-        minimum context they need to understand what they are looking at —
+        minimum context they need to understand what they are looking at -
         where, when, whose. Second, say something the image cannot say on
         its own: why this particular frame, what it means to you, what
         changed because of it. Third, close with a line that makes the
@@ -249,7 +249,7 @@ export default function Content() {
       <p>
         Here is a fictional example. Imagine the uploaded image is a
         photograph, taken by the applicant, of a specific intersection near
-        their house — a cracked curb, a fire hydrant, a bent stop sign, the
+        their house - a cracked curb, a fire hydrant, a bent stop sign, the
         corner of a laundromat window with a hand-written "CLOSED" taped
         inside. The caption, at 140 words, might read:
       </p>
@@ -258,7 +258,7 @@ export default function Content() {
         apartment. It is three blocks from our house and I have passed it
         maybe four thousand times. The laundromat closed last winter. The
         sign has not been taken down. The stop sign has been bent since
-        before I was born — my father remembers running into it on his bike
+        before I was born - my father remembers running into it on his bike
         in the 1980s. I started photographing this corner after the
         laundromat closed because I was worried the block was changing
         faster than I could remember it. I now have sixty-one photographs of
@@ -268,8 +268,8 @@ export default function Content() {
         still see what is here."
       </blockquote>
       <p>
-        Why that caption works. The image is specific — a particular
-        intersection, not a generic city scene — and the caption earns the
+        Why that caption works. The image is specific - a particular
+        intersection, not a generic city scene - and the caption earns the
         image by giving it a history. The applicant appears three times, in
         three different timeframes: as the child walking home, as the
         person who started the weekly photograph project, and as the
@@ -346,7 +346,7 @@ export default function Content() {
       </p>
       <p>
         Why Rice is your intellectual and institutional fit essay. It
-        should be full of specific Rice details — a professor, a course, a
+        should be full of specific Rice details - a professor, a course, a
         research opportunity, a feature of the residential college system,
         the scale of the school. The residential college essay is about
         community, character, and how you show up for other people. The
@@ -368,7 +368,7 @@ export default function Content() {
         that contradictions between the three show up. If your Why Rice
         essay presents you as a dedicated pre-med and your Box is a
         photograph of a sewing project you've been working on for six
-        years, that is not a contradiction — that is range, and it is
+        years, that is not a contradiction - that is range, and it is
         desirable. But if your Common App essay is about a grandfather
         who raised you and your Box is a photograph of that same
         grandfather, you have used a strong topic twice and wasted the
@@ -391,8 +391,8 @@ export default function Content() {
         </Link>{" "}
         walks through how to match your response to a specific college
         community without sounding generic. And for the broader principles
-        that apply across every elite supplement — voice, specificity,
-        how admissions actually reads — read our{" "}
+        that apply across every elite supplement - voice, specificity,
+        how admissions actually reads - read our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
           className="text-oxblood hover:underline"

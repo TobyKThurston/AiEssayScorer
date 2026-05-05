@@ -9,7 +9,7 @@ export default function Content() {
         expect. There is no single "Why UNC" box. Instead, the Carolina
         supplement asks you to choose two prompts from a short menu and
         respond to each in roughly 250 words. Below those two longer
-        responses sit the quick takes — short answers capped at about 50
+        responses sit the quick takes - short answers capped at about 50
         words each, designed to surface texture rather than argument.
       </p>
       <p>
@@ -19,7 +19,7 @@ export default function Content() {
         that invites you to explain what draws you to Carolina
         specifically. The prompts change in phrasing from year to year, but
         the categories are stable. Applicants should verify the exact
-        wording on the current UNC admissions site before drafting — the
+        wording on the current UNC admissions site before drafting - the
         structural logic of this guide applies regardless.
       </p>
       <p>
@@ -41,7 +41,7 @@ export default function Content() {
       </p>
       <p>
         That is the hidden structural task. One of your two 250-word
-        responses should engage Carolina directly — by naming a program, a
+        responses should engage Carolina directly - by naming a program, a
         resource, a tradition, or a facet of the public-university mission
         that you want to join. The prompt that permits this most gracefully
         is usually the community prompt or the topic-that-captivates
@@ -65,8 +65,8 @@ export default function Content() {
       <p>
         The UNC readers are not the same audience as a private Ivy
         admissions office. The school is the oldest public university in
-        the United States — the 1789 charter matters more on this campus
-        than anywhere else — and the institutional identity is built
+        the United States - the 1789 charter matters more on this campus
+        than anywhere else - and the institutional identity is built
         around public mission, in-state responsibility, and a distinctive
         Southern research culture. Here is what readers are actually
         weighing:
@@ -74,9 +74,9 @@ export default function Content() {
       <ul>
         <li>
           <strong>Specific engagement with UNC.</strong> Does the essay name
-          a real Carolina resource — Honors Carolina, the Morehead-Cain, the
+          a real Carolina resource - Honors Carolina, the Morehead-Cain, the
           Undergraduate Research Consultation Team, the Southern Historical
-          Collection at Wilson Library, Hussman, Kenan-Flagler — and use it
+          Collection at Wilson Library, Hussman, Kenan-Flagler - and use it
           as more than a label? Named resources are the minimum evidence of
           research.
         </li>
@@ -91,9 +91,9 @@ export default function Content() {
         <li>
           <strong>Readiness for a large research university.</strong> UNC
           has over 19,000 undergraduates. The applicant needs to sound like
-          someone who would find their footing in a big place — through a
+          someone who would find their footing in a big place - through a
           First-Year Seminar, an honors track, a research lab, a residential
-          community — rather than someone who needs a 2,000-student
+          community - rather than someone who needs a 2,000-student
           college to feel safe.
         </li>
         <li>
@@ -110,7 +110,7 @@ export default function Content() {
           public-service tradition, the relationship to North Carolina
           communities, and the lived reality of a flagship in a Southern
           state are part of what the institution offers. Applicants who
-          engage this thoughtfully — not defensively, not evasively — read
+          engage this thoughtfully - not defensively, not evasively - read
           as a better match.
         </li>
         <li>
@@ -131,8 +131,8 @@ export default function Content() {
         <li>
           <strong>The community you identify with.</strong> This is the
           strongest vehicle for Carolina fit writing. The prompt invites
-          you to describe a community you belong to — by identity, by
-          interest, by geography, by practice — and to reflect on what
+          you to describe a community you belong to - by identity, by
+          interest, by geography, by practice - and to reflect on what
           that membership has shaped in you. The natural bridge to UNC is
           obvious: a community you belong to connects to a community at
           Carolina you want to join. Pro: maximum flexibility, natural
@@ -145,7 +145,7 @@ export default function Content() {
           academic-fit prompt in disguise. You describe an intellectual
           topic that genuinely pulls you in, and you show the shape of
           your mind inside it. The Carolina bridge works cleanly here too
-          — the topic leads to a specific lab, course, department, or
+          - the topic leads to a specific lab, course, department, or
           research program. Pro: lets you surface intellectual seriousness
           without having to frame the essay as "academic interest." Con:
           goes wrong the moment it tips into recitation. The essay must
@@ -169,26 +169,26 @@ export default function Content() {
         work. Another strong pairing: topic + community, with the topic
         essay carrying academic fit and the community essay carrying the
         broader Carolina connection. Avoid pairing current-issue with
-        person — neither essay will have room for named Carolina
+        person - neither essay will have room for named Carolina
         resources, and your fit signal disappears.
       </p>
 
       <h2>The Structure That Works at 250 Words</h2>
       <p>
-        A 250-word essay is not a short essay. It is a very short essay —
+        A 250-word essay is not a short essay. It is a very short essay -
         roughly 12 to 18 sentences. The structure that reliably works
         across UNC prompts is four moves, tightly budgeted.
       </p>
       <ol>
         <li>
-          <strong>Hook — roughly 50 words.</strong> Open on the specific
+          <strong>Hook - roughly 50 words.</strong> Open on the specific
           topic, community, or person. No throat-clearing. No framing
           sentences. The reader should know by the end of sentence two
           exactly what this essay is about and what voice it will use.
           Open in a scene or an unusual detail, not a thesis statement.
         </li>
         <li>
-          <strong>Development — roughly 100 words.</strong> This is where
+          <strong>Development - roughly 100 words.</strong> This is where
           you show the shape of your engagement. What do you actually do
           inside this community, topic, or relationship? What does it
           look like on a Tuesday? The development section is where voice
@@ -197,7 +197,7 @@ export default function Content() {
           time.
         </li>
         <li>
-          <strong>UNC connection — roughly 80 words.</strong> Name 1-2
+          <strong>UNC connection - roughly 80 words.</strong> Name 1-2
           specific Carolina resources and explain why those specific
           resources are the continuation of what the earlier part of the
           essay described. The named resource should be a precise
@@ -206,8 +206,8 @@ export default function Content() {
           connected, outperforms three name-drops.
         </li>
         <li>
-          <strong>Closing — roughly 20 words.</strong> One sentence,
-          maybe two. The closing points forward — what you want to do
+          <strong>Closing - roughly 20 words.</strong> One sentence,
+          maybe two. The closing points forward - what you want to do
           with this continuation, what you are ready to bring, what you
           expect to find at Carolina that you cannot find elsewhere. Do
           not summarize. Do not moralize.
@@ -225,7 +225,7 @@ export default function Content() {
         basement in Durham and records oral histories from Black residents
         over seventy. I started as the kid who set up the folding chairs.
         Now I run the intake interviews. What I love about this work is
-        the way a life opens when you ask the right second question —
+        the way a life opens when you ask the right second question -
         never the first. People tell you the headline. They tell you the
         truth on the follow-up. Last month I interviewed a woman who
         integrated the lunch counter at a pharmacy two blocks from where
@@ -243,8 +243,8 @@ export default function Content() {
       </blockquote>
       <p>
         That essay works for several reasons worth naming. The opening
-        drops the reader into scene immediately — church basement, Durham,
-        folding chairs — rather than announcing a thesis. The development
+        drops the reader into scene immediately - church basement, Durham,
+        folding chairs - rather than announcing a thesis. The development
         shows specific practice: the second-question insight, the
         sandwich detail, the pharmacist's face. The UNC turn names two
         real resources (Wilson Library's Southern Historical Collection
@@ -264,7 +264,7 @@ export default function Content() {
       <p>
         The short answers sit underneath the two longer essays and run
         roughly 50 words each. The prompts vary year to year but tend to
-        surface texture rather than argument — a book that surprised you,
+        surface texture rather than argument - a book that surprised you,
         an issue you care about, a quality you bring to a classroom, an
         activity that feels like rest. Fifty words is two to four
         sentences. Do not try to write a tiny essay. Write the honest
@@ -274,7 +274,7 @@ export default function Content() {
         Coordinate the short answers with the longer essays so they do not
         repeat material. If your community essay is about oral histories
         in Durham, do not use a short answer to discuss your interest in
-        local history — pick a second axis of yourself. If one of your
+        local history - pick a second axis of yourself. If one of your
         250-word essays is already doing the academic fit work, the short
         answers should show the personal and domestic textures the essays
         could not reach. The file should read as multi-dimensional by the
@@ -336,8 +336,8 @@ export default function Content() {
           engagement.</strong> The elite scholarship programs are real
           draws, but "I hope to be a Morehead-Cain Scholar" is a sentence
           that says nothing. If you mention the program, mention the part
-          of the program — the summer stipends, the global experience
-          sequence, the mentorship model — that matches what you are
+          of the program - the summer stipends, the global experience
+          sequence, the mentorship model - that matches what you are
           actually trying to do.
         </li>
         <li>
@@ -353,7 +353,7 @@ export default function Content() {
       <p>
         UNC reads the supplements alongside the Common App personal
         statement. That changes what the supplements are for. The
-        personal statement is usually your most developed narrative — a
+        personal statement is usually your most developed narrative - a
         family story, an identity arc, a turning point. The UNC
         supplements are not the place to retell that story at half the
         length. They are the place to show material that did not fit in
@@ -371,7 +371,7 @@ export default function Content() {
       <p>
         The short answers do the most work on this front. They are small
         enough to carry the sides of you that the two longer essays did
-        not reach — a domestic preference, a small strong opinion, a
+        not reach - a domestic preference, a small strong opinion, a
         habit, a hobby your application does not otherwise mention. By
         the time the reader closes the file, they should feel they have
         met a specific person, not a resume and its narrator.

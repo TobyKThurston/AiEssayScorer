@@ -34,7 +34,7 @@ export default function Content() {
       <h2>Why Brown Reads This as a Place-Based Identity Essay</h2>
       <p>
         The prompt gives you the reading frame in its own opening clause.
-        Brown names "College Hill" as its own home — a specific neighborhood
+        Brown names "College Hill" as its own home - a specific neighborhood
         in Providence, physically elevated above the downtown, bounded by
         specific streets, populated by specific buildings. Then it asks you
         to reciprocate.
@@ -45,7 +45,7 @@ export default function Content() {
         believe. It asks about a place, and about how that place produced a
         way of seeing. College Hill is the literal-place phrase the prompt
         offers as a model. The essay works best when applicants match that
-        specificity with a literal place of their own — a block, a
+        specificity with a literal place of their own - a block, a
         building, a route, a kitchen, a room, a street.
       </p>
       <p>
@@ -81,7 +81,7 @@ export default function Content() {
           <strong>Evidence of that shaping in action.</strong> Claims about
           perspective are weightless without behavior. Admissions wants a
           moment, a routine, or a small decision that demonstrates the
-          perspective in motion — not a sentence announcing that you are
+          perspective in motion - not a sentence announcing that you are
           open-minded.
         </li>
         <li>
@@ -114,7 +114,7 @@ export default function Content() {
       <p>
         "Place or community" is intentionally elastic. Brown's wording
         protects applicants whose most formative home is not a hometown.
-        The elasticity matters — and so do its limits.
+        The elasticity matters - and so do its limits.
       </p>
       <p>
         A valid place or community can be a neighborhood, a building (a
@@ -135,8 +135,8 @@ export default function Content() {
       </p>
       <p>
         The easiest diagnostic: if you can draw a rough map of the place
-        in your notebook — here is the street, here is the door, here is
-        the table, here is where the light comes in — you have a place.
+        in your notebook - here is the street, here is the door, here is
+        the table, here is where the light comes in - you have a place.
         If you cannot, you have a theme.
       </p>
 
@@ -151,7 +151,7 @@ export default function Content() {
         <li>
           <strong>Drop the reader into the place with one specific image (about 50 words).</strong>{" "}
           Not an introduction. Not "I grew up in." A sentence that stages
-          a real moment in the actual place — a smell, a sound, a physical
+          a real moment in the actual place - a smell, a sound, a physical
           arrangement of people, a specific window or table. The reader
           should know by the second sentence that they are standing
           somewhere real.
@@ -169,14 +169,14 @@ export default function Content() {
         <li>
           <strong>The perspective or way-of-seeing it gave you (about 80 words).</strong>{" "}
           This is the essay's center of gravity. Name the specific habit
-          of thought the place produced. Then show it operating — a
+          of thought the place produced. Then show it operating - a
           moment in which you saw something the way your home taught you
           to see it, and noticed that not everyone would. Without this
           move the essay is a description. With it, the essay becomes an
           argument about how a place makes a mind.
         </li>
         <li>
-          <strong>How that shapes you now — or how it will on College Hill (about 40 words).</strong>{" "}
+          <strong>How that shapes you now - or how it will on College Hill (about 40 words).</strong>{" "}
           A brief turn outward. Do not overdo the Brown reference. A
           single line about how this way of seeing will travel with you
           is enough. The essay is about the place, not about Brown.
@@ -211,14 +211,14 @@ export default function Content() {
         Doña Carmen is having a hard month and someone should bring soup.
         I learned that information moves through a household by drift. At
         school, I am the person who notices the friend who has gone a
-        little too quiet at lunch — I picked up the ear for it on Howard
+        little too quiet at lunch - I picked up the ear for it on Howard
         Avenue, in a kitchen where nothing was ever announced. I expect
         College Hill will teach me to listen in new registers. I will
         bring the sideways ear with me."
       </blockquote>
       <p>
-        That draft works because it commits to one specific place —
-        third-floor, laundromat, Howard Avenue, four rooms — and names
+        That draft works because it commits to one specific place -
+        third-floor, laundromat, Howard Avenue, four rooms - and names
         one specific perspective (listening sideways, information as
         drift). The ritual is the Sunday kitchen. The shaping shows up in
         action at school, and the close turns briefly toward Brown
@@ -231,7 +231,7 @@ export default function Content() {
         Word count: roughly 240. That is deliberate. The strongest Brown
         community essays sit near the top of the word limit but never
         feel stretched. Each sentence earns its space by doing one of
-        four jobs — placing the reader, defining the ritual, naming the
+        four jobs - placing the reader, defining the ritual, naming the
         perspective, or showing the perspective at work.
       </p>
 
@@ -271,7 +271,7 @@ export default function Content() {
           An essay that claims a place shaped you without showing the
           recurring behavior that did the shaping reads as a claim
           without evidence. The Sunday dinner, the morning walk, the
-          weekly chore, the annual visit — the ritual is what makes the
+          weekly chore, the annual visit - the ritual is what makes the
           shaping credible.
         </li>
         <li>
@@ -302,7 +302,7 @@ export default function Content() {
         the Open Curriculum essay (how you would use Brown's curricular
         flexibility), a joy prompt (a shorter response on what brings you
         joy), this community essay, and one additional short response.
-        These essays should not overlap — in topic, in anchor image, or
+        These essays should not overlap - in topic, in anchor image, or
         in the dimension of you they reveal.
       </p>
       <p>
@@ -320,7 +320,7 @@ export default function Content() {
         A useful test: after you finish a draft, write down in one line
         what each Brown essay reveals about you. If two lines are
         similar, one of the essays is redundant. The community essay is
-        usually the one worth rewriting — it has the widest topical
+        usually the one worth rewriting - it has the widest topical
         range, so it is the easiest to point at an uncovered angle.
       </p>
 

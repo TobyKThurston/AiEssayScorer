@@ -47,7 +47,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-8 text-[17px] md:text-[19px] leading-[1.5] text-ink-2 max-w-[44ch]">
-              Get an honest admit % for every school on your list — in under a minute.
+              Get an honest admit % for every school on your list - in under a minute.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-5">
@@ -62,7 +62,7 @@ export function Hero() {
                 href="/essay-grader"
                 className="text-[14px] text-ink-2 hover:text-oxblood underline-offset-4 hover:underline whitespace-nowrap"
               >
-                or grade my essay — free
+                or grade my essay - free
               </Link>
             </div>
 
@@ -71,7 +71,7 @@ export function Hero() {
             </p>
           </div>
 
-          {/* RIGHT: editorial sidebar — admit rates table */}
+          {/* RIGHT: editorial sidebar - admit rates table */}
           <aside className="lg:pt-2">
             <div className="border-l-2 border-oxblood pl-6 md:pl-8 mb-6">
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-oxblood mb-2">

@@ -22,7 +22,7 @@ export default function Content() {
         Only use this section if it serves the rest of your application.
       </p>
       <p>
-        If you'd include the information anyway — in an activity description, an essay, a supplement — put it there. If you're writing in this field simply because it's open, delete it. The Common App does not reward you for filling every box.
+        If you'd include the information anyway - in an activity description, an essay, a supplement - put it there. If you're writing in this field simply because it's open, delete it. The Common App does not reward you for filling every box.
       </p>
       <p>
         Every 100 words you add is 100 words of work the reader has to do. Admissions officers are reading thousands of applications on a tight schedule. Extra reading without payoff does not make them think more of you; it makes them think less. Silence is often the strongest signal, and confident applications know when to stop writing.
@@ -38,10 +38,10 @@ export default function Content() {
           <strong>Unusual family or life circumstances that explain patterns in your transcript.</strong> A parent's serious illness, a family disruption, housing instability, caregiver responsibilities, or working significant hours to support your household. These are facts that reshape how a reader interprets your record.
         </li>
         <li>
-          <strong>A specific activity or award that didn't fit in the activities list.</strong> Some activities don't categorize cleanly — interdisciplinary research, hybrid roles, or projects that don't match the Common App's dropdowns. If an activity needs more than 150 characters of context to make sense, this is the place.
+          <strong>A specific activity or award that didn't fit in the activities list.</strong> Some activities don't categorize cleanly - interdisciplinary research, hybrid roles, or projects that don't match the Common App's dropdowns. If an activity needs more than 150 characters of context to make sense, this is the place.
         </li>
         <li>
-          <strong>COVID-specific impacts that shaped your high school experience.</strong> The dedicated COVID question has largely been retired, but if the pandemic materially changed your trajectory — lost opportunities, caregiving roles, medical impact — a brief note still makes sense here.
+          <strong>COVID-specific impacts that shaped your high school experience.</strong> The dedicated COVID question has largely been retired, but if the pandemic materially changed your trajectory - lost opportunities, caregiving roles, medical impact - a brief note still makes sense here.
         </li>
         <li>
           <strong>Non-traditional academic path.</strong> Homeschooling, a gap year, moving schools mid-year, attending multiple institutions, or taking a year of online school. Any pattern that looks irregular on paper but isn't.
@@ -67,7 +67,7 @@ export default function Content() {
           <strong>To "show more of who you are."</strong> That is what your essays are for. Additional information is not the place to audition your personality.
         </li>
         <li>
-          <strong>To explain a single bad grade in a single class.</strong> One B+ doesn't need a paragraph. The exception is if the grade is tied to something systemic — a period of illness, a family situation, a documented accommodation issue.
+          <strong>To explain a single bad grade in a single class.</strong> One B+ doesn't need a paragraph. The exception is if the grade is tied to something systemic - a period of illness, a family situation, a documented accommodation issue.
         </li>
         <li>
           <strong>To add a list of additional achievements.</strong> If they were significant, they'd be in the honors section. A long list of minor awards signals insecurity, not accomplishment.
@@ -79,7 +79,7 @@ export default function Content() {
           <strong>To apologize for the application.</strong> Never apologize for your record. Explain context, don't plead.
         </li>
         <li>
-          <strong>To re-describe an activity you already listed.</strong> If you need more space, use the space in the activities description more efficiently — not here.
+          <strong>To re-describe an activity you already listed.</strong> If you need more space, use the space in the activities description more efficiently - not here.
         </li>
       </ul>
 
@@ -97,12 +97,12 @@ export default function Content() {
       <h2>What Strong Additional Information Entries Actually Look Like</h2>
       <p>Here are three examples that demonstrate the right register.</p>
       <blockquote>
-        <strong>Example 1 — Medical context (97 words)</strong>
+        <strong>Example 1 - Medical context (97 words)</strong>
         <br /><br />
         In the spring of my sophomore year, I was diagnosed with mononucleosis and missed six weeks of school, including three weeks of final exams. My grades that semester (two Cs in courses I had previously scored A-minuses in) reflect that period rather than my typical academic performance. I made up the coursework over the summer through my school's credit recovery program and returned to straight As in junior year. My counselor can provide additional detail if useful.
       </blockquote>
       <blockquote>
-        <strong>Example 2 — Research project context (148 words)</strong>
+        <strong>Example 2 - Research project context (148 words)</strong>
         <br /><br />
         Independent Research: Computational Modeling of Protein Folding
         <br /><br />
@@ -117,12 +117,12 @@ export default function Content() {
         This project did not fit the activities list format because of the technical detail required to describe the methodology and outcomes accurately.
       </blockquote>
       <blockquote>
-        <strong>Example 3 — Additional awards (76 words)</strong>
+        <strong>Example 3 - Additional awards (76 words)</strong>
         <br /><br />
         Awards not listed in the Honors section due to space:
         <ul>
           <li>National Merit Commended Student (2024)</li>
-          <li>Regional Science Fair, 2nd place — Biochemistry division (2024)</li>
+          <li>Regional Science Fair, 2nd place - Biochemistry division (2024)</li>
           <li>State Mathematics League, top 5% statewide (2023, 2024)</li>
           <li>School Book Award in Classics, awarded to one junior annually (2024)</li>
           <li>National Latin Exam, Gold Medal, Level IV (2024)</li>
@@ -154,7 +154,7 @@ export default function Content() {
         <li>What the diagnosis is.</li>
         <li>When you were diagnosed.</li>
         <li>What accommodations you use (extended time, assistive technology, etc.).</li>
-        <li>Briefly, what it shapes about how you learn — particularly if it explains a pattern on your transcript.</li>
+        <li>Briefly, what it shapes about how you learn - particularly if it explains a pattern on your transcript.</li>
       </ul>
       <p>
         Do not editorialize. Do not describe your disability as a superpower, a defining strength, or a source of insight. If you want to write about those dimensions of your experience, the personal statement is the place. This section is context, not essay. A reader who wants to understand how a learning difference shaped your academic path will find what they need in four clean sentences.
@@ -165,7 +165,7 @@ export default function Content() {
         <li>Writing additional information as another essay, with a hook, a narrative arc, and a closing reflection.</li>
         <li>Being apologetic or defensive about any part of your record.</li>
         <li>Including information that's already visible elsewhere on the application.</li>
-        <li>Over-explaining a single incident — 300 words on one missed exam.</li>
+        <li>Over-explaining a single incident - 300 words on one missed exam.</li>
         <li>Making it emotional when it should be informational.</li>
         <li>Submitting a list of awards that aren't actually significant enough to list.</li>
         <li>Exceeding 500 words when 100 would do the job.</li>
@@ -174,10 +174,10 @@ export default function Content() {
 
       <h2>How This Differs From the School Report and Counselor Letter</h2>
       <p>
-        Your counselor has their own space to explain context. If your school closed for two months after a natural disaster, your counselor's letter and the school profile almost certainly cover it — you don't need to. If you spent junior year caring for a sick parent, your counselor may address it in their letter, which is usually more credible coming from them than from you.
+        Your counselor has their own space to explain context. If your school closed for two months after a natural disaster, your counselor's letter and the school profile almost certainly cover it - you don't need to. If you spent junior year caring for a sick parent, your counselor may address it in their letter, which is usually more credible coming from them than from you.
       </p>
       <p>
-        Before writing anything in this section, ask your counselor what they plan to address. Coordinate. If your counselor has it covered, stay silent. If the context is too personal for a counselor to address without your permission, you may be the right voice. Either way, avoid redundancy. Two accounts of the same event do not reinforce each other — they read as rehearsed.
+        Before writing anything in this section, ask your counselor what they plan to address. Coordinate. If your counselor has it covered, stay silent. If the context is too personal for a counselor to address without your permission, you may be the right voice. Either way, avoid redundancy. Two accounts of the same event do not reinforce each other - they read as rehearsed.
       </p>
 
       <h2>The Review Question</h2>
@@ -188,7 +188,7 @@ export default function Content() {
         If yes, keep it. Tighten it, but keep it.
       </p>
       <p>
-        If the answer is "it shows more of my personality," "it adds depth," "it gives a fuller picture," or "it felt important to include" — cut it. Those are reasons for essays, not for this field.
+        If the answer is "it shows more of my personality," "it adds depth," "it gives a fuller picture," or "it felt important to include" - cut it. Those are reasons for essays, not for this field.
       </p>
 
       <h2>What This Section Signals to Admissions</h2>
@@ -196,7 +196,7 @@ export default function Content() {
         How you use this section signals your judgment. That's what the admissions reader is actually evaluating here, not the content of what you write but the fact that you wrote it at all.
       </p>
       <p>
-        Applicants who fill the field with extra achievements and restated activities look like they're grasping. They read as insecure — as if the rest of the application isn't enough, so they're padding.
+        Applicants who fill the field with extra achievements and restated activities look like they're grasping. They read as insecure - as if the rest of the application isn't enough, so they're padding.
       </p>
       <p>
         Applicants who use the field strategically and sparingly, to close a gap that genuinely needs closing, look composed. They demonstrate that they understand what the application is and isn't, and they trust the rest of their materials to do their job.

@@ -4,7 +4,7 @@ import { Footer } from "@/design/Footer";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms of service for Ivy Admit — AI-powered college essay review and feedback tool.",
+  description: "Terms of service for Ivy Admit - AI-powered college essay review and feedback tool.",
   alternates: {
     canonical: "/terms",
   },

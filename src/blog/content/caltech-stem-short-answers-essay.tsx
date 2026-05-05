@@ -17,7 +17,7 @@ export default function Content() {
         set.
       </p>
       <p>
-        The supplement typically includes several short answers — the
+        The supplement typically includes several short answers - the
         prompts rotate year to year but cluster around the same themes:
         STEM academic interests, hands-on engagement with math or
         science, creative problem-solving, ethics in STEM, and often a
@@ -31,7 +31,7 @@ export default function Content() {
       <ul>
         <li>
           <strong>Genuine STEM obsession.</strong> Not interest, not
-          enthusiasm — obsession. The kind of engagement that shows up
+          enthusiasm - obsession. The kind of engagement that shows up
           as weekend reading, self-assigned problems, and rabbit holes
           pursued long after the class ended.
         </li>
@@ -45,7 +45,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Evidence of self-directed work.</strong> Caltech reads
-          heavily for what you have done without supervision — the
+          heavily for what you have done without supervision - the
           Arduino project no one assigned, the paper you read because
           the Wikipedia article confused you, the problem set your
           teacher refused to grade because it was not part of the
@@ -92,8 +92,8 @@ export default function Content() {
       <p>
         Some Caltech cycles include a prompt about a STEM-related topic,
         concept, or problem that has recently captured your attention
-        (often around 100–150 words). The easiest move — and the wrong
-        one — is to describe a topic you have read about in the news.
+        (often around 100–150 words). The easiest move - and the wrong
+        one - is to describe a topic you have read about in the news.
         Black holes, AI consciousness, CRISPR ethics, and quantum
         computing show up in roughly half of all submitted drafts and
         almost always read as topical.
@@ -104,7 +104,7 @@ export default function Content() {
         pooling on a plate, or the combinatorics problem their math
         teacher set on the last day of class, or the way an integral
         they thought they understood broke when the bounds included
-        zero — these applicants stand out. The topic does not need to
+        zero - these applicants stand out. The topic does not need to
         be important. It needs to be real.
       </p>
 
@@ -125,7 +125,7 @@ export default function Content() {
         explanation was right. Writing a program to solve a problem
         from your little brother's homework and then extending it to
         the general case. If the essay describes a project a teacher or
-        mentor directed, that is fine — but the strongest essays also
+        mentor directed, that is fine - but the strongest essays also
         show one detail you added that no one told you to add.
       </p>
 
@@ -144,7 +144,7 @@ export default function Content() {
         specific reading they have engaged with. The narrower and more
         concrete the question, the better. "Should the NIH continue to
         fund gain-of-function research?" is a real question. "Is AI
-        ethical?" is not a question — it is a genre. Treat the ethics
+        ethical?" is not a question - it is a genre. Treat the ethics
         prompt as a small problem with a specific answer you are
         willing to defend, not as a platform for even-handedness.
       </p>
@@ -157,7 +157,7 @@ export default function Content() {
       <ol>
         <li>
           <strong>Name the specific object of interest in the first
-          sentence.</strong> Not a field, not a category — the specific
+          sentence.</strong> Not a field, not a category - the specific
           problem, phenomenon, or question. The opening sentence is
           the filter.
         </li>
@@ -168,7 +168,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Land on a specific thought that the engagement
-          produced.</strong> Not a lesson, not a conclusion — a
+          produced.</strong> Not a lesson, not a conclusion - a
           particular idea that the work left you with and that a reader
           could not have predicted.
         </li>
@@ -201,7 +201,7 @@ export default function Content() {
       <p>
         That answer works because it names specific systems, cites a
         specific book, describes what the applicant actually did, and
-        closes on an honest statement of what the work produced — a
+        closes on an honest statement of what the work produced - a
         habit, not a proof.
       </p>
 
@@ -252,10 +252,10 @@ export default function Content() {
       <h2>How Caltech Differs From MIT</h2>
       <p>
         Many applicants apply to both. The essays should feel
-        different. MIT values breadth within a STEM identity — it wants
+        different. MIT values breadth within a STEM identity - it wants
         to see that you do things for pleasure, that you contribute to
         your community, and that you have faced challenges with
-        resourcefulness. Caltech values compression and depth — it
+        resourcefulness. Caltech values compression and depth - it
         wants to see that your intellectual life has a center of
         gravity and that you have spent real time at it.
       </p>
@@ -271,7 +271,7 @@ export default function Content() {
       <p>
         Before submitting, imagine handing your Caltech supplement to a
         current Caltech sophomore who is halfway through a Physics 1a
-        problem set. Would they read it and see a future classmate —
+        problem set. Would they read it and see a future classmate -
         someone who would be useful in a study group, who would
         contribute to the common room conversation, who would ask good
         questions in lab? If the supplement reads as a polite

@@ -36,7 +36,7 @@ export default function Content() {
         essay is the safe play. It is not. The arts essay is the default
         read, and the default read is not advantaged in the UC rubric. An
         applicant with four years of studio art and a portfolio has plenty of
-        other places in the application to document that work — the
+        other places in the application to document that work - the
         activities list, the Talent PIQ (#3), the Favorite Academic Subject
         PIQ (#6), the "anything else" section. Spending PIQ #2 on an art-class
         credential dump is often a quiet waste of the strongest creative-side
@@ -103,8 +103,8 @@ export default function Content() {
 
       <h2>The Three Creative Paths (and the Fourth, Hidden One)</h2>
       <p>
-        The prompt lists three paths — problem solving, original and
-        innovative thinking, and artistic — and then adds "to name a few,"
+        The prompt lists three paths - problem solving, original and
+        innovative thinking, and artistic - and then adds "to name a few,"
         which opens the door to a fourth. Most applicants do not realize the
         fourth exists.
       </p>
@@ -114,7 +114,7 @@ export default function Content() {
         default path, and it is crowded. Writing an artistic PIQ that stands
         out is possible, but you have to fight harder on specificity. If your
         artistic practice is the most specific and sustained thing in your
-        application, this path can still work — but only if the essay is
+        application, this path can still work - but only if the essay is
         about process, not credentials.
       </p>
       <p>
@@ -155,7 +155,7 @@ export default function Content() {
       <ol>
         <li>
           <strong>Name the creative practice, specifically (about 80 words).</strong>{" "}
-          Open by naming the thing. Not a grand abstraction — a concrete
+          Open by naming the thing. Not a grand abstraction - a concrete
           practice. What do you do, how often, since when, in what setting?
           Ground the reader inside your actual life in the first three or
           four sentences. Avoid thesis-statement openers about creativity in
@@ -174,7 +174,7 @@ export default function Content() {
         <li>
           <strong>Name what your creativity produces or reveals (about 80 words).</strong>{" "}
           The third move is the lift. What does your specific practice tend
-          to generate — solutions, objects, habits, ideas, perspectives? This
+          to generate - solutions, objects, habits, ideas, perspectives? This
           is where you connect the practice to an outcome without bragging.
           Stay concrete. "This approach has produced three working apps I
           have shipped to the family group chat" beats "This approach has
@@ -204,14 +204,14 @@ export default function Content() {
         started drifting six degrees left on every rotation. The dumb theory
         was that the motor was slightly tired. Obviously silly. But proving
         it wrong meant I had to measure the voltage curve over forty
-        rotations, which is how I noticed the drift was not constant — it
+        rotations, which is how I noticed the drift was not constant - it
         grew by exactly 0.3 degrees per run, which pointed at an integer
         overflow in the rotation counter two subsystems away. I would not
         have found that by starting with a smart guess. The bad-theory
         method works because it forces me to interact with the system
         before I impose an idea on it. My friends make fun of the notebooks
-        I keep for this — wrong theories on the left page, the falsifying
-        measurement on the right — but three of them have started doing it
+        I keep for this - wrong theories on the left page, the falsifying
+        measurement on the right - but three of them have started doing it
         with me. What it produces, more than working robots, is patience. I
         used to think creativity meant good ideas arriving fast. Now I think
         it means being willing to sit with a dumb idea long enough to learn
@@ -223,7 +223,7 @@ export default function Content() {
       </blockquote>
       <p>
         That example works because it commits to path 4. The topic sounds
-        technical — debugging — but the essay is about a specific mental
+        technical - debugging - but the essay is about a specific mental
         practice with a name, a concrete instance (the robotics arm), a
         visible process (the left-page/right-page notebooks), and a clear
         through-line into the rest of the writer's life. The reader leaves
@@ -303,7 +303,7 @@ export default function Content() {
       <p>
         Before you commit to a topic for PIQ #2, look at what your other
         three PIQs are already carrying. If you have picked the Talent PIQ
-        (#3) and the talent is artistic — painting, music, theatre, dance —
+        (#3) and the talent is artistic - painting, music, theatre, dance -
         you almost certainly should not use PIQ #2 for the same art. That
         repeats the lane. If you have picked the Favorite Academic Subject
         PIQ (#6) and the subject is art history, creative writing, or a
@@ -314,7 +314,7 @@ export default function Content() {
       <p>
         The inverse is useful too. If your other three PIQs are packed with
         structured accomplishment, a creative PIQ about an odd personal
-        practice — a cooking habit, a debugging method, a coaching style —
+        practice - a cooking habit, a debugging method, a coaching style -
         adds a dimension the file otherwise lacks. Coordinate before
         drafting. Pick the topic that fills the gap, not the topic that
         repeats the strength.
@@ -327,8 +327,8 @@ export default function Content() {
         </Link>{" "}
         to check whether your creative practice is actually showing up as
         process rather than product. For the broader strategy across all
-        eight PIQs — which four to pick, how to avoid overlap, and how the
-        rubric actually weights depth against breadth — read our{" "}
+        eight PIQs - which four to pick, how to avoid overlap, and how the
+        rubric actually weights depth against breadth - read our{" "}
         <Link
           href="/blog/uc-personal-insight-questions-guide"
           className="text-oxblood hover:underline"

@@ -95,7 +95,8 @@ export default async function OddsResultPage({
                 Subscribe to view your forecast
               </h2>
               <p className="mt-3 text-[14px] text-ink-2">
-                $9/mo unlocks your full odds + tier per school, plus the essay grader and all tools.
+                $7/mo unlocks your full odds + tier per school, the essay reviewer
+                tuned to each school you applied to, and every premium tool.
               </p>
               <Link
                 href="/odds"

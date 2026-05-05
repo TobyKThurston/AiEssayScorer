@@ -19,7 +19,7 @@ export default function Content() {
 
       <h2>What BC Is Actually Asking</h2>
       <p>
-        BC is a Jesuit, Catholic research university — and unlike
+        BC is a Jesuit, Catholic research university - and unlike
         Georgetown, which leans D.C.-political in ethos, BC leans
         into Ignatian formation as a daily practice. You do not need
         to be Catholic to thrive there or to write a strong essay.
@@ -32,7 +32,7 @@ export default function Content() {
         <li>
           <strong>Awareness of the Jesuit vocabulary.</strong> Cura
           personalis. Men and women for others. Magis. AMDG. These
-          are not decorative phrases — they describe how BC thinks
+          are not decorative phrases - they describe how BC thinks
           about teaching.
         </li>
         <li>
@@ -41,12 +41,12 @@ export default function Content() {
           person, not just acquiring credentials.
         </li>
         <li>
-          <strong>Specific knowledge of BC programs</strong> — not
+          <strong>Specific knowledge of BC programs</strong> - not
           "I like Boston."
         </li>
       </ul>
 
-      <h2>The Jesuit Vocabulary — Used Correctly</h2>
+      <h2>The Jesuit Vocabulary - Used Correctly</h2>
       <p>
         These terms get dropped in applications constantly. Used
         well, they signal real engagement. Used wrong, they read as
@@ -54,23 +54,23 @@ export default function Content() {
       </p>
       <ul>
         <li>
-          <strong>Cura personalis</strong> — "care for the whole
+          <strong>Cura personalis</strong> - "care for the whole
           person." Not a slogan for small classes. It's the idea
           that a teacher is responsible for a student's
           intellectual, moral, and spiritual development together.
         </li>
         <li>
-          <strong>Men and women for others</strong> — the
+          <strong>Men and women for others</strong> - the
           expectation that a BC education is formation toward
           service. The question the phrase asks: what are you going
           to do with what you learn?
         </li>
         <li>
-          <strong>Magis</strong> — "the more." Not "do more stuff."
+          <strong>Magis</strong> - "the more." Not "do more stuff."
           The orientation toward the greater good in any choice.
         </li>
         <li>
-          <strong>Discernment</strong> — a specifically Ignatian
+          <strong>Discernment</strong> - a specifically Ignatian
           process of choosing by paying attention to interior
           movement over time. If you use it, use it right.
         </li>
@@ -87,7 +87,7 @@ export default function Content() {
         <li>
           <strong>Perspectives Program.</strong> Integrated
           first-year sequence in philosophy, theology, literature,
-          and history — a single Great Books conversation across
+          and history - a single Great Books conversation across
           disciplines.
         </li>
         <li>
@@ -117,7 +117,7 @@ export default function Content() {
         Augustine and serving in Roxbury in the same semester is
         the kind of structured uncertainty I want next. Cura
         personalis, to me, means a professor who will ask what I
-        did on Thursday — and then ask what it changed."
+        did on Thursday - and then ask what it changed."
       </blockquote>
       <p>
         Why it works: names a specific BC program, uses a Jesuit
@@ -151,8 +151,8 @@ export default function Content() {
         <li>
           <strong>Pretending to be Catholic.</strong> Worse than not
           engaging with Jesuit identity is performing a faith you
-          don't have. Honest engagement from any tradition — or
-          none — lands better than pretending.
+          don't have. Honest engagement from any tradition - or
+          none - lands better than pretending.
         </li>
         <li>
           <strong>Naming "community" with no specifics.</strong>{" "}
@@ -170,7 +170,7 @@ export default function Content() {
           sentence without looking it up?
         </li>
         <li>
-          Have I named at least one BC-specific program — not a
+          Have I named at least one BC-specific program - not a
           generic feature of any university?
         </li>
         <li>

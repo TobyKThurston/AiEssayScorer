@@ -12,7 +12,7 @@ const FEATURES = [
     num: "02",
     title: "Accepted-app patterns",
     body:
-      "Compare against structural patterns from thousands of real Ivy and T20 acceptances — not generic best-practice advice.",
+      "Compare against structural patterns from thousands of real Ivy and T20 acceptances - not generic best-practice advice.",
   },
   {
     num: "03",
@@ -24,13 +24,13 @@ const FEATURES = [
     num: "04",
     title: "Line-by-line edits",
     body:
-      "Specific rewrites with the original, the suggested change, and a one-line rationale — so you can accept or reject each one.",
+      "Specific rewrites with the original, the suggested change, and a one-line rationale - so you can accept or reject each one.",
   },
   {
     num: "05",
     title: "Evidence checklist",
     body:
-      "Flags claims without backing. Readers want scenes, verbs, and artifacts — not adjectives.",
+      "Flags claims without backing. Readers want scenes, verbs, and artifacts - not adjectives.",
   },
   {
     num: "06",

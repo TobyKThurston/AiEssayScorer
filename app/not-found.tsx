@@ -24,7 +24,7 @@ export default function NotFound() {
       <Nav />
       <main className="container-editorial pt-20 md:pt-28 pb-24 md:pb-32">
         <div className="grid grid-cols-12 gap-6 md:gap-10">
-          {/* Numeral column — editorial drop */}
+          {/* Numeral column - editorial drop */}
           <div className="col-span-12 md:col-span-5 lg:col-span-4">
             <div className="flex items-baseline gap-4 md:block">
               <span className="eyebrow">
@@ -48,7 +48,7 @@ export default function NotFound() {
             </h1>
             <p className="text-[17px] md:text-[18px] leading-[1.6] text-ink-2 max-w-[52ch] mb-10">
               The address you followed may have changed, moved, or never existed in the first place. No
-              shame in a wrong turn — below are the best places to pick the thread back up.
+              shame in a wrong turn - below are the best places to pick the thread back up.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-14">
@@ -56,7 +56,7 @@ export default function NotFound() {
                 Back to home
               </Link>
               <Link href="/try" className="btn btn-lg btn-ghost">
-                Score an essay — free
+                Score an essay - free
               </Link>
             </div>
 

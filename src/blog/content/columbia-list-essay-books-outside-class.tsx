@@ -39,9 +39,9 @@ export default function Content() {
         admissions has for whether you will flourish in the Core Curriculum.
       </p>
       <p>
-        Columbia's Core — Literature Humanities, Contemporary Civilization, Art
+        Columbia's Core - Literature Humanities, Contemporary Civilization, Art
         Humanities, Music Humanities, Frontiers of Science, University Writing
-        — is the central fact of a Columbia College education. Every
+        - is the central fact of a Columbia College education. Every
         undergraduate reads the same books, looks at the same paintings,
         listens to the same music, and argues about the same texts across a
         small seminar table. The Core does not work for students who consume
@@ -98,7 +98,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Coherence that reads as you.</strong> The list should have a
-          throughline — not a theme per se, but a recognizable taste. The
+          throughline - not a theme per se, but a recognizable taste. The
           shape of your mind should be visible through the choices. A random
           pile of prestige titles has no shape. A curated set with a visible
           sensibility does.
@@ -123,9 +123,9 @@ export default function Content() {
       <p>
         Two lists can contain the exact same ten items and leave different
         impressions. Order matters. Annotation matters. The tiny revelations
-        you allow through — one item that is slightly embarrassing, one that
+        you allow through - one item that is slightly embarrassing, one that
         is more specific than it needs to be, one that shows you read a long
-        thing on a boring topic because you wanted to — do the work. A
+        thing on a boring topic because you wanted to - do the work. A
         perfectly prestige-coded list of ten canonical titles reads as
         performance. A tight, opinionated, slightly specific list beats a
         prestige list every time.
@@ -156,7 +156,7 @@ export default function Content() {
           <strong>Bracket with 1 to 2 sentences of framing that reveal your
           throughline.</strong> Roughly 40 to 50 words. This is the one place
           prose appears. It is not a thesis. It is a short sentence that tells
-          the reader how to read the list — what connects these items in your
+          the reader how to read the list - what connects these items in your
           mind.{" "}
           <em>
             Job: give the list a spine. Failure mode: a generic sentence
@@ -167,7 +167,7 @@ export default function Content() {
         <li>
           <strong>The list itself with minimal annotation.</strong> Roughly
           100 words. Title and author or creator. Optionally one specific
-          detail — a season, a volume, a specific essay within a collection.
+          detail - a season, a volume, a specific essay within a collection.
           No paragraph-long descriptions. The list should read quickly.{" "}
           <em>
             Job: let specific titles do the work. Failure mode: long
@@ -185,7 +185,7 @@ export default function Content() {
       </p>
       <p>
         <strong>Annotated.</strong> One line per entry, specific. "John
-        McPhee, 'The Control of Nature' — read three times, still the best
+        McPhee, 'The Control of Nature' - read three times, still the best
         book about engineering and hubris I know." The annotation is short
         and pointed. It does not explain the book. It reveals something about
         why you chose it, often sideways. The failure mode is turning each
@@ -222,7 +222,7 @@ export default function Content() {
         <em>How to Do Nothing</em>; Italo Calvino, <em>Invisible Cities</em>;
         Ed Yong, <em>An Immense World</em>.<br />
         Podcasts: <em>99% Invisible</em> (specifically the season on
-        maintenance); <em>In Our Time</em>, Melvyn Bragg — the episode on
+        maintenance); <em>In Our Time</em>, Melvyn Bragg - the episode on
         Ordinary Language Philosophy I have listened to four times.<br />
         Essays: Jia Tolentino, 'Always Be Optimizing.' George Saunders,
         'Braindead Megaphone.'<br />
@@ -232,8 +232,8 @@ export default function Content() {
         One graphic novel: <em>Building Stories</em>, Chris Ware."
       </blockquote>
       <p>
-        That list works because it has a visible throughline — the framing
-        sentence names it without overexplaining — and because the entries are
+        That list works because it has a visible throughline - the framing
+        sentence names it without overexplaining - and because the entries are
         specific enough to be disprovable. "The season on maintenance" is
         either a real thing you listened to or it isn't. "The Morgan Library's
         William Blake rooms" is either a real place you visited or it isn't.
@@ -245,7 +245,7 @@ export default function Content() {
         Notice the small risks. A YouTube channel sits next to Italo Calvino.
         A graphic novel appears after philosophy. The list does not perform
         seriousness by excluding what the writer actually consumes. A reader
-        finishes it with a clear sense of a mind — one that cares about
+        finishes it with a clear sense of a mind - one that cares about
         infrastructure, attention, the texture of the physical world, and the
         places where technical and aesthetic thinking overlap. That reader
         can imagine this applicant in a Lit Hum seminar and a Frontiers of
@@ -302,7 +302,7 @@ export default function Content() {
         <li>
           <strong>No throughline.</strong> A list with no framing and no
           visible connective tissue reads as a randomized pull. Even a
-          one-sentence orientation — what you think these items share — turns
+          one-sentence orientation - what you think these items share - turns
           inventory into portrait.
         </li>
       </ul>
@@ -315,7 +315,7 @@ export default function Content() {
         lists of what you are currently reading or watching or listening to,
         and similar prompts aimed at slicing your intellectual life from
         different angles. Check the current application for the exact wording
-        — Columbia revises the list questions regularly — but the principle
+        - Columbia revises the list questions regularly - but the principle
         is constant: the lists are meant to show different angles of you.
       </p>
       <p>
@@ -327,7 +327,7 @@ export default function Content() {
       <p>
         Second, coordinate the shape of the lists. The intellectual
         development list is the one that reads as the settled furniture of
-        your mind — the stuff you return to. A "what are you reading" list is
+        your mind - the stuff you return to. A "what are you reading" list is
         current and in-motion. A current-events or news-sources list shows
         how you stay informed. Think of them as three sittings of the same
         person in different light, not three tries at the same portrait.

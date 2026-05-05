@@ -41,7 +41,7 @@ export default function Content() {
         doing the job.
       </p>
       <p>
-        The city is allowed to appear — but only as a wrapper around a
+        The city is allowed to appear - but only as a wrapper around a
         specific program feature. "I want to do fieldwork in the Bronx
         through Steinhardt's Applied Psychology program" is a city mention
         that works. "I want to be in New York because it inspires me" is
@@ -64,7 +64,7 @@ export default function Content() {
           <strong>Gallatin:</strong> the self-designed concentration
           structure, the required thesis, and the Gallatin Arts Festival.
           If you apply to Gallatin, you must show you can design a
-          concentration — not just that you like "freedom."
+          concentration - not just that you like "freedom."
         </li>
         <li>
           <strong>Tandon:</strong> Vertically Integrated Projects, the
@@ -84,7 +84,7 @@ export default function Content() {
       <h2>Examples That Work</h2>
       <blockquote>
         "I'm applying to Gallatin because I want to build a concentration
-        around food systems and urban policy — drawing on CAS's Food Studies
+        around food systems and urban policy - drawing on CAS's Food Studies
         department, Wagner's public policy electives, and a Tisch film
         minor to document the work. Gallatin's thesis requirement is the
         reason I'm applying; I want a year to produce something real, not
@@ -126,7 +126,7 @@ export default function Content() {
       <p>
         Open your draft and do a find-and-replace: swap "NYU" for
         "Columbia," and swap the school name for "Columbia College." If the
-        essay still reads the same, you have not written a Why NYU essay —
+        essay still reads the same, you have not written a Why NYU essay -
         you have written a why-any-school-in-New-York essay. Rewrite until
         the swap breaks the sentences.
       </p>

@@ -1,4 +1,4 @@
-# Ivy Admit — AI College Essay Review
+# Ivy Admit - AI College Essay Review
 
 Production AI web app that scores college admissions essays against a 100-point rubric, generates line-by-line edits, and ships a suite of 20 specialized writing tools. Built solo, end-to-end.
 
@@ -10,10 +10,10 @@ Production AI web app that scores college admissions essays against a 100-point 
 
 Students paste an essay and get, in under 60 seconds:
 
-- **A scored rubric** — 100 points split across content, structure, voice, school fit, and grammar, calibrated to admissions-officer standards.
-- **Line-by-line rewrites** — concrete suggestions tied to actual quotes from the draft, with reasoning.
-- **An admissions-officer view** — first-impression verdict, strengths, concerns, and per-school fit notes when target schools are provided.
-- **A 20-tool toolbox** — hook generator, prompt deconstructor, cliché detector, "Why This College" brainstormer, AO simulator, activity rewriter, polish pass, and more. Each one is a focused, single-purpose AI utility with its own page, prompt, and SEO surface.
+- **A scored rubric** - 100 points split across content, structure, voice, school fit, and grammar, calibrated to admissions-officer standards.
+- **Line-by-line rewrites** - concrete suggestions tied to actual quotes from the draft, with reasoning.
+- **An admissions-officer view** - first-impression verdict, strengths, concerns, and per-school fit notes when target schools are provided.
+- **A 20-tool toolbox** - hook generator, prompt deconstructor, cliché detector, "Why This College" brainstormer, AO simulator, activity rewriter, polish pass, and more. Each one is a focused, single-purpose AI utility with its own page, prompt, and SEO surface.
 
 The full authenticated editor adds version history, multi-essay management, streaming rewrites, and a school-fit panel. Free public scorer sits at `/try`; the editor lives behind Supabase auth at `/editor`.
 
@@ -48,7 +48,7 @@ The full authenticated editor adds version history, multi-essay management, stre
 ## Project layout
 
 ```
-app/                  Next.js routes — landing, /try, /editor, /tools/[slug], /blog, /api/*
+app/                  Next.js routes - landing, /try, /editor, /tools/[slug], /blog, /api/*
   api/                20 tool endpoints + rate-essay, rewrite-essay, chat, Stripe checkout, Supabase tokens
 src/
   Landing/            Marketing site, hero, FAQ, social proof
@@ -86,9 +86,9 @@ npm run lint     # eslint
 
 ## Engineering choices worth calling out
 
-- **Prompt rigor over model size.** The rate-essay prompt is a multi-section rubric with explicit point bands and calibration ("most essays should score 60–85") — chosen over a vaguer prompt to keep scoring consistent across drafts.
+- **Prompt rigor over model size.** The rate-essay prompt is a multi-section rubric with explicit point bands and calibration ("most essays should score 60–85") - chosen over a vaguer prompt to keep scoring consistent across drafts.
 - **Streaming where it matters.** Tools that produce prose stream so users see output immediately; analytical tools return one structured JSON payload so the UI can render real components instead of parsed text.
-- **Public surface as growth engine.** Each tool is its own indexable page with unique metadata, FAQ schema, and persona-specific copy — programmatic SEO on a typed registry rather than hand-rolled pages.
+- **Public surface as growth engine.** Each tool is its own indexable page with unique metadata, FAQ schema, and persona-specific copy - programmatic SEO on a typed registry rather than hand-rolled pages.
 - **Tight free → paid ladder.** Free scorer captures intent; the editor and high-volume tools sit behind subscription gates enforced server-side via Supabase + Stripe.
 
 ---

@@ -26,10 +26,10 @@ export default function Content() {
       <p>
         125 words is roughly six to nine sentences. It is a paragraph, not an
         essay. Every move you make must earn its word count. The prompt looks
-        simple — "why a B.S. at Yale" — and that simplicity is the trap. The
+        simple - "why a B.S. at Yale" - and that simplicity is the trap. The
         applicants who treat this as a generic "why engineering" box lose the
-        seat. The applicants who read each word of the prompt literally —
-        <em> B.S.</em>, <em>at Yale</em> — write the answer Yale is actually
+        seat. The applicants who read each word of the prompt literally -
+        <em> B.S.</em>, <em>at Yale</em> - write the answer Yale is actually
         asking for.
       </p>
 
@@ -52,7 +52,7 @@ export default function Content() {
         School of Engineering and Applied Science (SEAS) is small. It offers
         only eight undergraduate majors. It is physically and socially embedded
         in the rest of Yale College. Engineering students live in the same
-        residential colleges as theater majors, historians, and economists —
+        residential colleges as theater majors, historians, and economists -
         spread across all fourteen colleges, not clustered in an engineering
         dorm. In several majors, students choose between a B.S. and a B.A.
         track, and the choice is deliberate.
@@ -92,7 +92,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Genuine interest in cross-disciplinary work.</strong> Yale
-          allows engineering majors to cross-list with fields outside SEAS —
+          allows engineering majors to cross-list with fields outside SEAS -
           pairing Chemical Engineering with Art, Mechanical Engineering with a
           language, CS with Music. That is unusual. A strong essay gestures at
           a second interest that engineering at Yale would intersect with,
@@ -101,7 +101,7 @@ export default function Content() {
         <li>
           <strong>Self-direction.</strong> Small engineering programs give
           undergraduates more access to faculty, maker space, and research
-          earlier — but only if the student actually walks in and asks. The
+          earlier - but only if the student actually walks in and asks. The
           reader is checking whether you sound like someone who would use the
           Center for Engineering Innovation & Design (CEID) at 11 p.m. on a
           Tuesday, or someone who would wait to be invited.
@@ -110,7 +110,7 @@ export default function Content() {
           <strong>Readiness for the residential-college social model.</strong>{" "}
           Your lab partners and your dinner table will not be the same people.
           The reader is quietly checking whether you understand that Yale
-          engineers are not tribal — they are integrated into the rest of the
+          engineers are not tribal - they are integrated into the rest of the
           college through the residential system.
         </li>
         <li>
@@ -136,7 +136,7 @@ export default function Content() {
       </p>
       <p>
         You cannot list clubs. High-school robotics, Science Olympiad, the app
-        you built over the summer, the three Python courses on Coursera — none
+        you built over the summer, the three Python courses on Coursera - none
         of that belongs in the Yale engineering supplement. The prompt is not
         asking what you have already done. It is asking what you want to do
         here, specifically. Your activities section and your Common App essay
@@ -162,20 +162,20 @@ export default function Content() {
       <ol>
         <li>
           <strong>
-            Move 1 — The specific reason this major, in this institutional
+            Move 1 - The specific reason this major, in this institutional
             context, is the right fit (~50 words).
           </strong>{" "}
           The job here is to name the major, name the B.S. track if you are
           choosing it, and state what about Yale's small, liberal-arts context
           makes this the right environment for that specific degree. The
           failure mode is vagueness: "Yale's culture of inquiry" is nothing.
-          The signal you are after is concrete — a reason engineering at Yale
+          The signal you are after is concrete - a reason engineering at Yale
           is better than engineering at any other top-ten school for{" "}
           <em>your</em> goals.
         </li>
         <li>
           <strong>
-            Move 2 — A named Yale engineering resource and what you would do
+            Move 2 - A named Yale engineering resource and what you would do
             with it (~50 words).
           </strong>{" "}
           The job here is to prove you have looked past the homepage. Name one
@@ -187,11 +187,11 @@ export default function Content() {
         </li>
         <li>
           <strong>
-            Move 3 — A short closing beat tying engineering to your wider
+            Move 3 - A short closing beat tying engineering to your wider
             intellectual life (~25 words).
           </strong>{" "}
           The job of the closing is to land the "why Yale specifically"
-          question — to show that engineering for you is not a walled garden,
+          question - to show that engineering for you is not a walled garden,
           and that Yale's structural choice to embed engineering inside a
           liberal-arts college is exactly the structure you want. The failure
           mode is the "I am excited to contribute" closer, which says nothing
@@ -209,13 +209,13 @@ export default function Content() {
       <h2>What a Strong Yale Engineering Essay Actually Looks Like</h2>
       <p>
         Here is the shape of a response that works inside 125 words. This is
-        fictional — it is not from a real applicant — but it captures the
+        fictional - it is not from a real applicant - but it captures the
         density, specificity, and restraint the strongest versions share:
       </p>
       <blockquote>
         "I want the B.S. in Chemical Engineering because the two problems I
-        keep returning to — catalyst design for low-temperature ammonia
-        synthesis and the translation gap between a reactor and a farmer — are
+        keep returning to - catalyst design for low-temperature ammonia
+        synthesis and the translation gap between a reactor and a farmer - are
         not solvable from one side. Yale is the only top engineering program
         where I can build the reactor in the CEID at 1 a.m. and then walk
         across campus to an agrarian-studies seminar the next morning. I would
@@ -239,7 +239,7 @@ export default function Content() {
         Notice what the paragraph does <em>not</em> do. It does not explain
         why the applicant likes chemistry. It does not list Coursera classes.
         It does not promise to contribute to the Yale community. It does not
-        hedge. Every sentence is institutionally specific — pull the word
+        hedge. Every sentence is institutionally specific - pull the word
         "Yale" out and replace it with "Cornell" or "Stanford" and the
         paragraph stops making sense. That is the test.
       </p>
@@ -270,7 +270,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Listing engineering clubs from high school.</strong> FRC
-          robotics, your TSA chapter, the hackathon you ran — admissions has
+          robotics, your TSA chapter, the hackathon you ran - admissions has
           already read this in your activities list. Do not repeat it in 125
           words you cannot spare.
         </li>
@@ -283,8 +283,8 @@ export default function Content() {
         </li>
         <li>
           <strong>Naming five resources and using none of them.</strong> A
-          list of Yale things — "I am drawn to CEID, Tsai CITY, SEAS, the
-          residential colleges, and Yale's interdisciplinarity" — is worse
+          list of Yale things - "I am drawn to CEID, Tsai CITY, SEAS, the
+          residential colleges, and Yale's interdisciplinarity" - is worse
           than naming one and describing what you would do with it. The
           resource-dump is the second most common failure mode after
           genericity.
@@ -311,7 +311,7 @@ export default function Content() {
           <strong>Copy-pasting the Yale "Why Yale" essay.</strong> Engineering
           applicants also write the separate 125-word "Why Yale" supplement.
           These two essays must not overlap. The Why Yale is about Yale as a
-          whole — residential colleges, intellectual community, specific Yale
+          whole - residential colleges, intellectual community, specific Yale
           College programs. The engineering supplement is narrowly about the
           B.S. and SEAS. If the same sentence could appear in both, one of
           them is wasted.
@@ -324,18 +324,18 @@ export default function Content() {
         Yale applicants. You are responsible for the standard Yale "Why Yale"
         supplement (125 words), the Yale community essay (roughly 400 words),
         the short takes (a handful of very short one-to-two-sentence answers),
-        and — only if you indicate engineering — this engineering-specific
+        and - only if you indicate engineering - this engineering-specific
         125-word prompt. That is a lot of text at short word counts, and the
         pieces must coordinate.
       </p>
       <p>
         The coordination rule is simple: each essay owns a different layer of
-        your fit. The Why Yale essay owns the case for Yale as a college —
+        your fit. The Why Yale essay owns the case for Yale as a college -
         residential life, intellectual culture, the specific Yale College
         programs you would use outside your major. The community essay owns
-        your relational self — how you show up for people, what kind of
+        your relational self - how you show up for people, what kind of
         community you belong to now, what kind you would build. The
-        engineering supplement owns the technical and academic case — the
+        engineering supplement owns the technical and academic case - the
         specific major, the B.S. track, SEAS, CEID, Tsai CITY, the
         cross-listed coursework. If any of those layers leak into the wrong
         essay, you are paying twice for the same signal and leaving another
@@ -343,7 +343,7 @@ export default function Content() {
       </p>
       <p>
         The most common leak is the engineering supplement drifting into
-        general-Yale enthusiasm — residential colleges, a cappella groups,
+        general-Yale enthusiasm - residential colleges, a cappella groups,
         Branford dining hall. Save those for the Why Yale. The engineering
         supplement should read like a document written by a future engineer,
         not a future freshman. The second most common leak is the Why Yale
@@ -357,7 +357,7 @@ export default function Content() {
         engineering applicants. The Yale applicant pool at large is not all
         technical. The engineering pool within it is. Your essay is read
         alongside other BME, Chemical, CS, and Mechanical applicants. The
-        specificity bar inside that narrower pool is high — and the applicants
+        specificity bar inside that narrower pool is high - and the applicants
         who stand out are almost always the ones who committed to one
         technical problem, one named resource, and one reason that Yale's
         integrated-in-a-liberal-arts-college structure is the environment in

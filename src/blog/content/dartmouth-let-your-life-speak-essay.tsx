@@ -16,7 +16,7 @@ export default function Content() {
 
       <h2>What "Let Your Life Speak" Actually Means</h2>
       <p>
-        The phrase comes from the Quaker tradition of testimony — the idea that faith is made visible through action rather than declaration. In Parker Palmer's book of the same name, the phrase is explained as a discipline of listening: letting the concrete details of your life reveal what matters to you, rather than imposing a story on top of them.
+        The phrase comes from the Quaker tradition of testimony - the idea that faith is made visible through action rather than declaration. In Parker Palmer's book of the same name, the phrase is explained as a discipline of listening: letting the concrete details of your life reveal what matters to you, rather than imposing a story on top of them.
       </p>
       <p>
         For a college essay, this framing is unusually specific. It means:
@@ -27,7 +27,7 @@ export default function Content() {
         <li><strong>Trust that specifics carry meaning without being explained.</strong> The Quaker idea is that meaning emerges from attention, not from commentary. If your essay is heavy on conclusions, you are working against the prompt's own spirit.</li>
       </ul>
       <p>
-        An essay that ends with "this is why I value hard work" is the opposite of what "Let your life speak" is asking for. An essay that describes, in specific detail, how your father repaired the same truck for fifteen years, what the garage smelled like in winter, and what you did while he worked — and leaves the conclusion unstated — is doing what the prompt is asking for.
+        An essay that ends with "this is why I value hard work" is the opposite of what "Let your life speak" is asking for. An essay that describes, in specific detail, how your father repaired the same truck for fifteen years, what the garage smelled like in winter, and what you did while he worked - and leaves the conclusion unstated - is doing what the prompt is asking for.
       </p>
 
       <h2>What "Environment" Means in This Prompt</h2>
@@ -40,10 +40,10 @@ export default function Content() {
       <ul>
         <li>A specific house or apartment and the particular way your family lived in it</li>
         <li>A specific neighborhood, with its specific textures and its specific routines</li>
-        <li>A specific working environment a parent brought you into — a restaurant, a farm, a garage, a medical practice, a small shop</li>
+        <li>A specific working environment a parent brought you into - a restaurant, a farm, a garage, a medical practice, a small shop</li>
         <li>A specific religious or cultural institution and the way its rhythms structured your week</li>
-        <li>A specific landscape — a coastline, a forest, a farming town — and the relationship your family had with it</li>
-        <li>A specific cross-cultural space — a household where two traditions actively coexisted, with specific moments of translation or friction</li>
+        <li>A specific landscape - a coastline, a forest, a farming town - and the relationship your family had with it</li>
+        <li>A specific cross-cultural space - a household where two traditions actively coexisted, with specific moments of translation or friction</li>
       </ul>
       <p>
         Whatever environment you choose, the essay should make it concrete enough that the reader feels they have been there. If your environment could describe any middle-class suburb or any immigrant family, it is not yet specific enough.
@@ -55,7 +55,7 @@ export default function Content() {
       </p>
       <ol>
         <li><strong>Open inside a specific scene from the environment (60–90 words).</strong> Not a claim about the environment. A moment inside it. A detail that another writer wouldn't think to name.</li>
-        <li><strong>Expand the scene into a pattern (80–120 words).</strong> This is where you show that the opening moment is part of a broader texture — the way this kind of scene happened repeatedly, the specific habit or practice that the environment produced in you, the thing you noticed without being taught.</li>
+        <li><strong>Expand the scene into a pattern (80–120 words).</strong> This is where you show that the opening moment is part of a broader texture - the way this kind of scene happened repeatedly, the specific habit or practice that the environment produced in you, the thing you noticed without being taught.</li>
         <li><strong>Close with a small, quiet line that points to the present without over-explaining (40–60 words).</strong> Not a lesson. Not a transition to Dartmouth. A sentence that suggests, through concrete detail, what you carry from the environment now.</li>
       </ol>
       <p>
@@ -67,9 +67,9 @@ export default function Content() {
         The strongest Dartmouth essays on this prompt share four features:
       </p>
       <ul>
-        <li><strong>Physical specificity.</strong> They name actual objects, sounds, smells, or rhythms from the environment. Not generic images — specific ones. The sound of a specific kind of wind, the smell of a specific spice, the light at a specific time of day.</li>
+        <li><strong>Physical specificity.</strong> They name actual objects, sounds, smells, or rhythms from the environment. Not generic images - specific ones. The sound of a specific kind of wind, the smell of a specific spice, the light at a specific time of day.</li>
         <li><strong>Restraint.</strong> They don't explain what the environment taught them. They show the environment and trust the reader to understand what kind of person would emerge from it.</li>
-        <li><strong>At least one detail that complicates the environment.</strong> Not conflict for drama, but an honest acknowledgment that the environment was layered — that something about it was hard, strange, or unresolved.</li>
+        <li><strong>At least one detail that complicates the environment.</strong> Not conflict for drama, but an honest acknowledgment that the environment was layered - that something about it was hard, strange, or unresolved.</li>
         <li><strong>A closing sentence that lands in the present.</strong> The essay doesn't stay in the past. It ends with a specific line that connects the environment to a habit or observation the applicant has now, without announcing the connection.</li>
       </ul>
 
@@ -81,7 +81,7 @@ export default function Content() {
         "My grandmother's apartment smelled like turmeric and old paperbacks. She kept her reading glasses on top of a stack of Tamil newspapers she had not read in years, and the radio was always on, tuned to a Chennai AM station she could no longer quite hear. Saturday mornings, she would hand me a small cup of coffee I was too young to drink, and we would sit together in the kitchen while the priest on the radio argued with himself about the meaning of a specific verse. I did not understand a word of what he was saying. I understood that he was serious, and that she was listening."
       </blockquote>
       <p>
-        That is about 115 words. Every sentence contains a specific image. Nothing is explained. And yet the reader already understands a great deal about the environment, the relationship, and the kind of person who would emerge from it. The rest of the essay would pull that forward into a present-tense habit — a thing the writer still does, or still notices, because of those mornings.
+        That is about 115 words. Every sentence contains a specific image. Nothing is explained. And yet the reader already understands a great deal about the environment, the relationship, and the kind of person who would emerge from it. The rest of the essay would pull that forward into a present-tense habit - a thing the writer still does, or still notices, because of those mornings.
       </p>
 
       <h2>Common Mistakes in the Dartmouth "Let Your Life Speak" Essay</h2>
@@ -103,15 +103,15 @@ export default function Content() {
         "I understood that he was serious, and that she was listening."
       </blockquote>
       <p>
-        That construction — "I understood [one specific observable thing] without yet understanding [the thing underneath it]" — is the move that most reliably signals the Quaker principle the prompt is built on. It shows a child paying attention, which is the exact posture "Let Your Life Speak" is asking you to recover and describe.
+        That construction - "I understood [one specific observable thing] without yet understanding [the thing underneath it]" - is the move that most reliably signals the Quaker principle the prompt is built on. It shows a child paying attention, which is the exact posture "Let Your Life Speak" is asking you to recover and describe.
       </p>
 
       <h2>How This Essay Fits With the Rest of the Dartmouth Supplement</h2>
       <p>
-        The Dartmouth supplement is small — a 100-word Why essay and two longer 250-word essays chosen from quote-based prompts. Because there are so few opportunities, each essay has to do different work.
+        The Dartmouth supplement is small - a 100-word Why essay and two longer 250-word essays chosen from quote-based prompts. Because there are so few opportunities, each essay has to do different work.
       </p>
       <p>
-        The "Let Your Life Speak" essay should cover autobiographical territory. Your <Link href="/blog/dartmouth-why-dartmouth-100-words" className="text-oxblood hover:underline">Why Dartmouth essay</Link> should cover academic fit. Your second longer essay — whether you pick the <Link href="/blog/dartmouth-dr-seuss-think-and-wonder-essay" className="text-oxblood hover:underline">Dr. Seuss "Think and Wonder" prompt</Link> or another option — should reveal a different dimension of how you think.
+        The "Let Your Life Speak" essay should cover autobiographical territory. Your <Link href="/blog/dartmouth-why-dartmouth-100-words" className="text-oxblood hover:underline">Why Dartmouth essay</Link> should cover academic fit. Your second longer essay - whether you pick the <Link href="/blog/dartmouth-dr-seuss-think-and-wonder-essay" className="text-oxblood hover:underline">Dr. Seuss "Think and Wonder" prompt</Link> or another option - should reveal a different dimension of how you think.
       </p>
       <p>
         A useful test: read your Common App personal statement and your Dartmouth "Let Your Life Speak" essay back to back. If they cover the same ground, rewrite one of them. Dartmouth reads the full application as a single portrait, and repetition costs you a dimension of the portrait you could otherwise be showing.

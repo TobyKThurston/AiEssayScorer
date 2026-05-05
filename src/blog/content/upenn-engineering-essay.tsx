@@ -48,8 +48,8 @@ export default function Content() {
         the One University Policy. Penn students can enroll in courses
         across all 11 schools. SEAS treats this as a feature of engineering
         education at Penn, not a side benefit. An essay that ignores the
-        liberal arts plus engineering tradition — the tradition that
-        produced dual-degree programs like M&T, LSM, and NETS — sounds like
+        liberal arts plus engineering tradition - the tradition that
+        produced dual-degree programs like M&T, LSM, and NETS - sounds like
         it was aimed at a different school.
       </p>
 
@@ -64,15 +64,15 @@ export default function Content() {
           <strong>Fit with both SEAS culture and the specific major.</strong>{" "}
           The prompt asks for two answers. Readers check for two answers. An
           essay that talks about Penn broadly but never engages with the
-          content of the major — or talks about the major in a way that could
-          apply to any school — gets flagged as a partial response.
+          content of the major - or talks about the major in a way that could
+          apply to any school - gets flagged as a partial response.
         </li>
         <li>
           <strong>Evidence of engagement with what the major actually teaches.</strong>{" "}
           CIS is not "I like computers." Bioengineering is not "I want to help
           people." MEAM is not "I like building things." Admissions wants to
-          see that you know what the major covers — the coursework, the
-          problems, the kind of engineer it produces — well enough to commit
+          see that you know what the major covers - the coursework, the
+          problems, the kind of engineer it produces - well enough to commit
           to it on a supplemental essay.
         </li>
         <li>
@@ -100,8 +100,8 @@ export default function Content() {
           <strong>Specificity under constraint.</strong> At 150 words, the
           difference between a strong essay and a weak one is which concrete
           nouns appear in which sentences. Vague enthusiasm is the default
-          failure mode. Specificity — a named course, a named lab, a named
-          problem — is the baseline for a competitive response.
+          failure mode. Specificity - a named course, a named lab, a named
+          problem - is the baseline for a competitive response.
         </li>
       </ul>
 
@@ -111,13 +111,13 @@ export default function Content() {
         the second and assume it answers both. It does not.
       </p>
       <p>
-        A "Why CIS" sentence — "I want to study CIS because I have been
+        A "Why CIS" sentence - "I want to study CIS because I have been
         writing code since middle school and want to build machine learning
-        systems" — could be written for CS at Stanford, EECS at MIT, or CS
+        systems" - could be written for CS at Stanford, EECS at MIT, or CS
         at Carnegie Mellon. It says nothing about Penn. A "Why SEAS"
-        sentence — "I want the version of a CIS education that lets me take
+        sentence - "I want the version of a CIS education that lets me take
         a Wharton operations course in the same semester as a seminar at
-        the AI Institute" — could only be written for Penn. It says nothing
+        the AI Institute" - could only be written for Penn. It says nothing
         about CIS on its own.
       </p>
       <p>
@@ -130,8 +130,8 @@ export default function Content() {
         answering one question twice.
       </p>
       <p>
-        This gets sharper when the major is SEAS-specific. NETS — Networked
-        and Social Systems Engineering — only exists at Penn. DMD, the
+        This gets sharper when the major is SEAS-specific. NETS - Networked
+        and Social Systems Engineering - only exists at Penn. DMD, the
         Digital Media Design degree, is an engineering program with a CIS
         spine and a design component. If you are applying to NETS, "why
         SEAS" and "why NETS" are nearly the same question. If you are
@@ -167,7 +167,7 @@ export default function Content() {
           <strong>What you would do with it, interdisciplinary angle. Roughly 30 words.</strong>{" "}
           The One University Policy lives here, or the Wharton adjacency, or
           the liberal arts dimension. One sentence connecting SEAS to
-          something outside SEAS — a specific Wharton course, a CAS
+          something outside SEAS - a specific Wharton course, a CAS
           department, a design collaboration. This is where the essay stops
           sounding like it could have been written for any engineering school.
         </li>
@@ -197,7 +197,7 @@ export default function Content() {
         engineering while working in a GRASP-adjacent lab on soft robotic
         surgical tools, and I want to close my degree with a Senior Design
         Project that actually builds something. The reason that structure
-        works for me specifically is the One University Policy — I want to
+        works for me specifically is the One University Policy - I want to
         pair the BE core with a Wharton Health Care Management course and a
         CAS bioethics seminar, because the devices I want to build will one
         day have to be bought, regulated, and defended. That combination is
@@ -206,7 +206,7 @@ export default function Content() {
       <p>
         That paragraph works because both halves of the prompt are answered
         distinctly. The first 60 words are a Bioengineering origin that
-        specifies why BE rather than Biology — stiffness as a design variable
+        specifies why BE rather than Biology - stiffness as a design variable
         is a real technical hinge, not a metaphor. The second beat names
         three Penn-specific features (the depth sequence, GRASP, Senior
         Design) and attaches them to a concrete project description. The
@@ -219,8 +219,8 @@ export default function Content() {
         family member in medicine. No promise to "make an impact." No
         "Penn's world-class faculty." Every sentence commits to a specific
         technical or institutional noun. If you deleted the Penn-specific
-        references, the essay would collapse. That test — does the essay
-        still make sense with Penn removed — is the quickest way to check
+        references, the essay would collapse. That test - does the essay
+        still make sense with Penn removed - is the quickest way to check
         whether you have actually answered the prompt.
       </p>
 
@@ -243,21 +243,21 @@ export default function Content() {
           <strong>No named SEAS resource.</strong> "Penn's strong engineering
           program" is not a named resource. "Penn's innovative approach" is
           not a named resource. GRASP, the Penn Engineering AI Institute,
-          Senior Design, the depth-and-breadth sequence, M&T, LSM, NETS — one
+          Senior Design, the depth-and-breadth sequence, M&T, LSM, NETS - one
           of these or their equivalents needs to appear by name.
         </li>
         <li>
           <strong>Treating SEAS like MIT.</strong> Penn is not a polytechnic.
           An essay that praises Penn only for its engineering rigor, faculty,
-          and resources — without acknowledging the liberal arts dimension,
-          the Wharton adjacency, or the One University Policy — sounds like
+          and resources - without acknowledging the liberal arts dimension,
+          the Wharton adjacency, or the One University Policy - sounds like
           it was written for a school Penn is trying not to be confused with.
         </li>
         <li>
           <strong>Pre-med applicants pretending Bioengineering is fine.</strong>{" "}
           If your reasons for choosing BE are really reasons for going to
-          medical school — "I want to help patients," "I was inspired by my
-          grandmother's diagnosis" — admissions sees it. BE is a rigorous
+          medical school - "I want to help patients," "I was inspired by my
+          grandmother's diagnosis" - admissions sees it. BE is a rigorous
           engineering major, not a pre-med pathway with extra math. If you
           cannot articulate why you want to be an engineer rather than a
           physician, pick a different major or rewrite from scratch.
@@ -275,7 +275,7 @@ export default function Content() {
           M&T, LSM, and NETS are real, competitive, and distinct programs.
           Claiming you want M&T because "I love business and engineering" is
           worse than not mentioning M&T at all. If you invoke a dual-degree
-          program, you need to name what it actually teaches — the joint
+          program, you need to name what it actually teaches - the joint
           coursework, the cohort model, the specific reason the combination
           matters for your plan. A surface reference to a dual-degree you
           clearly have not studied is a red flag, not a credential.
@@ -285,7 +285,7 @@ export default function Content() {
           Naming GRASP, the AI Institute, and M&T in three consecutive
           sentences but never saying what you would do at any of them reads
           as a brochure. Each named resource should attach to a specific
-          plan — a lab, a course, a project — not appear as proof that you
+          plan - a lab, a course, a project - not appear as proof that you
           read the website.
         </li>
       </ul>
@@ -315,7 +315,7 @@ export default function Content() {
       <p>
         The coordination rule: do not repeat resources. If your Why Penn
         essay spends a paragraph on the One University Policy, your SEAS
-        essay should use it briefly — one clause, not a paragraph. If Why
+        essay should use it briefly - one clause, not a paragraph. If Why
         Penn mentions GRASP, the SEAS essay should either go deeper on the
         same lab or cite a different resource. Readers see these essays
         together. Repetition at 150 words costs double: you lose the space

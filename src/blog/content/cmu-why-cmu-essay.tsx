@@ -7,7 +7,7 @@ export default function Content() {
       <p>
         <em>
           "Most students choose their intended major or area of study based
-          on a passion or inspiration that's developed over time — what
+          on a passion or inspiration that's developed over time - what
           passion or inspiration led you to choose this area of study?"
         </em>
       </p>
@@ -18,7 +18,7 @@ export default function Content() {
 
       <h2>What CMU Is Actually Asking</h2>
       <p>
-        The prompt is technically about the origin of your interest — not
+        The prompt is technically about the origin of your interest - not
         "Why CMU." But CMU readers are screening simultaneously for
         alignment with their specific college and their intensely
         collaborative, technical, cross-disciplinary culture. You are
@@ -31,27 +31,27 @@ export default function Content() {
       </p>
       <ul>
         <li>
-          <strong>SCS</strong> (School of Computer Science) — among the most
+          <strong>SCS</strong> (School of Computer Science) - among the most
           selective CS admissions on the planet.
         </li>
         <li>
-          <strong>CIT</strong> (Engineering) — ECE, MechE, ChemE, BME, CEE.
+          <strong>CIT</strong> (Engineering) - ECE, MechE, ChemE, BME, CEE.
         </li>
         <li>
-          <strong>CFA</strong> (College of Fine Arts) — Architecture, Art,
+          <strong>CFA</strong> (College of Fine Arts) - Architecture, Art,
           Design, Drama, Music.
         </li>
         <li>
-          <strong>Dietrich</strong> — humanities and social sciences.
+          <strong>Dietrich</strong> - humanities and social sciences.
         </li>
         <li>
-          <strong>MCS</strong> — Mellon College of Science.
+          <strong>MCS</strong> - Mellon College of Science.
         </li>
         <li>
-          <strong>Tepper</strong> — business with a heavy quantitative bent.
+          <strong>Tepper</strong> - business with a heavy quantitative bent.
         </li>
         <li>
-          <strong>Heinz</strong> — public policy (BS through BXA pathways).
+          <strong>Heinz</strong> - public policy (BS through BXA pathways).
         </li>
       </ul>
 
@@ -62,19 +62,19 @@ export default function Content() {
       </p>
       <ul>
         <li>
-          <strong>BXA</strong> (BHA, BSA, BCSA) — Fine Arts paired with
+          <strong>BXA</strong> (BHA, BSA, BCSA) - Fine Arts paired with
           Humanities, Science, or Computer Science.
         </li>
         <li>
-          <strong>IDeATe</strong> — 16 minors at the intersection of
+          <strong>IDeATe</strong> - 16 minors at the intersection of
           technology and arts.
         </li>
         <li>
-          <strong>Robotics Institute</strong> — the undergraduate Robotics
+          <strong>Robotics Institute</strong> - the undergraduate Robotics
           minor and major for SCS/CIT applicants.
         </li>
         <li>
-          <strong>HCI</strong> — the additional major in Human-Computer
+          <strong>HCI</strong> - the additional major in Human-Computer
           Interaction, almost unique in undergraduate admissions.
         </li>
       </ul>
@@ -82,8 +82,8 @@ export default function Content() {
       <h2>Examples That Work</h2>
       <blockquote>
         "I want to study HCI through an SCS additional major because the
-        software I've built — a scheduling tool my robotics team still uses
-        — works technically but nobody enjoys using it. The Robotics
+        software I've built - a scheduling tool my robotics team still uses
+        - works technically but nobody enjoys using it. The Robotics
         Institute's undergraduate track and the HCI minor's emphasis on
         field studies are the reason I'm writing about CMU and not a
         general CS program."
@@ -91,7 +91,7 @@ export default function Content() {
       <p>
         Why it works: names SCS, names a specific additional major, points
         at a concrete past project, and explains <em>why CMU specifically</em>{" "}
-        — not just why CS.
+        - not just why CS.
       </p>
 
       <h2>Common Mistakes</h2>
@@ -125,7 +125,7 @@ export default function Content() {
       <p>
         After your final draft, highlight every sentence that could be
         pasted into a Why Stanford or Why MIT essay. If more than a third
-        of your essay highlights, you haven't written a CMU essay — you've
+        of your essay highlights, you haven't written a CMU essay - you've
         written a why-a-top-tech-school essay. Rewrite the highlighted
         sections with college-specific anchors.
       </p>

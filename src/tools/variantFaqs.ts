@@ -267,7 +267,7 @@ export function faqsForBaseTool(toolSlug: string): FAQ[] {
       },
       {
         question: "Should a college essay conclusion restate my thesis?",
-        answer: "No. College essays are not argumentative essays. The conclusion should land an image, return to a scene, or point forward concretely — not summarize what you just wrote.",
+        answer: "No. College essays are not argumentative essays. The conclusion should land an image, return to a scene, or point forward concretely - not summarize what you just wrote.",
       },
       {
         question: "Why three conclusion options instead of one?",

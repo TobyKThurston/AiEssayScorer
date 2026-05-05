@@ -9,7 +9,7 @@ export default function Content() {
         <em>
           "At MIT, we bring people together to better the lives of others. MIT
           students, in particular, are known for being different, adventurous,
-          curious, and passionate. We want to learn more about you — tell us
+          curious, and passionate. We want to learn more about you - tell us
           about the world you come from (e.g., your family, school, community,
           city, or town). How has that world shaped your dreams and
           aspirations?"
@@ -26,7 +26,7 @@ export default function Content() {
         about you.
       </p>
       <p>
-        Recent MIT cycles have rotated the exact phrasing of this prompt — the
+        Recent MIT cycles have rotated the exact phrasing of this prompt - the
         core question does not change. You are asked to describe a bounded
         world and trace a line from that world to what you want to build or
         pursue. Both halves are load-bearing. An essay that only describes the
@@ -48,8 +48,8 @@ export default function Content() {
         being first-generation, being Asian-American, being a twin, being a
         coder, being an athlete. Those are identities and interests. They may
         be true, they may be formative, but they are not the assignment. The
-        assignment is the place — the specific house, the specific block, the
-        specific school, the specific two-stoplight town — that produced you.
+        assignment is the place - the specific house, the specific block, the
+        specific school, the specific two-stoplight town - that produced you.
         Identity can appear inside that place, but the place comes first.
       </p>
       <p>
@@ -85,7 +85,7 @@ export default function Content() {
           with this line is a formation essay, which is what MIT wants.
         </li>
         <li>
-          <strong>Evidence of agency — what you chose or carried forward.</strong>{" "}
+          <strong>Evidence of agency - what you chose or carried forward.</strong>{" "}
           A world shapes you, but you also choose what to do with it. The
           strongest essays show both. You inherited a trade from your
           father's shop, and you chose to keep learning it. You grew up in a
@@ -124,20 +124,20 @@ export default function Content() {
 
       <h2>Which "World" to Pick: A Framework</h2>
       <p>
-        The first decision is which of the five worlds — family, school,
-        community, city, or town — gives you the most specific material.
+        The first decision is which of the five worlds - family, school,
+        community, city, or town - gives you the most specific material.
         There is no correct answer in the abstract. The correct answer is
         whichever lens lets you write with the most texture in 250 words.
       </p>
       <p>
         Most applicants default to school. This is a mistake. School is the
-        most shared context in your application — your transcript already
+        most shared context in your application - your transcript already
         covers it, your activities list already reflects it, your
         recommendations come from inside it. Writing about school in the
         World essay usually means writing about what admissions already
         knows. If your school genuinely shaped you in a way that is
-        invisible in the rest of the application — a specific teacher, a
-        specific hallway culture, a specific hybrid program — it can work.
+        invisible in the rest of the application - a specific teacher, a
+        specific hallway culture, a specific hybrid program - it can work.
         Otherwise, pick something else.
       </p>
       <p>
@@ -156,7 +156,7 @@ export default function Content() {
         neighborhood defined by a specific immigrant population. A
         congregation. A block. A competitive robotics circuit. A four-block
         skateboarding scene. What makes these worlds work is specificity of
-        place. What makes them fail is generality — "my community taught me
+        place. What makes them fail is generality - "my community taught me
         the value of hard work" describes no community.
       </p>
       <p>
@@ -168,7 +168,7 @@ export default function Content() {
       <h2>The Structure That Works at 250 Words</h2>
       <p>
         A 250-word essay has room for four moves, no more. The structure
-        below is not a template — it is the shape that strong versions tend
+        below is not a template - it is the shape that strong versions tend
         to share.
       </p>
       <ol>
@@ -183,7 +183,7 @@ export default function Content() {
           inside the place.
         </li>
         <li>
-          <strong>Specific texture — what it smelled like, how people
+          <strong>Specific texture - what it smelled like, how people
           talked, what the rhythm was (about 80 words).</strong> Widen from
           the opening image into the larger texture of the world. What did
           people actually do. What did they argue about. What was assumed
@@ -194,7 +194,7 @@ export default function Content() {
           paragraph is a non-sequitur.
         </li>
         <li>
-          <strong>How it shaped your aspirations — specific connection to
+          <strong>How it shaped your aspirations - specific connection to
           what you want to do or make (about 80 words).</strong> This is
           the second load-bearing half of the prompt. The link between
           world and aspiration must be specific, not slogan-shaped. Not "my
@@ -237,11 +237,11 @@ export default function Content() {
         half and the Polish bakery closes at two. I learned to count
         hangers before I learned multiplication. On Saturdays I ran the
         ticket counter. The regulars came in on a schedule I could have
-        drawn from memory — Mr. Sobczak with his church suit every
+        drawn from memory - Mr. Sobczak with his church suit every
         Thursday, the Patels with a week of scrubs every Sunday night, the
         man from the funeral home with garment bags he never explained.
         The shop smelled like steam and perchloroethylene, and my father
-        could tell what a stain was — blood, oil, red wine, tomato — by
+        could tell what a stain was - blood, oil, red wine, tomato - by
         looking at it from three feet away. He learned the trade from his
         uncle in 1987 and has not stopped learning it since. Two years ago
         a chain opened six blocks east with a machine that cleans in
@@ -298,7 +298,7 @@ export default function Content() {
         </li>
         <li>
           <strong>No link to aspirations.</strong> The prompt has two
-          halves — world and aspirations — and some essays answer only
+          halves - world and aspirations - and some essays answer only
           the first. Describing the world with no causal bridge to what
           you want to do misses the assignment. MIT wants the connection.
           Make it explicit.

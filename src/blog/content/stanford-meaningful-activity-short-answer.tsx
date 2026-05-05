@@ -36,7 +36,7 @@ export default function Content() {
         per week, the years involved, and the one-line description you wrote
         in the activities section. None of that needs to reappear here. The
         prompt is asking for the detail and texture that the activities list
-        cannot carry — what the practice actually looks like at the level of
+        cannot carry - what the practice actually looks like at the level of
         a Tuesday afternoon, what the specific moments sound like, what the
         hand does when nobody is watching. 150 words is one paragraph, which
         is the right amount of room for a single concrete scene and a single
@@ -52,23 +52,23 @@ export default function Content() {
       </p>
       <ul>
         <li>
-          <strong>An activity worth elaborating — not the most impressive, but the most textured.</strong>{" "}
+          <strong>An activity worth elaborating - not the most impressive, but the most textured.</strong>{" "}
           The committee is looking for a paragraph that could not have been
           written about a generic version of the same activity. If "captain
           of debate" could be replaced with any captain at any school and the
           paragraph would still read the same, the activity choice is wrong.
         </li>
         <li>
-          <strong>A specific detail or moment.</strong> One concrete image —
+          <strong>A specific detail or moment.</strong> One concrete image -
           the cracked mixing board, the scale that reads in ounces, the third
-          movement of a Brahms piece — signals more than any amount of
+          movement of a Brahms piece - signals more than any amount of
           summary. Admissions reads thousands of these paragraphs. The
           specific detail is what makes yours legible in a stack.
         </li>
         <li>
           <strong>A window into practice.</strong> Not outcomes, not awards,
           not titles. The prompt rewards what you actually do inside the
-          activity — the small motions, the recurring task, the moment in
+          activity - the small motions, the recurring task, the moment in
           the week when the work happens.
         </li>
         <li>
@@ -99,7 +99,7 @@ export default function Content() {
       <p>
         The first mistake applicants make is assuming the meaningful activity
         essay should be about their top activity. It often should not. The
-        top activity is the one most likely to appear in other places — it
+        top activity is the one most likely to appear in other places - it
         is probably the thread running through "What Matters to You," it may
         anchor the personal statement, and it usually shows up in
         Intellectual Vitality or in recommendation letters. If the top
@@ -108,7 +108,7 @@ export default function Content() {
       </p>
       <p>
         The stronger move is to ask which activity has the best internal
-        detail — which one gives you an actual moment to describe. The
+        detail - which one gives you an actual moment to describe. The
         activity that wins this slot is usually a smaller commitment with a
         clear ritual, a specific role, or a recurring task. Running sound
         for the church service every other Sunday. Weighing produce at the
@@ -139,7 +139,7 @@ export default function Content() {
           <strong>One concrete moment or detail (roughly 60 words).</strong>{" "}
           Open inside the activity, not outside it. No "I joined the X club
           in ninth grade because..." setup. Drop the reader into a specific
-          scene — the hour, the object, the sound, the physical task. This
+          scene - the hour, the object, the sound, the physical task. This
           is the only opening that buys you credibility within two
           sentences. If the reader does not see a concrete image by the end
           of sentence two, the paragraph is already being skimmed.
@@ -177,7 +177,7 @@ export default function Content() {
         mostly listening. I ride the choir's levels through the first hymn
         while watching the pastor walk to the lectern so I can anticipate
         the cue. I have learned the acoustics of a nearly empty sanctuary
-        versus a full one — the full room eats two decibels in the low
+        versus a full one - the full room eats two decibels in the low
         mids. Nobody notices a good mix. They only notice a bad one. It has
         taught me to do careful work that disappears."
       </blockquote>
@@ -194,8 +194,8 @@ export default function Content() {
         Notice also what the paragraph does not do. It does not mention a
         title, a leadership position, an award, or a time commitment. It
         does not announce virtue. It does not say "this activity has taught
-        me so much about myself." It ends with a small, earned line —
-        "careful work that disappears" — that is narrow enough to believe.
+        me so much about myself." It ends with a small, earned line -
+        "careful work that disappears" - that is narrow enough to believe.
         Any larger claim would have broken the register of the paragraph.
         At 150 words, small claims land. Big ones do not.
       </p>
@@ -220,7 +220,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Credentialing.</strong> "I founded," "I led," "I
-          captained," "I was elected" — at 150 words, these words are
+          captained," "I was elected" - at 150 words, these words are
           almost always doing the wrong work. The activities list already
           contains your titles. This paragraph is for texture, not rank.
         </li>
@@ -234,7 +234,7 @@ export default function Content() {
         <li>
           <strong>Performed virtue.</strong> "I learned the importance of
           giving back," "I realized the value of hard work," "I discovered
-          my passion for serving others" — admissions has read these
+          my passion for serving others" - admissions has read these
           sentences ten thousand times. They carry no information. Replace
           them with behavior.
         </li>
@@ -268,7 +268,7 @@ export default function Content() {
         Matters to You and Why" at 250 words carries your values. The
         Intellectual Vitality short response carries your mind. The
         roommate letter at 250 words carries your voice in a domestic
-        register. The short 50-word takes carry small facets — a favorite
+        register. The short 50-word takes carry small facets - a favorite
         thing, an idea you want to explore, a piece of advice. The
         meaningful activity paragraph sits in the middle of this pattern.
         Its job is to show a dimension the other essays do not.
@@ -282,13 +282,13 @@ export default function Content() {
         the chemistry research you did over the summer. If the roommate
         letter reveals a playful, verbal register, this paragraph can
         afford to be quieter and more physical. The coordination is not
-        about avoiding overlap in topic — it is about avoiding overlap in
+        about avoiding overlap in topic - it is about avoiding overlap in
         the kind of signal each essay sends.
       </p>
       <p>
         The reverse question is useful too. If you removed this paragraph
         from your Stanford supplement entirely, what would the committee
-        no longer know about you? The answer should be something real — a
+        no longer know about you? The answer should be something real - a
         practice, a recurring responsibility, a way of paying attention
         that appears nowhere else in the file. If the answer is "nothing
         new," the activity is the wrong choice, and the paragraph is

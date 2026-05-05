@@ -16,7 +16,7 @@ export default function Content() {
       <p>
         This is one of three Stanford supplemental short essays, alongside
         "What Matters to You, and Why?" and the roommate letter. Each of the
-        three does distinct work. This one — the intellectual vitality prompt —
+        three does distinct work. This one - the intellectual vitality prompt -
         is the essay where Stanford asks you to show how your mind behaves when
         a real idea gets hold of it. At 250 words, you have roughly 12 to 18
         sentences. That is enough to do one thing well. It is not enough to
@@ -29,7 +29,7 @@ export default function Content() {
         term appears across their admissions materials, in their evaluation
         rubric, and in public statements from their deans of admission going
         back decades. It is one of the small number of phrases Stanford uses
-        deliberately to signal a specific quality they are screening for — and
+        deliberately to signal a specific quality they are screening for - and
         that quality is not academic achievement.
       </p>
       <p>
@@ -64,7 +64,7 @@ export default function Content() {
       </p>
       <p>
         The prompt requires a specific, reproducible demonstration of
-        intellectual engagement — an actual idea you have pursued, an actual
+        intellectual engagement - an actual idea you have pursued, an actual
         rabbit hole you have gone down, an actual class or paper or question
         that bent your thinking. The reader should be able to finish your
         essay and describe, in one sentence, what you got interested in and
@@ -101,7 +101,7 @@ export default function Content() {
         <li>
           <strong>Evidence of follow-through.</strong> Did you actually pursue
           the curiosity, or did you just name it? The essay should show action
-          — reading beyond the textbook, emailing a researcher, starting a
+          - reading beyond the textbook, emailing a researcher, starting a
           side project, spending a weekend chasing a question. Curiosity
           without follow-through is a pose.
         </li>
@@ -114,7 +114,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Whether you can articulate why the idea matters to you.</strong>{" "}
-          Not why it matters in general — why it matters specifically to you.
+          Not why it matters in general - why it matters specifically to you.
           The best essays make a small, honest claim about why this particular
           idea landed with this particular person.
         </li>
@@ -169,7 +169,7 @@ export default function Content() {
         actually do with this idea? What did you read next? What did you
         think? How did the thinking develop? This is where the essay either
         earns the claim of intellectual vitality or fails to. The reader
-        should be able to follow a chain of genuine engagement — one thought
+        should be able to follow a chain of genuine engagement - one thought
         leading to the next, one source leading to another. The texture
         should be the texture of someone actually wrestling with something,
         not the texture of someone summarizing a topic.
@@ -179,7 +179,7 @@ export default function Content() {
         words).</strong> What did this encounter leave you with? The close
         should be small and concrete, not philosophical and abstract. Avoid
         grand statements about the nature of learning. Instead, land on a
-        specific shift — a way of seeing, a question you now carry, a habit
+        specific shift - a way of seeing, a question you now carry, a habit
         of thought the encounter left behind. Small and true beats large and
         abstract.
       </p>
@@ -192,7 +192,7 @@ export default function Content() {
       </p>
       <blockquote>
         "Last spring I read a paper on how Aymara speakers in the Andes
-        gesture about the future. For them, the future is behind you — you
+        gesture about the future. For them, the future is behind you - you
         can't see it, so it's at your back. The past is in front, because
         you can see it. This broke something in my head. I had always
         assumed time-as-forward-motion was a near-universal way of thinking,
@@ -202,7 +202,7 @@ export default function Content() {
         counterarguments from Pinker. I tried to learn basic Aymara through
         a university course uploaded to YouTube. I could barely form a
         greeting, but I started noticing how often English embeds spatial
-        metaphors in temporal language — 'looking forward to,' 'putting
+        metaphors in temporal language - 'looking forward to,' 'putting
         that behind me.' What changed wasn't that I now believe language
         shapes thought in some strong sense. It's that I stopped trusting my
         own intuitions about what's universal and what's inherited. That's
@@ -263,7 +263,7 @@ export default function Content() {
         Before you commit to a topic, run two tests. The first: have you
         actually talked about this idea to anyone, unprompted, for fun?
         Not in a class, not in an interview, not because you were trying
-        to impress someone — but because you genuinely wanted to tell a
+        to impress someone - but because you genuinely wanted to tell a
         friend or a parent or a stranger what you had just figured out. If
         you cannot remember a time when you did this, the interest
         probably isn't real yet, and the essay will read as performed.
@@ -288,9 +288,9 @@ export default function Content() {
         The intellectual vitality essay should cover different territory
         than "What Matters to You, and Why." The two prompts are trying
         to reach different parts of your life. "What Matters to You" is
-        about values, commitments, relationships — the things you hold
+        about values, commitments, relationships - the things you hold
         close and the reasons you hold them. Intellectual vitality is
-        about ideas, curiosity, and thinking — the things your mind
+        about ideas, curiosity, and thinking - the things your mind
         reaches toward and what happens when it does.
       </p>
       <p>

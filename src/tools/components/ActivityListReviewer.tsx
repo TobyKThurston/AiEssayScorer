@@ -75,7 +75,7 @@ export default function ActivityListReviewer() {
               type="text"
               value={val}
               onChange={(e) => updateActivity(i, e.target.value)}
-              placeholder={i === 0 ? "e.g., Debate team captain — Led weekly practices, coached novice team, took team to states for the first time in 7 years" : ""}
+              placeholder={i === 0 ? "e.g., Debate team captain - Led weekly practices, coached novice team, took team to states for the first time in 7 years" : ""}
               className="w-full rounded-xl border border-hair bg-cream px-4 py-2.5 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition"
               maxLength={500}
             />

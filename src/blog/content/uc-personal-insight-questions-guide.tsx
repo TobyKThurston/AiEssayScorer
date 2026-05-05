@@ -60,12 +60,12 @@ export default function Content() {
       </p>
       <p>
         A reader should finish your four PIQs knowing four different
-        things about you — not the same story told four ways.
+        things about you - not the same story told four ways.
       </p>
       <ul>
         <li>
           <strong>Map your best material first.</strong> List 6-8 real
-          stories from your life (not resume lines — actual scenes).
+          stories from your life (not resume lines - actual scenes).
         </li>
         <li>
           <strong>Match each story to the prompt it fits best.</strong>{" "}
@@ -87,7 +87,7 @@ export default function Content() {
 
       <h2>#1 Leadership</h2>
       <p>
-        Most applicants write about titled roles — club president, team
+        Most applicants write about titled roles - club president, team
         captain, student government. UC has read thousands of those.
       </p>
       <p>
@@ -99,7 +99,7 @@ export default function Content() {
       <blockquote>
         "My sister is nine and has a stutter. Last summer I noticed she
         had stopped raising her hand in class, so I started a nightly
-        fifteen-minute reading practice with her — not to fix the stutter,
+        fifteen-minute reading practice with her - not to fix the stutter,
         but to give her one place every day where being slow was the
         point. By October her teacher emailed to say she'd volunteered to
         read aloud."
@@ -111,7 +111,7 @@ export default function Content() {
 
       <h2>#2 Creative Side</h2>
       <p>
-        Most applicants write about the arts — painting, writing, music.
+        Most applicants write about the arts - painting, writing, music.
         That's fine if it's genuinely you. It often isn't.
       </p>
       <p>
@@ -119,7 +119,7 @@ export default function Content() {
         making things work, in invention</strong>. The student who
         rebuilt a lawnmower engine, the one who invented a new way to
         organize the kitchen at their family's restaurant, the one who
-        figured out a better bracket format for their Magic tournament —
+        figured out a better bracket format for their Magic tournament -
         all creative.
       </p>
 
@@ -138,7 +138,7 @@ export default function Content() {
       <p>
         This is often the highest-leverage prompt and the most
         underused. Readers want specificity: a specific course, program,
-        teacher, or barrier — and what you did about it.
+        teacher, or barrier - and what you did about it.
       </p>
       <p>
         "My high school didn't offer AP Computer Science, so I took a
@@ -152,9 +152,9 @@ export default function Content() {
         happened to you. It doesn't.
       </p>
       <p>
-        UC wants a challenge you <strong>worked on</strong> — where your
+        UC wants a challenge you <strong>worked on</strong> - where your
         effort and choices were the engine. A death in the family, a
-        parent's illness, a move — these are hard, but if the essay is
+        parent's illness, a move - these are hard, but if the essay is
         about the event rather than your response, it falls flat.
       </p>
 

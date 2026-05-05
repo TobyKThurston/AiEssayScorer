@@ -17,7 +17,7 @@ export default function Content() {
       <h2>What Princeton Is Actually Asking</h2>
       <p>
         This is not a "favorite song" prompt. The key phrase is "at this
-        moment." Princeton wants a snapshot of where you are now — not the
+        moment." Princeton wants a snapshot of where you are now - not the
         song that defines your whole life.
       </p>
       <p>
@@ -43,20 +43,20 @@ export default function Content() {
       <h2>Songs That Almost Always Fail</h2>
       <ul>
         <li>
-          <strong>"Don't Stop Believin'"</strong> — reads as generic
+          <strong>"Don't Stop Believin'"</strong> - reads as generic
           motivation.
         </li>
         <li>
-          <strong>"Happy" by Pharrell</strong> — reads as trying to sound
+          <strong>"Happy" by Pharrell</strong> - reads as trying to sound
           positive.
         </li>
         <li>
-          <strong>"Imagine" by John Lennon</strong> — reads as performing
+          <strong>"Imagine" by John Lennon</strong> - reads as performing
           depth.
         </li>
         <li>
           <strong>Taylor Swift's biggest hit from the current year</strong>{" "}
-          — reads as what's on Spotify's front page.
+          - reads as what's on Spotify's front page.
         </li>
         <li>
           <strong>Anything your admissions coach suggested.</strong>{" "}
@@ -67,20 +67,20 @@ export default function Content() {
       <h2>Songs That Tend to Work</h2>
       <ul>
         <li>
-          A song in a language most readers won't know — if it's one you
+          A song in a language most readers won't know - if it's one you
           grew up with.
         </li>
         <li>
-          A song from a genre you actually listen to — bluegrass, Carnatic
+          A song from a genre you actually listen to - bluegrass, Carnatic
           music, Berlin techno, early country.
         </li>
         <li>
-          A song with a small personal story attached — the one your
+          A song with a small personal story attached - the one your
           grandfather played on repeat, the one that was stuck in your
           head during a specific week.
         </li>
         <li>
-          A song whose lyrics you can name — specifically, from memory.
+          A song whose lyrics you can name - specifically, from memory.
         </li>
       </ul>
 
@@ -102,7 +102,7 @@ export default function Content() {
         "'Llorarás' by Oscar D'León. My dad plays it every Sunday while he
         cooks, and this is the year I started singing along instead of
         pretending not to know the words. It's a breakup song, but in our
-        house it means the opposite — nobody is leaving, we are just
+        house it means the opposite - nobody is leaving, we are just
         staying loud."
       </blockquote>
       <p>
@@ -152,8 +152,8 @@ export default function Content() {
       <p>
         Before submitting, read your 50 words out loud to a close friend.
         Ask if they could've guessed the song. If they're surprised, and
-        say "that's kind of a you song" — it's working. If they say "that
-        sounds like something everyone would write" — rewrite.
+        say "that's kind of a you song" - it's working. If they say "that
+        sounds like something everyone would write" - rewrite.
       </p>
 
       <p>

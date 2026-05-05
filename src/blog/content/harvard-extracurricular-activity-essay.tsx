@@ -29,7 +29,7 @@ export default function Content() {
         looking for a cause-and-effect arc, not a recap.
       </p>
 
-      <h2>The Four Categories — And Which Ones Applicants Skip</h2>
+      <h2>The Four Categories - And Which Ones Applicants Skip</h2>
       <ul>
         <li>
           <strong>Extracurriculars.</strong> Overused. If you write about
@@ -62,8 +62,8 @@ export default function Content() {
       </p>
       <p>
         Don't sanitize it. Don't make it inspirational. Describe the
-        specifics — the phone call to the insurance company, the younger
-        brother's bedtime, the Saturday shift at the register — and let
+        specifics - the phone call to the insurance company, the younger
+        brother's bedtime, the Saturday shift at the register - and let
         the shaping come through.
       </p>
 
@@ -90,13 +90,13 @@ export default function Content() {
         "Every Sunday since I was eleven, I've translated my mother's
         phone calls with her oncologist. I learned the words for 'benign'
         and 'margins' before I learned them in biology. What the job
-        actually taught me wasn't medical vocabulary — it was pacing. My
+        actually taught me wasn't medical vocabulary - it was pacing. My
         mother needed time to absorb each sentence, so I'd stop the
         doctor mid-word and ask her to repeat. I now do it everywhere:
         interrupting a teacher when a classmate looks lost, slowing down
         group chats when the argument has moved past someone. I've become
         the person who notices when the room has left someone behind.
-        It's the habit I'll bring to any seminar — and the one I most
+        It's the habit I'll bring to any seminar - and the one I most
         hope Harvard keeps."
       </blockquote>
       <p>
@@ -115,7 +115,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Writing about three activities.</strong> At 150 words,
-          three activities means fifty words each — not enough to show
+          three activities means fifty words each - not enough to show
           shaping. Pick one.
         </li>
         <li>
@@ -138,7 +138,7 @@ export default function Content() {
       <h2>Self-Test</h2>
       <p>
         Cover the first 40 words of your draft. Read only the middle
-        section — the "what it changed" part. Can the reader tell what
+        section - the "what it changed" part. Can the reader tell what
         activity you're writing about from the shaping alone? If yes,
         you've written the right thing. If the middle could apply to any
         activity in any student's life, rewrite it with specifics from

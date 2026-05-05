@@ -8,7 +8,7 @@ export default function Content() {
         Dartmouth's application asks: <em>"While arguing a Dartmouth-related case before the U.S. Supreme Court in 1818, Daniel Webster, Class of 1801, delivered this memorable line: 'It is, Sir…a small college. And yet, there are those who love it!' As you seek admission to the Class of 2030, what aspects of the College's program, community, or campus environment attract your interest?"</em>
       </p>
       <p>
-        The word limit is 100 words. That's the tightest Why essay in the entire Ivy League — tighter than Yale's 125, dramatically tighter than Columbia's 300 or Princeton's 250. 100 words is roughly five to seven sentences. Most applicants first draft this essay at 250 words and then spend hours cutting, which is the wrong way to work the constraint.
+        The word limit is 100 words. That's the tightest Why essay in the entire Ivy League - tighter than Yale's 125, dramatically tighter than Columbia's 300 or Princeton's 250. 100 words is roughly five to seven sentences. Most applicants first draft this essay at 250 words and then spend hours cutting, which is the wrong way to work the constraint.
       </p>
       <p>
         The right approach is to write the 100-word version first. Start with what you actually want to do at Dartmouth specifically, and stop the moment the sentence has said it. The tightness of the limit is a filter: it rewards applicants who can say something true about Dartmouth in the space a thoughtful person might naturally use, and punishes applicants who pad.
@@ -19,7 +19,7 @@ export default function Content() {
         At 100 words, you do not have room for a setup sentence, a transition, or a conclusion. You do not have room for adjectives about Dartmouth as a place. You do not have room for the word "passionate." You have room for a specific academic intention and a specific Dartmouth feature that matches it. That's it.
       </p>
       <p>
-        Applicants who try to name three departments, two professors, and a campus tradition in 100 words end up saying nothing about any of them. Applicants who name one specific thing — a single program, a single course, a single research group — have room to explain why that thing is the thing they want, which is what the prompt is actually asking for.
+        Applicants who try to name three departments, two professors, and a campus tradition in 100 words end up saying nothing about any of them. Applicants who name one specific thing - a single program, a single course, a single research group - have room to explain why that thing is the thing they want, which is what the prompt is actually asking for.
       </p>
       <p>
         Depth beats breadth at 100 words. The essay should read as if you thought hard about one intersection of you and Dartmouth, not as if you compiled a quick list from the website.
@@ -30,7 +30,7 @@ export default function Content() {
         Dartmouth admissions officers have been consistent in public panels and interviews. At 100 words, they are looking for three things:
       </p>
       <ul>
-        <li><strong>Evidence that you understand what Dartmouth specifically is.</strong> Dartmouth is a small liberal arts college embedded inside a research university. It is the only Ivy that keeps a genuine undergraduate focus across the whole institution. It has a distinctive academic structure — the D-Plan — that most applicants misunderstand. Your essay should reflect awareness of one or more of those realities.</li>
+        <li><strong>Evidence that you understand what Dartmouth specifically is.</strong> Dartmouth is a small liberal arts college embedded inside a research university. It is the only Ivy that keeps a genuine undergraduate focus across the whole institution. It has a distinctive academic structure - the D-Plan - that most applicants misunderstand. Your essay should reflect awareness of one or more of those realities.</li>
         <li><strong>A specific academic or intellectual purpose.</strong> Not a major. A purpose. What do you want to be working on in Hanover that you can't work on the same way somewhere else?</li>
         <li><strong>Tonal fit.</strong> Dartmouth is unusual among Ivies in valuing a certain kind of warmth and grounded enthusiasm. Essays that read as coldly strategic tend to do worse here than essays with the same content delivered with a clearer human voice.</li>
       </ul>
@@ -66,7 +66,7 @@ export default function Content() {
         Here's the shape of a Dartmouth Why essay that works at 100 words:
       </p>
       <blockquote>
-        "I want to spend a term in Professor Deborah Nichols' lab working on archaeological questions about Mesoamerican household economies, and then use Dartmouth's D-Plan to spend a winter off campus doing the museum-based work that the Hood's collections make possible during the academic year. The anthropology department's willingness to treat undergraduates as collaborators on real research — and to organize the calendar around making that possible — is rare. I want four years of that specific kind of seriousness, in a place where the faculty eat dinner in the same dining hall as the students."
+        "I want to spend a term in Professor Deborah Nichols' lab working on archaeological questions about Mesoamerican household economies, and then use Dartmouth's D-Plan to spend a winter off campus doing the museum-based work that the Hood's collections make possible during the academic year. The anthropology department's willingness to treat undergraduates as collaborators on real research - and to organize the calendar around making that possible - is rare. I want four years of that specific kind of seriousness, in a place where the faculty eat dinner in the same dining hall as the students."
       </blockquote>
       <p>
         That is about 95 words. It names a specific professor, a specific research area, a specific use of the D-Plan, a specific Dartmouth resource (the Hood Museum), and closes with a tonal note that could only be written about Dartmouth. Every sentence is doing work.
@@ -99,12 +99,12 @@ export default function Content() {
       </p>
       <ol>
         <li><strong>The school-swap test.</strong> Replace every instance of "Dartmouth" with "Brown" or "Princeton." If the essay still makes sense, it's too generic. Every sentence should break when Dartmouth is removed.</li>
-        <li><strong>The specificity audit.</strong> Count the number of concrete nouns in your essay — specific professors, specific courses, specific programs, specific centers. A strong 100-word Dartmouth essay usually has three to five concrete nouns. Fewer than three and the essay is almost certainly too abstract.</li>
+        <li><strong>The specificity audit.</strong> Count the number of concrete nouns in your essay - specific professors, specific courses, specific programs, specific centers. A strong 100-word Dartmouth essay usually has three to five concrete nouns. Fewer than three and the essay is almost certainly too abstract.</li>
       </ol>
 
       <h2>How the Why Dartmouth Essay Fits With the Rest of the Supplement</h2>
       <p>
-        Dartmouth's full supplement also includes a 250-word response to a prompt you choose from a list of quote-based options. The 100-word Why essay and the 250-word longer essay should cover different territory. The Why essay is about academic fit with Dartmouth specifically. The longer essay is about who you are and how you think — territory that doesn't require Dartmouth-specific content.
+        Dartmouth's full supplement also includes a 250-word response to a prompt you choose from a list of quote-based options. The 100-word Why essay and the 250-word longer essay should cover different territory. The Why essay is about academic fit with Dartmouth specifically. The longer essay is about who you are and how you think - territory that doesn't require Dartmouth-specific content.
       </p>
       <p>
         A useful rule: if any sentence from your Why Dartmouth draft would fit naturally into the longer essay, move it there. The Why essay should be pure Dartmouth-specific content, with no autobiography. The longer essay can handle the autobiography.

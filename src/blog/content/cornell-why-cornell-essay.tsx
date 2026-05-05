@@ -15,7 +15,7 @@ export default function Content() {
       </p>
       <p>
         The word limit is 650 words. That makes it the longest Why essay in the
-        Ivy League — more than double Princeton's 250 words and more than five
+        Ivy League - more than double Princeton's 250 words and more than five
         times Yale's 125 words. The length is not an invitation to ramble. It's
         an expectation that you'll go deep. Cornell gives you the space because
         the question demands genuine specificity about a single undergraduate
@@ -29,7 +29,7 @@ export default function Content() {
         and Life Sciences (CALS), the School of Hotel Administration, the School
         of Industrial and Labor Relations (ILR), the College of Architecture,
         Art, and Planning (AAP), and the College of Human Ecology. Each has its
-        own dean, its own curriculum, its own culture, and — critically — its own
+        own dean, its own curriculum, its own culture, and - critically - its own
         admissions committee. When you apply to Cornell, your essay is read by
         the people inside the specific college you selected, not by a
         university-wide office.
@@ -72,8 +72,8 @@ export default function Content() {
           <strong>Engineering:</strong> A specific technical interest combined
           with evidence of humanity. Cornell Engineering readers see thousands
           of essays from students who "love to build things." What separates
-          strong essays is a concrete technical question — not a vague passion
-          for STEM — paired with awareness of what engineering is for. Mention
+          strong essays is a concrete technical question - not a vague passion
+          for STEM - paired with awareness of what engineering is for. Mention
           the specific sub-field, the specific lab or research group, and the
           human problem that drives your interest.
         </li>
@@ -83,7 +83,7 @@ export default function Content() {
           biology department. It's a college organized around solving real-world
           problems in food systems, environmental science, biology, information
           science, and public policy. Strong CALS essays name a specific problem
-          — food insecurity, soil degradation, data-driven agriculture — and
+          - food insecurity, soil degradation, data-driven agriculture - and
           trace a path through CALS courses and research that would let the
           applicant work on it.
         </li>
@@ -103,7 +103,7 @@ export default function Content() {
           and labor policy. Its curriculum covers labor economics, collective
           bargaining, organizational behavior, employment law, and dispute
           resolution. The strongest ILR essays demonstrate genuine interest in
-          the world of work — not as a stepping stone to law school, but as a
+          the world of work - not as a stepping stone to law school, but as a
           subject worth studying in its own right. Show that you understand the
           difference between ILR and a political science major with a labor
           focus.
@@ -120,7 +120,7 @@ export default function Content() {
           <strong>Open with the specific problem or question driving you (2–3
           sentences).</strong> Not a thesis statement. Not a childhood anecdote
           about discovering your passion. Start with the intellectual or
-          practical problem that keeps pulling you back — the question you
+          practical problem that keeps pulling you back - the question you
           haven't been able to answer yet. This should be specific enough that a
           reader could identify your intended field from these sentences alone.
         </li>
@@ -130,7 +130,7 @@ export default function Content() {
           where you show that you understand what makes your chosen college
           different from every other program in the country that covers similar
           material. Name specific courses by their actual titles and course
-          numbers. Reference the college's curricular structure — the way CALS
+          numbers. Reference the college's curricular structure - the way CALS
           integrates field research, the way CAS allows joint concentrations,
           the way Engineering requires the liberal arts distribution. Show that
           the college's design matches the kind of question you're asking.
@@ -140,7 +140,7 @@ export default function Content() {
           paragraphs).</strong> This is your longest section. Go beyond courses
           to name specific labs, research centers, faculty members, field study
           programs, or practicum opportunities that only your college offers.
-          Professor names should come with their specific research focus — not
+          Professor names should come with their specific research focus - not
           just "Professor X in the Computer Science department" but "Professor
           X's work on computational approaches to language documentation." Name
           student organizations, undergraduate research programs, or industry
@@ -152,7 +152,7 @@ export default function Content() {
           This isn't a pledge to "give back to the Cornell community." It's a
           specific statement about what perspective, experience, or project
           you'd bring. The readers want to see that admission is a two-way
-          investment — that your presence in their college adds something to the
+          investment - that your presence in their college adds something to the
           intellectual environment, not just that you'd benefit from it.
         </li>
       </ol>
@@ -169,8 +169,8 @@ export default function Content() {
         creole from Malacca, has fewer than 2,000 speakers left and no
         standardized writing system. I've spent two years recording her
         conversations and trying to build a basic lexicon, but the tools I need
-        — computational linguistics, phonological analysis, community-based
-        documentation methods — don't fit in a single department anywhere I've
+        - computational linguistics, phonological analysis, community-based
+        documentation methods - don't fit in a single department anywhere I've
         looked.
 
         Cornell's College of Arts and Sciences is the exception. The joint
@@ -182,11 +182,11 @@ export default function Content() {
         projects are doing exactly the work I want to contribute to. The
         Einaudi Center's Southeast Asia Program would connect me to scholars
         who understand the specific cultural and political context of creole
-        languages in the Malay world — context that pure linguistics training
+        languages in the Malay world - context that pure linguistics training
         would miss."
       </blockquote>
       <p>
-        That's roughly 180 words — less than a third of the limit. But it
+        That's roughly 180 words - less than a third of the limit. But it
         demonstrates everything a CAS reader is looking for: a genuine problem,
         a specific interdisciplinary approach, named courses and faculty,
         resources unique to Cornell's CAS, and a connection to a broader
@@ -231,7 +231,7 @@ export default function Content() {
           program elsewhere.</strong> If you could move your argument to any
           large research university with a similar department, you haven't
           written a Cornell essay. The specificity should be institutional, not
-          just topical — not just "I want to study labor economics" but "I want
+          just topical - not just "I want to study labor economics" but "I want
           to study labor economics inside a school entirely organized around the
           world of work."
         </li>
@@ -246,16 +246,16 @@ export default function Content() {
           <strong>The college-swap test.</strong> Take your finished essay and
           try moving it to a different Cornell college. If you wrote for CAS,
           try applying it to CALS or Engineering. If the essay still makes sense
-          — if the courses, faculty, and programs you named could plausibly
-          belong to a different college — it's too generic. A strong Cornell
+          - if the courses, faculty, and programs you named could plausibly
+          belong to a different college - it's too generic. A strong Cornell
           essay breaks completely when you change the college.
         </li>
         <li>
           <strong>The outsider test.</strong> Hand your essay to someone who has
           never heard of Cornell and ask them to identify which of the seven
           undergraduate colleges you're applying to, based only on what you've
-          written. If they can't tell — if the essay reads as a generic interest
-          in a subject area rather than a specific fit with a specific college —
+          written. If they can't tell - if the essay reads as a generic interest
+          in a subject area rather than a specific fit with a specific college -
           you need to add more institutional detail.
         </li>
       </ol>

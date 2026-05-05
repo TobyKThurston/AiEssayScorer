@@ -12,8 +12,8 @@ export default function Content() {
           contributed to group efforts over time."
         </em>{" "}
         The word limit is 350 words. This prompt appears on the single UC
-        application used by all nine undergraduate campuses — Berkeley, UCLA,
-        UCSD, UC Davis, UCSB, UC Irvine, UCSC, UC Riverside, and UC Merced —
+        application used by all nine undergraduate campuses - Berkeley, UCLA,
+        UCSD, UC Davis, UCSB, UC Irvine, UCSC, UC Riverside, and UC Merced -
         and the essay is read at every campus you apply to.
       </p>
       <p>
@@ -29,7 +29,7 @@ export default function Content() {
         The 350-word cap is tighter than applicants realize. After an
         opening and a closing insight, you have maybe 280 usable words of
         middle. An essay designed for 650 Common App words cannot be
-        trimmed to 350 — the shape of the argument is different, the setup
+        trimmed to 350 - the shape of the argument is different, the setup
         has to be shorter, the evidence denser, the reflection smaller.
       </p>
       <p>
@@ -46,8 +46,8 @@ export default function Content() {
         The load-bearing word in the prompt is "or." Read it again:
         "positively influenced others, helped resolve disputes, <em>or</em>{" "}
         contributed to group efforts over time." Those are three distinct
-        paths, and the UC system is signaling — explicitly, in the prompt
-        itself — that it will accept any of them. You do not need a title.
+        paths, and the UC system is signaling - explicitly, in the prompt
+        itself - that it will accept any of them. You do not need a title.
         You do not need a team you captained. You do not need a club you
         founded. The third option, "contributed to group efforts over time,"
         is where non-title leadership lives, and it is the option almost
@@ -59,10 +59,10 @@ export default function Content() {
         title. That instinct is wrong, because the formal versions produce
         the most generic essays in the pool. UC readers have already seen
         five hundred student body presidents this week. The applicant who
-        writes about sustained contribution to a group — who kept the sound
+        writes about sustained contribution to a group - who kept the sound
         board running for four years of school plays, who organized the
         carpool when a parent got sick, who ran the back end of a volunteer
-        operation nobody else wanted to run — stands out precisely because
+        operation nobody else wanted to run - stands out precisely because
         the third path is wide open.
       </p>
       <p>
@@ -117,12 +117,12 @@ export default function Content() {
       <h2>The Three Valid Leadership Paths</h2>
       <p>
         The prompt offers three paths, and choosing which one your story fits
-        is the first structural decision. Most applicants do not choose — they
+        is the first structural decision. Most applicants do not choose - they
         write a blurry combination and the essay loses its shape.
       </p>
       <p>
         <strong>Path 1: Positive influence on others.</strong> The
-        classical leadership story — you changed how people behaved,
+        classical leadership story - you changed how people behaved,
         thought, or performed. It works when you have a real
         before-and-after in someone else's behavior. A tutoring story
         where a kid's grade went up is a weak version. One where a
@@ -134,7 +134,7 @@ export default function Content() {
         <strong>Path 2: Resolving disputes.</strong> The hardest to
         execute, because most student-level disputes sound small on paper.
         It works when the dispute is real and the resolution required
-        something specific from you — mediation, a difficult conversation,
+        something specific from you - mediation, a difficult conversation,
         unpopular advocacy. Use it when you did something structural:
         changed how a group made decisions, surfaced a hidden problem,
         took a side that cost you something.
@@ -143,17 +143,17 @@ export default function Content() {
         <strong>Path 3: Contributing to group efforts over time.</strong>{" "}
         The most underused and often the strongest path. It is where the
         applicant without a formal title competes with the applicant who
-        has one. The key phrase is "over time" — you are telling the story
+        has one. The key phrase is "over time" - you are telling the story
         of sustained contribution, not a moment. Running tech for the
         theater department for four years. Keeping a tutoring program
         staffed when the founder graduated. Holding a food pantry's
         Saturday shift every Saturday for two years. This path rewards
-        reliability, scope, and institutional memory — qualities that are
+        reliability, scope, and institutional memory - qualities that are
         hard to fake.
       </p>
       <p>
         Pick one path before drafting. A useful diagnostic: finish this
-        sentence — "the most important thing in this essay is that I ___."
+        sentence - "the most important thing in this essay is that I ___."
         If the blank fills with "changed how a person behaved," you are on
         Path 1. If it fills with "took a hard position inside a group,"
         Path 2. If "kept showing up for something that mattered," Path 3.
@@ -163,7 +163,7 @@ export default function Content() {
       <h2>The Structure That Works at 350 Words</h2>
       <p>
         The strongest UC leadership essays follow a four-move structure.
-        This is not a formula — it is the shape the word count forces.
+        This is not a formula - it is the shape the word count forces.
       </p>
       <ol>
         <li>
@@ -184,7 +184,7 @@ export default function Content() {
         <li>
           <strong>Outcome (roughly 150 words).</strong> The heart of the
           essay. Describe what happened to the people around you, to the
-          group, or to the effort — with specifics. Include at least one
+          group, or to the effort - with specifics. Include at least one
           detail that could only come from the real experience. Include
           one thing that did not go well. Failure mode: summary statements
           ("it was a great success," "we grew as a team") without the
@@ -231,8 +231,8 @@ export default function Content() {
         been leadership all along."
       </blockquote>
       <p>
-        That example works because it commits to Path 3 — contribution over
-        time — without apology. The writer does not pretend to be a captain.
+        That example works because it commits to Path 3 - contribution over
+        time - without apology. The writer does not pretend to be a captain.
         They name a specific failure (the wireless mic on the wrong actor),
         a specific artifact (the notebook that became a Google Doc), and a
         specific scope (twelve productions a year, three freshmen trained).
@@ -291,7 +291,7 @@ export default function Content() {
           <strong>Promising future contribution to UC.</strong> This PIQ
           asks about experience, not aspiration. Sentences about what you
           will bring to Berkeley or UCLA belong in a different essay type
-          entirely — and the UC readers do not want them here.
+          entirely - and the UC readers do not want them here.
         </li>
         <li>
           <strong>Writing a perfectly smooth story.</strong> Essays that
@@ -351,8 +351,8 @@ export default function Content() {
           UC Personal Insight Questions overview
         </Link>
         . And for the broader principles that apply to every selective
-        application — specificity, voice, the difference between claiming
-        and showing — read our guide to{" "}
+        application - specificity, voice, the difference between claiming
+        and showing - read our guide to{" "}
         <Link
           href="/blog/ivy-league-essay-tips"
           className="text-oxblood hover:underline"

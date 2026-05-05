@@ -12,12 +12,12 @@ export default function Content() {
         </em>{" "}
         The word limit is 350 words. UC applicants choose four of eight PIQs,
         and this is one of the most popular selections across the nine UC
-        campuses — Berkeley, UCLA, San Diego, Davis, Irvine, Santa Barbara,
+        campuses - Berkeley, UCLA, San Diego, Davis, Irvine, Santa Barbara,
         Santa Cruz, Riverside, and Merced.
       </p>
       <p>
-        The prompt looks easy. It is not. Its apparent simplicity — tell us
-        about a subject you like — is the trap. Applicants read the surface
+        The prompt looks easy. It is not. Its apparent simplicity - tell us
+        about a subject you like - is the trap. Applicants read the surface
         request and answer it at the surface, producing essays that sound like
         course catalog descriptions with a grade attached. UC readers evaluate
         tens of thousands of these a year. They are not asking you to name a
@@ -53,17 +53,17 @@ export default function Content() {
       <p>
         Read the prompt again. UC is telling you something specific:{" "}
         <em>inside and/or outside of the classroom</em>. The "and/or" is a
-        green light. UC is explicitly inviting — even nudging — you to
+        green light. UC is explicitly inviting - even nudging - you to
         describe engagement that happened outside school. This is a major
         signal. The readers are telling you that self-directed intellectual
         behavior counts equally with classroom achievement.
       </p>
       <p>
         The strongest essays at 350 words show both. A classroom moment plants
-        the question. A self-directed extension — a book read over summer, a
+        the question. A self-directed extension - a book read over summer, a
         problem chased on your own, a project built in your garage, a blog
         started to think out loud, a conversation with a professional in the
-        field — shows what you did with the question once the class ended.
+        field - shows what you did with the question once the class ended.
         Essays that stay entirely inside the classroom read as passive. Essays
         that stay entirely outside the classroom read as disconnected from
         school. The best ones bridge.
@@ -93,7 +93,7 @@ export default function Content() {
           attention.
         </li>
         <li>
-          <strong>Specificity — one question inside a subject, not the
+          <strong>Specificity - one question inside a subject, not the
           subject as a whole.</strong> "I love biology" is not a topic. "Why
           does CRISPR work in some cell types and not others" is a topic.
           Readers reward narrowing.
@@ -108,7 +108,7 @@ export default function Content() {
         <li>
           <strong>A real book, problem, or idea the subject led you to.</strong>{" "}
           Abstraction without artifact reads as invention. The essay should
-          name something concrete — a title, a theorem, a case, a dataset —
+          name something concrete - a title, a theorem, a case, a dataset -
           that functioned as a turning point.
         </li>
         <li>
@@ -140,8 +140,8 @@ export default function Content() {
         That said, different subjects come with different traps.
       </p>
       <p>
-        <strong>Abstract subjects — math, philosophy, economics, theoretical
-        physics — need more concrete grounding, not less.</strong> Applicants
+        <strong>Abstract subjects - math, philosophy, economics, theoretical
+        physics - need more concrete grounding, not less.</strong> Applicants
         who love philosophy often write essays that sound like philosophy:
         abstract, generalized, quoting Kant. That prose style is the enemy
         at 350 words. The cure is a specific question, a specific text, or
@@ -153,8 +153,8 @@ export default function Content() {
         critically about the world."
       </p>
       <p>
-        <strong>Applied subjects — engineering, computer science, biology
-        — need a conceptual hook beyond the skill.</strong> The risk in
+        <strong>Applied subjects - engineering, computer science, biology
+        - need a conceptual hook beyond the skill.</strong> The risk in
         applied subjects is writing an activities essay about the thing you
         built instead of an intellectual essay about the idea that moved
         you. If your essay about computer science is really about the app
@@ -167,21 +167,21 @@ export default function Content() {
       <h2>The Structure That Works at 350 Words</h2>
       <p>
         The strongest version of this essay follows four moves. Not a
-        formula — a shape.
+        formula - a shape.
       </p>
       <ol>
         <li>
           <strong>Name the subject AND the specific question inside it
           (roughly 50 words).</strong> Do not open with "My favorite
           subject is biology." Open with the narrow question that actually
-          grabbed you — the one sentence the rest of the essay will
+          grabbed you - the one sentence the rest of the essay will
           explore. Specificity from the first sentence signals a real
           mind at work.
         </li>
         <li>
           <strong>How it landed inside the classroom (roughly 100 words).</strong>{" "}
           The moment, lecture, problem set, or discussion that surfaced
-          the question for you. Keep this concrete — a specific class
+          the question for you. Keep this concrete - a specific class
           day, a specific chapter, a specific assignment. This paragraph
           earns the right to the next one.
         </li>
@@ -192,13 +192,13 @@ export default function Content() {
           period ended? Readings, projects, conversations, experiments,
           essays you wrote for yourself, a summer internship you cold-
           emailed into, a course you audited online. Be specific about
-          what you learned — not just what you did.
+          what you learned - not just what you did.
         </li>
         <li>
           <strong>Where it is taking your thinking (roughly 50 words).</strong>{" "}
           Close by pointing forward, not back. A question you still cannot
           answer. A direction you want to push next. Avoid the "in
-          college, I hope to continue exploring…" closing — it reads as
+          college, I hope to continue exploring…" closing - it reads as
           template. A better close shows the subject still actively
           working on you.
         </li>
@@ -219,10 +219,10 @@ export default function Content() {
         later generations left behind. My grandfather left the Italian
         enclave in South Philadelphia for the suburbs in 1978. The textbook
         sentence was his life, compressed to one clause. I wanted to know
-        why the pattern repeated — why immigrants arrived into ethnic
+        why the pattern repeated - why immigrants arrived into ethnic
         neighborhoods they then spent a generation leaving. My teacher, Mr.
         Caruso, gave me three chapters from a book called The Transplanted
-        by John Bodnar. Bodnar argued the enclave was never nostalgia — it
+        by John Bodnar. Bodnar argued the enclave was never nostalgia - it
         was an economic shock absorber, a place where kinship did the work
         that welfare eventually would. That changed the question for me.
         Over the next six months I read Bodnar's full book, then Oscar
@@ -238,7 +238,7 @@ export default function Content() {
         That is why I am writing this."
       </blockquote>
       <p>
-        That essay works because the subject — U.S. history — is anchored
+        That essay works because the subject - U.S. history - is anchored
         to one narrow question the writer cannot let go of. The classroom
         moment is specific (three days, one sentence, one textbook). The
         outside-classroom extension is layered: a book from a teacher, two
@@ -251,7 +251,7 @@ export default function Content() {
       <p>
         Notice what the essay does not do. It does not list every class the
         writer took. It does not mention their grade. It does not announce
-        that history is their favorite subject — it demonstrates that
+        that history is their favorite subject - it demonstrates that
         through the density of engagement. The reader does not need to be
         told the writer loves history. The reader can see it.
       </p>
@@ -262,7 +262,7 @@ export default function Content() {
           <strong>Picking the subject you got the best grade in.</strong>{" "}
           Grades are on the transcript already. The PIQ is for revealing
           something the transcript cannot. If your inspiring subject is
-          not the one you performed best in, that is fine — often
+          not the one you performed best in, that is fine - often
           better, because it means the interest is intrinsic.
         </li>
         <li>
@@ -319,8 +319,8 @@ export default function Content() {
       </p>
       <p>
         If you chose PIQ #3 (greatest talent or skill) and your talent is
-        academically adjacent — a coding project, a math olympiad, a
-        research internship — you have a coordination problem. Running
+        academically adjacent - a coding project, a math olympiad, a
+        research internship - you have a coordination problem. Running
         both PIQ #3 and PIQ #6 on the same intellectual terrain wastes
         one of your four slots. Fix it by either picking a non-academic
         talent for PIQ #3 (music, leadership, a craft) or picking a
@@ -334,7 +334,7 @@ export default function Content() {
         tutoring or teaching project tied to your favorite subject. Do
         not double-dip. UC is building a portrait of you across four
         answers. Each PIQ should be a different facet. Intellectual life
-        is one facet — PIQ #6's facet. Do not spread it across two.
+        is one facet - PIQ #6's facet. Do not spread it across two.
       </p>
 
       <p>
@@ -353,7 +353,7 @@ export default function Content() {
           UC Personal Insight Questions guide
         </Link>
         . And if the opening of your PIQ is landing on "my favorite subject
-        is…" — fix the first sentence first, using our{" "}
+        is…" - fix the first sentence first, using our{" "}
         <Link
           href="/blog/college-essay-hooks-opening-lines"
           className="text-oxblood hover:underline"

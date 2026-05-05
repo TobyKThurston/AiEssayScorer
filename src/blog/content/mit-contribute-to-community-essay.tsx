@@ -35,7 +35,7 @@ export default function Content() {
         MIT admissions has been public about what this essay is for. The
         framing matters: the prompt does not ask about your identity, your
         background, or the communities you belong to. It asks what you have
-        <em> done</em> for a community. That verb — contributed — is
+        <em> done</em> for a community. That verb - contributed - is
         load-bearing. MIT is a problem-solving institution, and the
         community essay is how it filters for students who already treat
         problems as things to work on rather than things to observe.
@@ -139,7 +139,7 @@ export default function Content() {
         contribution actually looked like on a concrete day. Who was
         there. What you did. What changed. The strongest versions
         include at least one detail that only someone who did the work
-        would know — the name of a specific kid you tutored, the
+        would know - the name of a specific kid you tutored, the
         unexpected complication that showed up in week three, the
         workaround you invented when the plan failed.
       </p>
@@ -163,13 +163,13 @@ export default function Content() {
         It started because three neighborhood kids kept coming in with
         their mothers and nothing to do. Now there are eleven, and on the
         weeks I am away, one of the older ones runs it. The work is not
-        glamorous — it is mostly explaining long division and looking up
+        glamorous - it is mostly explaining long division and looking up
         words on a shared phone. What I have learned is that consistency
         matters more than expertise. The kid who trusted me enough to show
         me his actual math homework did it in month eight, after I had
         been wrong about a subtraction problem and corrected myself the
         next week. The community is not the Laundromat. The community is
-        the specific set of agreements we built inside it over time —
+        the specific set of agreements we built inside it over time -
         that I would show up, that they would show up, and that being
         wrong in front of each other would not end anything."
       </blockquote>

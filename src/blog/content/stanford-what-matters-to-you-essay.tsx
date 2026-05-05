@@ -41,7 +41,7 @@ export default function Content() {
       </p>
       <p>
         The strongest "What Matters to You" essays are often about surprisingly
-        ordinary things — a specific relationship with a grandparent, the daily
+        ordinary things - a specific relationship with a grandparent, the daily
         practice of cooking dinner for a family, a commitment to maintaining a
         neighborhood basketball court, the habit of writing letters by hand.
         What makes these essays work is not the topic. It is the depth. When
@@ -69,7 +69,7 @@ export default function Content() {
           matters to me" is a claim. Explaining that you grew up translating
           medical forms for your parents and that the weight of being the family
           interpreter shaped how you think about language, trust, and
-          responsibility — that is self-awareness. The essay needs to show you
+          responsibility - that is self-awareness. The essay needs to show you
           have thought about the roots of the thing, not just its surface.
         </li>
         <li>
@@ -91,20 +91,20 @@ export default function Content() {
         <strong>Part one: name the thing that matters to you with enough
         concrete detail that it becomes vivid (100–120 words).</strong> Do not
         start with a thesis statement. Start with the thing itself. Show it.
-        Give the reader a scene, a practice, a relationship, an object — some
+        Give the reader a scene, a practice, a relationship, an object - some
         concrete anchor that makes the abstraction real. If what matters to you
         is precision, show yourself doing something precise. If it is loyalty,
         describe a moment where loyalty was tested. The opening should make the
         reader see your life, not read your philosophy.
       </p>
       <p>
-        <strong>Part two: explain why — not a thesis about the world, but a
+        <strong>Part two: explain why - not a thesis about the world, but a
         genuine account of how this became central to who you are (120–140
         words).</strong> This is where the essay earns its weight. The "why"
         should reveal something the "what" didn't. If the first half shows the
         reader what you care about, the second half should show them something
         about how you became the person who cares about it. The best "why"
-        sections have a turn in them — a moment where the writer connects the
+        sections have a turn in them - a moment where the writer connects the
         specific thing to something larger about how they see the world, but
         does so honestly rather than grandly.
       </p>
@@ -121,12 +121,12 @@ export default function Content() {
         resoldered the headphone jack on my sister's laptop three times because
         she refuses to buy a new one and I refuse to let her go without music. I
         spent most of last summer debugging a scheduling app for a community
-        tutoring program — not because the code was interesting, but because
+        tutoring program - not because the code was interesting, but because
         twelve kids depended on it working and no one else was going to do it.
         When my best friend and I stopped talking junior year, I was the one who
         showed up at his locker and said we should fix it. He didn't want to.
         We did anyway. I think repair matters to me because I grew up in a house
-        where things broke and stayed broken — appliances, plans, sometimes
+        where things broke and stayed broken - appliances, plans, sometimes
         relationships. I learned early that broken doesn't mean finished. It
         means someone hasn't gotten to it yet. That's a way of seeing the world
         that I carry into everything: instruments, friendships, code, the
@@ -138,8 +138,8 @@ export default function Content() {
         That example works because it is specific, textured, and genuine. The
         writer names four different things they have repaired, each one concrete
         enough to believe. The "why" section doesn't reach for a grand lesson
-        about the world. It reaches for a personal truth — growing up in a house
-        where things broke and stayed broken — and connects it to a way of
+        about the world. It reaches for a personal truth - growing up in a house
+        where things broke and stayed broken - and connects it to a way of
         seeing. The last sentence lands because it sounds like something this
         person would actually say.
       </p>
@@ -187,7 +187,7 @@ export default function Content() {
       <p>
         <strong>The authenticity test:</strong> would you still care about this
         thing if no one ever knew? If you stopped doing the activity, if it
-        never appeared on any application, if no one ever praised you for it —
+        never appeared on any application, if no one ever praised you for it -
         would it still matter? If the answer is yes, you've picked the right
         topic. If the answer is uncertain, you may be writing about something
         you do rather than something that matters to you. Those are not the
@@ -197,7 +197,7 @@ export default function Content() {
         <strong>The voice test:</strong> does this essay sound like you talking
         to someone you trust, or does it sound like an application? Read the
         essay out loud. If it sounds like something you would say sitting across
-        from a person you respect — specific, honest, a little unpolished — it
+        from a person you respect - specific, honest, a little unpolished - it
         is probably working. If it sounds like something you would read from a
         podium, it needs another draft. The best Stanford essays have a
         conversational authority to them. They sound like a real person who has
@@ -227,7 +227,7 @@ export default function Content() {
           Why This College guide
         </Link>{" "}
         covers the structural differences between a "why us" prompt and a "what
-        matters to you" prompt — two questions that require fundamentally
+        matters to you" prompt - two questions that require fundamentally
         different essays.
       </p>
     </>

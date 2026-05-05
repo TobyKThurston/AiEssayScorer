@@ -19,7 +19,7 @@ const ROWS: { capability: string; generic: string; ivy: string }[] = [
   },
   {
     capability: "Regional tailoring",
-    generic: "—",
+    generic: "-",
     ivy: "Per-reader-pool adjustments",
   },
   {
@@ -29,7 +29,7 @@ const ROWS: { capability: string; generic: string; ivy: string }[] = [
   },
   {
     capability: "Risk flags",
-    generic: "—",
+    generic: "-",
     ivy: "Topic, tone, AI-detection, blend risk",
   },
 ];

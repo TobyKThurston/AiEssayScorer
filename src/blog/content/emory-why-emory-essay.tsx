@@ -17,7 +17,7 @@ export default function Content() {
         reflection prompt with three options, also 150 words. Both essays are
         required. Both are read together. Most applicants spend almost all of
         their drafting energy on the personal prompt and treat the "Why Emory"
-        essay as a fill-in-the-blank exercise — school name, two programs, one
+        essay as a fill-in-the-blank exercise - school name, two programs, one
         sentence about Atlanta, send. That approach is why the median Why Emory
         essay in the applicant pool is genuinely interchangeable with the
         median Why Vanderbilt, Why Duke, or Why Rice essay. The prompt is 150
@@ -39,8 +39,8 @@ export default function Content() {
         <strong>"whether in Atlanta or Oxford."</strong> Almost every applicant
         glides past it. Almost every applicant should not. No other Ivy-plus
         "Why" essay includes a two-campus disjunction in the prompt. Emory is
-        structurally unusual: it has Oxford College — a two-year residential
-        college in Oxford, Georgia, about 38 miles from the Atlanta campus —
+        structurally unusual: it has Oxford College - a two-year residential
+        college in Oxford, Georgia, about 38 miles from the Atlanta campus -
         and it has its main Atlanta campus. Students apply to one or the
         other, and the two tracks are not equivalent. Oxford College enrolls
         roughly 450 students per class on a small rural campus; Atlanta
@@ -51,8 +51,8 @@ export default function Content() {
       <p>
         By putting both campuses in the prompt, Emory is not being polite. It
         is telling you that the choice matters. Treating Atlanta and Oxford as
-        interchangeable — writing a Why essay that could be a response from
-        either applicant pool — is the single clearest tell that you did not
+        interchangeable - writing a Why essay that could be a response from
+        either applicant pool - is the single clearest tell that you did not
         read the prompt carefully. Readers see this within the first two
         sentences. The essay is already losing ground.
       </p>
@@ -60,9 +60,9 @@ export default function Content() {
         There is a second structural quirk. The prompt asks about "community,"
         not academics. That word is also load-bearing. A Why essay that is
         purely a list of majors and programs misses the register. Community
-        includes academic community — the people you would argue with in a
+        includes academic community - the people you would argue with in a
         QTM seminar, the pre-health cohort you would study alongside, the
-        debate team you would join at Barkley Forum — but it is not only
+        debate team you would join at Barkley Forum - but it is not only
         that. The best Why Emory essays treat "community" as a real
         constraint on content, not a throwaway word.
       </p>
@@ -102,8 +102,8 @@ export default function Content() {
         <li>
           <strong>Signs that "community" was taken seriously.</strong>{" "}
           Essays that mention a classroom, a lab, a debate round, a
-          shuttle, or a specific student body — not just programs in the
-          abstract — register as having engaged with the word community on
+          shuttle, or a specific student body - not just programs in the
+          abstract - register as having engaged with the word community on
           the page.
         </li>
         <li>
@@ -111,9 +111,9 @@ export default function Content() {
           reasoning.</strong> Emory's profile skews heavily pre-health,
           pre-business, and pre-journalism, and the applicant pool is
           self-selected around those tracks. Readers know the cliches.
-          They are watching for the one concrete detail — a specific
+          They are watching for the one concrete detail - a specific
           Rollins-adjacent interest, a specific QTM question, a specific
-          Atlanta internship corridor — that shows reasoning instead of
+          Atlanta internship corridor - that shows reasoning instead of
           keyword-matching.
         </li>
         <li>
@@ -127,7 +127,7 @@ export default function Content() {
       <h2>Atlanta vs. Oxford: Which One Your Essay Should Anchor In</h2>
       <p>
         The decision about which campus to apply to is outside the scope of
-        this essay — you made it on the application form. But the essay has
+        this essay - you made it on the application form. But the essay has
         to follow through on that choice. This is where most drafts go
         wrong: the applicant made a decision on the form and then wrote an
         essay that could belong to either campus.
@@ -139,7 +139,7 @@ export default function Content() {
         senior year. Oxford's appeal is the scale, the community density,
         the faculty contact, and the start-small-then-scale-up structure.
         An Oxford essay that sounds like it was written by an Atlanta
-        applicant — all big-city internships and Rollins proximity — is not
+        applicant - all big-city internships and Rollins proximity - is not
         an Oxford essay. It is an Atlanta essay addressed to the wrong
         office. The admissions team at Oxford reads for applicants who
         chose Oxford on purpose, not as a back door.
@@ -149,8 +149,8 @@ export default function Content() {
         Atlanta campus actually offers: a mid-size research university
         embedded in a major city, with Rollins School of Public Health on
         campus, the CDC a short drive away, CNN downtown, a pre-health
-        pipeline that reads like a map, and signature programs — QTM,
-        Goizueta, the Emory Center for Ethics — that are most legible in
+        pipeline that reads like a map, and signature programs - QTM,
+        Goizueta, the Emory Center for Ethics - that are most legible in
         their full Atlanta form. An Atlanta essay that sounds like a small
         liberal-arts pitch ignores the whole reason the Atlanta campus
         exists.
@@ -166,11 +166,11 @@ export default function Content() {
         you have not engaged with the prompt's central phrase. This is the
         single highest-leverage edit available on a weak draft. Oxford
         applicants should be able to name something about starting in
-        Oxford — the scale, the residential rhythm, the Emory shuttle that
+        Oxford - the scale, the residential rhythm, the Emory shuttle that
         later moves them into the Atlanta ecosystem, the specific way
         Oxford's two years would set up their Atlanta two years. Atlanta
         applicants should be able to name something that only the Atlanta
-        footprint produces — QTM as a full-four-year commitment, Goizueta
+        footprint produces - QTM as a full-four-year commitment, Goizueta
         admission as a junior-year pivot, Rollins proximity for undergrad
         research access, or the walk from a classroom to the Emory Center
         for Ethics.
@@ -188,7 +188,7 @@ export default function Content() {
         <li>
           <strong>Move one: name a specific Emory feature.</strong>{" "}
           <em>Job:</em> establish that you have actually looked at Emory.
-          The feature should be concrete and Emory-specific — QTM, Oxford's
+          The feature should be concrete and Emory-specific - QTM, Oxford's
           two-year residential structure, Goizueta's junior-year entry,
           Rollins proximity for undergrad research, the Emory Center for
           Ethics, Barkley Forum, the Lullwater Preserve and Emory Forest,
@@ -204,7 +204,7 @@ export default function Content() {
           want to answer with quantitative methods is a name-drop. A
           sentence about the Center for Ethics that does not name a values
           question is a keyword. The second move is where your
-          application's real content leaks onto the Emory page — the
+          application's real content leaks onto the Emory page - the
           interest or project that the rest of your application already
           shows. <em>Failure mode:</em> hedging. "I would love to explore"
           and "I hope to engage with" communicate nothing. The stronger
@@ -217,7 +217,7 @@ export default function Content() {
           personal essay in its last move. This is the reason Why essays
           work when they work: they explain why this applicant,
           specifically, belongs at this school, specifically. The third
-          move is short — one sentence, sometimes two — and it reaches
+          move is short - one sentence, sometimes two - and it reaches
           back into your own pattern of choices. Why Oxford's small-college
           first two years matches something you have already shown about
           how you learn. Why Goizueta's deferred entry matches something
@@ -231,8 +231,8 @@ export default function Content() {
         One feature, one specific use, one personal signal. The essay that
         does all three inside 150 words reads tight. The essay that tries
         to pack in five programs and two personal vignettes reads frantic.
-        The essay that does only the first move — naming a feature and
-        stopping — reads like a campus brochure reversed into applicant
+        The essay that does only the first move - naming a feature and
+        stopping - reads like a campus brochure reversed into applicant
         voice. Each move is necessary because each does different work.
       </p>
 
@@ -251,7 +251,7 @@ export default function Content() {
         transition into Atlanta for junior and senior year, lets me build
         in the order I already learn in. After the move, QTM is where I
         go: I want to take quantitative methods to the question I have
-        been chewing on since junior year — whether the language
+        been chewing on since junior year - whether the language
         communities use about a policy predicts how they vote on it. The
         Emory Center for Ethics is where I want that question to end up,
         because I do not trust a methods answer without a values argument
@@ -260,11 +260,11 @@ export default function Content() {
       </blockquote>
       <p>
         Count the work that draft does. It opens with a declared campus
-        choice — Oxford, on purpose — and gives a reason rooted in how the
+        choice - Oxford, on purpose - and gives a reason rooted in how the
         applicant actually learns. That is move one and the first half of
         move three already in the same paragraph. The essay then pivots to
-        the Atlanta phase and names two specific features — QTM and the
-        Emory Center for Ethics — and connects them with a real
+        the Atlanta phase and names two specific features - QTM and the
+        Emory Center for Ethics - and connects them with a real
         intellectual question the applicant is carrying. That is move
         two. The close loops back to structure: Oxford first, then
         Atlanta, a sequence that matches the applicant's temperament.
@@ -288,7 +288,7 @@ export default function Content() {
         communicates more about the applicant than three sentences of
         explanation would have. That is the kind of texture a Why essay is
         allowed to have when the writer trusts the structure. The essay
-        could only have been written by an Oxford applicant — the first
+        could only have been written by an Oxford applicant - the first
         sentence announces it, and the third-to-last sentence confirms
         it. If you swapped the essay into an Atlanta applicant's file, it
         would read wrong. That is the test the phrase "whether in Atlanta
@@ -309,9 +309,9 @@ export default function Content() {
           <strong>Citing "location" as a reason.</strong> Atlanta is a
           city. So are dozens of other university towns. "I love Atlanta"
           is not a reason to attend Emory. If Atlanta is going to appear
-          in your essay, it must appear as a specific resource — CDC
+          in your essay, it must appear as a specific resource - CDC
           proximity for a public-health interest, CNN for journalism, the
-          corridor of Fortune 500 headquarters for a Goizueta track —
+          corridor of Fortune 500 headquarters for a Goizueta track -
           tied to something you would actually do.
         </li>
         <li>
@@ -326,9 +326,9 @@ export default function Content() {
           city."</strong> Essays that celebrate Atlanta's diversity in the
           abstract are indistinguishable from essays about any other
           diverse U.S. city. If diversity matters to your Emory essay, it
-          has to matter through a specific mechanism — a specific
+          has to matter through a specific mechanism - a specific
           community, a specific neighborhood, a specific class, a
-          specific research focus — not a one-line tribute.
+          specific research focus - not a one-line tribute.
         </li>
         <li>
           <strong>Pre-med applicants saying "pre-med" without a specific
@@ -373,7 +373,7 @@ export default function Content() {
       <p>
         Emory requires a second essay alongside the Why Emory prompt: a
         personal-reflection question with three options, also 150 words.
-        The three options share a common structure — they ask about a
+        The three options share a common structure - they ask about a
         value, an experience, or a community that shaped you. That second
         essay is where your personal material lives. The Why Emory essay
         is where your academic and community fit lives. Readers see both
@@ -381,9 +381,9 @@ export default function Content() {
       </p>
       <p>
         The coordination problem is this: if you spend half of your Why
-        Emory essay on personal backstory — the story of how you got
+        Emory essay on personal backstory - the story of how you got
         interested in public health, the story of the debate round that
-        changed your mind — you will duplicate content with the personal
+        changed your mind - you will duplicate content with the personal
         prompt and leave yourself no room for the Emory-specific moves.
         The reverse is also bad: if your personal prompt reads like a Why
         Emory essay ("my values align with Emory's values"), you have
@@ -395,8 +395,8 @@ export default function Content() {
         In the personal prompt, say who you are and what shaped that.
         The link between them should be visible but not explicit. A
         reader should finish both essays and think: this is a specific
-        person with a specific set of questions, and Emory — Atlanta
-        campus, or Oxford College, as appropriate — is the structurally
+        person with a specific set of questions, and Emory - Atlanta
+        campus, or Oxford College, as appropriate - is the structurally
         correct place for them to pursue those questions. That is the
         whole job of the two-essay package.
       </p>
@@ -410,7 +410,7 @@ export default function Content() {
         the topic reads as a default choice, and default choices do not
         win competitive admits at Oxford any more than they do at
         Atlanta. The shuttle, the two-year rhythm, the move to Atlanta
-        in junior year — these are structural facts of Oxford's life,
+        in junior year - these are structural facts of Oxford's life,
         and an Oxford applicant who cannot describe their relationship
         to those facts has not thought about the campus they applied to.
       </p>
@@ -423,9 +423,9 @@ export default function Content() {
         to pressure-test whether the essay you wrote could have been
         submitted to any peer school by swapping two nouns. If it could,
         the essay needs more Emory-specific load-bearing content. For the
-        broader logic of Why essays across the top tier — what admissions
+        broader logic of Why essays across the top tier - what admissions
         actually weighs, why "I love your location" fails everywhere, and
-        what specific engagement looks like — read our{" "}
+        what specific engagement looks like - read our{" "}
         <Link
           href="/blog/why-this-college-essay"
           className="text-oxblood hover:underline"

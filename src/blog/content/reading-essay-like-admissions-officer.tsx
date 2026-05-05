@@ -17,7 +17,7 @@ export default function Content() {
         The numbers are worth staring at. Elite schools read between 40,000
         and 60,000 applications per season. Most selective schools assign two
         readers per file. Combined, those two readers spend about ten to
-        twenty minutes on the entire application — transcript, recommendations,
+        twenty minutes on the entire application - transcript, recommendations,
         activities list, personal statement, supplements, everything. The
         Common App essay gets three to five minutes. Each supplemental gets
         one to three minutes. Many readers work from home at night after a
@@ -57,8 +57,8 @@ export default function Content() {
           <strong>Essays cannot require re-reading.</strong> If a sentence
           needs a second pass to parse, the reader shrugs and moves on. They
           will not go back. Anything that depends on the reader returning
-          after the ending to re-evaluate the opening — a callback, a
-          recontextualization, a delayed reveal — is a gamble you almost
+          after the ending to re-evaluate the opening - a callback, a
+          recontextualization, a delayed reveal - is a gamble you almost
           always lose.
         </li>
         <li>
@@ -77,7 +77,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Specific nouns are load-bearing.</strong> A reader moving
-          quickly latches onto concrete words — a specific tool, a specific
+          quickly latches onto concrete words - a specific tool, a specific
           street, a specific book, a specific mistake. Abstract nouns
           ("passion," "journey," "experience," "community") slide off. The
           essay that is full of specific nouns reads fast and well. The essay
@@ -158,7 +158,7 @@ export default function Content() {
         <li>
           <strong>Identify the line a reader would quote back to a colleague.</strong>{" "}
           Admissions readers talk to each other. "I read this great essay
-          today about —" and then a line. Which line is that? If nothing in
+          today about -" and then a line. Which line is that? If nothing in
           your essay is quote-back-able, you have written competently but not
           memorably. Find the line, or write one.
         </li>
@@ -218,7 +218,7 @@ export default function Content() {
         </li>
         <li>
           <strong>The dictionary definition.</strong> "Webster's defines
-          perseverance as —." This opening has been mocked in admissions
+          perseverance as -." This opening has been mocked in admissions
           guidance for twenty years. It still appears constantly. It signals
           that the writer did not know how to start.
         </li>
@@ -237,7 +237,7 @@ export default function Content() {
         </li>
         <li>
           <strong>The famous-person quote.</strong> "As Albert Einstein once
-          said —." The quote is doing the work the opening should do. The
+          said -." The quote is doing the work the opening should do. The
           reader notes that the writer borrowed a hook rather than making one.
         </li>
         <li>
@@ -271,7 +271,7 @@ export default function Content() {
         suit, Thursday. Seven specific nouns. A clear setting. A narrator who
         knows something the reader does not. No abstraction until the last
         sentence, and the abstraction is earned by the specifics above it. The
-        rhythm varies — short sentence, longer sentence, short sentence — which
+        rhythm varies - short sentence, longer sentence, short sentence - which
         signals attention to the sentence itself. The reader's internal
         rating moves up before the second paragraph starts. She will read the
         rest of this essay slower, not faster, because the opening bought her
@@ -296,7 +296,7 @@ export default function Content() {
       <p>
         What the tired reader silently notes: no specific nouns. No setting.
         No scene. "Values," "hard work," "dedication," "perseverance,"
-        "commit oneself," "craft," "next chapter" — seven abstractions, zero
+        "commit oneself," "craft," "next chapter" - seven abstractions, zero
         specifics. The voice is indistinguishable from a thousand other
         openings she has read this season. The rating in her head has already
         formed, and it is not generous. She will finish the essay, but she is
@@ -306,7 +306,7 @@ export default function Content() {
       </p>
       <p>
         Notice: the writer had the material. The Sharpie, the tagging gun,
-        Route 9, the funeral suit — all of that was in the writer's head in
+        Route 9, the funeral suit - all of that was in the writer's head in
         the first draft. The failure was structural, not biographical. She
         put the lesson on top and the specifics underneath, which inverts the
         order a tired reader can process.
@@ -327,7 +327,7 @@ export default function Content() {
         the application raises a quiet flag, even if the essay itself is
         strong. The second reader is also scanning for lines that survive
         retelling. At committee, advocates speak on behalf of the files they
-        have championed. "There's this great essay about —" is followed by a
+        have championed. "There's this great essay about -" is followed by a
         specific line. If your essay has no line that could survive being
         quoted out loud in a committee meeting, you have made the advocate's
         job harder.
@@ -362,7 +362,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Open mid-scene, not context-first.</strong> Most first
-          drafts begin with setup — who, what, when, why it matters. Most
+          drafts begin with setup - who, what, when, why it matters. Most
           final drafts begin with a detail, a line of dialogue, a specific
           object, or a moment. The setup, if it needs to be there at all,
           comes second. The reader is not paying for setup time.
@@ -379,7 +379,7 @@ export default function Content() {
           After the opening, the closing line is the only other sentence the
           reader is guaranteed to register. Vague gestures toward growth, the
           future, or gratitude waste that real estate. The ending should
-          earn its place the way the opening does — with a specific, a
+          earn its place the way the opening does - with a specific, a
           rhythm, or a claim the reader will carry into the next file.
         </li>
         <li>

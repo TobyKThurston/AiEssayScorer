@@ -51,7 +51,7 @@ export default function AOSimulator() {
       {paywall && <PaywallBanner />}
       <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5">
         <div>
-          <label className="block text-sm font-semibold text-ink mb-2">School <span className="font-normal text-pencil">(optional — tunes the AO's lens)</span></label>
+          <label className="block text-sm font-semibold text-ink mb-2">School <span className="font-normal text-pencil">(optional - tunes the AO's lens)</span></label>
           <input type="text" value={school} onChange={(e) => setSchool(e.target.value)} placeholder="e.g., Stanford, Yale, UChicago" className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition" maxLength={100} />
         </div>
         <div>

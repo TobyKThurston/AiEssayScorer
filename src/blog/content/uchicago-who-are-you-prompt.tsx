@@ -6,11 +6,11 @@ export default function Content() {
       <h2>The UChicago Option 1 Prompt, Verbatim</h2>
       <p>
         The University of Chicago Extended Essay offers applicants a choice
-        between roughly seven "Uncommon" prompts and one standing fallback —
-        Option 1 — which reads:{" "}
+        between roughly seven "Uncommon" prompts and one standing fallback -
+        Option 1 - which reads:{" "}
         <em>
           "Share with us what you'd like us to know about you. Tell us about
-          anything — another experience, a hobby, a passion, an event — that's
+          anything - another experience, a hobby, a passion, an event - that's
           important to you."
         </em>{" "}
         There is no strict word limit. UChicago explicitly tells applicants to
@@ -87,7 +87,7 @@ export default function Content() {
       <h2>What UChicago Admissions Is Actually Screening For</h2>
       <ul>
         <li>
-          <strong>A specific, bounded topic.</strong> Not "who I am" — a
+          <strong>A specific, bounded topic.</strong> Not "who I am" - a
           single subject the essay can actually cover. The most successful
           Option 1 essays read almost like field notes on one narrow thing.
           The identity work happens underneath the topic, not on top of it.
@@ -150,8 +150,8 @@ export default function Content() {
         and Option 1 is not the place to write another one. Family biography
         that treats the family as subject rather than the writer's mind as
         subject reads as a personal statement misfiled. Achievement
-        summaries — the science fair project you won, the robotics team you
-        led, the nonprofit you founded — belong on the activities list. The
+        summaries - the science fair project you won, the robotics team you
+        led, the nonprofit you founded - belong on the activities list. The
         "what I learned from my failures" arc is the single most overused
         narrative shape in the applicant pool. Generic passion essays ("I
         have always loved music") are mood boards without substance. If your
@@ -170,9 +170,9 @@ export default function Content() {
           texture of it. The opening does not explain. It shows.
         </li>
         <li>
-          <strong>Unpack it — history, your engagement, specific details
+          <strong>Unpack it - history, your engagement, specific details
           (~300 words).</strong> This is the core. How did you come to this
-          subject? What does it actually involve? What are the specifics —
+          subject? What does it actually involve? What are the specifics -
           the vocabulary, the mechanics, the small facts that someone not
           inside the topic would not know? Spend time here. Density of
           specific detail is what separates a real essay from a performance.
@@ -191,7 +191,7 @@ export default function Content() {
         </li>
         <li>
           <strong>A closing that does not summarize (~100 words).</strong> Do
-          not wrap up. Do not restate. End on a specific next-thought — a
+          not wrap up. Do not restate. End on a specific next-thought - a
           question you still have, a small observation that follows from
           everything before it, a concrete scene that lets the essay rest.
           The closing should feel like the end of a real train of thought,
@@ -207,7 +207,7 @@ export default function Content() {
       </p>
       <blockquote>
         "The Smith-Corona Silent-Super in my closet was manufactured in 1957,
-        weighs about nineteen pounds, and has an 'elite' typeface — twelve
+        weighs about nineteen pounds, and has an 'elite' typeface - twelve
         characters per inch instead of the more common ten. I know this
         because I spent three months last year learning how to clean its
         segment, the small slotted piece of steel where the type bars pivot,
@@ -230,8 +230,8 @@ export default function Content() {
         them.
         <br />
         <br />
-        What pulled me in was not the nostalgia — I am not especially
-        romantic about old things — but the mechanical logic. A typewriter
+        What pulled me in was not the nostalgia - I am not especially
+        romantic about old things - but the mechanical logic. A typewriter
         is a solved problem. Every design decision is visible and every
         decision has a reason. The carriage has to return at a consistent
         speed, so there is a draw cord under tension. The type bars have to
@@ -263,8 +263,8 @@ export default function Content() {
       <p>
         The essay works because the topic is narrow and the writer does not
         try to broaden it artificially. It does not announce a lesson. It
-        lets the intellectual move — from the specific machine to a habit of
-        looking at screws — happen in one paragraph, almost in passing, and
+        lets the intellectual move - from the specific machine to a habit of
+        looking at screws - happen in one paragraph, almost in passing, and
         then it steps back into the specific. The voice is curious,
         unpretentious, and committed to detail. The closing does not
         summarize. It points forward to a future repair. A UChicago reader
@@ -275,7 +275,7 @@ export default function Content() {
         Notice what is not in the essay. No family backstory about the
         grandfather beyond the single necessary sentence. No "this taught me
         resilience." No reference to college, UChicago, or future plans. No
-        performance of quirkiness — the quirks are real, specific, and
+        performance of quirkiness - the quirks are real, specific, and
         incidental to the subject. The essay trusts its topic to do the
         identity work.
       </p>
@@ -338,7 +338,7 @@ export default function Content() {
       <h2>How Option 1 Coordinates With Your Why UChicago Essay</h2>
       <p>
         UChicago's supplement has two parts, and they do different work. The
-        Why UChicago essay is institutional fit — specific courses, specific
+        Why UChicago essay is institutional fit - specific courses, specific
         professors, specific reasons the Core and the Hum sequence and the
         particular intellectual culture of the school match how you think.
         Option 1 is an intellectual self-portrait, independent of the
@@ -350,8 +350,8 @@ export default function Content() {
       </p>
       <p>
         They should, however, read as written by the same person. The voice
-        should match. The register — specific, curious, unafraid of
-        detail — should match. A reader who finishes both essays should feel
+        should match. The register - specific, curious, unafraid of
+        detail - should match. A reader who finishes both essays should feel
         they have encountered one mind with a clear signature, approached
         from two angles. That coherence is the real test of a supplement
         that works together.

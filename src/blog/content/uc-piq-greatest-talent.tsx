@@ -12,8 +12,8 @@ export default function Content() {
         </em>{" "}
         The word limit is 350 words. This is Personal Insight Question #3 in
         the UC application, and applicants pick four of the eight available
-        PIQs. Every UC campus — Berkeley, UCLA, San Diego, Davis, Irvine, Santa
-        Barbara, Santa Cruz, Riverside, Merced — uses the same eight prompts
+        PIQs. Every UC campus - Berkeley, UCLA, San Diego, Davis, Irvine, Santa
+        Barbara, Santa Cruz, Riverside, Merced - uses the same eight prompts
         and the same 350-word cap per response.
       </p>
       <p>
@@ -43,7 +43,7 @@ export default function Content() {
       </p>
       <p>
         The stronger move is to pick the talent with the richest development
-        arc — which is often not the most impressive one on paper. A
+        arc - which is often not the most impressive one on paper. A
         second-tier skill with a clear origin, clear growth moments, and a
         clear way it shows up in your current life outperforms a trophy talent
         with no story attached. UC readers are screening for the arc, not the
@@ -123,14 +123,14 @@ export default function Content() {
       <p>
         The first is a competitive swimmer with a state medal. Her obvious
         topic is swimming. Her better topic might be her capacity for reading
-        a coach's body language — a skill she built by watching three
+        a coach's body language - a skill she built by watching three
         different coaches across four years and learning, by micro-signal,
         when to push and when to conserve. That skill has a clear development
         arc and shows up in places other than the pool.
       </p>
       <p>
         The second is a first-generation student with a cashier job and no
-        trophies. His talent is voice mimicry — he can reproduce accents and
+        trophies. His talent is voice mimicry - he can reproduce accents and
         speech rhythms after hearing them once. He developed it translating
         between his Tagalog-speaking grandmother and the DMV, his school
         counselor, and the insurance company.
@@ -140,7 +140,7 @@ export default function Content() {
         Her talent is reverse-engineering recipes by taste. She developed it
         during the pandemic when her grandmother's favorite Sichuan place
         closed, and has demonstrated it across sixty-plus dishes in a
-        notebook. No award, no competition — and a workable PIQ #3.
+        notebook. No award, no competition - and a workable PIQ #3.
       </p>
       <p>
         None of those three talents are leadership, research, or music. None
@@ -152,7 +152,7 @@ export default function Content() {
       <h2>The Structure That Works at 350 Words</h2>
       <p>
         The essay has to do four things. At 350 words, every sentence has to
-        earn its spot. The structure below is not a rigid template — it is the
+        earn its spot. The structure below is not a rigid template - it is the
         proportion that actually works when you read strong PIQs back-to-back.
       </p>
       <ol>
@@ -168,7 +168,7 @@ export default function Content() {
         <li>
           <strong>Development arc (about 150 words).</strong> This is the
           largest section and the one most applicants botch. The failure mode
-          is chronology — "I started when I was six, then I practiced, then I
+          is chronology - "I started when I was six, then I practiced, then I
           got better." Chronology is not development. Development is two or
           three specific moments where the skill changed shape. The moment you
           realized your technique was wrong. The moment you had to rebuild.
@@ -178,7 +178,7 @@ export default function Content() {
         <li>
           <strong>Demonstration (about 100 words).</strong> One recent, specific
           situation where the talent operated. Not a summary, not a list of
-          contexts — one scene. The cashier handling a Tagalog-only customer
+          contexts - one scene. The cashier handling a Tagalog-only customer
           in front of an impatient manager. The cook reconstructing a dish her
           younger brother asked for twice. The swimmer reading her coach's
           subtle "back off" signal two laps into a warmup. Demonstration is
@@ -188,7 +188,7 @@ export default function Content() {
           <strong>What the talent produces or reveals (about 50 words).</strong>{" "}
           Close with a line or two on what the skill does in the world. Not a
           moral. Not a college-ready "this is why I will succeed at UC."
-          Something honest about the output — the dishes it produces, the
+          Something honest about the output - the dishes it produces, the
           translations it enables, the patterns it surfaces. Readers want to
           see the skill generate something by the end.
         </li>
@@ -202,7 +202,7 @@ export default function Content() {
       </p>
       <blockquote>
         "My greatest skill is translating between my mother and bureaucracy.
-        Not Spanish-to-English translation — we both speak both. The harder
+        Not Spanish-to-English translation - we both speak both. The harder
         translation is from the register of a public-hospital intake form to
         the register of a woman who has worked twelve-hour shifts cleaning
         offices since 2009. I have been doing this since I was nine, when she
@@ -221,8 +221,8 @@ export default function Content() {
         ('no, we do not have to move, and here is what you say if he comes
         back'), and wrote a two-sentence reply for her to send. The notice
         stopped. I am good at this because I have had to be, and because the
-        specific work — finding the real question underneath the official
-        one — turns out to be most of what comprehension is. I use it on
+        specific work - finding the real question underneath the official
+        one - turns out to be most of what comprehension is. I use it on
         physics problems, on AP History documents, and on my grandmother when
         she is upset but says she is fine."
       </blockquote>
@@ -233,7 +233,7 @@ export default function Content() {
         vocabulary insight, last month with the landlord). The demonstration
         is a single scene, not a summary. And the closing line earns its place
         by quietly expanding the talent into other rooms of the applicant's
-        life — physics problems, history documents, a grandmother — without
+        life - physics problems, history documents, a grandmother - without
         padding.
       </p>
       <p>
@@ -266,7 +266,7 @@ export default function Content() {
           <strong>No development arc, only chronology.</strong> "I started in
           fifth grade. I practiced every day. I got better." That is a
           timeline, not a development story. Development requires specific
-          moments where the skill changed shape — a misunderstanding, a
+          moments where the skill changed shape - a misunderstanding, a
           correction, a rebuild, a realization.
         </li>
         <li>
@@ -283,8 +283,8 @@ export default function Content() {
         </li>
         <li>
           <strong>No concrete example of the skill in action.</strong> Essays
-          that stay at altitude the whole way — abstractions, reflections,
-          general statements about the meaning of the skill — fail the
+          that stay at altitude the whole way - abstractions, reflections,
+          general statements about the meaning of the skill - fail the
           demonstration test. You need at least one scene where the reader can
           watch the talent work.
         </li>
@@ -306,7 +306,7 @@ export default function Content() {
       <p>
         UC applicants pick four of eight PIQs. The four essays are read
         together, and readers notice overlap fast. If you used your primary
-        activity — orchestra, soccer, robotics, your research lab — in PIQ #1
+        activity - orchestra, soccer, robotics, your research lab - in PIQ #1
         (leadership) or PIQ #2 (creative expression), do not use the same
         activity in PIQ #3. You will have burned two slots showing different
         angles on the same thing.
@@ -321,7 +321,7 @@ export default function Content() {
         The cleanest way to coordinate is to sketch all four topics before you
         draft any of them. Write one sentence per PIQ. If any two sentences
         share the same noun, rework. PIQ #3 is the best slot for a specific,
-        portable skill that does not fit anywhere else — the kind of capacity
+        portable skill that does not fit anywhere else - the kind of capacity
         that does not make it onto a resume but shows up everywhere in how you
         actually operate.
       </p>
@@ -346,7 +346,7 @@ export default function Content() {
         >
           college essay topics to avoid
         </Link>{" "}
-        — the trophy-case talent essay is one of them, and the list will save
+        - the trophy-case talent essay is one of them, and the list will save
         you a draft cycle.
       </p>
     </>

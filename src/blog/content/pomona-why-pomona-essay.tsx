@@ -21,8 +21,8 @@ export default function Content() {
         Pomona readers are screening out two applicant profiles right
         away: the student who thinks Pomona is "the West Coast Ivy"
         and the student who thinks Pomona is "an LA college." Neither
-        framing works. Pomona is in Claremont — a small college town
-        forty miles east of downtown LA — and it is not trying to be
+        framing works. Pomona is in Claremont - a small college town
+        forty miles east of downtown LA - and it is not trying to be
         an Ivy.
       </p>
       <p>
@@ -33,8 +33,8 @@ export default function Content() {
 
       <h2>The Claremont Consortium Is the Answer</h2>
       <p>
-        The 5Cs — Pomona, Harvey Mudd, Scripps, Claremont McKenna, and
-        Pitzer — share more than a zip code. Students cross-register
+        The 5Cs - Pomona, Harvey Mudd, Scripps, Claremont McKenna, and
+        Pitzer - share more than a zip code. Students cross-register
         across colleges, share dining halls, play on joint teams, and
         live a half-mile from a campus with very different
         intellectual commitments. Readers want to see you understand
@@ -74,7 +74,7 @@ export default function Content() {
       <p>
         Why it works: names two colleges correctly, names a specific
         dining hall, and gives a real reason the consortium structure
-        matters — not just "I like options."
+        matters - not just "I like options."
       </p>
 
       <h2>Common Mistakes</h2>
@@ -132,7 +132,7 @@ export default function Content() {
       <h2>Closing Move</h2>
       <p>
         The strongest Why Pomona essays sound like the applicant has
-        walked the campus in their head — they know which dining hall
+        walked the campus in their head - they know which dining hall
         they'd eat at, which 5C class they'd add, which professor's
         office hours they'd show up to. You don't need to have
         visited. You do need to have done the reading.

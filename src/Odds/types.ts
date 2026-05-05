@@ -7,6 +7,9 @@ export type GpaScale = "weighted" | "unweighted";
 export interface Activity {
   title: string;
   tier: 1 | 2 | 3 | 4;
+  role?: string;
+  hoursPerWeek?: number;
+  years?: number;
   description?: string;
 }
 

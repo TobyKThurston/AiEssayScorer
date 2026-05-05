@@ -5,7 +5,7 @@ export default function Content() {
     <>
       <h2>The Yale "Teach a Course" Prompt, Verbatim</h2>
       <p>
-        Yale's application includes a set of short takes capped at 200 characters each — not words, characters. One of them reads: <em>"You are teaching a Yale course. What is it called?"</em>
+        Yale's application includes a set of short takes capped at 200 characters each - not words, characters. One of them reads: <em>"You are teaching a Yale course. What is it called?"</em>
       </p>
       <p>
         That's roughly a sentence and a half. Most applicants underestimate how much signal this tiny prompt carries. It is arguably the single most distinctive question in the Ivy League application season, and Yale admissions officers have been explicit in interviews that they read it closely. In 200 characters, you are telling them what your intellectual obsession actually is, how you'd frame it to other students, and whether you can make an idea sound interesting in almost no space at all.
@@ -46,16 +46,16 @@ export default function Content() {
         <strong>Stronger:</strong> "Carbon Pricing in the Real World: Why the Economics Keeps Winning and the Politics Keeps Losing"
       </blockquote>
       <p>
-        The last version tells the admissions reader the student has been thinking specifically about the gap between the economic literature on carbon pricing and the political record of actually implementing it. That's a whole worldview compressed into a title. It's also unmistakably Yale-flavored — the kind of course you could imagine being cross-listed between economics, environmental studies, and political science, which mirrors how Yale actually organizes its academic offerings.
+        The last version tells the admissions reader the student has been thinking specifically about the gap between the economic literature on carbon pricing and the political record of actually implementing it. That's a whole worldview compressed into a title. It's also unmistakably Yale-flavored - the kind of course you could imagine being cross-listed between economics, environmental studies, and political science, which mirrors how Yale actually organizes its academic offerings.
       </p>
       <p>
         Here are more examples of the move, from different fields:
       </p>
       <ul>
-        <li>"The Grammar of Rivers: How Watersheds Shape the Sentences We Write About Them" — a course about nature writing with a specific claim embedded in the title.</li>
-        <li>"Failure Modes: Engineering Disasters as Literature" — a bridge between engineering and literary analysis that would make sense only at a school with a strong humanities culture.</li>
-        <li>"The Last Fifty Years Were Weird: A History of Economic Stability in the Developed World" — a course with a point of view about recent history.</li>
-        <li>"Translating Silence: What Literary Translators Do When the Original Refuses to Move" — a course that would only make sense if taught by someone who actually translates.</li>
+        <li>"The Grammar of Rivers: How Watersheds Shape the Sentences We Write About Them" - a course about nature writing with a specific claim embedded in the title.</li>
+        <li>"Failure Modes: Engineering Disasters as Literature" - a bridge between engineering and literary analysis that would make sense only at a school with a strong humanities culture.</li>
+        <li>"The Last Fifty Years Were Weird: A History of Economic Stability in the Developed World" - a course with a point of view about recent history.</li>
+        <li>"Translating Silence: What Literary Translators Do When the Original Refuses to Move" - a course that would only make sense if taught by someone who actually translates.</li>
       </ul>
       <p>
         Notice what none of these do: they don't try to be funny, they don't pose as obviously hypothetical, and they don't describe the applicant's own identity. They describe an actual course with an actual argument.
@@ -90,7 +90,7 @@ export default function Content() {
         Yale also asks: <em>"If you could teach any college course, write a book, or create an original piece of art of any kind, what would it be?"</em> This is also 200 characters. The same principles apply, with one addition: the three options (course, book, art) are not equivalent. Picking one signals something about how you think.
       </p>
       <p>
-        Applicants who pick "course" tend to be signaling that they want to be in dialogue — they want to frame an argument for others to engage with. Applicants who pick "book" tend to be signaling that they want to work something out in private and then present it. Applicants who pick "art" tend to be signaling that they want to use a different medium to hold an idea that prose can't quite hold. Any of the three can work. What matters is that the choice feels natural to the applicant.
+        Applicants who pick "course" tend to be signaling that they want to be in dialogue - they want to frame an argument for others to engage with. Applicants who pick "book" tend to be signaling that they want to work something out in private and then present it. Applicants who pick "art" tend to be signaling that they want to use a different medium to hold an idea that prose can't quite hold. Any of the three can work. What matters is that the choice feels natural to the applicant.
       </p>
       <p>
         A student who is genuinely obsessed with poetry and picks "course" when they should have picked "art" reads as slightly off. A student who picks the medium that matches their actual intellectual habits reads as coherent.
@@ -98,7 +98,7 @@ export default function Content() {
 
       <h2>What a Strong Answer to This Prompt Signals About the Whole Application</h2>
       <p>
-        Among all of Yale's short takes, the course title question is the one admissions readers remember most often. A great course title travels through the committee meeting. It becomes something the committee can reference when they talk about the applicant — a shorthand for what kind of mind the student has.
+        Among all of Yale's short takes, the course title question is the one admissions readers remember most often. A great course title travels through the committee meeting. It becomes something the committee can reference when they talk about the applicant - a shorthand for what kind of mind the student has.
       </p>
       <p>
         For that reason, the course title short take is disproportionately useful relative to its length. A generic title costs you almost nothing directly, but it leaves you without the thing admissions officers would use to remember you. A precise title can make you memorable in a room full of strong applicants.
@@ -109,7 +109,7 @@ export default function Content() {
         Yale's full supplement includes the 125-word Why Yale essay, the 125-word "why these academic areas" essay, several short takes, and two longer 400-word reflections. They are read together.
       </p>
       <p>
-        The course title should connect to — but not duplicate — your other responses. If your <Link href="/blog/yale-why-yale-essay-125-words" className="text-oxblood hover:underline">Why Yale essay</Link> is about your interest in philosophy of mind, your course title might be about a specific sub-question within that field that the Why essay didn't have room to name. If your longer community essay is about your family's relationship to a particular city, your course title might be about something intellectually unrelated, which reveals range.
+        The course title should connect to - but not duplicate - your other responses. If your <Link href="/blog/yale-why-yale-essay-125-words" className="text-oxblood hover:underline">Why Yale essay</Link> is about your interest in philosophy of mind, your course title might be about a specific sub-question within that field that the Why essay didn't have room to name. If your longer community essay is about your family's relationship to a particular city, your course title might be about something intellectually unrelated, which reveals range.
       </p>
       <p>
         Before submitting, run your full Yale supplement through our <Link href="/editor" className="text-oxblood hover:underline">AI essay review tool</Link> to check whether your short takes and longer essays work together. For Yale's longer reflection essays, see our <Link href="/blog/yale-community-essay" className="text-oxblood hover:underline">Yale community essay guide</Link>. For the patterns Yale shares with other Ivies, read our <Link href="/blog/ivy-league-essay-tips" className="text-oxblood hover:underline">Ivy League essay analysis</Link>. And if you're still working on the Common App personal statement that Yale will read alongside all of these, our <Link href="/blog/how-to-write-common-app-essay" className="text-oxblood hover:underline">Common App guide</Link> walks through how the personal statement should set up the short answers.

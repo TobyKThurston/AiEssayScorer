@@ -28,7 +28,7 @@ export default function Content() {
           version of something on your transcript.
         </li>
         <li>
-          <strong>A reason that's anchored to this moment.</strong> Why now —
+          <strong>A reason that's anchored to this moment.</strong> Why now -
           not "someday."
         </li>
         <li>
@@ -62,7 +62,7 @@ export default function Content() {
       <h2>Picks That Tend to Work</h2>
       <ul>
         <li>
-          <strong>Fermentation.</strong> Kimchi, sourdough, miso — small,
+          <strong>Fermentation.</strong> Kimchi, sourdough, miso - small,
           tactile, patient.
         </li>
         <li>
@@ -99,7 +99,7 @@ export default function Content() {
         </li>
         <li>
           <strong>One sentence on why now.</strong> What is it about this
-          moment — the summer, the major, a person — that pointed you here?
+          moment - the summer, the major, a person - that pointed you here?
         </li>
         <li>
           <strong>One sentence on the first concrete step.</strong> The
@@ -111,7 +111,7 @@ export default function Content() {
       <blockquote>
         "I want to learn to sail. My grandfather sailed out of Marblehead
         for forty years and I never asked him how. He died in March.
-        Princeton's sailing team accepts beginners in the fall — I'd start
+        Princeton's sailing team accepts beginners in the fall - I'd start
         on a Sunfish, in the Carnegie Lake wind, and go from there."
       </blockquote>
       <p>

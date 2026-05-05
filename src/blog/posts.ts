@@ -57,7 +57,7 @@ export const posts: Post[] = [
     slug: "columbia-why-columbia-essay-core-curriculum",
     title: "Columbia 'Why Columbia' Essay: How to Write About the Core Curriculum",
     description:
-      "Columbia's Why Essay isn't a generic supplemental — it tests whether you actually understand the Core Curriculum and want what it demands. Here's what works, what doesn't, and the single line that separates strong Columbia supplements from forgettable ones.",
+      "Columbia's Why Essay isn't a generic supplemental - it tests whether you actually understand the Core Curriculum and want what it demands. Here's what works, what doesn't, and the single line that separates strong Columbia supplements from forgettable ones.",
     publishedAt: "2026-03-10",
     category: "Supplemental Essays",
     readTime: "8 min read",
@@ -66,7 +66,7 @@ export const posts: Post[] = [
     slug: "columbia-list-essay-what-are-you-reading",
     title: "Columbia List Essay: How to Answer 'What Are You Reading, Listening To, Thinking About?'",
     description:
-      "Columbia's list question is the most underrated part of the application. Admissions officers use it to see who you are when no one is assigning you anything. Here's exactly what to include — and the mistakes that make lists look curated rather than real.",
+      "Columbia's list question is the most underrated part of the application. Admissions officers use it to see who you are when no one is assigning you anything. Here's exactly what to include - and the mistakes that make lists look curated rather than real.",
     publishedAt: "2026-03-24",
     category: "Supplemental Essays",
     readTime: "7 min read",
@@ -84,7 +84,7 @@ export const posts: Post[] = [
     slug: "harvard-roommate-essay-top-3-things",
     title: "Harvard Roommate Essay: How to Write the 'Top 3 Things Your Roommates Might Like to Know About You'",
     description:
-      "Harvard's roommate prompt is the most underestimated short answer in the application. It's the one place where admissions officers give you permission to drop the academic register — and the place where listing accomplishments actively hurts you. Here's what works and why.",
+      "Harvard's roommate prompt is the most underestimated short answer in the application. It's the one place where admissions officers give you permission to drop the academic register - and the place where listing accomplishments actively hurts you. Here's what works and why.",
     publishedAt: "2026-04-05",
     category: "Supplemental Essays",
     readTime: "8 min read",
@@ -111,7 +111,7 @@ export const posts: Post[] = [
     slug: "yale-teach-a-course-essay",
     title: "Yale 'You Are Teaching a Yale Course. What Is It Called?' Short Answer Guide",
     description:
-      "Yale's 200-character course title prompt is the most distinctive short answer in Ivy League admissions. Here's how to turn an intellectual obsession into a course title admissions readers actually remember — and how to avoid the jokes and generic labels that sink most attempts.",
+      "Yale's 200-character course title prompt is the most distinctive short answer in Ivy League admissions. Here's how to turn an intellectual obsession into a course title admissions readers actually remember - and how to avoid the jokes and generic labels that sink most attempts.",
     publishedAt: "2026-04-09",
     category: "Supplemental Essays",
     readTime: "8 min read",
@@ -174,7 +174,7 @@ export const posts: Post[] = [
     slug: "upenn-why-penn-essay",
     title: "Penn 'Why Penn' Essay: How to Answer 'How Did You Discover Your Intellectual and Academic Interests?'",
     description:
-      "Penn's Why essay is the only Ivy League supplemental that asks about intellectual origin — where your interest came from, not just where you'd take it. Here's what admissions readers screen for, the three-part structure that fits 200 words, and why Penn's 'One University' model changes everything about this essay.",
+      "Penn's Why essay is the only Ivy League supplemental that asks about intellectual origin - where your interest came from, not just where you'd take it. Here's what admissions readers screen for, the three-part structure that fits 200 words, and why Penn's 'One University' model changes everything about this essay.",
     publishedAt: "2026-04-10",
     category: "Supplemental Essays",
     readTime: "9 min read",
@@ -192,7 +192,7 @@ export const posts: Post[] = [
     slug: "upenn-community-essay",
     title: "Penn Community Essay: How to Answer 'How Will You Explore Community at Penn?'",
     description:
-      "Penn's community prompt opens with a thesis — 'learning and living are not separate experiences' — and most applicants ignore it. Here's what the prompt is actually testing, how Penn's College Houses and ABCS courses work, and the structure that turns a list of clubs into a genuine community essay.",
+      "Penn's community prompt opens with a thesis - 'learning and living are not separate experiences' - and most applicants ignore it. Here's what the prompt is actually testing, how Penn's College Houses and ABCS courses work, and the structure that turns a list of clubs into a genuine community essay.",
     publishedAt: "2026-04-10",
     category: "Supplemental Essays",
     readTime: "9 min read",
@@ -210,7 +210,7 @@ export const posts: Post[] = [
     slug: "cornell-why-cornell-essay",
     title: "Cornell 'Why Cornell' Essay: How to Write for Your Specific College",
     description:
-      "Cornell's Why essay is read by your specific college — Arts & Sciences, Engineering, ILR, Hotel, or one of three others. Writing about 'Cornell' generically instead of your college is the #1 mistake. Here's what each college's readers look for and the structure that works at 650 words.",
+      "Cornell's Why essay is read by your specific college - Arts & Sciences, Engineering, ILR, Hotel, or one of three others. Writing about 'Cornell' generically instead of your college is the #1 mistake. Here's what each college's readers look for and the structure that works at 650 words.",
     publishedAt: "2026-04-12",
     category: "Supplemental Essays",
     readTime: "10 min read",
@@ -228,7 +228,7 @@ export const posts: Post[] = [
     slug: "mit-something-you-do-for-pleasure-essay",
     title: "MIT 'Tell Us About Something You Do Simply for the Pleasure of It' Essay Guide",
     description:
-      "MIT's pleasure prompt trips up STEM applicants who try to make everything sound intellectually rigorous. MIT already knows you're smart — they want to know you're interesting. Here's how to write 200 words that show who you are when no one is evaluating you.",
+      "MIT's pleasure prompt trips up STEM applicants who try to make everything sound intellectually rigorous. MIT already knows you're smart - they want to know you're interesting. Here's how to write 200 words that show who you are when no one is evaluating you.",
     publishedAt: "2026-04-13",
     category: "Supplemental Essays",
     readTime: "7 min read",
@@ -246,7 +246,7 @@ export const posts: Post[] = [
     slug: "northwestern-why-northwestern-essay",
     title: "Northwestern 'Why Northwestern' Essay: Writing About Flexibility Without Being Vague",
     description:
-      "Northwestern lets undergrads take courses across any of its schools — Weinberg, McCormick, Medill, Bienen — without transferring. The essay should show what you'd do with that specific access, not just celebrate it. Here's the structure that works at 300 words.",
+      "Northwestern lets undergrads take courses across any of its schools - Weinberg, McCormick, Medill, Bienen - without transferring. The essay should show what you'd do with that specific access, not just celebrate it. Here's the structure that works at 300 words.",
     publishedAt: "2026-04-14",
     category: "Supplemental Essays",
     readTime: "9 min read",
@@ -255,7 +255,7 @@ export const posts: Post[] = [
     slug: "stanford-intellectual-vitality-essay",
     title: "Stanford Intellectual Vitality Essay: How to Answer 'Reflect on an Idea or Experience That Makes You Excited About Learning'",
     description:
-      "Stanford uses the phrase 'intellectual vitality' deliberately — it describes a cognitive habit, not an achievement. Here's what admissions readers actually screen for, the one-idea rule, and the three-move structure that fits 250 words without feeling cramped.",
+      "Stanford uses the phrase 'intellectual vitality' deliberately - it describes a cognitive habit, not an achievement. Here's what admissions readers actually screen for, the one-idea rule, and the three-move structure that fits 250 words without feeling cramped.",
     publishedAt: "2026-04-15",
     category: "Supplemental Essays",
     readTime: "9 min read",
@@ -264,7 +264,7 @@ export const posts: Post[] = [
     slug: "stanford-roommate-letter-essay",
     title: "Stanford Roommate Letter Essay: How to Write the Most Famous Supplement in College Admissions",
     description:
-      "The Stanford roommate note is the only college essay written to a non-admissions audience — and almost every applicant gets the register wrong. Here's why the voice change matters, the texture that separates real notes from resume paragraphs, and the details that always work.",
+      "The Stanford roommate note is the only college essay written to a non-admissions audience - and almost every applicant gets the register wrong. Here's why the voice change matters, the texture that separates real notes from resume paragraphs, and the details that always work.",
     publishedAt: "2026-04-15",
     category: "Supplemental Essays",
     readTime: "9 min read",
@@ -282,7 +282,7 @@ export const posts: Post[] = [
     slug: "uchicago-uncommon-essay-prompts",
     title: "UChicago Uncommon Essay: How to Choose and Tackle the Strangest Prompts in College Admissions",
     description:
-      "UChicago's Uncommon essay is the most misunderstood prompt in elite admissions. It's not a creativity test — it's a thinking test wearing a joke's clothing. Here's how to read the prompts, why the standard applicant moves fail, and the structures that let lateral thinking actually land.",
+      "UChicago's Uncommon essay is the most misunderstood prompt in elite admissions. It's not a creativity test - it's a thinking test wearing a joke's clothing. Here's how to read the prompts, why the standard applicant moves fail, and the structures that let lateral thinking actually land.",
     publishedAt: "2026-04-16",
     category: "Supplemental Essays",
     readTime: "10 min read",
@@ -291,7 +291,7 @@ export const posts: Post[] = [
     slug: "johns-hopkins-collaboration-essay",
     title: "Johns Hopkins Essay: How to Answer 'Tell Us About an Aspect of Your Identity, Background, or Story'",
     description:
-      "Johns Hopkins redesigned its signature essay around three nouns — identity, background, story — and most applicants treat them as interchangeable. Here's what each one actually asks for, why Hopkins reads for community contribution rather than personal narrative, and the structure that works at 350 words.",
+      "Johns Hopkins redesigned its signature essay around three nouns - identity, background, story - and most applicants treat them as interchangeable. Here's what each one actually asks for, why Hopkins reads for community contribution rather than personal narrative, and the structure that works at 350 words.",
     publishedAt: "2026-04-16",
     category: "Supplemental Essays",
     readTime: "9 min read",
@@ -300,7 +300,7 @@ export const posts: Post[] = [
     slug: "georgetown-essay-prompts-guide",
     title: "Georgetown 'Why Georgetown' Essay: How to Write for a School That Values Tradition Over Flash",
     description:
-      "Georgetown's application is the only elite application that isn't on the Common App — and its Why essay reflects a different set of values. Jesuit tradition, the cura personalis framework, and school-specific context (SFS, McDonough, NHS, College) all matter. Here's what to do and what to avoid.",
+      "Georgetown's application is the only elite application that isn't on the Common App - and its Why essay reflects a different set of values. Jesuit tradition, the cura personalis framework, and school-specific context (SFS, McDonough, NHS, College) all matter. Here's what to do and what to avoid.",
     publishedAt: "2026-04-16",
     category: "Supplemental Essays",
     readTime: "10 min read",
@@ -309,7 +309,7 @@ export const posts: Post[] = [
     slug: "rice-why-rice-residential-college-essay",
     title: "Rice 'Why Rice' and Residential College Essay: The Two Essays That Decide Rice Applications",
     description:
-      "Rice's supplement has two 500-word essays that carry more weight than at most peer schools. The Why Rice essay is about academic fit; the residential college essay is about community — and applicants who mix them weaken both. Here's what Rice admissions screens for in each.",
+      "Rice's supplement has two 500-word essays that carry more weight than at most peer schools. The Why Rice essay is about academic fit; the residential college essay is about community - and applicants who mix them weaken both. Here's what Rice admissions screens for in each.",
     publishedAt: "2026-04-16",
     category: "Supplemental Essays",
     readTime: "10 min read",
@@ -327,7 +327,7 @@ export const posts: Post[] = [
     slug: "college-essay-hooks-opening-lines",
     title: "College Essay Hooks: 20 Opening Lines That Actually Work (With Analysis)",
     description:
-      "A real hook is the sentence that earns the second sentence — not a gimmick, not the most dramatic moment moved to the front. Here are 20 opening lines that work, with analysis of why each one makes the reader unable to stop reading.",
+      "A real hook is the sentence that earns the second sentence - not a gimmick, not the most dramatic moment moved to the front. Here are 20 opening lines that work, with analysis of why each one makes the reader unable to stop reading.",
     publishedAt: "2026-04-16",
     category: "Writing Guides",
     readTime: "10 min read",
@@ -336,7 +336,7 @@ export const posts: Post[] = [
     slug: "college-essay-topics-to-avoid",
     title: "College Essay Topics to Avoid: 12 Topics That Usually Hurt Your Application (And When They Actually Work)",
     description:
-      "Any topic can work if the essay is genuinely good. But 12 topics have been so overused that 80% of their potential is already in the admissions reader's head before they start reading. Here's why each one usually backfires — and the narrow conditions where they still land.",
+      "Any topic can work if the essay is genuinely good. But 12 topics have been so overused that 80% of their potential is already in the admissions reader's head before they start reading. Here's why each one usually backfires - and the narrow conditions where they still land.",
     publishedAt: "2026-04-16",
     category: "Writing Guides",
     readTime: "10 min read",
@@ -363,7 +363,7 @@ export const posts: Post[] = [
     slug: "mit-challenge-you-faced-essay",
     title: "MIT Challenge Essay: How to Answer 'How Did You Manage a Situation or Challenge That You Didn't Expect?'",
     description:
-      "MIT's challenge prompt is the only supplemental in elite admissions that explicitly asks about unexpected failure. It's not a redemption arc — it's a test of how you behave when the plan breaks. Here's the four-move structure and what separates strong drafts from the sports-injury default.",
+      "MIT's challenge prompt is the only supplemental in elite admissions that explicitly asks about unexpected failure. It's not a redemption arc - it's a test of how you behave when the plan breaks. Here's the four-move structure and what separates strong drafts from the sports-injury default.",
     publishedAt: "2026-04-17",
     category: "Supplemental Essays",
     readTime: "9 min read",
@@ -372,7 +372,7 @@ export const posts: Post[] = [
     slug: "caltech-stem-short-answers-essay",
     title: "Caltech Supplemental Essays: How to Answer the STEM Short Answer Prompts",
     description:
-      "Caltech's supplement is the most STEM-filtered in elite admissions — and its voice is unlike any other school's. Here's how its prompts differ from MIT's, what 'intellectual curiosity' actually requires at Caltech, and the technical specificity that separates strong drafts from polished ones.",
+      "Caltech's supplement is the most STEM-filtered in elite admissions - and its voice is unlike any other school's. Here's how its prompts differ from MIT's, what 'intellectual curiosity' actually requires at Caltech, and the technical specificity that separates strong drafts from polished ones.",
     publishedAt: "2026-04-17",
     category: "Supplemental Essays",
     readTime: "10 min read",
@@ -390,7 +390,7 @@ export const posts: Post[] = [
     slug: "tufts-why-tufts-essay",
     title: "Tufts Supplemental Essays: 'Why Tufts,' 'Let Your Life Speak,' and 'Tell Us a Story' Guide",
     description:
-      "Tufts rewards a different voice than any other elite school — specific, quirky, a little willing to be strange. Here's what the Jumbo Essays blog reveals about what Tufts readers respond to, how the Why Tufts short answer differs from peer prompts, and what makes the longer essays land.",
+      "Tufts rewards a different voice than any other elite school - specific, quirky, a little willing to be strange. Here's what the Jumbo Essays blog reveals about what Tufts readers respond to, how the Why Tufts short answer differs from peer prompts, and what makes the longer essays land.",
     publishedAt: "2026-04-17",
     category: "Supplemental Essays",
     readTime: "10 min read",
@@ -408,7 +408,7 @@ export const posts: Post[] = [
     slug: "princeton-song-soundtrack-essay",
     title: "Princeton 'Song That Represents the Soundtrack of Your Life' Essay (50 Words)",
     description:
-      "Princeton's song prompt is 50 words and asks about 'this moment' specifically — not your life. Here's why 'Don't Stop Believin'' always fails, what songs tend to work, and the two-part structure that fits the word count.",
+      "Princeton's song prompt is 50 words and asks about 'this moment' specifically - not your life. Here's why 'Don't Stop Believin'' always fails, what songs tend to work, and the two-part structure that fits the word count.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "5 min read",
@@ -426,7 +426,7 @@ export const posts: Post[] = [
     slug: "stanford-short-takes-guide",
     title: "Stanford Short Takes: How to Write Ten 50-Word Answers That Actually Work",
     description:
-      "Applicants spend 80% of their Stanford time on the three long essays and 20% on the ten Short Takes — that ratio is upside-down. Here's how Stanford reads the set, the overlap trap that kills most Short Takes, and do/don't examples for the most common prompts.",
+      "Applicants spend 80% of their Stanford time on the three long essays and 20% on the ten Short Takes - that ratio is upside-down. Here's how Stanford reads the set, the overlap trap that kills most Short Takes, and do/don't examples for the most common prompts.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "9 min read",
@@ -444,7 +444,7 @@ export const posts: Post[] = [
     slug: "uc-personal-insight-questions-guide",
     title: "UC Personal Insight Questions: How to Pick and Answer the Four PIQs (350 Words Each)",
     description:
-      "The UC PIQs carry the entire personality weight of the application — no interviews, no letters, no test scores. Here's how to pick the four that cover the most distinct ground, the trap inside each prompt, and what UC readers actually weight at 350 words.",
+      "The UC PIQs carry the entire personality weight of the application - no interviews, no letters, no test scores. Here's how to pick the four that cover the most distinct ground, the trap inside each prompt, and what UC readers actually weight at 350 words.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "11 min read",
@@ -462,7 +462,7 @@ export const posts: Post[] = [
     slug: "duke-trinity-pratt-essay-difference",
     title: "Duke Trinity vs Pratt Essay: How the School-Specific Supplement Differs",
     description:
-      "Duke's supplement isn't 'Why Duke' — it's 'Why This Duke School.' Trinity and Pratt have different prompts, different readers, and radically different admit rates. Here's the right approach for each, the specific resources that matter, and the signals that tell readers you don't understand the structure.",
+      "Duke's supplement isn't 'Why Duke' - it's 'Why This Duke School.' Trinity and Pratt have different prompts, different readers, and radically different admit rates. Here's the right approach for each, the specific resources that matter, and the signals that tell readers you don't understand the structure.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "9 min read",
@@ -471,7 +471,7 @@ export const posts: Post[] = [
     slug: "cornell-engineering-essay-guide",
     title: "Cornell Engineering Essay: How to Write the College-Specific Why for Cornell Engineering",
     description:
-      "Cornell Engineering applicants get a distinct prompt, read by engineering-college admissions who know the field. Generic 'I love problem-solving' hits them 10,000 times. Here's the specific Cornell resources that matter — project teams, Duffield labs, Meinig — and the structure that works.",
+      "Cornell Engineering applicants get a distinct prompt, read by engineering-college admissions who know the field. Generic 'I love problem-solving' hits them 10,000 times. Here's the specific Cornell resources that matter - project teams, Duffield labs, Meinig - and the structure that works.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "10 min read",
@@ -480,7 +480,7 @@ export const posts: Post[] = [
     slug: "nyu-why-nyu-essay",
     title: "NYU 'Why NYU' Essay: How to Write About Your Specific School, Program, and Campus",
     description:
-      "NYU admits to specific schools (CAS, Stern, Tisch, Tandon, Gallatin, Steinhardt) and specific campuses (NY, Abu Dhabi, Shanghai). Writing about 'NYU' abstractly fails — the prompt literally asks which program. Here's how to hit the program-specific signal without defaulting to 'I love New York City.'",
+      "NYU admits to specific schools (CAS, Stern, Tisch, Tandon, Gallatin, Steinhardt) and specific campuses (NY, Abu Dhabi, Shanghai). Writing about 'NYU' abstractly fails - the prompt literally asks which program. Here's how to hit the program-specific signal without defaulting to 'I love New York City.'",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "9 min read",
@@ -489,7 +489,7 @@ export const posts: Post[] = [
     slug: "cmu-why-cmu-essay",
     title: "Carnegie Mellon 'Why CMU' Essay: How to Write About Your Intended Area of Study",
     description:
-      "CMU's 300-word supplement is technically about the origin of your interest, but readers are also checking for fit with CMU's intensely collaborative, interdisciplinary culture. Here's why 'ever since I was young I loved coding' fails, and the CMU-specific programs worth naming — BXA, IDeATe, Robotics Institute, Tepper.",
+      "CMU's 300-word supplement is technically about the origin of your interest, but readers are also checking for fit with CMU's intensely collaborative, interdisciplinary culture. Here's why 'ever since I was young I loved coding' fails, and the CMU-specific programs worth naming - BXA, IDeATe, Robotics Institute, Tepper.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "8 min read",
@@ -498,7 +498,7 @@ export const posts: Post[] = [
     slug: "emory-why-emory-essay",
     title: "Emory 'Why Emory' Essay: How to Write About Academic Areas You'd Explore",
     description:
-      "Emory's Why essay asks about academic interests, but readers are screening for genuine engagement with Emory's specific structure — the Oxford/Atlanta dual campus, Goizueta, Rollins, the CDC and Carter Center partnerships. Here's what to name and what to cut.",
+      "Emory's Why essay asks about academic interests, but readers are screening for genuine engagement with Emory's specific structure - the Oxford/Atlanta dual campus, Goizueta, Rollins, the CDC and Carter Center partnerships. Here's what to name and what to cut.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "7 min read",
@@ -516,7 +516,7 @@ export const posts: Post[] = [
     slug: "swarthmore-why-swarthmore-essay",
     title: "Swarthmore 'Why Swarthmore' Essay: How to Write About Honors and the Tri-Co",
     description:
-      "Swarthmore's Honors Program is structurally unique in U.S. liberal arts — seminar + external examiner. Applicants who treat Swat as 'a chill LAC' misfire. Here's how to engage with the Honors model, the Tri-College Consortium, and the Quaker culture that shapes the classroom.",
+      "Swarthmore's Honors Program is structurally unique in U.S. liberal arts - seminar + external examiner. Applicants who treat Swat as 'a chill LAC' misfire. Here's how to engage with the Honors model, the Tri-College Consortium, and the Quaker culture that shapes the classroom.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "8 min read",
@@ -525,7 +525,7 @@ export const posts: Post[] = [
     slug: "pomona-why-pomona-essay",
     title: "Pomona 'Why Pomona' Essay: Writing About the 5Cs Without Sounding Like a Tourist",
     description:
-      "Pomona is in Claremont, not LA — and the 5-College Consortium is the structural heart of the experience. Here's how to engage with Pomona specifically (not 'West Coast Ivy'), what to do with the 5C cross-registration, and why praising the weather sinks most drafts.",
+      "Pomona is in Claremont, not LA - and the 5-College Consortium is the structural heart of the experience. Here's how to engage with Pomona specifically (not 'West Coast Ivy'), what to do with the 5C cross-registration, and why praising the weather sinks most drafts.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "8 min read",
@@ -534,7 +534,7 @@ export const posts: Post[] = [
     slug: "williams-why-williams-essay",
     title: "Williams Tutorial Essay: How to Write About a Two-Student Oxford-Style Tutorial",
     description:
-      "Williams's signature prompt asks applicants to propose a tutorial — one professor, one other student, Oxford model. It's not a Why Williams essay. Here's how to name the partner friction, pick a defensible topic, and write a proposal that sounds like a real course, not a pitch.",
+      "Williams's signature prompt asks applicants to propose a tutorial - one professor, one other student, Oxford model. It's not a Why Williams essay. Here's how to name the partner friction, pick a defensible topic, and write a proposal that sounds like a real course, not a pitch.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "9 min read",
@@ -543,7 +543,7 @@ export const posts: Post[] = [
     slug: "boston-college-why-bc-essay",
     title: "Boston College 'Why BC' Essay: Writing About Jesuit Formation Without Pandering",
     description:
-      "BC is Jesuit like Georgetown, but more overtly Catholic in ethos. You don't need to be Catholic, but writing without awareness of cura personalis, magis, and men-and-women-for-others reads as tone-deaf. Here's how to engage with PULSE, Perspectives, and the Core — and how BC differs from Georgetown and BU.",
+      "BC is Jesuit like Georgetown, but more overtly Catholic in ethos. You don't need to be Catholic, but writing without awareness of cura personalis, magis, and men-and-women-for-others reads as tone-deaf. Here's how to engage with PULSE, Perspectives, and the Core - and how BC differs from Georgetown and BU.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "9 min read",
@@ -552,7 +552,7 @@ export const posts: Post[] = [
     slug: "columbia-intended-major-essay",
     title: "Columbia 'What Attracted You to Your Intended Areas of Study?' Essay (200 Words)",
     description:
-      "Columbia separates the intended-major prompt from the Core Curriculum essay. This one should drill into the specific field — a question, a sub-field, not a general passion. CC vs SEAS changes the essay. Here's the structure that works and the 'my journey to loving X' trap.",
+      "Columbia separates the intended-major prompt from the Core Curriculum essay. This one should drill into the specific field - a question, a sub-field, not a general passion. CC vs SEAS changes the essay. Here's the structure that works and the 'my journey to loving X' trap.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "7 min read",
@@ -561,7 +561,7 @@ export const posts: Post[] = [
     slug: "umich-community-essay",
     title: "Michigan Community Essay: How to Answer 'Describe a Community to Which You Belong'",
     description:
-      "Michigan's community essay often differentiates in-state vs out-of-state applicants with similar stats. The word 'belong' — not 'led' or 'founded' — is the whole test. Here's why leadership is the default trap, and how to pick a community that isn't college-application-friendly.",
+      "Michigan's community essay often differentiates in-state vs out-of-state applicants with similar stats. The word 'belong' - not 'led' or 'founded' - is the whole test. Here's why leadership is the default trap, and how to pick a community that isn't college-application-friendly.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "8 min read",
@@ -570,7 +570,7 @@ export const posts: Post[] = [
     slug: "uva-application-couldnt-capture-essay",
     title: "UVA 'What Your Application Couldn't Capture' Essay: How to Answer the Hidden-Side Prompt",
     description:
-      "UVA's 'what would we miss?' prompt is not a confessional slot. It's a place for something small, distinctive, and not elsewhere — the routine, the collecting habit, the niche expertise. Here's why profundity fails and what textured, specific topics tend to work.",
+      "UVA's 'what would we miss?' prompt is not a confessional slot. It's a place for something small, distinctive, and not elsewhere - the routine, the collecting habit, the niche expertise. Here's why profundity fails and what textured, specific topics tend to work.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "8 min read",
@@ -579,7 +579,7 @@ export const posts: Post[] = [
     slug: "barnard-why-womens-college-essay",
     title: "Barnard 'Why a Women's College?' Essay: Writing About Barnard vs Columbia",
     description:
-      "Barnard's women's-college prompt filters for applicants who understand Barnard as its own institution — not a back-door to Columbia. Here's what the women's-college pedagogy actually means in the classroom, the nine ways to engage with Columbia, and the stated-feminism-without-substance trap.",
+      "Barnard's women's-college prompt filters for applicants who understand Barnard as its own institution - not a back-door to Columbia. Here's what the women's-college pedagogy actually means in the classroom, the nine ways to engage with Columbia, and the stated-feminism-without-substance trap.",
     publishedAt: "2026-04-18",
     category: "Supplemental Essays",
     readTime: "8 min read",

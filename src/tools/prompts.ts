@@ -247,7 +247,7 @@ export const prompts: EssayPrompt[] = [
     slug: "what-you-do-for-fun-supplemental",
     shortName: "What You Do For Fun",
     displayName: "What You Do For Fun Supplemental Essay",
-    fullPrompt: "What do you do for fun — for no reason other than pure enjoyment? Tell us about an activity that brings you joy.",
+    fullPrompt: "What do you do for fun - for no reason other than pure enjoyment? Tell us about an activity that brings you joy.",
     family: "Supplemental Type",
     wordLimit: 200,
     seoKeywords: ["what you do for fun essay hook", "hobby supplemental essay", "joy essay college opener"],

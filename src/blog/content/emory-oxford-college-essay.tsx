@@ -8,8 +8,8 @@ export default function Content() {
         Oxford College is not a satellite. It is not a branch campus. It is
         not a pathway program for students who were not quite good enough for
         the Atlanta campus. Oxford is a two-year residential liberal arts
-        college in Oxford, Georgia — about forty minutes east of Atlanta on
-        the original 1836 Emory campus — and the students who enroll there
+        college in Oxford, Georgia - about forty minutes east of Atlanta on
+        the original 1836 Emory campus - and the students who enroll there
         complete their first two years of Emory in a small, classroom-intensive
         environment before joining the Atlanta campus as juniors.
       </p>
@@ -27,7 +27,7 @@ export default function Content() {
       <p>
         Applicants to Emory choose. You can apply to the Atlanta campus, to
         Oxford College, or to both. That choice is the first signal Oxford
-        admissions reads. The Why Emory supplement — 150 words — is where
+        admissions reads. The Why Emory supplement - 150 words - is where
         that signal either gets confirmed or quietly undermined. This guide
         covers how Oxford applicants should handle the supplement, how
         dual-campus applicants should frame the Oxford half, and what Oxford
@@ -56,7 +56,7 @@ export default function Content() {
         Atlanta campus. Those essays get read and set aside.
       </p>
       <p>
-        The first group — students who actually want Oxford — write
+        The first group - students who actually want Oxford - write
         differently. They name specific Oxford features. They engage with the
         two-year intensive structure as a deliberate choice, not an accident.
         They describe a version of college that is specifically small, close,
@@ -106,7 +106,7 @@ export default function Content() {
           <strong>A clear sense of the Atlanta transition.</strong> Oxford
           students enroll at the Atlanta campus as juniors. That is part of
           the structure, not a loophole. Strong essays treat the two-year
-          Oxford phase as foundational — the place where they will build the
+          Oxford phase as foundational - the place where they will build the
           habits and relationships that let them thrive in Atlanta later.
         </li>
         <li>
@@ -126,7 +126,7 @@ export default function Content() {
       </p>
       <ol>
         <li>
-          <strong>Intellectual fit — the two-year intensive focus on
+          <strong>Intellectual fit - the two-year intensive focus on
           foundational learning.</strong> This angle works best for applicants
           who are genuinely drawn to liberal arts breadth and who can name
           specific intellectual modes they want to develop. Ways of Inquiry
@@ -136,9 +136,9 @@ export default function Content() {
           for learning it.
         </li>
         <li>
-          <strong>Community fit — the tight, smaller cohort.</strong> This
+          <strong>Community fit - the tight, smaller cohort.</strong> This
           angle works best for applicants who have strong evidence from high
-          school that they thrive in small, close-knit environments —
+          school that they thrive in small, close-knit environments -
           students who ran a small club intensively, who were part of a tight
           team, who built their most meaningful relationships in rooms with
           fewer than twenty people. The angle lands when the applicant can
@@ -146,13 +146,13 @@ export default function Content() {
           to Oxford's 800-person class and seminar format.
         </li>
         <li>
-          <strong>Place fit — the small-town setting for the first two years.</strong>{" "}
+          <strong>Place fit - the small-town setting for the first two years.</strong>{" "}
           This angle works best for applicants who genuinely want the focus
           that comes with a small-town residential campus before moving to a
           city. The forty-minute shuttle becomes a feature, not a consolation.
           The angle lands when the applicant treats Oxford, Georgia, as a
-          deliberate choice — a place where they can build intellectual
-          habits before Atlanta — rather than a compromise.
+          deliberate choice - a place where they can build intellectual
+          habits before Atlanta - rather than a compromise.
         </li>
       </ol>
 
@@ -160,13 +160,13 @@ export default function Content() {
       <p>
         This structure is written for a 400-word version. Most applicants
         will scale it to the 150-word Why Emory supplement. The proportions
-        still hold — specific hook, why Oxford over Atlanta, what you bring,
+        still hold - specific hook, why Oxford over Atlanta, what you bring,
         Atlanta closing.
       </p>
       <ol>
         <li>
           <strong>Specific hook (about 50 words).</strong> Open with a
-          concrete detail about Oxford — the first-year seminar, Ways of
+          concrete detail about Oxford - the first-year seminar, Ways of
           Inquiry, the required co-curricular, the size of the class, the
           town itself. The hook's job is to prove within two sentences that
           you know what Oxford is. A generic opening about Emory in general
@@ -185,7 +185,7 @@ export default function Content() {
         <li>
           <strong>What you would bring to Oxford (about 100 words).</strong>{" "}
           Classroom participation is the most Oxford-specific thing you can
-          commit to. Name a dimension you would bring — a willingness to
+          commit to. Name a dimension you would bring - a willingness to
           argue in seminars, a habit of preparing carefully, an interest in
           a specific INQ mode, an intention to engage the Oxford Theater
           Company, the co-curricular you would pursue. This section makes
@@ -209,12 +209,12 @@ export default function Content() {
       </p>
       <blockquote>
         "I want Oxford for the seminar. I learn by arguing, and the
-        first-year seminar model — fifteen students, a faculty member who
-        remembers your last paper — is the classroom I have been circling
+        first-year seminar model - fifteen students, a faculty member who
+        remembers your last paper - is the classroom I have been circling
         since sophomore year of high school, when a five-person history
         elective taught me more than any AP class. Ways of Inquiry is the
         part I keep rereading. I want the Natural World and Historical
-        Perspectives modes specifically — I am drawn to how Oxford asks
+        Perspectives modes specifically - I am drawn to how Oxford asks
         students to name what kind of thinking they are doing, not just what
         subject they are studying. I plan to participate in the Oxford
         Theater Company and use the co-curricular requirement to build a
@@ -259,7 +259,7 @@ export default function Content() {
         <li>
           <strong>No specific Oxford feature mentioned.</strong> The
           first-year seminar, Ways of Inquiry, the required co-curricular,
-          Pierce Hall, the Oxford Theater Company, the two-year structure —
+          Pierce Hall, the Oxford Theater Company, the two-year structure -
           name at least one. An essay with zero Oxford-specific references is
           an essay about Emory generally, not Oxford specifically.
         </li>
@@ -290,7 +290,7 @@ export default function Content() {
           environment like my high school" is a real sentence that appears
           in real essays. It reads as a student who is not ready for
           college-level intensity. Oxford's small environment is the
-          opposite of a comfort zone — it is a more demanding classroom,
+          opposite of a comfort zone - it is a more demanding classroom,
           not a gentler one.
         </li>
         <li>
@@ -313,15 +313,15 @@ export default function Content() {
         academic excellence. No descriptions of Emory in general.
       </p>
       <p>
-        Dual-campus applicants — students who applied to both Atlanta and
-        Oxford — face a harder task in the same word count. The supplement
+        Dual-campus applicants - students who applied to both Atlanta and
+        Oxford - face a harder task in the same word count. The supplement
         has to work for both campuses, which means it has to engage with
         what is true of both while signaling genuine openness to each. The
         Oxford choice still requires justification. An essay that reads as
         "I want Atlanta but will take Oxford" reads worse than an essay
         that identifies the specific reason each campus would work. If you
         cannot write a sentence that honestly commits to Oxford as a
-        desirable path — not just a fallback — you should probably not
+        desirable path - not just a fallback - you should probably not
         have checked the Oxford box in the first place.
       </p>
       <p>

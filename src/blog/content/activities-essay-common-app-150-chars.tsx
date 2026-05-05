@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Content() {
   return (
     <>
-      <h2>The Activities Section Is Not a Resume — It's a Mini-Essay 10 Times Over</h2>
+      <h2>The Activities Section Is Not a Resume - It's a Mini-Essay 10 Times Over</h2>
       <p>
         The Common App Activities section gives you ten slots. Each slot has
         three text fields: a 50-character Position/Leadership line, a
@@ -59,7 +59,7 @@ export default function Content() {
       <ol>
         <li>
           <strong>A specific verb that names what you did.</strong> Not
-          "participated in" or "was involved with" — those are filler. Use
+          "participated in" or "was involved with" - those are filler. Use
           verbs that carry their own meaning: built, coached, drafted,
           organized, audited, revised, canvassed, mentored, pitched, coded.
           Before: "Participated in weekly meetings and helped with events."
@@ -96,8 +96,8 @@ export default function Content() {
         <li>
           <strong>Verbs that imply agency.</strong> Built, organized, coached,
           revised, founded, edited, negotiated, taught, designed. Readers
-          register these as action. Verbs that imply participation — attended,
-          helped, volunteered, supported — are read as passive, even when the
+          register these as action. Verbs that imply participation - attended,
+          helped, volunteered, supported - are read as passive, even when the
           underlying work was not.
         </li>
         <li>
@@ -116,8 +116,8 @@ export default function Content() {
         </li>
         <li>
           <strong>Utility at the bottom.</strong> Rows eight, nine, and ten can
-          be smaller commitments — a summer job, a family caregiving role, a
-          two-year club — but they should still say something concrete. A
+          be smaller commitments - a summer job, a family caregiving role, a
+          two-year club - but they should still say something concrete. A
           half-filled row at the bottom is a wasted signal. Either make it
           count or leave it blank.
         </li>
@@ -228,8 +228,8 @@ export default function Content() {
       <p>
         The "continue in college" checkbox is also a signal. If you check it
         on nine of ten activities, readers notice. If you check it on an
-        activity that is obviously local — a specific nonprofit only in your
-        city, a paid job at a specific store — readers notice. Check it for
+        activity that is obviously local - a specific nonprofit only in your
+        city, a paid job at a specific store - readers notice. Check it for
         things you will plausibly continue: a sport, an instrument, a writing
         practice, a research interest, a cause. Leave it unchecked for
         activities that were meaningful but were about your high school
@@ -256,8 +256,8 @@ export default function Content() {
         A counter-intuitive move: a paid job or a family caregiving
         responsibility often deserves a higher position than applicants think.
         "Line cook, 20 hrs/week" at row two does more for an application than
-        a third club presidency. Caregiving — supervising younger siblings,
-        helping with a parent's health, translating for a family — is a
+        a third club presidency. Caregiving - supervising younger siblings,
+        helping with a parent's health, translating for a family - is a
         legitimate activity and belongs in the grid, not hidden in Additional
         Information. Admissions offices have been explicit about this for
         years. Treat it as a real commitment, list specific hours, and
@@ -295,7 +295,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Listing things that belong in Additional Information.</strong>{" "}
-          A one-time event, a single medal, a weekend workshop — these are
+          A one-time event, a single medal, a weekend workshop - these are
           sometimes better mentioned briefly in Additional Information than
           taking up one of ten rows. Rows are expensive.
         </li>
@@ -317,7 +317,7 @@ export default function Content() {
         Activities is read alongside your Common App essay, your supplementals,
         your recommendations, and your transcript. These documents are
         compared. Your top activity should appear somewhere else in the
-        application — as the subject of your essay, as a visible thread in
+        application - as the subject of your essay, as a visible thread in
         your supplementals, or in the content of a teacher or counselor
         letter. If your number-one row is something no other document
         mentions, the application reads as unbalanced.
@@ -332,7 +332,7 @@ export default function Content() {
       </p>
       <p>
         The Activities grid is also where admissions forms its initial sense
-        of your tempo — how you spend a Tuesday, how you spend a weekend, what
+        of your tempo - how you spend a Tuesday, how you spend a weekend, what
         you are like when nobody is grading you. That impression shapes how
         every other document is read. A tight, specific, honest Activities
         section makes the essay land harder. A vague or inflated one makes the

@@ -28,7 +28,7 @@ export default function Content() {
       </p>
       <ul>
         <li><strong>Specificity.</strong> "I want to take advantage of Yale's great professors" is worthless. "I want to work with Professor Lerer on his reading group on medieval manuscript culture, which I've been following through the Yale Beinecke's digital collections" is specific.</li>
-        <li><strong>A real connection between your interests and Yale's actual structure.</strong> Not Yale's reputation. Yale's structure — the residential college system, the directed studies program, the undergraduate research funding through the Mellon Forum or the Summer Experience Award, the cross-registration with the Yale School of Music for non-majors, the particular way Yale runs its Directed Studies first-year humanities program.</li>
+        <li><strong>A real connection between your interests and Yale's actual structure.</strong> Not Yale's reputation. Yale's structure - the residential college system, the directed studies program, the undergraduate research funding through the Mellon Forum or the Summer Experience Award, the cross-registration with the Yale School of Music for non-majors, the particular way Yale runs its Directed Studies first-year humanities program.</li>
         <li><strong>Evidence that you've done actual research beyond the Yale homepage.</strong> Reading the catalog, reading faculty websites, reading the Yale Daily News, and reading Yale department pages all leave a mark on the essay. Admissions readers can tell the difference.</li>
       </ul>
 
@@ -39,7 +39,7 @@ export default function Content() {
       <ul>
         <li><strong>Any sentence about Yale's prestige, rankings, or selectivity.</strong> The committee already knows. You are using their own words back at them.</li>
         <li><strong>Any reference to Yale as "my dream school."</strong> This costs you 4 words and communicates nothing.</li>
-        <li><strong>Adjectives about Yale as a place.</strong> "Vibrant," "inspiring," "storied," "welcoming" — cut all of them. Adjectives of admiration do not count as information.</li>
+        <li><strong>Adjectives about Yale as a place.</strong> "Vibrant," "inspiring," "storied," "welcoming" - cut all of them. Adjectives of admiration do not count as information.</li>
         <li><strong>Generic claims about "interdisciplinary study" or a "well-rounded education."</strong> Every college offers these. They waste words.</li>
         <li><strong>Anything that could be copy-pasted into a Why Princeton or Why Brown essay with minor edits.</strong> If your current draft could be, you haven't written a Why Yale essay yet.</li>
         <li><strong>The phrase "residential college system" without a specific claim about it.</strong> Everyone mentions the residential colleges. Mentioning them without explaining what you specifically want from them signals generic research.</li>
@@ -74,14 +74,14 @@ export default function Content() {
         <li><strong>Listing three or four departments without depth.</strong> Naming many things shallowly reads worse than naming one thing deeply. The committee is not counting mentions.</li>
         <li><strong>Name-dropping a famous Yale professor you haven't actually engaged with.</strong> If you mention a professor, mention a specific work of theirs or a specific class they teach. Otherwise the reference reads as research theater.</li>
         <li><strong>Writing about New Haven.</strong> Location is not a reason. New Haven is fine, but it has no place in a 125-word essay.</li>
-        <li><strong>Writing about the residential college system as if it were unique. Yale's residential system is unique, but only the specific aspects of it — the Fellow system, Mellon Forum funding for college-based research, the weekly college teas — are worth mentioning. "I love the residential college system" is generic.</strong></li>
+        <li><strong>Writing about the residential college system as if it were unique. Yale's residential system is unique, but only the specific aspects of it - the Fellow system, Mellon Forum funding for college-based research, the weekly college teas - are worth mentioning. "I love the residential college system" is generic.</strong></li>
         <li><strong>Ending with a promise to "contribute."</strong> Yale is not asking what you will give. It is asking what Yale gives you. Pivoting to your contributions at the end is a tell that you've read essay advice without internalizing the actual prompt.</li>
-        <li><strong>Using the essay to restate your activities list.</strong> Yale already has your activities. This essay is not about who you are — your other responses cover that. It's about what about Yale's academic structure specifically fits you.</li>
+        <li><strong>Using the essay to restate your activities list.</strong> Yale already has your activities. This essay is not about who you are - your other responses cover that. It's about what about Yale's academic structure specifically fits you.</li>
       </ul>
 
       <h2>How to Tell If Your Yale Why Essay Is Working</h2>
       <p>
-        A simple test: delete the word "Yale" from every sentence in your draft and read the essay. If the essay still works with the school name removed — if the sentences could describe Harvard, Princeton, or Brown — then the essay is too generic and every specific reference needs to be sharper. If removing "Yale" breaks the sentences, you're probably in good shape.
+        A simple test: delete the word "Yale" from every sentence in your draft and read the essay. If the essay still works with the school name removed - if the sentences could describe Harvard, Princeton, or Brown - then the essay is too generic and every specific reference needs to be sharper. If removing "Yale" breaks the sentences, you're probably in good shape.
       </p>
       <p>
         A second test: does any sentence in your essay contain a fact about Yale that you would only know after real research? A professor's current project, a specific course number, a specific center's name, a specific feature of a program's structure. If the answer is no, the essay reads as if you wrote it from the homepage.

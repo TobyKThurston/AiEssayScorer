@@ -33,7 +33,14 @@ const STEPS: StepId[] = [
   "optional",
 ];
 
-const blankActivity = (): Activity => ({ title: "", tier: 3, description: "" });
+const blankActivity = (): Activity => ({
+  title: "",
+  tier: 3,
+  role: "",
+  hoursPerWeek: undefined,
+  years: undefined,
+  description: "",
+});
 
 const blankProfile = (): Profile => ({
   test: "SAT",
@@ -267,7 +274,7 @@ function StepTest({
       <StepHeader
         eyebrow="Step 1 · Standardized Tests"
         title="What's your best test score?"
-        subtitle="If you're test-optional, that's fine — pick None and we'll weight other factors more heavily."
+        subtitle="If you're test-optional, that's fine - pick None and we'll weight other factors more heavily."
       />
 
       <div className="grid grid-cols-3 gap-2">
@@ -390,7 +397,7 @@ function StepLocation({
       <StepHeader
         eyebrow="Step 3 · Where you're from"
         title="Where do you apply from?"
-        subtitle="Geography matters — top schools weigh applicants from underrepresented states differently."
+        subtitle="Geography matters - top schools weigh applicants from underrepresented states differently."
       />
 
       <label className="flex items-center gap-3 mb-5 text-[14px] text-ink-2 cursor-pointer">
@@ -577,8 +584,8 @@ function StepActivities({
     <PaperCard>
       <StepHeader
         eyebrow="Step 5 · Activities"
-        title="Top 3–5 activities"
-        subtitle="List your most impressive activities. Choose the tier that best matches the level of recognition."
+        title="Top 3-5 activities"
+        subtitle="The more context you give, the more accurate (and personal) your forecast. Add roles, hours, and a sentence about what you actually did."
       />
 
       <div className="space-y-4">
@@ -597,13 +604,88 @@ function StepActivities({
                 </button>
               ) : null}
             </div>
+
+            <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1">
+              Activity name
+            </label>
             <input
               type="text"
-              placeholder="e.g., Founder, Coding Club"
+              placeholder="e.g., Coding Club, Varsity Soccer, Local Food Bank"
               value={a.title}
               onChange={(e) => updateActivity(i, { title: e.target.value })}
               className="w-full border border-hair bg-paper px-3 py-2 text-[15px] mb-3 focus:outline-none focus:border-oxblood"
             />
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
+              <div>
+                <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1">
+                  Your role
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g., Founder, Captain"
+                  value={a.role ?? ""}
+                  onChange={(e) => updateActivity(i, { role: e.target.value })}
+                  className="w-full border border-hair bg-paper px-3 py-2 text-[14px] focus:outline-none focus:border-oxblood"
+                />
+              </div>
+              <div>
+                <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1">
+                  Hours / week
+                </label>
+                <input
+                  type="number"
+                  inputMode="numeric"
+                  min={0}
+                  max={60}
+                  placeholder="e.g., 6"
+                  value={a.hoursPerWeek ?? ""}
+                  onChange={(e) =>
+                    updateActivity(i, {
+                      hoursPerWeek:
+                        e.target.value === "" ? undefined : Number(e.target.value),
+                    })
+                  }
+                  className="w-full border border-hair bg-paper px-3 py-2 text-[14px] focus:outline-none focus:border-oxblood"
+                />
+              </div>
+              <div>
+                <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1">
+                  Years involved
+                </label>
+                <input
+                  type="number"
+                  inputMode="numeric"
+                  min={0}
+                  max={6}
+                  step="0.5"
+                  placeholder="e.g., 3"
+                  value={a.years ?? ""}
+                  onChange={(e) =>
+                    updateActivity(i, {
+                      years:
+                        e.target.value === "" ? undefined : Number(e.target.value),
+                    })
+                  }
+                  className="w-full border border-hair bg-paper px-3 py-2 text-[14px] focus:outline-none focus:border-oxblood"
+                />
+              </div>
+            </div>
+
+            <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1">
+              What you actually did (1-2 sentences)
+            </label>
+            <textarea
+              placeholder="e.g., Grew membership from 8 to 60. Ran a hackathon that raised $2k for the local library. Mentored two underclassmen who placed in state."
+              value={a.description ?? ""}
+              onChange={(e) => updateActivity(i, { description: e.target.value })}
+              rows={3}
+              className="w-full border border-hair bg-paper px-3 py-2 text-[14px] mb-3 focus:outline-none focus:border-oxblood resize-none"
+            />
+
+            <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1">
+              Recognition tier
+            </label>
             <div className="grid grid-cols-4 gap-1.5 mb-2">
               {([1, 2, 3, 4] as const).map((tier) => (
                 <button
@@ -827,12 +909,13 @@ function StepPaywall({
 
       <div className="border border-oxblood bg-[#FAEEEA] p-6 mb-6">
         <div className="flex items-baseline gap-1.5 mb-3">
-          <span className="text-[40px] font-serif text-oxblood leading-none">$9</span>
+          <span className="text-[40px] font-serif text-oxblood leading-none">$7</span>
           <span className="text-[14px] text-ink-2">/ month</span>
         </div>
         <ul className="space-y-2 text-[14px] text-ink-2">
           <li>✓ Full odds + tier for every school you picked</li>
           <li>✓ Per-factor breakdown (academics, activities, fit)</li>
+          <li>✓ Essay reviewer tuned to each school you applied to (Why-X, supplements, prompt fit)</li>
           <li>✓ Unlimited essay grading + line-by-line edits</li>
           <li>✓ Access to all admissions tools</li>
           <li>✓ Cancel anytime</li>
@@ -861,7 +944,7 @@ function StepPaywall({
         disabled={submitting || !email.includes("@")}
         className="w-full btn btn-brand text-[17px] font-semibold py-4 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {submitting ? "Redirecting…" : "Reveal my odds — $9/mo"}
+        {submitting ? "Redirecting…" : "Reveal my odds - $7/mo"}
       </button>
 
       <p className="mt-4 text-center text-[12px] text-pencil">

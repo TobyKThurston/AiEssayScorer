@@ -52,7 +52,7 @@ export default function Content() {
       <p>
         The partner can be living, historical, fictional, a
         grandparent, a rival, or a stranger. What matters is friction.
-        You want someone who would push back — not someone who would
+        You want someone who would push back - not someone who would
         agree with you.
       </p>
       <ul>
@@ -79,7 +79,7 @@ export default function Content() {
         up in a neighborhood Moses would have bulldozed for a
         highway and Jacobs would have saved. I want to hear him
         defend the highway in the room. Professor Sheppard's urban
-        studies work is why I'd choose Williams to do it — she'd
+        studies work is why I'd choose Williams to do it - she'd
         make Moses answer the right questions."
       </blockquote>
       <p>
@@ -98,7 +98,7 @@ export default function Content() {
       <ul>
         <li>
           <strong>Winter Study.</strong> A four-week January term
-          where students take a single unconventional course — from
+          where students take a single unconventional course - from
           documentary filmmaking to field glaciology.
         </li>
         <li>
@@ -157,7 +157,7 @@ export default function Content() {
       </p>
       <ul>
         <li>
-          Have I named a specific topic, book, or question — not
+          Have I named a specific topic, book, or question - not
           just a field?
         </li>
         <li>

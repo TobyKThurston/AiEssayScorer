@@ -112,8 +112,8 @@ export default function Content() {
         These are real books and often great books, but the answer carries no
         signal. The reader cannot distinguish the applicant from the pool.
         A stronger answer names a book the applicant genuinely finished and
-        genuinely liked — a translated short novel, a strange work of
-        nonfiction, a collection of essays nobody else is listing — and
+        genuinely liked - a translated short novel, a strange work of
+        nonfiction, a collection of essays nobody else is listing - and
         trusts that the choice speaks for itself. You do not need to
         explain why the book is good. The choice is the explanation.
       </p>
@@ -147,8 +147,8 @@ export default function Content() {
       </p>
       <blockquote>
         "Field biologists who spend twenty years watching one species.
-        Something about the patience — the willingness to notice a slightly
-        different call in year fourteen — tells me what sustained attention
+        Something about the patience - the willingness to notice a slightly
+        different call in year fourteen - tells me what sustained attention
         actually looks like."
       </blockquote>
       <p>
@@ -175,7 +175,7 @@ export default function Content() {
         <strong>Favorite word:</strong> Brackish.
       </blockquote>
       <blockquote>
-        <strong>Best book you've read:</strong> <em>The Emigrants</em> by W. G. Sebald — I read it in a
+        <strong>Best book you've read:</strong> <em>The Emigrants</em> by W. G. Sebald - I read it in a
         hammock in August and have not quite recovered.
       </blockquote>
       <blockquote>
@@ -191,7 +191,7 @@ export default function Content() {
       <blockquote>
         <strong>If you could teach any college course, write a book, or
         create an original piece of art, what would it be?</strong> A course
-        called "Maps That Lie" — on projections, omissions, and the
+        called "Maps That Lie" - on projections, omissions, and the
         political life of cartography. One semester, one wall covered
         floor-to-ceiling in maps.
       </blockquote>
@@ -246,8 +246,8 @@ export default function Content() {
         <li>
           <strong>Quoting a famous book to look smart.</strong> Listing
           <em> Ulysses</em>, <em>Infinite Jest</em>, or <em>War and Peace</em>
-          {" "}as your best book — especially if nothing else in your file
-          suggests you actually read them — reads as posture. Pick the book
+          {" "}as your best book - especially if nothing else in your file
+          suggests you actually read them - reads as posture. Pick the book
           you actually finished and actually think about.
         </li>
         <li>
@@ -294,8 +294,8 @@ export default function Content() {
         depth and fit. They do different jobs, and they should not overlap
         in topic. If your Why Yale essay is about the Directed Studies
         program and Comparative Literature, the Short Takes should not
-        repeat that material. Use them to reveal a different plane of you —
-        the aesthetic plane, the domestic plane, the sensibility plane —
+        repeat that material. Use them to reveal a different plane of you -
+        the aesthetic plane, the domestic plane, the sensibility plane -
         that the longer essays cannot reach.
       </p>
       <p>

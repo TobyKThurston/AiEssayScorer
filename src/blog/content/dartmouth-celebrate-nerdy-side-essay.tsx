@@ -14,8 +14,8 @@ export default function Content() {
         a Dr. Seuss-inspired prompt and a "Let Your Life Speak" prompt. You do
         not answer all of them. You pick the one that fits you best, and a
         strong pick is half the battle. If the nerdy-side prompt is the one
-        that pulled you in — if you read it and an actual subject
-        surfaced — that is usually a good sign. If you had to brainstorm your
+        that pulled you in - if you read it and an actual subject
+        surfaced - that is usually a good sign. If you had to brainstorm your
         nerdiness into existence, this may not be your prompt.
       </p>
       <p>
@@ -36,7 +36,7 @@ export default function Content() {
       <p>
         That is a voice instruction. Celebration has a register. It sounds
         like enthusiasm without apology. It sounds specific, because
-        celebration without specifics is empty. It sounds unselfconscious —
+        celebration without specifics is empty. It sounds unselfconscious -
         the writer is not worried about whether this is a cool thing to care
         about, because in the act of caring, the question of coolness has
         temporarily stopped mattering. The tone of the essay is the content of
@@ -62,7 +62,7 @@ export default function Content() {
         <li>
           <strong>A specific nerdy interest.</strong> Not "I love learning."
           Not "I am passionate about ideas." A real, nameable, concrete
-          subject — preferably one with a weird angle. The more specific, the
+          subject - preferably one with a weird angle. The more specific, the
           more credible.
         </li>
         <li>
@@ -78,7 +78,7 @@ export default function Content() {
           faked and its presence is the single best signal in the essay.
         </li>
         <li>
-          <strong>Register — tone matching topic.</strong> A nerd celebrating
+          <strong>Register - tone matching topic.</strong> A nerd celebrating
           the thing should SOUND like a nerd celebrating the thing. Not like
           a valedictorian giving a speech about the thing. The prose should
           have energy, tempo, and texture consistent with the subject.
@@ -98,7 +98,7 @@ export default function Content() {
         </li>
       </ul>
 
-      <h2>What Counts as "Nerdy" — The Bar Is Higher Than Students Think</h2>
+      <h2>What Counts as "Nerdy" - The Bar Is Higher Than Students Think</h2>
       <p>
         Here is the single most common failure: applicants hear "nerdy" and
         decide that means "I'm good at STEM." They write a letter about
@@ -118,7 +118,7 @@ export default function Content() {
         Strong topics include things like: the aerodynamics of paper
         airplanes. The history of board games. The typography of subway
         maps. The fermentation chemistry of a sourdough starter. Medieval
-        church marginalia. The rules of cricket — all of them, including the
+        church marginalia. The rules of cricket - all of them, including the
         weird ones. Competitive crossword solving. Figure skating
         scoring. Typewriter restoration. The ecology of a single pond you
         have been watching for four years. None of those are impressive on
@@ -155,7 +155,7 @@ export default function Content() {
           the interest would know are the point.
         </li>
         <li>
-          <strong>The joy of nerd-mode — what is happening in your brain
+          <strong>The joy of nerd-mode - what is happening in your brain
           (roughly 70 words).</strong> Why this, specifically. What the
           pattern-recognition feels like. What problem the hobby has quietly
           solved, or what unrelated question it has opened. This is the
@@ -187,7 +187,7 @@ export default function Content() {
         official Laws of Cricket. It has a water stain on page 41 where I
         spilled tea while reading about leg bye. Cricket has forty-two laws,
         and the one I love most is Law 25, which governs how a ball becomes
-        "dead" — the moment play pauses and the next delivery cannot be
+        "dead" - the moment play pauses and the next delivery cannot be
         bowled. It contains fourteen sub-clauses. Fourteen. There is an
         entire sub-clause for whether the ball has lodged in the batter's
         clothing. Most Saturdays I sit on my bedroom floor with the book
@@ -208,9 +208,9 @@ export default function Content() {
         cricket rulebook is not "impressive." It is not a credential. The
         writer is not pivoting it into a metaphor about life or a lesson
         about precision. They are inside the interest, rendering it, and the
-        rendering is the celebration. The specifics — Law 25, the fourteen
+        rendering is the celebration. The specifics - Law 25, the fourteen
         sub-clauses, the tea stain on page 41, the unopened email to the
-        uncle — could not have been invented by someone who did not care.
+        uncle - could not have been invented by someone who did not care.
         That is the signal admissions reads.
       </p>
       <p>
@@ -225,7 +225,7 @@ export default function Content() {
       <h2>Common Mistakes</h2>
       <ul>
         <li>
-          <strong>Picking a vague subject — "math" or "history" — with no
+          <strong>Picking a vague subject - "math" or "history" - with no
           specific angle.</strong> The subject is not the essay. The angle
           is. A letter about "loving history" is indistinguishable from a
           thousand other letters. A letter about a particular obsession
@@ -240,14 +240,14 @@ export default function Content() {
         </li>
         <li>
           <strong>The "I'm not like other girls" register.</strong> A voice
-          that positions the writer against normal people — who would not
-          understand, who are too cool, who do not get it — reads as
+          that positions the writer against normal people - who would not
+          understand, who are too cool, who do not get it - reads as
           condescending and defensive. Celebration does not require a
           contrast class. Just celebrate the thing.
         </li>
         <li>
           <strong>Ironic distancing.</strong> "I know this is weird, but..."
-          repeated throughout the essay. A single small aside is fine — it
+          repeated throughout the essay. A single small aside is fine - it
           is one of the four moves. Sprinkled throughout, it signals that
           you are not actually comfortable inside your own interest, which
           collapses the premise.
@@ -293,7 +293,7 @@ export default function Content() {
         essay has to do distinct work. Duplication is costly.
       </p>
       <p>
-        The Why Dartmouth essay is where specifics about the place live — the
+        The Why Dartmouth essay is where specifics about the place live - the
         D-Plan, the residential houses, the Dartmouth Outing Club, the
         classes and professors you have looked up. Those belong there, not
         in the nerdy-side essay. If you try to tuck "and I'll be able to
@@ -307,7 +307,7 @@ export default function Content() {
         actually sounds like yours. If your activities list is dominated by
         traditional academic achievement, this is your chance to show a
         different dimension. If your personal statement is about something
-        serious — loss, identity, hardship — this essay should lean the
+        serious - loss, identity, hardship - this essay should lean the
         other way and let the reader see the lighter, weirder, more
         domestic side of your brain. Coordinate before drafting. Look at
         what the rest of your application is already saying about you, and

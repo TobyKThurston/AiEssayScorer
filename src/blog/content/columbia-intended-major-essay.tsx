@@ -17,7 +17,7 @@ export default function Content() {
       <h2>What Columbia Is Actually Asking</h2>
       <p>
         This is <strong>not</strong> the Core Curriculum essay. The Core
-        essay asks about your broader intellectual engagement — the books,
+        essay asks about your broader intellectual engagement - the books,
         the arguments, the ideas you move between. This one asks about the
         specific field you want to spend four years inside.
       </p>
@@ -28,7 +28,7 @@ export default function Content() {
         <li>
           <strong>A question, not a passion.</strong> The strongest essays
           name a specific problem, puzzle, or sub-field the applicant
-          wants to push on — not "my love for biology."
+          wants to push on - not "my love for biology."
         </li>
         <li>
           <strong>Evidence of real engagement at the field level.</strong>{" "}
@@ -45,7 +45,7 @@ export default function Content() {
       <h2>Columbia College vs. SEAS</h2>
       <p>
         Your school of application matters here. Columbia College
-        applicants can write about a single department — English,
+        applicants can write about a single department - English,
         neuroscience, political science. SEAS applicants must address
         engineering specifically. Writing "I want to study computer
         science because I love solving problems" in a SEAS application
@@ -73,7 +73,7 @@ export default function Content() {
       <h2>An Example That Works</h2>
       <blockquote>
         "I want to study how Mughal tax records from the 17th century
-        were used to argue — two hundred years later — for British
+        were used to argue - two hundred years later - for British
         colonial legitimacy. I got there through a single footnote in
         Bayly's <em>Indian Society and the Making of the British Empire</em>,
         and I've been chasing the archives it pointed to ever since. At
@@ -127,13 +127,13 @@ export default function Content() {
       </p>
       <p>
         Second test: does the essay contain at least one proper noun
-        that is not "Columbia" — a book, a scholar, a paper, a method, a
+        that is not "Columbia" - a book, a scholar, a paper, a method, a
         sub-field with a real name? If not, go find one.
       </p>
 
       <p>
         Draft this one alongside the Core essay and compare them side by
-        side — they should not overlap. Run both through our{" "}
+        side - they should not overlap. Run both through our{" "}
         <Link href="/editor" className="text-oxblood hover:underline">
           AI essay review tool
         </Link>{" "}

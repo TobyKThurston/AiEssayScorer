@@ -36,8 +36,8 @@ export default function Content() {
         punishes safety. Applicants who pick "passionate," "driven,"
         "creative" have chosen three words from the same bag the
         committee has read ten thousand times. Applicants who pick three
-        words that actually describe them — including at least one that
-        is unexpected — instantly stand out.
+        words that actually describe them - including at least one that
+        is unexpected - instantly stand out.
       </p>
 
       <h2>What USC Admissions Screens For</h2>
@@ -151,12 +151,12 @@ export default function Content() {
         <li>
           <strong>Punctual, argumentative, sentimental.</strong> Three
           words that are slightly in tension. The tension is the
-          signal — this is a specific human, not a brand.
+          signal - this is a specific human, not a brand.
         </li>
         <li>
           <strong>Grandson, rearranger, slow.</strong> "Grandson" as
           an identity claim is unusual and memorable. "Rearranger"
-          suggests how the applicant thinks. "Slow" is the risk word —
+          suggests how the applicant thinks. "Slow" is the risk word -
           unexpected, a little self-deprecating, honest in a way that
           no admissions consultant would recommend and that therefore
           reads as real.
@@ -219,7 +219,7 @@ export default function Content() {
         A three-words answer that reads "Innovator, Visionary, Leader"
         is a disaster not because those words are wrong but because
         they signal that the applicant is performing. "Grouchy,
-        bilingual, completionist" signals the opposite — that the
+        bilingual, completionist" signals the opposite - that the
         applicant is telling the truth, which is the single hardest
         signal to send in a college application.
       </p>
@@ -229,8 +229,8 @@ export default function Content() {
         USC also requires a main supplemental essay and a "Why USC"
         response. The short answers should feel consistent with the
         portrait those essays construct, without being repetitive. If
-        your long essay is about collecting — collecting records,
-        collecting rocks, collecting languages — one of your three
+        your long essay is about collecting - collecting records,
+        collecting rocks, collecting languages - one of your three
         words being "collector" reinforces the pattern. If the long
         essay is about a completely different facet of you, the short
         answers can and should widen the picture.

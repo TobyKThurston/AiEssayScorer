@@ -8,7 +8,7 @@ export default function Content() {
         Harvard's application asks five required short questions of about 200 words each. The fourth one reads: <em>"How do you hope to use your Harvard education in the future?"</em>
       </p>
       <p>
-        That sentence looks like a generic ambition prompt, and most applicants treat it as one. They describe a career, name a cause, and promise to give back. The result is a paragraph that could have been written by any strong applicant to any selective school — which is exactly why the prompt weeds out so many students. Harvard already assumes you are ambitious. The question is testing something else.
+        That sentence looks like a generic ambition prompt, and most applicants treat it as one. They describe a career, name a cause, and promise to give back. The result is a paragraph that could have been written by any strong applicant to any selective school - which is exactly why the prompt weeds out so many students. Harvard already assumes you are ambitious. The question is testing something else.
       </p>
       <p>
         What Harvard is actually asking is whether your vision of your own future is <em>specific enough to be credible</em>. The applicants who do well here don't write about saving the world. They write about what they want to actually spend their time doing, what kind of problem they want to be working on in ten years, and what a Harvard education specifically unlocks about that work.
@@ -20,7 +20,7 @@ export default function Content() {
       </p>
       <ul>
         <li><strong>Evidence that you've thought about the shape of the next ten years, not just the next four.</strong> Many applicants describe wanting to major in X. That's not enough. The prompt asks about the future, which means the decade after college, not college itself.</li>
-        <li><strong>A genuine connection between your ambition and the specific education Harvard offers.</strong> Harvard is not a stand-in for any top school. The committee wants to see whether you understand what Harvard specifically gives you — the house system, the specific research centers, the faculty, the cross-disciplinary structure — and whether that's actually what your future requires.</li>
+        <li><strong>A genuine connection between your ambition and the specific education Harvard offers.</strong> Harvard is not a stand-in for any top school. The committee wants to see whether you understand what Harvard specifically gives you - the house system, the specific research centers, the faculty, the cross-disciplinary structure - and whether that's actually what your future requires.</li>
         <li><strong>Intellectual humility about what you don't yet know.</strong> The strongest future essays acknowledge that the applicant's plan will change, and frame Harvard as the place where they want to figure out how it changes. Applicants who write with total certainty about their exact career path read as either naive or dishonest.</li>
       </ul>
       <p>
@@ -50,9 +50,9 @@ export default function Content() {
       </p>
       <ol>
         <li><strong>A specific intellectual or practical problem you want to keep working on (2–3 sentences).</strong> Not a field. Not a career. A problem. Examples: "how cities should price congestion when the users most harmed by congestion are also the users least able to pay," or "why open-ended dialogue systems still lose track of long conversations in ways that older rule-based systems didn't."</li>
-        <li><strong>Where that problem came from in your own life (2 sentences).</strong> A short moment of origin — a class, a project, a book, an experience — that made this specific question matter to you. This grounds the problem in your actual life and distinguishes you from applicants who picked their problem from a list of important-sounding topics.</li>
+        <li><strong>Where that problem came from in your own life (2 sentences).</strong> A short moment of origin - a class, a project, a book, an experience - that made this specific question matter to you. This grounds the problem in your actual life and distinguishes you from applicants who picked their problem from a list of important-sounding topics.</li>
         <li><strong>What Harvard specifically gives you to keep working on it (3–4 sentences).</strong> The strongest answers name specific faculty, specific research programs, specific features of Harvard's academic structure (the house system, the HUROS research database, the cross-registration with MIT, the Mignone Center for Career Success, the J-term opportunities). Vague references to "Harvard's resources" or "Harvard's alumni network" signal that you haven't done the research.</li>
-        <li><strong>A specific future posture (1–2 sentences).</strong> Not "I will solve X." Something like: "In ten years I hope to be working on some version of this problem from inside a research group, or a policy shop, or a company that I don't know exists yet — but I want to be working on it with the rigor that Harvard teaches me to bring to questions I haven't answered." Acknowledged uncertainty beats false certainty.</li>
+        <li><strong>A specific future posture (1–2 sentences).</strong> Not "I will solve X." Something like: "In ten years I hope to be working on some version of this problem from inside a research group, or a policy shop, or a company that I don't know exists yet - but I want to be working on it with the rigor that Harvard teaches me to bring to questions I haven't answered." Acknowledged uncertainty beats false certainty.</li>
       </ol>
 
       <h2>What "Use Your Harvard Education" Actually Means</h2>
@@ -71,9 +71,9 @@ export default function Content() {
         Applicants who have genuinely done their homework on Harvard tend to mention at least one of the following, naturally and in context:
       </p>
       <ul>
-        <li>A specific faculty member whose research connects to the applicant's stated problem — not the most famous name in the department, but the one whose actual current work matches what the applicant describes.</li>
-        <li>A specific academic structure Harvard offers that most schools don't — the house system, the cross-registration with MIT for computer science and engineering, the joint concentration structure, the secondary field option, the freshman seminar program.</li>
-        <li>A specific research center or institute — the Weatherhead Center for International Affairs, the Harvard Innovation Labs, the Berkman Klein Center, the Mignone Center for Career Success, the Radcliffe Institute, the Petrie-Flom Center, the Center for Research on Computation and Society.</li>
+        <li>A specific faculty member whose research connects to the applicant's stated problem - not the most famous name in the department, but the one whose actual current work matches what the applicant describes.</li>
+        <li>A specific academic structure Harvard offers that most schools don't - the house system, the cross-registration with MIT for computer science and engineering, the joint concentration structure, the secondary field option, the freshman seminar program.</li>
+        <li>A specific research center or institute - the Weatherhead Center for International Affairs, the Harvard Innovation Labs, the Berkman Klein Center, the Mignone Center for Career Success, the Radcliffe Institute, the Petrie-Flom Center, the Center for Research on Computation and Society.</li>
         <li>A specific Harvard course that already exists and that the applicant would want to take.</li>
         <li>A specific J-term or Wintersession opportunity, especially for applicants in applied fields.</li>
       </ul>
@@ -104,7 +104,7 @@ export default function Content() {
 
       <h2>How This Essay Interacts With the Rest of the Harvard Supplement</h2>
       <p>
-        Harvard's five short answers are read together as a portrait. Your <Link href="/blog/harvard-intellectual-experience-essay" className="text-oxblood hover:underline">intellectual experience essay</Link> shows how you think. Your <Link href="/blog/harvard-roommate-essay-top-3-things" className="text-oxblood hover:underline">roommate essay</Link> shows who you are outside the classroom. Your extracurricular essay shows where your time goes. The future essay is where all of those threads are supposed to point. If the committee reads your future essay and can see how it grows out of the other four, your application has internal coherence — which is the single most underrated factor in selective admissions.
+        Harvard's five short answers are read together as a portrait. Your <Link href="/blog/harvard-intellectual-experience-essay" className="text-oxblood hover:underline">intellectual experience essay</Link> shows how you think. Your <Link href="/blog/harvard-roommate-essay-top-3-things" className="text-oxblood hover:underline">roommate essay</Link> shows who you are outside the classroom. Your extracurricular essay shows where your time goes. The future essay is where all of those threads are supposed to point. If the committee reads your future essay and can see how it grows out of the other four, your application has internal coherence - which is the single most underrated factor in selective admissions.
       </p>
       <p>
         A good test: read your intellectual experience essay and your future essay back-to-back. If the future essay's problem doesn't have any plausible connection to the intellectual experience you described, one of them is probably generic. The fix is usually to make the future essay's problem narrower until it actually grows out of the thinking you already described doing.

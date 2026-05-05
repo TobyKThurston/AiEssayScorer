@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "College Admissions Odds Calculator – Ivy Admit",
   description:
-    "Get your real chance of admission at top colleges. Enter your SAT, GPA, location, schools, and activities — see a per-school admit % and tier (Reach / Match / Safety).",
+    "Get your real chance of admission at top colleges. Enter your SAT, GPA, location, schools, and activities - see a per-school admit % and tier (Reach / Match / Safety).",
   alternates: { canonical: "/odds" },
   openGraph: {
     title: "College Admissions Odds Calculator – Ivy Admit",

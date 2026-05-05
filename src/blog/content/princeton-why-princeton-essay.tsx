@@ -16,7 +16,7 @@ export default function Content() {
 
       <h2>Why the Civic Engagement Framing Changes Everything</h2>
       <p>
-        Most Ivy League Why essays ask some version of "why do you want to come here?" Princeton is the only one that explicitly anchors the question in service. This is not decorative. Princeton's informal motto is "in the nation's service and the service of humanity," and the institution takes it seriously — the Pace Center for Civic Engagement, the Bridge Year Program, community-based learning courses across departments, and Princeton's unique senior thesis requirement all reflect an institutional belief that academic work should connect to public problems.
+        Most Ivy League Why essays ask some version of "why do you want to come here?" Princeton is the only one that explicitly anchors the question in service. This is not decorative. Princeton's informal motto is "in the nation's service and the service of humanity," and the institution takes it seriously - the Pace Center for Civic Engagement, the Bridge Year Program, community-based learning courses across departments, and Princeton's unique senior thesis requirement all reflect an institutional belief that academic work should connect to public problems.
       </p>
       <p>
         Applicants who ignore the service framing and write a standard "I love your departments" Why essay are missing the prompt. You need to show that you understand Princeton defines academic seriousness partly through engagement with problems outside the university.
@@ -51,8 +51,8 @@ export default function Content() {
       </p>
       <ol>
         <li><strong>Open with the specific civic engagement or service work you've already done (60–80 words).</strong> Not a grand statement about caring. A concrete description of the problem you've been working on and what you've learned from working on it. This grounds the essay in reality rather than aspiration.</li>
-        <li><strong>Connect your work to specific Princeton features (100–120 words).</strong> Name the program, center, professor, course, or research group at Princeton that would let you take your engagement further. Be precise — "the Pace Center's Community Action program focused on immigration legal aid" is useful; "Princeton's commitment to service" is not.</li>
-        <li><strong>Close with what Princeton specifically makes possible that other schools don't (40–60 words).</strong> This is where you signal that you understand Princeton's particular institutional character — the way the senior thesis connects academic work to real problems, the way community-based learning is embedded in the curriculum, the way the Bridge Year Program reflects a belief that engagement should precede the classroom.</li>
+        <li><strong>Connect your work to specific Princeton features (100–120 words).</strong> Name the program, center, professor, course, or research group at Princeton that would let you take your engagement further. Be precise - "the Pace Center's Community Action program focused on immigration legal aid" is useful; "Princeton's commitment to service" is not.</li>
+        <li><strong>Close with what Princeton specifically makes possible that other schools don't (40–60 words).</strong> This is where you signal that you understand Princeton's particular institutional character - the way the senior thesis connects academic work to real problems, the way community-based learning is embedded in the curriculum, the way the Bridge Year Program reflects a belief that engagement should precede the classroom.</li>
       </ol>
 
       <h2>A Concrete Example of the Shape That Works</h2>
@@ -60,14 +60,14 @@ export default function Content() {
         Here is the shape of a Princeton Why essay that lands:
       </p>
       <blockquote>
-        "For two years I've been running a legal literacy program at the county detention center, translating arraignment procedures into Spanish for detainees who don't understand the charges against them. The work taught me that the gap between legal rights and legal access is almost entirely a translation problem — not just linguistic, but structural.
+        "For two years I've been running a legal literacy program at the county detention center, translating arraignment procedures into Spanish for detainees who don't understand the charges against them. The work taught me that the gap between legal rights and legal access is almost entirely a translation problem - not just linguistic, but structural.
 
-        Princeton's Program in Law and Public Affairs is where I want to take that question seriously at the undergraduate level. Professor Kim Lane Scheppele's work on comparative constitutional rights is the closest thing I've found to the framework I've been reaching for — understanding how legal systems fail people who technically have rights but practically can't use them. The Pace Center's Community Action internships would let me continue direct service work while studying the systems that make it necessary.
+        Princeton's Program in Law and Public Affairs is where I want to take that question seriously at the undergraduate level. Professor Kim Lane Scheppele's work on comparative constitutional rights is the closest thing I've found to the framework I've been reaching for - understanding how legal systems fail people who technically have rights but practically can't use them. The Pace Center's Community Action internships would let me continue direct service work while studying the systems that make it necessary.
 
         What draws me to Princeton specifically is the senior thesis. I want four years building toward a single sustained argument about legal translation and access, in an institution that treats undergraduate research as real scholarship rather than a capstone exercise."
       </blockquote>
       <p>
-        That's roughly 170 words — well under the 250-word limit, which gives room to expand any section. It names a specific program, a specific professor, a specific center, and a specific structural feature of Princeton. Every sentence connects the applicant's existing work to a Princeton resource.
+        That's roughly 170 words - well under the 250-word limit, which gives room to expand any section. It names a specific program, a specific professor, a specific center, and a specific structural feature of Princeton. Every sentence connects the applicant's existing work to a Princeton resource.
       </p>
 
       <h2>Common Mistakes in the Princeton Why Essay</h2>
@@ -75,7 +75,7 @@ export default function Content() {
         <li><strong>Ignoring the service framing.</strong> The prompt explicitly asks about civic engagement. Writing a standard Why essay without addressing this is not answering the question Princeton asked.</li>
         <li><strong>Fabricating a service narrative.</strong> If your engagement is limited, be honest about it. One genuine experience described with specificity reads better than three inflated ones. The committee reads thousands of these and can tell.</li>
         <li><strong>Name-dropping professors without substance.</strong> If you mention a Princeton professor, mention their specific research, a specific paper, or a specific course. "I'd love to learn from Professor X" without substance is research theater.</li>
-        <li><strong>Treating the senior thesis as just another requirement.</strong> Princeton's thesis is unusual — it's a year-long independent research project required of every student, not an optional honors project. If you mention it, show that you understand what makes it distinctive.</li>
+        <li><strong>Treating the senior thesis as just another requirement.</strong> Princeton's thesis is unusual - it's a year-long independent research project required of every student, not an optional honors project. If you mention it, show that you understand what makes it distinctive.</li>
         <li><strong>Writing about Princeton's eating clubs or social scene.</strong> The Why essay is about academic and civic fit. Social life belongs elsewhere in the application.</li>
         <li><strong>Ending with a generic promise to "give back."</strong> Princeton is not asking what you'll contribute. It's asking how your specific engagement connects to Princeton's specific resources.</li>
       </ul>
@@ -86,7 +86,7 @@ export default function Content() {
       </p>
       <ol>
         <li><strong>The school-swap test.</strong> Replace "Princeton" with "Harvard" or "Yale." If the essay still works, it's too generic. Every reference should break when Princeton is removed.</li>
-        <li><strong>The service-specificity test.</strong> Does your essay describe a specific civic engagement experience and connect it to a specific Princeton feature? If either half is missing — if the service is vague or the Princeton content is generic — the essay isn't doing what the prompt asks.</li>
+        <li><strong>The service-specificity test.</strong> Does your essay describe a specific civic engagement experience and connect it to a specific Princeton feature? If either half is missing - if the service is vague or the Princeton content is generic - the essay isn't doing what the prompt asks.</li>
       </ol>
 
       <h2>How the Why Princeton Essay Fits With the Rest of the Supplement</h2>

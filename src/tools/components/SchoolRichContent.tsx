@@ -22,15 +22,15 @@ function fallbackAdmitContext(school: School): string {
 
 function fallbackOpeningAngles(school: School): string[] {
   return [
-    `Anchor your opening in a specific scene — a moment at work, a classroom argument, a family kitchen — that shows how you think. ${school.shortName} readers see thousands of generic openings; the specific one is the one they remember.`,
+    `Anchor your opening in a specific scene - a moment at work, a classroom argument, a family kitchen - that shows how you think. ${school.shortName} readers see thousands of generic openings; the specific one is the one they remember.`,
     `Start with a question you genuinely cannot stop thinking about, then pivot toward what drew you to ${school.shortName}'s ${school.knownFor.split(",")[0]}. An unanswered question is more interesting than a tidy conclusion.`,
-    `Open with an object, routine, or place that only makes sense inside your life. Do not spend three lines explaining it — show yourself using it and trust the reader to catch up.`,
+    `Open with an object, routine, or place that only makes sense inside your life. Do not spend three lines explaining it - show yourself using it and trust the reader to catch up.`,
   ];
 }
 
 function fallbackCommonMistakes(school: School): string[] {
   return [
-    `Reciting ${school.shortName}'s reputation, rankings, or history back to the admissions office. Reviewers wrote the brochure — they are looking for what is specific to you.`,
+    `Reciting ${school.shortName}'s reputation, rankings, or history back to the admissions office. Reviewers wrote the brochure - they are looking for what is specific to you.`,
     `Naming programs, courses, or professors you have not actually engaged with. If you cite something, be ready to explain why it matters for your plan.`,
     `Writing about ${school.location} as if it is ${school.shortName}'s main pitch. The school is the subject; the city is the backdrop.`,
   ];
@@ -63,7 +63,7 @@ function fallbackFaq(school: School, variant: Variant): { question: string; answ
     });
     shared.push({
       question: `Can I use AI to write my ${school.shortName} supplemental essay?`,
-      answer: `Use AI to brainstorm, deconstruct prompts, and pressure-test your draft — but do not paste AI prose into your application. ${school.shortName} readers are fluent in AI voice and screen for it. Use tools like this brainstormer to find angles and programs, then write in your own voice.`,
+      answer: `Use AI to brainstorm, deconstruct prompts, and pressure-test your draft - but do not paste AI prose into your application. ${school.shortName} readers are fluent in AI voice and screen for it. Use tools like this brainstormer to find angles and programs, then write in your own voice.`,
     });
   } else {
     shared.push({

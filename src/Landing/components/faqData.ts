@@ -3,7 +3,7 @@ export type FaqItem = { q: string; a: string };
 export const FAQ_ITEMS: FaqItem[] = [
   {
     q: "Is using Ivy Admit allowed by colleges?",
-    a: "Yes. Ivy Admit is a review and editing tool — the same category as a counselor or English teacher. You remain the author and approve every suggestion. We don't ghostwrite.",
+    a: "Yes. Ivy Admit is a review and editing tool - the same category as a counselor or English teacher. You remain the author and approve every suggestion. We don't ghostwrite.",
   },
   {
     q: "Does it preserve my voice?",
@@ -27,6 +27,6 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "How does cancellation work?",
-    a: "Cancel anytime from billing — your access continues to the end of the period. First-time Pro purchases are refundable within 30 days if you've used no more than two full reviews.",
+    a: "Cancel anytime from billing - your access continues to the end of the period. First-time Pro purchases are refundable within 30 days if you've used no more than two full reviews.",
   },
 ];

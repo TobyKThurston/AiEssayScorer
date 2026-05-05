@@ -12,7 +12,7 @@ const TABS: { id: TabId; eyebrow: string; label: string; description: string }[]
     eyebrow: "Module · 01",
     label: "The scorecard",
     description:
-      "A transparent rubric. See exactly what points you're losing and why — not just a vague grade.",
+      "A transparent rubric. See exactly what points you're losing and why - not just a vague grade.",
   },
   {
     id: "edits",
@@ -190,7 +190,7 @@ function TourPanel({ id }: { id: TabId }) {
   // risk
   const flags: { label: string; state: "Clear" | "Caution"; note: string }[] = [
     { label: "Tone", state: "Clear", note: "Consistent, personal, not performative." },
-    { label: "Topic", state: "Caution", note: "Mission-trip frame is common — earn it with specificity." },
+    { label: "Topic", state: "Caution", note: "Mission-trip frame is common - earn it with specificity." },
     { label: "AI-detection", state: "Clear", note: "Reads as human voice. Low risk of false flags." },
     { label: "Voice", state: "Clear", note: "Distinct and consistent across paragraphs." },
   ];

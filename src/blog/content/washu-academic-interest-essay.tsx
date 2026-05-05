@@ -37,8 +37,8 @@ export default function Content() {
         WashU." Read it twice. WashU is not asking what you want to study.
         They are asking what you will do, concretely, in their specific
         academic environment to advance that interest. Applicants who treat
-        this as a generic Why-Major essay — "I love biology because my
-        grandmother was a nurse and I want to help people" — are answering a
+        this as a generic Why-Major essay - "I love biology because my
+        grandmother was a nurse and I want to help people" - are answering a
         different prompt. WashU will read that essay and conclude you have not
         looked at the school.
       </p>
@@ -46,17 +46,17 @@ export default function Content() {
         The prompt demands specificity on two axes at once. First, the
         intellectual axis: what actually excites you, narrowed beyond the
         field level. Second, the institutional axis: which specific WashU
-        resources — courses, faculty, programs, cross-school options, study
-        abroad, research initiatives — will let you pursue that interest. An
+        resources - courses, faculty, programs, cross-school options, study
+        abroad, research initiatives - will let you pursue that interest. An
         essay that nails one axis and ignores the other reads as incomplete.
         An essay that handles both is the assignment.
       </p>
       <p>
         WashU wants to see a real plan to engage with their specific academic
-        ecosystem. That ecosystem has unusual features — five undergraduate
+        ecosystem. That ecosystem has unusual features - five undergraduate
         schools with cross-registration, no required core, a Florence campus,
         the Research First Year program, the Sam Fox School, Olin, a
-        selective architecture program — and the prompt is implicitly asking
+        selective architecture program - and the prompt is implicitly asking
         whether you know any of this exists.
       </p>
 
@@ -92,7 +92,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Named WashU resources.</strong> Courses, faculty, labs,
-          programs, study abroad, the Research First Year program — at
+          programs, study abroad, the Research First Year program - at
           least two, ideally three, specific to WashU rather than generic
           to any research university.
         </li>
@@ -119,9 +119,9 @@ export default function Content() {
       <p>
         Exploration implies uncertainty. It implies that you expect the
         interest to widen, deepen, or shift as you encounter it inside a real
-        university. Applicants who write pre-professional cliffed essays —
+        university. Applicants who write pre-professional cliffed essays -
         "I want to be a doctor and WashU has a strong pre-med program, so I
-        will take the required courses and apply to medical school" — miss
+        will take the required courses and apply to medical school" - miss
         the intent entirely. The prompt is about the journey, not the
         destination. The reader wants to see a mind that is excited to be
         changed by what it encounters.
@@ -132,8 +132,8 @@ export default function Content() {
         investment bankers, and future architects all struggle here because
         the obvious move is to name the destination and describe the track
         toward it. The stronger move is to name the intellectual question
-        underneath the career — why this career, specifically, and what
-        questions you hope to chase on the way there — and then describe the
+        underneath the career - why this career, specifically, and what
+        questions you hope to chase on the way there - and then describe the
         exploration that will shape your answer. A pre-med applicant who
         writes about how the immune system fascinates them and names a WashU
         immunology course and a Research First Year lab has written a stronger
@@ -143,9 +143,9 @@ export default function Content() {
       <p>
         Exploration also implies range. WashU's no-required-core structure
         means students can design genuinely unusual academic paths. If your
-        interest sits at the intersection of two fields — philosophy and
+        interest sits at the intersection of two fields - philosophy and
         computer science, architecture and public health, economics and
-        art — the cross-school structure is a gift. Say so. The reader is
+        art - the cross-school structure is a gift. Say so. The reader is
         specifically attuned to applicants who understand why WashU's
         structural flexibility matches their intellectual shape.
       </p>
@@ -169,9 +169,9 @@ export default function Content() {
           <strong>The specific WashU academic resources you would use
           (roughly 120 words).</strong> This is the center of the essay and
           the longest section by design. Name two or three specific WashU
-          resources — a course, a faculty member whose work aligns with your
+          resources - a course, a faculty member whose work aligns with your
           interest, the Research First Year program, a cross-school option at
-          Olin or Sam Fox, the Florence campus, an undergraduate journal —
+          Olin or Sam Fox, the Florence campus, an undergraduate journal -
           and explain in concrete terms how each would advance your
           interest. Generic references to "research opportunities" or
           "great professors" are wasted words. The reader is scanning for
@@ -222,7 +222,7 @@ export default function Content() {
         I want to apply to the Research First Year program with a project on
         cooperative housing models, and I want to spend a semester at the
         Florence campus not to see famous buildings but to study how a dense
-        medieval city handles adaptation — the retrofits, the fire codes, the
+        medieval city handles adaptation - the retrofits, the fire codes, the
         places where the plan gave way to the life. I expect to leave WashU
         less sure about what architecture is for than when I arrived. That is
         the part I am looking forward to."
@@ -233,7 +233,7 @@ export default function Content() {
         question about what buildings assume about the people inside them.
         The institutional axis is specific: the Sam Fox School, cross-school
         registration with Arts and Sciences, a named faculty member, the
-        Research First Year program, the Florence campus — five concrete
+        Research First Year program, the Florence campus - five concrete
         WashU features, each pulled toward the applicant's central question
         rather than listed as prestige markers.
       </p>
@@ -267,8 +267,8 @@ export default function Content() {
           Pretending you are not pre-med when your application makes it
           obvious reads as strategic rather than honest. The better move is
           to acknowledge the career path and then write about the
-          intellectual question underneath it — the specific thing about
-          medicine that draws you — rather than the track itself.
+          intellectual question underneath it - the specific thing about
+          medicine that draws you - rather than the track itself.
         </li>
         <li>
           <strong>Not engaging with cross-school flexibility.</strong> WashU's
@@ -308,10 +308,10 @@ export default function Content() {
       <h2>How This Essay Coordinates With Why WashU</h2>
       <p>
         WashU's two essays divide the work. The Why WashU essay is about
-        institutional fit — culture, the Mosaic residential college system,
+        institutional fit - culture, the Mosaic residential college system,
         community, why this particular campus, why this particular student
         body, what you would contribute to the non-academic life of the
-        place. The Academic Interest essay is about intellectual fit — what
+        place. The Academic Interest essay is about intellectual fit - what
         you want to study, how you want to study it, and which parts of
         WashU's academic infrastructure you will actually use.
       </p>
@@ -324,7 +324,7 @@ export default function Content() {
         duplicated coverage on one dimension and left the other dimension
         thin. Coordinate before drafting. Decide which essay handles which
         WashU features. The Florence campus could belong to either essay,
-        depending on whether you frame it academically or culturally — but
+        depending on whether you frame it academically or culturally - but
         not to both.
       </p>
       <p>
@@ -352,8 +352,8 @@ export default function Content() {
         </Link>{" "}
         walks through how to handle institutional fit without overlapping
         this one. And for the broader principles that apply across every
-        Why-This-College supplement — how to name resources, how to avoid
-        prestige language, how to tie your interests to a specific place —
+        Why-This-College supplement - how to name resources, how to avoid
+        prestige language, how to tie your interests to a specific place -
         read our{" "}
         <Link
           href="/blog/why-this-college-essay"

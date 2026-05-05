@@ -92,7 +92,7 @@ export default function Content() {
         <li>
           <strong>Using the space for a "missed" accomplishment.</strong>{" "}
           "My app doesn't capture that I also placed second at regional
-          debate..." — this is exactly the move the prompt is designed
+          debate..." - this is exactly the move the prompt is designed
           to catch. It reads as resume padding.
         </li>
         <li>
@@ -115,7 +115,7 @@ export default function Content() {
         <li>
           <strong>Picking something the application already captures.</strong>{" "}
           If your activities list includes "bassoon," the bassoon is
-          not the answer. Go one layer deeper — what does your reed
+          not the answer. Go one layer deeper - what does your reed
           collection look like, what's your warm-up ritual.
         </li>
         <li>
@@ -154,7 +154,7 @@ export default function Content() {
       <p>
         Read your draft out loud to someone who knows you well. If they
         laugh in recognition, you've got it. If they say "you should
-        have written about X instead," they are almost always right —
+        have written about X instead," they are almost always right -
         write about X.
       </p>
 

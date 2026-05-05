@@ -12,11 +12,11 @@ export default function Content() {
           faced."
         </em>{" "}
         The word limit is 350 words. You will pick four of the eight Personal
-        Insight Questions. This one — PIQ #4 — is one of the most commonly
+        Insight Questions. This one - PIQ #4 - is one of the most commonly
         chosen, and one of the most commonly mishandled.
       </p>
       <p>
-        At 350 words — roughly 20 to 26 sentences — you have enough room to
+        At 350 words - roughly 20 to 26 sentences - you have enough room to
         tell a real story and not enough room to tell two. The constraint
         matters. UC readers spend a few minutes on each PIQ. They are scanning
         for agency, specificity, and a clear link to academic growth. The
@@ -28,7 +28,7 @@ export default function Content() {
         UC admissions is holistic and campus-specific. Berkeley, UCLA, UCSD,
         and Davis all read the same four PIQs, but they weight them inside
         their own processes. The prompt itself does not change, and the
-        scoring criteria do not change. What changes is context — the
+        scoring criteria do not change. What changes is context - the
         strength of your other three PIQs, your Activities and Awards, your
         Additional Comments section. This essay carries its own weight
         regardless of campus. It is not a place to hedge.
@@ -37,7 +37,7 @@ export default function Content() {
         One more thing about the word count. UC is strict about 350.
         Readers do not reward essays that go over, and the online portal
         will not let you submit a PIQ longer than 350 words. The cap is a
-        ceiling, not a target — essays that land between 320 and 350 words
+        ceiling, not a target - essays that land between 320 and 350 words
         tend to be the most polished. Below 300 usually means the writer
         did not develop the "what I did" section enough. Above 340 with
         weak content usually means the writer padded. Aim for 340 to 350
@@ -55,9 +55,9 @@ export default function Content() {
       </p>
       <p>
         The most common failure mode at 350 words is the hybrid essay. A
-        writer spends 180 words on a barrier — a parent's illness, a school
-        without AP classes, a year of online school that went badly — and
-        then 170 words on an opportunity — a summer research program, a
+        writer spends 180 words on a barrier - a parent's illness, a school
+        without AP classes, a year of online school that went badly - and
+        then 170 words on an opportunity - a summer research program, a
         college course, an internship. The essay reads as two paragraphs
         glued together. Neither story lands. The barrier feels introductory.
         The opportunity feels like a resume line. Readers can tell when an
@@ -98,7 +98,7 @@ export default function Content() {
       <h2>What Counts as an Educational Opportunity</h2>
       <p>
         An educational opportunity is a specific program, course, mentorship,
-        or resource that changed how you learned — not a generic advantage. A
+        or resource that changed how you learned - not a generic advantage. A
         strong opportunity essay names something that is concrete enough to
         have a start date, an end date, and a particular teacher or structure.
       </p>
@@ -107,8 +107,8 @@ export default function Content() {
         and a named principal investigator, a dual-enrollment or community
         college course you took as a high schooler, a structured mentorship
         with a specific professional who met with you regularly, access to a
-        specialized library or lab — a university archive, a hospital
-        shadowing program, a maker space — an online community of serious
+        specialized library or lab - a university archive, a hospital
+        shadowing program, a maker space - an online community of serious
         learners like an advanced math forum or a specialized coding
         cohort, or a competition that required sustained preparation like
         Science Olympiad state team or a conservatory pre-college program.
@@ -118,7 +118,7 @@ export default function Content() {
         supportive parents," "taking a lot of AP classes," or "being in
         honors math since middle school." These are not opportunities you
         seized. They are conditions you were born into or defaults you
-        followed. The prompt asks how you took advantage of the opportunity —
+        followed. The prompt asks how you took advantage of the opportunity -
         the verb requires agency. If the opportunity would have happened to
         you regardless of anything you did, it is not the right subject for
         this essay.
@@ -140,13 +140,13 @@ export default function Content() {
         in it, the honors track is not your opportunity. If, on the other
         hand, you audited a graduate-level linguistics seminar at the
         nearest state university because your high school did not offer
-        anything past Spanish IV, that is an opportunity — and a strong
+        anything past Spanish IV, that is an opportunity - and a strong
         one, because the agency is unmistakable.
       </p>
 
       <h2>What Counts as an Educational Barrier</h2>
       <p>
-        An educational barrier is a sustained obstacle to your learning — not
+        An educational barrier is a sustained obstacle to your learning - not
         a one-time setback. A strong barrier essay names something that
         shaped your academic life over months or years, and shows how you
         responded with specific, sustained effort.
@@ -172,7 +172,7 @@ export default function Content() {
       </p>
       <p>
         One more distinction. A barrier is not the same as a hardship. This
-        prompt is specifically about educational barriers — obstacles to
+        prompt is specifically about educational barriers - obstacles to
         learning. A parent's job loss is a hardship. A parent's job loss
         that pulled you out of an after-school program you depended on for
         advanced coursework is an educational barrier. The link to learning
@@ -182,7 +182,7 @@ export default function Content() {
       <p>
         The subtler test is whether the barrier required academic
         problem-solving. A barrier essay should show you making learning
-        decisions under constraint — which textbook to use when your
+        decisions under constraint - which textbook to use when your
         school had none, how to prepare for an AP exam your school did not
         offer the class for, how to keep studying when your home was not
         quiet. If the reader cannot point to a specific academic decision
@@ -199,8 +199,8 @@ export default function Content() {
       <ul>
         <li>
           <strong>Agency.</strong> What did you specifically do? Passive
-          construction — "I was given the opportunity to," "I was fortunate
-          enough to" — signals low agency. The strongest essays use active
+          construction - "I was given the opportunity to," "I was fortunate
+          enough to" - signals low agency. The strongest essays use active
           verbs and take credit for specific choices.
         </li>
         <li>
@@ -219,7 +219,7 @@ export default function Content() {
           <strong>Honest assessment of impact.</strong> Overclaiming
           ("transformed my entire life") reads as false. Underclaiming ("it
           was okay") reads as flat. The strongest essays name a specific,
-          measured change — a new way of thinking, a new study habit, a new
+          measured change - a new way of thinking, a new study habit, a new
           field of interest.
         </li>
         <li>
@@ -248,7 +248,7 @@ export default function Content() {
           <strong>Name the opportunity or barrier with specificity (roughly
           80 words).</strong> Set the scene in two or three sentences. Name
           the program or the obstacle. Give dates. Locate it in your academic
-          life. Avoid exposition — no "ever since I was a child" openings. Go
+          life. Avoid exposition - no "ever since I was a child" openings. Go
           straight to the concrete situation.
         </li>
         <li>
@@ -261,8 +261,8 @@ export default function Content() {
         <li>
           <strong>Name what it produced (roughly 80 words).</strong> What
           grew, what changed, what shifted in how you approach learning?
-          Concrete outcomes — a paper you wrote, a class you placed into, a
-          way of studying you kept — are stronger than emotional outcomes. If
+          Concrete outcomes - a paper you wrote, a class you placed into, a
+          way of studying you kept - are stronger than emotional outcomes. If
           you include a feeling or insight, tie it to a behavior.
         </li>
         <li>
@@ -280,8 +280,8 @@ export default function Content() {
       </p>
       <p>
         One structural note about openings. UC readers are reading dozens
-        of PIQs in a session. A cold-open detail — a named program, a
-        named class, a named moment — is faster than a throat-clearing
+        of PIQs in a session. A cold-open detail - a named program, a
+        named class, a named moment - is faster than a throat-clearing
         sentence. "My mother was diagnosed with stage III lymphoma the
         week I started sophomore year" is a cold open. "Throughout my high
         school career, I have faced many challenges" is throat-clearing.
@@ -294,14 +294,14 @@ export default function Content() {
         Here is the shape of an essay that works. This is not a real
         applicant's PIQ, but it captures the specificity, the agency, and
         the absence of self-pity that the strongest versions share. This one
-        commits to the barrier lane — translating medical appointments for
+        commits to the barrier lane - translating medical appointments for
         a parent during a long illness.
       </p>
       <blockquote>
         "My mother was diagnosed with stage III lymphoma the week I started
         sophomore year. She spoke conversational English but could not
         follow an oncologist. For fourteen months, I sat next to her at
-        UCLA Medical Center every other Thursday and translated — first in
+        UCLA Medical Center every other Thursday and translated - first in
         broken Mandarin, then in the specific vocabulary I taught myself
         between appointments. I built a notebook of terms: lymph node,
         neutropenia, infusion, remission. I read the AJCC staging manual
@@ -314,13 +314,13 @@ export default function Content() {
         like that. What the appointments taught me was not resilience.
         Resilience is the word people use when they do not want to describe
         the specific skill. What I built was a way of reading technical
-        material under time pressure — skimming for the decision point,
+        material under time pressure - skimming for the decision point,
         ignoring the reassurance, asking the one question that changes the
         plan. I use it now when I read biology papers. I used it last month
         when I took a community-college statistics class and had to learn
         hypothesis testing in three weeks. My mother is in remission. I
-        still keep the notebook. I would do it again — the translating,
-        the skimming, the directness — because the habit it built is the
+        still keep the notebook. I would do it again - the translating,
+        the skimming, the directness - because the habit it built is the
         habit I will take to UC."
       </blockquote>
       <p>
@@ -363,7 +363,7 @@ export default function Content() {
         </li>
         <li>
           <strong>No agency.</strong> "I was chosen for," "I was given the
-          chance to," "I had the privilege of" — all three are flags.
+          chance to," "I had the privilege of" - all three are flags.
           Rewrite with active verbs. The prompt asks what you did.
         </li>
         <li>

@@ -38,7 +38,7 @@ export default function Content() {
         the abstract. They are asking what you will bring into the room.
       </p>
       <p>
-        Most applicants miss this. They write an identity essay — a paragraph announcing a
+        Most applicants miss this. They write an identity essay - a paragraph announcing a
         demographic category, a paragraph on a hardship or tradition, a paragraph about pride.
         The essay reads as a self-portrait. Admissions is asking how the lived experience
         translates into something a residential college campus will actually receive: a habit
@@ -94,7 +94,7 @@ export default function Content() {
         <li>
           <strong>Specificity that defeats the generic cultural essay.</strong> Readers see
           hundreds of variations on the same three or four topics. The differentiator is
-          always the concrete detail — the specific street, the specific dish, the specific
+          always the concrete detail - the specific street, the specific dish, the specific
           argument at a specific table. A reader finishing your essay should be able to
           describe the scene in their own words.
         </li>
@@ -177,13 +177,13 @@ export default function Content() {
         "My grandmother came from a village outside Monterrey and does not read English. For
         twelve years she has lived in our basement and I have translated her Tuesday doctor
         visits. The appointments take ninety minutes. I learned the medical vocabulary the
-        way other kids learned Spanish slang — in pieces, in waiting rooms, under fluorescent
+        way other kids learned Spanish slang - in pieces, in waiting rooms, under fluorescent
         light. What I did not expect was how much the translation was not linguistic. It was
         about whether to tell the doctor that my grandmother drinks a specific tea for her
         joints that she will not stop drinking regardless of what he says. It was about
         whether to translate his small talk as small talk or flatten it into the medical
         report she wants. I made those decisions every week, usually badly, for years. My
-        grandmother noticed. Last spring she started correcting me mid-sentence — not the
+        grandmother noticed. Last spring she started correcting me mid-sentence - not the
         Spanish, but the choice of what to pass through. She is teaching me to translate the
         person, not the words. I am a first-generation applicant, but that is not the part I
         think about at dinner. What I think about is the difference between a faithful
@@ -193,7 +193,7 @@ export default function Content() {
       </blockquote>
       <p>
         The essay works because it refuses the shortcuts of the genre. No food metaphor. No
-        two-worlds frame. The identity — first-generation — is named late, after the scene
+        two-worlds frame. The identity - first-generation - is named late, after the scene
         has already done the work. The writer describes a sustained practice rather than a
         single moment, and the practice is specific enough that no other applicant could have
         written it. The essay also clears the move from identity to contribution in its final
@@ -216,7 +216,7 @@ export default function Content() {
         <strong>Johns Hopkins, 350 words.</strong> The most generous length in the genre.
         Room for a scene, a turn, and an explicit "contribute" paragraph. You can afford one
         extended anecdote and one clear move from the anecdote to campus impact. The failure
-        mode is using the extra space for throat-clearing — broad opening paragraphs about
+        mode is using the extra space for throat-clearing - broad opening paragraphs about
         the meaning of identity before any specific material appears.
       </p>
       <p>
@@ -230,7 +230,7 @@ export default function Content() {
       <p>
         <strong>Duke optional, 250 words.</strong> At 250 words you cannot do the full arc.
         Pick one scene, write it tight, and let the implication do the work. The failure mode
-        at this length is compression into abstraction — essays that try to summarize a whole
+        at this length is compression into abstraction - essays that try to summarize a whole
         identity in fewer words than a Stanford roommate letter. Do not summarize. Choose a
         narrow practice and show it. Readers extrapolate.
       </p>
@@ -259,7 +259,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Stacking multiple identities.</strong> First-generation, queer, Asian,
-          caregiver, athlete, chess player — in one essay. Stacking signals the writer did
+          caregiver, athlete, chess player - in one essay. Stacking signals the writer did
           not trust any single thread. Pick one. The others will appear elsewhere in the
           application.
         </li>

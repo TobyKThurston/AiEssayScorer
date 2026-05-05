@@ -17,9 +17,9 @@ export default function Content() {
 
       <h2>What Barnard Is Actually Asking</h2>
       <p>
-        This prompt is the filter. Barnard is part of Columbia University —
+        This prompt is the filter. Barnard is part of Columbia University -
         you graduate with a Columbia degree, cross-register for Columbia
-        classes, and use Columbia's libraries — but Barnard is its own
+        classes, and use Columbia's libraries - but Barnard is its own
         independent women's college with its own faculty, curriculum, and
         mission.
       </p>
@@ -29,8 +29,8 @@ export default function Content() {
         because you see it as an easier route to Columbia?
       </p>
       <p>
-        An essay that ignores the women's college question — or treats it
-        as a box to check before listing Columbia resources — gets read
+        An essay that ignores the women's college question - or treats it
+        as a box to check before listing Columbia resources - gets read
         as the wrong fit. Fast.
       </p>
 
@@ -48,7 +48,7 @@ export default function Content() {
           <strong>"Why Barnard specifically?"</strong> There are other
           women's colleges. Why this one? The answer almost always
           involves New York, Columbia affiliation, and Barnard's specific
-          programs — but it has to be anchored in actual Barnard.
+          programs - but it has to be anchored in actual Barnard.
         </li>
       </ul>
 
@@ -56,7 +56,7 @@ export default function Content() {
       <ul>
         <li>
           <strong>The Nine Ways of Knowing.</strong> Barnard's general
-          education structure — Thinking Locally, Thinking through Global
+          education structure - Thinking Locally, Thinking through Global
           Inquiry, Thinking with Historical Perspective, and so on. The
           Nine Ways are distinct from Columbia's Core. Naming them
           correctly signals you've read Barnard's site, not Columbia's.
@@ -68,7 +68,7 @@ export default function Content() {
         </li>
         <li>
           <strong>The Athena Center for Leadership.</strong> Not
-          generic leadership programming — specifically the Athena
+          generic leadership programming - specifically the Athena
           Scholars Program, the Public Speaking Project, and the
           fellowships.
         </li>
@@ -80,7 +80,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Specific faculty you've actually read.</strong> Name
-          them. Not "I'd love to take a class with" — "I read X's work on
+          them. Not "I'd love to take a class with" - "I read X's work on
           Y and want to push on Z."
         </li>
         <li>
@@ -95,14 +95,14 @@ export default function Content() {
         classroom where the default assumption is that women are the
         primary interlocutors, not the occasional exception. I read Homa
         Zarghamee's work on behavioral economics and gender, and I want
-        to take her classes — not because she's a woman teaching
+        to take her classes - not because she's a woman teaching
         econ, but because her research is inside the questions I want to
         be inside. The Nine Ways of Knowing, especially Thinking
         Quantitatively and Empirically, is the structure I want to
         train inside. The Columbia cross-registration lets me add
         Barnard's economics department to Columbia's in the same
         semester, which no other women's college can offer. That
-        combination — Barnard's classroom, Columbia's catalog — is the
+        combination - Barnard's classroom, Columbia's catalog - is the
         reason this is my first choice, not a fallback."
       </blockquote>
       <p>
@@ -146,7 +146,7 @@ export default function Content() {
       <p>
         Ask yourself: if I removed every mention of Columbia from this
         essay, does it still stand up as a reason to attend Barnard? If
-        not, Barnard is not your first choice — it's your path to
+        not, Barnard is not your first choice - it's your path to
         Columbia. Readers can tell.
       </p>
       <p>

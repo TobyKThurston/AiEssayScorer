@@ -29,24 +29,24 @@ export default function Content() {
       </p>
       <ul>
         <li>
-          <strong>Arts & Sciences</strong> — the open curriculum and the
+          <strong>Arts & Sciences</strong> - the open curriculum and the
           largest school by enrollment.
         </li>
         <li>
-          <strong>Olin Business School</strong> — direct admission as a
+          <strong>Olin Business School</strong> - direct admission as a
           first-year, unlike many peer business programs.
         </li>
         <li>
-          <strong>Sam Fox School of Design & Visual Arts</strong> —
+          <strong>Sam Fox School of Design & Visual Arts</strong> -
           Architecture and Art as separate programs, portfolio required.
         </li>
         <li>
-          <strong>McKelvey School of Engineering</strong> — strong in
+          <strong>McKelvey School of Engineering</strong> - strong in
           biomedical and systems.
         </li>
         <li>
           <strong>Goldfarb School of Nursing at Barnes-Jewish College</strong>
-          {" "}— the direct-entry BSN track.
+          {" "}- the direct-entry BSN track.
         </li>
       </ul>
 
@@ -54,7 +54,7 @@ export default function Content() {
       <ul>
         <li>
           <strong>Cross-divisional majors.</strong> WashU makes it unusually
-          easy to combine schools — Architecture + Engineering, Business +
+          easy to combine schools - Architecture + Engineering, Business +
           Art, CS + Economics. Naming this structure signals you've read
           past the marketing page.
         </li>
@@ -80,7 +80,7 @@ export default function Content() {
         cross-divisional pathway to combine Linguistics with Computer
         Science at McKelvey. WashU's open curriculum in A&S means I can
         take the phonetics lab and the NLP sequence the same semester
-        without fighting a distribution requirement — a specific structural
+        without fighting a distribution requirement - a specific structural
         reason I'm not applying to a more rigid program."
       </blockquote>
       <p>
@@ -95,7 +95,7 @@ export default function Content() {
         <li>
           <strong>Not naming a school.</strong> WashU sees "I want to study
           at WashU" and moves on. Even a first-year undecided applicant
-          goes through Arts & Sciences — say so.
+          goes through Arts & Sciences - say so.
         </li>
         <li>
           <strong>"Midwest charm" as substance.</strong> Along with "close-knit

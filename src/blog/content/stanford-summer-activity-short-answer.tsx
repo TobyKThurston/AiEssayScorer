@@ -46,7 +46,7 @@ export default function Content() {
       <p>
         Stanford chose "two summers" on purpose. A single summer shows a
         moment. Two summers show a pattern. Admissions is not trying to find
-        out what your single best summer looked like — they already have your
+        out what your single best summer looked like - they already have your
         activities list for that. They are trying to see how you structure
         unstructured time when school is not telling you what to do. One
         summer is a data point. Two summers is behavior.
@@ -76,7 +76,7 @@ export default function Content() {
           <strong>Evidence of agency.</strong> Did you choose this summer, or
           did it happen to you? Admissions is watching for who made the
           decision. A program you applied to, a job you found, a project you
-          started, a relative you decided to help — all of these carry
+          started, a relative you decided to help - all of these carry
           signals of ownership. "My parents signed me up for" is a phrase
           that usually gets cut.
         </li>
@@ -94,7 +94,7 @@ export default function Content() {
           consecutive summers of the same research project show depth. A
           research summer followed by a restaurant summer shows range. What
           does not work is two summers that feel like a random list. There
-          has to be something — an idea, a thread, a piece of yourself —
+          has to be something - an idea, a thread, a piece of yourself -
           that connects them.
         </li>
         <li>
@@ -130,7 +130,7 @@ export default function Content() {
       <p>
         The applicants who report two pristine prestige summers are making a
         quiet mistake. They are telling admissions that their summers are
-        curated — that free time, for them, is another arena for credentials.
+        curated - that free time, for them, is another arena for credentials.
         Admissions has read thousands of those answers already. The answer
         that catches a reader off the page is the one where summer one is
         the research program and summer two is the pizza place, described
@@ -138,8 +138,8 @@ export default function Content() {
       </p>
       <p>
         This is also about honesty. If one of your real summers was a
-        domestic one — you stayed home, you worked a local job, you helped
-        family, you read a lot, you taught yourself something informally —
+        domestic one - you stayed home, you worked a local job, you helped
+        family, you read a lot, you taught yourself something informally -
         the worst move is hiding it. Stanford does not reward manufactured
         prestige over reported reality. Inventing a program you did not do,
         or ignoring a summer because it looks unimpressive, costs more than
@@ -212,7 +212,7 @@ export default function Content() {
         splitting pay with my sister to cover my grandmother's physical
         therapy co-pays. I also read, slowly, through every Muriel
         Spark novel our library had. Both summers were quieter than
-        they sound — long hours, one small task at a time. I think
+        they sound - long hours, one small task at a time. I think
         that is how I work best."
       </blockquote>
       <p>
@@ -261,13 +261,13 @@ export default function Content() {
           summers was spent at home working a local job, caring for
           family, or doing nothing particularly impressive, the move is
           to report it. Omitting it and writing only about the fancier
-          summer does not answer the prompt — it answers half of it.
+          summer does not answer the prompt - it answers half of it.
         </li>
         <li>
           <strong>Using both summers for the same program.</strong> You
           can write about the same project across two summers, but only
           if each summer had a distinct phase, role, or question. "I
-          did the same thing twice" is not a pattern — it is a loop.
+          did the same thing twice" is not a pattern - it is a loop.
           Show the difference between the first time and the second.
         </li>
         <li>
@@ -314,14 +314,14 @@ export default function Content() {
         account of your junior-year research summer, the summer prompt
         should not retell that story in miniature. Summarize it in one
         clean sentence, then spend the rest of the space on the other
-        summer — which is probably the one your application has not yet
+        summer - which is probably the one your application has not yet
         mentioned. The supplement is real estate, and repeating yourself
         wastes it.
       </p>
       <p>
         Coordinate before drafting. Lay out what each Stanford essay is
-        already carrying — a relationship, a project, a value, an
-        intellectual question, a voice — and ask which summer belongs in
+        already carrying - a relationship, a project, a value, an
+        intellectual question, a voice - and ask which summer belongs in
         which prompt. The summer answer almost always works best when it
         covers ground the other essays do not. If your activities list
         and Common App already establish the research, use the summer

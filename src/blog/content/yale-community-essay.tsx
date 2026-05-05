@@ -8,7 +8,7 @@ export default function Content() {
         Yale's supplement asks applicants to write two longer responses of up to 400 words each, choosing from a set of three prompts. One of those prompts reads: <em>"Reflect on your membership in a community to which you feel connected. Why is this community meaningful to you? You may define community however you like."</em>
       </p>
       <p>
-        That last sentence — <em>"You may define community however you like"</em> — is doing enormous work. Most applicants read it as a kindness, a signal that Yale is opening the door to any interpretation. That's not wrong, but it misses what the sentence is really testing. Yale is watching which definition you choose. The community you name, and the way you frame your membership in it, reveals more about you than the essay itself will.
+        That last sentence - <em>"You may define community however you like"</em> - is doing enormous work. Most applicants read it as a kindness, a signal that Yale is opening the door to any interpretation. That's not wrong, but it misses what the sentence is really testing. Yale is watching which definition you choose. The community you name, and the way you frame your membership in it, reveals more about you than the essay itself will.
       </p>
       <p>
         The Yale community essay is not a diversity essay. It is not a background essay. It is a 400-word portrait of who you are inside a specific group, and whether you are the kind of person who can describe a community without defaulting to cliché.
@@ -34,8 +34,8 @@ export default function Content() {
         <li><strong>A hobby community defined by a shared practice rather than shared identity.</strong> Distance runners, a specific online forum, a knitting circle, a chess club, a fan community for a specific musician. These work when you can describe what the community actually argues about, not just what it celebrates.</li>
         <li><strong>A workplace or volunteer community where you were the youngest or the outsider.</strong> What you learned from being the person who had to listen before speaking.</li>
         <li><strong>A religious or cultural community that you have a complicated relationship with.</strong> Not "I love my faith and it shaped me." Something like: the specific tension between what the community expects of you and what you expect of yourself, and how you hold both.</li>
-        <li><strong>A community of one kind of thinker — the debaters, the math team, the people who stay after class to argue about a problem.</strong> This works when you can describe the texture of the arguments, not just the fact that they happened.</li>
-        <li><strong>A community built around care — a sibling, a grandparent, a neighbor, a student you tutored — where the "community" is two people and one shared commitment.</strong> These are often the strongest community essays because they force radical specificity.</li>
+        <li><strong>A community of one kind of thinker - the debaters, the math team, the people who stay after class to argue about a problem.</strong> This works when you can describe the texture of the arguments, not just the fact that they happened.</li>
+        <li><strong>A community built around care - a sibling, a grandparent, a neighbor, a student you tutored - where the "community" is two people and one shared commitment.</strong> These are often the strongest community essays because they force radical specificity.</li>
       </ul>
       <p>
         Communities that tend not to work: "the human race," "my generation," "my school," and any community so broad that the membership tells Yale nothing. The broader the community, the harder it is to say something specific about being inside it.
@@ -72,7 +72,7 @@ export default function Content() {
       </p>
       <ul>
         <li><strong>At least one honest admission of tension.</strong> Not conflict for drama. An acknowledgment that membership in this community involves trade-offs, hard moments, or questions the writer hasn't fully resolved. Essays that present a community as uncomplicatedly wonderful read as performances.</li>
-        <li><strong>Evidence of close attention to other people.</strong> The best community essays describe specific people inside the community — a grandmother, a teammate, a coworker, a younger student — with enough detail that they become real to the reader. Yale rewards writers who notice people.</li>
+        <li><strong>Evidence of close attention to other people.</strong> The best community essays describe specific people inside the community - a grandmother, a teammate, a coworker, a younger student - with enough detail that they become real to the reader. Yale rewards writers who notice people.</li>
         <li><strong>A definition of "community" that has been earned through the essay itself.</strong> By the end of the 400 words, the reader should understand the writer's private definition of what community means to them, and that definition should be specific enough that it couldn't come from anyone else's life.</li>
       </ul>
 
@@ -100,7 +100,7 @@ export default function Content() {
 
       <h2>How the Community Essay Fits Into the Full Yale Supplement</h2>
       <p>
-        Yale's supplement reads as a whole. Your short takes, including the <Link href="/blog/yale-teach-a-course-essay" className="text-oxblood hover:underline">course title prompt</Link>, reveal your intellectual range. Your <Link href="/blog/yale-why-yale-essay-125-words" className="text-oxblood hover:underline">Why Yale essay</Link> reveals your fit with Yale's academic structure. The 400-word longer essays — including the community essay — are where Yale gets a fuller portrait of who you are outside classrooms.
+        Yale's supplement reads as a whole. Your short takes, including the <Link href="/blog/yale-teach-a-course-essay" className="text-oxblood hover:underline">course title prompt</Link>, reveal your intellectual range. Your <Link href="/blog/yale-why-yale-essay-125-words" className="text-oxblood hover:underline">Why Yale essay</Link> reveals your fit with Yale's academic structure. The 400-word longer essays - including the community essay - are where Yale gets a fuller portrait of who you are outside classrooms.
       </p>
       <p>
         The community essay should not duplicate your Common App personal statement. If the personal statement gives Yale one vertical slice of your life, the community essay should give them a different vertical slice. Together, they should add up to a person Yale can see clearly, not two different versions of the same story.

@@ -339,7 +339,7 @@ export default function ToolsIndex() {
             By essay prompt
           </h2>
           <p className="text-sm text-pencil">
-            Hook generators (and deconstructors for Common App) — pre-tuned to each prompt.
+            Hook generators (and deconstructors for Common App) - pre-tuned to each prompt.
           </p>
         </div>
         <div className="space-y-8">
@@ -385,7 +385,7 @@ export default function ToolsIndex() {
         </div>
       </section>
 
-      {/* By school — one row per school, Why + Scorer on same line */}
+      {/* By school - one row per school, Why + Scorer on same line */}
       <section className="mb-16">
         <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
           <h2

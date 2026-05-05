@@ -25,7 +25,7 @@ export default function Content() {
       <p>
         At 150 words you have roughly 7 to 10 sentences. That is enough to
         commit to one idea and almost never enough to list three. The
-        constraint is doing the work for you — it is forcing you to pick.
+        constraint is doing the work for you - it is forcing you to pick.
       </p>
 
       <h2>Why Notre Dame Is a Different Kind of "Why" Essay</h2>
@@ -33,7 +33,7 @@ export default function Content() {
         The load-bearing phrase in this prompt is{" "}
         <strong>"stand out from other institutions."</strong> Notre Dame is
         not asking what excites you about attending a good college. They are
-        asking what pulls you to Notre Dame <em>specifically</em> — what
+        asking what pulls you to Notre Dame <em>specifically</em> - what
         would be missing if you went somewhere else. That framing is not
         accidental. Notre Dame competes for cross-admits with Duke,
         Georgetown, Boston College, Vanderbilt, and the Ivies, and the
@@ -52,7 +52,7 @@ export default function Content() {
       </p>
       <p>
         Notre Dame was founded in 1842 by the Congregation of Holy Cross. It
-        is Catholic in a specifically Holy Cross tradition — distinct from
+        is Catholic in a specifically Holy Cross tradition - distinct from
         Jesuit institutions like Georgetown or Boston College, distinct from
         secular-with-a-chapel institutions like Duke. That distinction is
         part of what the prompt is inviting you to engage with. You do not
@@ -79,7 +79,7 @@ export default function Content() {
         <li>
           <strong>Specific fit with how Notre Dame is structured.</strong>{" "}
           The First Year of Studies, the five undergraduate colleges, the
-          residence-hall system, the Center for Social Concerns — these are
+          residence-hall system, the Center for Social Concerns - these are
           not decorations. They shape the four-year experience. Naming one
           of them with understanding signals you know where you would
           actually be living.
@@ -125,7 +125,7 @@ export default function Content() {
         Engagement is not conversion. Engagement is not pretending. Engagement
         means you have thought about what it means to attend a university
         where two theology and two philosophy courses are required of every
-        student, where the Grotto — a replica of Lourdes — is a place
+        student, where the Grotto - a replica of Lourdes - is a place
         students actually go at midnight during finals week, and where the
         Basilica of the Sacred Heart sits thirty seconds from most academic
         buildings. A non-Catholic applicant who writes "I am drawn to a
@@ -139,7 +139,7 @@ export default function Content() {
         applicants sometimes assume that naming their faith is enough. It is
         not. Notre Dame knows many Catholic students apply. The essay still
         has to show specific fit with Notre Dame's version of Catholic
-        intellectual life — the Holy Cross tradition, the particular rhythm
+        intellectual life - the Holy Cross tradition, the particular rhythm
         of a residential Catholic university, the intellectual seriousness of
         required theology. Faith without specificity reads the same as
         rankings without specificity.
@@ -156,10 +156,10 @@ export default function Content() {
             One specific thing Notre Dame offers that other schools don't
             (roughly 60 words).
           </strong>{" "}
-          Pick one. Not three. Not a list. One feature — the dorm system,
+          Pick one. Not three. Not a list. One feature - the dorm system,
           First Year of Studies, the Center for Social Concerns, the
           Kellogg Institute, a named college, the theology requirement, the
-          Grotto, the football-Saturday-Mass-on-Sunday rhythm — and describe
+          Grotto, the football-Saturday-Mass-on-Sunday rhythm - and describe
           it with specificity. The specificity is what separates your essay
           from the applicant who named the same thing generically.
         </li>
@@ -180,7 +180,7 @@ export default function Content() {
             (roughly 30 words).
           </strong>{" "}
           The last two or three sentences should land somewhere that only a
-          Notre Dame essay could land — a reference to the institution's
+          Notre Dame essay could land - a reference to the institution's
           self-conception, a moment that shows you have read something
           beyond the brochure, a line that places you inside the four-year
           experience rather than outside it looking in.
@@ -201,7 +201,7 @@ export default function Content() {
         commitment the strongest versions share:
       </p>
       <blockquote>
-        "What pulls me to Notre Dame is the First Year of Studies — the
+        "What pulls me to Notre Dame is the First Year of Studies - the
         idea that every freshman starts in the same college before
         declaring. I applied to five schools where I had to pick a major at
         seventeen, and one where I didn't. I want the year where I can sit
@@ -215,7 +215,7 @@ export default function Content() {
       </blockquote>
       <p>
         That example works because it commits. It names one specific Notre
-        Dame feature — First Year of Studies — and then names a second that
+        Dame feature - First Year of Studies - and then names a second that
         deepens the first (the residence-hall system, the Grotto). It
         positions the writer honestly with respect to the Catholic identity
         ("I am not Catholic") rather than avoiding the question. And it
@@ -239,7 +239,7 @@ export default function Content() {
           <strong>Writing a generic "great school" essay.</strong> If your
           essay could be submitted to Duke, Vanderbilt, or Georgetown with
           the school name swapped, it is not a Why Notre Dame essay. The
-          prompt specifically asks what makes Notre Dame stand out — an
+          prompt specifically asks what makes Notre Dame stand out - an
           essay that fails to distinguish the school from its peers is
           failing the prompt.
         </li>
@@ -308,7 +308,7 @@ export default function Content() {
       </p>
       <p>
         If your longer essay is about a community you belong to, your Why
-        Notre Dame should not also be about community — pick a specific
+        Notre Dame should not also be about community - pick a specific
         academic or institutional feature instead. If your longer essay is
         about an academic passion, the Why Notre Dame can lean into
         community and fit. The short-answer set covers quick personal and
@@ -319,7 +319,7 @@ export default function Content() {
       <p>
         This matters more at Notre Dame than at schools with only one
         supplement because the reader is building a composite picture from
-        three separate documents. Duplication is not just boring — it is
+        three separate documents. Duplication is not just boring - it is
         wasted real estate in an application where every word is scarce.
         Before you draft the 150-word essay, know what your longer essay
         is doing. Then write the 150 to fill in what the longer essay
@@ -328,7 +328,7 @@ export default function Content() {
       <p>
         One specific coordination note: if you are Catholic and your
         longer essay engages with your faith journey, the Why Notre Dame
-        essay does not need to also foreground Catholic identity — it can
+        essay does not need to also foreground Catholic identity - it can
         use its 150 words on academic or residential specifics instead. If
         you are not Catholic and your longer essay does not touch
         religious identity at all, the Why Notre Dame essay is the place
@@ -344,17 +344,17 @@ export default function Content() {
         </Link>{" "}
         to check whether the essay reads as Notre Dame-specific rather than
         generic. For the broader framework that applies across every short
-        Why essay — how admissions reads fit, what specificity actually
-        means, and how to avoid the generic trap — read our{" "}
+        Why essay - how admissions reads fit, what specificity actually
+        means, and how to avoid the generic trap - read our{" "}
         <Link
           href="/blog/why-this-college-essay"
           className="text-oxblood hover:underline"
         >
           Why This College essay guide
         </Link>
-        . And if you are also applying to Georgetown — the other
+        . And if you are also applying to Georgetown - the other
         Catholic-identity supplement in the top tier, with a very different
-        Jesuit tradition — our{" "}
+        Jesuit tradition - our{" "}
         <Link
           href="/blog/georgetown-essay-prompts-guide"
           className="text-oxblood hover:underline"

@@ -29,9 +29,9 @@ export default function Content() {
         650 words is a lot of space. It is long enough to be lazy in and long
         enough to be genuinely substantive in. Most applicants treat it as a
         longer version of a generic "Why Cornell" and fail. The stronger move
-        is to treat it as what it actually is — a fit essay for a specific
+        is to treat it as what it actually is - a fit essay for a specific
         land-grant agricultural and life sciences college inside a larger
-        university — and let that framing do most of the work.
+        university - and let that framing do most of the work.
       </p>
 
       <h2>Why CALS Reads This Prompt Differently From Arts &amp; Sciences</h2>
@@ -73,7 +73,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Applied, field-facing curiosity.</strong> CALS is
-          structurally oriented toward applied life sciences — work that
+          structurally oriented toward applied life sciences - work that
           touches farms, ecosystems, labs, food systems, policy, and
           industry. The strongest essays show a mind that wants to do
           something with its knowledge, not just learn it.
@@ -86,7 +86,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Evidence of prior engagement.</strong> What have you
-          actually done in the space already — a job, a research
+          actually done in the space already - a job, a research
           internship, a farm summer, a lab stint, a club, a community
           project, a sustained independent obsession? Claims without
           evidence sound rehearsed.
@@ -99,7 +99,7 @@ export default function Content() {
         </li>
         <li>
           <strong>A forward trajectory.</strong> Where is this going? Not a
-          locked-in career plan, but a direction — a problem you want to
+          locked-in career plan, but a direction - a problem you want to
           work on, a field you want to enter, an impact you want to have.
           CALS is unusually comfortable with applicants who name goals.
         </li>
@@ -113,8 +113,8 @@ export default function Content() {
         universities serve their states through agricultural, scientific, and
         practical education, and that they extend that knowledge beyond the
         campus. CALS is the college at Cornell that most directly inherits
-        this mandate. It is paired with a statewide extension system —{" "}
-        <strong>Cornell Cooperative Extension (CCE)</strong> — that does real
+        this mandate. It is paired with a statewide extension system -{" "}
+        <strong>Cornell Cooperative Extension (CCE)</strong> - that does real
         work in every county of New York on agriculture, nutrition, youth
         development, and environmental science.
       </p>
@@ -135,7 +135,7 @@ export default function Content() {
         tradition, but it should be written by someone who gets it. That
         means acknowledging, somewhere in the essay, that applied research,
         extension, field work, or real-world problem-solving is part of what
-        draws you — not just the intellectual content of your major.
+        draws you - not just the intellectual content of your major.
       </p>
 
       <h2>The Structure That Works at 650 Words</h2>
@@ -144,7 +144,7 @@ export default function Content() {
           <strong>The specific origin experience (around 150 words).</strong>{" "}
           Open with a concrete moment, project, job, or encounter that pulled
           you toward the major. Not "I have always loved animals." An actual
-          scene — the summer on the dairy, the lab rotation, the nutrition
+          scene - the summer on the dairy, the lab rotation, the nutrition
           clinic, the market, the policy internship, the research project
           that did not work. The job of this section is to convince the
           reader that your interest has a history. The failure mode is
@@ -159,7 +159,7 @@ export default function Content() {
           This is the load-bearing block. Name the major. Explain what draws
           you to that exact major rather than the adjacent option. Then name
           two or three specific CALS resources that make CALS the right
-          place for it — a research program, an extension tie, a study-away
+          place for it - a research program, an extension tie, a study-away
           option, the dairy, Cornell Cooperative Extension, the Atkinson
           Center for Sustainability, the Dyson School's structure, the
           Shoals Marine Lab, the Urban Semester, the Lab and Student
@@ -171,7 +171,7 @@ export default function Content() {
           <strong>The goal or impact frame (around 150 words).</strong>{" "}
           Where does this go? Name the problem, field, or question you
           actually want to work on. CALS readers are comfortable with
-          applicants who say "I want to work on X" — far more so than Arts
+          applicants who say "I want to work on X" - far more so than Arts
           and Sciences, which tolerates more diffuse intellectual
           statements. The failure mode is vague aspirational language ("I
           want to make the world a better place") or the opposite, a
@@ -182,7 +182,7 @@ export default function Content() {
             A closing beat connecting major to CALS mission (around 100
             words).
           </strong>{" "}
-          Tie your intended work to the college's reason for existing —
+          Tie your intended work to the college's reason for existing -
           applied life sciences, land-grant commitment, field engagement.
           This does not have to be ornate. A short paragraph that positions
           your goals as continuous with CALS's mission is enough. The
@@ -195,7 +195,7 @@ export default function Content() {
       <p>
         The following is a fictional example written to the 650-word limit.
         It is not a real applicant's essay, but it demonstrates the moves a
-        strong CALS supplement makes — a concrete origin, a named major, two
+        strong CALS supplement makes - a concrete origin, a named major, two
         specific CALS resources, a forward trajectory, and a closing beat
         that reads the college correctly.
       </p>
@@ -212,7 +212,7 @@ export default function Content() {
       </blockquote>
       <blockquote>
         I want to study Animal Science at Cornell CALS because the major
-        sits exactly where my interests actually live — the intersection of
+        sits exactly where my interests actually live - the intersection of
         veterinary-adjacent biology, livestock health, and production
         systems. I am not applying to be a pre-vet in the abstract. I am
         applying because I want to work on the specific problems dairies
@@ -227,7 +227,7 @@ export default function Content() {
         where I want to test whether I actually belong in research. And
         Cornell Cooperative Extension, with its statewide footprint in
         every New York county, means the applied side of the field is not
-        theoretical — I can work on questions that farmers in the Finger
+        theoretical - I can work on questions that farmers in the Finger
         Lakes or the North Country are asking right now.
       </blockquote>
       <blockquote>
@@ -242,8 +242,8 @@ export default function Content() {
       </blockquote>
       <blockquote>
         That is what draws me to CALS specifically. The land-grant mission
-        — teaching, research, and extension directed at the people actually
-        doing the work — is not a line in a brochure to me. It is a
+        - teaching, research, and extension directed at the people actually
+        doing the work - is not a line in a brochure to me. It is a
         description of the career I want to have. I would rather train at
         a college that considers the dairy in Harford and the laboratory in
         Ithaca parts of the same project than at one that treats the field
@@ -255,8 +255,8 @@ export default function Content() {
         The opening gives a concrete origin, not an abstract interest. The
         second paragraph names the exact major (Animal Science), distinguishes
         it from the adjacent pre-vet framing, and points to three specific
-        CALS resources — the teaching and research dairy, the Lab and Student
-        Research Program, and Cornell Cooperative Extension — each tied to
+        CALS resources - the teaching and research dairy, the Lab and Student
+        Research Program, and Cornell Cooperative Extension - each tied to
         the work the applicant actually wants to do. The third paragraph
         names a direction without locking in a career. The closing connects
         the major to the college's land-grant mission in a way that sounds
@@ -308,7 +308,7 @@ export default function Content() {
           If your essay could be about studying Biology at a pure research
           university, CALS is the wrong college. The essay should show some
           pull toward application, fieldwork, extension, industry, or
-          policy — even if your specific major is lab-heavy.
+          policy - even if your specific major is lab-heavy.
         </li>
         <li>
           <strong>Treating CALS as a pre-vet detour.</strong>{" "}
@@ -334,7 +334,7 @@ export default function Content() {
 
       <h2>How This Essay Coordinates With the Rest of Your Cornell Application</h2>
       <p>
-        Every Cornell applicant writes exactly one college-specific essay —
+        Every Cornell applicant writes exactly one college-specific essay -
         the essay matching the college they applied to. Your Common App
         personal statement carries the identity, values, and voice work.
         Your activities list and honors carry the evidence. The CALS
@@ -347,7 +347,7 @@ export default function Content() {
         That means the essay should not duplicate what your Common App is
         already doing. If your personal statement is about your
         grandmother's farm and the way it shaped your commitment to
-        agriculture, your CALS essay should not re-tell that story — it
+        agriculture, your CALS essay should not re-tell that story - it
         should pick up where the personal statement ends and focus on the
         major, the college, and the work you intend to do. Coordinate
         before drafting. The 650 words are too valuable to spend on

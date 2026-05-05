@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Design tokens — Oxblood on Ivory editorial palette.
+/* Design tokens - Oxblood on Ivory editorial palette.
    Tailwind v4 reads @theme variables directly to generate utility classes
    (e.g. --color-oxblood → text-oxblood / bg-oxblood / border-oxblood).
 */
@@ -172,7 +172,7 @@
   .btn-ghost:hover { border-color: var(--color-ink); }
 }
 
-/* Blog prose overrides — editorial style */
+/* Blog prose overrides - editorial style */
 .prose {
   color: var(--color-ink-2);
   font-size: 17px;

@@ -28,7 +28,7 @@ export default function Content() {
       </p>
       <p>
         Ten answers at 50 words each is <strong>500 words of real estate</strong>{" "}
-        — more than a single long essay. Stanford reads the ten as a set,
+        - more than a single long essay. Stanford reads the ten as a set,
         looking for <strong>coherence plus surprise</strong>. A generic set
         of short takes can sink an application with a strong long essay.
       </p>
@@ -76,7 +76,7 @@ export default function Content() {
           came to mind.
         </li>
         <li>
-          Do: Something small and genuinely contested — "whether cilantro
+          Do: Something small and genuinely contested - "whether cilantro
           belongs in pho," "Kendrick vs. Drake," "the optimal length of a
           sermon."
         </li>
@@ -108,7 +108,7 @@ export default function Content() {
           Too rehearsed.
         </li>
         <li>
-          Do: A small, specific moment — "the first rehearsal of{" "}
+          Do: A small, specific moment - "the first rehearsal of{" "}
           <em>A Love Supreme</em>," "the night before the Scopes trial
           verdict," "my grandmother landing at JFK in 1968."
         </li>
@@ -160,7 +160,7 @@ export default function Content() {
       <p>
         After drafting all ten, print them on one page and read them as a
         block. Ask: could a reader sketch a single, specific person from
-        these ten answers — someone they could pick out of a lunchroom? If
+        these ten answers - someone they could pick out of a lunchroom? If
         yes, you're done. If the answers could belong to any high-
         achieving senior, rewrite the three weakest.
       </p>

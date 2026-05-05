@@ -11,19 +11,19 @@ export default function Content() {
       <ul>
         <li>
           <strong>"What is a new skill you would like to learn in college?"</strong>{" "}
-          — 50 words.
+          - 50 words.
         </li>
         <li>
-          <strong>"What brings you joy?"</strong> — 50 words.
+          <strong>"What brings you joy?"</strong> - 50 words.
         </li>
         <li>
           <strong>"What song represents the soundtrack of your life at this moment?"</strong>{" "}
-          — 50 words.
+          - 50 words.
         </li>
       </ul>
       <p>
         Three prompts. Fifty words each. One hundred fifty words total to do
-        a job that the rest of the application cannot do — show admissions
+        a job that the rest of the application cannot do - show admissions
         your voice at a sentence level, your taste, and the specific texture
         of your everyday life. These are the most undervalued lines on the
         Princeton application.
@@ -40,7 +40,7 @@ export default function Content() {
       <p>
         Writers trained on the Common App habit of arc-building will instinctively
         try to cram a beginning, middle, and end into 50 words. The result
-        is compressed to the point of parody — three stock sentences that
+        is compressed to the point of parody - three stock sentences that
         cover the required moves and commit to none of them. The stronger
         move is to drop the arc entirely. Pick the detail. Name it. Let
         one sentence do the work of voice, and let another do the work of
@@ -69,7 +69,7 @@ export default function Content() {
           audible within 10 to 15 words if it is there at all.
         </li>
         <li>
-          <strong>Specificity — the exact skill, the exact word, the
+          <strong>Specificity - the exact skill, the exact word, the
           exact song.</strong> "A language" is dead. "Finnish, so I can
           read my great-grandfather's letters" is alive. The specific
           choice is the answer. Everything around it is just framing.
@@ -95,8 +95,8 @@ export default function Content() {
         <li>
           <strong>How the three answers read together.</strong>{" "}
           Princeton readers see your three short takes in one scroll.
-          They form a set. A coherent set — three answers that feel like
-          they came from the same person — is doing more work than any
+          They form a set. A coherent set - three answers that feel like
+          they came from the same person - is doing more work than any
           single clever line.
         </li>
       </ul>
@@ -105,7 +105,7 @@ export default function Content() {
       <p>
         Fifty words about a skill you want to learn in college. The
         failure modes here are predictable. Applicants reach for prestige
-        skills — Mandarin, coding, public speaking, leadership — because
+        skills - Mandarin, coding, public speaking, leadership - because
         they sound like the kind of thing admissions wants to hear.
         Those answers read as resume extensions, not as genuine
         curiosity. Admissions is not picking a major. They are reading
@@ -147,7 +147,7 @@ export default function Content() {
       <p>
         Pick one thing. A food, a place, a time of day, a recurring
         small event. Describe it with enough detail that a reader
-        could picture it. Resist the urge to explain why it matters —
+        could picture it. Resist the urge to explain why it matters -
         at 50 words, the detail is the explanation.
       </p>
       <blockquote>
@@ -170,7 +170,7 @@ export default function Content() {
       <h2>The "Soundtrack" Prompt: Song Choice as Signal</h2>
       <p>
         The song matters less than the why. Admissions is not
-        evaluating your taste on its own terms — they are not judging
+        evaluating your taste on its own terms - they are not judging
         you for picking a pop song over a symphony. They are reading
         to see whether you can say something specific about why a
         particular song is attached to a particular moment in your
@@ -178,7 +178,7 @@ export default function Content() {
       </p>
       <p>
         "Taylor Swift, All Too Well" with no context is wasted. So is
-        the reverse — picking a famous classical piece to signal
+        the reverse - picking a famous classical piece to signal
         seriousness without explaining the attachment. A song tied to
         a specific scene, a specific person, or a specific feeling you
         have been carrying around this year is the version that works.
@@ -195,7 +195,7 @@ export default function Content() {
       <p>
         That example is 48 words. The song choice is specific and
         slightly unusual, which is already doing work. The scene is
-        concrete — the car, the cross-country drive, the bad singing.
+        concrete - the car, the cross-country drive, the bad singing.
         The reveal is quiet and earned: the applicant did not
         appreciate the ritual at the time, and now, at the edge of
         leaving, does. The song is not the subject. The ending of
@@ -213,14 +213,14 @@ export default function Content() {
         Cohere on voice. If the skill answer sounds like a careful
         college applicant and the soundtrack answer sounds like a
         teenager texting a friend, the reader notices the seam. Pick
-        one voice — closer to the texting-a-friend end, honestly —
+        one voice - closer to the texting-a-friend end, honestly -
         and carry it across all three.
       </p>
       <p>
         Cohere on register. If your skill answer is "learn to play
         the banjo," your song probably should not be a Mahler
         symphony, and your joy probably sits near the domestic side
-        of the spectrum — a porch, a grandmother, a specific
+        of the spectrum - a porch, a grandmother, a specific
         afternoon. If your skill is something precise and technical,
         your joy and your song can lean that way too. The three
         answers should feel like they came from the same interior
@@ -228,7 +228,7 @@ export default function Content() {
       </p>
       <p>
         Cohere on detail. Each answer should contain at least one
-        physical, specific detail — an object, a place, a sound, a
+        physical, specific detail - an object, a place, a sound, a
         food. Three abstract answers read as a wall. Three grounded
         answers read as a room.
       </p>
@@ -296,7 +296,7 @@ export default function Content() {
 
       <h2>How the Short Takes Coordinate With the Princeton Why and Joy Essays</h2>
       <p>
-        Princeton's supplement includes longer essays — notably the
+        Princeton's supplement includes longer essays - notably the
         Why Princeton response and, in some years, a longer "What
         brings you joy" prompt. The short takes do a different job
         than those essays. The long essays show depth. The short
@@ -306,7 +306,7 @@ export default function Content() {
       <p>
         Do not duplicate topics. If the longer essay is about music,
         the short-take song should come from a different corner of
-        your life — the car ride with your mother, not the orchestra
+        your life - the car ride with your mother, not the orchestra
         pit. If the Why Princeton essay talks about language study,
         the new-skill short take should not also be a language. The
         application is a budget of reveals. Spend each line on
@@ -314,7 +314,7 @@ export default function Content() {
       </p>
       <p>
         Coordinate tone. The long essays can afford slower, more
-        developed sentences. The short takes should feel quicker —
+        developed sentences. The short takes should feel quicker -
         closer to how you talk, looser at the seams, more willing to
         commit to a single detail and stop. A reader moving from a
         200-word Why Princeton paragraph into a 50-word short take

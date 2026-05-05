@@ -59,7 +59,7 @@ export default function Content() {
       </p>
       <ol>
         <li>
-          <strong>The issue itself — specific.</strong> "Climate change" is
+          <strong>The issue itself - specific.</strong> "Climate change" is
           not an issue at 500 words. Neither is "global inequality" or
           "migration." These are categories. Pick a specific aspect:
           adaptation financing for small island states, the governance gap
@@ -69,7 +69,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Why it matters.</strong> Not moral exhortation. An
-          argument. Name the stakes concretely — who is affected, at
+          argument. Name the stakes concretely - who is affected, at
           what scale, over what time horizon. "Millions will suffer"
           could appear in any essay. "Without concessional financing,
           the Marshall Islands becomes uninhabitable within two
@@ -77,8 +77,8 @@ export default function Content() {
         </li>
         <li>
           <strong>What should be done.</strong> This is the test of the
-          essay. Strong responses propose something specific — a policy,
-          an institutional reform, a financing structure — and
+          essay. Strong responses propose something specific - a policy,
+          an institutional reform, a financing structure - and
           acknowledge tradeoffs. "International cooperation" and "greater
           awareness" are placeholders, not solutions. SFS wants to see
           you can think at the level of actual policy, even if you are
@@ -86,13 +86,13 @@ export default function Content() {
         </li>
         <li>
           <strong>Your stake.</strong> Why this issue and not another? A
-          sentence or two is enough — a research project, a family
+          sentence or two is enough - a research project, a family
           connection, a summer on a related campaign.
         </li>
       </ol>
       <p>
         Anchor the essay in SFS resources. The Walsh School has a distinct
-        culture — case-based proseminars, a language requirement, regional
+        culture - case-based proseminars, a language requirement, regional
         concentrations, the Berkley Center for Religion, Peace, and World
         Affairs, and the Master of Science in Foreign Service that shapes
         the undergraduate faculty. Name at least one resource you would
@@ -107,7 +107,7 @@ export default function Content() {
         decomposing in slow motion. I spent last summer reading WTO panel
         reports for a research project on developing-country litigants,
         and what struck me was how much the system protects small
-        economies — the exact economies now left without recourse. At SFS,
+        economies - the exact economies now left without recourse. At SFS,
         I would want to work on this through the International Political
         Economy concentration."
       </blockquote>
@@ -127,7 +127,7 @@ export default function Content() {
       </p>
       <ol>
         <li>
-          <strong>Your motivation — specific.</strong> "I love business"
+          <strong>Your motivation - specific.</strong> "I love business"
           and "I want to be an entrepreneur" are categories, not
           motivations. A real motivation points to a concrete experience:
           a small business you helped run, a nonprofit you started, an
@@ -136,7 +136,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Why McDonough specifically.</strong> McDonough's
-          positioning — ethical, analytical, financial, global — is not
+          positioning - ethical, analytical, financial, global - is not
           accidental. D.C. shapes the policy-adjacent business work
           students do. The Jesuit identity is where the ethical framing
           comes from. Engage at least one of those four perspectives
@@ -156,7 +156,7 @@ export default function Content() {
         Wednesday night I sit at the back booth with my father and go
         through the week's P&L, the vendor invoices, and whatever small
         crisis is happening with payroll. What started as a way to help
-        him has turned into the thing I most want to study — how small
+        him has turned into the thing I most want to study - how small
         businesses survive margin compression, what the economics of
         family-run food service actually look like, and why so many
         immigrant businesses like ours lack the financial tooling that
@@ -185,7 +185,7 @@ export default function Content() {
           taught you about health care as a field.
         </li>
         <li>
-          <strong>Fit with NHS — the specific program.</strong> NHS
+          <strong>Fit with NHS - the specific program.</strong> NHS
           contains distinct programs: Nursing, Health Care Management and
           Policy, Human Science, and Global Health. These are not
           interchangeable. Name the program and the reason. The reason
@@ -209,7 +209,7 @@ export default function Content() {
         to fix the stove that made it harder to cook the food her
         endocrinologist kept recommending. I grew up watching a chronic
         condition get managed by everything except medicine. That is why I
-        want to study at NHS and not at a pre-med program somewhere else —
+        want to study at NHS and not at a pre-med program somewhere else -
         the Health Care Management and Policy track, paired with the
         O'Neill Institute, treats health the way my grandmother actually
         experienced it."
@@ -226,7 +226,7 @@ export default function Content() {
         <li>
           <strong>What led you to Georgetown College specifically.</strong>{" "}
           Not Georgetown. The College. The liberal arts home at a Jesuit
-          university is a specific intellectual posture — broad
+          university is a specific intellectual posture - broad
           requirements, a two-course theology sequence, a two-course
           philosophy sequence, and a culture where humanities and social
           sciences sit in genuine dialogue. A strong answer shows you
@@ -243,8 +243,8 @@ export default function Content() {
         </li>
         <li>
           <strong>The Jesuit and cura personalis angle.</strong> Georgetown
-          was founded in 1789 by Catholic Jesuits. Cura personalis — care
-          of the whole person — is the language the university uses to
+          was founded in 1789 by Catholic Jesuits. Cura personalis - care
+          of the whole person - is the language the university uses to
           describe how it educates. This is not the same as Notre Dame's
           Holy Cross tradition; applicants who conflate the two lose
           credibility. You do not have to be Catholic to engage the
@@ -256,9 +256,9 @@ export default function Content() {
         "I want to study Government and Arabic, and I want to study them
         at a school where the theology requirement is a feature rather
         than a tax. I spent last summer in Amman on a language program
-        and what I kept noticing was how much of what I was reading — in
+        and what I kept noticing was how much of what I was reading - in
         history, in political science, in the actual conversations at my
-        host family's dinner table — presumed a kind of literacy about
+        host family's dinner table - presumed a kind of literacy about
         religion that most American undergraduates never acquire.
         Georgetown College, with its two-course theology sequence and the
         Berkley Center down the road, is the only program where my
@@ -275,7 +275,7 @@ export default function Content() {
         </li>
         <li>
           <strong>Evidence of genuine interest in the school's focus.</strong>{" "}
-          Prior exposure, a research project, a summer experience —
+          Prior exposure, a research project, a summer experience -
           something that shows the interest predates the application.
         </li>
         <li>
@@ -338,7 +338,7 @@ export default function Content() {
           <strong>McDonough applicants saying "finance" without
           specifics.</strong> Finance is a concentration, not an essay
           topic. What kind, in what industry, for what problem?
-          McDonough's framing — ethical, analytical, financial, global —
+          McDonough's framing - ethical, analytical, financial, global -
           is a set of lenses, not keywords to drop.
         </li>
         <li>
@@ -357,9 +357,9 @@ export default function Content() {
 
       <h2>How These Essays Coordinate With the Why Georgetown Essay</h2>
       <p>
-        The Why Georgetown essay is the general fit essay — why this
+        The Why Georgetown essay is the general fit essay - why this
         university, among the many that could accept you. The
-        school-specific supplement is the school fit essay — why SFS, or
+        school-specific supplement is the school fit essay - why SFS, or
         McDonough, or NHS, or the College, among the four schools at
         Georgetown. The two should not duplicate content.
       </p>

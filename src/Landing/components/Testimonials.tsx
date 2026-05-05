@@ -4,9 +4,9 @@ import { SectionHead } from "@/design/SectionHead";
 const QUOTES = [
   {
     body:
-      "Everyone else was telling me my essay was fine. Ivy Admit showed me which three sentences were doing all the work — and which four were dragging it down. Cut them and the essay clicked.",
+      "Everyone else was telling me my essay was fine. Ivy Admit showed me which three sentences were doing all the work - and which four were dragging it down. Cut them and the essay clicked.",
     name: "Sarah K.",
-    school: "Admitted — Harvard '30",
+    school: "Admitted - Harvard '30",
     bg: "var(--color-oxblood)",
     initials: "SK",
   },
@@ -14,7 +14,7 @@ const QUOTES = [
     body:
       "The rubric score was demoralizing and exactly what I needed. My first draft was a 64. My final was an 89. Same story, different essay.",
     name: "Marcus J.",
-    school: "Admitted — Stanford '30",
+    school: "Admitted - Stanford '30",
     bg: "var(--color-forest)",
     initials: "MJ",
   },
@@ -22,7 +22,7 @@ const QUOTES = [
     body:
       "I used the school-specific brainstormer for every one of my supplementals. It surfaced programs I hadn't found on the main site and gave me angles that actually felt like mine.",
     name: "Ava L.",
-    school: "Admitted — Yale '30",
+    school: "Admitted - Yale '30",
     bg: "var(--color-gold)",
     initials: "AL",
   },

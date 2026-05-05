@@ -18,7 +18,7 @@ export default function Content() {
         This is the longest supplemental essay in the Cornell application, and
         it is the hardest to fake. The prompt is doing three things at once.
         It is asking what you care about, why you care about it, and why that
-        set of interests fits a specific college inside Cornell — a college
+        set of interests fits a specific college inside Cornell - a college
         whose identity is narrower and more specialized than most applicants
         understand on the first read. Each of those three tasks has to land,
         and 650 words is the budget for all three.
@@ -28,7 +28,7 @@ export default function Content() {
         essay and staple a sentence about ILR at the end. That is the most
         common failure mode. ILR admissions can tell within two paragraphs
         whether the essay was written for ILR or retrofitted for it. The
-        prompt's three parts are not optional — they are the evaluation
+        prompt's three parts are not optional - they are the evaluation
         criteria.
       </p>
 
@@ -49,7 +49,7 @@ export default function Content() {
         International Labor Relations, and the History of Work and Labor. Every
         ILR student takes these courses. That shared core means every student
         arrives with, or develops, a working literacy in how workplaces
-        function — legally, economically, behaviorally, comparatively, and
+        function - legally, economically, behaviorally, comparatively, and
         historically. You do not opt out.
       </p>
       <p>
@@ -94,7 +94,7 @@ export default function Content() {
           <strong>A specific issue or topic you have engaged with.</strong>{" "}
           Wage theft, teacher strikes, warehouse conditions, gig-economy
           classification, immigrant labor, family-leave policy, algorithmic
-          management, pay transparency — any real issue will do. What will
+          management, pay transparency - any real issue will do. What will
           not do is an abstract interest in "labor issues" with no
           concrete reference point.
         </li>
@@ -103,7 +103,7 @@ export default function Content() {
           pre-law program, not a business program, and not a political
           activism program, although elements of all three live inside it.
           Applicants who know ILR covers HR, labor economics, conflict
-          resolution, and international labor — not just "unions" — read as
+          resolution, and international labor - not just "unions" - read as
           informed.
         </li>
         <li>
@@ -124,7 +124,7 @@ export default function Content() {
           <strong>A reason to believe the interest is durable.</strong> ILR
           is a specialized degree. It is not easy to pivot out of if you
           change your mind. Admissions wants to see that your interest
-          survived contact with reality somewhere — a job, a volunteer
+          survived contact with reality somewhere - a job, a volunteer
           shift, a family experience, a research project, a news story you
           could not stop thinking about.
         </li>
@@ -133,7 +133,7 @@ export default function Content() {
       <h2>The "Personal, Academic, or Volunteer/Work Experiences" Framing</h2>
       <p>
         Notice what the prompt includes and excludes. It tells you to ground
-        the essay in experience — personal, academic, or volunteer/work. It
+        the essay in experience - personal, academic, or volunteer/work. It
         does not tell you to describe an abstract passion. The word
         "experiences" is doing real work in this prompt. ILR is signaling
         that it wants the essay anchored in something you have actually
@@ -143,10 +143,10 @@ export default function Content() {
         This is not a small stylistic preference. It is a structural
         instruction. An essay that opens with "I have always been fascinated
         by the dynamics of labor markets" is already in trouble. An essay
-        that opens with a specific moment — the day your mother brought home
+        that opens with a specific moment - the day your mother brought home
         a contract for you to read, the afternoon you realized the
         dishwasher at your summer job was being paid in cash, the meeting
-        where your high school principal announced a strike — is doing what
+        where your high school principal announced a strike - is doing what
         the prompt asked.
       </p>
       <p>
@@ -174,7 +174,7 @@ export default function Content() {
         <li>
           <strong>The issue itself and why it matters (roughly 200 words).</strong>{" "}
           Move from the experience to the topic it opened up for you.
-          Define the issue in concrete terms — who is affected, what is at
+          Define the issue in concrete terms - who is affected, what is at
           stake, where the tension sits. This is the analysis layer. Show
           that you have thought about the issue beyond your own exposure
           to it. Read something. Cite something. Know something specific
@@ -183,12 +183,12 @@ export default function Content() {
         <li>
           <strong>How the interest connects to ILR (roughly 150 words).</strong>{" "}
           This is where ILR's distinctive features earn their place. Name
-          the core courses that will deepen your understanding — Labor and
+          the core courses that will deepen your understanding - Labor and
           Employment Law, Economics of Labor Markets, International Labor
           Relations, whichever genuinely matches. Name the concentration
-          you are drawn to. Name a specific institute or resource — the
+          you are drawn to. Name a specific institute or resource - the
           Scheinman Institute, the Worker Institute, Catherwood Library,
-          the extension program — and explain why it matters to your
+          the extension program - and explain why it matters to your
           question. Generic gestures at "ILR's strong program" fail this
           section.
         </li>
@@ -213,7 +213,7 @@ export default function Content() {
         "My father has been a sheet-metal worker for twenty-six years, and
         every three years the kitchen table becomes a classroom. He spreads
         out the new collective bargaining agreement, and my mother and I
-        read it with him — wage tiers, pension language, jurisdictional
+        read it with him - wage tiers, pension language, jurisdictional
         clauses, the grievance procedure in the back. I started doing this
         when I was twelve because I was bored and the agreement had a
         glossary. I kept doing it because I began to understand what the
@@ -226,12 +226,12 @@ export default function Content() {
         multi-employer pension plans in the building trades. My father's
         local is in one. Two years ago, a signatory contractor in a
         different state went bankrupt, and the withdrawal-liability numbers
-        started showing up in our kitchen conversations. I started reading —
+        started showing up in our kitchen conversations. I started reading -
         first the summary plan description, then a Congressional Research
         Service report, then whatever I could find on the Butch Lewis Act
         and the Pension Benefit Guaranty Corporation's multiemployer
         program. The policy turned out to be technical, contested, and
-        enormous — more than a million workers affected, and almost no
+        enormous - more than a million workers affected, and almost no
         coverage outside specialized publications. The gap between how much
         these plans matter and how little they are discussed is the thing
         that stays with me.
@@ -246,16 +246,16 @@ export default function Content() {
         I would want to work with the Worker Institute on research into
         pension governance, and I would use the required experiential
         learning to intern with a trustee or a multiemployer plan
-        administrator. The question I came in with — what does a contract
-        actually protect, and for how long — is not one I can answer from
+        administrator. The question I came in with - what does a contract
+        actually protect, and for how long - is not one I can answer from
         the kitchen table anymore. It is what I want the next four years to
         be about."
       </blockquote>
       <p>
         That example works because it earns every section. The experience is
         specific, lived, and repeated over years. The issue is named in
-        technical terms the writer can defend — withdrawal liability,
-        multiemployer plans, the Butch Lewis Act — not gestured at in
+        technical terms the writer can defend - withdrawal liability,
+        multiemployer plans, the Butch Lewis Act - not gestured at in
         slogans. The ILR fit is concrete: named core courses, a specific
         concentration, a specific library collection, a specific institute,
         and a specific use of the required internship. And the closing moves
@@ -295,8 +295,8 @@ export default function Content() {
         <li>
           <strong>No specific issue.</strong> "I care about workers'
           rights" is not an issue. It is a category. An ILR essay has to
-          pick a real topic — a policy, a law, a case, a practice, a
-          concrete tension — and treat it in enough detail that a reader
+          pick a real topic - a policy, a law, a case, a practice, a
+          concrete tension - and treat it in enough detail that a reader
           can see what you actually know.
         </li>
         <li>
@@ -336,7 +336,7 @@ export default function Content() {
         class. Your ILR essay is not background color on your Common App
         personal statement. It is the case for admission to the specific
         school you applied to. If your Common App essay is also about a
-        labor-adjacent experience, you have a coordination problem — not
+        labor-adjacent experience, you have a coordination problem - not
         because labor cannot appear twice, but because duplication is a
         wasted signal. The Common App essay is read by every college you
         apply to. The ILR essay is read only by ILR, by readers whose job
@@ -344,7 +344,7 @@ export default function Content() {
       </p>
       <p>
         Treat the two essays as complementary rather than redundant. Let the
-        Common App carry the broader identity material — family, origin,
+        Common App carry the broader identity material - family, origin,
         sustained intellectual curiosity, whatever is most representative of
         you as a person. Let the ILR essay carry the specific case: this
         topic, this experience, this set of ILR features, this plan. If an
@@ -371,9 +371,9 @@ export default function Content() {
         </Link>{" "}
         walks through how admissions reads the college-specific essays
         across all of Cornell's undergraduate schools. And for the general
-        principles that apply to every college-fit prompt — specificity,
+        principles that apply to every college-fit prompt - specificity,
         how to cite programs without sounding generic, and how to show a
-        durable interest — read our{" "}
+        durable interest - read our{" "}
         <Link
           href="/blog/why-this-college-essay"
           className="text-oxblood hover:underline"

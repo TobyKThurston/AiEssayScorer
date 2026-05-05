@@ -24,7 +24,7 @@ export default function Content() {
         This is the essay Michigan reads most carefully. It is often the
         piece that differentiates in-state and out-of-state applicants
         with otherwise identical stats. LSA, Ross, Engineering, Art &
-        Design, Kinesiology — every applicant writes the same prompt,
+        Design, Kinesiology - every applicant writes the same prompt,
         and the essay has to work regardless of school.
       </p>
       <p>
@@ -45,7 +45,7 @@ export default function Content() {
           What it eats. What it argues about. What it takes for granted.
         </li>
         <li>
-          <strong>Your place within it — honestly.</strong> You don't
+          <strong>Your place within it - honestly.</strong> You don't
           have to be the star. You can be the youngest cousin, the new
           member, the translator, the one who shows up every Sunday.
         </li>
@@ -54,8 +54,8 @@ export default function Content() {
       <h2>The "Belong" Test</h2>
       <p>
         Before you pick a community, ask: would this community exist if
-        you weren't in it? If the answer is obviously no — because you
-        founded it, because you run it — you've picked a leadership
+        you weren't in it? If the answer is obviously no - because you
+        founded it, because you run it - you've picked a leadership
         story, not a belonging story. Pick again.
       </p>
       <p>
@@ -69,7 +69,7 @@ export default function Content() {
         "My grandmother's kitchen on Friday nights is a community of
         six. My mother, her three sisters, my cousin Leyla, and me. The
         rule is that you don't get to sit down until you've done
-        something — chopped onions, set a glass, poured tea. I am the
+        something - chopped onions, set a glass, poured tea. I am the
         youngest, so I mostly pour tea. I've been pouring tea at that
         table for eleven years. Last year my aunt Roya started letting
         me stay for the political arguments after dinner instead of
@@ -85,7 +85,7 @@ export default function Content() {
         Why it works: a real community (six people, weekly, specific
         language), a specific role (youngest, tea-pourer, listener), a
         concrete shift (promoted from the living room), and the
-        applicant's place is honest — not the leader, not the hero, the
+        applicant's place is honest - not the leader, not the hero, the
         member.
       </p>
 
@@ -121,7 +121,7 @@ export default function Content() {
         <li>
           <strong>The college-application-friendly community.</strong>{" "}
           The generic service club, the honor society, the Model UN
-          team — unless you genuinely have something new to say, these
+          team - unless you genuinely have something new to say, these
           communities sound like checkboxes.
         </li>
         <li>
@@ -144,7 +144,7 @@ export default function Content() {
       <h2>Self-Test</h2>
       <p>
         Read your draft out loud. Could a reader draw a map of this
-        community after hearing the essay — who's in it, what they do,
+        community after hearing the essay - who's in it, what they do,
         what language they use, what you are when you walk in? If yes,
         you've got texture. If the reader could only say "it sounds
         nice," rewrite.

@@ -8,12 +8,12 @@ export default function Content() {
         The Morehead-Cain is the oldest full-ride merit scholarship in the
         United States, established at UNC-Chapel Hill in 1945. It is
         administered by the Morehead-Cain Foundation, a separate legal
-        entity from the university — a distinction that matters more than
+        entity from the university - a distinction that matters more than
         most applicants realize.
       </p>
       <p>
         The scholarship covers tuition, fees, books, and room and board
-        for four years. It also funds the Discovery Experience — four
+        for four years. It also funds the Discovery Experience - four
         summers with a specific structure. Summer one is outdoor
         leadership, often with NC Outward Bound. Summer two is
         self-designed public service. Summer three is inquiry or
@@ -22,7 +22,7 @@ export default function Content() {
         for personal projects outside the four tracks.
       </p>
       <p>
-        The cohort is small — roughly 50 to 60 Scholars per class.
+        The cohort is small - roughly 50 to 60 Scholars per class.
         Scholars live in Chapel Hill for four years, attend regular
         cohort programming, and enter a global alumni network. This is
         not a scholarship in the loose sense of "a sum of money." It is
@@ -40,7 +40,7 @@ export default function Content() {
       <p>
         UNC admissions essays are read by UNC admissions officers
         evaluating academic preparedness and fit. The Morehead-Cain essays
-        are read by the foundation's selection committee — a different
+        are read by the foundation's selection committee - a different
         group with a different rubric and a different institutional
         mandate.
       </p>
@@ -78,7 +78,7 @@ export default function Content() {
           a full summer of self-designed public service. If your essays
           reveal no genuine engagement with communities outside yourself,
           the reader cannot imagine what you would do with that summer.
-          Service shows up in specifics — a project you ran, a relationship
+          Service shows up in specifics - a project you ran, a relationship
           you sustained, a problem you kept working on after it stopped
           being interesting.
         </li>
@@ -114,22 +114,22 @@ export default function Content() {
       <p>
         The load-bearing word is <em>captivates</em>. Not <em>interests</em>.
         Not <em>engages</em>. Captivates signals sustained, almost
-        involuntary attention — the thing you keep thinking about when you
+        involuntary attention - the thing you keep thinking about when you
         are supposed to be doing something else. The reader is testing for
         depth of curiosity, not breadth of competence.
       </p>
       <p>
         The failure mode is picking a topic that looks intellectual.
-        Quantum mechanics, geopolitics, machine learning — these read as
+        Quantum mechanics, geopolitics, machine learning - these read as
         performance unless you have lived inside them for years. Pick
         the topic you actually think about. The history of highway
         signage, the grammar of a dead language, the economics of a
-        local industry — the reader feels the difference on the first
+        local industry - the reader feels the difference on the first
         sentence.
       </p>
       <p>
         The strongest versions move through three beats. A specific entry
-        point — the moment or object that pulled you in. The current
+        point - the moment or object that pulled you in. The current
         shape of the fascination: what you read, what you have built or
         noticed or mapped. And the unresolved question that keeps you
         going. The essay should leave the reader feeling that you will
@@ -138,7 +138,7 @@ export default function Content() {
       <blockquote>
         "The first time I stayed late after a choir rehearsal, it was to
         argue with my director about tuning. He said the alto line was
-        flat. I said it was flat on purpose — the piece was written in
+        flat. I said it was flat on purpose - the piece was written in
         just intonation, and the thirds were supposed to sit lower than
         my tuner thought. He told me to write it up. That was three
         years ago. Since then I have read four books on temperament,
@@ -146,7 +146,7 @@ export default function Content() {
         spreadsheet comparing how six choirs handle the same Byrd motet.
         I am not going to be a musicologist. I am going to study public
         policy. But what captivates me about tuning is the idea that an
-        entire musical culture can agree on a lie — that the piano in
+        entire musical culture can agree on a lie - that the piano in
         front of me is slightly wrong in a specific way, and everyone
         has decided not to care. I keep finding versions of that
         agreement elsewhere. The way my town rounds property tax
@@ -165,8 +165,8 @@ export default function Content() {
         under pressure.
       </p>
       <p>
-        The strongest versions describe a specific situation — a week, a
-        day, sometimes a single hour — in which your original read of the
+        The strongest versions describe a specific situation - a week, a
+        day, sometimes a single hour - in which your original read of the
         problem failed and you had to form a new one. The structure is
         usually: the plan, the moment the plan broke, the new read, the
         new action, the outcome.
@@ -189,13 +189,13 @@ export default function Content() {
       </p>
       <p>
         The fix is to anchor the definition in a specific moment. Describe
-        a single scene — a conversation, a decision, an observation — that
+        a single scene - a conversation, a decision, an observation - that
         forced you to revise what you thought success was. The definition
         emerges from the scene, not from philosophical throat-clearing.
       </p>
       <p>
         A strong version often has a contrast built in. You used to think
-        success was X. Then something happened — specific, datable, real —
+        success was X. Then something happened - specific, datable, real -
         and now you think it is Y. If the philosophy arrives first, the
         reader has no reason to trust it. If the moment arrives first, the
         philosophy has something to stand on.
@@ -204,7 +204,7 @@ export default function Content() {
       <h2>The "Pivotal Experience" Essay: Structure</h2>
       <p>
         A pivotal experience does not have to be trauma, crisis, or
-        drama. A pivot is a change in direction — the moment a life
+        drama. A pivot is a change in direction - the moment a life
         vector turned. That can be a single conversation with a
         grandparent, a book that arrived at the right time, a decision
         to quit an activity you had done for seven years, or the
@@ -215,7 +215,7 @@ export default function Content() {
         and use the remaining words to trace downstream effects.
         Applicants often describe a big moment without showing its
         consequences. The pivot is only pivotal if you can show the life
-        that came after it — classes you took differently, books you
+        that came after it - classes you took differently, books you
         read, projects you started.
       </p>
       <p>
@@ -227,7 +227,7 @@ export default function Content() {
       <h2>What a Strong Morehead-Cain Essay Actually Looks Like</h2>
       <p>
         Here is a fictional example for the "topic that captivates you"
-        prompt — not a real applicant's essay, but one that captures the
+        prompt - not a real applicant's essay, but one that captures the
         texture the selection committee is reading for:
       </p>
       <blockquote>
@@ -241,7 +241,7 @@ export default function Content() {
         to serve a factory that closed in 1994. The route never got
         updated. Since then I have become, embarrassingly, a person who
         reads transit meeting minutes. Almost every city has artifacts
-        like the 34 — routes, rules, timetables that outlived the reason
+        like the 34 - routes, rules, timetables that outlived the reason
         they exist. I have mapped three of them in my city, written to
         two council members, and gotten one reply. What captivates me is
         not the bus route. It is the question of how long a system can
@@ -278,7 +278,7 @@ export default function Content() {
         </li>
         <li>
           <strong>No specific moment.</strong> Essays that move exclusively
-          in abstractions — success, adversity, growth — fail because the
+          in abstractions - success, adversity, growth - fail because the
           reader has no scene to anchor to. Every prompt should have at
           least one datable moment in it.
         </li>
@@ -358,8 +358,8 @@ export default function Content() {
         </Link>{" "}
         covers how to write the admissions-side piece without duplicating
         your Morehead-Cain material. And for the broader principles that
-        apply across selective scholarship and admissions writing — voice,
-        specificity, and how readers actually evaluate these files — read
+        apply across selective scholarship and admissions writing - voice,
+        specificity, and how readers actually evaluate these files - read
         our{" "}
         <Link
           href="/blog/ivy-league-essay-tips"

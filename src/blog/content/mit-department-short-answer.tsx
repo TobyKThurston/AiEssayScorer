@@ -15,8 +15,8 @@ export default function Content() {
       <p>
         This is one of MIT's signature short answers. It sits alongside four
         other 100- to 225-word prompts on the MIT application and carries an
-        outsized share of your intellectual fit case. At 100 words — roughly
-        six to eight sentences — you have almost no room to warm up, describe
+        outsized share of your intellectual fit case. At 100 words - roughly
+        six to eight sentences - you have almost no room to warm up, describe
         your background, or ease into the topic. You have one job: name a
         department, show that you understand what it actually is at MIT, and
         connect it to something real about how your mind works.
@@ -33,7 +33,7 @@ export default function Content() {
       <h2>Why 100 Words Is Brutal Here</h2>
       <p>
         One hundred words is approximately six to eight sentences. That is it.
-        Most applicants burn the first thirty on biography — a childhood
+        Most applicants burn the first thirty on biography - a childhood
         story, a science-fair credential, a sentence about when they fell in
         love with physics. By the time they reach the actual department, they
         have sixty words left to do every job the prompt is asking for, and
@@ -105,8 +105,8 @@ export default function Content() {
         <li>
           <strong>Language that sounds like a thinker, not a brochure.</strong>{" "}
           Admissions reads thousands of these. Any phrase that sounds like
-          marketing copy — "cutting-edge research," "world-class faculty,"
-          "unparalleled resources" — flags the essay as low-effort. At 100
+          marketing copy - "cutting-edge research," "world-class faculty,"
+          "unparalleled resources" - flags the essay as low-effort. At 100
           words, three bad phrases is the entire essay.
         </li>
       </ul>
@@ -120,8 +120,8 @@ export default function Content() {
         are being asked which department currently interests you and why.
       </p>
       <p>
-        Applicants who write as if their major is already decided — "I will
-        major in Course 6" — sound defensive. They sound like they are
+        Applicants who write as if their major is already decided - "I will
+        major in Course 6" - sound defensive. They sound like they are
         performing certainty because they think certainty is what MIT wants.
         It is the opposite. The General Institute Requirements mean every
         student takes eight courses across science, math, and humanities
@@ -140,7 +140,7 @@ export default function Content() {
       <p>
         This framing also changes the voice. "I plan to pursue Course 9" is
         flat and declarative. "Right now, Course 9 is the department I keep
-        reading about — and the Picower Institute is the reason why" is
+        reading about - and the Picower Institute is the reason why" is
         alive. It describes a present-tense interest rather than a future
         commitment. That voice fits what MIT is actually asking.
       </p>
@@ -155,8 +155,8 @@ export default function Content() {
           <strong>Name the department and a specific thing about it (about 40 words).</strong>{" "}
           The job of this move is to establish that you know what the
           department actually is at MIT. Use the course number. Reference a
-          specific subfield, lab, or program — CSAIL, Media Lab, Picower,
-          Broad Institute — that lives within or adjacent to that department.
+          specific subfield, lab, or program - CSAIL, Media Lab, Picower,
+          Broad Institute - that lives within or adjacent to that department.
           The failure mode is naming the department generically ("the
           computer science program") and following it with equally generic
           praise. If the opening 40 words could be cut and pasted into an
@@ -179,7 +179,7 @@ export default function Content() {
           works. Name a UROP you would look for, a specific lab you would
           email, an IAP class you would take, or a subject cross-listed with
           another department you would sit in on. The failure mode is
-          empty-phrase futures — "I look forward to the opportunities MIT
+          empty-phrase futures - "I look forward to the opportunities MIT
           provides." That sentence is dead. A specific action is alive.
         </li>
       </ol>
@@ -210,14 +210,14 @@ export default function Content() {
         That example is 95 words. It works because every clause is doing a
         specific job. The opening sentence names the department by number
         and signals a gravitational pull rather than a declaration. The
-        second sentence gives a concrete origin — a family illness and a
-        specific research area (engram cells, Picower) — and shows that the
+        second sentence gives a concrete origin - a family illness and a
+        specific research area (engram cells, Picower) - and shows that the
         applicant has done enough reading to know what happens at the real
         lab. The third sentence admits what the applicant does not yet know,
         which is a quietly strong move at MIT: it signals intellectual
         humility and a willingness to start from a deficit. The final
-        sentence names three concrete MIT mechanisms — UROP, IAP, cross-
-        registration with Course 6 — and shows the applicant understands
+        sentence names three concrete MIT mechanisms - UROP, IAP, cross-
+        registration with Course 6 - and shows the applicant understands
         that real fit means using the systems MIT actually provides.
       </p>
       <p>
@@ -249,8 +249,8 @@ export default function Content() {
         <li>
           <strong>Picking Course 6 with no specific angle.</strong> Course 6
           is the largest major at MIT and the most common answer to this
-          prompt. If you name Course 6, you need a subfield — systems,
-          theory, AI, networks, hardware — or a specific lab (CSAIL is the
+          prompt. If you name Course 6, you need a subfield - systems,
+          theory, AI, networks, hardware - or a specific lab (CSAIL is the
           obvious one, but it contains dozens of groups). "I want to study
           computer science at MIT" in an application to MIT is a sentence
           that earns you nothing.
@@ -259,8 +259,8 @@ export default function Content() {
           <strong>Claiming certainty MIT does not want.</strong> "I have
           always known I would major in Course 2." MIT explicitly opens the
           prompt with "although you may not yet know." Reading past that
-          clause signals you skim. Writing inside it — "right now, Course 2
-          is where I keep returning" — signals you read carefully and think
+          clause signals you skim. Writing inside it - "right now, Course 2
+          is where I keep returning" - signals you read carefully and think
           in present tense.
         </li>
         <li>
@@ -307,8 +307,8 @@ export default function Content() {
         The other MIT short answers should not overlap with this one in
         content or voice. The community prompt asks about where you come
         from and how you have contributed to a group. The challenge prompt
-        asks about how you respond to difficulty. The pleasure prompt — the
-        one about what you do simply because you enjoy it — is explicitly
+        asks about how you respond to difficulty. The pleasure prompt - the
+        one about what you do simply because you enjoy it - is explicitly
         not about achievement. And the contribution prompt asks what you
         would bring to MIT's community. None of those should sound like a
         second department essay, and the department essay should not leak
@@ -323,7 +323,7 @@ export default function Content() {
         Course 6 subfield your research sits in and the specific MIT lab
         most adjacent to it. If your academic record is broader, the
         department essay becomes the place to show that you have thought
-        carefully about where that breadth points at MIT — and that you
+        carefully about where that breadth points at MIT - and that you
         understand doubles like 6-3 plus 18 or 8 plus 6-7 exist for exactly
         this kind of student.
       </p>
@@ -331,8 +331,8 @@ export default function Content() {
         The distinction between majors and concentrations matters here too.
         Course 21 houses concentrations in humanities fields; Course 17 is
         Political Science; Course 15 is Sloan. If your answer sits on the
-        humanities side of MIT, naming the right structure — major versus
-        concentration — separates you from the large pool of applicants who
+        humanities side of MIT, naming the right structure - major versus
+        concentration - separates you from the large pool of applicants who
         think of MIT as a pure engineering school.
       </p>
 
@@ -350,8 +350,8 @@ export default function Content() {
           MIT challenge short answer guide
         </Link>{" "}
         walks through how to pick a difficulty worth describing. And for the
-        contribution prompt — the one where admissions is asking what you
-        would actually add to the MIT community — read our{" "}
+        contribution prompt - the one where admissions is asking what you
+        would actually add to the MIT community - read our{" "}
         <Link
           href="/blog/mit-contribute-to-community-essay"
           className="text-oxblood hover:underline"
