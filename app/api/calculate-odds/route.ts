@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { createClient } from "@/lib/supabase/server";
+import { adminClient } from "@/lib/supabase/admin";
 import { schools as ALL_SCHOOLS } from "@/tools/schools";
 import type { Profile, OddsResult, SchoolOdds, Tier } from "@/Odds/types";
 
@@ -144,7 +145,7 @@ export async function POST(request: Request) {
       data: { session },
     } = await supabase.auth.getSession();
 
-    const { data: inserted, error: insertErr } = await supabase
+    const { data: inserted, error: insertErr } = await adminClient()
       .from("odds_calculations")
       .insert({
         profile,
