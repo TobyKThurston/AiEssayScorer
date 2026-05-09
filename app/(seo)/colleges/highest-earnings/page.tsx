@@ -64,7 +64,7 @@ export default function HighestEarningsPage() {
   };
 
   return (
-    <article className="pt-24 pb-24 px-6">
+    <article className="pt-14 sm:pt-20 md:pt-24 pb-16 sm:pb-24 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
@@ -77,7 +77,7 @@ export default function HighestEarningsPage() {
           </p>
           <h1
             className="text-ink mb-5 mx-auto max-w-2xl"
-            style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: "clamp(36px, 5vw, 52px)", lineHeight: "1.05", letterSpacing: "-0.02em" }}
+            style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: "clamp(28px, 5vw, 52px)", lineHeight: "1.05", letterSpacing: "-0.02em" }}
           >
             Colleges with the Highest Post-Graduation Earnings
           </h1>
@@ -107,7 +107,7 @@ export default function HighestEarningsPage() {
             Ranked by Median Earnings (10 years after entry)
           </p>
           <div className="rounded-2xl border border-hair overflow-hidden bg-cream">
-            <table className="w-full text-sm">
+            <div className="overflow-x-auto"><table className="w-full text-sm min-w-[460px]">
               <thead className="bg-[#FAEEEA]">
                 <tr>
                   <th className="text-left px-3 sm:px-5 py-3 text-[11px] font-semibold text-pencil uppercase tracking-[0.15em] w-10">#</th>
@@ -135,8 +135,7 @@ export default function HighestEarningsPage() {
                   </tr>
                 ))}
               </tbody>
-            </table>
-          </div>
+            </table></div></div>
           <p className="text-[11px] text-pencil mt-3 text-center">
             Source: U.S. Department of Education College Scorecard. Last verified {LAST_VERIFIED}.
           </p>

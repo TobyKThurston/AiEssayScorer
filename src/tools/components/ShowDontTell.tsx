@@ -54,7 +54,7 @@ export default function ShowDontTell() {
       {paywall && <PaywallBanner />}
       <form
         onSubmit={handleSubmit}
-        className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5"
+        className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7 space-y-4 sm:space-y-5"
       >
         <div>
           <label className="block text-sm font-semibold text-ink mb-2">
@@ -103,7 +103,7 @@ export default function ShowDontTell() {
       )}
 
       {output && (
-        <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+        <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7">
           <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-4">
             Rewrites
           </p>

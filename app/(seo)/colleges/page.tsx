@@ -5,18 +5,21 @@ import { schools, type SchoolCategory, type School } from "@/tools/schools";
 import { getStats, formatPct, type CollegeStat } from "@/colleges/collegeStats";
 import { extraColleges, extraStats } from "@/colleges/extraColleges";
 
+const seenSlugs = new Set(schools.map((s) => s.slug));
 const allSchools: School[] = [
   ...schools,
-  ...extraColleges.map((e) => ({
-    slug: e.slug,
-    name: e.name,
-    shortName: e.shortName,
-    location: e.location,
-    state: e.state,
-    type: e.type,
-    category: e.category,
-    knownFor: e.knownFor,
-  })),
+  ...extraColleges
+    .filter((e) => !seenSlugs.has(e.slug))
+    .map((e) => ({
+      slug: e.slug,
+      name: e.name,
+      shortName: e.shortName,
+      location: e.location,
+      state: e.state,
+      type: e.type,
+      category: e.category,
+      knownFor: e.knownFor,
+    })),
 ];
 
 function lookupStats(slug: string): CollegeStat | null {
@@ -97,7 +100,7 @@ export default function CollegesIndexPage() {
   const totalSchools = allSchools.length;
 
   return (
-    <article className="pt-24 pb-24 px-6">
+    <article className="pt-14 sm:pt-20 md:pt-24 pb-16 sm:pb-24 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
@@ -110,28 +113,28 @@ export default function CollegesIndexPage() {
         />
 
         {/* Hero — centered */}
-        <header className="text-center mt-6 mb-16">
-          <p className="text-[11px] font-semibold text-oxblood uppercase tracking-[0.18em] mb-4">
+        <header className="text-center mt-5 sm:mt-6 mb-12 sm:mb-16">
+          <p className="text-[10.5px] sm:text-[11px] font-semibold text-oxblood uppercase tracking-[0.16em] sm:tracking-[0.18em] mb-3 sm:mb-4">
             {totalSchools} schools · Real published data
           </p>
           <h1
-            className="text-ink mb-5 mx-auto max-w-2xl"
+            className="text-ink mb-4 sm:mb-5 mx-auto max-w-2xl"
             style={{
               fontFamily: "var(--font-heading)",
               fontWeight: 700,
-              fontSize: "clamp(38px, 5.5vw, 56px)",
+              fontSize: "clamp(28px, 5.5vw, 56px)",
               lineHeight: "1.05",
               letterSpacing: "-0.02em",
             }}
           >
             College admissions, by the numbers
           </h1>
-          <p className="font-serif italic text-xl md:text-2xl text-ink-2 mb-8 max-w-xl mx-auto leading-snug">
+          <p className="font-serif italic text-lg sm:text-xl md:text-2xl text-ink-2 mb-6 sm:mb-8 max-w-xl mx-auto leading-snug">
             Acceptance rates and test scores you can verify. A way to find out where you actually stand.
           </p>
           <Link
             href="/try"
-            className="inline-block px-7 py-3 rounded-full bg-ink !text-white !no-underline font-medium hover:bg-oxblood hover:!text-white transition-all"
+            className="inline-block px-5 sm:px-7 py-2.5 sm:py-3 rounded-full bg-ink !text-white !no-underline font-medium text-[14px] sm:text-base hover:bg-oxblood hover:!text-white transition-all"
           >
             Calculate your odds
           </Link>

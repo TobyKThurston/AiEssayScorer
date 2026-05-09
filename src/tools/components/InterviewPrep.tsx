@@ -57,7 +57,7 @@ export default function InterviewPrep() {
   return (
     <div className="space-y-6">
       {paywall && <PaywallBanner />}
-      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5">
+      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7 space-y-4 sm:space-y-5">
         <div>
           <label className="block text-sm font-semibold text-ink mb-2">School <span className="font-normal text-pencil">(optional)</span></label>
           <input type="text" value={school} onChange={(e) => setSchool(e.target.value)} placeholder="e.g., Yale, Harvard, Brown" className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition" maxLength={100} />
@@ -81,7 +81,7 @@ export default function InterviewPrep() {
           <Section title="Essay deep dives" questions={result.essayDeepDives} />
           <Section title="Activity probes" questions={result.activityProbes} />
           <Section title="Intellectual curiosity" questions={result.intellectualQuestions} />
-          <div className="rounded-2xl bg-[#FAEEEA] border border-[#E8C9C2] p-6">
+          <div className="rounded-2xl bg-[#FAEEEA] border border-[#E8C9C2] p-5 sm:p-6">
             <h3 className="text-sm font-extrabold text-[#B91C1C] uppercase tracking-wider mb-3" style={{ fontFamily: "var(--font-heading)" }}>Traps to watch for</h3>
             <ul className="space-y-2">
               {result.traps.map((t, i) => <li key={i} className="text-[14.5px] text-ink leading-relaxed">• {t}</li>)}
@@ -99,7 +99,7 @@ export default function InterviewPrep() {
 
 function Section({ title, questions }: { title: string; questions: Q[] }) {
   return (
-    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6">
       <div className="flex items-center gap-2 mb-4">
         <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-oxblood"><MessageSquare className="w-4 h-4" /></span>
         <h3 className="text-sm font-extrabold text-ink uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>{title}</h3>

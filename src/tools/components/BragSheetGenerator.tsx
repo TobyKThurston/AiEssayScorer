@@ -85,7 +85,7 @@ export default function BragSheetGenerator() {
   return (
     <div className="space-y-6">
       {paywall && <PaywallBanner />}
-      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5">
+      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7 space-y-4 sm:space-y-5">
         <div className="grid md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-semibold text-ink mb-2">
@@ -122,7 +122,7 @@ export default function BragSheetGenerator() {
               {copied ? <><Check className="w-4 h-4" /> Copied</> : <><Copy className="w-4 h-4" /> Copy full brag sheet</>}
             </button>
           </div>
-          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair p-6">
+          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair p-5 sm:p-6">
             <p className="text-ink text-[15px] leading-relaxed">{result.greeting}</p>
           </div>
           <Panel title="Intellectual strengths">
@@ -161,7 +161,7 @@ export default function BragSheetGenerator() {
               {result.anglesToEmphasize.map((a, i) => <li key={i} className="text-[14.5px] text-ink leading-relaxed">• {a}</li>)}
             </ul>
           </Panel>
-          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair p-6">
+          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair p-5 sm:p-6">
             <p className="text-ink text-[15px] leading-relaxed italic">{result.closing}</p>
           </div>
         </div>
@@ -172,7 +172,7 @@ export default function BragSheetGenerator() {
 
 function Panel({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6">
       <h3 className="text-sm font-extrabold text-ink uppercase tracking-wider mb-3" style={{ fontFamily: "var(--font-heading)" }}>{title}</h3>
       {children}
     </div>

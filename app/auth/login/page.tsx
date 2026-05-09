@@ -64,20 +64,20 @@ function LoginForm() {
   };
 
   return (
-    <div className="min-h-screen bg-paper flex items-center justify-center px-6 py-16">
+    <div className="min-h-screen bg-paper flex items-center justify-center px-5 sm:px-6 py-12 sm:py-16">
       <div className="max-w-[440px] w-full">
-        <Link href="/" className="inline-flex items-center justify-center w-full mb-10">
+        <Link href="/" className="inline-flex items-center justify-center w-full mb-8 sm:mb-10">
           <Wordmark />
         </Link>
 
-        <div className="text-center mb-10">
-          <p className="eyebrow justify-center inline-flex mb-4">
+        <div className="text-center mb-8 sm:mb-10">
+          <p className="eyebrow justify-center inline-flex mb-3 sm:mb-4">
             <span className="num">§</span> Sign in
           </p>
-          <h1 className="font-serif text-[36px] md:text-[44px] leading-[1.05] tracking-[-0.02em] text-ink mb-3">
+          <h1 className="font-serif text-[28px] sm:text-[36px] md:text-[44px] leading-[1.05] tracking-[-0.02em] text-ink mb-3">
             Welcome <em className="italic text-oxblood">back</em>.
           </h1>
-          <p className="text-[15px] text-ink-2 leading-relaxed max-w-[36ch] mx-auto">
+          <p className="text-[14px] sm:text-[15px] text-ink-2 leading-relaxed max-w-[36ch] mx-auto">
             Continue with your Google account to pick up where your drafts left off.
           </p>
         </div>

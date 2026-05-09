@@ -53,7 +53,7 @@ export default function SupplementalPlanner() {
   return (
     <div className="space-y-6">
       {paywall && <PaywallBanner />}
-      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5">
+      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7 space-y-4 sm:space-y-5">
         <div>
           <label className="block text-sm font-semibold text-ink mb-2">Your college list</label>
           <textarea value={collegeList} onChange={(e) => setCollegeList(e.target.value)} placeholder="One school per line or comma-separated. e.g., Stanford, Harvard, UChicago, Duke, Northwestern, UMich, Pomona, UT Austin" rows={6} className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none" maxLength={1500} required />
@@ -82,7 +82,7 @@ export default function SupplementalPlanner() {
             </div>
           </div>
 
-          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-4">
               <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-oxblood"><Layers className="w-4 h-4" /></span>
               <h3 className="text-sm font-extrabold text-ink uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>Overlap clusters: one draft covers multiple schools</h3>
@@ -100,7 +100,7 @@ export default function SupplementalPlanner() {
             </div>
           </div>
 
-          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-4">
               <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-oxblood"><School className="w-4 h-4" /></span>
               <h3 className="text-sm font-extrabold text-ink uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>By school</h3>
@@ -123,7 +123,7 @@ export default function SupplementalPlanner() {
             </div>
           </div>
 
-          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-4">
               <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-forest"><ListOrdered className="w-4 h-4" /></span>
               <h3 className="text-sm font-extrabold text-ink uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>Order of operations</h3>

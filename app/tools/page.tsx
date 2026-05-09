@@ -95,39 +95,39 @@ export default function ToolsIndex() {
   }));
 
   return (
-    <div className="max-w-[1200px] mx-auto px-6 md:px-16 pt-28 md:pt-36 pb-20">
+    <div className="max-w-[1200px] mx-auto px-5 sm:px-6 md:px-16 pt-16 sm:pt-24 md:pt-36 pb-12 sm:pb-20">
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Tools" }]} />
 
       {/* Hero */}
-      <section className="mb-14 grid md:grid-cols-[1.3fr_1fr] gap-10 items-end">
+      <section className="mb-10 sm:mb-14 grid md:grid-cols-[1.3fr_1fr] gap-6 md:gap-10 items-end">
         <div>
-          <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-3">
+          <p className="text-[11px] sm:text-xs font-semibold text-oxblood uppercase tracking-widest mb-3">
             Free Tools · No signup
           </p>
-          <h1 className="mb-4" style={{ fontSize: "44px", lineHeight: "50px" }}>
+          <h1 className="mb-3 sm:mb-4 text-[28px] sm:text-[36px] md:text-[44px] leading-[1.1] tracking-[-0.01em] font-serif">
             {totalTools}+ free AI tools for every stage of your college essay.
           </h1>
-          <p className="text-ink-2 text-lg leading-relaxed mb-6 max-w-xl">
+          <p className="text-ink-2 text-[15px] sm:text-base md:text-lg leading-relaxed mb-5 sm:mb-6 max-w-xl">
             Pick a tool, paste your draft or topic, get feedback in seconds.
             Built on the same AI we use to score essays for 20,000+ students.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
               href="/try"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-ink text-cream font-semibold text-sm hover:bg-oxblood transition-colors"
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-ink text-cream font-semibold text-[13px] sm:text-sm hover:bg-oxblood transition-colors"
             >
               Score my full essay free
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
               href="#start-here"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-hair bg-cream text-ink font-semibold text-sm hover:bg-white transition-colors"
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl border border-hair bg-cream text-ink font-semibold text-[13px] sm:text-sm hover:bg-white transition-colors"
             >
               Browse tools
             </a>
           </div>
         </div>
-        <aside className="rounded-2xl border border-hair bg-cream p-6 text-sm text-ink-2 leading-relaxed">
+        <aside className="rounded-2xl border border-hair bg-cream p-5 sm:p-6 text-sm text-ink-2 leading-relaxed">
           <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-3">
             Not sure where to start?
           </p>
@@ -152,7 +152,7 @@ export default function ToolsIndex() {
       <section id="start-here" className="mb-16 scroll-mt-28">
         <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
           <h2
-            className="text-2xl font-extrabold text-ink"
+            className="text-xl sm:text-2xl font-extrabold text-ink"
             style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
           >
             Most popular tools
@@ -193,7 +193,7 @@ export default function ToolsIndex() {
       <section className="mb-16">
         <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
           <h2
-            className="text-2xl font-extrabold text-ink"
+            className="text-xl sm:text-2xl font-extrabold text-ink"
             style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
           >
             Browse by goal
@@ -244,7 +244,7 @@ export default function ToolsIndex() {
       <section className="mb-16">
         <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
           <h2
-            className="text-2xl font-extrabold text-ink"
+            className="text-xl sm:text-2xl font-extrabold text-ink"
             style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
           >
             Specialty tools
@@ -333,7 +333,7 @@ export default function ToolsIndex() {
       <section className="mb-16">
         <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
           <h2
-            className="text-2xl font-extrabold text-ink"
+            className="text-xl sm:text-2xl font-extrabold text-ink"
             style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
           >
             By essay prompt
@@ -389,7 +389,7 @@ export default function ToolsIndex() {
       <section className="mb-16">
         <div className="flex items-baseline justify-between mb-6 flex-wrap gap-2">
           <h2
-            className="text-2xl font-extrabold text-ink"
+            className="text-xl sm:text-2xl font-extrabold text-ink"
             style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
           >
             By school
@@ -451,28 +451,28 @@ export default function ToolsIndex() {
       </section>
 
       {/* Final CTA */}
-      <section className="rounded-3xl bg-gradient-to-br from-oxblood via-[#7C3AED] to-[#8B5CF6] p-8 md:p-12 text-white shadow-[0_8px_32px_rgba(99,102,241,0.3)]">
+      <section className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-oxblood via-[#7C3AED] to-[#8B5CF6] p-6 sm:p-8 md:p-12 text-white shadow-[0_8px_32px_rgba(99,102,241,0.3)]">
         <div className="max-w-2xl">
           <div className="flex items-center gap-2 mb-3">
             <Search className="w-4 h-4" />
-            <p className="text-xs font-semibold uppercase tracking-widest opacity-90">
+            <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-widest opacity-90">
               One tool that does it all
             </p>
           </div>
           <h2
-            className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-3 sm:mb-4 leading-tight"
             style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
           >
             Skip the tool-hopping. Score your full essay in 60 seconds.
           </h2>
-          <p className="text-base opacity-95 mb-6 leading-relaxed">
+          <p className="text-sm sm:text-base opacity-95 mb-5 sm:mb-6 leading-relaxed">
             Ivy Admit&apos;s essay editor combines hooks, cliche detection, line-by-line
             scoring, and school-specific feedback in one place. Trained on 500+ Ivy
             League accepted essays.
           </p>
           <Link
             href="/try"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-oxblood font-semibold text-sm hover:bg-white/95 transition-colors"
+            className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-white text-oxblood font-semibold text-[13px] sm:text-sm hover:bg-white/95 transition-colors"
           >
             Score my essay free
             <ArrowRight className="w-4 h-4" />

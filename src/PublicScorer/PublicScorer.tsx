@@ -79,7 +79,7 @@ export default function PublicScorer({
     <div className="space-y-6">
       <form
         onSubmit={handleSubmit}
-        className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5"
+        className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7 space-y-4 sm:space-y-5"
       >
         <div>
           <label className="block text-sm font-semibold text-ink mb-2">
@@ -158,7 +158,7 @@ export default function PublicScorer({
 function RatingDisplay({ rating }: { rating: Rating }) {
   return (
     <div className="space-y-4">
-      <div className="rounded-2xl bg-gradient-to-br from-oxblood to-oxblood-2 p-8 text-white">
+      <div className="rounded-2xl bg-gradient-to-br from-oxblood to-oxblood-2 p-5 sm:p-8 text-white">
         <p className="text-xs font-semibold uppercase tracking-widest mb-2 opacity-80">
           Overall score
         </p>
@@ -275,7 +275,7 @@ function ScoreBar({ label, score, max }: { label: string; score: number; max: nu
 
 function SignupTeaser() {
   return (
-    <div className="rounded-2xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-7 text-white">
+    <div className="rounded-2xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-5 sm:p-7 text-white">
       <div className="flex items-center gap-2 mb-3">
         <Lock className="w-4 h-4" />
         <p className="text-xs font-semibold uppercase tracking-widest opacity-80">

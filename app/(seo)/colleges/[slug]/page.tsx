@@ -244,7 +244,7 @@ export default async function CollegePage({ params }: Props) {
     : null;
 
   return (
-    <article className="pt-24 pb-24 px-6">
+    <article className="pt-14 sm:pt-20 md:pt-24 pb-16 sm:pb-24 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collegeSchema) }} />
@@ -262,16 +262,16 @@ export default async function CollegePage({ params }: Props) {
         />
 
         {/* Hero */}
-        <header className="text-center mt-6 mb-12">
-          <p className="text-[11px] font-semibold text-oxblood uppercase tracking-[0.18em] mb-4">
+        <header className="text-center mt-5 sm:mt-6 mb-10 sm:mb-12">
+          <p className="text-[10.5px] sm:text-[11px] font-semibold text-oxblood uppercase tracking-[0.16em] sm:tracking-[0.18em] mb-3 sm:mb-4">
             {school.category} · {school.location}
           </p>
           <h1
-            className="text-ink mb-5 mx-auto max-w-2xl"
+            className="text-ink mb-4 sm:mb-5 mx-auto max-w-2xl"
             style={{
               fontFamily: "var(--font-heading)",
               fontWeight: 700,
-              fontSize: "clamp(36px, 5vw, 52px)",
+              fontSize: "clamp(28px, 5vw, 52px)",
               lineHeight: "1.05",
               letterSpacing: "-0.02em",
             }}
@@ -279,13 +279,13 @@ export default async function CollegePage({ params }: Props) {
             {school.name}
           </h1>
           {admitRate !== undefined && (
-            <p className="font-serif italic text-xl md:text-2xl text-ink-2 mb-7 max-w-xl mx-auto leading-snug">
+            <p className="font-serif italic text-lg sm:text-xl md:text-2xl text-ink-2 mb-5 sm:mb-7 max-w-xl mx-auto leading-snug">
               {difficulty.label}. {formatPctSafe(admitRate)} acceptance rate.
             </p>
           )}
           <Link
             href="/try"
-            className="inline-block px-7 py-3 rounded-full bg-ink !text-white !no-underline font-medium hover:bg-oxblood hover:!text-white transition-all"
+            className="inline-block px-5 sm:px-7 py-2.5 sm:py-3 rounded-full bg-ink !text-white !no-underline font-medium text-[14px] sm:text-base hover:bg-oxblood hover:!text-white transition-all"
           >
             Calculate your {school.shortName} odds
           </Link>
@@ -293,13 +293,12 @@ export default async function CollegePage({ params }: Props) {
 
         {/* Featured-snippet Q&A */}
         {admitRate !== undefined && (
-          <section className="not-prose mb-12 rounded-2xl border border-hair bg-cream px-7 py-6">
+          <section className="not-prose mb-10 sm:mb-12 rounded-2xl border border-hair bg-cream px-5 sm:px-7 py-5 sm:py-6">
             <h2
-              className="text-ink mb-2"
+              className="text-ink mb-2 text-[18px] sm:text-[20px]"
               style={{
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
-                fontSize: "20px",
                 letterSpacing: "-0.005em",
               }}
             >
@@ -638,7 +637,7 @@ export default async function CollegePage({ params }: Props) {
                 Side-by-side comparison with similar {school.category} schools applicants typically consider.
               </p>
               <div className="not-prose overflow-x-auto my-8">
-                <table className="w-full text-sm border border-hair rounded-xl overflow-hidden bg-cream">
+                <table className="w-full text-sm border border-hair rounded-xl overflow-hidden bg-cream min-w-[480px]">
                   <thead className="bg-[#FAEEEA]">
                     <tr>
                       <th className="text-left px-4 py-3 text-[11px] font-semibold text-pencil uppercase tracking-[0.15em]">School</th>

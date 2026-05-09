@@ -61,7 +61,7 @@ export default function PolishPass() {
   return (
     <div className="space-y-6">
       {paywall && <PaywallBanner />}
-      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5">
+      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7 space-y-4 sm:space-y-5">
         <div>
           <label className="block text-sm font-semibold text-ink mb-2">Paste your essay</label>
           <textarea value={essay} onChange={(e) => setEssay(e.target.value)} placeholder="Paste your draft here. The polish pass fixes grammar, tightens phrasing, replaces weak verbs, and cleans cliches in one go." rows={14} className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none font-mono" maxLength={6000} required />
@@ -75,7 +75,7 @@ export default function PolishPass() {
       {error && <div className="rounded-xl bg-[#FAEEEA] border border-[#E8C9C2] p-4 text-sm text-[#B91C1C]">{error}</div>}
 
       {output && (
-        <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+        <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7">
           <div className="flex items-center justify-between mb-4">
             <p className="text-xs font-semibold text-oxblood uppercase tracking-widest">Polished essay</p>
             <div className="flex items-center gap-3">

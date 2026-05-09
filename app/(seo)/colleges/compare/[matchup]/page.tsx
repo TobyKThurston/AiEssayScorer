@@ -226,7 +226,7 @@ export default async function CompareCollegePage({ params }: Props) {
   };
 
   return (
-    <article className="pt-24 pb-24 px-6">
+    <article className="pt-14 sm:pt-20 md:pt-24 pb-16 sm:pb-24 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
@@ -250,7 +250,7 @@ export default async function CompareCollegePage({ params }: Props) {
             style={{
               fontFamily: "var(--font-heading)",
               fontWeight: 700,
-              fontSize: "clamp(34px, 5vw, 50px)",
+              fontSize: "clamp(26px, 5vw, 50px)",
               lineHeight: "1.05",
               letterSpacing: "-0.02em",
             }}
@@ -311,7 +311,8 @@ export default async function CompareCollegePage({ params }: Props) {
             Full Comparison
           </p>
           <div className="rounded-2xl border border-hair overflow-hidden bg-cream">
-            <table className="w-full text-sm">
+            <div className="overflow-x-auto">
+            <table className="w-full text-sm min-w-[420px]">
               <thead className="bg-[#FAEEEA]">
                 <tr>
                   <th className="text-left px-3 sm:px-5 py-3.5 text-[11px] font-semibold text-pencil uppercase tracking-[0.15em]">Metric</th>
@@ -397,6 +398,7 @@ export default async function CompareCollegePage({ params }: Props) {
                 />
               </tbody>
             </table>
+            </div>
           </div>
           <p className="text-[11px] text-pencil mt-3 text-center">
             Sources: U.S. Department of Education College Scorecard (IPEDS) and school-published admit cycle data. Last verified {LAST_VERIFIED}.
@@ -530,7 +532,8 @@ export default async function CompareCollegePage({ params }: Props) {
                 and {formatPctSafe(rb.sc.demoAsian)} Asian-American.
               </p>
               <div className="not-prose rounded-xl border border-hair overflow-hidden bg-cream my-6">
-                <table className="w-full text-sm">
+                <div className="overflow-x-auto">
+                <table className="w-full text-sm min-w-[420px]">
                   <thead className="bg-[#FAEEEA]">
                     <tr>
                       <th className="text-left px-3 sm:px-5 py-3 text-[11px] font-semibold text-pencil uppercase tracking-[0.15em]">Demographic</th>
@@ -547,6 +550,7 @@ export default async function CompareCollegePage({ params }: Props) {
                     <CompareRow metric="Black" va={formatPctSafe(ra.sc.demoBlack)} vb={formatPctSafe(rb.sc.demoBlack)} win="unknown" last />
                   </tbody>
                 </table>
+                </div>
               </div>
             </>
           )}

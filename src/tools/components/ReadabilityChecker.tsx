@@ -83,7 +83,7 @@ export default function ReadabilityChecker() {
 
   return (
     <div className="space-y-6">
-      <div className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+      <div className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7">
         <label className="block text-sm font-semibold text-ink mb-2">
           Paste your essay draft
         </label>
@@ -169,7 +169,7 @@ function Metric({
 }) {
   const pct = Math.min(100, Math.round((value / Math.max(1, max)) * 100));
   return (
-    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6">
       <div className="flex items-center gap-2 mb-3">
         <span className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-paper-2 text-oxblood">
           {icon}

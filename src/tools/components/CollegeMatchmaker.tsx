@@ -61,7 +61,7 @@ export default function CollegeMatchmaker() {
   return (
     <div className="space-y-6">
       {paywall && <PaywallBanner />}
-      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5">
+      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7 space-y-4 sm:space-y-5">
         <div>
           <label className="block text-sm font-semibold text-ink mb-2">Paste your personal statement</label>
           <textarea value={essay} onChange={(e) => setEssay(e.target.value)} placeholder="Paste your Common App personal statement..." rows={12} className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none font-mono" maxLength={6000} required />
@@ -83,7 +83,7 @@ export default function CollegeMatchmaker() {
             <p className="text-xs font-semibold uppercase tracking-widest mb-2 opacity-80">What your essay reveals about you</p>
             <p className="text-[15px] leading-relaxed">{result.readingOfYou}</p>
           </div>
-          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-4">
               <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-oxblood"><GraduationCap className="w-4 h-4" /></span>
               <h3 className="text-sm font-extrabold text-ink uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>10 schools that fit your voice</h3>
@@ -103,7 +103,7 @@ export default function CollegeMatchmaker() {
               })}
             </div>
           </div>
-          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-3">
               <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-oxblood"><AlertTriangle className="w-4 h-4" /></span>
               <h3 className="text-sm font-extrabold text-ink uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>Types of schools to avoid</h3>
@@ -112,7 +112,7 @@ export default function CollegeMatchmaker() {
               {result.schoolsToAvoid.map((s, i) => <li key={i} className="text-[14.5px] text-ink leading-relaxed">• {s}</li>)}
             </ul>
           </div>
-          <div className="rounded-2xl bg-[#FEF3C7] border border-[#FDE68A] p-6">
+          <div className="rounded-2xl bg-[#FEF3C7] border border-[#FDE68A] p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-2">
               <Compass className="w-4 h-4 text-[#92400E]" />
               <p className="text-xs font-semibold text-[#92400E] uppercase tracking-widest">The thread for every Why essay</p>

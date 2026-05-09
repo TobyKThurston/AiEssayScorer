@@ -11,7 +11,7 @@ import { SoftwareApplicationSchema } from "@/tools/components/ToolSchema";
 
 export function ScoreSchoolPage({ school }: { school: School }) {
   return (
-    <div className="max-w-[900px] mx-auto px-6 md:px-16 pt-28 md:pt-36 pb-20">
+    <div className="max-w-[900px] mx-auto px-5 sm:px-6 md:px-16 pt-16 sm:pt-24 md:pt-36 pb-12 sm:pb-20">
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },
@@ -28,17 +28,17 @@ export function ScoreSchoolPage({ school }: { school: School }) {
 
       <ToolSwitcher currentSlug="" />
 
-      <div className="mb-10">
-        <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-3">
+      <div className="mb-8 sm:mb-10">
+        <p className="text-[11px] sm:text-xs font-semibold text-oxblood uppercase tracking-widest mb-2 sm:mb-3">
           {school.shortName} essay scorer
         </p>
         <h1
-          className="mb-4 text-ink"
-          style={{ fontSize: "36px", lineHeight: "44px", fontFamily: "var(--font-heading)", letterSpacing: "-0.02em" }}
+          className="mb-3 sm:mb-4 text-ink text-[26px] sm:text-[32px] md:text-[36px] leading-[1.15]"
+          style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.02em" }}
         >
           Score your {school.shortName} essay in 60 seconds.
         </h1>
-        <p className="text-ink-2 text-lg leading-relaxed max-w-2xl">
+        <p className="text-ink-2 text-[15px] sm:text-base md:text-lg leading-relaxed max-w-2xl">
           {school.name} reviewers in {school.location} read for specificity and fit: does this essay show that you&apos;d thrive with {school.knownFor}? Paste your draft and our free AI scorer will break down your content, structure, voice, and {school.shortName}-specific fit on a transparent rubric.
         </p>
         <Link
@@ -67,7 +67,7 @@ export function ScoreSchoolPage({ school }: { school: School }) {
         </ul>
       </section>
 
-      <div className="mt-14 rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+      <div className="mt-14 rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7">
         <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-2">
           Still brainstorming?
         </p>

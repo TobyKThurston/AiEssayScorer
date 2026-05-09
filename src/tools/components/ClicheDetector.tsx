@@ -56,7 +56,7 @@ export default function ClicheDetector() {
       {paywall && <PaywallBanner />}
       <form
         onSubmit={handleSubmit}
-        className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5"
+        className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7 space-y-4 sm:space-y-5"
       >
         <div>
           <label className="block text-sm font-semibold text-ink mb-2">
@@ -110,7 +110,7 @@ export default function ClicheDetector() {
             result.findings.map((f, i) => (
               <div
                 key={i}
-                className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6"
+                className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6"
               >
                 <div className="flex items-start gap-3 mb-3">
                   <AlertCircle className="w-5 h-5 text-oxblood flex-shrink-0 mt-0.5" />

@@ -14,14 +14,14 @@ export function RelatedTools({ currentSlug }: { currentSlug: string }) {
   if (others.length === 0) return null;
 
   return (
-    <section className="mt-16">
+    <section className="mt-10 sm:mt-16">
       <h2
-        className="text-xl font-extrabold text-ink mb-5"
+        className="text-lg sm:text-xl font-extrabold text-ink mb-4 sm:mb-5"
         style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
       >
         Other free tools you might like
       </h2>
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
         {others.map((tool) => (
           <Link
             key={tool.slug}

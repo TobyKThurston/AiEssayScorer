@@ -146,7 +146,7 @@ export default function ActivityListReviewer() {
             </Panel>
           )}
 
-          <div className="rounded-2xl bg-[#FEF3C7] border border-[#FDE68A] p-6">
+          <div className="rounded-2xl bg-[#FEF3C7] border border-[#FDE68A] p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-2">
               <Lightbulb className="w-4 h-4 text-[#92400E]" />
               <p className="text-xs font-semibold text-[#92400E] uppercase tracking-widest">
@@ -175,7 +175,7 @@ function Panel({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6">
       <div className="flex items-center gap-2 mb-3">
         <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg" style={{ backgroundColor: accentBg, color: accent }}>
           {icon}

@@ -58,7 +58,7 @@ export default function ActivityRewriter() {
       {paywall && <PaywallBanner />}
       <form
         onSubmit={handleSubmit}
-        className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5"
+        className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7 space-y-4 sm:space-y-5"
       >
         <div>
           <label className="block text-sm font-semibold text-ink mb-2">
@@ -111,7 +111,7 @@ export default function ActivityRewriter() {
           {rewrites.map((r, i) => (
             <div
               key={i}
-              className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6"
+              className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6"
             >
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-paper-2 text-oxblood">

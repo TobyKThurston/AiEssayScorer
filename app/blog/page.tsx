@@ -68,7 +68,7 @@ export default function BlogIndex() {
   };
 
   return (
-    <div className="max-w-[1200px] mx-auto px-6 md:px-16 pt-28 md:pt-36 pb-20">
+    <div className="max-w-[1200px] mx-auto px-5 sm:px-6 md:px-16 pt-16 sm:pt-24 md:pt-36 pb-12 sm:pb-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
@@ -79,14 +79,14 @@ export default function BlogIndex() {
       />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Blog" }]} />
       {/* Header */}
-      <div className="mb-14 max-w-2xl">
-        <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-3">
+      <div className="mb-10 sm:mb-14 max-w-2xl">
+        <p className="text-[11px] sm:text-xs font-semibold text-oxblood uppercase tracking-widest mb-2 sm:mb-3">
           Blog
         </p>
-        <h1 className="mb-4" style={{ fontSize: "40px", lineHeight: "48px" }}>
+        <h1 className="mb-3 sm:mb-4 text-[28px] sm:text-[34px] md:text-[40px] leading-[1.15] sm:leading-[1.2]">
           College Admissions Guides
         </h1>
-        <p className="text-ink-2 text-lg leading-relaxed">
+        <p className="text-ink-2 text-[15px] sm:text-base md:text-lg leading-relaxed">
           Practical advice on essays, applications, and strategy, written for students who want to understand what actually works.
         </p>
       </div>
@@ -94,40 +94,40 @@ export default function BlogIndex() {
       {/* Featured post */}
       <Link
         href={`/blog/${featured.slug}`}
-        className="block mb-10 rounded-2xl bg-cream border border-hair shadow-[0_8px_32px_rgba(99,102,241,0.08)] p-8 hover:bg-cream hover:shadow-[0_12px_40px_rgba(99,102,241,0.14)] transition-all duration-300 group"
+        className="block mb-8 sm:mb-10 rounded-2xl bg-cream border border-hair shadow-[0_8px_32px_rgba(99,102,241,0.08)] p-5 sm:p-8 hover:bg-cream hover:shadow-[0_12px_40px_rgba(99,102,241,0.14)] transition-all duration-300 group"
       >
-        <div className="flex items-center gap-3 mb-4">
+        <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 flex-wrap">
           <span
-            className={`text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[featured.category] ?? "bg-paper-2 text-ink-2"}`}
+            className={`text-[11px] sm:text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[featured.category] ?? "bg-paper-2 text-ink-2"}`}
           >
             {featured.category}
           </span>
-          <span className="text-xs text-pencil">Featured</span>
+          <span className="text-[11px] sm:text-xs text-pencil">Featured</span>
         </div>
-        <h2 className="text-2xl md:text-3xl font-extrabold text-ink mb-3 group-hover:text-oxblood transition-colors" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.02em", lineHeight: "1.25" }}>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-ink mb-2 sm:mb-3 group-hover:text-oxblood transition-colors" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.02em", lineHeight: "1.25" }}>
           {featured.title}
         </h2>
-        <p className="text-ink-2 leading-relaxed mb-5 max-w-2xl">{featured.description}</p>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3 text-xs text-pencil">
+        <p className="text-ink-2 text-[14px] sm:text-base leading-relaxed mb-4 sm:mb-5 max-w-2xl">{featured.description}</p>
+        <div className="flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 text-[11px] sm:text-xs text-pencil">
             <span>{formatDate(featured.publishedAt)}</span>
             <span>·</span>
             <span>{featured.readTime}</span>
           </div>
-          <span className="flex items-center gap-1 text-sm font-medium text-oxblood group-hover:gap-2 transition-all">
-            Read article <ArrowRight className="w-4 h-4" />
+          <span className="flex items-center gap-1 text-[13px] sm:text-sm font-medium text-oxblood group-hover:gap-2 transition-all whitespace-nowrap">
+            Read <ArrowRight className="w-4 h-4" />
           </span>
         </div>
       </Link>
 
       {/* Rest of posts */}
       <h2 className="sr-only">More articles</h2>
-      <div className="grid md:grid-cols-2 gap-5">
+      <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
         {rest.map((post) => (
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="block rounded-2xl bg-cream backdrop-blur-md border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6 hover:bg-white/70 hover:shadow-[0_8px_32px_rgba(99,102,241,0.12)] hover:-translate-y-1 transition-all duration-300 group"
+            className="block rounded-2xl bg-cream backdrop-blur-md border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6 hover:bg-white/70 hover:shadow-[0_8px_32px_rgba(99,102,241,0.12)] hover:-translate-y-1 transition-all duration-300 group"
           >
             <span
               className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-4 ${categoryColors[post.category] ?? "bg-paper-2 text-ink-2"}`}
@@ -155,17 +155,17 @@ export default function BlogIndex() {
         ))}
       </div>
 
-      <section className="mt-20 pt-12 border-t border-hair grid grid-cols-12 gap-6 md:gap-10">
+      <section className="mt-14 sm:mt-20 pt-8 sm:pt-12 border-t border-hair grid grid-cols-12 gap-4 md:gap-10">
         <div className="col-span-12 md:col-span-4">
           <p className="eyebrow">
             <span className="num">§</span> The workshop
           </p>
         </div>
         <div className="col-span-12 md:col-span-8">
-          <h2 className="font-serif text-[30px] md:text-[42px] leading-[1.1] tracking-[-0.02em] text-ink mb-5">
+          <h2 className="font-serif text-[24px] sm:text-[30px] md:text-[42px] leading-[1.1] tracking-[-0.02em] text-ink mb-4 sm:mb-5">
             Words are <em className="italic text-oxblood">moved</em>, not written.
           </h2>
-          <p className="text-ink-2 text-[17px] leading-[1.6] max-w-[56ch] mb-8">
+          <p className="text-ink-2 text-[15px] sm:text-[17px] leading-[1.6] max-w-[56ch] mb-6 sm:mb-8">
             Brainstorm, outline, polish, or score a draft. Every tool is free, no signup, tuned against the same patterns these guides are built from.
           </p>
           <div className="flex flex-wrap gap-3">

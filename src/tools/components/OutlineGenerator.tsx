@@ -52,7 +52,7 @@ export default function OutlineGenerator() {
   return (
     <div className="space-y-6">
       {paywall && <PaywallBanner />}
-      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5">
+      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7 space-y-4 sm:space-y-5">
         <div>
           <label className="block text-sm font-semibold text-ink mb-2">Essay topic</label>
           <input
@@ -135,7 +135,7 @@ export default function OutlineGenerator() {
           <Block icon={<Flag className="w-4 h-4" />} title="Landing line" accent="#BE185D" accentBg="#FCE7F3" words={result.wordAllocation?.landing}>
             <p className="text-ink text-[15px] leading-relaxed">{result.landingLine}</p>
           </Block>
-          <div className="rounded-2xl bg-[#FEF3C7] border border-[#FDE68A] p-6">
+          <div className="rounded-2xl bg-[#FEF3C7] border border-[#FDE68A] p-5 sm:p-6">
             <p className="text-xs font-semibold text-[#92400E] uppercase tracking-widest mb-2">Craft notes</p>
             <ul className="space-y-2">
               {result.craftNotes.map((n, i) => (
@@ -151,7 +151,7 @@ export default function OutlineGenerator() {
 
 function Block({ icon, title, accent, accentBg, words, children }: { icon: React.ReactNode; title: string; accent: string; accentBg: string; words?: number; children: React.ReactNode }) {
   return (
-    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg" style={{ backgroundColor: accentBg, color: accent }}>{icon}</span>

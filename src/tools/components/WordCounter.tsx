@@ -33,7 +33,7 @@ export default function WordCounter() {
 
   return (
     <div className="space-y-6">
-      <div className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+      <div className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7">
         <label className="block text-sm font-semibold text-ink mb-2">
           Paste or type your essay
         </label>
@@ -53,7 +53,7 @@ export default function WordCounter() {
         <StatCard icon={<Clock className="w-4 h-4" />} label="Read time" value={`${stats.readingMinutes} min`} subLabel={`${stats.paragraphs} paragraphs`} />
       </div>
 
-      <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+      <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7">
         <h2
           className="text-lg font-extrabold text-ink mb-4"
           style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}

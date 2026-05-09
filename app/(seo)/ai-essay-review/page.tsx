@@ -76,7 +76,7 @@ const faqSchema = {
 
 export default function AIEssayReviewPage() {
   return (
-    <article className="pt-28 pb-20 px-6">
+    <article className="pt-14 sm:pt-20 md:pt-28 pb-12 sm:pb-20 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <script
           type="application/ld+json"
@@ -96,11 +96,11 @@ export default function AIEssayReviewPage() {
         />
 
         {/* Hero */}
-        <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-ink leading-tight mb-4">
+        <header className="mb-10 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink leading-tight mb-3 sm:mb-4">
             Free AI Essay Review for College Applications
           </h1>
-          <p className="text-lg text-ink-2 mb-6">
+          <p className="text-base sm:text-lg text-ink-2 mb-5 sm:mb-6">
             Most essay feedback is vague: "sounds generic," "needs more voice." AI essay review is
             different, it scores your draft across three measurable dimensions and points to the
             exact sentences dragging down each score. Upload your draft and get results in under
@@ -108,7 +108,7 @@ export default function AIEssayReviewPage() {
           </p>
           <Link
             href="/editor"
-            className="inline-block px-6 py-3 rounded-full bg-ink text-white font-medium hover:bg-oxblood transition-all"
+            className="inline-block px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-ink text-white font-medium text-[14px] sm:text-base hover:bg-oxblood transition-all"
           >
             Review your essay free →
           </Link>

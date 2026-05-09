@@ -30,13 +30,13 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="pt-24 md:pt-32 pb-16 md:pb-24 relative overflow-hidden">
+    <section className="pt-16 sm:pt-24 md:pt-32 pb-12 sm:pb-16 md:pb-24 relative overflow-hidden">
       {/* Background gradient blobs */}
       <div className="absolute top-0 left-1/4 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-paper-2 rounded-full opacity-40 blur-[120px]" />
       <div className="absolute top-40 right-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#BFDBFE] rounded-full opacity-40 blur-[120px]" />
 
-      <div className="max-w-[1200px] mx-auto px-6 md:px-16 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 md:px-16 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Left column - Text */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -48,9 +48,9 @@ export function Hero() {
               <Badge>Private by default</Badge>
             </div>
 
-            <h1 className="mb-6">
+            <h1 className="mb-5 sm:mb-6">
               Admit smarter with essays that are{" "}
-              <span className="inline-block relative h-[1.15em] align-bottom" style={{ minWidth: "280px" }}>
+              <span className="inline-block relative h-[1.15em] align-bottom min-w-[180px] sm:min-w-[280px]">
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={currentWordIndex}
@@ -67,7 +67,7 @@ export function Hero() {
               </span>
             </h1>
 
-            <p className="text-ink-2 mb-8 max-w-xl">
+            <p className="text-ink-2 mb-6 sm:mb-8 max-w-xl text-[15px] sm:text-base">
               Upload drafts, resumes, or prompts. Ivy Admit scores structure, flags risk, and gives precise line edits trained on successful applications.
             </p>
 

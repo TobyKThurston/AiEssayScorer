@@ -64,24 +64,24 @@ export function FAQSchema({ faqs }: { faqs: FAQ[] }) {
 export function FAQSection({ faqs, heading }: { faqs: FAQ[]; heading: string }) {
   if (!faqs || faqs.length === 0) return null;
   return (
-    <section className="mt-14">
+    <section className="mt-10 sm:mt-14">
       <h2
-        className="text-2xl font-extrabold text-ink mb-4"
+        className="text-xl sm:text-2xl font-extrabold text-ink mb-3 sm:mb-4"
         style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.01em" }}
       >
         {heading}
       </h2>
-      <div className="space-y-4">
+      <div className="space-y-3 sm:space-y-4">
         {faqs.map((q, i) => (
           <details
             key={i}
-            className="group rounded-xl bg-cream border border-hair p-5"
+            className="group rounded-xl bg-cream border border-hair p-4 sm:p-5"
           >
-            <summary className="cursor-pointer list-none flex items-center justify-between text-ink font-semibold text-[15px]">
-              {q.question}
-              <span className="text-oxblood text-xl group-open:rotate-45 transition-transform">+</span>
+            <summary className="cursor-pointer list-none flex items-start justify-between gap-3 text-ink font-semibold text-[14px] sm:text-[15px]">
+              <span className="flex-1">{q.question}</span>
+              <span className="text-oxblood text-xl group-open:rotate-45 transition-transform shrink-0">+</span>
             </summary>
-            <p className="text-ink-2 text-[14.5px] leading-relaxed mt-3">
+            <p className="text-ink-2 text-[13.5px] sm:text-[14.5px] leading-relaxed mt-3">
               {q.answer}
             </p>
           </details>

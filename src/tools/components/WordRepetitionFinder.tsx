@@ -97,7 +97,7 @@ export default function WordRepetitionFinder() {
 
   return (
     <div className="space-y-6">
-      <div className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+      <div className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7">
         <label className="block text-sm font-semibold text-ink mb-2">Paste your essay</label>
         <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="Paste your essay. Analysis runs entirely in your browser, live." rows={12} className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none font-mono" />
       </div>
@@ -163,7 +163,7 @@ function Metric({ label, value, sub }: { label: string; value: string; sub?: str
 
 function Section({ icon, title, empty, children }: { icon: React.ReactNode; title: string; empty: string | null; children: React.ReactNode }) {
   return (
-    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6">
       <div className="flex items-center gap-2 mb-4">
         <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-oxblood">{icon}</span>
         <h3 className="text-sm font-extrabold text-ink uppercase tracking-wider" style={{ fontFamily: "var(--font-heading)" }}>{title}</h3>

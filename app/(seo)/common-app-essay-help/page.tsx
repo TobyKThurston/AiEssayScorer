@@ -76,7 +76,7 @@ const faqSchema = {
 
 export default function CommonAppEssayHelpPage() {
   return (
-    <article className="pt-28 pb-20 px-6">
+    <article className="pt-14 sm:pt-20 md:pt-28 pb-12 sm:pb-20 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <script
           type="application/ld+json"
@@ -97,7 +97,7 @@ export default function CommonAppEssayHelpPage() {
 
         {/* Hero */}
         <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-ink leading-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink leading-tight mb-3 sm:mb-4">
             Common App Essay Help: Prompts, Story, Structure & Revision
           </h1>
           <p className="text-lg text-ink-2 mb-6">

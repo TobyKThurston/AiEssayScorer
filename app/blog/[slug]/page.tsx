@@ -240,7 +240,7 @@ export default async function BlogPost({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <div className="max-w-[720px] mx-auto px-6 pt-28 md:pt-36 pb-20">
+      <div className="max-w-[720px] mx-auto px-5 sm:px-6 pt-16 sm:pt-24 md:pt-36 pb-12 sm:pb-20">
         <Breadcrumbs
           items={[
             { label: "Home", href: "/" },
@@ -258,14 +258,14 @@ export default async function BlogPost({ params }: Props) {
         </Link>
 
         {/* Post header */}
-        <div className="mb-10">
-          <div className="flex items-center gap-3 mb-5">
+        <div className="mb-8 sm:mb-10">
+          <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 flex-wrap">
             <span
-              className={`text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[post.category] ?? "bg-paper-2 text-ink-2"}`}
+              className={`text-[11px] sm:text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[post.category] ?? "bg-paper-2 text-ink-2"}`}
             >
               {post.category}
             </span>
-            <span className="flex items-center gap-1 text-xs text-pencil">
+            <span className="flex items-center gap-1 text-[11px] sm:text-xs text-pencil">
               <Clock className="w-3 h-3" />
               {post.readTime}
             </span>
@@ -274,7 +274,7 @@ export default async function BlogPost({ params }: Props) {
           <h1
             style={{
               fontFamily: "var(--font-heading)",
-              fontSize: "clamp(28px, 5vw, 42px)",
+              fontSize: "clamp(24px, 5vw, 42px)",
               lineHeight: "1.2",
               fontWeight: 800,
               letterSpacing: "-0.03em",
@@ -285,7 +285,7 @@ export default async function BlogPost({ params }: Props) {
             {post.title}
           </h1>
 
-          <p className="text-pencil text-sm">
+          <p className="text-pencil text-[13px] sm:text-sm">
             {formatDate(post.publishedAt)} · Ivy Admit
           </p>
         </div>
@@ -296,14 +296,14 @@ export default async function BlogPost({ params }: Props) {
         </article>
 
         {/* CTA box */}
-        <div className="rounded-2xl bg-cream border border-hair shadow-[0_8px_32px_rgba(99,102,241,0.10)] p-8 mb-14 text-center">
-          <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-3">
+        <div className="rounded-2xl bg-cream border border-hair shadow-[0_8px_32px_rgba(99,102,241,0.10)] p-5 sm:p-8 mb-10 sm:mb-14 text-center">
+          <p className="text-[11px] sm:text-xs font-semibold text-oxblood uppercase tracking-widest mb-2 sm:mb-3">
             Ready to improve your essay?
           </p>
           <h2
+            className="text-[18px] sm:text-[22px]"
             style={{
               fontFamily: "var(--font-heading)",
-              fontSize: "22px",
               fontWeight: 800,
               letterSpacing: "-0.02em",
               color: "#0F172A",
@@ -312,12 +312,12 @@ export default async function BlogPost({ params }: Props) {
           >
             Get a score and line-by-line edits in under a minute
           </h2>
-          <p className="text-pencil text-sm mb-6 max-w-md mx-auto">
+          <p className="text-pencil text-[13.5px] sm:text-sm mb-5 sm:mb-6 max-w-md mx-auto">
             Upload your draft and get scored across content, structure, and voice, plus specific suggestions to raise every dimension.
           </p>
           <Link
             href="/editor"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-ink text-white text-sm font-medium hover:bg-oxblood transition-all"
+            className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-ink text-white text-[13px] sm:text-sm font-medium hover:bg-oxblood transition-all"
           >
             Review your essay free
             <ArrowRight className="w-4 h-4" />

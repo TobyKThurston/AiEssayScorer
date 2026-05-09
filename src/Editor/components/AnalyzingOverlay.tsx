@@ -59,7 +59,7 @@ export function AnalyzingOverlay({ isOpen, isDone, onAnimationComplete }: Analyz
         WebkitBackdropFilter: "blur(6px)",
       }}
     >
-      <div className="w-full max-w-[440px] mx-4 bg-paper border border-hair rounded-[2px] shadow-[0_24px_80px_rgba(26,20,16,0.35)] p-10">
+      <div className="w-full max-w-[440px] mx-4 bg-paper border border-hair rounded-[2px] shadow-[0_24px_80px_rgba(26,20,16,0.35)] p-6 sm:p-10">
         <p className="eyebrow mb-4">
           <span className="num">§</span> Analysis in progress
         </p>

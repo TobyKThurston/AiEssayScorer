@@ -260,16 +260,16 @@ function EssayRow({
     <li>
       <button
         onClick={() => onOpen(essay.id)}
-        className="w-full text-left group grid grid-cols-[auto_1fr_auto] items-baseline gap-6 py-5 -mx-3 px-3 hover:bg-cream/60 transition-colors"
+        className="w-full text-left group grid grid-cols-[auto_1fr_auto] items-baseline gap-3 sm:gap-6 py-4 sm:py-5 -mx-2 sm:-mx-3 px-2 sm:px-3 hover:bg-cream/60 transition-colors"
       >
-        <span className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-oxblood/80 shrink-0 w-[62px]">
+        <span className="font-mono text-[10px] sm:text-[10.5px] uppercase tracking-[0.14em] sm:tracking-[0.16em] text-oxblood/80 shrink-0 w-10 sm:w-[62px]">
           Draft
         </span>
         <div className="min-w-0">
-          <p className="font-serif text-[20px] md:text-[22px] leading-[1.2] text-ink group-hover:text-oxblood transition-colors truncate">
+          <p className="font-serif text-[17px] sm:text-[20px] md:text-[22px] leading-[1.2] text-ink group-hover:text-oxblood transition-colors truncate">
             {essay.title}
           </p>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1.5 text-[12px] font-mono uppercase tracking-[0.14em] text-pencil">
+          <div className="flex flex-wrap items-center gap-x-3 sm:gap-x-4 gap-y-1 mt-1.5 text-[11px] sm:text-[12px] font-mono uppercase tracking-[0.12em] sm:tracking-[0.14em] text-pencil">
             <span className="flex items-center gap-1.5">
               <Clock className="w-3 h-3" />
               {formatDate(essay.updated_at)}

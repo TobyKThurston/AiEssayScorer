@@ -147,7 +147,7 @@ export function OddsFlow() {
   };
 
   return (
-    <section ref={wizardRef} className="pt-6 md:pt-14 pb-16 md:pb-20">
+    <section ref={wizardRef} className="pt-4 sm:pt-6 md:pt-14 pb-12 sm:pb-16 md:pb-20">
       <Container>
         <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 pb-3 sm:pb-4 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.16em] text-pencil">
           <span>The Admit Forecast · Confidential Worksheet</span>
@@ -250,15 +250,15 @@ function StepHeader({
   subtitle?: string;
 }) {
   return (
-    <div className="mb-7">
-      <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-oxblood">
+    <div className="mb-5 sm:mb-7">
+      <div className="font-mono text-[10.5px] sm:text-[11px] uppercase tracking-[0.14em] sm:tracking-[0.16em] text-oxblood">
         {eyebrow}
       </div>
-      <h2 className="mt-2 text-ink text-[28px] md:text-[32px] leading-[1.15] font-serif">
+      <h2 className="mt-2 text-ink text-[22px] sm:text-[28px] md:text-[32px] leading-[1.15] font-serif">
         {title}
       </h2>
       {subtitle ? (
-        <p className="mt-3 text-[15px] text-ink-2 max-w-[52ch]">{subtitle}</p>
+        <p className="mt-2 sm:mt-3 text-[14px] sm:text-[15px] text-ink-2 max-w-[52ch]">{subtitle}</p>
       ) : null}
     </div>
   );
@@ -276,9 +276,9 @@ function NavButtons({
   disabled?: boolean;
 }) {
   return (
-    <div className="mt-auto pt-8 flex items-center justify-between">
+    <div className="mt-auto pt-6 sm:pt-8 flex items-center justify-between gap-3">
       {onBack ? (
-        <button onClick={onBack} className="text-[14px] text-ink-2 hover:text-oxblood underline-offset-4 hover:underline">
+        <button onClick={onBack} className="text-[14px] text-ink-2 hover:text-oxblood underline-offset-4 hover:underline px-2 py-2">
           ← Back
         </button>
       ) : (
@@ -287,7 +287,7 @@ function NavButtons({
       <button
         onClick={onNext}
         disabled={disabled}
-        className="btn btn-ink text-[15px] font-semibold px-7 py-3.5 disabled:opacity-40 disabled:cursor-not-allowed"
+        className="btn btn-ink text-[14px] sm:text-[15px] font-semibold px-5 sm:px-7 py-3 sm:py-3.5 disabled:opacity-40 disabled:cursor-not-allowed"
       >
         {nextLabel} →
       </button>
@@ -1110,21 +1110,21 @@ function StepReveal({ result }: { result: OddsResult | null }) {
           style={{ animationDelay: `${i * 90}ms` }}
         >
           <PaperCard>
-            <div className="flex items-baseline justify-between gap-4">
-              <div>
-                <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-pencil">
+            <div className="flex items-baseline justify-between gap-3 sm:gap-4">
+              <div className="min-w-0">
+                <div className="font-mono text-[10.5px] sm:text-[11px] uppercase tracking-[0.14em] sm:tracking-[0.16em] text-pencil">
                   {s.tier}
                 </div>
-                <h3 className="text-ink text-[22px] font-serif mt-1">{s.name}</h3>
+                <h3 className="text-ink text-[18px] sm:text-[22px] font-serif mt-1 break-words">{s.name}</h3>
               </div>
-              <div className="text-right">
-                <div className="text-[44px] font-serif text-oxblood leading-none tabular-nums">
+              <div className="text-right shrink-0">
+                <div className="text-[34px] sm:text-[44px] font-serif text-oxblood leading-none tabular-nums">
                   {s.percent}%
                 </div>
-                <div className="text-[11px] text-pencil mt-1">admit chance</div>
+                <div className="text-[10.5px] sm:text-[11px] text-pencil mt-1">admit chance</div>
               </div>
             </div>
-            <ul className="mt-4 pt-4 border-t border-hair space-y-1.5 text-[14px] text-ink-2">
+            <ul className="mt-4 pt-4 border-t border-hair space-y-1.5 text-[13px] sm:text-[14px] text-ink-2">
               {s.factors.map((f, idx) => (
                 <li key={idx}>· {f}</li>
               ))}
@@ -1134,7 +1134,7 @@ function StepReveal({ result }: { result: OddsResult | null }) {
       ))}
 
       <div className="text-center pt-6">
-        <Link href="/essay-grader" className="btn btn-ink text-[15px] font-semibold px-7 py-3.5">
+        <Link href="/essay-grader" className="btn btn-ink text-[14px] sm:text-[15px] font-semibold px-5 sm:px-7 py-3 sm:py-3.5">
           Grade my essay next →
         </Link>
       </div>

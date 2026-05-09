@@ -50,7 +50,7 @@ const breadcrumbSchema = {
 
 export default function AboutPage() {
   return (
-    <Container className="pt-20 md:pt-28 pb-24">
+    <Container className="pt-12 sm:pt-20 md:pt-28 pb-16 sm:pb-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
@@ -61,15 +61,15 @@ export default function AboutPage() {
       />
       <div className="max-w-[720px]">
         <Eyebrow num="§01">About</Eyebrow>
-        <h1 className="mt-4 font-serif text-[48px] md:text-[72px] leading-[1] tracking-[-0.025em] text-ink">
+        <h1 className="mt-3 sm:mt-4 font-serif text-[34px] sm:text-[48px] md:text-[72px] leading-[1] tracking-[-0.025em] text-ink">
           Why we built <em className="italic text-oxblood">Ivy Admit</em>.
         </h1>
-        <p className="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-ink-2">
+        <p className="mt-5 sm:mt-6 text-[15px] sm:text-[17px] md:text-[18px] leading-[1.6] text-ink-2">
           An AI-powered essay review tool built by students who went through the same process, and
           wanted a faster, more honest way to get feedback.
         </p>
 
-        <div className="mt-14 space-y-12">
+        <div className="mt-10 sm:mt-14 space-y-10 sm:space-y-12">
           <Section heading="Why we built it">
             <p>
               College essay feedback is scarce and unevenly distributed. Students with access to
@@ -142,11 +142,11 @@ export default function AboutPage() {
 function Section({ heading, children }: { heading: string; children: React.ReactNode }) {
   return (
     <section>
-      <h2 className="font-serif text-[28px] md:text-[34px] leading-[1.15] tracking-[-0.015em] text-ink mb-4">
+      <h2 className="font-serif text-[22px] sm:text-[28px] md:text-[34px] leading-[1.15] tracking-[-0.015em] text-ink mb-3 sm:mb-4">
         {heading}
       </h2>
       <Rule />
-      <div className="mt-5 text-[16px] md:text-[17px] leading-[1.7] text-ink-2 space-y-4">
+      <div className="mt-4 sm:mt-5 text-[15px] sm:text-[16px] md:text-[17px] leading-[1.7] text-ink-2 space-y-4">
         {children}
       </div>
     </section>

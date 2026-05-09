@@ -45,7 +45,7 @@ export default function FirstSentenceGenerator() {
   return (
     <div className="space-y-6">
       {paywall && <PaywallBanner />}
-      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5">
+      <form onSubmit={handleSubmit} className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7 space-y-4 sm:space-y-5">
         <div>
           <label className="block text-sm font-semibold text-ink mb-2">What's your essay about?</label>
           <input type="text" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g., The summer I rebuilt my grandfather's cassette collection" className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition" maxLength={500} required />
@@ -62,7 +62,7 @@ export default function FirstSentenceGenerator() {
       {error && <div className="rounded-xl bg-[#FAEEEA] border border-[#E8C9C2] p-4 text-sm text-[#B91C1C]">{error}</div>}
 
       {output && (
-        <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7">
+        <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7">
           <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-4">Seven first sentences</p>
           <div className="text-ink text-[15px] leading-[1.75] whitespace-pre-wrap">{output}</div>
         </div>

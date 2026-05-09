@@ -61,7 +61,7 @@ export default function WhyCollegeBrainstormer({
       {paywall && <PaywallBanner />}
       <form
         onSubmit={handleSubmit}
-        className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-7 space-y-5"
+        className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7 space-y-4 sm:space-y-5"
       >
         <div className={lockSchool ? "" : "grid md:grid-cols-2 gap-4"}>
           {!lockSchool && (
@@ -136,7 +136,7 @@ export default function WhyCollegeBrainstormer({
           <Section icon={<BookOpen className="w-4 h-4" />} title="Specific courses" items={result.courses} />
           <Section icon={<Users className="w-4 h-4" />} title="Programs & clubs" items={result.programsAndClubs} />
 
-          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+          <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-4">
               <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-oxblood">
                 <Building className="w-4 h-4" />
@@ -155,7 +155,7 @@ export default function WhyCollegeBrainstormer({
             </ul>
           </div>
 
-          <div className="rounded-2xl bg-[#FEF3C7] border border-[#FDE68A] p-6">
+          <div className="rounded-2xl bg-[#FEF3C7] border border-[#FDE68A] p-5 sm:p-6">
             <p className="text-xs font-semibold text-[#92400E] uppercase tracking-widest mb-3">
               Verify before you cite
             </p>
@@ -185,7 +185,7 @@ function Section({
 }) {
   if (!items || items.length === 0) return null;
   return (
-    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-6">
+    <div className="rounded-2xl bg-white/70 backdrop-blur-xl border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-6">
       <div className="flex items-center gap-2 mb-4">
         <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper-2 text-oxblood">
           {icon}

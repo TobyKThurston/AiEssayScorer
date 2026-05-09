@@ -25,8 +25,8 @@ export function FullApplicationView() {
     content: searchParams.get("content") || "When my robotics team's main controller failed two days before the regional competition, I learned that true engineering isn't about perfect execution, it's about creative problem-solving under pressure..."
   }), [searchParams]);
   return (
-    <div className="min-h-screen bg-paper pt-24 pb-16">
-      <div className="max-w-[900px] mx-auto px-6">
+    <div className="min-h-screen bg-paper pt-14 sm:pt-20 md:pt-24 pb-12 sm:pb-16">
+      <div className="max-w-[900px] mx-auto px-5 sm:px-6">
         {/* Back Button */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -47,15 +47,15 @@ export function FullApplicationView() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-white rounded-2xl p-8 shadow-[0_4px_16px_rgba(0,0,0,0.06)] mb-8"
+          className="bg-white rounded-2xl p-5 sm:p-8 shadow-[0_4px_16px_rgba(0,0,0,0.06)] mb-6 sm:mb-8"
         >
-          <div className="flex items-start gap-6 mb-6">
-            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-oxblood to-forest flex items-center justify-center text-white shadow-lg flex-shrink-0">
-              <span className="text-2xl">{studentProfile.name.split(' ').map(n => n[0]).join('')}</span>
+          <div className="flex items-start gap-4 sm:gap-6 mb-5 sm:mb-6">
+            <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-oxblood to-forest flex items-center justify-center text-white shadow-lg flex-shrink-0">
+              <span className="text-lg sm:text-2xl">{studentProfile.name.split(' ').map(n => n[0]).join('')}</span>
             </div>
-            <div className="flex-1">
-              <h1 className="mb-2">{studentProfile.name}</h1>
-              <div className="flex flex-wrap items-center gap-2 text-pencil">
+            <div className="flex-1 min-w-0">
+              <h1 className="mb-2 text-2xl sm:text-3xl">{studentProfile.name}</h1>
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-pencil text-[13px] sm:text-base">
                 <span>{studentProfile.year}</span>
                 <span>•</span>
                 <span>{studentProfile.major}</span>
@@ -66,34 +66,34 @@ export function FullApplicationView() {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-paper rounded-xl p-4">
-              <div className="flex items-center gap-2 mb-2">
-                <Award className="w-5 h-5 text-oxblood" />
-                <span className="text-pencil">SAT Score</span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4">
+            <div className="bg-paper rounded-xl p-3 sm:p-4">
+              <div className="flex items-center gap-1.5 sm:gap-2 mb-1 sm:mb-2">
+                <Award className="w-4 h-4 sm:w-5 sm:h-5 text-oxblood" />
+                <span className="text-pencil text-[11px] sm:text-sm">SAT</span>
               </div>
-              <p className="text-ink">{studentProfile.sat}</p>
+              <p className="text-ink text-[14px] sm:text-base">{studentProfile.sat}</p>
             </div>
-            <div className="bg-paper rounded-xl p-4">
-              <div className="flex items-center gap-2 mb-2">
-                <BookOpen className="w-5 h-5 text-oxblood" />
-                <span className="text-pencil">GPA</span>
+            <div className="bg-paper rounded-xl p-3 sm:p-4">
+              <div className="flex items-center gap-1.5 sm:gap-2 mb-1 sm:mb-2">
+                <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-oxblood" />
+                <span className="text-pencil text-[11px] sm:text-sm">GPA</span>
               </div>
-              <p className="text-ink">{studentProfile.gpa.toFixed(2)}</p>
+              <p className="text-ink text-[14px] sm:text-base">{studentProfile.gpa.toFixed(2)}</p>
             </div>
-            <div className="bg-paper rounded-xl p-4">
-              <div className="flex items-center gap-2 mb-2">
-                <GraduationCap className="w-5 h-5 text-oxblood" />
-                <span className="text-pencil">Major</span>
+            <div className="bg-paper rounded-xl p-3 sm:p-4">
+              <div className="flex items-center gap-1.5 sm:gap-2 mb-1 sm:mb-2">
+                <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-oxblood" />
+                <span className="text-pencil text-[11px] sm:text-sm">Major</span>
               </div>
-              <p className="text-ink">{studentProfile.major}</p>
+              <p className="text-ink text-[13px] sm:text-base truncate">{studentProfile.major}</p>
             </div>
-            <div className="bg-paper rounded-xl p-4">
-              <div className="flex items-center gap-2 mb-2">
-                <FileText className="w-5 h-5 text-oxblood" />
-                <span className="text-pencil">School</span>
+            <div className="bg-paper rounded-xl p-3 sm:p-4">
+              <div className="flex items-center gap-1.5 sm:gap-2 mb-1 sm:mb-2">
+                <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-oxblood" />
+                <span className="text-pencil text-[11px] sm:text-sm">School</span>
               </div>
-              <p className="text-ink text-sm">{studentProfile.school}</p>
+              <p className="text-ink text-[12px] sm:text-sm truncate">{studentProfile.school}</p>
             </div>
           </div>
         </motion.div>

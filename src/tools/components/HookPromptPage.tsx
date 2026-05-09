@@ -11,7 +11,7 @@ import { DeepHookPromptContent } from "@/tools/components/DeepVariantContent";
 
 export function HookPromptPage({ prompt }: { prompt: EssayPrompt }) {
   return (
-    <div className="max-w-[900px] mx-auto px-6 md:px-16 pt-28 md:pt-36 pb-20">
+    <div className="max-w-[900px] mx-auto px-5 sm:px-6 md:px-16 pt-16 sm:pt-24 md:pt-36 pb-12 sm:pb-20">
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },
@@ -33,8 +33,7 @@ export function HookPromptPage({ prompt }: { prompt: EssayPrompt }) {
           Hook generator for {prompt.family}
         </p>
         <h1
-          className="mb-4 text-ink"
-          style={{ fontSize: "36px", lineHeight: "44px", fontFamily: "var(--font-heading)", letterSpacing: "-0.02em" }}
+          className="mb-3 sm:mb-4 text-ink text-[26px] sm:text-[32px] md:text-[36px] leading-[1.15]" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.02em" }}
         >
           Hook Generator for {prompt.shortName}
         </h1>
@@ -43,7 +42,7 @@ export function HookPromptPage({ prompt }: { prompt: EssayPrompt }) {
         </p>
       </div>
 
-      <div className="mb-8 rounded-2xl bg-cream border border-hair p-6">
+      <div className="mb-8 rounded-2xl bg-cream border border-hair p-5 sm:p-6">
         <p className="text-xs font-semibold text-oxblood uppercase tracking-widest mb-2">
           The full prompt
         </p>
