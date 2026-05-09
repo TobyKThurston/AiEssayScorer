@@ -144,16 +144,6 @@ export function OddsFlow() {
         </div>
         <hr className="rule" />
 
-        {step === "test" ? (
-          <div className="mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[12px] text-pencil">
-            <span>Free to start</span>
-            <span className="text-hair">·</span>
-            <span>No card to begin</span>
-            <span className="hidden sm:inline text-hair">·</span>
-            <span className="hidden sm:inline">See your tier first</span>
-          </div>
-        ) : null}
-
         {isWizard ? <Progress index={visibleStepIndex} total={STEPS.length} /> : null}
 
         <div className="mt-6 sm:mt-8 max-w-[640px] mx-auto">
