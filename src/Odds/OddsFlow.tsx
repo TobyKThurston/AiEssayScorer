@@ -673,7 +673,7 @@ function StepActivities({
       <StepHeader
         eyebrow="Step 5 · Activities"
         title="Add up to 5 activities"
-        subtitle="Start with what you spend the most time on — clubs, sports, jobs, research, volunteering. The more you tell us, the more personal your forecast."
+        subtitle="Start with what you spend the most time on. Clubs, sports, jobs, research, volunteering. The more you tell us, the more personal your forecast."
       />
 
       <div className="space-y-5">
@@ -945,6 +945,205 @@ function StepLoading() {
   );
 }
 
+function getProximityHint(odds: SchoolOdds): string {
+  const { percent, tier } = odds;
+  if (tier === "Reach") {
+    if (percent >= 25) return "Right at the Match boundary";
+    if (percent >= 18) return "Upper Reach. Real room to push";
+    if (percent >= 10) return "Mid Reach. The path is specific, not vague";
+    return "Long shot. There are still leverage points";
+  }
+  if (tier === "Match") {
+    if (percent >= 50) return "Edging into Safety territory";
+    if (percent >= 40) return "Solid Match. Small wins move this fast";
+    return "Lower Match. Easy to drop a tier without focus";
+  }
+  if (percent >= 80) return "Strong fit. Lock in what is working";
+  return "Comfortable fit. Do not take it for granted";
+}
+
+function nextTierLabel(tier: SchoolOdds["tier"]): string {
+  if (tier === "Reach") return "to Match";
+  if (tier === "Match") return "to Safety";
+  return "to a stronger fit";
+}
+
+function LockGlyph({ size = 10 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 12 12"
+      fill="none"
+      aria-hidden
+      className="inline-block shrink-0"
+    >
+      <rect
+        x="2.5"
+        y="5.5"
+        width="7"
+        height="5"
+        rx="0.8"
+        stroke="currentColor"
+        strokeWidth="1.2"
+      />
+      <path
+        d="M4 5.5V4a2 2 0 1 1 4 0v1.5"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function CheckGlyph() {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      aria-hidden
+      className="shrink-0 mt-[3px] text-oxblood"
+    >
+      <path
+        d="M3 7l2.8 2.8L11 4.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function DistributionPill({
+  label,
+  count,
+  accent,
+}: {
+  label: string;
+  count: number;
+  accent: string;
+}) {
+  const muted = count === 0;
+  return (
+    <span
+      className={`inline-flex items-baseline gap-1.5 ${muted ? "opacity-40" : ""}`}
+    >
+      <span
+        className={`font-serif text-[18px] sm:text-[20px] tabular-nums leading-none ${
+          muted ? "text-pencil" : accent
+        }`}
+      >
+        {count}
+      </span>
+      <span className="font-mono text-[10px] sm:text-[10.5px] uppercase tracking-[0.18em] text-pencil">
+        {label}
+      </span>
+    </span>
+  );
+}
+
+function SchoolForecastRow({ odds }: { odds: SchoolOdds }) {
+  const proximity = getProximityHint(odds);
+  const visibleFactor = odds.factors[0];
+  const lockedFactors = odds.factors.slice(1);
+
+  return (
+    <div className="border border-hair bg-paper rounded-md overflow-hidden transition-colors duration-200 hover:border-ink-2/50">
+      <div className="flex items-start justify-between gap-3 px-4 sm:px-5 pt-4 pb-3 border-b border-hair">
+        <div className="min-w-0">
+          <h3 className="font-serif text-[18px] sm:text-[20px] leading-[1.15] text-ink truncate tracking-[-0.01em]">
+            {odds.name}
+          </h3>
+          <p className="mt-1 font-mono text-[10px] sm:text-[10.5px] uppercase tracking-[0.16em] text-pencil">
+            {proximity}
+          </p>
+        </div>
+        <TierBadge tier={odds.tier} />
+      </div>
+
+      <div className="px-4 sm:px-5 pt-4 pb-4 flex items-end gap-4 sm:gap-5">
+        <div className="flex-1 min-w-0">
+          <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-pencil mb-2">
+            Your admit chance
+          </div>
+          <div className="relative h-[7px] bg-paper-2 rounded-full overflow-hidden">
+            <div
+              aria-hidden
+              className="absolute inset-y-0 left-0 bg-oxblood rounded-full"
+              style={{ width: `${odds.percent}%`, filter: "blur(2.5px)" }}
+            />
+          </div>
+          <div className="mt-1.5 flex justify-between font-mono text-[9px] uppercase tracking-[0.18em] text-pencil/70 tabular-nums">
+            <span>0</span>
+            <span>50</span>
+            <span>100</span>
+          </div>
+        </div>
+        <div className="shrink-0 text-right">
+          <div
+            aria-hidden
+            className="font-serif text-[30px] sm:text-[36px] text-oxblood tabular-nums leading-none select-none tracking-[-0.02em]"
+            style={{ filter: "blur(7px)" }}
+          >
+            ··%
+          </div>
+          <div className="mt-1.5 inline-flex items-center gap-1 font-mono text-[9.5px] uppercase tracking-[0.18em] text-pencil">
+            <LockGlyph />
+            Locked
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-hair bg-cream/70 px-4 sm:px-5 py-3.5 space-y-2.5">
+        {visibleFactor ? (
+          <div className="flex items-start gap-3 text-[13px] sm:text-[13.5px] text-ink leading-snug">
+            <span className="shrink-0 mt-[1px] font-mono text-[9.5px] uppercase tracking-[0.18em] text-forest font-semibold tabular-nums">
+              Strength
+            </span>
+            <span>{visibleFactor}</span>
+          </div>
+        ) : null}
+        {lockedFactors.map((f, i) => (
+          <div
+            key={i}
+            className="flex items-start gap-3 text-[13px] sm:text-[13.5px] leading-snug"
+          >
+            <span className="shrink-0 mt-[1px] font-mono text-[9.5px] uppercase tracking-[0.18em] text-oxblood font-semibold tabular-nums">
+              {i === 0 ? "Risk" : "Lever"}
+            </span>
+            <span
+              aria-hidden
+              className="text-ink/85 select-none"
+              style={{ filter: "blur(4.5px)" }}
+            >
+              {f}
+            </span>
+          </div>
+        ))}
+        <div className="pt-2 mt-1 border-t border-hair/60">
+          <p className="font-mono text-[10px] sm:text-[10.5px] uppercase tracking-[0.18em] text-pencil">
+            <span className="text-oxblood">→</span>{" "}
+            Unlock to see what moves this {nextTierLabel(odds.tier)}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function FeatureRow({ children }: { children: React.ReactNode }) {
+  return (
+    <li className="flex items-start gap-3 text-ink-2 leading-snug">
+      <CheckGlyph />
+      <span>{children}</span>
+    </li>
+  );
+}
+
 function StepPaywall({
   result,
   profile,
@@ -993,108 +1192,144 @@ function StepPaywall({
     return mix;
   }, [result]);
 
+  const totalSchools = result?.schools.length ?? profile.schoolSlugs.length;
+
   return (
-    <PaperCard padding={WIZARD_CARD_PADDING}>
-      <div className="text-center mb-5 sm:mb-6">
-        <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-oxblood mb-2">
+    <PaperCard padding="p-5 sm:p-7 md:p-9">
+      <div className="text-center mb-7 sm:mb-9">
+        <div className="font-mono text-[10.5px] sm:text-[11px] uppercase tracking-[0.18em] text-oxblood mb-3">
           Your forecast is ready
         </div>
-        <h2 className="text-ink text-[26px] sm:text-[28px] md:text-[32px] leading-[1.15] font-serif">
-          Unlock your <em className="italic text-oxblood">admit chance</em>
+        <h2 className="text-ink text-[28px] sm:text-[34px] md:text-[40px] leading-[1.04] font-serif tracking-[-0.02em]">
+          You&rsquo;re closer than you think.
         </h2>
-        <p className="mt-3 text-[14px] sm:text-[14.5px] text-ink-2 max-w-[44ch] mx-auto">
-          We modeled your profile against {profile.schoolSlugs.length}{" "}
-          {profile.schoolSlugs.length === 1 ? "school" : "schools"}. Tiers below — unlock to see the percentages.
+        <p className="mt-4 text-[14.5px] sm:text-[15px] text-ink-2 max-w-[50ch] mx-auto leading-[1.55]">
+          We modeled your profile against {totalSchools}{" "}
+          {totalSchools === 1 ? "school" : "schools"} using recent admit data
+          and the depth of your activities. Every percentage and per-factor
+          breakdown is held behind your forecast key.
         </p>
       </div>
 
       {result && result.schools.length > 0 ? (
-        <div className="mb-5 sm:mb-6">
-          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 mb-3 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.16em] text-pencil">
-            {tierMix.Reach > 0 ? <span>{tierMix.Reach} Reach</span> : null}
-            {tierMix.Match > 0 ? <span>{tierMix.Match} Match</span> : null}
-            {tierMix.Safety > 0 ? <span>{tierMix.Safety} Safety</span> : null}
+        <>
+          <div className="mb-5 sm:mb-6 flex items-center justify-center gap-5 sm:gap-7">
+            <DistributionPill
+              label="Reach"
+              count={tierMix.Reach}
+              accent="text-oxblood"
+            />
+            <span className="h-3 w-px bg-hair" aria-hidden />
+            <DistributionPill
+              label="Match"
+              count={tierMix.Match}
+              accent="text-gold"
+            />
+            <span className="h-3 w-px bg-hair" aria-hidden />
+            <DistributionPill
+              label="Safety"
+              count={tierMix.Safety}
+              accent="text-forest"
+            />
           </div>
-          <ul className="space-y-1.5">
+
+          <div className="space-y-3 sm:space-y-3.5 mb-7 sm:mb-9">
             {result.schools.map((s) => (
-              <li
-                key={s.slug}
-                className="flex items-center justify-between gap-3 px-3 py-2.5 border border-hair bg-paper"
-              >
-                <span className="text-ink text-[13.5px] sm:text-[14px] truncate">{s.name}</span>
-                <span className="flex items-center gap-2 shrink-0">
-                  <TierBadge tier={s.tier} />
-                  <span
-                    aria-hidden
-                    className="font-serif text-[16px] sm:text-[18px] tabular-nums leading-none text-pencil select-none"
-                    style={{ filter: "blur(7px)" }}
-                  >
-                    ··%
-                  </span>
-                </span>
-              </li>
+              <SchoolForecastRow key={s.slug} odds={s} />
             ))}
-          </ul>
-        </div>
+          </div>
+        </>
       ) : null}
 
-      <div className="border border-oxblood bg-[#FAEEEA] p-5 sm:p-6 mb-5 sm:mb-6">
-        <div className="flex items-baseline gap-1.5 mb-3">
-          <span className="text-[36px] sm:text-[40px] font-serif text-oxblood leading-none tabular-nums">$7</span>
-          <span className="text-[14px] text-ink-2">/ month</span>
-          <span className="ml-auto text-[11px] font-mono uppercase tracking-wider text-oxblood">Cancel anytime</span>
+      <div className="border border-oxblood/30 bg-[#FAEEEA] rounded-md overflow-hidden">
+        <div className="px-5 sm:px-6 pt-5 pb-4 border-b border-oxblood/20">
+          <div className="flex items-baseline justify-between gap-3">
+            <div className="flex items-baseline gap-1.5">
+              <span className="text-[40px] sm:text-[44px] font-serif text-oxblood leading-none tabular-nums tracking-[-0.025em]">
+                $7
+              </span>
+              <span className="text-[14px] text-ink-2">/ month</span>
+            </div>
+            <span className="font-mono text-[10px] sm:text-[10.5px] uppercase tracking-[0.18em] text-oxblood">
+              Cancel anytime
+            </span>
+          </div>
+          <p className="mt-2.5 text-[13px] sm:text-[13.5px] text-ink-2/90 leading-snug">
+            Built by people who got into the schools you&rsquo;re aiming for.
+            About the price of two coffees a month, with no commitment.
+          </p>
         </div>
-        <ul className="space-y-2 text-[13.5px] sm:text-[14px] text-ink-2">
-          <li>✓ Full % odds + tier for every school you picked</li>
-          <li>✓ Per-factor breakdown (academics, activities, fit)</li>
-          <li>✓ Essay reviewer tuned to each school (Why-X, supplements, prompt fit)</li>
-          <li>✓ Unlimited essay grading + line-by-line edits</li>
-          <li>✓ Access to all admissions tools</li>
+
+        <ul className="px-5 sm:px-6 py-4 space-y-2.5 text-[13.5px] sm:text-[14px]">
+          <FeatureRow>
+            Exact admit % and tier for every school you picked
+          </FeatureRow>
+          <FeatureRow>
+            Per-factor breakdown. What is helping, what is hurting, what to fix
+            next
+          </FeatureRow>
+          <FeatureRow>
+            Essay reviewer trained on each school&rsquo;s actual prompts and
+            supplement style
+          </FeatureRow>
+          <FeatureRow>
+            Unlimited essay grading and line-by-line edits
+          </FeatureRow>
+          <FeatureRow>Access to every admissions tool we ship</FeatureRow>
         </ul>
+
+        <div className="px-5 sm:px-6 py-5 bg-cream border-t border-oxblood/20">
+          <label
+            htmlFor="paywall-email"
+            className="block font-mono text-[10px] sm:text-[10.5px] uppercase tracking-[0.18em] text-pencil mb-2"
+          >
+            Your email
+          </label>
+          <input
+            id="paywall-email"
+            type="email"
+            autoComplete="email"
+            inputMode="email"
+            enterKeyHint="go"
+            placeholder="you@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && emailValid && !submitting) startCheckout();
+            }}
+            className="w-full border border-hair bg-paper px-4 py-3 text-[16px] rounded-sm focus:outline-none focus:border-oxblood transition-colors mb-4"
+          />
+
+          {err ? (
+            <p className="mb-4 text-[13px] text-oxblood bg-paper border border-[#E8C9C2] px-3 py-2 rounded-sm">
+              {err}
+            </p>
+          ) : null}
+
+          <button
+            onClick={startCheckout}
+            disabled={submitting || !emailValid}
+            className="w-full btn btn-brand text-[15.5px] sm:text-[16.5px] font-semibold py-4 disabled:opacity-50 disabled:cursor-not-allowed justify-center"
+          >
+            {submitting ? "Redirecting…" : "Unlock my forecast · $7 / month"}
+          </button>
+
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-pencil">
+            <span className="inline-flex items-center gap-1.5">
+              <LockGlyph />
+              Stripe secure
+            </span>
+            <span className="text-hair">·</span>
+            <span>Cancel anytime</span>
+            <span className="text-hair">·</span>
+            <span>No surprise charges</span>
+          </div>
+          <p className="mt-2.5 text-center text-[11.5px] text-pencil leading-[1.5]">
+            You&rsquo;ll set a password after payment to access your forecast
+            anytime.
+          </p>
+        </div>
       </div>
-
-      <label htmlFor="paywall-email" className="block text-[13px] font-mono uppercase tracking-wider text-pencil mb-2">
-        Your email
-      </label>
-      <input
-        id="paywall-email"
-        type="email"
-        autoComplete="email"
-        inputMode="email"
-        enterKeyHint="go"
-        placeholder="you@example.com"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" && emailValid && !submitting) startCheckout();
-        }}
-        className="w-full border border-hair bg-paper px-4 py-3 text-[16px] focus:outline-none focus:border-oxblood mb-4"
-      />
-
-      {err ? (
-        <p className="mb-4 text-[13px] text-oxblood bg-[#FAEEEA] border border-[#E8C9C2] px-3 py-2">
-          {err}
-        </p>
-      ) : null}
-
-      <button
-        onClick={startCheckout}
-        disabled={submitting || !emailValid}
-        className="w-full btn btn-brand text-[16px] sm:text-[17px] font-semibold py-4 disabled:opacity-50 disabled:cursor-not-allowed justify-center"
-      >
-        {submitting ? "Redirecting…" : `Reveal my odds — $7/mo`}
-      </button>
-
-      <div className="mt-4 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-[11.5px] text-pencil">
-        <span>Stripe secure checkout</span>
-        <span className="text-hair">·</span>
-        <span>Cancel anytime</span>
-        <span className="text-hair">·</span>
-        <span>No surprise charges</span>
-      </div>
-      <p className="mt-2 text-center text-[11.5px] text-pencil">
-        You&rsquo;ll set a password after payment to access your forecast anytime.
-      </p>
     </PaperCard>
   );
 }
