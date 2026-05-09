@@ -180,6 +180,108 @@ export default function CollegesIndexPage() {
           </div>
         </div>
 
+        {/* Strategy guides */}
+        <div className="not-prose mb-16">
+          <p className="text-center text-[11px] font-semibold text-pencil uppercase tracking-[0.18em] mb-5">
+            Strategy guides
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto">
+            <Link
+              href="/colleges/easiest-ivies"
+              className="block rounded-xl border border-hair bg-cream p-5 !no-underline hover:border-ink hover:shadow-sm transition-all text-center"
+            >
+              <p className="text-[11px] font-semibold text-oxblood uppercase tracking-[0.15em] mb-1">Comparison</p>
+              <p className="text-base font-bold !text-ink">Easiest Ivies to get into</p>
+              <p className="text-xs text-pencil mt-1">Admit rates ranked across all eight</p>
+            </Link>
+            <Link
+              href="/colleges/early-decision-vs-early-action"
+              className="block rounded-xl border border-hair bg-cream p-5 !no-underline hover:border-ink hover:shadow-sm transition-all text-center"
+            >
+              <p className="text-[11px] font-semibold text-oxblood uppercase tracking-[0.15em] mb-1">Application strategy</p>
+              <p className="text-base font-bold !text-ink">Early Decision vs Early Action</p>
+              <p className="text-xs text-pencil mt-1">Binding vs non-binding, ED boost analysis</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* Compare schools head-to-head */}
+        <div className="not-prose mb-16">
+          <p className="text-center text-[11px] font-semibold text-pencil uppercase tracking-[0.18em] mb-5">
+            Compare schools head-to-head
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 max-w-3xl mx-auto">
+            {[
+              { slug: "brown-vs-yale", label: "Brown vs Yale" },
+              { slug: "columbia-vs-yale", label: "Columbia vs Yale" },
+              { slug: "cornell-vs-upenn", label: "Cornell vs Penn" },
+              { slug: "dartmouth-vs-yale", label: "Dartmouth vs Yale" },
+              { slug: "upenn-vs-yale", label: "Penn vs Yale" },
+              { slug: "stanford-vs-yale", label: "Stanford vs Yale" },
+              { slug: "duke-vs-johns-hopkins", label: "Duke vs Johns Hopkins" },
+              { slug: "chicago-vs-stanford", label: "Chicago vs Stanford" },
+              { slug: "carnegie-mellon-vs-mit", label: "Carnegie Mellon vs MIT" },
+              { slug: "amherst-vs-williams", label: "Amherst vs Williams" },
+              { slug: "swarthmore-vs-williams", label: "Swarthmore vs Williams" },
+              { slug: "rice-vs-vanderbilt", label: "Rice vs Vanderbilt" },
+            ].map((m) => (
+              <Link
+                key={m.slug}
+                href={`/colleges/compare/${m.slug}`}
+                className="block rounded-lg border border-hair bg-cream px-4 py-2.5 !no-underline hover:border-ink hover:shadow-sm transition-all text-center text-sm font-medium !text-ink"
+              >
+                {m.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Browse by state */}
+        <div className="not-prose mb-16">
+          <p className="text-center text-[11px] font-semibold text-pencil uppercase tracking-[0.18em] mb-5">
+            Browse by state
+          </p>
+          <div className="flex flex-wrap gap-2 justify-center max-w-3xl mx-auto">
+            {[
+              { slug: "ca", label: "California" },
+              { slug: "co", label: "Colorado" },
+              { slug: "ct", label: "Connecticut" },
+              { slug: "dc", label: "Washington DC" },
+              { slug: "fl", label: "Florida" },
+              { slug: "ga", label: "Georgia" },
+              { slug: "ia", label: "Iowa" },
+              { slug: "il", label: "Illinois" },
+              { slug: "in", label: "Indiana" },
+              { slug: "ma", label: "Massachusetts" },
+              { slug: "md", label: "Maryland" },
+              { slug: "me", label: "Maine" },
+              { slug: "mi", label: "Michigan" },
+              { slug: "mn", label: "Minnesota" },
+              { slug: "mo", label: "Missouri" },
+              { slug: "nc", label: "North Carolina" },
+              { slug: "nh", label: "New Hampshire" },
+              { slug: "nj", label: "New Jersey" },
+              { slug: "ny", label: "New York" },
+              { slug: "oh", label: "Ohio" },
+              { slug: "pa", label: "Pennsylvania" },
+              { slug: "ri", label: "Rhode Island" },
+              { slug: "tn", label: "Tennessee" },
+              { slug: "tx", label: "Texas" },
+              { slug: "va", label: "Virginia" },
+              { slug: "wa", label: "Washington" },
+              { slug: "wi", label: "Wisconsin" },
+            ].map((s) => (
+              <Link
+                key={s.slug}
+                href={`/colleges/by-state/${s.slug}`}
+                className="inline-block rounded-full border border-hair bg-cream px-3.5 py-1.5 !no-underline hover:border-ink hover:shadow-sm transition-all text-xs font-medium !text-ink-2 hover:!text-ink"
+              >
+                {s.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
         {grouped.map(({ category, items }) => (
           <section key={category} className="mt-16">
             <h2

@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "indexnow": "node scripts/indexnow-submit.mjs",
+    "indexnow:recent": "node scripts/indexnow-submit.mjs --recent 30",
+    "indexnow:all": "node scripts/indexnow-submit.mjs --from-sitemap"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
