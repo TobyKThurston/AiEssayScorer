@@ -81,7 +81,7 @@ export function Hero() {
             </Link>
             <Link
               href="/essay-grader"
-              className="inline-flex items-center min-h-10 px-2 text-[14px] text-ink-2 hover:text-oxblood underline-offset-[6px] decoration-pencil/30 hover:decoration-oxblood/50 underline transition-[color,text-decoration-color] duration-200 whitespace-nowrap"
+              className="inline-flex items-center justify-center min-h-11 px-4 py-2 text-[14px] text-ink-2 hover:text-oxblood underline-offset-[6px] decoration-pencil/30 hover:decoration-oxblood/50 underline transition-[color,text-decoration-color] duration-200 whitespace-nowrap"
             >
               or grade an essay
             </Link>
@@ -120,7 +120,7 @@ export function Hero() {
         /* Pencil-writing reveal — text emerges left-to-right as if hand-written */
         .pencil-write__text {
           display: inline-block;
-          padding-right: 0.08em; /* room for italic overshoot on trailing letter */
+          padding-right: 0.22em; /* room for italic overshoot on trailing letter */
           clip-path: inset(0 100% -0.15em 0);
           animation: pencilWrite 1400ms cubic-bezier(0.45, 0.05, 0.4, 1) 700ms forwards;
           /* graphite-pencil tip: subtle texture + slight smudge on the leading edge */
@@ -132,7 +132,7 @@ export function Hero() {
             clip-path: inset(0 100% -0.15em 0);
           }
           100% {
-            clip-path: inset(0 -0.2em -0.15em 0);
+            clip-path: inset(0 -0.5em -0.15em 0);
           }
         }
 

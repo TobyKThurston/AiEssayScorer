@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PublicScorer from "@/PublicScorer/PublicScorer";
 import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "College Essay Checker, Is Your Draft Ready to Submit?",
   description:
-    "Check your college essay before you submit. Instant scores for content, structure, and voice. Catch vague evidence, weak openings, and template phrases before the deadline.",
+    "Free AI college essay checker. Paste your draft, get instant scores for content, structure, and voice. Catches vague evidence, weak openings, and template phrases before the deadline.",
   alternates: {
     canonical: "/college-essay-checker",
   },
   openGraph: {
     title: "College Essay Checker, Is Your Draft Ready to Submit? | Ivy Admit",
     description:
-      "Check your college essay before you submit. Instant scores for content, structure, and voice. Catch vague evidence, weak openings, and template phrases before the deadline.",
+      "Free AI college essay checker. Paste your draft, get instant scores for content, structure, and voice. Catches vague evidence, weak openings, and template phrases before the deadline.",
     url: "/college-essay-checker",
     type: "website",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "College Essay Checker, Ivy Admit" }],
@@ -32,6 +33,33 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
     { "@type": "ListItem", position: 2, name: "College Essay Checker", item: `${baseUrl}/college-essay-checker` },
+  ],
+};
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": `${baseUrl}/college-essay-checker#software`,
+  name: "Ivy Admit College Essay Checker",
+  applicationCategory: "EducationalApplication",
+  operatingSystem: "Web",
+  url: `${baseUrl}/college-essay-checker`,
+  description:
+    "Free AI college essay checker that scores your draft on content, structure, and voice and tells you specifically what to fix before the deadline.",
+  publisher: { "@id": `${baseUrl}/#organization` },
+  isAccessibleForFree: true,
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  featureList: [
+    "Content specificity score",
+    "Structure / narrative arc score",
+    "Voice distinctiveness score",
+    "Line-by-line annotations",
+    "Cliché phrase detection",
+    "Submission readiness verdict",
   ],
 };
 
@@ -80,6 +108,10 @@ export default function CollegeEssayCheckerPage() {
       <div className="max-w-3xl mx-auto">
         <script
           type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+        />
+        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
         <script
@@ -95,26 +127,21 @@ export default function CollegeEssayCheckerPage() {
           ]}
         />
 
-        {/* Hero */}
-        <header className="mb-12">
+        {/* Hero — short headline, then the tool itself above the fold */}
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink leading-tight mb-3 sm:mb-4">
-            College Essay Checker: Is Your Draft Ready to Submit?
+            College Essay Checker
           </h1>
-          <p className="text-lg text-ink-2 mb-6">
-            Before you hit submit, run your essay through the same patterns that distinguish
-            admitted applications from strong-but-generic ones. The college essay checker scores
-            your draft on content, structure, and voice, and tells you specifically what to fix
-            before the deadline.
+          <p className="text-base sm:text-lg text-ink-2 mb-2">
+            Paste your draft. Get scored on content, structure, and voice in 60 seconds.
+            Free, no signup required for your first check.
           </p>
-          <Link
-            href="/editor"
-            className="inline-block px-6 py-3 rounded-full bg-ink text-white font-medium hover:bg-oxblood transition-all"
-          >
-            Check your essay free →
-          </Link>
         </header>
 
-        <div className="prose prose-slate max-w-none">
+        {/* The tool — embedded above the fold so the page IS the checker, not an article about it */}
+        <PublicScorer />
+
+        <div className="prose prose-slate max-w-none mt-12 sm:mt-16">
           {/* Section 1 */}
           <h2>What a College Essay Checker Actually Looks At</h2>
           <p>

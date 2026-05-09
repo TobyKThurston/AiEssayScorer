@@ -21,4 +21,5 @@ Disallow: /view-essay
 Disallow: /account
 
 Sitemap: https://getivyadmit.com/sitemap.xml
+# IndexNow key file: /bddd5d4f3c61b13052de70d2d0796f1f.txt
 

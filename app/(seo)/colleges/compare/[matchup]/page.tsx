@@ -107,6 +107,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `${aName} ${bName} acceptance rate`,
     ],
     alternates: { canonical: `/colleges/compare/${matchup}` },
+    // Templated near-duplicates of the per-school pages — keep them
+    // accessible via internal links but out of the index so they don't
+    // suppress the strong long-form college pages.
+    robots: { index: false, follow: true },
     openGraph: {
       title: `${aName} vs ${bName}: Real Stats Compared`,
       description,
@@ -429,7 +433,7 @@ export default async function CompareCollegePage({ params }: Props) {
             </div>
           </div>
           <p className="text-[11px] text-pencil mt-3 text-center">
-            Sources: U.S. Department of Education College Scorecard (IPEDS) and school-published admit cycle data. Last verified {LAST_VERIFIED}.
+            Data sources: IPEDS 2024 (federal Integrated Postsecondary Education Data System), Common Data Set 2024–25, and each school&apos;s published admit-cycle release. Last verified {LAST_VERIFIED}.
           </p>
         </section>
 

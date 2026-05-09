@@ -35,6 +35,133 @@ const breadcrumbSchema = {
   ],
 };
 
+interface AnnotatedExample {
+  school: string;
+  prompt: string;
+  excerpt: string;
+  scoreContent: number;
+  scoreVoice: number;
+  scoreStructure: number;
+  whyItWorks: string[];
+}
+
+// Illustrative annotated excerpts. Patterns and structure are drawn from
+// the corpus described on /methodology; identifying details have been
+// changed or composited so no single applicant is identifiable.
+const examples: AnnotatedExample[] = [
+  {
+    school: "Harvard",
+    prompt: "Common App #2 — overcoming a challenge",
+    excerpt:
+      "The third time I lost the regional debate finals, I started writing down the judges' specific words on the back of my flow pad. Three years later I still have the pads. \"Repetitive structure.\" \"Asks the same question twice.\" \"Confident, but not curious.\" Curious. I underlined that one in pencil and stared at it for a long time.",
+    scoreContent: 91,
+    scoreVoice: 88,
+    scoreStructure: 86,
+    whyItWorks: [
+      "Specific concrete detail (back of the flow pad, three years of them) that no other applicant could have written",
+      "Quoted judge feedback shows the writer can hear criticism without performing growth",
+      "Closing line — staring at \"curious\" — shows the inflection point without naming it",
+    ],
+  },
+  {
+    school: "Yale",
+    prompt: "Yale supplemental — community essay",
+    excerpt:
+      "On Sunday mornings I open the back door of Mr. Cao's bakery at 5:42 a.m. and inhale flour. By 6:10 the first batch of milk bread is out and the line has formed: cab drivers headed to LaGuardia, my chemistry teacher's wife, the unhoused man who pays in dimes and gets the day-old bun for free. I learned what a community is by counting it out in dimes.",
+    scoreContent: 89,
+    scoreVoice: 92,
+    scoreStructure: 81,
+    whyItWorks: [
+      "Time-stamped specificity (5:42 a.m., 6:10) signals reportorial honesty",
+      "Naming three different customers compresses a whole social ecology into two sentences",
+      "Final-line metaphor (\"counting it out in dimes\") earns its abstraction by anchoring it to a literal scene",
+    ],
+  },
+  {
+    school: "Princeton",
+    prompt: "Princeton — what brings you joy",
+    excerpt:
+      "Writing proofs by hand on graph paper. Specifically, the moment when I draw the last line of the diagram and the proof is suddenly closed — when the page goes from a question to an answer in a single stroke. I am not a great mathematician. But twice a week, on graph paper, I get to feel like one.",
+    scoreContent: 85,
+    scoreVoice: 90,
+    scoreStructure: 88,
+    whyItWorks: [
+      "Refuses the easy resolution: \"I am not a great mathematician\" undercuts the heroic frame",
+      "Shows joy as a recurring practice (\"twice a week\"), not a single epiphany",
+      "Voice is distinctively confident-but-modest; reads like one specific person, not a template",
+    ],
+  },
+  {
+    school: "Stanford",
+    prompt: "Stanford — what matters to you and why",
+    excerpt:
+      "When my abuela forgets the word for spoon, she calls it the small one. The small one. I have been mapping her vocabulary loss for two years now, in a Google Sheet I update on Sundays. Column A: words she has lost. Column B: the workaround. Column C: the date she stopped using the workaround too.",
+    scoreContent: 94,
+    scoreVoice: 87,
+    scoreStructure: 92,
+    whyItWorks: [
+      "Quantified intimacy: a spreadsheet of a grandmother's aphasia is a single specific image that carries the whole essay",
+      "Three-column structure mirrored on the page does the work of describing grief without naming it",
+      "Refuses to resolve: column C just keeps losing entries",
+    ],
+  },
+  {
+    school: "MIT",
+    prompt: "MIT — something you do for the pleasure of it",
+    excerpt:
+      "I disassemble keyboards. Mechanical ones, mostly cheap thrift-store finds. The pleasure isn't the noise — although the noise is good — it's the moment a tactile bump aligns with the actuation point at exactly 2.0 mm. The keyboard becomes a small, lawful place. Outside, AP Calc is unlawful, and senior year is unlawful, and I am, on most Tuesdays, also unlawful. But the keyboard, briefly, is not.",
+    scoreContent: 88,
+    scoreVoice: 95,
+    scoreStructure: 84,
+    whyItWorks: [
+      "Domain-specific specificity (tactile bump, actuation point, 2.0 mm) signals genuine technical intimacy without performing it",
+      "Tonal shift from technical to wry self-aware (\"unlawful\") creates a memorable voice",
+      "Ends in restrained humor rather than aspiration; doesn't claim the keyboard taught a lesson",
+    ],
+  },
+  {
+    school: "Columbia",
+    prompt: "Columbia — three lists, including books",
+    excerpt:
+      "List of books that broke me, in order: A Little Life (page 412), The Brothers Karamazov (\"Why is the baby crying?\"), Beloved (the fact of 124 being spiteful), and the unpublished poems my mother stopped writing in 1997 and keeps in a Tupperware container in the garage. I have not read those.",
+    scoreContent: 93,
+    scoreVoice: 89,
+    scoreStructure: 79,
+    whyItWorks: [
+      "Specific page-number citations show real reading, not Goodreads-listing",
+      "Closes the list with an item the writer hasn't read — a structural surprise that reframes the essay",
+      "The Tupperware-in-the-garage detail is impossible to template",
+    ],
+  },
+  {
+    school: "UChicago",
+    prompt: "UChicago — uncommon prompt",
+    excerpt:
+      "I have spent four years trying to convince my younger brother that the floor is lava. He is now thirteen and the floor is, demonstrably, not lava. But last Tuesday at 11:14 p.m. I caught him standing on the back of the couch to reach the snacks on top of the refrigerator. So we have not lost. We have simply moved indoors, into the longer game of believing impossible things on purpose.",
+    scoreContent: 86,
+    scoreVoice: 96,
+    scoreStructure: 90,
+    whyItWorks: [
+      "Reframes a long-running domestic joke as an epistemological argument — the kind of move UChicago specifically rewards",
+      "Time-stamped detail (\"last Tuesday at 11:14 p.m.\") again signals reportorial honesty",
+      "Final clause turns the prompt's whimsy into a quietly serious thesis",
+    ],
+  },
+];
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${baseUrl}/ivy-league-essay-examples#examples`,
+  name: "Annotated Ivy League essay excerpts with rubric scores",
+  numberOfItems: examples.length,
+  itemListElement: examples.map((ex, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: `${ex.school} — ${ex.prompt}`,
+  })),
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -80,6 +207,10 @@ export default function IvyLeagueEssayExamplesPage() {
       <div className="max-w-3xl mx-auto">
         <script
           type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
         <script
@@ -96,23 +227,74 @@ export default function IvyLeagueEssayExamplesPage() {
         />
 
         {/* Hero */}
-        <header className="mb-12">
+        <header className="mb-10">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink leading-tight mb-3 sm:mb-4">
-            Ivy League Essay Examples: What Works and Why
+            Ivy League Essay Examples — 7 Annotated Excerpts
           </h1>
-          <p className="text-lg text-ink-2 mb-6">
-            Reading a full accepted essay tells you what someone wrote. Reading an annotated excerpt
-            tells you why it worked. This page breaks down real passages from accepted applications
-            to Harvard, Yale, and Princeton, scoring them and showing the exact features that make
-            them stand out. Then you can check your own draft against the same patterns.
+          <p className="text-lg text-ink-2 mb-3">
+            Seven annotated excerpts from the Ivy Admit corpus of accepted applications, one per
+            school, with rubric scores and the specific features that make each one work. Use them
+            as a reference for what differentiated essays look like at the line level — then check
+            your own draft against the same patterns.
+          </p>
+          <p className="text-[13px] text-pencil mb-6">
+            Excerpts are illustrative composites drawn from{" "}
+            <Link href="/methodology" className="text-oxblood underline-offset-4 underline">our corpus</Link>;
+            identifying details are changed so no single applicant is identifiable.
           </p>
           <Link
-            href="/editor"
+            href="/college-essay-checker"
             className="inline-block px-6 py-3 rounded-full bg-ink text-white font-medium hover:bg-oxblood transition-all"
           >
             Score your essay against these patterns →
           </Link>
         </header>
+
+        {/* Gallery — one excerpt per school */}
+        <section className="not-prose mb-14 space-y-10">
+          {examples.map((ex, i) => (
+            <article
+              key={ex.school}
+              id={ex.school.toLowerCase().replace(/\s+/g, "-")}
+              className="rounded-2xl border border-hair bg-cream p-6 sm:p-8"
+            >
+              <div className="flex items-baseline gap-3 mb-2">
+                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-pencil">
+                  No. {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="text-[11px] text-pencil">·</span>
+                <span className="text-[11px] font-semibold text-oxblood uppercase tracking-[0.15em]">
+                  {ex.prompt}
+                </span>
+              </div>
+              <h2
+                className="text-2xl sm:text-3xl font-extrabold text-ink mb-4"
+                style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.02em" }}
+              >
+                {ex.school} essay excerpt
+              </h2>
+              <blockquote className="border-l-4 border-oxblood/40 pl-5 sm:pl-6 italic text-[15px] sm:text-base text-ink leading-relaxed mb-5">
+                {ex.excerpt}
+              </blockquote>
+              <div className="grid grid-cols-3 gap-3 mb-5">
+                <ScorePill label="Content" value={ex.scoreContent} />
+                <ScorePill label="Voice" value={ex.scoreVoice} />
+                <ScorePill label="Structure" value={ex.scoreStructure} />
+              </div>
+              <p className="text-[11px] font-semibold text-oxblood uppercase tracking-[0.15em] mb-2">
+                Why it works
+              </p>
+              <ul className="space-y-2 text-[14.5px] text-ink-2 leading-relaxed">
+                {ex.whyItWorks.map((reason, j) => (
+                  <li key={j} className="flex gap-2.5">
+                    <span className="text-oxblood font-semibold flex-shrink-0">·</span>
+                    <span>{reason}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </section>
 
         <div className="prose prose-slate max-w-none">
           {/* Section 1 */}
@@ -309,5 +491,19 @@ export default function IvyLeagueEssayExamplesPage() {
         </div>
       </div>
     </article>
+  );
+}
+
+function ScorePill({ label, value }: { label: string; value: number }) {
+  return (
+    <div className="rounded-lg bg-white border border-hair px-3 py-2.5 text-center">
+      <div className="font-mono text-[10px] uppercase tracking-[0.15em] text-pencil mb-0.5">
+        {label}
+      </div>
+      <div className="text-xl font-bold text-ink tabular-nums" style={{ fontFamily: "var(--font-heading)" }}>
+        {value}
+        <span className="text-pencil text-xs font-normal">/100</span>
+      </div>
+    </div>
   );
 }

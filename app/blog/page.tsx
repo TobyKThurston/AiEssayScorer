@@ -50,15 +50,26 @@ export default function BlogIndex() {
     publisher: { "@id": `${baseUrl}/#organization` },
     blogPost: sorted.slice(0, 20).map((post) => ({
       "@type": "BlogPosting",
+      "@id": `${baseUrl}/blog/${post.slug}#blogposting`,
       headline: post.title,
       description: post.description,
       url: `${baseUrl}/blog/${post.slug}`,
       datePublished: new Date(post.publishedAt).toISOString(),
+      dateModified: new Date(post.publishedAt).toISOString(),
+      image: {
+        "@type": "ImageObject",
+        url: `${baseUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+      },
       author: {
         "@type": "Person",
         name: "Ivy Admit Editorial Team",
-        worksFor: { "@type": "Organization", name: "Ivy Admit", url: baseUrl },
+        url: `${baseUrl}/about`,
+        worksFor: { "@id": `${baseUrl}/#organization` },
       },
+      publisher: { "@id": `${baseUrl}/#organization` },
+      mainEntityOfPage: { "@type": "WebPage", "@id": `${baseUrl}/blog/${post.slug}` },
     })),
   };
 

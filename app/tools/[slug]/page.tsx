@@ -122,6 +122,9 @@ export async function generateMetadata({
         `${school.shortName} essay brainstormer`,
       ],
       alternates: { canonical: `/tools/why-${school.slug}-essay` },
+      // Only rich-content schools get an indexable variant; the rest are
+      // name-swap templates and stay out of the index.
+      robots: school.rich ? undefined : { index: false, follow: true },
       openGraph: {
         title,
         description,
@@ -142,6 +145,7 @@ export async function generateMetadata({
       description,
       keywords: prompt.seoKeywords,
       alternates: { canonical: `/tools/hook-${prompt.slug}` },
+      robots: { index: false, follow: true },
       openGraph: {
         title,
         description,
@@ -162,6 +166,7 @@ export async function generateMetadata({
       description,
       keywords: type.seoKeywords,
       alternates: { canonical: `/tools/${type.slug}-essay-scorer` },
+      robots: { index: false, follow: true },
       openGraph: {
         title,
         description,
@@ -180,6 +185,7 @@ export async function generateMetadata({
       description: r.seoDescription,
       keywords: r.seoKeywords,
       alternates: { canonical: `/tools/${r.slug}` },
+      robots: { index: false, follow: true },
       openGraph: {
         title: r.displayName,
         description: r.seoDescription,
@@ -198,6 +204,7 @@ export async function generateMetadata({
       description: p.seoDescription,
       keywords: p.seoKeywords,
       alternates: { canonical: `/tools/topics-for-${p.slug}` },
+      robots: { index: false, follow: true },
       openGraph: {
         title: p.displayName,
         description: p.seoDescription,
@@ -223,6 +230,7 @@ export async function generateMetadata({
         ...prompt.seoKeywords,
       ],
       alternates: { canonical: `/tools/deconstruct-${prompt.slug}` },
+      robots: { index: false, follow: true },
       openGraph: {
         title,
         description,
@@ -249,6 +257,7 @@ export async function generateMetadata({
         `score my ${school.shortName} essay`,
       ],
       alternates: { canonical: `/tools/score-${school.slug}-essay` },
+      robots: school.rich ? undefined : { index: false, follow: true },
       openGraph: {
         title,
         description,

@@ -9,6 +9,8 @@ import { topicPersonas } from "@/tools/topicPersonas";
 import { ArrowRight, Sparkles, PencilLine, Search, Wand2, Target } from "lucide-react";
 import { Breadcrumbs } from "@/design/Breadcrumbs";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
+
 export const metadata: Metadata = {
   title: "Free AI College Essay Tools",
   description:
@@ -94,8 +96,49 @@ export default function ToolsIndex() {
     ),
   }));
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: "Tools", item: `${baseUrl}/tools` },
+    ],
+  };
+
+  // Featured tools as an ItemList (the four cards above the fold are what
+  // we most want indexed and surfaced as sitelinks).
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${baseUrl}/tools#itemlist`,
+    name: "Featured Free AI College Essay Tools",
+    numberOfItems: featured.length,
+    itemListElement: featured.map((t, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `${baseUrl}/tools/${t.slug}`,
+      name: t.title,
+    })),
+  };
+
+  const collectionPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${baseUrl}/tools#collectionpage`,
+    url: `${baseUrl}/tools`,
+    name: "Free AI College Essay Tools",
+    description:
+      "160+ free AI tools for college essays: hook generators, prompt analyzers, per-school brainstormers, and essay scorers.",
+    isPartOf: { "@id": `${baseUrl}/#website` },
+    mainEntity: { "@id": `${baseUrl}/tools#itemlist` },
+  };
+
   return (
     <div className="max-w-[1200px] mx-auto px-5 sm:px-6 md:px-16 pt-16 sm:pt-24 md:pt-36 pb-12 sm:pb-20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Tools" }]} />
 
       {/* Hero */}

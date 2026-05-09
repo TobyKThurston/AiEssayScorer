@@ -23,6 +23,11 @@ type Props = { params: Promise<{ slug: string }> };
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 const LAST_VERIFIED = "May 2026";
 
+// Stable build-time timestamps for article schema. ISO date avoids
+// drift on every redeploy (which can flag dateModified as suspicious).
+const ARTICLE_PUBLISHED = "2026-05-04";
+const ARTICLE_MODIFIED = process.env.NEXT_PUBLIC_BUILD_DATE ?? "2026-05-09";
+
 function findSchool(slug: string): School | null {
   const main = schools.find((s) => s.slug === slug);
   if (main) return main;
@@ -158,6 +163,7 @@ export default async function CollegePage({ params }: Props) {
   const collegeSchema = {
     "@context": "https://schema.org",
     "@type": "CollegeOrUniversity",
+    "@id": `${url}#college`,
     name: school.name,
     url,
     sameAs: sc?.website ? [`https://${sc.website.replace(/^https?:\/\//, "").replace(/\/$/, "")}`] : undefined,
@@ -175,27 +181,31 @@ export default async function CollegePage({ params }: Props) {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${url}#article`,
     headline: `${school.name} Admissions: Acceptance Rate, SAT, GPA, Cost & Your Odds`,
     description: admitRate
       ? `${school.name} accepts ${formatPctSafe(admitRate)} of applicants. Complete admissions data and odds calculator.`
       : `${school.name} admissions guide.`,
-    datePublished: "2026-05-04",
-    dateModified: "2026-05-09",
+    image: {
+      "@type": "ImageObject",
+      url: `${baseUrl}/og-image.png`,
+      width: 1200,
+      height: 630,
+    },
+    datePublished: ARTICLE_PUBLISHED,
+    dateModified: ARTICLE_MODIFIED,
     author: {
-      "@type": "Organization",
-      name: "Ivy Admit",
-      url: baseUrl,
+      "@type": "Person",
+      name: "Ivy Admit Editorial Team",
+      url: `${baseUrl}/about`,
+      jobTitle: "Editorial Team",
+      description:
+        "Editors at Ivy Admit covering selective US college admissions, application strategy, and essay craft.",
+      worksFor: { "@id": `${baseUrl}/#organization` },
     },
-    publisher: {
-      "@type": "Organization",
-      name: "Ivy Admit",
-      url: baseUrl,
-      logo: {
-        "@type": "ImageObject",
-        url: `${baseUrl}/icon-192.png`,
-      },
-    },
+    publisher: { "@id": `${baseUrl}/#organization` },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    about: { "@id": `${url}#college` },
   };
 
   // FAQ schema — combines auto-generated factual Q&A with rich content if available

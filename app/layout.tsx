@@ -114,14 +114,8 @@ export const metadata: Metadata = {
       { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/icon-96.png", sizes: "96x96", type: "image/png" },
-      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-    shortcut: ["/favicon.ico"],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
   },
 };
 
@@ -136,11 +130,12 @@ const organizationSchema = {
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
+    "@id": `${SITE_URL}/#logo`,
     url: `${SITE_URL}/icon-512.png`,
     width: 512,
     height: 512,
   },
-  image: `${SITE_URL}/icon-512.png`,
+  image: { "@id": `${SITE_URL}/#logo` },
   description:
     "AI-powered college essay review and admissions strategy tool. Trained on patterns from successful applications to Harvard, Yale, Princeton, MIT, and 50+ other selective schools. Free essay grader, per-school admit-odds calculator, and line-by-line edit suggestions.",
   slogan: "AI-powered college essay review built by students who got in.",
@@ -171,14 +166,38 @@ const organizationSchema = {
   ],
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  url: SITE_URL,
+  name: "Ivy Admit",
+  description:
+    "Free AI college essay review trained on real Ivy League acceptances. Get scores, line-by-line edits, and admissions feedback in under 60 seconds.",
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  inLanguage: "en-US",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE_URL}/blog?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+const siteGraph = {
+  "@context": "https://schema.org",
+  "@graph": [organizationSchema, websiteSchema],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${fraunces.variable} ${inter.variable} ${jetBrainsMono.variable}`}>
       <head>
-        <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraph) }}
         />
       </head>
       <body>

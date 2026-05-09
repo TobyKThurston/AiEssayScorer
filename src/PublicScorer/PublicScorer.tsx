@@ -82,14 +82,27 @@ export default function PublicScorer({
         className="rounded-2xl bg-cream border border-hair shadow-[0_2px_16px_rgba(99,102,241,0.06)] p-5 sm:p-7 space-y-4 sm:space-y-5"
       >
         <div>
-          <label className="block text-sm font-semibold text-ink mb-2">
-            Paste your essay draft
-          </label>
+          <div className="flex items-center justify-between gap-3 mb-2">
+            <label className="block text-sm font-semibold text-ink">
+              Paste your essay draft
+            </label>
+            <button
+              type="submit"
+              disabled={loading || !essay.trim()}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg btn btn-sm btn-brand transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-xs"
+            >
+              {loading ? (
+                <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Scoring…</>
+              ) : (
+                <><Sparkles className="w-3.5 h-3.5" /> Score</>
+              )}
+            </button>
+          </div>
           <textarea
             value={essay}
             onChange={(e) => setEssay(e.target.value)}
             placeholder="Paste your personal statement or supplemental essay here..."
-            rows={14}
+            rows={10}
             className="w-full rounded-xl border border-hair bg-cream px-4 py-3 text-sm text-ink placeholder:text-pencil focus:outline-none focus:border-oxblood focus:ring-2 focus:ring-oxblood/20 transition resize-none font-mono"
             maxLength={10000}
             required

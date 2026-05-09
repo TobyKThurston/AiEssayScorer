@@ -21,7 +21,8 @@ export interface Post {
 
 export const defaultAuthor: Author = {
   name: "Ivy Admit Editorial Team",
-  role: "College admissions writers and former applicants to Ivy League and peer institutions",
+  role:
+    "Admissions writers and editors. Members of the team applied to and were admitted to Harvard, Yale, Princeton, Stanford, MIT, and peer institutions. Posts are reviewed before publication for factual accuracy against published university Common Data Sets and IPEDS.",
   url: "https://getivyadmit.com/about",
 };
 

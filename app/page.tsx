@@ -47,42 +47,6 @@ const faqSchema = {
   })),
 };
 
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@type": ["Organization", "EducationalOrganization"],
-  "@id": `${baseUrl}/#organization`,
-  name: "Ivy Admit",
-  url: baseUrl,
-  logo: {
-    "@type": "ImageObject",
-    url: `${baseUrl}/icon-512.png`,
-    width: 512,
-    height: 512,
-  },
-  image: `${baseUrl}/icon-512.png`,
-  description:
-    "AI-powered college essay review and admissions strategy tool for selective US universities. Free essay grader, per-school admit-odds calculator, and line-by-line edit suggestions.",
-  slogan: "AI-powered college essay review built by students who got in.",
-  knowsAbout: [
-    "College admissions",
-    "Common Application essays",
-    "Personal statements",
-    "Ivy League admissions",
-    "Early Decision and Early Action strategy",
-    "Application odds estimation",
-  ],
-  areaServed: { "@type": "Country", name: "United States" },
-  sameAs: [
-    "https://twitter.com/ivyadmit",
-  ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "Customer Service",
-    email: "support@getivyadmit.com",
-    availableLanguage: ["English"],
-  },
-};
-
 const appSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -111,15 +75,6 @@ const appSchema = {
   ],
 };
 
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": `${baseUrl}/#website`,
-  url: baseUrl,
-  name: "Ivy Admit",
-  publisher: { "@id": `${baseUrl}/#organization` },
-};
-
 export default function Page() {
   return (
     <>
@@ -129,15 +84,7 @@ export default function Page() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
       <App />
     </>
