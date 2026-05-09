@@ -21,7 +21,7 @@ function LoginForm() {
   }, [searchParams]);
 
   useEffect(() => {
-    // Check if user is already logged in
+    if (!supabase) return;
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session) {
         const next = searchParams.get("next") || searchParams.get("redirect") || "/editor";
@@ -32,6 +32,10 @@ function LoginForm() {
 
   const handleGoogleSignIn = async () => {
     setError(null);
+    if (!supabase) {
+      setError("Authentication is not configured. Please try again later.");
+      return;
+    }
     setLoading(true);
 
     try {
