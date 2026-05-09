@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { createClient } from "@/lib/supabase/server";
 import { adminClient } from "@/lib/supabase/admin";
-import { schools as ALL_SCHOOLS } from "@/tools/schools";
+import { allSelectableSchools as ALL_SCHOOLS } from "@/Odds/allSchools";
 import type { Profile, OddsResult, SchoolOdds, Tier } from "@/Odds/types";
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -10,7 +10,7 @@ const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const systemPrompt = `You are a senior college admissions consultant who has read thousands of admit and reject decisions at top US universities. You estimate a realistic admit probability for a single applicant at one school given their profile.
 
 Inputs you will receive:
-- Applicant profile (test scores, GPA scale + value, location, demographics, hooks, intended major, essay self-rating)
+- Applicant profile (test scores, GPA scale + value, location, demographics, hooks, intended major)
 - Activities list with self-rated tiers 1-4 (1 = national/international recognition; 4 = participation-level), plus role, hours/week, years involved, and a short description of what they actually did. Use the description to judge depth and authenticity, not just the tier.
 - A target school with its known selectivity tier
 

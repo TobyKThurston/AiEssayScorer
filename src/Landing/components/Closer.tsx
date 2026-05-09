@@ -5,7 +5,7 @@ export function Closer() {
   return (
     <section className="bg-ink text-paper border-t border-b border-hair">
       <Container>
-        <div className="py-28 md:py-36 text-center relative">
+        <div className="pt-28 md:pt-36 pb-20 md:pb-24 text-center relative">
           <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-paper-3">
             <span className="text-oxblood mr-2">§07</span>The Forecast
           </p>

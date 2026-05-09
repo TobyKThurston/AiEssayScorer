@@ -41,6 +41,12 @@ export function ScoreSchoolPage({ school }: { school: School }) {
         <p className="text-ink-2 text-lg leading-relaxed max-w-2xl">
           {school.name} reviewers in {school.location} read for specificity and fit: does this essay show that you&apos;d thrive with {school.knownFor}? Paste your draft and our free AI scorer will break down your content, structure, voice, and {school.shortName}-specific fit on a transparent rubric.
         </p>
+        <Link
+          href={`/colleges/${school.slug}`}
+          className="inline-flex items-center gap-1.5 mt-4 text-sm text-oxblood hover:gap-2 transition-all"
+        >
+          See {school.shortName}&apos;s acceptance rate, SAT range &amp; admissions stats →
+        </Link>
       </div>
 
       <PublicScorer defaultSchools={school.name} lockSchools />

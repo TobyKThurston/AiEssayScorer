@@ -6,6 +6,7 @@ import { prompts } from "@/tools/prompts";
 import { essayTypes } from "@/tools/essayTypes";
 import { rewriters } from "@/tools/rewriters";
 import { topicPersonas } from "@/tools/topicPersonas";
+import { extraColleges } from "@/colleges/extraColleges";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
@@ -21,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/ivy-league-essay-examples`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/how-to-improve-college-essay`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/colleges`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.95 },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
@@ -36,6 +38,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly",
     priority: 0.8,
   }));
+
+  const collegeRoutes: MetadataRoute.Sitemap = [
+    ...schools.map((school) => ({
+      url: `${baseUrl}/colleges/${school.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: school.rich ? 0.9 : 0.88,
+    })),
+    ...extraColleges.map((college) => ({
+      url: `${baseUrl}/colleges/${college.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    })),
+  ];
 
   const schoolWhyRoutes: MetadataRoute.Sitemap = schools.map((school) => ({
     url: `${baseUrl}/tools/why-${school.slug}-essay`,
@@ -92,6 +109,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticRoutes,
     ...blogRoutes,
     ...toolRoutes,
+    ...collegeRoutes,
     ...schoolWhyRoutes,
     ...schoolScoreRoutes,
     ...hookPromptRoutes,

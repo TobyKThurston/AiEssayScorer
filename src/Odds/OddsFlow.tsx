@@ -4,10 +4,12 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Container } from "@/design/Container";
 import { PaperCard } from "@/design/PaperCard";
-import { schools as ALL_SCHOOLS } from "@/tools/schools";
+import { allSelectableSchools as ALL_SCHOOLS } from "./allSchools";
 import {
   ACTIVITY_TIER_HINTS,
+  STATE_NAMES,
   US_STATES,
+  resolveStateInput,
   type Activity,
   type Profile,
   type OddsResult,
@@ -51,11 +53,10 @@ const blankProfile = (): Profile => ({
   state: "",
   international: false,
   schoolSlugs: [],
-  activities: [blankActivity(), blankActivity(), blankActivity()],
+  activities: [],
   intendedMajor: "",
   demographics: "",
   hooks: "",
-  essayStrength: "average",
 });
 
 export function OddsFlow() {
@@ -391,7 +392,18 @@ function StepLocation({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const valid = profile.international || profile.state.length === 2;
+  const [stateInput, setStateInput] = useState(
+    profile.state ? STATE_NAMES[profile.state as (typeof US_STATES)[number]] ?? profile.state : "",
+  );
+  const resolvedCode = resolveStateInput(stateInput);
+  const valid = profile.international || resolvedCode.length === 2;
+
+  const onStateChange = (raw: string) => {
+    setStateInput(raw);
+    const code = resolveStateInput(raw);
+    update("state", code);
+  };
+
   return (
     <PaperCard>
       <StepHeader
@@ -415,18 +427,25 @@ function StepLocation({
           <label className="block text-[13px] font-mono uppercase tracking-wider text-pencil mb-2">
             State
           </label>
-          <select
-            value={profile.state}
-            onChange={(e) => update("state", e.target.value)}
+          <input
+            type="text"
+            list="us-states-list"
+            placeholder="Type or pick a state (e.g., California or CA)"
+            value={stateInput}
+            onChange={(e) => onStateChange(e.target.value)}
+            autoComplete="off"
             className="w-full border border-hair bg-paper px-4 py-3 text-[16px] focus:outline-none focus:border-oxblood"
-          >
-            <option value="">Select a state…</option>
-            {US_STATES.map((s) => (
-              <option key={s} value={s}>
-                {s}
-              </option>
+          />
+          <datalist id="us-states-list">
+            {US_STATES.map((code) => (
+              <option key={code} value={STATE_NAMES[code]} />
             ))}
-          </select>
+          </datalist>
+          {stateInput && !resolvedCode ? (
+            <p className="mt-2 text-[12px] text-pencil">
+              Keep typing or pick from the list.
+            </p>
+          ) : null}
         </>
       ) : null}
 
@@ -449,10 +468,10 @@ function StepSchools({
   const [q, setQ] = useState("");
   const filtered = useMemo(() => {
     const query = q.trim().toLowerCase();
-    if (!query) return ALL_SCHOOLS.slice(0, 12);
+    if (!query) return ALL_SCHOOLS;
     return ALL_SCHOOLS.filter((s) =>
       `${s.name} ${s.shortName} ${s.location}`.toLowerCase().includes(query),
-    ).slice(0, 25);
+    );
   }, [q]);
 
   const toggle = (slug: string) => {
@@ -558,6 +577,7 @@ function StepActivities({
   onNext: () => void;
   onBack: () => void;
 }) {
+  const MAX_ACTIVITIES = 5;
   const updateActivity = (i: number, patch: Partial<Activity>) => {
     setProfile((p) => {
       const next = [...p.activities];
@@ -567,7 +587,7 @@ function StepActivities({
   };
   const add = () =>
     setProfile((p) =>
-      p.activities.length >= 5
+      p.activities.length >= MAX_ACTIVITIES
         ? p
         : { ...p, activities: [...p.activities, blankActivity()] },
     );
@@ -579,144 +599,184 @@ function StepActivities({
 
   const filled = profile.activities.filter((a) => a.title.trim().length > 0);
   const valid = filled.length >= 1;
+  const isEmpty = profile.activities.length === 0;
+  const canAddMore = profile.activities.length < MAX_ACTIVITIES;
 
   return (
     <PaperCard>
       <StepHeader
         eyebrow="Step 5 · Activities"
-        title="Top 3-5 activities"
-        subtitle="The more context you give, the more accurate (and personal) your forecast. Add roles, hours, and a sentence about what you actually did."
+        title="Add up to 5 activities"
+        subtitle="Start with what you spend the most time on. The more you tell us, the more personal your forecast."
       />
 
-      <div className="space-y-4">
+      {isEmpty ? (
+        <button
+          type="button"
+          onClick={add}
+          className="w-full border-2 border-dashed border-hair hover:border-oxblood hover:bg-[#FAEEEA] transition-colors py-10 px-4 text-center group"
+        >
+          <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-pencil group-hover:text-oxblood mb-2">
+            Get started
+          </div>
+          <div className="text-[18px] font-serif text-ink group-hover:text-oxblood">
+            + Add your first activity
+          </div>
+          <p className="mt-2 text-[12.5px] text-pencil">
+            Clubs, sports, jobs, research, volunteering — anything you put real time into.
+          </p>
+        </button>
+      ) : null}
+
+      <div className="space-y-5">
         {profile.activities.map((a, i) => (
-          <div key={i} className="border border-hair p-4 bg-paper">
-            <div className="flex items-start justify-between gap-3 mb-3">
-              <span className="font-mono text-[11px] uppercase tracking-wider text-pencil">
-                Activity {i + 1}
-              </span>
-              {profile.activities.length > 1 ? (
-                <button
-                  onClick={() => remove(i)}
-                  className="relative text-[12px] text-pencil hover:text-oxblood after:absolute after:-inset-3 after:content-['']"
-                  aria-label={`Remove activity ${i + 1}`}
-                >
-                  Remove
-                </button>
-              ) : null}
+          <div key={i} className="border border-hair bg-paper">
+            <div className="flex items-center justify-between gap-3 px-5 py-3 border-b border-hair bg-[#FBF7EE]">
+              <div className="flex items-center gap-2.5">
+                <span className="inline-flex items-center justify-center w-6 h-6 bg-oxblood text-paper text-[11px] font-mono font-semibold tabular-nums">
+                  {i + 1}
+                </span>
+                <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-2">
+                  Activity
+                </span>
+              </div>
+              <button
+                onClick={() => remove(i)}
+                className="relative text-[12px] text-pencil hover:text-oxblood after:absolute after:-inset-3 after:content-['']"
+                aria-label={`Remove activity ${i + 1}`}
+              >
+                Remove
+              </button>
             </div>
 
-            <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1">
-              Activity name
-            </label>
-            <input
-              type="text"
-              placeholder="e.g., Coding Club, Varsity Soccer, Local Food Bank"
-              value={a.title}
-              onChange={(e) => updateActivity(i, { title: e.target.value })}
-              className="w-full border border-hair bg-paper px-3 py-2 text-[15px] mb-3 focus:outline-none focus:border-oxblood"
-            />
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
+            <div className="p-5 space-y-5">
               <div>
-                <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1">
-                  Your role
+                <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1.5">
+                  Activity name
                 </label>
                 <input
                   type="text"
-                  placeholder="e.g., Founder, Captain"
-                  value={a.role ?? ""}
-                  onChange={(e) => updateActivity(i, { role: e.target.value })}
-                  className="w-full border border-hair bg-paper px-3 py-2 text-[14px] focus:outline-none focus:border-oxblood"
+                  placeholder="e.g., Coding Club, Varsity Soccer, Local Food Bank"
+                  value={a.title}
+                  onChange={(e) => updateActivity(i, { title: e.target.value })}
+                  autoFocus={i === profile.activities.length - 1 && !a.title}
+                  className="w-full border border-hair bg-paper px-3 py-2.5 text-[15px] focus:outline-none focus:border-oxblood"
                 />
               </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1.5">
+                    Your role
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Founder, Captain…"
+                    value={a.role ?? ""}
+                    onChange={(e) => updateActivity(i, { role: e.target.value })}
+                    className="w-full border border-hair bg-paper px-3 py-2.5 text-[14px] focus:outline-none focus:border-oxblood"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1.5">
+                    Hours / week
+                  </label>
+                  <input
+                    type="number"
+                    inputMode="numeric"
+                    min={0}
+                    max={60}
+                    placeholder="6"
+                    value={a.hoursPerWeek ?? ""}
+                    onChange={(e) =>
+                      updateActivity(i, {
+                        hoursPerWeek:
+                          e.target.value === "" ? undefined : Number(e.target.value),
+                      })
+                    }
+                    className="w-full border border-hair bg-paper px-3 py-2.5 text-[14px] tabular-nums focus:outline-none focus:border-oxblood"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1.5">
+                    Years involved
+                  </label>
+                  <input
+                    type="number"
+                    inputMode="numeric"
+                    min={0}
+                    max={6}
+                    step="0.5"
+                    placeholder="3"
+                    value={a.years ?? ""}
+                    onChange={(e) =>
+                      updateActivity(i, {
+                        years:
+                          e.target.value === "" ? undefined : Number(e.target.value),
+                      })
+                    }
+                    className="w-full border border-hair bg-paper px-3 py-2.5 text-[14px] tabular-nums focus:outline-none focus:border-oxblood"
+                  />
+                </div>
+              </div>
+
               <div>
-                <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1">
-                  Hours / week
+                <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1.5">
+                  What you actually did{" "}
+                  <span className="text-pencil/70 normal-case tracking-normal">(1–2 sentences)</span>
                 </label>
-                <input
-                  type="number"
-                  inputMode="numeric"
-                  min={0}
-                  max={60}
-                  placeholder="e.g., 6"
-                  value={a.hoursPerWeek ?? ""}
-                  onChange={(e) =>
-                    updateActivity(i, {
-                      hoursPerWeek:
-                        e.target.value === "" ? undefined : Number(e.target.value),
-                    })
-                  }
-                  className="w-full border border-hair bg-paper px-3 py-2 text-[14px] focus:outline-none focus:border-oxblood"
+                <textarea
+                  placeholder="Grew membership from 8 to 60. Ran a hackathon that raised $2k for the local library. Mentored two underclassmen who placed in state."
+                  value={a.description ?? ""}
+                  onChange={(e) => updateActivity(i, { description: e.target.value })}
+                  rows={3}
+                  className="w-full border border-hair bg-paper px-3 py-2.5 text-[14px] leading-snug focus:outline-none focus:border-oxblood resize-none"
                 />
               </div>
+
               <div>
-                <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1">
-                  Years involved
+                <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1.5">
+                  Recognition tier
                 </label>
-                <input
-                  type="number"
-                  inputMode="numeric"
-                  min={0}
-                  max={6}
-                  step="0.5"
-                  placeholder="e.g., 3"
-                  value={a.years ?? ""}
-                  onChange={(e) =>
-                    updateActivity(i, {
-                      years:
-                        e.target.value === "" ? undefined : Number(e.target.value),
-                    })
-                  }
-                  className="w-full border border-hair bg-paper px-3 py-2 text-[14px] focus:outline-none focus:border-oxblood"
-                />
+                <div className="grid grid-cols-4 gap-1.5">
+                  {([1, 2, 3, 4] as const).map((tier) => (
+                    <button
+                      key={tier}
+                      type="button"
+                      onClick={() => updateActivity(i, { tier })}
+                      className={`min-h-[42px] px-2 text-[12.5px] font-medium border transition-[background-color,color,border-color] duration-150 active:scale-[0.96] ${
+                        a.tier === tier
+                          ? "border-oxblood bg-[#FAEEEA] text-oxblood"
+                          : "border-hair text-ink-2 hover:border-ink-2"
+                      }`}
+                    >
+                      Tier {tier}
+                    </button>
+                  ))}
+                </div>
+                <p className="mt-2 text-[12px] text-pencil leading-snug">
+                  {ACTIVITY_TIER_HINTS[a.tier]}
+                </p>
               </div>
             </div>
-
-            <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1">
-              What you actually did (1-2 sentences)
-            </label>
-            <textarea
-              placeholder="e.g., Grew membership from 8 to 60. Ran a hackathon that raised $2k for the local library. Mentored two underclassmen who placed in state."
-              value={a.description ?? ""}
-              onChange={(e) => updateActivity(i, { description: e.target.value })}
-              rows={3}
-              className="w-full border border-hair bg-paper px-3 py-2 text-[14px] mb-3 focus:outline-none focus:border-oxblood resize-none"
-            />
-
-            <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1">
-              Recognition tier
-            </label>
-            <div className="grid grid-cols-4 gap-1.5 mb-2">
-              {([1, 2, 3, 4] as const).map((tier) => (
-                <button
-                  key={tier}
-                  type="button"
-                  onClick={() => updateActivity(i, { tier })}
-                  className={`min-h-[40px] px-2 text-[12px] font-medium border transition-[background-color,color,border-color] duration-150 active:scale-[0.96] ${
-                    a.tier === tier
-                      ? "border-oxblood bg-[#FAEEEA] text-oxblood"
-                      : "border-hair text-ink-2 hover:border-ink-2"
-                  }`}
-                >
-                  Tier {tier}
-                </button>
-              ))}
-            </div>
-            <p className="text-[11.5px] text-pencil leading-snug">
-              {ACTIVITY_TIER_HINTS[a.tier]}
-            </p>
           </div>
         ))}
       </div>
 
-      {profile.activities.length < 5 ? (
+      {!isEmpty && canAddMore ? (
         <button
+          type="button"
           onClick={add}
-          className="mt-4 inline-flex items-center min-h-[40px] px-1 text-[13px] text-oxblood hover:text-oxblood-2 underline-offset-4 hover:underline"
+          className="mt-4 w-full border border-dashed border-hair hover:border-oxblood hover:bg-[#FAEEEA] transition-colors py-3 text-[14px] font-medium text-oxblood"
         >
           + Add another activity
         </button>
+      ) : null}
+
+      {!isEmpty ? (
+        <p className="mt-3 text-[12px] text-pencil tabular-nums text-center">
+          {profile.activities.length} / {MAX_ACTIVITIES} added
+        </p>
       ) : null}
 
       <NavButtons onBack={onBack} onNext={onNext} disabled={!valid} />
@@ -783,28 +843,6 @@ function StepOptional({
             onChange={(e) => update("hooks", e.target.value)}
             className="w-full border border-hair bg-paper px-4 py-3 text-[15px] focus:outline-none focus:border-oxblood"
           />
-        </div>
-
-        <div>
-          <label className="block text-[13px] font-mono uppercase tracking-wider text-pencil mb-2">
-            Essay strength
-          </label>
-          <div className="grid grid-cols-3 gap-2">
-            {(["weak", "average", "strong"] as const).map((opt) => (
-              <button
-                key={opt}
-                type="button"
-                onClick={() => update("essayStrength", opt)}
-                className={`px-3 py-2.5 text-[13px] font-medium border transition-colors capitalize ${
-                  profile.essayStrength === opt
-                    ? "border-oxblood bg-[#FAEEEA] text-oxblood"
-                    : "border-hair text-ink-2 hover:border-ink-2"
-                }`}
-              >
-                {opt}
-              </button>
-            ))}
-          </div>
         </div>
       </div>
 

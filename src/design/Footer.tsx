@@ -13,12 +13,22 @@ const PRODUCT: LinkItem[] = [
 
 const RESOURCES: LinkItem[] = [
   { label: "Blog", href: "/blog" },
+  { label: "All Colleges", href: "/colleges" },
+  { label: "Essay Examples", href: "/ivy-league-essay-examples" },
   { label: "Common App Guide", href: "/blog/how-to-write-common-app-essay" },
   { label: "Common App Prompts 2025–26", href: "/blog/common-app-essay-prompts-2025" },
-  { label: "Why This College", href: "/blog/why-this-college-essay" },
   { label: "Ivy Essay Tips", href: "/blog/ivy-league-essay-tips" },
-  { label: "650-Word Guide", href: "/blog/college-essay-word-limit" },
-  { label: "Essay Examples", href: "/ivy-league-essay-examples" },
+];
+
+const COLLEGES: LinkItem[] = [
+  { label: "Harvard", href: "/colleges/harvard" },
+  { label: "Stanford", href: "/colleges/stanford" },
+  { label: "MIT", href: "/colleges/mit" },
+  { label: "Yale", href: "/colleges/yale" },
+  { label: "Princeton", href: "/colleges/princeton" },
+  { label: "Columbia", href: "/colleges/columbia" },
+  { label: "Penn", href: "/colleges/upenn" },
+  { label: "Duke", href: "/colleges/duke" },
 ];
 
 const COMPANY: LinkItem[] = [
@@ -54,45 +64,41 @@ function LinkList({ items }: { items: LinkItem[] }) {
 
 export function Footer() {
   return (
-    <footer className="border-t border-hair bg-paper">
-      <div className="container-editorial py-14 md:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-12 gap-x-8 md:gap-x-10 gap-y-12">
-          <div className="col-span-2 md:col-span-3">
+    <footer className="border-t border-hair bg-paper pt-40 md:pt-56 pb-14 md:pb-20">
+      <div className="container-editorial">
+        <div className="flex flex-col lg:flex-row gap-y-14 gap-x-20">
+          <div className="lg:w-[260px] shrink-0">
             <Wordmark />
-            <p className="mt-5 font-serif italic text-[17px] leading-[1.45] text-ink-2 max-w-[280px]">
+            <p className="mt-5 font-serif italic text-[17px] leading-[1.5] text-ink-2 max-w-[260px]">
               Admit smarter. Your essay, louder.
             </p>
           </div>
 
-          <div className="md:col-span-2">
-            <h2 className="eyebrow mb-4">Product</h2>
-            <LinkList items={PRODUCT} />
-          </div>
-
-          <div className="col-span-2 md:col-span-5">
-            <h2 className="eyebrow mb-4">Resources</h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5">
-              {RESOURCES.map((l) => (
-                <li key={l.label}>
-                  <FooterLink {...l} />
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="md:col-span-2 grid grid-cols-2 md:grid-cols-1 gap-y-8 gap-x-6">
+          <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-12">
             <div>
-              <h2 className="eyebrow mb-4">Company</h2>
+              <h2 className="eyebrow mb-5">Product</h2>
+              <LinkList items={PRODUCT} />
+            </div>
+            <div>
+              <h2 className="eyebrow mb-5">Resources</h2>
+              <LinkList items={RESOURCES} />
+            </div>
+            <div>
+              <h2 className="eyebrow mb-5">Colleges</h2>
+              <LinkList items={COLLEGES} />
+            </div>
+            <div>
+              <h2 className="eyebrow mb-5">Company</h2>
               <LinkList items={COMPANY} />
             </div>
             <div>
-              <h2 className="eyebrow mb-4">Legal</h2>
+              <h2 className="eyebrow mb-5">Legal</h2>
               <LinkList items={LEGAL} />
             </div>
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-hair flex flex-col md:flex-row justify-between gap-3">
+        <div className="mt-16 md:mt-20 pt-8 border-t border-hair flex flex-col md:flex-row justify-between gap-4">
           <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-pencil">
             © {new Date().getFullYear()} Ivy Admit AI · Not affiliated with any college or university
           </p>

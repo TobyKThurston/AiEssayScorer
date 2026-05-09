@@ -18,7 +18,7 @@ const FEATURES = [
     num: "03",
     title: "Strategy library",
     body:
-      "150+ free tools: prompt deconstructors, hook generators, cliche detectors, and school-specific brainstormers.",
+      "Prompt deconstructors, hook generators, cliche detectors, and school-specific brainstormers - tuned for the way admissions actually reads.",
   },
   {
     num: "04",

@@ -10,9 +10,9 @@ const NAV_LINKS: { label: string; href: string }[] = [
   { label: "Odds Calculator", href: "/odds" },
   { label: "Essay Grader", href: "/essay-grader" },
   { label: "Tools", href: "/tools" },
+  { label: "Colleges", href: "/colleges" },
   { label: "Blog", href: "/blog" },
   { label: "Pricing", href: "/#pricing" },
-  { label: "FAQ", href: "/#faq" },
 ];
 
 export function Nav() {
@@ -87,9 +87,6 @@ export function Nav() {
                   Sign in
                 </Link>
               )}
-              <Link href="/odds" className="btn btn-sm btn-ink">
-                Calculate my odds
-              </Link>
             </div>
 
             <button
@@ -145,13 +142,6 @@ export function Nav() {
                     Sign in
                   </Link>
                 )}
-                <Link
-                  href="/odds"
-                  onClick={() => setOpen(false)}
-                  className="btn btn-ink mt-3 w-full justify-center"
-                >
-                  Calculate my odds
-                </Link>
               </div>
             </div>
           ) : null}

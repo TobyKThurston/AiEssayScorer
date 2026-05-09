@@ -45,6 +45,12 @@ export function WhySchoolPage({ school }: { school: School }) {
         <p className="text-ink-2 text-lg leading-relaxed max-w-2xl">
           {school.name} is a {school.type.toLowerCase()} {school.category.toLowerCase()} school in {school.location}, known for {school.knownFor}. {wordLimit} Enter your intended major and interests, and this free AI tool will surface specific programs, courses, and campus details you can weave into your draft.
         </p>
+        <Link
+          href={`/colleges/${school.slug}`}
+          className="inline-flex items-center gap-1.5 mt-4 text-sm text-oxblood hover:gap-2 transition-all"
+        >
+          See {school.shortName}&apos;s acceptance rate, SAT range &amp; admissions stats →
+        </Link>
       </div>
 
       <WhyCollegeBrainstormer defaultSchool={school.name} lockSchool />
