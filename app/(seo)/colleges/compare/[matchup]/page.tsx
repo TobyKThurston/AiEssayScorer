@@ -152,20 +152,27 @@ export default async function CompareCollegePage({ params }: Props) {
   const higherSAT = winner(ra.sat75, rb.sat75, "higher");
   const higherCompletion = winner(ra.completion, rb.completion, "higher");
 
-  // Featured-snippet headline answers
+  // Featured-snippet / AI-citation answer blocks (≈80–150 words, self-contained)
+  const harderName = harderToGetIn === "a" ? aName : bName;
+  const easierName = harderToGetIn === "a" ? bName : aName;
+  const harderRate = harderToGetIn === "a" ? ra.admitRate : rb.admitRate;
+  const easierRate = harderToGetIn === "a" ? rb.admitRate : ra.admitRate;
+  const harderSAT75 = harderToGetIn === "a" ? ra.sat75 : rb.sat75;
+  const easierSAT75 = harderToGetIn === "a" ? rb.sat75 : ra.sat75;
   const harderAnswer =
-    harderToGetIn === "a"
-      ? `${aName} is harder to get into than ${bName}. ${aName}'s ${formatPctSafe(ra.admitRate)} acceptance rate is lower than ${bName}'s ${formatPctSafe(rb.admitRate)}.`
-      : harderToGetIn === "b"
-        ? `${bName} is harder to get into than ${aName}. ${bName}'s ${formatPctSafe(rb.admitRate)} acceptance rate is lower than ${aName}'s ${formatPctSafe(ra.admitRate)}.`
-        : "Both schools have similar acceptance rates.";
+    harderToGetIn === "tie"
+      ? `${aName} and ${bName} have similar acceptance rates of ${formatPctSafe(ra.admitRate)} and ${formatPctSafe(rb.admitRate)} respectively, so neither school is meaningfully harder to get into on the headline metric. The deciding factors come down to applicant strength signals beyond the rate itself: SAT 75th percentiles (${ra.sat75 ?? "n/a"} at ${aName} vs ${rb.sat75 ?? "n/a"} at ${bName}), six-year graduation rate (${ra.completion ? formatPctSafe(ra.completion) : "n/a"} vs ${rb.completion ? formatPctSafe(rb.completion) : "n/a"}), and how much each school's published rate is inflated by recruited athletes, legacies, and other hooked applicants in the pool.`
+      : `${harderName} is harder to get into than ${easierName}. ${harderName}'s acceptance rate is ${formatPctSafe(harderRate)} compared with ${formatPctSafe(easierRate)} at ${easierName} — for every 100 applicants, roughly ${Math.round((harderRate ?? 0) * 100)} are admitted at ${harderName} versus ${Math.round((easierRate ?? 0) * 100)} at ${easierName}. Admitted-student test scores reinforce this: ${harderName}'s 75th percentile SAT is ${harderSAT75 ?? "n/a"}, compared with ${easierSAT75 ?? "n/a"} at ${easierName}. Note that published acceptance rates compress an important distinction — both pools concentrate hooked applicants (recruited athletes, legacies, first-generation), so the unhooked-applicant admit gap is typically smaller than the headline-rate difference suggests.`;
 
+  const cheaperName = cheaperNet === "a" ? aName : bName;
+  const pricierName = cheaperNet === "a" ? bName : aName;
+  const cheaperPrice = cheaperNet === "a" ? ra.netPrice : rb.netPrice;
+  const pricierPrice = cheaperNet === "a" ? rb.netPrice : ra.netPrice;
+  const priceGap = Math.abs((pricierPrice ?? 0) - (cheaperPrice ?? 0));
   const cheaperAnswer =
-    cheaperNet === "a"
-      ? `${aName} costs less on average. After grants and scholarships, ${aName}'s average net price is ${formatMoneySafe(ra.netPrice)} vs ${formatMoneySafe(rb.netPrice)} at ${bName}.`
-      : cheaperNet === "b"
-        ? `${bName} costs less on average. After grants and scholarships, ${bName}'s average net price is ${formatMoneySafe(rb.netPrice)} vs ${formatMoneySafe(ra.netPrice)} at ${aName}.`
-        : "Average net prices are similar.";
+    cheaperNet === "tie"
+      ? `Average net prices at ${aName} (${formatMoneySafe(ra.netPrice)}) and ${bName} (${formatMoneySafe(rb.netPrice)}) are similar, but that headline number masks substantial variation by family income. Both schools' published averages combine students across income brackets, including those who pay full price. The actual price for a specific family depends on income, assets, and any merit aid offered. Run each school's official Net Price Calculator before letting cost drive the decision; the four-year out-of-pocket gap between two schools at the same family income often exceeds $40,000 even when published average net prices are nearly identical.`
+      : `${cheaperName} costs less than ${pricierName} on average. After grants and scholarships, ${cheaperName}'s average net price is ${formatMoneySafe(cheaperPrice)} per year compared with ${formatMoneySafe(pricierPrice)} at ${pricierName} — a published gap of about ${formatMoneySafe(priceGap)} per year before any merit aid. The actual price for a specific family depends on income, assets, and merit awards, so always run each school's official Net Price Calculator before deciding. These figures cover tuition, fees, room, and board, and they assume on-campus residence with a standard meal plan, which is how most need-based aid packages are calibrated.`;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -180,16 +187,37 @@ export default async function CompareCollegePage({ params }: Props) {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${baseUrl}/colleges/compare/${matchup}#article`,
     headline: `${aName} vs. ${bName}: Real Stats Compared`,
     description: `Side-by-side comparison of ${ra.school.name} and ${rb.school.name}.`,
+    image: {
+      "@type": "ImageObject",
+      url: `${baseUrl}/og-image.png`,
+      width: 1200,
+      height: 630,
+    },
     datePublished: "2026-05-09",
     dateModified: "2026-05-09",
-    author: { "@type": "Organization", name: "Ivy Admit", url: baseUrl },
+    author: {
+      "@type": "Person",
+      name: "Ivy Admit Editorial Team",
+      url: `${baseUrl}/about`,
+      jobTitle: "Editorial Team",
+      worksFor: { "@type": "Organization", name: "Ivy Admit", url: baseUrl },
+      description:
+        "Editors at Ivy Admit covering selective US college admissions, application strategy, and essay craft.",
+    },
     publisher: {
       "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
       name: "Ivy Admit",
       url: baseUrl,
-      logo: { "@type": "ImageObject", url: `${baseUrl}/icon-192.png` },
+      logo: {
+        "@type": "ImageObject",
+        url: `${baseUrl}/icon-512.png`,
+        width: 512,
+        height: 512,
+      },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": `${baseUrl}/colleges/compare/${matchup}` },
     about: [

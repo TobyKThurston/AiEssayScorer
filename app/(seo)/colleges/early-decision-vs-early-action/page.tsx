@@ -47,7 +47,15 @@ const articleSchema = {
   headline: "Early Decision vs Early Action: Which Should You Apply To?",
   datePublished: "2026-05-09",
   dateModified: "2026-05-09",
-  author: { "@type": "Organization", name: "Ivy Admit", url: baseUrl },
+  author: {
+    "@type": "Person",
+    name: "Ivy Admit Editorial Team",
+    url: `${baseUrl}/about`,
+    jobTitle: "Editorial Team",
+    worksFor: { "@type": "Organization", name: "Ivy Admit", url: baseUrl },
+    description:
+      "Editors at Ivy Admit covering selective US college admissions, application strategy, and essay craft. Combined experience reviewing thousands of applications to Harvard, Yale, Princeton, Stanford, MIT, and other top schools.",
+  },
   publisher: {
     "@type": "Organization",
     name: "Ivy Admit",
@@ -147,8 +155,7 @@ export default function EDvsEAPage() {
             What is the difference between Early Decision and Early Action?
           </h2>
           <p className="text-ink-2 leading-relaxed">
-            <strong className="text-ink">Early Decision (ED)</strong> is binding. If admitted, you must enroll and withdraw all other applications.
-            <strong className="text-ink"> Early Action (EA)</strong> is non-binding. You get an early decision but can compare offers and choose any school by May 1. ED acceptance rates are usually higher than RD, but you give up your ability to compare aid offers across schools.
+            <strong className="text-ink">Early Decision (ED)</strong> is a binding application option: if a college admits you in ED, you must enroll there and withdraw all other applications. <strong className="text-ink">Early Action (EA)</strong> is non-binding — you receive an admissions decision early, typically in mid-December, but you can still compare offers from other schools and decide by the standard May 1 reply deadline. The strategic difference is leverage: ED tells a college you will enroll if admitted, which is why ED admit rates run roughly 2 to 4 times higher than Regular Decision rates at most selective schools. EA carries no such commitment, so the admit-rate boost is smaller (often 1.2 to 1.5 times) but you keep the ability to compare financial aid offers. <strong className="text-ink">Restrictive Early Action (REA)</strong> and <strong className="text-ink">Single-Choice Early Action (SCEA)</strong> sit between the two — non-binding, but you can&apos;t apply ED elsewhere. Choose ED only if the school is your unambiguous first choice and you don&apos;t need to compare aid; otherwise EA, REA, or RD.
           </p>
         </section>
 
@@ -190,7 +197,7 @@ export default function EDvsEAPage() {
 
           <h2>Should You Apply ED?</h2>
           <p>
-            Apply ED if all three are true:
+            You should apply Early Decision only when the binding commitment is unambiguously the right trade for your situation. ED removes two things you might otherwise rely on: the ability to compare financial aid offers across multiple admits, and the ability to change your mind once you see all your options in March or April. In return, you get a meaningful admit-rate boost (typically 1.5 to 2 times for unhooked applicants once you control for athletes and legacies in the ED pool) and a faster, calmer senior winter. For families where net price is decision-determinative, that&apos;s rarely a fair trade. For students with one clear first choice and a stable family financial picture, it usually is. The decision test is a three-part filter: first choice, affordable at the published estimate, and ready by November. Apply ED if all three are true:
           </p>
           <ol>
             <li><strong>The school is genuinely your first choice.</strong> ED is binding. If you&apos;d be tempted to attend a different school for any reason, don&apos;t ED.</li>

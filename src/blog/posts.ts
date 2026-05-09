@@ -1,10 +1,32 @@
+export interface Author {
+  name: string;
+  role?: string;
+  url?: string;
+}
+
 export interface Post {
   slug: string;
   title: string;
   description: string;
   publishedAt: string;
+  /** ISO date the post was last meaningfully revised. Defaults to publishedAt. */
+  updatedAt?: string;
   category: string;
   readTime: string;
+  /** Defaults to the editorial team author when omitted. */
+  author?: Author;
+  /** Per-post hero/OG image. Defaults to the site-wide og-image.png. */
+  image?: string;
+}
+
+export const defaultAuthor: Author = {
+  name: "Ivy Admit Editorial Team",
+  role: "College admissions writers and former applicants to Ivy League and peer institutions",
+  url: "https://getivyadmit.com/about",
+};
+
+export function getAuthor(post: Post): Author {
+  return post.author ?? defaultAuthor;
 }
 
 export const posts: Post[] = [

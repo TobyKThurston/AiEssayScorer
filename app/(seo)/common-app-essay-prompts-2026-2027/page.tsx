@@ -184,7 +184,15 @@ const articleSchema = {
   description: "All 7 Common Application essay prompts for the 2026-2027 cycle, with strategy, common mistakes, and example angles for each.",
   datePublished: "2026-05-09",
   dateModified: "2026-05-09",
-  author: { "@type": "Organization", name: "Ivy Admit", url: baseUrl },
+  author: {
+    "@type": "Person",
+    name: "Ivy Admit Editorial Team",
+    url: `${baseUrl}/about`,
+    jobTitle: "Editorial Team",
+    worksFor: { "@type": "Organization", name: "Ivy Admit", url: baseUrl },
+    description:
+      "Editors at Ivy Admit covering selective US college admissions, application strategy, and essay craft. Combined experience reviewing thousands of applications to Harvard, Yale, Princeton, Stanford, MIT, and other top schools.",
+  },
   publisher: {
     "@type": "Organization",
     name: "Ivy Admit",
@@ -192,6 +200,60 @@ const articleSchema = {
     logo: { "@type": "ImageObject", url: `${baseUrl}/icon-192.png` },
   },
   mainEntityOfPage: { "@type": "WebPage", "@id": `${baseUrl}/common-app-essay-prompts-2026-2027` },
+};
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to Choose and Write a Common App Essay (2026-2027)",
+  description:
+    "Step-by-step process for selecting a Common App prompt and producing a competitive 650-word personal statement under the 2026-2027 cycle requirements.",
+  totalTime: "P14D",
+  supply: [
+    { "@type": "HowToSupply", name: "Common App account (free)" },
+    { "@type": "HowToSupply", name: "Two to three rough story ideas" },
+  ],
+  tool: [
+    { "@type": "HowToTool", name: "Ivy Admit essay scorer", url: `${baseUrl}/try` },
+  ],
+  step: [
+    {
+      "@type": "HowToStep",
+      position: 1,
+      name: "Brainstorm before reading the prompts",
+      text: "List 5 to 10 specific moments, scenes, or decisions from the last 4 years that you would actually want a stranger to know. Don't filter for a prompt yet — start from the raw material of your life.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 2,
+      name: "Match your strongest story to a prompt",
+      text: "Read all 7 Common App prompts. Pick the one that best fits the story you most want to tell, not the one that sounds most impressive. Prompt 7 (open topic) is fine if no structured prompt fits.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 3,
+      name: "Draft to 800 words first",
+      text: "Aim long on draft 1 — roughly 800 words — so you can cut. The 650-word limit will force discipline later. Don't self-edit while drafting.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 4,
+      name: "Cut to 650 words by removing abstraction",
+      text: "Delete every sentence that states a lesson, claims an emotion, or summarizes a category. Keep the concrete scenes, specific verbs, and the one or two reflective lines that emerged from real thinking.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 5,
+      name: "Read aloud and revise for voice",
+      text: "Read the full essay aloud. Any sentence that doesn't sound like you in conversation should be rewritten or cut. Voice consistency is the most common failure point in otherwise-strong drafts.",
+    },
+    {
+      "@type": "HowToStep",
+      position: 6,
+      name: "Score the draft against the rubric",
+      text: "Run the draft through a rubric-based scorer (or a counselor/teacher) for content, structure, and voice feedback. Revise based on the lowest-scoring dimension first. Repeat until all three score above 80.",
+    },
+  ],
 };
 
 const faqSchema = {
@@ -256,6 +318,7 @@ export default function CommonAppPromptsPage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
         <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Common App Essay Prompts 2026-2027" }]} />
 
@@ -282,8 +345,41 @@ export default function CommonAppPromptsPage() {
             How many Common App essay prompts are there for 2026-2027?
           </h2>
           <p className="text-ink-2 leading-relaxed">
-            There are <strong className="text-ink">7 Common App essay prompts</strong> for 2026-2027. You choose one and write a single <strong className="text-ink">650-word</strong> personal statement that goes to every Common App school you apply to. Most competitive applications come in between 600 and 650 words. The Common App typically holds prompts steady year over year, with the 2026-2027 set functionally identical to 2025-2026.
+            There are <strong className="text-ink">7 Common App essay prompts</strong> for the 2026-2027 admissions cycle. You choose exactly one and write a single <strong className="text-ink">650-word</strong> personal statement that the Common Application sends to every Common App school you apply to — you do not write a different essay for each college. The minimum length is 250 words, but virtually every competitive application lands between 600 and 650 words. The seven prompts cover background and identity, challenge or failure, questioned beliefs, gratitude, personal growth, an engaging topic, and an open-topic option (Prompt 7) where you can submit on any subject of your choice. The Common App typically holds prompts steady year over year, with the 2026-2027 set functionally identical to 2025-2026; always verify on the official Common Application website before drafting. Pick the prompt that fits the essay you most want to write, not the one that sounds most impressive.
           </p>
+        </section>
+
+        {/* Prompts at-a-glance comparison table */}
+        <section className="not-prose mb-14">
+          <p className="text-center text-[11px] font-semibold text-pencil uppercase tracking-[0.18em] mb-4">
+            All 7 Prompts at a Glance
+          </p>
+          <div className="rounded-2xl border border-hair overflow-hidden bg-cream">
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm min-w-[560px]">
+                <thead className="bg-[#FAEEEA]">
+                  <tr>
+                    <th className="text-left px-3 sm:px-5 py-3 text-[11px] font-semibold text-pencil uppercase tracking-[0.15em]">#</th>
+                    <th className="text-left px-3 sm:px-5 py-3 text-[11px] font-semibold text-pencil uppercase tracking-[0.15em]">Theme</th>
+                    <th className="text-left px-3 sm:px-5 py-3 text-[11px] font-semibold text-pencil uppercase tracking-[0.15em]">Best for</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {PROMPTS.map((p, i) => (
+                    <tr key={p.number} className={i === PROMPTS.length - 1 ? "" : "border-b border-hair"}>
+                      <td className="px-3 sm:px-5 py-3 text-ink font-semibold tabular-nums">{p.number}</td>
+                      <td className="px-3 sm:px-5 py-3">
+                        <a href={`#prompt-${p.number}`} className="!text-ink !no-underline hover:!text-oxblood font-medium">
+                          {p.shortName}
+                        </a>
+                      </td>
+                      <td className="px-3 sm:px-5 py-3 text-ink-2">{p.whoItsFor.split(".")[0]}.</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </section>
 
         <section className="not-prose mb-14">

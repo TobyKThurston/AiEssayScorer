@@ -1,0 +1,46 @@
+# Ivy Admit
+> AI-powered college essay review and admissions strategy. Free essay grader scored 0–100, per-school admit-odds calculator with Reach/Match/Safety tier, line-by-line edit suggestions, and strategy guides for selective US college applications. Trained on patterns from successful applications to Harvard, Yale, Princeton, MIT, and 50+ other selective schools.
+
+## Core tools
+- [Odds Calculator](https://getivyadmit.com/): Per-school admit % and Reach/Match/Safety tier from SAT, GPA, location, target schools, and activities
+- [Essay Grader](https://getivyadmit.com/essay-grader): Free AI essay review with score out of 100, red flags, and top 3 improvements that would raise your score most
+- [Try Now](https://getivyadmit.com/try): Anonymous full-essay review, no signup required, one free review per day
+- [Tools index](https://getivyadmit.com/tools): All free admissions tools (essay checker, prompt generator, common-app helpers)
+
+## Strategy guides — long-form, evidence-led
+- [Common App Essay Prompts 2026-2027](https://getivyadmit.com/common-app-essay-prompts-2026-2027): All 7 prompts explained with strategy, common mistakes, and example angles for each
+- [Early Decision vs Early Action](https://getivyadmit.com/colleges/early-decision-vs-early-action): Binding vs non-binding, ED admit-rate boost analysis, REA/SCEA explained, school lists
+- [Common App Essay Help](https://getivyadmit.com/common-app-essay-help): Step-by-step guide to writing a strong personal statement
+- [Ivy League Essay Examples](https://getivyadmit.com/ivy-league-essay-examples): Annotated examples from accepted applications
+- [How to Improve College Essay](https://getivyadmit.com/how-to-improve-college-essay): Revision techniques and frameworks
+- [College Essay Checker](https://getivyadmit.com/college-essay-checker): Tool overview and how to use it
+- [AI Essay Review](https://getivyadmit.com/ai-essay-review): How AI essay review works, what it checks, accuracy
+
+## College data
+- [Colleges hub](https://getivyadmit.com/colleges): Per-school admissions data and overviews
+- [Most selective colleges](https://getivyadmit.com/colleges/most-selective): Lowest acceptance rates 2026–2027
+- [Easiest Ivies](https://getivyadmit.com/colleges/easiest-ivies): Comparative admit-rate analysis across the eight Ivies
+- [Best financial aid](https://getivyadmit.com/colleges/best-financial-aid): Schools with the strongest need-based and merit aid
+- [Highest earnings](https://getivyadmit.com/colleges/highest-earnings): Outcomes data by institution
+- [Colleges by state](https://getivyadmit.com/colleges/by-state): State-by-state landing pages
+- [School comparisons](https://getivyadmit.com/colleges/compare): Head-to-head X vs Y matchups
+
+## Reference
+- [Blog](https://getivyadmit.com/blog): Essay strategy, application tactics, weekly notes
+- [About](https://getivyadmit.com/about): Who built Ivy Admit and how the scoring works
+- [Pricing](https://getivyadmit.com/#pricing): Free tier and Pro plan
+- [Sitemap](https://getivyadmit.com/sitemap.xml): Full URL inventory
+
+## Key facts
+- Free tier: one full essay review per day, no signup required, anonymous use supported
+- Pro plan: $7/month for unlimited reviews, line-by-line edits, school-specific feedback, multi-school odds, draft-over-draft progress tracking, and rewrite suggestions
+- 30-day money-back guarantee on Pro
+- Scoring rubric: three dimensions — content (specificity, evidence), structure (narrative arc), voice (distinctiveness, consistency) — each 0–100
+- First-pass scoring typically returns in 10–20 seconds
+- Tool category: review/edit, analogous to a counselor or English teacher; not a ghostwriting service. Users remain authors and approve every suggested change.
+- Privacy: drafts are private, encrypted at rest, never sold; users can delete their account and data on demand
+- Coverage: works for any selective school, not just Ivies — structure and evidence rubric generalizes
+
+## Contact
+- support@getivyadmit.com
+- https://twitter.com/ivyadmit

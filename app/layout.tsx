@@ -125,22 +125,47 @@ export const metadata: Metadata = {
   },
 };
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
+
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": `${process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com"}/#organization`,
+  "@type": ["Organization", "EducationalOrganization"],
+  "@id": `${SITE_URL}/#organization`,
   name: "Ivy Admit",
   alternateName: "Ivy Admit – AI College Essay Review",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com",
+  url: SITE_URL,
   logo: {
     "@type": "ImageObject",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com"}/icon-512.png`,
+    url: `${SITE_URL}/icon-512.png`,
     width: 512,
     height: 512,
   },
-  image: `${process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com"}/icon-512.png`,
+  image: `${SITE_URL}/icon-512.png`,
   description:
-    "AI-powered college essay review and strategy tool trained on successful Ivy League applications.",
+    "AI-powered college essay review and admissions strategy tool. Trained on patterns from successful applications to Harvard, Yale, Princeton, MIT, and 50+ other selective schools. Free essay grader, per-school admit-odds calculator, and line-by-line edit suggestions.",
+  slogan: "AI-powered college essay review built by students who got in.",
+  knowsAbout: [
+    "College admissions",
+    "Common Application essays",
+    "Personal statements",
+    "Selective university applications",
+    "Ivy League admissions",
+    "Early Decision and Early Action strategy",
+    "Supplemental essays",
+    "Application odds estimation",
+  ],
+  areaServed: { "@type": "Country", name: "United States" },
+  audience: {
+    "@type": "EducationalAudience",
+    educationalRole: "student",
+    audienceType: "High school juniors and seniors applying to selective US colleges",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "Customer Service",
+    email: "support@getivyadmit.com",
+    availableLanguage: ["English"],
+  },
   sameAs: [
     "https://twitter.com/ivyadmit",
   ],

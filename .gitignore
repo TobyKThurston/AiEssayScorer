@@ -36,6 +36,15 @@ yarn-error.log*
 # vercel
 .vercel
 
+# claude-seo skills/agents (third-party, installed locally per project)
+/.claude/skills/
+/.claude/agents/
+
+# SEO analysis artifacts (regenerable, don't commit)
+/seo-out/
+/GEO-ANALYSIS.md
+/public/favicon.ico.bak-*
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

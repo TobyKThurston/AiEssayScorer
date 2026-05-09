@@ -126,7 +126,15 @@ export default async function StatePage({ params }: Props) {
     headline: `Best Colleges in ${stateName}`,
     datePublished: "2026-05-09",
     dateModified: "2026-05-09",
-    author: { "@type": "Organization", name: "Ivy Admit", url: baseUrl },
+    author: {
+      "@type": "Person",
+      name: "Ivy Admit Editorial Team",
+      url: `${baseUrl}/about`,
+      jobTitle: "Editorial Team",
+      worksFor: { "@type": "Organization", name: "Ivy Admit", url: baseUrl },
+      description:
+        "Editors at Ivy Admit covering selective US college admissions, application strategy, and essay craft.",
+    },
     publisher: {
       "@type": "Organization",
       name: "Ivy Admit",

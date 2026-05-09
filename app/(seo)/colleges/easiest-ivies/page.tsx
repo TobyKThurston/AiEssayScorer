@@ -94,7 +94,7 @@ export default function EasiestIviesPage() {
         name: "What is the easiest Ivy League school to get into?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Among the 8 Ivy League schools, ${easiest.school.name} currently has the highest published acceptance rate at ${formatPct(easiest.rate)}. That makes it statistically the easiest Ivy to be admitted to, though all 8 remain extremely selective.`,
+          text: `Among the 8 Ivy League schools, ${easiest.school.name} currently has the highest published acceptance rate at ${formatPct(easiest.rate)} (per each school's most recent admit cycle and the U.S. Department of Education College Scorecard, verified ${LAST_VERIFIED}). That makes it statistically the easiest Ivy to be admitted to, though all 8 remain extremely selective.`,
         },
       },
       {
@@ -102,7 +102,7 @@ export default function EasiestIviesPage() {
         name: "What is the hardest Ivy League school to get into?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `${hardest.school.name} has the lowest published acceptance rate among the Ivies at ${formatPct(hardest.rate)}.`,
+          text: `${hardest.school.name} has the lowest published acceptance rate among the Ivies at ${formatPct(hardest.rate)} (sources: each school's published admit cycle data and the U.S. Department of Education College Scorecard, verified ${LAST_VERIFIED}).`,
         },
       },
       {
@@ -110,7 +110,7 @@ export default function EasiestIviesPage() {
         name: "What's the average Ivy League acceptance rate?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Across all 8 Ivy League schools, the average published acceptance rate is approximately ${formatPct(ivies.reduce((s, i) => s + i.rate, 0) / ivies.length)}. The range spans roughly ${formatPct(easiest.rate)} (${easiest.school.shortName}) to ${formatPct(hardest.rate)} (${hardest.school.shortName}).`,
+          text: `Across all 8 Ivy League schools, the average published acceptance rate is approximately ${formatPct(ivies.reduce((s, i) => s + i.rate, 0) / ivies.length)}. The range spans roughly ${formatPct(easiest.rate)} (${easiest.school.shortName}) to ${formatPct(hardest.rate)} (${hardest.school.shortName}). Source: each school's published admit cycle and the U.S. Department of Education College Scorecard, verified ${LAST_VERIFIED}.`,
         },
       },
     ],

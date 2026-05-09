@@ -170,7 +170,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.65,
     }));
 
-  return [
+  const all: MetadataRoute.Sitemap = [
     ...tier1,
     ...tier2,
     ...utility,
@@ -187,4 +187,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...topicPersonaRoutes,
     ...deconstructRoutes,
   ];
+
+  // Deduplicate by URL — when an entry appears in multiple source lists
+  // (e.g. a slug exists in both `schools` and `extraColleges`), keep the
+  // first occurrence so hand-curated tier-1/2 priorities win.
+  const seen = new Set<string>();
+  return all.filter((entry) => {
+    const url = entry.url;
+    if (seen.has(url)) return false;
+    seen.add(url);
+    return true;
+  });
 }

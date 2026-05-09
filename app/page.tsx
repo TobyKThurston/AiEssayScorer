@@ -49,7 +49,7 @@ const faqSchema = {
 
 const orgSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "EducationalOrganization"],
   "@id": `${baseUrl}/#organization`,
   name: "Ivy Admit",
   url: baseUrl,
@@ -60,7 +60,18 @@ const orgSchema = {
     height: 512,
   },
   image: `${baseUrl}/icon-512.png`,
-  description: "AI-powered college essay review and strategy tool for selective college admissions",
+  description:
+    "AI-powered college essay review and admissions strategy tool for selective US universities. Free essay grader, per-school admit-odds calculator, and line-by-line edit suggestions.",
+  slogan: "AI-powered college essay review built by students who got in.",
+  knowsAbout: [
+    "College admissions",
+    "Common Application essays",
+    "Personal statements",
+    "Ivy League admissions",
+    "Early Decision and Early Action strategy",
+    "Application odds estimation",
+  ],
+  areaServed: { "@type": "Country", name: "United States" },
   sameAs: [
     "https://twitter.com/ivyadmit",
   ],
@@ -68,41 +79,45 @@ const orgSchema = {
     "@type": "ContactPoint",
     contactType: "Customer Service",
     email: "support@getivyadmit.com",
+    availableLanguage: ["English"],
   },
 };
 
 const appSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "@id": `${baseUrl}/#software`,
   name: "Ivy Admit",
   applicationCategory: "EducationalApplication",
   operatingSystem: "Web",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.8",
-    ratingCount: "150",
-  },
-  description: "AI-powered college essay review tool that provides structure scores, evidence analysis, and line-by-line editing suggestions",
+  url: baseUrl,
+  description: "AI-powered college essay review tool that provides structure scores, evidence analysis, and line-by-line editing suggestions, plus an admissions odds calculator.",
+  publisher: { "@id": `${baseUrl}/#organization` },
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Free",
+      price: "0",
+      priceCurrency: "USD",
+      description: "One essay review per day, no signup required.",
+    },
+    {
+      "@type": "Offer",
+      name: "Pro",
+      price: "7.00",
+      priceCurrency: "USD",
+      description: "Unlimited reviews, line-by-line edits, school-specific feedback. Billed monthly.",
+    },
+  ],
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${baseUrl}/#website`,
   url: baseUrl,
   name: "Ivy Admit",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${baseUrl}/blog?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
+  publisher: { "@id": `${baseUrl}/#organization` },
 };
 
 export default function Page() {

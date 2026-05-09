@@ -54,7 +54,11 @@ export default function BlogIndex() {
       description: post.description,
       url: `${baseUrl}/blog/${post.slug}`,
       datePublished: new Date(post.publishedAt).toISOString(),
-      author: { "@type": "Organization", name: "Ivy Admit" },
+      author: {
+        "@type": "Person",
+        name: "Ivy Admit Editorial Team",
+        worksFor: { "@type": "Organization", name: "Ivy Admit", url: baseUrl },
+      },
     })),
   };
 

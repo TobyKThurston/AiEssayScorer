@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { posts, getPost, formatDate } from "@/blog/posts";
+import { posts, getPost, formatDate, getAuthor } from "@/blog/posts";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import { Breadcrumbs } from "@/design/Breadcrumbs";
 
@@ -184,18 +184,45 @@ export default async function BlogPost({ params }: Props) {
   const { default: Content } = await loader();
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
+  const author = getAuthor(post);
+  const heroImage = post.image
+    ? (post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}`)
+    : `${baseUrl}/og-image.png`;
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${baseUrl}/blog/${slug}#article`,
     headline: post.title,
     description: post.description,
+    image: {
+      "@type": "ImageObject",
+      url: heroImage,
+      width: 1200,
+      height: 630,
+    },
     datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
-    author: { "@type": "Organization", name: "Ivy Admit" },
+    dateModified: post.updatedAt ?? post.publishedAt,
+    author: {
+      "@type": "Person",
+      name: author.name,
+      ...(author.role ? { jobTitle: author.role } : {}),
+      ...(author.url ? { url: author.url } : {}),
+    },
     publisher: {
       "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
       name: "Ivy Admit",
       url: baseUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${baseUrl}/icon-512.png`,
+        width: 512,
+        height: 512,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${baseUrl}/blog/${slug}`,
     },
     url: `${baseUrl}/blog/${slug}`,
   };
@@ -286,7 +313,10 @@ export default async function BlogPost({ params }: Props) {
           </h1>
 
           <p className="text-pencil text-[13px] sm:text-sm">
-            {formatDate(post.publishedAt)} · Ivy Admit
+            {formatDate(post.publishedAt)} · By {author.name}
+            {post.updatedAt && post.updatedAt !== post.publishedAt
+              ? ` · Updated ${formatDate(post.updatedAt)}`
+              : ""}
           </p>
         </div>
 
