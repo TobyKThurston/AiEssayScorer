@@ -1,0 +1,626 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/design/Breadcrumbs";
+import { schools, type School } from "@/tools/schools";
+import { extraColleges } from "@/colleges/extraColleges";
+import { getStats, type CollegeStat } from "@/colleges/collegeStats";
+import { extraStats } from "@/colleges/extraColleges";
+import {
+  getScorecard,
+  formatPctSafe,
+  formatMoneySafe,
+  type ScorecardData,
+} from "@/colleges/scorecard";
+import { matchups, parseMatchupSlug } from "@/colleges/matchups";
+
+type Props = { params: Promise<{ matchup: string }> };
+
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
+const LAST_VERIFIED = "May 2026";
+
+const allSchools: School[] = [
+  ...schools,
+  ...extraColleges.map((e) => ({
+    slug: e.slug, name: e.name, shortName: e.shortName, location: e.location,
+    state: e.state, type: e.type, category: e.category, knownFor: e.knownFor,
+  })),
+];
+
+function findSchool(slug: string): School | null {
+  return allSchools.find((s) => s.slug === slug) ?? null;
+}
+
+function findStats(slug: string): CollegeStat | null {
+  const curated = getStats(slug);
+  if (curated) return curated;
+  const extra = extraStats[slug];
+  if (!extra) return null;
+  return extra as CollegeStat;
+}
+
+interface ResolvedSchool {
+  school: School;
+  stat: CollegeStat | null;
+  sc: ScorecardData | null;
+  admitRate?: number;
+  sat25?: number;
+  sat75?: number;
+  act25?: number;
+  act75?: number;
+  coa?: number;
+  netPrice?: number;
+  enrollment?: number;
+  completion?: number;
+  earnings?: number;
+}
+
+function resolve(slug: string): ResolvedSchool | null {
+  const school = findSchool(slug);
+  if (!school) return null;
+  const stat = findStats(slug);
+  const sc = getScorecard(slug);
+  return {
+    school,
+    stat,
+    sc,
+    admitRate: stat?.acceptanceRate ?? sc?.admitRate,
+    sat25: stat?.sat?.p25 ?? sc?.sat25,
+    sat75: stat?.sat?.p75 ?? sc?.sat75,
+    act25: stat?.act?.p25 ?? sc?.act25,
+    act75: stat?.act?.p75 ?? sc?.act75,
+    coa: stat?.coa ?? sc?.coa,
+    netPrice: sc?.avgNetPrice,
+    enrollment: stat?.undergradEnrollment ?? sc?.undergradEnrollment,
+    completion: sc?.completion4yr,
+    earnings: sc?.earnings10yr,
+  };
+}
+
+export function generateStaticParams() {
+  return matchups.map(([a, b]) => ({ matchup: `${a}-vs-${b}` }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { matchup } = await params;
+  const parsed = parseMatchupSlug(matchup);
+  if (!parsed) return {};
+  const [a, b] = parsed;
+  const ra = resolve(a);
+  const rb = resolve(b);
+  if (!ra || !rb) return {};
+
+  const aName = ra.school.shortName;
+  const bName = rb.school.shortName;
+  const title = `${aName} vs. ${bName}: Acceptance Rate, SAT, Cost & Outcomes Compared`;
+  const description = `Side-by-side comparison of ${ra.school.name} and ${rb.school.name}. Real acceptance rates (${formatPctSafe(ra.admitRate)} vs ${formatPctSafe(rb.admitRate)}), SAT ranges, financial aid, and outcomes. Plus a calculator that estimates your odds at both.`;
+
+  return {
+    title,
+    description,
+    keywords: [
+      `${aName} vs ${bName}`,
+      `${bName} vs ${aName}`,
+      `${aName} or ${bName}`,
+      `${aName} ${bName} comparison`,
+      `which is better ${aName} or ${bName}`,
+      `${aName} ${bName} acceptance rate`,
+    ],
+    alternates: { canonical: `/colleges/compare/${matchup}` },
+    openGraph: {
+      title: `${aName} vs ${bName}: Real Stats Compared`,
+      description,
+      url: `/colleges/compare/${matchup}`,
+      type: "article",
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: `${aName} vs ${bName} comparison` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${aName} vs ${bName}`,
+      images: ["/og-image.png"],
+    },
+  };
+}
+
+function winner<T extends number | undefined>(
+  a: T,
+  b: T,
+  preference: "lower" | "higher",
+): "a" | "b" | "tie" | "unknown" {
+  if (a === undefined || b === undefined) return "unknown";
+  if (a === b) return "tie";
+  if (preference === "lower") return a < b ? "a" : "b";
+  return a > b ? "a" : "b";
+}
+
+export default async function CompareCollegePage({ params }: Props) {
+  const { matchup } = await params;
+  const parsed = parseMatchupSlug(matchup);
+  if (!parsed) return notFound();
+  const [a, b] = parsed;
+  const ra = resolve(a);
+  const rb = resolve(b);
+  if (!ra || !rb) return notFound();
+
+  const aName = ra.school.shortName;
+  const bName = rb.school.shortName;
+
+  // Determine winners across metrics for the headline
+  const harderToGetIn = winner(ra.admitRate, rb.admitRate, "lower");
+  const cheaperNet = winner(ra.netPrice, rb.netPrice, "lower");
+  const higherEarnings = winner(ra.earnings, rb.earnings, "higher");
+  const higherSAT = winner(ra.sat75, rb.sat75, "higher");
+  const higherCompletion = winner(ra.completion, rb.completion, "higher");
+
+  // Featured-snippet headline answers
+  const harderAnswer =
+    harderToGetIn === "a"
+      ? `${aName} is harder to get into than ${bName}. ${aName}'s ${formatPctSafe(ra.admitRate)} acceptance rate is lower than ${bName}'s ${formatPctSafe(rb.admitRate)}.`
+      : harderToGetIn === "b"
+        ? `${bName} is harder to get into than ${aName}. ${bName}'s ${formatPctSafe(rb.admitRate)} acceptance rate is lower than ${aName}'s ${formatPctSafe(ra.admitRate)}.`
+        : "Both schools have similar acceptance rates.";
+
+  const cheaperAnswer =
+    cheaperNet === "a"
+      ? `${aName} costs less on average. After grants and scholarships, ${aName}'s average net price is ${formatMoneySafe(ra.netPrice)} vs ${formatMoneySafe(rb.netPrice)} at ${bName}.`
+      : cheaperNet === "b"
+        ? `${bName} costs less on average. After grants and scholarships, ${bName}'s average net price is ${formatMoneySafe(rb.netPrice)} vs ${formatMoneySafe(ra.netPrice)} at ${aName}.`
+        : "Average net prices are similar.";
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: "Colleges", item: `${baseUrl}/colleges` },
+      { "@type": "ListItem", position: 3, name: `${aName} vs ${bName}`, item: `${baseUrl}/colleges/compare/${matchup}` },
+    ],
+  };
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `${aName} vs. ${bName}: Real Stats Compared`,
+    description: `Side-by-side comparison of ${ra.school.name} and ${rb.school.name}.`,
+    datePublished: "2026-05-09",
+    dateModified: "2026-05-09",
+    author: { "@type": "Organization", name: "Ivy Admit", url: baseUrl },
+    publisher: {
+      "@type": "Organization",
+      name: "Ivy Admit",
+      url: baseUrl,
+      logo: { "@type": "ImageObject", url: `${baseUrl}/icon-192.png` },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${baseUrl}/colleges/compare/${matchup}` },
+    about: [
+      { "@type": "CollegeOrUniversity", name: ra.school.name, url: `${baseUrl}/colleges/${a}` },
+      { "@type": "CollegeOrUniversity", name: rb.school.name, url: `${baseUrl}/colleges/${b}` },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `Is ${aName} or ${bName} harder to get into?`,
+        acceptedAnswer: { "@type": "Answer", text: harderAnswer },
+      },
+      {
+        "@type": "Question",
+        name: `Which is cheaper, ${aName} or ${bName}?`,
+        acceptedAnswer: { "@type": "Answer", text: cheaperAnswer },
+      },
+      ra.earnings && rb.earnings
+        ? {
+            "@type": "Question",
+            name: `Which has higher post-graduation earnings, ${aName} or ${bName}?`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `${higherEarnings === "a" ? aName : bName} graduates earn more on average. Median earnings 10 years after entry are ${formatMoneySafe(ra.earnings)} at ${aName} and ${formatMoneySafe(rb.earnings)} at ${bName}.`,
+            },
+          }
+        : null,
+    ].filter(Boolean),
+  };
+
+  return (
+    <article className="pt-24 pb-24 px-6">
+      <div className="max-w-3xl mx-auto">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Colleges", href: "/colleges" },
+            { label: `${aName} vs ${bName}` },
+          ]}
+        />
+
+        {/* Hero */}
+        <header className="text-center mt-6 mb-10">
+          <p className="text-[11px] font-semibold text-oxblood uppercase tracking-[0.18em] mb-4">
+            Head-to-head comparison
+          </p>
+          <h1
+            className="text-ink mb-5 mx-auto max-w-2xl"
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontWeight: 700,
+              fontSize: "clamp(34px, 5vw, 50px)",
+              lineHeight: "1.05",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            {ra.school.name} <span className="text-pencil font-normal italic">vs.</span> {rb.school.name}
+          </h1>
+          <p className="font-serif italic text-xl md:text-2xl text-ink-2 mb-7 max-w-xl mx-auto leading-snug">
+            Real published data on acceptance rates, cost, and outcomes. Side by side.
+          </p>
+          <Link
+            href="/try"
+            className="inline-block px-7 py-3 rounded-full bg-ink !text-white !no-underline font-medium hover:bg-oxblood hover:!text-white transition-all"
+          >
+            Calculate your odds at both
+          </Link>
+        </header>
+
+        {/* Featured-snippet Q&A blocks */}
+        <section className="not-prose space-y-4 mb-12">
+          <div className="rounded-2xl border border-hair bg-cream px-7 py-6">
+            <h2
+              className="text-ink mb-2"
+              style={{ fontFamily: "var(--font-heading)", fontWeight: 600, fontSize: "20px" }}
+            >
+              Is {aName} or {bName} harder to get into?
+            </h2>
+            <p className="text-ink-2 leading-relaxed">{harderAnswer}</p>
+          </div>
+          <div className="rounded-2xl border border-hair bg-cream px-7 py-6">
+            <h2
+              className="text-ink mb-2"
+              style={{ fontFamily: "var(--font-heading)", fontWeight: 600, fontSize: "20px" }}
+            >
+              Which is cheaper, {aName} or {bName}?
+            </h2>
+            <p className="text-ink-2 leading-relaxed">{cheaperAnswer}</p>
+          </div>
+          {ra.earnings && rb.earnings && (
+            <div className="rounded-2xl border border-hair bg-cream px-7 py-6">
+              <h2
+                className="text-ink mb-2"
+                style={{ fontFamily: "var(--font-heading)", fontWeight: 600, fontSize: "20px" }}
+              >
+                Which has higher post-graduation earnings?
+              </h2>
+              <p className="text-ink-2 leading-relaxed">
+                {higherEarnings === "a" ? aName : bName} graduates earn more on average. Median earnings 10 years after entry are{" "}
+                <strong className="text-ink">{formatMoneySafe(ra.earnings)}</strong> at {aName} and{" "}
+                <strong className="text-ink">{formatMoneySafe(rb.earnings)}</strong> at {bName}.
+              </p>
+            </div>
+          )}
+        </section>
+
+        {/* Side-by-side stats table */}
+        <section className="not-prose mb-14">
+          <p className="text-center text-[11px] font-semibold text-pencil uppercase tracking-[0.18em] mb-4">
+            Full Comparison
+          </p>
+          <div className="rounded-2xl border border-hair overflow-hidden bg-cream">
+            <table className="w-full text-sm">
+              <thead className="bg-[#FAEEEA]">
+                <tr>
+                  <th className="text-left px-3 sm:px-5 py-3.5 text-[11px] font-semibold text-pencil uppercase tracking-[0.15em]">Metric</th>
+                  <th className="text-right px-3 sm:px-5 py-3.5 text-[11px] font-semibold text-ink uppercase tracking-[0.15em]">{aName}</th>
+                  <th className="text-right px-3 sm:px-5 py-3.5 text-[11px] font-semibold text-ink uppercase tracking-[0.15em]">{bName}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <CompareRow
+                  metric="Acceptance rate"
+                  va={formatPctSafe(ra.admitRate)}
+                  vb={formatPctSafe(rb.admitRate)}
+                  win={harderToGetIn}
+                  preference="lower"
+                />
+                {ra.sat25 && ra.sat75 && rb.sat25 && rb.sat75 && (
+                  <CompareRow
+                    metric="SAT mid-50%"
+                    va={`${ra.sat25}–${ra.sat75}`}
+                    vb={`${rb.sat25}–${rb.sat75}`}
+                    win={higherSAT}
+                    preference="higher"
+                  />
+                )}
+                {ra.act25 && ra.act75 && rb.act25 && rb.act75 && (
+                  <CompareRow
+                    metric="ACT mid-50%"
+                    va={`${ra.act25}–${ra.act75}`}
+                    vb={`${rb.act25}–${rb.act75}`}
+                    win="unknown"
+                  />
+                )}
+                {ra.coa !== undefined && rb.coa !== undefined && (
+                  <CompareRow
+                    metric="Cost of attendance"
+                    va={formatMoneySafe(ra.coa)}
+                    vb={formatMoneySafe(rb.coa)}
+                    win={winner(ra.coa, rb.coa, "lower")}
+                    preference="lower"
+                  />
+                )}
+                {ra.netPrice !== undefined && rb.netPrice !== undefined && (
+                  <CompareRow
+                    metric="Avg net price (after aid)"
+                    va={formatMoneySafe(ra.netPrice)}
+                    vb={formatMoneySafe(rb.netPrice)}
+                    win={cheaperNet}
+                    preference="lower"
+                  />
+                )}
+                {ra.enrollment !== undefined && rb.enrollment !== undefined && (
+                  <CompareRow
+                    metric="Undergrad enrollment"
+                    va={ra.enrollment.toLocaleString()}
+                    vb={rb.enrollment.toLocaleString()}
+                    win="unknown"
+                  />
+                )}
+                {ra.completion !== undefined && rb.completion !== undefined && (
+                  <CompareRow
+                    metric="6-yr graduation rate"
+                    va={formatPctSafe(ra.completion)}
+                    vb={formatPctSafe(rb.completion)}
+                    win={higherCompletion}
+                    preference="higher"
+                  />
+                )}
+                {ra.earnings !== undefined && rb.earnings !== undefined && (
+                  <CompareRow
+                    metric="Median earnings (10yr)"
+                    va={formatMoneySafe(ra.earnings)}
+                    vb={formatMoneySafe(rb.earnings)}
+                    win={higherEarnings}
+                    preference="higher"
+                  />
+                )}
+                <CompareRow
+                  metric="Setting"
+                  va={ra.school.location}
+                  vb={rb.school.location}
+                  win="unknown"
+                  last
+                />
+              </tbody>
+            </table>
+          </div>
+          <p className="text-[11px] text-pencil mt-3 text-center">
+            Sources: U.S. Department of Education College Scorecard (IPEDS) and school-published admit cycle data. Last verified {LAST_VERIFIED}.
+          </p>
+        </section>
+
+        <div className="prose prose-slate max-w-none [&>h2]:text-center [&>h2]:mt-12 [&>h2]:mb-5">
+          {/* Demographics comparison if both have data */}
+          {ra.sc?.demoAsian !== undefined && rb.sc?.demoAsian !== undefined && (
+            <>
+              <h2>Student Body Composition</h2>
+              <p>
+                The two schools have different student body compositions. {aName} is{" "}
+                {formatPctSafe(ra.sc.demoWomen)} women, {formatPctSafe(ra.sc.demoIntl)} international,
+                and {formatPctSafe(ra.sc.demoAsian)} Asian-American. {bName} is{" "}
+                {formatPctSafe(rb.sc.demoWomen)} women, {formatPctSafe(rb.sc.demoIntl)} international,
+                and {formatPctSafe(rb.sc.demoAsian)} Asian-American.
+              </p>
+              <div className="not-prose rounded-xl border border-hair overflow-hidden bg-cream my-6">
+                <table className="w-full text-sm">
+                  <thead className="bg-[#FAEEEA]">
+                    <tr>
+                      <th className="text-left px-3 sm:px-5 py-3 text-[11px] font-semibold text-pencil uppercase tracking-[0.15em]">Demographic</th>
+                      <th className="text-right px-3 sm:px-5 py-3 text-[11px] font-semibold text-ink uppercase tracking-[0.15em]">{aName}</th>
+                      <th className="text-right px-3 sm:px-5 py-3 text-[11px] font-semibold text-ink uppercase tracking-[0.15em]">{bName}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <CompareRow metric="Women" va={formatPctSafe(ra.sc.demoWomen)} vb={formatPctSafe(rb.sc.demoWomen)} win="unknown" />
+                    <CompareRow metric="International" va={formatPctSafe(ra.sc.demoIntl)} vb={formatPctSafe(rb.sc.demoIntl)} win="unknown" />
+                    <CompareRow metric="White" va={formatPctSafe(ra.sc.demoWhite)} vb={formatPctSafe(rb.sc.demoWhite)} win="unknown" />
+                    <CompareRow metric="Asian" va={formatPctSafe(ra.sc.demoAsian)} vb={formatPctSafe(rb.sc.demoAsian)} win="unknown" />
+                    <CompareRow metric="Hispanic" va={formatPctSafe(ra.sc.demoHispanic)} vb={formatPctSafe(rb.sc.demoHispanic)} win="unknown" />
+                    <CompareRow metric="Black" va={formatPctSafe(ra.sc.demoBlack)} vb={formatPctSafe(rb.sc.demoBlack)} win="unknown" last />
+                  </tbody>
+                </table>
+              </div>
+            </>
+          )}
+
+          {/* Mid-page CTA */}
+          <div className="not-prose my-12 text-center max-w-xl mx-auto">
+            <p className="text-[11px] font-semibold text-oxblood uppercase tracking-[0.18em] mb-3">
+              Personalized estimate
+            </p>
+            <p
+              className="text-ink font-bold mb-3"
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "clamp(22px, 3vw, 28px)",
+                lineHeight: "1.15",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              What are your odds at {aName} vs. {bName}?
+            </p>
+            <p className="text-pencil text-base mb-6">
+              Get a probability for both schools calibrated to your full profile, not the headline rate.
+            </p>
+            <Link
+              href="/try"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-ink !text-white !no-underline text-sm font-medium hover:bg-oxblood hover:!text-white transition-all"
+            >
+              Run the calculator
+            </Link>
+          </div>
+
+          {/* Verdict / pros and cons */}
+          <h2>The Verdict</h2>
+          <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-3 my-6">
+            <div className="rounded-xl border border-hair bg-cream p-5">
+              <p className="text-[11px] font-semibold text-oxblood uppercase tracking-[0.15em] mb-2">
+                Pick {aName} if
+              </p>
+              <ul className="text-sm text-ink-2 space-y-1.5 list-disc pl-5">
+                {harderToGetIn === "b" && (
+                  <li>Your odds are realistic at {aName} (slightly easier admit)</li>
+                )}
+                {cheaperNet === "a" && (
+                  <li>Net price matters: {aName} costs {formatMoneySafe((rb.netPrice ?? 0) - (ra.netPrice ?? 0))} less per year on average</li>
+                )}
+                {higherEarnings === "a" && (
+                  <li>Higher median post-grad earnings ({formatMoneySafe(ra.earnings)} vs {formatMoneySafe(rb.earnings)})</li>
+                )}
+                {higherCompletion === "a" && (
+                  <li>Higher 6-year graduation rate</li>
+                )}
+                <li>{ra.school.knownFor.split(",")[0]}</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-hair bg-cream p-5">
+              <p className="text-[11px] font-semibold text-oxblood uppercase tracking-[0.15em] mb-2">
+                Pick {bName} if
+              </p>
+              <ul className="text-sm text-ink-2 space-y-1.5 list-disc pl-5">
+                {harderToGetIn === "a" && (
+                  <li>Your odds are realistic at {bName} (slightly easier admit)</li>
+                )}
+                {cheaperNet === "b" && (
+                  <li>Net price matters: {bName} costs {formatMoneySafe((ra.netPrice ?? 0) - (rb.netPrice ?? 0))} less per year on average</li>
+                )}
+                {higherEarnings === "b" && (
+                  <li>Higher median post-grad earnings ({formatMoneySafe(rb.earnings)} vs {formatMoneySafe(ra.earnings)})</li>
+                )}
+                {higherCompletion === "b" && (
+                  <li>Higher 6-year graduation rate</li>
+                )}
+                <li>{rb.school.knownFor.split(",")[0]}</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>
+            Headline numbers favor one school or the other on each axis, but neither is unambiguously &ldquo;better.&rdquo; The right answer depends on your major fit, geographic preference, financial need, and personal odds at each. Most applicants who get into one of these schools also get into the other.
+          </p>
+
+          {/* Direct links to detail pages */}
+          <h2>Full School Pages</h2>
+          <p>For complete admissions data, supplemental essay strategy, and class profile breakdowns:</p>
+          <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
+            <Link
+              href={`/colleges/${a}`}
+              className="block rounded-xl border border-hair bg-cream p-5 !no-underline hover:border-ink hover:shadow-sm transition-all"
+            >
+              <p className="text-[10px] font-semibold text-pencil uppercase tracking-[0.15em] mb-1">
+                Full profile
+              </p>
+              <p className="text-base font-bold !text-ink mb-1.5">{ra.school.name}</p>
+              <p className="text-xs !text-ink-2">
+                <span className="!text-oxblood font-semibold">{formatPctSafe(ra.admitRate)}</span> accept · {ra.school.location}
+              </p>
+            </Link>
+            <Link
+              href={`/colleges/${b}`}
+              className="block rounded-xl border border-hair bg-cream p-5 !no-underline hover:border-ink hover:shadow-sm transition-all"
+            >
+              <p className="text-[10px] font-semibold text-pencil uppercase tracking-[0.15em] mb-1">
+                Full profile
+              </p>
+              <p className="text-base font-bold !text-ink mb-1.5">{rb.school.name}</p>
+              <p className="text-xs !text-ink-2">
+                <span className="!text-oxblood font-semibold">{formatPctSafe(rb.admitRate)}</span> accept · {rb.school.location}
+              </p>
+            </Link>
+          </div>
+
+          {/* Sources */}
+          <h2>Sources</h2>
+          <ul>
+            <li>
+              <a href="https://collegescorecard.ed.gov/" rel="noopener nofollow" target="_blank">U.S. Department of Education College Scorecard</a>{" "}
+              for acceptance rates, test ranges, financial aid, demographics, completion, and earnings.
+            </li>
+            <li>
+              <a href="https://nces.ed.gov/ipeds/" rel="noopener nofollow" target="_blank">IPEDS (Integrated Postsecondary Education Data System)</a>{" "}
+              for the underlying federal data.
+            </li>
+            <li>Each school&apos;s most recent published Common Data Set for cycle-specific admissions stats.</li>
+          </ul>
+
+          <p className="text-center text-xs text-pencil mt-10 italic">
+            Last verified {LAST_VERIFIED}. Stats reflect each school&apos;s most recent publicly published admit cycle.
+          </p>
+
+          {/* Continue */}
+          <div className="not-prose mt-14 pt-8 border-t border-hair text-center">
+            <p className="text-[11px] font-semibold text-pencil uppercase tracking-[0.18em] mb-4">
+              Keep going
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Link href="/try" className="px-4 py-2 rounded-full bg-ink !text-white !no-underline text-sm font-medium hover:bg-oxblood hover:!text-white transition-all">
+                Calculate your odds
+              </Link>
+              <Link href="/colleges" className="px-4 py-2 rounded-full border border-hair !text-ink-2 !no-underline text-sm hover:!text-ink hover:border-ink transition-all bg-cream">
+                All colleges
+              </Link>
+              <Link href="/colleges/most-selective" className="px-4 py-2 rounded-full border border-hair !text-ink-2 !no-underline text-sm hover:!text-ink hover:border-ink transition-all bg-cream">
+                Most selective
+              </Link>
+              <Link href="/colleges/best-financial-aid" className="px-4 py-2 rounded-full border border-hair !text-ink-2 !no-underline text-sm hover:!text-ink hover:border-ink transition-all bg-cream">
+                Best financial aid
+              </Link>
+              <Link href="/colleges/highest-earnings" className="px-4 py-2 rounded-full border border-hair !text-ink-2 !no-underline text-sm hover:!text-ink hover:border-ink transition-all bg-cream">
+                Highest earnings
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function CompareRow({
+  metric,
+  va,
+  vb,
+  win,
+  last,
+}: {
+  metric: string;
+  va: string;
+  vb: string;
+  win: "a" | "b" | "tie" | "unknown";
+  preference?: "higher" | "lower";
+  last?: boolean;
+}) {
+  return (
+    <tr className={last ? "" : "border-b border-hair"}>
+      <td className="px-3 sm:px-5 py-3.5 text-pencil">{metric}</td>
+      <td
+        className={`px-3 sm:px-5 py-3.5 text-right tabular-nums ${
+          win === "a" ? "font-bold text-oxblood" : "text-ink"
+        }`}
+      >
+        {va}
+      </td>
+      <td
+        className={`px-3 sm:px-5 py-3.5 text-right tabular-nums ${
+          win === "b" ? "font-bold text-oxblood" : "text-ink"
+        }`}
+      >
+        {vb}
+      </td>
+    </tr>
+  );
+}

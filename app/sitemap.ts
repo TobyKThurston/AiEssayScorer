@@ -7,6 +7,7 @@ import { essayTypes } from "@/tools/essayTypes";
 import { rewriters } from "@/tools/rewriters";
 import { topicPersonas } from "@/tools/topicPersonas";
 import { extraColleges } from "@/colleges/extraColleges";
+import { matchups } from "@/colleges/matchups";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
@@ -26,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/colleges/most-selective`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.92 },
     { url: `${baseUrl}/colleges/best-financial-aid`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.92 },
     { url: `${baseUrl}/colleges/highest-earnings`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.92 },
+    { url: `${baseUrl}/colleges/easiest-ivies`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.93 },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
@@ -56,6 +58,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     })),
   ];
+
+  const compareRoutes: MetadataRoute.Sitemap = matchups.map(([a, b]) => ({
+    url: `${baseUrl}/colleges/compare/${a}-vs-${b}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.82,
+  }));
+
+  const stateRoutes: MetadataRoute.Sitemap = [
+    "ca","ny","ma","pa","va","tx","ct","il","dc","nc","fl","oh","ga","wa","me",
+    "md","in","mi","nj","ri","nh","mn","ia","tn","mo","co","wi",
+  ].map((s) => ({
+    url: `${baseUrl}/colleges/by-state/${s}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.86,
+  }));
 
   const schoolWhyRoutes: MetadataRoute.Sitemap = schools.map((school) => ({
     url: `${baseUrl}/tools/why-${school.slug}-essay`,
@@ -113,6 +132,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogRoutes,
     ...toolRoutes,
     ...collegeRoutes,
+    ...compareRoutes,
+    ...stateRoutes,
     ...schoolWhyRoutes,
     ...schoolScoreRoutes,
     ...hookPromptRoutes,
