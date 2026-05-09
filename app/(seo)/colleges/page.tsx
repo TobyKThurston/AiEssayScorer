@@ -138,10 +138,43 @@ export default function CollegesIndexPage() {
         </header>
 
         {/* Intro callout — centered */}
-        <div className="not-prose max-w-xl mx-auto text-center mb-16">
+        <div className="not-prose max-w-xl mx-auto text-center mb-12">
           <p className="text-ink-2 text-base leading-relaxed">
             Acceptance rates tell you what percentage of applicants got in last cycle. They don&apos;t tell you your chances. The pool average bundles together legacy applicants, recruited athletes, first-generation students, and unhooked applicants. Each school below has the real published stats. The calculator estimates a probability that fits your profile.
           </p>
+        </div>
+
+        {/* Best-of category links */}
+        <div className="not-prose mb-16">
+          <p className="text-center text-[11px] font-semibold text-pencil uppercase tracking-[0.18em] mb-5">
+            Browse by ranking
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto">
+            <Link
+              href="/colleges/most-selective"
+              className="block rounded-xl border border-hair bg-cream p-5 !no-underline hover:border-ink hover:shadow-sm transition-all text-center"
+            >
+              <p className="text-[11px] font-semibold text-oxblood uppercase tracking-[0.15em] mb-1">Acceptance rate</p>
+              <p className="text-base font-bold !text-ink">Most selective</p>
+              <p className="text-xs text-pencil mt-1">Top 25 lowest admit rates</p>
+            </Link>
+            <Link
+              href="/colleges/best-financial-aid"
+              className="block rounded-xl border border-hair bg-cream p-5 !no-underline hover:border-ink hover:shadow-sm transition-all text-center"
+            >
+              <p className="text-[11px] font-semibold text-oxblood uppercase tracking-[0.15em] mb-1">Net price</p>
+              <p className="text-base font-bold !text-ink">Best financial aid</p>
+              <p className="text-xs text-pencil mt-1">Lowest cost after aid</p>
+            </Link>
+            <Link
+              href="/colleges/highest-earnings"
+              className="block rounded-xl border border-hair bg-cream p-5 !no-underline hover:border-ink hover:shadow-sm transition-all text-center"
+            >
+              <p className="text-[11px] font-semibold text-oxblood uppercase tracking-[0.15em] mb-1">Outcomes</p>
+              <p className="text-base font-bold !text-ink">Highest earnings</p>
+              <p className="text-xs text-pencil mt-1">Median pay 10yrs after</p>
+            </Link>
+          </div>
         </div>
 
         {grouped.map(({ category, items }) => (

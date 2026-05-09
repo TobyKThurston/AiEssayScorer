@@ -17,7 +17,7 @@ export interface Profile {
   test: TestType;
   satScore?: number;
   actScore?: number;
-  gpa: number;
+  gpa?: number;
   gpaScale: GpaScale;
   state: string;
   international: boolean;

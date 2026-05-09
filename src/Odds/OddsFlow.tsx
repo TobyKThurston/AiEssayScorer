@@ -48,7 +48,7 @@ const blankProfile = (): Profile => ({
   test: "SAT",
   satScore: undefined,
   actScore: undefined,
-  gpa: 3.8,
+  gpa: undefined,
   gpaScale: "unweighted",
   state: "",
   international: false,
@@ -336,7 +336,11 @@ function StepGpa({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const valid = profile.gpa >= 0 && profile.gpa <= 5;
+  const valid =
+    profile.gpa !== undefined &&
+    Number.isFinite(profile.gpa) &&
+    profile.gpa > 0 &&
+    profile.gpa <= 5;
   return (
     <PaperCard>
       <StepHeader
@@ -371,10 +375,17 @@ function StepGpa({
         step="0.01"
         min={0}
         max={5}
-        value={profile.gpa}
-        onChange={(e) => update("gpa", Number(e.target.value))}
+        placeholder="e.g. 3.8"
+        value={profile.gpa ?? ""}
+        onChange={(e) => {
+          const raw = e.target.value;
+          update("gpa", raw === "" ? undefined : Number(raw));
+        }}
         className="w-full border border-hair bg-paper px-4 py-3 text-[16px] focus:outline-none focus:border-oxblood"
       />
+      <p className="mt-2 text-[12px] text-pencil">
+        Enter a value between 0 and 5.
+      </p>
 
       <NavButtons onBack={onBack} onNext={onNext} disabled={!valid} />
     </PaperCard>
@@ -597,7 +608,7 @@ function StepActivities({
       activities: p.activities.filter((_, idx) => idx !== i),
     }));
 
-  const filled = profile.activities.filter((a) => a.title.trim().length > 0);
+  const filled = profile.activities.filter((a) => a.title.trim().length >= 2);
   const valid = filled.length >= 1;
   const isEmpty = profile.activities.length === 0;
   const canAddMore = profile.activities.length < MAX_ACTIVITIES;
@@ -909,8 +920,15 @@ function StepPaywall({
   const [submitting, setSubmitting] = useState(false);
   const [err, setErr] = useState<string | null>(null);
 
+  const trimmedEmail = email.trim();
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail);
+
   const startCheckout = async () => {
     if (!result) return;
+    if (!emailValid) {
+      setErr("Enter a valid email address.");
+      return;
+    }
     setSubmitting(true);
     setErr(null);
     try {
@@ -918,7 +936,7 @@ function StepPaywall({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          email,
+          email: trimmedEmail,
           calculationId: result.calculationId,
         }),
       });
@@ -980,7 +998,7 @@ function StepPaywall({
 
       <button
         onClick={startCheckout}
-        disabled={submitting || !email.includes("@")}
+        disabled={submitting || !emailValid}
         className="w-full btn btn-brand text-[17px] font-semibold py-4 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {submitting ? "Redirecting…" : "Reveal my odds - $7/mo"}

@@ -23,6 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/how-to-improve-college-essay`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/colleges`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.95 },
+    { url: `${baseUrl}/colleges/most-selective`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.92 },
+    { url: `${baseUrl}/colleges/best-financial-aid`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.92 },
+    { url: `${baseUrl}/colleges/highest-earnings`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.92 },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
