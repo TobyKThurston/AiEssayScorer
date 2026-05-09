@@ -40,6 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/college-essay-checker`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/ai-essay-review`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/how-to-improve-college-essay`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/common-app-essay-prompts-2026-2027`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.92 },
+    { url: `${baseUrl}/colleges/early-decision-vs-early-action`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.92 },
     // Ranking hubs (high search volume, focused queries)
     { url: `${baseUrl}/colleges/easiest-ivies`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/colleges/most-selective`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },

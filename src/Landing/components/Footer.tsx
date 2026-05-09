@@ -34,18 +34,18 @@ export function Footer() {
   };
 
   return (
-    <footer className="py-12 md:py-16 border-t border-hair relative bg-gradient-to-b from-transparent to-white/30 backdrop-blur-sm">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 mb-8 md:mb-12">
+    <footer className="py-10 sm:py-12 md:py-16 border-t border-hair relative bg-gradient-to-b from-transparent to-white/30 backdrop-blur-sm">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 md:px-16">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-8 md:gap-12 mb-8 md:mb-12">
           {/* Logo and tagline */}
-          <div className="lg:col-span-2">
+          <div className="col-span-2 sm:col-span-2 lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-oxblood to-forest flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-white" />
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-oxblood to-forest flex items-center justify-center">
+                <Leaf className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </div>
               <span className="font-semibold text-ink">Ivy Admit</span>
             </div>
-            <p className="text-pencil max-w-xs">
+            <p className="text-pencil text-[14px] sm:text-base max-w-xs">
               Admit smarter. The most strategic AI for getting in.
             </p>
           </div>
@@ -53,23 +53,23 @@ export function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h3 className="mb-4 text-sm font-medium text-ink">{category}</h3>
-              <ul className="space-y-3">
+              <h3 className="mb-3 sm:mb-4 text-[13px] sm:text-sm font-medium text-ink">{category}</h3>
+              <ul className="space-y-2 sm:space-y-3">
                 {links.map((item) => (
                   <li key={item.label}>
                     {item.href.startsWith("mailto:") || item.href === "#" ? (
                       <a
                         href={item.href}
-                        className="text-pencil hover:text-ink transition-colors"
+                        className="text-pencil hover:text-ink transition-colors block py-0.5 text-[13px] sm:text-[13.5px]"
                       >
-                        <small>{item.label}</small>
+                        {item.label}
                       </a>
                     ) : (
                       <Link
                         href={item.href}
-                        className="text-pencil hover:text-ink transition-colors"
+                        className="text-pencil hover:text-ink transition-colors block py-0.5 text-[13px] sm:text-[13.5px]"
                       >
-                        <small>{item.label}</small>
+                        {item.label}
                       </Link>
                     )}
                   </li>
@@ -80,16 +80,16 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-6 md:pt-8 border-t border-hair flex flex-col md:flex-row justify-between items-center gap-4">
-          <small className="text-pencil">
+        <div className="pt-6 md:pt-8 border-t border-hair flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+          <small className="text-pencil text-[12px] sm:text-[13px] text-center md:text-left">
             © 2026 Ivy Admit AI. All rights reserved.
           </small>
           <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
-            <Link href="/terms" className="text-pencil hover:text-ink transition-colors">
-              <small>Terms of Service</small>
+            <Link href="/terms" className="text-pencil hover:text-ink transition-colors text-[12px] sm:text-[13px]">
+              Terms of Service
             </Link>
-            <Link href="/privacy" className="text-pencil hover:text-ink transition-colors">
-              <small>Privacy Policy</small>
+            <Link href="/privacy" className="text-pencil hover:text-ink transition-colors text-[12px] sm:text-[13px]">
+              Privacy Policy
             </Link>
           </div>
         </div>

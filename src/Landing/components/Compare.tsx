@@ -45,8 +45,9 @@ export function Compare() {
           intro="Every item below is something we've seen general-purpose AI fail on when grading college essays."
         />
 
-        <div className="mt-12 paper-card overflow-hidden">
-          <div className="grid grid-cols-3 bg-paper-2 border-b border-hair">
+        <div className="mt-10 sm:mt-12 paper-card overflow-hidden">
+          {/* Header row — hidden on mobile, shown sm+ */}
+          <div className="hidden sm:grid grid-cols-3 bg-paper-2 border-b border-hair">
             {["Capability", "Generic AI", "Ivy Admit"].map((h, i) => (
               <div key={h} className="p-4 md:p-5 font-mono text-[11px] uppercase tracking-[0.18em]">
                 <span style={{ color: i === 2 ? "var(--color-oxblood)" : "var(--color-pencil)" }}>
@@ -58,15 +59,21 @@ export function Compare() {
           {ROWS.map((r, i) => (
             <div
               key={r.capability}
-              className={`grid grid-cols-3 ${i < ROWS.length - 1 ? "border-b border-hair" : ""}`}
+              className={`grid grid-cols-1 sm:grid-cols-3 ${i < ROWS.length - 1 ? "border-b border-hair" : ""}`}
             >
-              <div className="p-4 md:p-5 font-serif text-[15px] md:text-[17px] text-ink">
+              <div className="px-4 pt-4 sm:p-4 md:p-5 font-serif text-[16px] sm:text-[15px] md:text-[17px] text-ink">
                 {r.capability}
               </div>
-              <div className="p-4 md:p-5 text-[14px] md:text-[15px] text-ink-2 leading-[1.5]">
+              <div className="px-4 sm:p-4 md:p-5 text-[14px] md:text-[15px] text-ink-2 leading-[1.5]">
+                <span className="sm:hidden font-mono text-[10px] uppercase tracking-[0.16em] text-pencil block mb-1">
+                  Generic AI
+                </span>
                 {r.generic}
               </div>
-              <div className="p-4 md:p-5 text-[14px] md:text-[15px] text-oxblood font-medium leading-[1.5]">
+              <div className="px-4 pb-4 sm:p-4 md:p-5 text-[14px] md:text-[15px] text-oxblood font-medium leading-[1.5]">
+                <span className="sm:hidden font-mono text-[10px] uppercase tracking-[0.16em] text-oxblood block mb-1 mt-2">
+                  Ivy Admit
+                </span>
                 {r.ivy}
               </div>
             </div>

@@ -23,7 +23,7 @@ export function EssayRewritePanel({
   if (!isOpen) return null;
 
   return (
-    <div className="absolute right-0 top-0 h-full w-[380px] z-20 bg-white shadow-2xl flex flex-col border-l border-hair">
+    <div className="absolute right-0 top-0 h-full w-full sm:w-[380px] max-w-[100vw] z-20 bg-white shadow-2xl flex flex-col border-l border-hair">
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-hair flex-shrink-0">
         <span className="text-sm font-semibold text-ink">Rewritten Essay</span>

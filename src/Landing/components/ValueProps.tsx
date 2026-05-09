@@ -42,7 +42,7 @@ const FEATURES = [
 
 export function ValueProps() {
   return (
-    <section id="features" className="py-24 md:py-28">
+    <section id="features" className="py-16 sm:py-24 md:py-28">
       <Container>
         <SectionHead
           num="§02"
@@ -51,19 +51,19 @@ export function ValueProps() {
           intro="Six capabilities that make Ivy Admit different from generic AI essay tools. Built by students who actually got in."
         />
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-hair">
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-hair">
           {FEATURES.map((f) => (
             <div
               key={f.num}
-              className="border-r border-b border-hair p-8 md:p-9 transition-colors hover:bg-cream"
+              className="border-r border-b border-hair p-6 sm:p-8 md:p-9 transition-colors hover:bg-cream"
             >
-              <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-pencil mb-5">
+              <p className="font-mono text-[10.5px] sm:text-[11px] uppercase tracking-[0.16em] text-pencil mb-3 sm:mb-5">
                 Feature · {f.num}
               </p>
-              <h3 className="font-serif text-[22px] md:text-[24px] leading-[1.2] text-ink mb-3">
+              <h3 className="font-serif text-[20px] sm:text-[22px] md:text-[24px] leading-[1.2] text-ink mb-2 sm:mb-3">
                 {f.title}
               </h3>
-              <p className="text-[14.5px] text-ink-2 leading-[1.6]">{f.body}</p>
+              <p className="text-[14px] sm:text-[14.5px] text-ink-2 leading-[1.6]">{f.body}</p>
             </div>
           ))}
         </div>

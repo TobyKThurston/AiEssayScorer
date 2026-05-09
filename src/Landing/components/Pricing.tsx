@@ -32,13 +32,13 @@ export function Pricing() {
           </figcaption>
         </figure>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:items-stretch">
-          <div className="paper-card p-8 md:p-10 flex flex-col">
-            <h3 className="font-serif text-[26px] text-ink">Free</h3>
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 md:items-stretch">
+          <div className="paper-card p-6 sm:p-8 md:p-10 flex flex-col">
+            <h3 className="font-serif text-[24px] sm:text-[26px] text-ink">Free</h3>
             <p className="mt-1 text-[14.5px] text-ink-2">Get your real essay score.</p>
 
-            <div className="mt-6 flex items-baseline gap-2">
-              <span className="font-serif text-[64px] leading-none text-ink">Free</span>
+            <div className="mt-5 sm:mt-6 flex items-baseline gap-2">
+              <span className="font-serif text-[48px] sm:text-[64px] leading-none text-ink">Free</span>
               <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-pencil">
                 / $0
               </span>
@@ -72,21 +72,21 @@ export function Pricing() {
           </div>
 
           <div
-            className="relative rounded-[10px] p-8 md:p-12 flex flex-col bg-ink text-paper md:-my-2 md:scale-[1.015] origin-center"
+            className="relative rounded-[10px] p-6 sm:p-8 md:p-12 flex flex-col bg-ink text-paper md:-my-2 md:scale-[1.015] origin-center"
             style={{
               boxShadow:
                 "0 0 0 1px rgba(196,154,72,0.35), 0 40px 80px -30px rgba(60,30,10,0.55), 0 18px 36px -18px rgba(60,30,10,0.45), 0 0 60px -20px rgba(196,154,72,0.25)",
             }}
           >
-            <span className="absolute -top-3 left-6 bg-oxblood text-paper font-mono text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-[4px]">
+            <span className="absolute -top-3 left-4 sm:left-6 bg-oxblood text-paper font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.2em] px-2.5 sm:px-3 py-1.5 rounded-[4px]">
               Most students choose Pro
             </span>
 
-            <h3 className="font-serif text-[26px] text-paper">Pro</h3>
+            <h3 className="font-serif text-[24px] sm:text-[26px] text-paper">Pro</h3>
             <p className="mt-1 text-[14.5px] text-paper-3">Everything you need to maximize your chances.</p>
 
-            <div className="mt-6 flex items-baseline gap-2">
-              <span className="font-serif text-[64px] leading-none text-paper tabular-nums">
+            <div className="mt-5 sm:mt-6 flex items-baseline gap-2">
+              <span className="font-serif text-[48px] sm:text-[64px] leading-none text-paper tabular-nums">
                 <em className="italic text-gold">$</em>7
               </span>
               <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-paper-3">

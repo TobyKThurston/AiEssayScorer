@@ -2,7 +2,14 @@ import "./globals.css";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#F5F0E6",
+};
 
 const fraunces = Fraunces({
   subsets: ["latin"],

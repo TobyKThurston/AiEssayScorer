@@ -404,6 +404,120 @@ export default async function CompareCollegePage({ params }: Props) {
         </section>
 
         <div className="prose prose-slate max-w-none [&>h2]:text-center [&>h2]:mt-12 [&>h2]:mb-5">
+          {/* Auto-generated data-driven narrative */}
+          <h2>The Real Differences</h2>
+          {(() => {
+            const points: string[] = [];
+
+            // Selectivity gap
+            if (ra.admitRate !== undefined && rb.admitRate !== undefined) {
+              const gap = Math.abs(ra.admitRate - rb.admitRate) * 100;
+              const harder = ra.admitRate < rb.admitRate ? aName : bName;
+              const easier = ra.admitRate < rb.admitRate ? bName : aName;
+              if (gap < 1) {
+                points.push(
+                  `**Selectivity is essentially the same.** ${aName}'s ${formatPctSafe(ra.admitRate)} acceptance rate and ${bName}'s ${formatPctSafe(rb.admitRate)} are within a percentage point of each other. For an unhooked applicant, the difference is statistical noise. Apply to whichever you genuinely prefer.`,
+                );
+              } else if (gap < 3) {
+                points.push(
+                  `**${harder} is modestly harder to get into.** The ${gap.toFixed(1)}-point gap matters at the margin but doesn't change the overall difficulty tier. Both schools draw similar applicant pools and admit similar profiles.`,
+                );
+              } else {
+                points.push(
+                  `**${harder} is meaningfully harder to get into.** A ${gap.toFixed(1)}-percentage-point gap between ${formatPctSafe(ra.admitRate)} (${aName}) and ${formatPctSafe(rb.admitRate)} (${bName}) reflects real selectivity differences. ${easier} is the more realistic target for a balanced college list.`,
+                );
+              }
+            }
+
+            // SAT gap
+            if (ra.sat75 && rb.sat75) {
+              const sat75Gap = Math.abs(ra.sat75 - rb.sat75);
+              if (sat75Gap >= 30) {
+                const higher = ra.sat75 > rb.sat75 ? aName : bName;
+                points.push(
+                  `**${higher} draws stronger test scores.** Mid-50% SAT range tops out at ${Math.max(ra.sat75, rb.sat75)} vs ${Math.min(ra.sat75, rb.sat75)} at the other school. Differences in test profile usually reflect a school's STEM-vs-humanities mix and the self-selection of applicants, not raw academic quality.`,
+                );
+              }
+            }
+
+            // Cost gap
+            if (ra.netPrice !== undefined && rb.netPrice !== undefined) {
+              const npGap = Math.abs(ra.netPrice - rb.netPrice);
+              if (npGap >= 5000) {
+                const cheaper = ra.netPrice < rb.netPrice ? aName : bName;
+                points.push(
+                  `**${cheaper} is significantly cheaper after aid.** The average net price gap is ${formatMoneySafe(npGap)} per year, ${formatMoneySafe(npGap * 4)} over four years. For most families that difference is the deciding factor when both schools admit you.`,
+                );
+              } else if (npGap < 2000) {
+                points.push(
+                  `**Net cost is essentially the same** at both schools after grants and scholarships, despite different sticker prices. Both schools meet most demonstrated need for in-range income brackets.`,
+                );
+              }
+            }
+
+            // Earnings gap
+            if (ra.earnings && rb.earnings) {
+              const eGap = Math.abs(ra.earnings - rb.earnings);
+              if (eGap >= 8000) {
+                const higher = ra.earnings > rb.earnings ? aName : bName;
+                const lower = ra.earnings > rb.earnings ? bName : aName;
+                points.push(
+                  `**${higher} graduates earn ${formatMoneySafe(eGap)} more on average** at the 10-year mark. This usually reflects major distribution more than school quality — schools that concentrate in CS, engineering, and finance pull higher medians than schools with more humanities and social science graduates. ${lower} grads' earnings within the same major category are typically comparable.`,
+                );
+              }
+            }
+
+            // Size difference
+            if (ra.enrollment !== undefined && rb.enrollment !== undefined) {
+              const sizeRatio = Math.max(ra.enrollment, rb.enrollment) / Math.min(ra.enrollment, rb.enrollment);
+              if (sizeRatio >= 1.5) {
+                const bigger = ra.enrollment > rb.enrollment ? aName : bName;
+                const smaller = ra.enrollment > rb.enrollment ? bName : aName;
+                points.push(
+                  `**${bigger} is substantially larger** with ${Math.max(ra.enrollment, rb.enrollment).toLocaleString()} undergrads vs ${Math.min(ra.enrollment, rb.enrollment).toLocaleString()} at ${smaller}. Bigger universities have more major options and broader research opportunities; smaller ones offer more access to faculty and tighter-knit communities.`,
+                );
+              }
+            }
+
+            // Geographic context
+            if (ra.school.state !== rb.school.state) {
+              points.push(
+                `**Geographic difference matters more than the campus tour suggests.** ${aName} is in ${ra.school.location}; ${bName} is in ${rb.school.location}. Climate, cost-of-living, and proximity to job markets in your target field shape the four-year experience and post-grad pipeline more than most prospective students realize.`,
+              );
+            }
+
+            // Demographics
+            if (ra.sc?.demoIntl !== undefined && rb.sc?.demoIntl !== undefined) {
+              const intlGap = Math.abs(ra.sc.demoIntl - rb.sc.demoIntl) * 100;
+              if (intlGap >= 4) {
+                const moreIntl = (ra.sc.demoIntl > rb.sc.demoIntl) ? aName : bName;
+                points.push(
+                  `**${moreIntl} has a more international student body** (${formatPctSafe(Math.max(ra.sc.demoIntl, rb.sc.demoIntl))} non-resident students vs ${formatPctSafe(Math.min(ra.sc.demoIntl, rb.sc.demoIntl))}). For applicants who value global exposure or have international academic interests, that mix shows up in classroom culture and alumni network.`,
+                );
+              }
+            }
+
+            // Graduation rate gap
+            if (ra.completion !== undefined && rb.completion !== undefined) {
+              const cGap = Math.abs(ra.completion - rb.completion) * 100;
+              if (cGap >= 4) {
+                const higher = ra.completion > rb.completion ? aName : bName;
+                points.push(
+                  `**${higher}'s graduation rate is meaningfully higher** (${formatPctSafe(Math.max(ra.completion, rb.completion))} vs ${formatPctSafe(Math.min(ra.completion, rb.completion))} 6-year completion). Graduation gaps at this level usually reflect support-system differences, financial aid adequacy, or degree-flexibility — worth verifying with each school's first-year retention and major-change policies.`,
+                );
+              }
+            }
+
+            return (
+              <div className="space-y-4">
+                {points.map((p, i) => {
+                  const html = p.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+                  return <p key={i} dangerouslySetInnerHTML={{ __html: html }} />;
+                })}
+              </div>
+            );
+          })()}
+
           {/* Demographics comparison if both have data */}
           {ra.sc?.demoAsian !== undefined && rb.sc?.demoAsian !== undefined && (
             <>

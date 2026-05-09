@@ -136,7 +136,49 @@ export default async function StatePage({ params }: Props) {
   };
 
   const mostSelective = inState[0];
+  const easiest = inState[inState.length - 1];
   const avgRate = inState.reduce((sum, r) => sum + r.rate, 0) / inState.length;
+  const publics = inState.filter((r) => r.school.type === "Public");
+  const privates = inState.filter((r) => r.school.type === "Private");
+
+  // Best value (lowest avg net price)
+  const valueRanked = inState
+    .map((r) => ({ ...r, sc: getScorecard(r.school.slug) }))
+    .filter((r) => r.sc?.avgNetPrice !== undefined)
+    .sort((a, b) => (a.sc!.avgNetPrice as number) - (b.sc!.avgNetPrice as number));
+  const bestValue = valueRanked[0];
+
+  // Highest earnings
+  const earningsRanked = inState
+    .map((r) => ({ ...r, sc: getScorecard(r.school.slug) }))
+    .filter((r) => r.sc?.earnings10yr !== undefined)
+    .sort((a, b) => (b.sc!.earnings10yr as number) - (a.sc!.earnings10yr as number));
+  const topEarnings = earningsRanked[0];
+
+  // State-specific aid programs (manual)
+  const stateAidPrograms: Record<string, string> = {
+    CA: "Cal Grant (need-based; up to ~$15K at private schools, full tuition at UCs/CSUs for eligible families)",
+    NY: "Excelsior Scholarship (free SUNY/CUNY tuition for in-state families under specific income thresholds)",
+    GA: "HOPE Scholarship and Zell Miller Scholarship (merit-based; covers tuition at in-state public universities)",
+    FL: "Bright Futures Scholarship (merit-based; covers 75–100% of in-state tuition)",
+    TX: "Texas Grant and TEXAS Grant (need-based; covers a portion of tuition at public universities)",
+    NC: "North Carolina Need-Based Scholarship for in-state public university students",
+    VA: "Virginia Tuition Assistance Grant (small but stackable for in-state students at private schools)",
+    MA: "MASSGrant (need-based aid for in-state students at Massachusetts colleges)",
+    PA: "PHEAA State Grant (need-based; in-state Pennsylvania residents)",
+    NJ: "Tuition Aid Grant (TAG) (need-based; covers in-state tuition at NJ public/private)",
+    IL: "Monetary Award Program (MAP) Grant (need-based; in-state Illinois students)",
+    OH: "Ohio College Opportunity Grant (need-based for low-income in-state students)",
+    MI: "Michigan Achievement Scholarship (need-based; in-state students at participating institutions)",
+    WA: "Washington College Grant (formerly State Need Grant; covers full tuition for very low income)",
+    MN: "Minnesota State Grant (need-based, in-state)",
+    IN: "Indiana Frank O'Bannon Grant (need-based, in-state)",
+    WI: "Wisconsin Grant (need-based, in-state)",
+    MD: "Maryland Howard P. Rawlings Educational Assistance Grant (need-based)",
+    CT: "Roberta B. Willis Need-Based Grant (in-state students)",
+    LA: "TOPS (merit-based; covers tuition at Louisiana public universities)",
+  };
+  const aidProgram = stateAidPrograms[code];
 
   return (
     <article className="pt-24 pb-24 px-6">
@@ -240,13 +282,81 @@ export default async function StatePage({ params }: Props) {
           </p>
         </section>
 
+        {/* Best of state highlight cards */}
+        {(bestValue || topEarnings) && (
+          <section className="not-prose mb-14">
+            <p className="text-center text-[11px] font-semibold text-pencil uppercase tracking-[0.18em] mb-4">
+              Standouts in {stateName}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {bestValue && (
+                <Link
+                  href={`/colleges/${bestValue.school.slug}`}
+                  className="block rounded-xl border border-hair bg-cream p-5 !no-underline hover:border-ink hover:shadow-sm transition-all"
+                >
+                  <p className="text-[10px] font-semibold text-oxblood uppercase tracking-[0.15em] mb-1">
+                    Best value
+                  </p>
+                  <p className="text-base font-bold !text-ink mb-1">{bestValue.school.name}</p>
+                  <p className="text-xs !text-ink-2">
+                    Average net price: <span className="!text-oxblood font-semibold">{formatMoneySafe(bestValue.sc!.avgNetPrice)}</span>/yr after aid
+                  </p>
+                </Link>
+              )}
+              {topEarnings && (
+                <Link
+                  href={`/colleges/${topEarnings.school.slug}`}
+                  className="block rounded-xl border border-hair bg-cream p-5 !no-underline hover:border-ink hover:shadow-sm transition-all"
+                >
+                  <p className="text-[10px] font-semibold text-oxblood uppercase tracking-[0.15em] mb-1">
+                    Highest earnings
+                  </p>
+                  <p className="text-base font-bold !text-ink mb-1">{topEarnings.school.name}</p>
+                  <p className="text-xs !text-ink-2">
+                    10-yr median earnings: <span className="!text-oxblood font-semibold">{formatMoneySafe(topEarnings.sc!.earnings10yr)}</span>
+                  </p>
+                </Link>
+              )}
+            </div>
+          </section>
+        )}
+
         <section className="prose prose-slate max-w-none [&>h2]:text-center [&>h2]:mt-12 [&>h2]:mb-5">
-          <h2>How to use this list</h2>
+          <h2>The {stateName} Selective Landscape</h2>
           <p>
-            Acceptance rate is the most direct selectivity signal but tells you nothing about your personal odds. Schools with similar admit rates can have very different admitted-student profiles. {stateName} has a mix of national-tier privates, in-state flagships (with substantially higher admit rates for residents than for non-residents), and selective liberal arts colleges. Each plays a different role in a balanced college list.
+            {stateName} has {inState.length} selective universities and colleges in this dataset:{" "}
+            {publics.length > 0 && `${publics.length} public ${publics.length === 1 ? "institution" : "institutions"}`}
+            {publics.length > 0 && privates.length > 0 && " and "}
+            {privates.length > 0 && `${privates.length} private ${privates.length === 1 ? "institution" : "institutions"}`}
+            . Acceptance rates range from{" "}
+            <strong>{formatPct(mostSelective.rate)}</strong> at {mostSelective.school.shortName} to{" "}
+            <strong>{formatPct(easiest.rate)}</strong> at {easiest.school.shortName}, with a state average of{" "}
+            <strong>{formatPct(avgRate)}</strong>. {publics.length >= 2 ? `For in-state students, the public options offer significantly lower net prices than out-of-state alternatives, often by ${formatMoneySafe(15000)} or more per year.` : ""}
+          </p>
+
+          <h2>In-State vs. Out-of-State: The Hidden Discount</h2>
+          <p>
+            Public university acceptance rates published nationally aggregate in-state and out-of-state applicants. The actual rates split substantially. Most {stateName} public flagships admit in-state residents at acceptance rates 10–25 percentage points higher than their published headline numbers. The reverse is also true: for out-of-state applicants, the effective acceptance rate at these schools is often well below the published figure.
           </p>
           <p>
-            For an in-state student in {stateName}, the public flagship typically offers the lowest net price (often by a wide margin) and substantially higher admit odds for residents than the published rate suggests. For an out-of-state applicant, the in-state advantage flips and selective publics can be as competitive as comparable privates.
+            Tuition follows the same logic. {stateName} residents typically pay $20,000–$30,000 less per year at in-state public universities than non-residents. Combined with state-specific aid programs, that gap often makes a state flagship the highest-ROI option for in-state students even when private schools meet 100% of demonstrated need.
+          </p>
+
+          {aidProgram && (
+            <>
+              <h2>{stateName}-Specific Aid You Should Know</h2>
+              <p>
+                Beyond federal Pell Grants and institutional aid, {stateName} runs its own student aid program: <strong>{aidProgram}</strong>. Eligibility rules vary year to year. Always check the most recent state guidance and FAFSA requirements before counting on any specific dollar amount.
+              </p>
+            </>
+          )}
+
+          <h2>How to Use This List</h2>
+          <p>
+            Acceptance rate is the most direct selectivity signal but tells you nothing about your personal odds. Schools with similar admit rates can have very different admitted-student profiles. {stateName} has a mix of national-tier privates, in-state flagships (with substantially higher admit rates for residents than non-residents), and selective liberal arts colleges. Each plays a different role in a balanced college list.
+          </p>
+          <p>
+            For most in-state {stateName} applicants, the right college list mixes one or two reach privates, a flagship public as a target with strong odds and low net price, and at least one safety. Use the calculator to estimate your personal odds at each before deciding which to ED.
           </p>
 
           <h2>FAQ</h2>

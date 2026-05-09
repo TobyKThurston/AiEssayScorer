@@ -94,7 +94,7 @@ export function EssayList() {
   }
 
   return (
-    <div className="container-editorial pt-12 md:pt-16 pb-24">
+    <div className="container-editorial pt-8 sm:pt-12 md:pt-16 pb-16 sm:pb-24">
       {createError ? (
         <div className="mb-8 px-4 py-3 border border-oxblood/30 bg-oxblood/5 text-sm text-oxblood">
           {createError}
@@ -120,64 +120,64 @@ export function EssayList() {
 function EmptyState({ onNew, creating }: { onNew: () => void; creating: boolean }) {
   return (
     <div className="max-w-[820px] mx-auto">
-      <div className="mb-12 md:mb-16">
-        <p className="eyebrow mb-5">
+      <div className="mb-10 sm:mb-12 md:mb-16">
+        <p className="eyebrow mb-4 sm:mb-5">
           <span className="num">§</span> The Workshop
         </p>
-        <h1 className="font-serif text-[44px] md:text-[68px] leading-[1.02] tracking-[-0.025em] text-ink mb-6">
+        <h1 className="font-serif text-[34px] sm:text-[44px] md:text-[68px] leading-[1.02] tracking-[-0.025em] text-ink mb-4 sm:mb-6">
           A quiet room for your <em className="italic text-oxblood">best draft</em>.
         </h1>
-        <p className="text-[17px] md:text-[18px] leading-[1.6] text-ink-2 max-w-[56ch] mb-8">
+        <p className="text-[15px] sm:text-[17px] md:text-[18px] leading-[1.6] text-ink-2 max-w-[56ch] mb-6 sm:mb-8">
           Ivy Admit scores your essay across content, structure, and voice - then points to the
           exact sentences worth rewriting. Start a new draft or paste one in.
         </p>
         <button
           onClick={onNew}
           disabled={creating}
-          className="btn btn-lg btn-ink disabled:opacity-60"
+          className="btn btn-lg btn-ink disabled:opacity-60 w-full sm:w-auto justify-center"
         >
           <Plus className="w-4 h-4 mr-1.5 inline-block" />
           {creating ? "Creating…" : "Start a new essay"}
         </button>
       </div>
 
-      <hr className="rule mb-12" />
+      <hr className="rule mb-10 sm:mb-12" />
 
-      <div className="grid grid-cols-12 gap-8 md:gap-12">
+      <div className="grid grid-cols-12 gap-4 md:gap-12">
         <div className="col-span-12 md:col-span-4">
-          <p className="eyebrow mb-4">
+          <p className="eyebrow mb-3 sm:mb-4">
             <span className="num">◦</span> What you get
           </p>
         </div>
         <div className="col-span-12 md:col-span-8">
           <ul className="divide-y divide-[color:var(--color-hair)] border-y border-hair">
             {DELIVERABLES.map((label, i) => (
-              <li key={label} className="flex items-baseline gap-6 py-4">
-                <span className="font-mono text-[10.5px] uppercase tracking-[0.18em] text-oxblood/70 shrink-0 w-8">
+              <li key={label} className="flex items-baseline gap-4 sm:gap-6 py-3 sm:py-4">
+                <span className="font-mono text-[10px] sm:text-[10.5px] uppercase tracking-[0.16em] sm:tracking-[0.18em] text-oxblood/70 shrink-0 w-6 sm:w-8">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="font-serif text-[18px] md:text-[20px] text-ink">{label}</span>
+                <span className="font-serif text-[16px] sm:text-[18px] md:text-[20px] text-ink">{label}</span>
               </li>
             ))}
           </ul>
         </div>
       </div>
 
-      <div className="mt-14 grid grid-cols-12 gap-8 md:gap-12">
+      <div className="mt-10 sm:mt-14 grid grid-cols-12 gap-4 md:gap-12">
         <div className="col-span-12 md:col-span-4">
-          <p className="eyebrow mb-4">
+          <p className="eyebrow mb-3 sm:mb-4">
             <span className="num">◦</span> How it works
           </p>
         </div>
-        <div className="col-span-12 md:col-span-8 space-y-8">
+        <div className="col-span-12 md:col-span-8 space-y-6 sm:space-y-8">
           {HOW_IT_WORKS.map(({ step, title, desc }) => (
-            <div key={step} className="flex gap-6">
-              <span className="font-serif italic text-oxblood text-[32px] leading-none shrink-0 w-8">
+            <div key={step} className="flex gap-4 sm:gap-6">
+              <span className="font-serif italic text-oxblood text-[28px] sm:text-[32px] leading-none shrink-0 w-6 sm:w-8">
                 {step}
               </span>
               <div>
-                <p className="font-serif text-[20px] text-ink mb-1.5 leading-snug">{title}</p>
-                <p className="text-[15px] text-ink-2 leading-relaxed max-w-[48ch]">{desc}</p>
+                <p className="font-serif text-[17px] sm:text-[20px] text-ink mb-1 sm:mb-1.5 leading-snug">{title}</p>
+                <p className="text-[14px] sm:text-[15px] text-ink-2 leading-relaxed max-w-[48ch]">{desc}</p>
               </div>
             </div>
           ))}
@@ -201,17 +201,17 @@ function FilledLayout({
   onOpen: (id: string) => void;
 }) {
   return (
-    <div className="grid grid-cols-12 gap-8 md:gap-12 items-start">
+    <div className="grid grid-cols-12 gap-6 md:gap-12 items-start">
       <div className="col-span-12 lg:col-span-8">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-10">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 sm:gap-5 mb-8 sm:mb-10">
           <div>
-            <p className="eyebrow mb-3">
+            <p className="eyebrow mb-2 sm:mb-3">
               <span className="num">§</span> My Essays
             </p>
-            <h1 className="font-serif text-[36px] md:text-[48px] leading-[1.05] tracking-[-0.02em] text-ink">
+            <h1 className="font-serif text-[28px] sm:text-[36px] md:text-[48px] leading-[1.05] tracking-[-0.02em] text-ink">
               The <em className="italic text-oxblood">current</em> drafts.
             </h1>
-            <p className="text-[15px] text-ink-2 mt-2">
+            <p className="text-[14px] sm:text-[15px] text-ink-2 mt-2">
               {essays.length} draft{essays.length === 1 ? "" : "s"} in progress
             </p>
           </div>

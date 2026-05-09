@@ -3,15 +3,15 @@ import { Container } from "@/design/Container";
 
 export function Hero() {
   return (
-    <section className="relative pt-20 md:pt-28 pb-24 md:pb-32 border-b border-hair overflow-hidden">
+    <section className="relative pt-16 sm:pt-20 md:pt-28 pb-20 sm:pb-24 md:pb-32 border-b border-hair overflow-hidden">
       <Container>
         <div className="relative max-w-[920px] mx-auto text-center">
           {/* eyebrow — symmetric rule with oxblood mark */}
           <p
-            className="font-mono text-[10.5px] uppercase tracking-[0.28em] text-pencil flex items-center justify-center gap-3 hero-fade"
+            className="font-mono text-[9.5px] sm:text-[10.5px] uppercase tracking-[0.22em] sm:tracking-[0.28em] text-pencil flex items-center justify-center gap-2 sm:gap-3 hero-fade"
             style={{ animationDelay: "0ms" }}
           >
-            <span aria-hidden className="inline-block flex-1 max-w-[80px] h-px bg-hair" />
+            <span aria-hidden className="hidden sm:inline-block flex-1 max-w-[80px] h-px bg-hair" />
             <span
               aria-hidden
               className="inline-block w-1.5 h-1.5 rounded-full bg-oxblood"
@@ -21,12 +21,12 @@ export function Hero() {
               aria-hidden
               className="inline-block w-1.5 h-1.5 rounded-full bg-oxblood"
             />
-            <span aria-hidden className="inline-block flex-1 max-w-[80px] h-px bg-hair" />
+            <span aria-hidden className="hidden sm:inline-block flex-1 max-w-[80px] h-px bg-hair" />
           </p>
 
           {/* headline — Fraunces, centered, oversized */}
           <h1
-            className="mt-10 md:mt-14 font-serif text-[64px] md:text-[112px] lg:text-[136px] leading-[0.92] tracking-[-0.03em] text-ink hero-fade"
+            className="mt-8 sm:mt-10 md:mt-14 font-serif text-[44px] sm:text-[64px] md:text-[112px] lg:text-[136px] leading-[0.92] tracking-[-0.03em] text-ink hero-fade"
             style={{ animationDelay: "120ms" }}
           >
             Get your odds
@@ -56,7 +56,7 @@ export function Hero() {
 
           {/* sub-line */}
           <p
-            className="mt-10 md:mt-12 text-[17px] md:text-[19px] leading-[1.45] text-ink-2 max-w-[42ch] mx-auto hero-fade"
+            className="mt-8 sm:mt-10 md:mt-12 text-[16px] sm:text-[17px] md:text-[19px] leading-[1.45] text-ink-2 max-w-[42ch] mx-auto hero-fade"
             style={{ animationDelay: "240ms" }}
           >
             A 60-second prediction, trained on real outcomes.
@@ -64,12 +64,12 @@ export function Hero() {
 
           {/* CTA row — centered */}
           <div
-            className="mt-10 md:mt-14 flex flex-col sm:flex-row items-center justify-center gap-5 hero-fade"
+            className="mt-8 sm:mt-10 md:mt-14 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-5 hero-fade"
             style={{ animationDelay: "360ms" }}
           >
             <Link
               href="/odds"
-              className="group inline-flex items-center justify-center gap-3 bg-ink text-paper text-[16px] md:text-[17px] font-medium tracking-[-0.005em] px-8 py-4 md:px-10 md:py-5 rounded-full transition-[background-color,transform,box-shadow] duration-300 ease-out hover:bg-oxblood hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.96] shadow-[0_1px_0_0_rgba(0,0,0,0.06),0_8px_24px_-12px_rgba(0,0,0,0.45)] hover:shadow-[0_1px_0_0_rgba(124,28,28,0.2),0_18px_36px_-14px_rgba(124,28,28,0.55)]"
+              className="group inline-flex items-center justify-center gap-3 bg-ink text-paper text-[16px] md:text-[17px] font-medium tracking-[-0.005em] px-7 py-4 md:px-10 md:py-5 rounded-full transition-[background-color,transform,box-shadow] duration-300 ease-out hover:bg-oxblood hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.96] shadow-[0_1px_0_0_rgba(0,0,0,0.06),0_8px_24px_-12px_rgba(0,0,0,0.45)] hover:shadow-[0_1px_0_0_rgba(124,28,28,0.2),0_18px_36px_-14px_rgba(124,28,28,0.55)]"
             >
               Calculate my odds
               <span
@@ -89,14 +89,14 @@ export function Hero() {
 
           {/* trust line — symmetric rules */}
           <div
-            className="mt-14 md:mt-20 flex items-center justify-center gap-4 hero-fade"
+            className="mt-12 sm:mt-14 md:mt-20 flex items-center justify-center gap-3 sm:gap-4 hero-fade"
             style={{ animationDelay: "480ms" }}
           >
-            <span aria-hidden className="h-px flex-1 max-w-[120px] bg-hair" />
-            <p className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-pencil whitespace-nowrap">
+            <span aria-hidden className="hidden sm:block h-px flex-1 max-w-[120px] bg-hair" />
+            <p className="font-mono text-[9.5px] sm:text-[10.5px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-pencil text-center sm:whitespace-nowrap">
               90 seconds · No essay needed · Cancel anytime
             </p>
-            <span aria-hidden className="h-px flex-1 max-w-[120px] bg-hair" />
+            <span aria-hidden className="hidden sm:block h-px flex-1 max-w-[120px] bg-hair" />
           </div>
         </div>
       </Container>

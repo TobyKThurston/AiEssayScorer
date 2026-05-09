@@ -30,7 +30,7 @@ const QUOTES = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 md:py-28 border-t border-hair">
+    <section className="py-16 sm:py-24 md:py-28 border-t border-hair">
       <Container>
         <SectionHead
           num="§07"
@@ -39,24 +39,24 @@ export function Testimonials() {
           intro="Three students who used Ivy Admit as part of their application cycle."
         />
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
           {QUOTES.map((q) => (
-            <figure key={q.name} className="paper-card p-7">
-              <blockquote className="font-serif text-[19px] leading-[1.45] text-ink">
-                <span className="text-oxblood text-[28px] leading-none align-top mr-1">&ldquo;</span>
+            <figure key={q.name} className="paper-card p-5 sm:p-7">
+              <blockquote className="font-serif text-[16px] sm:text-[19px] leading-[1.45] text-ink">
+                <span className="text-oxblood text-[24px] sm:text-[28px] leading-none align-top mr-1">&ldquo;</span>
                 {q.body}
-                <span className="text-oxblood text-[28px] leading-none ml-1">&rdquo;</span>
+                <span className="text-oxblood text-[24px] sm:text-[28px] leading-none ml-1">&rdquo;</span>
               </blockquote>
-              <figcaption className="mt-6 pt-5 border-t border-hair flex items-center gap-3">
+              <figcaption className="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-hair flex items-center gap-3">
                 <span
-                  className="w-[38px] h-[38px] rounded-full flex items-center justify-center font-serif text-[14px] text-paper"
+                  className="w-[34px] h-[34px] sm:w-[38px] sm:h-[38px] rounded-full flex items-center justify-center font-serif text-[13px] sm:text-[14px] text-paper shrink-0"
                   style={{ background: q.bg }}
                 >
                   {q.initials}
                 </span>
-                <div>
-                  <p className="text-[14px] font-semibold text-ink">{q.name}</p>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-oxblood">
+                <div className="min-w-0">
+                  <p className="text-[13.5px] sm:text-[14px] font-semibold text-ink">{q.name}</p>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.14em] sm:tracking-[0.16em] text-oxblood">
                     {q.school}
                   </p>
                 </div>

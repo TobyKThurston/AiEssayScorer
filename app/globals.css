@@ -27,6 +27,7 @@
 /* Base */
 @layer base {
   html, body { margin: 0; padding: 0; }
+  body { overflow-x: clip; }
   * { box-sizing: border-box; }
 
   body {
@@ -67,13 +68,13 @@
     font-optical-sizing: auto;
   }
   h1 {
-    font-size: clamp(52px, 7vw, 92px);
+    font-size: clamp(40px, 7vw, 92px);
     letter-spacing: -0.025em;
     line-height: 0.98;
   }
-  h2 { font-size: clamp(32px, 4vw, 52px); letter-spacing: -0.02em; line-height: 1.05; }
-  h3 { font-size: 24px; line-height: 1.2; }
-  h4 { font-size: 18px; line-height: 1.25; }
+  h2 { font-size: clamp(26px, 4vw, 52px); letter-spacing: -0.02em; line-height: 1.05; }
+  h3 { font-size: clamp(20px, 2.6vw, 24px); line-height: 1.2; }
+  h4 { font-size: clamp(16px, 2vw, 18px); line-height: 1.25; }
 
   p { margin: 0; text-wrap: pretty; }
   a { color: inherit; text-decoration: none; }
@@ -95,8 +96,14 @@
     margin: 0 auto;
     padding: 0 40px;
   }
-  @media (max-width: 720px) {
-    .container-editorial { padding: 0 22px; }
+  @media (max-width: 1024px) {
+    .container-editorial { padding: 0 28px; }
+  }
+  @media (max-width: 640px) {
+    .container-editorial { padding: 0 18px; }
+  }
+  @media (max-width: 380px) {
+    .container-editorial { padding: 0 14px; }
   }
 
   .eyebrow {
@@ -131,6 +138,18 @@
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
   .reveal.in { opacity: 1; transform: translateY(0); }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+  /* Touch tap targets — at least 40px on small screens for accessibility */
+  @media (max-width: 640px) {
+    .btn { min-height: 44px; padding: 12px 18px; }
+    .btn-sm { min-height: 38px; padding: 10px 14px; font-size: 13px; }
+  }
 }
 
 /* Button primitives */

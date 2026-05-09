@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Container } from "@/design/Container";
 import { PaperCard } from "@/design/PaperCard";
@@ -13,6 +13,7 @@ import {
   type Activity,
   type Profile,
   type OddsResult,
+  type SchoolOdds,
 } from "./types";
 
 type StepId =
@@ -35,7 +36,24 @@ const STEPS: StepId[] = [
   "optional",
 ];
 
-const WIZARD_CARD_CLASS = "min-h-[480px] flex flex-col";
+const WIZARD_CARD_CLASS = "md:min-h-[480px] flex flex-col";
+const WIZARD_CARD_PADDING = "p-5 sm:p-7";
+
+const TIER_BADGE_STYLES: Record<SchoolOdds["tier"], string> = {
+  Reach: "border-oxblood text-oxblood bg-[#FAEEEA]",
+  Match: "border-gold text-gold bg-[#F8EFD9]",
+  Safety: "border-forest text-forest bg-[#E5EEE7]",
+};
+
+function TierBadge({ tier }: { tier: SchoolOdds["tier"] }) {
+  return (
+    <span
+      className={`inline-flex items-center px-2 py-0.5 border text-[10px] font-mono uppercase tracking-wider ${TIER_BADGE_STYLES[tier]}`}
+    >
+      {tier}
+    </span>
+  );
+}
 
 const blankActivity = (): Activity => ({
   title: "",
@@ -55,7 +73,7 @@ const blankProfile = (): Profile => ({
   state: "",
   international: false,
   schoolSlugs: [],
-  activities: [],
+  activities: [blankActivity()],
   intendedMajor: "",
   demographics: "",
   hooks: "",
@@ -66,6 +84,19 @@ export function OddsFlow() {
   const [profile, setProfile] = useState<Profile>(blankProfile());
   const [result, setResult] = useState<OddsResult | null>(null);
   const [calcError, setCalcError] = useState<string | null>(null);
+  const wizardRef = useRef<HTMLElement>(null);
+  const isFirstRender = useRef(true);
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    const node = wizardRef.current;
+    if (!node) return;
+    const top = node.getBoundingClientRect().top + window.scrollY - 24;
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+  }, [step]);
 
   const visibleStepIndex = STEPS.indexOf(step);
   const isWizard = visibleStepIndex >= 0;
@@ -116,21 +147,32 @@ export function OddsFlow() {
   };
 
   return (
-    <section className="pt-10 md:pt-14 pb-20">
+    <section ref={wizardRef} className="pt-6 md:pt-14 pb-16 md:pb-20">
       <Container>
-        <div className="flex items-center justify-between gap-4 pb-4 font-mono text-[11px] uppercase tracking-[0.16em] text-pencil">
+        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 pb-3 sm:pb-4 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.16em] text-pencil">
           <span>The Admit Forecast · Confidential Worksheet</span>
           {isWizard ? (
-            <span className="tabular-nums">
+            <span className="tabular-nums whitespace-nowrap">
               Step {visibleStepIndex + 1} / {STEPS.length}
+              <span className="hidden sm:inline"> · ~2 min</span>
             </span>
           ) : null}
         </div>
         <hr className="rule" />
 
+        {step === "test" ? (
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[12px] text-pencil">
+            <span>Free to start</span>
+            <span className="text-hair">·</span>
+            <span>No card to begin</span>
+            <span className="hidden sm:inline text-hair">·</span>
+            <span className="hidden sm:inline">See your tier first</span>
+          </div>
+        ) : null}
+
         {isWizard ? <Progress index={visibleStepIndex} total={STEPS.length} /> : null}
 
-        <div className="mt-8 max-w-[640px] mx-auto">
+        <div className="mt-6 sm:mt-8 max-w-[640px] mx-auto">
           {step === "test" ? (
             <StepTest profile={profile} update={update} onNext={goNext} />
           ) : null}
@@ -273,7 +315,7 @@ function StepTest({
     (t === "ACT" && profile.actScore !== undefined && profile.actScore >= 1 && profile.actScore <= 36);
 
   return (
-    <PaperCard className={WIZARD_CARD_CLASS}>
+    <PaperCard padding={WIZARD_CARD_PADDING} className={WIZARD_CARD_CLASS}>
       <StepHeader
         eyebrow="Step 1 · Standardized Tests"
         title="What's your best test score?"
@@ -305,6 +347,7 @@ function StepTest({
           <input
             type="number"
             inputMode="numeric"
+            enterKeyHint="next"
             placeholder={t === "SAT" ? "e.g. 1480" : "e.g. 33"}
             min={t === "SAT" ? 400 : 1}
             max={t === "SAT" ? 1600 : 36}
@@ -313,6 +356,9 @@ function StepTest({
               const n = e.target.value === "" ? undefined : Number(e.target.value);
               if (t === "SAT") update("satScore", n);
               else update("actScore", n);
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && valid) onNext();
             }}
             className="w-full border border-hair bg-paper px-4 py-3 text-[16px] focus:outline-none focus:border-oxblood"
           />
@@ -344,7 +390,7 @@ function StepGpa({
     profile.gpa > 0 &&
     profile.gpa <= 5;
   return (
-    <PaperCard className={WIZARD_CARD_CLASS}>
+    <PaperCard padding={WIZARD_CARD_PADDING} className={WIZARD_CARD_CLASS}>
       <StepHeader
         eyebrow="Step 2 · Academics"
         title="What's your GPA?"
@@ -374,6 +420,7 @@ function StepGpa({
       <input
         type="number"
         inputMode="decimal"
+        enterKeyHint="next"
         step="0.01"
         min={0}
         max={5}
@@ -382,6 +429,9 @@ function StepGpa({
         onChange={(e) => {
           const raw = e.target.value;
           update("gpa", raw === "" ? undefined : Number(raw));
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && valid) onNext();
         }}
         className="w-full border border-hair bg-paper px-4 py-3 text-[16px] focus:outline-none focus:border-oxblood"
       />
@@ -418,7 +468,7 @@ function StepLocation({
   };
 
   return (
-    <PaperCard className={WIZARD_CARD_CLASS}>
+    <PaperCard padding={WIZARD_CARD_PADDING} className={WIZARD_CARD_CLASS}>
       <StepHeader
         eyebrow="Step 3 · Where you're from"
         title="Where do you apply from?"
@@ -443,9 +493,13 @@ function StepLocation({
           <input
             type="text"
             list="us-states-list"
+            enterKeyHint="next"
             placeholder="Type or pick a state (e.g., California or CA)"
             value={stateInput}
             onChange={(e) => onStateChange(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && valid) onNext();
+            }}
             autoComplete="off"
             className="w-full border border-hair bg-paper px-4 py-3 text-[16px] focus:outline-none focus:border-oxblood"
           />
@@ -497,7 +551,7 @@ function StepSchools({
   const valid = profile.schoolSlugs.length > 0 && profile.schoolSlugs.length <= 10;
 
   return (
-    <PaperCard className={WIZARD_CARD_CLASS}>
+    <PaperCard padding={WIZARD_CARD_PADDING} className={WIZARD_CARD_CLASS}>
       <StepHeader
         eyebrow="Step 4 · Target Schools"
         title="Which schools do you want odds for?"
@@ -612,39 +666,20 @@ function StepActivities({
 
   const filled = profile.activities.filter((a) => a.title.trim().length >= 2);
   const valid = filled.length >= 1;
-  const isEmpty = profile.activities.length === 0;
   const canAddMore = profile.activities.length < MAX_ACTIVITIES;
 
   return (
-    <PaperCard>
+    <PaperCard padding={WIZARD_CARD_PADDING}>
       <StepHeader
         eyebrow="Step 5 · Activities"
         title="Add up to 5 activities"
-        subtitle="Start with what you spend the most time on. The more you tell us, the more personal your forecast."
+        subtitle="Start with what you spend the most time on — clubs, sports, jobs, research, volunteering. The more you tell us, the more personal your forecast."
       />
-
-      {isEmpty ? (
-        <button
-          type="button"
-          onClick={add}
-          className="w-full border-2 border-dashed border-hair hover:border-oxblood hover:bg-[#FAEEEA] transition-colors py-10 px-4 text-center group"
-        >
-          <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-pencil group-hover:text-oxblood mb-2">
-            Get started
-          </div>
-          <div className="text-[18px] font-serif text-ink group-hover:text-oxblood">
-            + Add your first activity
-          </div>
-          <p className="mt-2 text-[12.5px] text-pencil">
-            Clubs, sports, jobs, research, volunteering — anything you put real time into.
-          </p>
-        </button>
-      ) : null}
 
       <div className="space-y-5">
         {profile.activities.map((a, i) => (
           <div key={i} className="border border-hair bg-paper">
-            <div className="flex items-center justify-between gap-3 px-5 py-3 border-b border-hair bg-[#FBF7EE]">
+            <div className="flex items-center justify-between gap-3 px-4 sm:px-5 py-3 border-b border-hair bg-[#FBF7EE]">
               <div className="flex items-center gap-2.5">
                 <span className="inline-flex items-center justify-center w-6 h-6 bg-oxblood text-paper text-[11px] font-mono font-semibold tabular-nums">
                   {i + 1}
@@ -653,16 +688,18 @@ function StepActivities({
                   Activity
                 </span>
               </div>
-              <button
-                onClick={() => remove(i)}
-                className="relative text-[12px] text-pencil hover:text-oxblood after:absolute after:-inset-3 after:content-['']"
-                aria-label={`Remove activity ${i + 1}`}
-              >
-                Remove
-              </button>
+              {profile.activities.length > 1 ? (
+                <button
+                  onClick={() => remove(i)}
+                  className="relative text-[12px] text-pencil hover:text-oxblood after:absolute after:-inset-3 after:content-['']"
+                  aria-label={`Remove activity ${i + 1}`}
+                >
+                  Remove
+                </button>
+              ) : null}
             </div>
 
-            <div className="p-5 space-y-5">
+            <div className="p-4 sm:p-5 space-y-4 sm:space-y-5">
               <div>
                 <label className="block text-[11px] font-mono uppercase tracking-wider text-pencil mb-1.5">
                   Activity name
@@ -672,7 +709,6 @@ function StepActivities({
                   placeholder="e.g., Coding Club, Varsity Soccer, Local Food Bank"
                   value={a.title}
                   onChange={(e) => updateActivity(i, { title: e.target.value })}
-                  autoFocus={i === profile.activities.length - 1 && !a.title}
                   className="w-full border border-hair bg-paper px-3 py-2.5 text-[15px] focus:outline-none focus:border-oxblood"
                 />
               </div>
@@ -776,7 +812,7 @@ function StepActivities({
         ))}
       </div>
 
-      {!isEmpty && canAddMore ? (
+      {canAddMore ? (
         <button
           type="button"
           onClick={add}
@@ -786,11 +822,9 @@ function StepActivities({
         </button>
       ) : null}
 
-      {!isEmpty ? (
-        <p className="mt-3 text-[12px] text-pencil tabular-nums text-center">
-          {profile.activities.length} / {MAX_ACTIVITIES} added
-        </p>
-      ) : null}
+      <p className="mt-3 text-[12px] text-pencil tabular-nums text-center">
+        {profile.activities.length} / {MAX_ACTIVITIES} added
+      </p>
 
       <NavButtons onBack={onBack} onNext={onNext} disabled={!valid} />
     </PaperCard>
@@ -811,7 +845,7 @@ function StepOptional({
   error: string | null;
 }) {
   return (
-    <PaperCard className={WIZARD_CARD_CLASS}>
+    <PaperCard padding={WIZARD_CARD_PADDING} className={WIZARD_CARD_CLASS}>
       <StepHeader
         eyebrow="Step 6 · Optional"
         title="Anything else?"
@@ -872,7 +906,7 @@ function StepOptional({
 
 function StepLoading() {
   return (
-    <PaperCard>
+    <PaperCard padding={WIZARD_CARD_PADDING}>
       <div className="text-center py-12">
         <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-oxblood mb-3">
           Computing
@@ -951,44 +985,89 @@ function StepPaywall({
     }
   };
 
+  const tierMix = useMemo(() => {
+    const mix: Record<SchoolOdds["tier"], number> = { Reach: 0, Match: 0, Safety: 0 };
+    result?.schools.forEach((s) => {
+      mix[s.tier] = (mix[s.tier] ?? 0) + 1;
+    });
+    return mix;
+  }, [result]);
+
   return (
-    <PaperCard>
-      <div className="text-center mb-6">
+    <PaperCard padding={WIZARD_CARD_PADDING}>
+      <div className="text-center mb-5 sm:mb-6">
         <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-oxblood mb-2">
           Your forecast is ready
         </div>
-        <h2 className="text-ink text-[28px] md:text-[32px] leading-[1.15] font-serif">
+        <h2 className="text-ink text-[26px] sm:text-[28px] md:text-[32px] leading-[1.15] font-serif">
           Unlock your <em className="italic text-oxblood">admit chance</em>
         </h2>
-        <p className="mt-3 text-[14.5px] text-ink-2 max-w-[44ch] mx-auto">
+        <p className="mt-3 text-[14px] sm:text-[14.5px] text-ink-2 max-w-[44ch] mx-auto">
           We modeled your profile against {profile.schoolSlugs.length}{" "}
-          {profile.schoolSlugs.length === 1 ? "school" : "schools"}. Subscribe to reveal your full forecast.
+          {profile.schoolSlugs.length === 1 ? "school" : "schools"}. Tiers below — unlock to see the percentages.
         </p>
       </div>
 
-      <div className="border border-oxblood bg-[#FAEEEA] p-6 mb-6">
-        <div className="flex items-baseline gap-1.5 mb-3">
-          <span className="text-[40px] font-serif text-oxblood leading-none tabular-nums">$7</span>
-          <span className="text-[14px] text-ink-2">/ month</span>
+      {result && result.schools.length > 0 ? (
+        <div className="mb-5 sm:mb-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 mb-3 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.16em] text-pencil">
+            {tierMix.Reach > 0 ? <span>{tierMix.Reach} Reach</span> : null}
+            {tierMix.Match > 0 ? <span>{tierMix.Match} Match</span> : null}
+            {tierMix.Safety > 0 ? <span>{tierMix.Safety} Safety</span> : null}
+          </div>
+          <ul className="space-y-1.5">
+            {result.schools.map((s) => (
+              <li
+                key={s.slug}
+                className="flex items-center justify-between gap-3 px-3 py-2.5 border border-hair bg-paper"
+              >
+                <span className="text-ink text-[13.5px] sm:text-[14px] truncate">{s.name}</span>
+                <span className="flex items-center gap-2 shrink-0">
+                  <TierBadge tier={s.tier} />
+                  <span
+                    aria-hidden
+                    className="font-serif text-[16px] sm:text-[18px] tabular-nums leading-none text-pencil select-none"
+                    style={{ filter: "blur(7px)" }}
+                  >
+                    ··%
+                  </span>
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
-        <ul className="space-y-2 text-[14px] text-ink-2">
-          <li>✓ Full odds + tier for every school you picked</li>
+      ) : null}
+
+      <div className="border border-oxblood bg-[#FAEEEA] p-5 sm:p-6 mb-5 sm:mb-6">
+        <div className="flex items-baseline gap-1.5 mb-3">
+          <span className="text-[36px] sm:text-[40px] font-serif text-oxblood leading-none tabular-nums">$7</span>
+          <span className="text-[14px] text-ink-2">/ month</span>
+          <span className="ml-auto text-[11px] font-mono uppercase tracking-wider text-oxblood">Cancel anytime</span>
+        </div>
+        <ul className="space-y-2 text-[13.5px] sm:text-[14px] text-ink-2">
+          <li>✓ Full % odds + tier for every school you picked</li>
           <li>✓ Per-factor breakdown (academics, activities, fit)</li>
-          <li>✓ Essay reviewer tuned to each school you applied to (Why-X, supplements, prompt fit)</li>
+          <li>✓ Essay reviewer tuned to each school (Why-X, supplements, prompt fit)</li>
           <li>✓ Unlimited essay grading + line-by-line edits</li>
           <li>✓ Access to all admissions tools</li>
-          <li>✓ Cancel anytime</li>
         </ul>
       </div>
 
-      <label className="block text-[13px] font-mono uppercase tracking-wider text-pencil mb-2">
+      <label htmlFor="paywall-email" className="block text-[13px] font-mono uppercase tracking-wider text-pencil mb-2">
         Your email
       </label>
       <input
+        id="paywall-email"
         type="email"
+        autoComplete="email"
+        inputMode="email"
+        enterKeyHint="go"
         placeholder="you@example.com"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && emailValid && !submitting) startCheckout();
+        }}
         className="w-full border border-hair bg-paper px-4 py-3 text-[16px] focus:outline-none focus:border-oxblood mb-4"
       />
 
@@ -1001,13 +1080,20 @@ function StepPaywall({
       <button
         onClick={startCheckout}
         disabled={submitting || !emailValid}
-        className="w-full btn btn-brand text-[17px] font-semibold py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full btn btn-brand text-[16px] sm:text-[17px] font-semibold py-4 disabled:opacity-50 disabled:cursor-not-allowed justify-center"
       >
-        {submitting ? "Redirecting…" : "Reveal my odds - $7/mo"}
+        {submitting ? "Redirecting…" : `Reveal my odds — $7/mo`}
       </button>
 
-      <p className="mt-4 text-center text-[12px] text-pencil">
-        Secure checkout via Stripe. You'll set a password after payment to access your forecast anytime.
+      <div className="mt-4 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-[11.5px] text-pencil">
+        <span>Stripe secure checkout</span>
+        <span className="text-hair">·</span>
+        <span>Cancel anytime</span>
+        <span className="text-hair">·</span>
+        <span>No surprise charges</span>
+      </div>
+      <p className="mt-2 text-center text-[11.5px] text-pencil">
+        You&rsquo;ll set a password after payment to access your forecast anytime.
       </p>
     </PaperCard>
   );

@@ -18,13 +18,13 @@ export function ProofStrip() {
   return (
     <section className="bg-paper-2 border-b border-hair">
       <Container>
-        <div className="py-7 grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-6 md:gap-10 items-center">
-          <div className="flex items-center gap-4">
+        <div className="py-6 sm:py-7 grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-5 sm:gap-6 md:gap-10 items-center">
+          <div className="flex items-center gap-3 sm:gap-4">
             <div className="flex">
               {AVATARS.map((a, i) => (
                 <span
                   key={i}
-                  className="w-[34px] h-[34px] rounded-full border-2 border-paper-2 flex items-center justify-center font-serif text-[13px] text-paper"
+                  className="w-[30px] h-[30px] sm:w-[34px] sm:h-[34px] rounded-full border-2 border-paper-2 flex items-center justify-center font-serif text-[12px] sm:text-[13px] text-paper"
                   style={{
                     background: a.bg,
                     marginLeft: i === 0 ? 0 : -8,
@@ -41,7 +41,7 @@ export function ProofStrip() {
                   <span key={i}>{s}</span>
                 ))}
               </div>
-              <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.14em] text-pencil">
+              <p className="mt-1 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.14em] text-pencil">
                 4.8 from 2,000+ students
               </p>
             </div>
@@ -49,13 +49,13 @@ export function ProofStrip() {
 
           <hr className="hidden md:block rule" />
 
-          <div className="grid grid-cols-3 gap-6 md:gap-10">
+          <div className="grid grid-cols-3 gap-3 sm:gap-6 md:gap-10">
             {STATS.map((s) => (
               <div key={s.label}>
-                <p className="font-serif text-[20px] md:text-[22px] text-ink leading-none">
+                <p className="font-serif text-[16px] sm:text-[20px] md:text-[22px] text-ink leading-none">
                   {s.value}
                 </p>
-                <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-pencil">
+                <p className="mt-1 font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.12em] sm:tracking-[0.14em] text-pencil">
                   {s.label}
                 </p>
               </div>

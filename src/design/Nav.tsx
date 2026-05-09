@@ -99,14 +99,14 @@ export function Nav() {
           </div>
 
           {open ? (
-            <div className="lg:hidden pb-4 pt-2 border-t border-hair">
+            <div className="lg:hidden pb-4 pt-2 border-t border-hair max-h-[calc(100vh-66px)] overflow-y-auto">
               <div className="flex flex-col gap-1 py-2">
                 {NAV_LINKS.map((l) => (
                   <Link
                     key={l.label}
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="py-2 text-[15px] text-ink-2 hover:text-oxblood"
+                    className="py-2.5 px-1 text-[15px] text-ink-2 hover:text-oxblood active:bg-paper-2/60 rounded"
                   >
                     {l.label}
                   </Link>
@@ -116,19 +116,19 @@ export function Nav() {
                     <Link
                       href="/editor"
                       onClick={() => setOpen(false)}
-                      className="py-2 text-[15px] text-ink-2 hover:text-oxblood"
+                      className="py-2.5 px-1 text-[15px] text-ink-2 hover:text-oxblood active:bg-paper-2/60 rounded"
                     >
                       My Essays
                     </Link>
                     <button
                       onClick={handleUpgrade}
-                      className="py-2 text-left text-[15px] text-ink-2 hover:text-oxblood"
+                      className="py-2.5 px-1 text-left text-[15px] text-ink-2 hover:text-oxblood active:bg-paper-2/60 rounded"
                     >
                       Upgrade to Pro
                     </button>
                     <button
                       onClick={handleLogout}
-                      className="py-2 text-left text-[15px] text-ink-2 hover:text-oxblood"
+                      className="py-2.5 px-1 text-left text-[15px] text-ink-2 hover:text-oxblood active:bg-paper-2/60 rounded"
                     >
                       Sign out
                     </button>
@@ -137,7 +137,7 @@ export function Nav() {
                   <Link
                     href="/auth/login"
                     onClick={() => setOpen(false)}
-                    className="py-2 text-[15px] text-ink-2 hover:text-oxblood"
+                    className="py-2.5 px-1 text-[15px] text-ink-2 hover:text-oxblood active:bg-paper-2/60 rounded"
                   >
                     Sign in
                   </Link>

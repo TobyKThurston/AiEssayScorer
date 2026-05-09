@@ -51,15 +51,15 @@ export function ProductTour() {
           intro="Four core modules, each visible before you pay. Click a tab to see what's in it."
         />
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-6">
-          <div className="flex md:flex-col gap-1 overflow-x-auto md:overflow-visible">
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-5 sm:gap-6">
+          <div className="flex md:flex-col gap-1 overflow-x-auto md:overflow-visible -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory md:snap-none scrollbar-hide">
             {TABS.map((t) => {
               const on = t.id === active;
               return (
                 <button
                   key={t.id}
                   onClick={() => setActive(t.id)}
-                  className={`text-left p-4 rounded-[4px] transition-all whitespace-nowrap md:whitespace-normal ${
+                  className={`text-left p-3 md:p-4 rounded-[4px] transition-all whitespace-nowrap md:whitespace-normal flex-shrink-0 md:flex-shrink snap-start ${
                     on ? "bg-paper-2" : "hover:bg-paper-2/60"
                   }`}
                   style={{
@@ -67,13 +67,13 @@ export function ProductTour() {
                   }}
                 >
                   <p
-                    className="font-mono text-[10px] uppercase tracking-[0.16em] mb-1"
+                    className="font-mono text-[9.5px] md:text-[10px] uppercase tracking-[0.16em] mb-1"
                     style={{ color: on ? "var(--color-oxblood)" : "var(--color-pencil)" }}
                   >
                     {t.eyebrow}
                   </p>
                   <p
-                    className="font-serif text-[18px] leading-[1.2]"
+                    className="font-serif text-[16px] md:text-[18px] leading-[1.2]"
                     style={{ color: on ? "var(--color-ink)" : "var(--color-ink-2)" }}
                   >
                     {t.label}
@@ -83,9 +83,9 @@ export function ProductTour() {
             })}
           </div>
 
-          <div className="paper-card p-7 md:p-9 min-h-[360px]">
+          <div className="paper-card p-5 sm:p-7 md:p-9 min-h-[300px] md:min-h-[360px]">
             <TourPanel id={active} />
-            <p className="mt-6 pt-5 border-t border-hair text-[14.5px] text-ink-2 leading-[1.55]">
+            <p className="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-hair text-[14px] sm:text-[14.5px] text-ink-2 leading-[1.55]">
               {activeTab.description}
             </p>
           </div>
@@ -99,16 +99,16 @@ function TourPanel({ id }: { id: TabId }) {
   if (id === "scorecard") {
     return (
       <div>
-        <div className="flex items-end gap-5 pb-4 border-b border-hair">
-          <span className="font-serif text-[72px] leading-none text-oxblood">88</span>
+        <div className="flex items-end gap-4 sm:gap-5 pb-4 border-b border-hair">
+          <span className="font-serif text-[56px] sm:text-[72px] leading-none text-oxblood">88</span>
           <div className="pb-2">
-            <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-pencil">
+            <p className="font-mono text-[9.5px] sm:text-[10px] uppercase tracking-[0.16em] text-pencil">
               Quality score
             </p>
-            <p className="font-serif italic text-[18px] text-forest mt-1">High impact draft</p>
+            <p className="font-serif italic text-[16px] sm:text-[18px] text-forest mt-1">High impact draft</p>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-4 mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-4">
           {[
             { label: "Content", v: 27, max: 30 },
             { label: "Structure", v: 22, max: 25 },
@@ -168,17 +168,17 @@ function TourPanel({ id }: { id: TabId }) {
     return (
       <ul className="space-y-3">
         {rows.map((r) => (
-          <li key={r.label} className="flex items-center gap-4">
-            <span className="w-28 font-serif text-[16px] text-ink">{r.label}</span>
-            <div className="flex-1 h-[3px] bg-paper-2 rounded-full overflow-hidden">
+          <li key={r.label} className="flex items-center gap-2 sm:gap-4">
+            <span className="w-24 sm:w-28 font-serif text-[14px] sm:text-[16px] text-ink shrink-0">{r.label}</span>
+            <div className="flex-1 h-[3px] bg-paper-2 rounded-full overflow-hidden min-w-0">
               <div
                 className="h-full bg-oxblood"
                 style={{ width: `${r.fit}%` }}
               />
             </div>
-            <span className="w-16 text-right font-serif text-[16px] text-ink">{r.fit}</span>
+            <span className="w-10 sm:w-16 text-right font-serif text-[14px] sm:text-[16px] text-ink shrink-0">{r.fit}</span>
             {r.target ? (
-              <span className="ml-2 font-mono text-[9px] uppercase tracking-[0.16em] text-oxblood">
+              <span className="ml-1 sm:ml-2 font-mono text-[9px] uppercase tracking-[0.14em] sm:tracking-[0.16em] text-oxblood shrink-0">
                 Target
               </span>
             ) : null}
@@ -197,15 +197,15 @@ function TourPanel({ id }: { id: TabId }) {
   return (
     <ul className="space-y-3">
       {flags.map((f) => (
-        <li key={f.label} className="flex items-start gap-4 pb-3 border-b border-hair last:border-b-0">
-          <span className="w-28 font-serif text-[16px] text-ink">{f.label}</span>
+        <li key={f.label} className="grid grid-cols-[auto_auto] sm:flex sm:items-start gap-x-3 gap-y-1 sm:gap-4 pb-3 border-b border-hair last:border-b-0">
+          <span className="font-serif text-[15px] sm:text-[16px] text-ink sm:w-28 shrink-0">{f.label}</span>
           <span
-            className="font-serif italic text-[15px]"
+            className="font-serif italic text-[14px] sm:text-[15px]"
             style={{ color: f.state === "Clear" ? "var(--color-forest)" : "var(--color-oxblood)" }}
           >
             {f.state}
           </span>
-          <span className="flex-1 text-[13.5px] text-ink-2 leading-[1.55]">{f.note}</span>
+          <span className="col-span-2 sm:col-auto sm:flex-1 text-[13.5px] text-ink-2 leading-[1.55]">{f.note}</span>
         </li>
       ))}
     </ul>
