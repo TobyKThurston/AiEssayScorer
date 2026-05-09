@@ -35,6 +35,8 @@ const STEPS: StepId[] = [
   "optional",
 ];
 
+const WIZARD_CARD_CLASS = "min-h-[480px] flex flex-col";
+
 const blankActivity = (): Activity => ({
   title: "",
   tier: 3,
@@ -232,7 +234,7 @@ function NavButtons({
   disabled?: boolean;
 }) {
   return (
-    <div className="mt-8 flex items-center justify-between">
+    <div className="mt-auto pt-8 flex items-center justify-between">
       {onBack ? (
         <button onClick={onBack} className="text-[14px] text-ink-2 hover:text-oxblood underline-offset-4 hover:underline">
           ← Back
@@ -271,7 +273,7 @@ function StepTest({
     (t === "ACT" && profile.actScore !== undefined && profile.actScore >= 1 && profile.actScore <= 36);
 
   return (
-    <PaperCard>
+    <PaperCard className={WIZARD_CARD_CLASS}>
       <StepHeader
         eyebrow="Step 1 · Standardized Tests"
         title="What's your best test score?"
@@ -342,7 +344,7 @@ function StepGpa({
     profile.gpa > 0 &&
     profile.gpa <= 5;
   return (
-    <PaperCard>
+    <PaperCard className={WIZARD_CARD_CLASS}>
       <StepHeader
         eyebrow="Step 2 · Academics"
         title="What's your GPA?"
@@ -416,7 +418,7 @@ function StepLocation({
   };
 
   return (
-    <PaperCard>
+    <PaperCard className={WIZARD_CARD_CLASS}>
       <StepHeader
         eyebrow="Step 3 · Where you're from"
         title="Where do you apply from?"
@@ -495,7 +497,7 @@ function StepSchools({
   const valid = profile.schoolSlugs.length > 0 && profile.schoolSlugs.length <= 10;
 
   return (
-    <PaperCard>
+    <PaperCard className={WIZARD_CARD_CLASS}>
       <StepHeader
         eyebrow="Step 4 · Target Schools"
         title="Which schools do you want odds for?"
@@ -809,7 +811,7 @@ function StepOptional({
   error: string | null;
 }) {
   return (
-    <PaperCard>
+    <PaperCard className={WIZARD_CARD_CLASS}>
       <StepHeader
         eyebrow="Step 6 · Optional"
         title="Anything else?"
