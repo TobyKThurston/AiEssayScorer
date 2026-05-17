@@ -14,16 +14,19 @@ const IVY_SLUGS = [
 ];
 
 export const metadata: Metadata = {
-  title: "Easiest Ivy League School to Get Into (2026 Acceptance Rates Compared)",
+  // Front-loaded with the exact-match dominant query "easiest ivy to get into"
+  // (GSC: 22 impressions for that single phrase). "All 8 Ranked" sets a list
+  // expectation that lifts CTR over the previous longer "school" variant.
+  title: "Easiest Ivy to Get Into (2026): All 8 Ranked by Acceptance Rate",
   description:
-    "All 8 Ivy League schools ranked by acceptance rate from easiest to hardest. Real published admit rates with SAT ranges, financial aid, and a calculator that estimates your odds at each.",
+    "All 8 Ivy League schools ranked from easiest to hardest by 2026 published acceptance rate. Real numbers, SAT ranges, financial aid — plus a free calculator for your odds at each.",
   alternates: { canonical: "/colleges/easiest-ivies" },
   openGraph: {
-    title: "Easiest Ivy League School to Get Into",
-    description: "All 8 Ivies ranked by acceptance rate. Real data with personal odds calculator.",
+    title: "Easiest Ivy to Get Into (2026): All 8 Ranked",
+    description: "Every Ivy ranked by published 2026 acceptance rate. Free odds calculator included.",
     url: "/colleges/easiest-ivies",
     type: "article",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Easiest Ivies ranked" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "All 8 Ivy League schools ranked by acceptance rate" }],
   },
 };
 

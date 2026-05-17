@@ -6,30 +6,35 @@ import type { Metadata } from "next";
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 
 export const metadata: Metadata = {
-  title: "College Admissions Odds Calculator – Ivy Admit",
-  description: "Find your real chance of admission at top colleges. Enter SAT, GPA, location, schools, and activities. See per-school admit % and tier (Reach / Match / Safety). Plus a free AI essay grader.",
+  // Homepage SERP title — brand-first so we win "ivyadmit" / "ivy admit" branded
+  // searches (GSC: 20+ branded impressions, position 18, 0 clicks → brand is not
+  // the #1 result for its own name). Concrete benefit + free + speed for the
+  // borderline "college admissions calculator" cluster.
+  title: "Ivy Admit: Free Admit Odds Calculator + AI Essay Grader",
+  description: "See your real chance of admission at every top US college in 60 seconds. Free, no signup. Per-school admit % with Reach/Match/Safety, plus an AI essay grader trained on real Ivy League acceptances.",
   keywords: [
+    "ivy admit",
     "college admissions calculator",
     "college odds calculator",
-    "ivy league odds",
     "chance me calculator",
+    "ivy league odds calculator",
     "college acceptance calculator",
     "college admission chances",
     "college essay grader",
     "ai essay review",
-    "college application",
-    "Ivy League essay",
+    "free college essay review",
   ],
   openGraph: {
-    title: "College Admissions Odds Calculator – Ivy Admit",
-    description: "Real admit chance at top colleges. Per-school % and tier. Plus a free AI essay grader.",
+    title: "Ivy Admit: Free Admit Odds Calculator + AI Essay Grader",
+    description: "Your real admit chance at every top US college in 60 seconds. Free, no signup. Per-school % and tier.",
     url: "/",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ivy Admit, College Admissions Odds Calculator" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ivy Admit — free college admit odds calculator and AI essay grader" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "College Admissions Odds Calculator – Ivy Admit",
+    title: "Ivy Admit: Free Admit Odds Calculator + AI Essay Grader",
+    description: "Your real admit chance at every top US college in 60 seconds. Free, no signup.",
     images: ["/og-image.png"],
   },
   alternates: {

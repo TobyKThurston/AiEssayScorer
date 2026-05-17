@@ -3,23 +3,28 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Ivy League Essay Examples, What Works and Why",
+  // GSC: 59 impressions across "ivy league essays" / "ivy league essays
+  // examples" / "ivy league essays that worked". Previous title buried
+  // "examples"; a count + "annotated" + "accepted apps" answers the "essays
+  // that worked" intent and gives the searcher a list expectation.
+  title: "Ivy League Essay Examples That Worked (8 Annotated, From Accepted Apps)",
   description:
-    "Annotated excerpts from accepted Ivy League applications show what separates a memorable essay from a generic one. Learn the patterns, and check your own draft against them.",
+    "Annotated excerpts from real accepted Harvard, Yale, Princeton, Stanford and MIT essays — what worked, why, and how your draft compares. Free, no signup.",
   alternates: {
     canonical: "/ivy-league-essay-examples",
   },
   openGraph: {
-    title: "Ivy League Essay Examples, What Works and Why | Ivy Admit",
+    title: "Ivy League Essay Examples That Worked (8 Annotated)",
     description:
-      "Annotated excerpts from accepted Ivy League applications show what separates a memorable essay from a generic one. Learn the patterns, and check your own draft against them.",
+      "Real accepted Ivy League essays, annotated. See what worked, why, and how your draft compares.",
     url: "/ivy-league-essay-examples",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ivy League Essay Examples, Ivy Admit" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Annotated Ivy League essay examples from accepted applications" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ivy League Essay Examples, What Works and Why",
+    title: "Ivy League Essay Examples That Worked (8 Annotated)",
+    description: "Real accepted Ivy League essays, annotated. What worked, why.",
     images: ["/og-image.png"],
   },
 };

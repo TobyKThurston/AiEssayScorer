@@ -92,8 +92,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const aName = ra.school.shortName;
   const bName = rb.school.shortName;
-  const title = `${aName} vs. ${bName}: Acceptance Rate, SAT, Cost & Outcomes Compared`;
-  const description = `Side-by-side comparison of ${ra.school.name} and ${rb.school.name}. Real acceptance rates (${formatPctSafe(ra.admitRate)} vs ${formatPctSafe(rb.admitRate)}), SAT ranges, financial aid, and outcomes. Plus a calculator that estimates your odds at both.`;
+  const haveBothRates = ra.admitRate !== undefined && rb.admitRate !== undefined;
+  const aPct = formatPctSafe(ra.admitRate);
+  const bPct = formatPctSafe(rb.admitRate);
+  // GSC compare queries are often question-form ("is harvard harder to get
+  // into than yale", "ucla vs uc berkeley acceptance rate"). When both rates
+  // are known, surface them in the snippet so the answer is visible at a
+  // glance — that lifts CTR even at lower positions.
+  const title = haveBothRates
+    ? `${aName} vs ${bName}: Acceptance Rate (${aPct} vs ${bPct}), SAT & Cost`
+    : `${aName} vs ${bName}: Acceptance Rate, SAT, Cost & Outcomes Compared`;
+  const description = haveBothRates
+    ? `${ra.school.name} (${aPct} admit rate) vs ${rb.school.name} (${bPct}). Side-by-side SAT ranges, financial aid and outcomes — plus a free calculator for your odds at both.`
+    : `Side-by-side comparison of ${ra.school.name} and ${rb.school.name}. Acceptance rates, SAT ranges, financial aid, and outcomes — plus a free calculator for your odds at both.`;
 
   return {
     title,

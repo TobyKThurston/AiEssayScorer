@@ -65,10 +65,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const sc = getScorecard(slug);
   const rate = stat?.acceptanceRate ?? sc?.admitRate;
 
-  const title = `${school.name} Admissions: Acceptance Rate, SAT, GPA, Cost & Your Odds`;
+  // GSC: dominant queries for these pages use shortName ("pitt acceptance
+  // rate", "pepperdine acceptance rate"). Previous title was 80+ chars and
+  // truncated on the SERP. Lead with shortName + the rate when known so the
+  // exact answer is visible in the snippet.
+  const pct = rate ? formatPctSafe(rate) : undefined;
+  const title = pct
+    ? `${school.shortName} Acceptance Rate ${pct} (2026): SAT, GPA & Your Odds`
+    : `${school.shortName} Admissions 2026: Acceptance Rate, SAT, GPA & Your Odds`;
   const description = rate
-    ? `${school.name} accepts ${formatPctSafe(rate)} of applicants. Real SAT/ACT ranges, financial aid by income, demographics, outcomes, and a calculator that tells you your personal odds.`
-    : `${school.name} admissions guide: acceptance rate, SAT/GPA, cost, demographics, outcomes, and how to estimate your real odds.`;
+    ? `${school.name} accepts ${pct} of applicants (2026). See real SAT/ACT ranges, GPA, cost by family income, and a free calculator that gives your personal admit odds.`
+    : `${school.name} admissions: acceptance rate, SAT/GPA, cost by family income, demographics, and a free calculator for your real admit odds.`;
 
   return {
     title,

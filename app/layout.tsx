@@ -36,10 +36,10 @@ const jetBrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com"),
   title: {
-    default: "Ivy Admit – Free AI College Essay Review in 60 Seconds",
+    default: "Ivy Admit — Free College Admit Odds + AI Essay Grader",
     template: "%s | Ivy Admit"
   },
-  description: "Free AI college essay review trained on real Ivy League acceptances. Get scores, line-by-line edits, and admissions feedback in under 60 seconds. 20,000+ students helped.",
+  description: "See your real chance of admission at every top US college in 60 seconds. Per-school admit % with Reach/Match/Safety. Plus a free AI essay grader.",
   keywords: [
     "college essay review",
     "college application essay",
