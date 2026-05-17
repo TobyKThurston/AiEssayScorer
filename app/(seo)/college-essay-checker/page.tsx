@@ -4,23 +4,27 @@ import PublicScorer from "@/PublicScorer/PublicScorer";
 import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "College Essay Checker, Is Your Draft Ready to Submit?",
+  // "Free" up front + parenthetical preview answer is the strongest CTR
+  // shape for "is my essay good?" anxiety queries. Description leads with
+  // the action so Google can use the first sentence as a SERP snippet.
+  title: "Free College Essay Checker (Score Your Draft in 60 Seconds)",
   description:
-    "Free AI college essay checker. Paste your draft, get instant scores for content, structure, and voice. Catches vague evidence, weak openings, and template phrases before the deadline.",
+    "Paste your college essay and get instant content, structure and voice scores. Free AI checker catches vague evidence, weak openings and templated phrases before you submit.",
   alternates: {
     canonical: "/college-essay-checker",
   },
   openGraph: {
-    title: "College Essay Checker, Is Your Draft Ready to Submit? | Ivy Admit",
+    title: "Free College Essay Checker (Score Your Draft in 60 Seconds)",
     description:
-      "Free AI college essay checker. Paste your draft, get instant scores for content, structure, and voice. Catches vague evidence, weak openings, and template phrases before the deadline.",
+      "Instant content, structure and voice scores on your draft. Catches vague evidence, weak openings and templated phrases. Free, no signup.",
     url: "/college-essay-checker",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "College Essay Checker, Ivy Admit" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Free college essay checker that scores your draft in 60 seconds" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "College Essay Checker, Is Your Draft Ready to Submit?",
+    title: "Free College Essay Checker (Score Your Draft in 60 Seconds)",
+    description: "Instant scores on content, structure and voice. Free.",
     images: ["/og-image.png"],
   },
 };

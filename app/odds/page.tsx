@@ -4,16 +4,25 @@ import { OddsFlow } from "@/Odds/OddsFlow";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "College Admissions Odds Calculator – Ivy Admit",
+  // Differentiated from homepage with "Chance Me" framing — that's the
+  // exact long-tail phrase students type ("chance me ivy league",
+  // "chance me calculator"). Title leads with the imperative phrase.
+  title: "Chance Me Calculator: Free College Admit Odds (Reach/Match/Safety)",
   description:
-    "Get your real chance of admission at top colleges. Enter your SAT, GPA, location, schools, and activities - see a per-school admit % and tier (Reach / Match / Safety).",
+    "Real chance-me calculator. Enter your SAT, GPA, location and activities, get a per-school admit % and Reach/Match/Safety tier for every top US college. Free, 60 seconds.",
   alternates: { canonical: "/odds" },
   openGraph: {
-    title: "College Admissions Odds Calculator – Ivy Admit",
+    title: "Chance Me Calculator: Free College Admit Odds (Reach/Match/Safety)",
     description:
-      "Real admit chance at top colleges. Per-school % and tier based on your SAT, GPA, activities, and profile.",
+      "Per-school admit % and tier based on your SAT, GPA, activities and profile. Free, 60 seconds.",
     url: "/odds",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chance Me Calculator: Free College Admit Odds",
+    description: "Per-school admit % with Reach/Match/Safety. Free.",
+    images: ["/og-image.png"],
   },
 };
 

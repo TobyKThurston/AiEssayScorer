@@ -7,23 +7,25 @@ import { Rule } from "@/design/Rule";
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 
 export const metadata: Metadata = {
-  title: "About Ivy Admit, AI College Essay Review",
+  // About pages get branded "ivy admit about" / "who made ivyadmit"
+  // searches. Lead with the brand and the trust hook (built by admits).
+  title: "About Ivy Admit: Built by Harvard, Yale & Princeton Admits",
   description:
-    "Ivy Admit is an AI-powered college essay review tool built by students admitted to Harvard, Yale, and Princeton. Learn how it works and why we built it.",
+    "Ivy Admit is an AI-powered college essay review and admissions odds tool, built by students admitted to Harvard, Yale and Princeton. Here's how it works and why we built it.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Ivy Admit, AI College Essay Review",
+    title: "About Ivy Admit: Built by Harvard, Yale & Princeton Admits",
     description:
-      "Ivy Admit is an AI-powered college essay review tool built by students admitted to Harvard, Yale, and Princeton. Learn how it works and why we built it.",
+      "AI essay review and admissions odds, built by students admitted to Harvard, Yale and Princeton.",
     url: "/about",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "About Ivy Admit - AI College Essay Review" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "About Ivy Admit, built by Harvard, Yale and Princeton admits" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Ivy Admit, AI College Essay Review",
+    title: "About Ivy Admit: Built by Harvard, Yale & Princeton Admits",
     description:
-      "AI-powered college essay review built by students admitted to Harvard, Yale, and Princeton.",
+      "AI essay review and admissions odds, built by students who got in.",
     images: ["/og-image.png"],
   },
 };

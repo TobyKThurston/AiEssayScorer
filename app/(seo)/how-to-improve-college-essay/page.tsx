@@ -3,23 +3,27 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "How to Improve Your College Essay, A Revision Guide",
+  // Numbered, specific timeframe ("in 3 Drafts") and action-led wording
+  // outranks the previous abstract "A Revision Guide" title for the
+  // "how to improve college essay" intent cluster.
+  title: "How to Improve Your College Essay in 3 Drafts (Revision Guide)",
   description:
-    "The score → identify → edit → re-score loop that improves college essays in 2–3 cycles. Specific techniques for Content, Structure, and Voice, with a free AI tool to track your progress.",
+    "A score-identify-edit-rescore loop that lifts college essays in 2 to 3 drafts. Specific techniques for content, structure and voice — plus a free AI tool to track every revision.",
   alternates: {
     canonical: "/how-to-improve-college-essay",
   },
   openGraph: {
-    title: "How to Improve Your College Essay, A Revision Guide | Ivy Admit",
+    title: "How to Improve Your College Essay in 3 Drafts (Revision Guide)",
     description:
-      "The score → identify → edit → re-score loop that improves college essays in 2–3 cycles. Specific techniques for Content, Structure, and Voice, with a free AI tool to track your progress.",
+      "Score, identify, edit, re-score. The 3-draft loop that lifts college essays — with a free AI tool to track each pass.",
     url: "/how-to-improve-college-essay",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "How to Improve Your College Essay, Ivy Admit" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "How to improve your college essay in 3 drafts" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "How to Improve Your College Essay, A Revision Guide",
+    title: "How to Improve Your College Essay in 3 Drafts (Revision Guide)",
+    description: "Score, identify, edit, rescore. Free tool included.",
     images: ["/og-image.png"],
   },
 };

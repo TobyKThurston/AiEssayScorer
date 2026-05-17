@@ -6,9 +6,12 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 const LAST_VERIFIED = "May 2026";
 
 export const metadata: Metadata = {
-  title: "Common App Essay Prompts 2026-2027: All 7 Prompts Explained",
+  // Title is already exact-match dominant for "common app essay prompts
+  // 2026-2027". Adding "(+ Examples)" raises CTR by promising a
+  // list/example payoff over competitors' generic "complete guide" titles.
+  title: "Common App Essay Prompts 2026-2027: All 7 Explained (+ Examples)",
   description:
-    "All 7 Common Application essay prompts for the 2026-2027 cycle, explained one by one with strategy, common mistakes, and example angles. Plus a free AI essay scorer.",
+    "All 7 Common Application essay prompts for 2026-2027, broken down with strategy, mistakes to avoid, and real example angles for each. Free AI scorer for your draft.",
   alternates: { canonical: "/common-app-essay-prompts-2026-2027" },
   keywords: [
     "Common App essay prompts 2026",

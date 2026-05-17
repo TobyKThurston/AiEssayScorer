@@ -5,21 +5,26 @@ import { Breadcrumbs } from "@/design/Breadcrumbs";
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 
 export const metadata: Metadata = {
-  title: "Methodology — How the Ivy Admit Essay Scorer Works",
+  // Methodology page mostly carries E-E-A-T weight rather than capturing
+  // search demand. Title leads with the trust hook ("How It Works")
+  // instead of the abstract word "Methodology" so it actually gets
+  // clicked when shown for branded queries.
+  title: "How the Ivy Admit Essay Scorer Works (Methodology & Data)",
   description:
-    "How the Ivy Admit AI essay scorer was built: training corpus, scoring rubric, validation against admit outcomes, and known limitations. Plus the data sources behind the per-school admit-odds calculator.",
+    "Inside the Ivy Admit AI essay scorer: training corpus, scoring rubric, validation against real admit outcomes, known limitations, and the federal data behind the admit-odds calculator.",
   alternates: { canonical: "/methodology" },
   openGraph: {
-    title: "Methodology — How the Ivy Admit Essay Scorer Works",
+    title: "How the Ivy Admit Essay Scorer Works (Methodology & Data)",
     description:
-      "Training corpus, rubric, validation, and limitations behind the AI essay scorer and admit-odds calculator.",
+      "Training corpus, rubric, validation, limitations and data sources behind the AI essay scorer and admit-odds calculator.",
     url: "/methodology",
     type: "article",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ivy Admit methodology" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "How the Ivy Admit AI essay scorer works and the data behind it" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Methodology — How the Ivy Admit Essay Scorer Works",
+    title: "How the Ivy Admit Essay Scorer Works (Methodology & Data)",
+    description: "Corpus, rubric, validation, and data sources, in plain English.",
     images: ["/og-image.png"],
   },
 };

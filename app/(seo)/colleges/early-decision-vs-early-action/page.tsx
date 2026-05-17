@@ -8,9 +8,12 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 const LAST_VERIFIED = "May 2026";
 
 export const metadata: Metadata = {
-  title: "Early Decision vs Early Action: Which Should You Apply To? (2026-2027)",
+  // Adds the "ED vs EA" shorthand to the title since GSC showed direct
+  // searches for "ea vs ed" and "difference between ed and ea". Both
+  // long and short forms now match.
+  title: "Early Decision vs Early Action (ED vs EA): Which to Apply To in 2026-2027",
   description:
-    "ED vs EA vs REA vs SCEA explained. Lists of which schools offer each type, real published early acceptance rates, and how to decide which round to apply.",
+    "ED vs EA vs REA vs SCEA, explained simply. Which schools offer each type, real published early acceptance rates, and a 60-second framework for picking your round.",
   alternates: { canonical: "/colleges/early-decision-vs-early-action" },
   keywords: [
     "early decision vs early action",

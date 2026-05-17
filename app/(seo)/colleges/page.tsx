@@ -33,21 +33,25 @@ function lookupStats(slug: string): CollegeStat | null {
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 
 export const metadata: Metadata = {
-  title: "College Admissions Stats: Acceptance Rates, SAT, GPA & Your Odds",
+  // Index page for the college database. Lead with a directory-style title
+  // so it competes with US News / Niche directory listings rather than
+  // single-school pages. Adds "2026" + concrete benefit.
+  title: "Top US Colleges 2026: Acceptance Rates, SAT, GPA & Your Odds",
   description:
-    "Real admissions data for the most selective universities in the U.S. Acceptance rates, SAT and ACT ranges, costs, and a calculator that estimates your personal odds at each school.",
+    "Real 2026 admissions data for every top US university and liberal arts college. Acceptance rates, SAT/ACT ranges, cost, and a free calculator that gives your personal odds at each.",
   alternates: { canonical: "/colleges" },
   openGraph: {
-    title: "College Admissions Stats and Your Odds | Ivy Admit",
+    title: "Top US Colleges 2026: Acceptance Rates, SAT, GPA & Your Odds",
     description:
-      "Real acceptance rates, SAT/ACT ranges, and admissions data for the most selective universities. Plus a calculator that estimates your personal odds.",
+      "Real 2026 admissions data for every top US college. Acceptance rates, SAT/ACT, cost, and a free odds calculator.",
     url: "/colleges",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "College admissions stats" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Top US college admissions stats for 2026 with personal odds calculator" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "College Admissions Stats and Your Odds",
+    title: "Top US Colleges 2026: Acceptance Rates, SAT, GPA & Your Odds",
+    description: "Real 2026 data. Free per-school odds calculator.",
     images: ["/og-image.png"],
   },
 };

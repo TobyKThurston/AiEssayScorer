@@ -69,16 +69,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!stateName) return {};
   const matched = allSchools.filter((s) => matchesState(s, code));
 
+  // State pages compete with state-government and rankings-site directory
+  // listings; leading with the count + "ranked" sets a list expectation
+  // and front-loads the year for relevance signals.
   return {
-    title: `Best Colleges in ${stateName}: Acceptance Rates, SAT Scores & Cost`,
-    description: `${matched.length} most selective universities and liberal arts colleges in ${stateName}, ranked by acceptance rate. Real published admissions data, financial aid, and outcomes.`,
+    title: `Best Colleges in ${stateName} (2026): ${matched.length} Schools Ranked by Acceptance Rate`,
+    description: `${matched.length} top selective colleges in ${stateName}, ranked by 2026 acceptance rate. Real published SAT/ACT, cost after aid, and a free calculator for your odds at each.`,
     alternates: { canonical: `/colleges/by-state/${state.toLowerCase()}` },
     openGraph: {
-      title: `Best Colleges in ${stateName}`,
-      description: `Top selective colleges in ${stateName} ranked by acceptance rate, with real published admissions data.`,
+      title: `Best Colleges in ${stateName} (2026): ${matched.length} Ranked`,
+      description: `Top selective colleges in ${stateName} ranked by 2026 acceptance rate, with real admissions data and a free odds calculator.`,
       url: `/colleges/by-state/${state.toLowerCase()}`,
       type: "article",
-      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: `Best colleges in ${stateName}` }],
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: `Best colleges in ${stateName} ranked by 2026 acceptance rate` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `Best Colleges in ${stateName} (2026): ${matched.length} Ranked`,
+      description: `Real 2026 acceptance rates + a free odds calculator.`,
+      images: ["/og-image.png"],
     },
   };
 }

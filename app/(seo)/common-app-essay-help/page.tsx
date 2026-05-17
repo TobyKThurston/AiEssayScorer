@@ -3,23 +3,27 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Common App Essay Help, How to Write & Revise Your Draft",
+  // Lead with year + exact-match "Common App Essay Help"; the 650-word
+  // number is a strong specificity hook for a query class dominated by
+  // generic "complete guide" titles from competitors.
+  title: "Common App Essay Help (2026-2027): How to Write Your 650 Words",
   description:
-    "Step-by-step common app essay help: which prompt to choose, how to find your story, how to structure 650 words, and how to use AI feedback to revise fast. Free tool included.",
+    "Step-by-step Common App essay help for 2026-2027: pick the right prompt, find your story, structure 650 words, and revise with free AI feedback. Built by Ivy League admits.",
   alternates: {
     canonical: "/common-app-essay-help",
   },
   openGraph: {
-    title: "Common App Essay Help, How to Write & Revise Your Draft | Ivy Admit",
+    title: "Common App Essay Help (2026-2027): How to Write Your 650 Words",
     description:
-      "Step-by-step common app essay help: which prompt to choose, how to find your story, how to structure 650 words, and how to use AI feedback to revise fast.",
+      "Pick the right prompt, find your story, structure 650 words, and revise with free AI feedback. Built by Ivy League admits.",
     url: "/common-app-essay-help",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Common App Essay Help, Ivy Admit" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Common App essay help guide for 2026-2027" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Common App Essay Help, How to Write & Revise Your Draft",
+    title: "Common App Essay Help (2026-2027): How to Write Your 650 Words",
+    description: "Pick the prompt, find your story, structure 650 words.",
     images: ["/og-image.png"],
   },
 };

@@ -9,16 +9,25 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 const LAST_VERIFIED = "May 2026";
 
 export const metadata: Metadata = {
-  title: "Colleges with the Highest Post-Graduation Earnings",
+  // Dollar-anchored title beats the abstract "Post-Graduation Earnings"
+  // for ROI/value searchers. Year + "10 Years Out" sets specific
+  // expectations.
+  title: "Colleges with the Highest Salaries (2026): Ranked by Earnings 10 Years Out",
   description:
-    "Selective U.S. colleges ranked by median earnings 10 years after entry. Real federal data on actual graduate outcomes.",
+    "US colleges ranked by median graduate earnings 10 years after entry. Real federal data on which schools actually pay off, not rankings hype.",
   alternates: { canonical: "/colleges/highest-earnings" },
   openGraph: {
-    title: "Colleges with the Highest Post-Graduation Earnings",
-    description: "Selective U.S. colleges ranked by median earnings 10 years after entry.",
+    title: "Colleges with the Highest Salaries (2026): Ranked by Earnings 10 Years Out",
+    description: "Median grad earnings 10 years after entry. Real federal data, not rankings hype.",
     url: "/colleges/highest-earnings",
     type: "article",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Highest earnings colleges" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "US colleges ranked by highest graduate earnings 10 years after entry" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Colleges with the Highest Salaries (2026)",
+    description: "Median grad earnings 10 years after entry. Real data.",
+    images: ["/og-image.png"],
   },
 };
 

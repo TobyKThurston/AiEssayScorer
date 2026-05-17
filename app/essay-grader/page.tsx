@@ -4,21 +4,24 @@ import PublicScorer from "@/PublicScorer/PublicScorer";
 import { ToolSwitcher } from "@/tools/components/ToolSwitcher";
 
 export const metadata: Metadata = {
-  title: "Free AI College Essay Grader – Ivy Admit",
+  // "Grade My College Essay" matches the imperative search phrase users
+  // type. 60-second + no-signup hit the two top frictions.
+  title: "Grade My College Essay: Free AI Score in 60 Seconds (No Signup)",
   description:
-    "Paste your college essay and get an instant AI grade trained on Ivy League acceptances. Free, no signup required for your first review.",
+    "Paste your college essay and get an instant AI grade with content, structure and voice scores. Trained on real Ivy League acceptances. Free, no signup required.",
   alternates: { canonical: "/essay-grader" },
   openGraph: {
-    title: "Free AI College Essay Grader",
+    title: "Grade My College Essay: Free AI Score in 60 Seconds (No Signup)",
     description:
-      "Paste your college essay and get an instant AI grade trained on Ivy League acceptances. Free, no signup required.",
+      "Instant content, structure and voice scores on your draft. Trained on real Ivy League acceptances. Free.",
     url: "/essay-grader",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Free AI Essay Grader" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Free AI college essay grader, instant score in 60 seconds" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free AI College Essay Grader",
+    title: "Grade My College Essay: Free AI Score in 60 Seconds",
+    description: "Instant scores on content, structure and voice. Free.",
     images: ["/og-image.png"],
   },
 };

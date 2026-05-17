@@ -9,16 +9,24 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 const LAST_VERIFIED = "May 2026";
 
 export const metadata: Metadata = {
-  title: "Best Colleges for Financial Aid (Lowest Net Price)",
+  // Financial-aid queries are wallet-driven; year + "what you actually pay"
+  // framing converts better than "best for financial aid" alone.
+  title: "Best Colleges for Financial Aid (2026): Ranked by Net Price After Aid",
   description:
-    "Ranked list of selective U.S. colleges by lowest average net price after grants and scholarships. Real federal data on what students actually pay after aid.",
+    "Selective US colleges ranked by lowest average net price after grants and scholarships, using real federal data on what students actually pay each year.",
   alternates: { canonical: "/colleges/best-financial-aid" },
   openGraph: {
-    title: "Best Colleges for Financial Aid (Lowest Net Price)",
-    description: "Selective U.S. colleges ranked by lowest average net price after aid.",
+    title: "Best Colleges for Financial Aid (2026): Ranked by Net Price",
+    description: "Real federal data on what students actually pay after aid, ranked.",
     url: "/colleges/best-financial-aid",
     type: "article",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Best financial aid colleges" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Best colleges for financial aid ranked by lowest net price" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Colleges for Financial Aid (2026)",
+    description: "Ranked by what students actually pay after aid.",
+    images: ["/og-image.png"],
   },
 };
 

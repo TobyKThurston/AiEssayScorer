@@ -109,8 +109,11 @@ export async function generateMetadata({
 
   if (match.kind === "why-school") {
     const school = getSchool(match.schoolSlug)!;
-    const title = `"Why ${school.shortName}" Essay Brainstormer (Free AI Tool)`;
-    const description = `Free AI brainstormer for the Why ${school.shortName} supplemental essay. Get specific professors, courses, programs, and ${school.shortName}-specific angles tied to your intended major.`;
+    // Quotes in titles get filtered by Google; using natural phrasing
+    // ("Why X Essay Ideas") matches "why X essay examples" search intent
+    // better than the abstract "Brainstormer" word.
+    const title = `Why ${school.shortName} Essay: Free AI Brainstormer (Ideas + Angles)`;
+    const description = `Stuck on the Why ${school.shortName} supplemental? Free AI brainstormer gives you specific ${school.shortName} professors, courses and programs tied to your major. 60 seconds, no signup.`;
     return {
       title,
       description,
@@ -138,8 +141,11 @@ export async function generateMetadata({
 
   if (match.kind === "hook-prompt") {
     const prompt = getPrompt(match.promptSlug)!;
-    const title = `Hook Generator for ${prompt.shortName} (Free AI Tool)`;
-    const description = `Free AI hook generator for the ${prompt.displayName}. Get 5 original opening lines in different styles, tuned for this ${prompt.wordLimit}-word prompt.`;
+    // Lead with the count ("5 Opening Lines") — it's the concrete payoff
+    // people want from a hook generator. Free + the word limit close the
+    // loop on specificity in the description.
+    const title = `${prompt.shortName} Essay Hook Generator: 5 Free Opening Lines (AI)`;
+    const description = `Free AI hook generator for the ${prompt.displayName}. Get 5 original opening lines in different styles, tuned for this ${prompt.wordLimit}-word prompt. No signup.`;
     return {
       title,
       description,
@@ -159,8 +165,10 @@ export async function generateMetadata({
 
   if (match.kind === "essay-type-scorer") {
     const type = getEssayType(match.essayTypeSlug)!;
-    const title = `${type.displayName} (Free AI Review)`;
-    const description = `Free AI scorer tuned for ${type.shortName.toLowerCase()} essays. Rubric-based feedback on content, structure, voice, and specificity in under a minute.`;
+    // "60-Second" beats abstract "Free AI Review" parenthetical — it
+    // signals a concrete, fast payoff vs. an undefined "review".
+    const title = `${type.displayName}: Free 60-Second AI Feedback`;
+    const description = `Free AI scorer tuned for ${type.shortName.toLowerCase()} essays. Rubric-based feedback on content, structure, voice and specificity in under a minute. No signup.`;
     return {
       title,
       description,
@@ -218,8 +226,11 @@ export async function generateMetadata({
 
   if (match.kind === "deconstruct-prompt") {
     const prompt = getPrompt(match.promptSlug)!;
-    const title = `${prompt.shortName} Prompt Deconstructor (Free AI Tool)`;
-    const description = `Free AI breakdown of the ${prompt.displayName}. See the hidden question, angles that work, mistakes to avoid, and what admissions really evaluates.`;
+    // "Breakdown" is the higher-volume search term vs "Deconstructor".
+    // Title leads with the prompt + outcome so the snippet answers
+    // "what is this prompt really asking?" intent.
+    const title = `${prompt.shortName} Prompt Breakdown: What It's Really Asking (Free)`;
+    const description = `Free AI breakdown of the ${prompt.displayName}: the hidden question, angles that work, mistakes to avoid, and what admissions officers actually evaluate.`;
     return {
       title,
       description,
@@ -244,8 +255,11 @@ export async function generateMetadata({
 
   if (match.kind === "score-school") {
     const school = getSchool(match.schoolSlug)!;
-    const title = `${school.shortName} Essay Scorer (Free AI Review)`;
-    const description = `Free AI scorer for your ${school.shortName} supplemental or personal statement. Get a rubric-based score, strengths, and the one change that would make your ${school.shortName} essay stand out.`;
+    // "Score My X Essay" front-loads the exact search phrase users type.
+    // 60-second + free + no-signup tackle the three frictions on tools
+    // search ("does it cost?", "do I need to sign up?", "is it fast?").
+    const title = `Score My ${school.shortName} Essay: Free AI Feedback in 60 Seconds`;
+    const description = `Paste your ${school.shortName} supplemental or personal statement and get a free rubric-based AI score, strengths, and the one change that would make it stand out. No signup.`;
     return {
       title,
       description,

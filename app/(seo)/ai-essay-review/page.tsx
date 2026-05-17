@@ -3,23 +3,24 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Free AI Essay Review for College Applications",
+  title: "Free AI Essay Review for College Apps (60-Second Feedback)",
   description:
-    "Upload your college essay and get AI feedback in under 60 seconds, content score, structure score, voice score, and line-by-line edits trained on accepted Ivy League applications.",
+    "Paste your college essay, get content, structure and voice scores plus line-by-line edits in under 60 seconds. Trained on real accepted Ivy League applications. No signup.",
   alternates: {
     canonical: "/ai-essay-review",
   },
   openGraph: {
-    title: "Free AI Essay Review for College Applications | Ivy Admit",
+    title: "Free AI Essay Review for College Apps (60-Second Feedback)",
     description:
-      "Upload your college essay and get AI feedback in under 60 seconds, content score, structure score, voice score, and line-by-line edits trained on accepted applications.",
+      "Content, structure and voice scores plus line-by-line edits in under 60 seconds. Trained on real Ivy League acceptances. Free, no signup.",
     url: "/ai-essay-review",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "AI Essay Review for College Applications" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Free AI essay review for college applications, 60-second feedback" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free AI Essay Review for College Applications | Ivy Admit",
+    title: "Free AI Essay Review for College Apps (60-Second Feedback)",
+    description: "Scores, line-by-line edits. Free, no signup.",
     images: ["/og-image.png"],
   },
 };

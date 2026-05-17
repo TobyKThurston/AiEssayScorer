@@ -5,21 +5,25 @@ import { ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "College Essay Blog, Guides, Tips & Strategy",
+  // Index gets browse/return traffic, not search traffic. Title sets a
+  // list expectation and signals the slant (written by people who got in)
+  // to differentiate from rankings sites and generic counselor blogs.
+  title: "College Essay Guides by Ivy League Admits (Blog)",
   description:
-    "In-depth guides on writing Common App essays, supplemental essays, and Ivy League applications. Written for students who want actionable advice, not generic tips.",
+    "In-depth guides on Common App essays, supplemental essays, and Ivy League applications, written by students who actually got in. Specific, actionable, no generic tips.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "College Essay Blog, Guides, Tips & Strategy",
+    title: "College Essay Guides by Ivy League Admits (Blog)",
     description:
-      "In-depth guides on writing Common App essays, supplemental essays, and Ivy League applications. Written for students who want actionable advice, not generic tips.",
+      "Guides on Common App, supplementals, and Ivy League apps, written by students who actually got in.",
     url: "/blog",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ivy Admit College Essay Blog" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "College essay guides written by Ivy League admits" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "College Essay Blog, Guides, Tips & Strategy",
+    title: "College Essay Guides by Ivy League Admits (Blog)",
+    description: "Common App, supplementals, Ivy League. By students who got in.",
     images: ["/og-image.png"],
   },
 };

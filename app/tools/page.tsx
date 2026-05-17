@@ -12,21 +12,25 @@ import { Breadcrumbs } from "@/design/Breadcrumbs";
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 
 export const metadata: Metadata = {
-  title: "Free AI College Essay Tools",
+  // Putting the "160+" number in the title itself gives a list/depth
+  // signal the prior title was missing. "No Signup" addresses the
+  // top friction objection on free-tool queries.
+  title: "160+ Free AI College Essay Tools (No Signup, No Email)",
   description:
-    "160+ free AI tools for college essays: hook generators, prompt analyzers, per-school Why-Us brainstormers, and per-school essay scorers. No signup required.",
+    "160+ free AI tools for college essays: hook generators, prompt deconstructors, Why-Us brainstormers for 50+ schools, and per-school essay scorers. No signup, no email.",
   alternates: { canonical: "/tools" },
   openGraph: {
-    title: "Free AI College Essay Tools",
+    title: "160+ Free AI College Essay Tools (No Signup, No Email)",
     description:
-      "160+ free AI tools for college essays: hook generators, prompt analyzers, per-school Why-Us brainstormers, and per-school essay scorers. No signup required.",
+      "Hook generators, prompt deconstructors, Why-Us brainstormers for 50+ schools, per-school essay scorers. Free.",
     url: "/tools",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ivy Admit College Essay Tools" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "160+ free AI college essay tools, no signup required" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free AI College Essay Tools",
+    title: "160+ Free AI College Essay Tools (No Signup)",
+    description: "Hook generators, scorers, prompt deconstructors and more.",
     images: ["/og-image.png"],
   },
 };

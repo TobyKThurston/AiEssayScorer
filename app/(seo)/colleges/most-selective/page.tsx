@@ -11,17 +11,25 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 const LAST_VERIFIED = "May 2026";
 
 export const metadata: Metadata = {
-  title: "Most Selective Colleges in the U.S. (Lowest Acceptance Rates)",
+  // Listicle title with year + superlative cue wins clicks against
+  // generic "most selective colleges" results.
+  title: "Most Selective Colleges in the US (2026): Ranked by Acceptance Rate",
   description:
-    "Ranked list of the most selective colleges in the United States by acceptance rate. Real published admit rates, SAT ranges, and a calculator that estimates your personal odds at each.",
+    "Every top US college ranked by 2026 acceptance rate, hardest to easiest. Real published admit rates, SAT ranges, and a free calculator that estimates your odds at each.",
   alternates: { canonical: "/colleges/most-selective" },
   openGraph: {
-    title: "Most Selective Colleges in the U.S. (Lowest Acceptance Rates)",
+    title: "Most Selective Colleges in the US (2026): Ranked by Acceptance Rate",
     description:
-      "Ranked list of the most selective colleges in the United States by acceptance rate. Real data and a personal odds calculator.",
+      "Top US colleges ranked by 2026 acceptance rate. Real published data, SAT ranges, and a free per-school odds calculator.",
     url: "/colleges/most-selective",
     type: "article",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Most selective colleges" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Most selective US colleges ranked by 2026 acceptance rate" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Most Selective Colleges in the US (2026)",
+    description: "Ranked by 2026 acceptance rate. Free odds calculator.",
+    images: ["/og-image.png"],
   },
 };
 
