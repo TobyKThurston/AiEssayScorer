@@ -95,6 +95,7 @@ export const matchups: Array<[string, string]> = [
   ["columbia", "upenn"],
   ["columbia", "yale"],
   ["cornell", "dartmouth"],
+  ["cornell", "harvard"],
   ["cornell", "princeton"],
   ["cornell", "upenn"],
   ["cornell", "yale"],
