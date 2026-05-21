@@ -15,7 +15,7 @@ export function WhySchoolPage({ school }: { school: School }) {
     : `The "Why ${school.shortName}" supplemental rewards specific, verifiable detail over generic praise.`;
 
   return (
-    <div className="max-w-[900px] mx-auto px-5 sm:px-6 md:px-16 pt-16 sm:pt-24 md:pt-36 pb-12 sm:pb-20">
+    <div className="max-w-[900px] mx-auto px-5 sm:px-6 md:px-16 pt-16 sm:pt-24 md:pt-24 pb-12 sm:pb-20">
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function EssayGraderPage() {
   return (
-    <div className="max-w-[900px] mx-auto px-5 sm:px-6 md:px-16 pt-16 sm:pt-24 md:pt-36 pb-12 sm:pb-20">
+    <div className="max-w-[900px] mx-auto px-5 sm:px-6 md:px-16 pt-16 sm:pt-24 md:pt-24 pb-12 sm:pb-20">
       <div className="mb-8 sm:mb-10">
         <p className="text-[11px] sm:text-xs font-semibold text-oxblood uppercase tracking-widest mb-2 sm:mb-3">
           Free AI essay grader

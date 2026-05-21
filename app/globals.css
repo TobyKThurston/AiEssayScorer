@@ -22,6 +22,10 @@
   --font-serif: var(--font-fraunces), "Fraunces", "Times New Roman", serif;
   --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, Helvetica, Arial, sans-serif;
   --font-mono: var(--font-mono-font), "JetBrains Mono", ui-monospace, Menlo, monospace;
+  /* Headings use the serif display face. Many components reference
+     var(--font-heading) directly via inline styles; alias it here so those
+     headings render in Fraunces instead of falling back to the sans body font. */
+  --font-heading: var(--font-fraunces), "Fraunces", "Times New Roman", serif;
 }
 
 /* Base */

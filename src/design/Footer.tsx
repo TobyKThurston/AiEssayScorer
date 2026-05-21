@@ -64,7 +64,7 @@ function LinkList({ items }: { items: LinkItem[] }) {
 
 export function Footer() {
   return (
-    <footer className="border-t border-hair bg-paper pt-20 sm:pt-32 md:pt-56 pb-10 sm:pb-14 md:pb-20">
+    <footer className="border-t border-hair bg-paper pt-16 sm:pt-24 md:pt-32 pb-10 sm:pb-14 md:pb-20">
       <div className="container-editorial">
         <div className="flex flex-col lg:flex-row gap-y-10 sm:gap-y-14 gap-x-20">
           <div className="lg:w-[260px] shrink-0">
