@@ -607,6 +607,16 @@ export const posts: Post[] = [
     category: "Supplemental Essays",
     readTime: "8 min read",
   },
+  {
+    slug: "do-college-essays-matter",
+    title: "Do College Essays Really Matter? The Data From 37 Top Schools",
+    description:
+      "We pulled the Common Data Set for 37 top colleges. 25 rate the application essay 'Very Important' - the same tier as your GPA - and none rate it 'Not Considered.' Here is exactly how much the essay counts, school by school.",
+    publishedAt: "2026-05-20",
+    updatedAt: "2026-05-20",
+    category: "Admissions Data",
+    readTime: "13 min read",
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {

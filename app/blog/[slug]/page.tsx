@@ -136,6 +136,8 @@ const contentMap: Record<string, () => Promise<{ default: React.ComponentType }>
     import("@/blog/content/uva-application-couldnt-capture-essay"),
   "barnard-why-womens-college-essay": () =>
     import("@/blog/content/barnard-why-womens-college-essay"),
+  "do-college-essays-matter": () =>
+    import("@/blog/content/do-college-essays-matter"),
 };
 
 export async function generateStaticParams() {
@@ -172,6 +174,7 @@ const categoryColors: Record<string, string> = {
   "Common App": "bg-paper-2 text-oxblood",
   "Supplemental Essays": "bg-paper-2 text-oxblood",
   "Ivy League": "bg-paper-2 text-forest",
+  "Admissions Data": "bg-paper-2 text-forest",
 };
 
 export default async function BlogPost({ params }: Props) {

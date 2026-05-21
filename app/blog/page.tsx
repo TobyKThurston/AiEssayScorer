@@ -33,6 +33,7 @@ const categoryColors: Record<string, string> = {
   "Common App": "bg-paper-2 text-oxblood",
   "Supplemental Essays": "bg-paper-2 text-oxblood",
   "Ivy League": "bg-paper-2 text-forest",
+  "Admissions Data": "bg-paper-2 text-forest",
 };
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
