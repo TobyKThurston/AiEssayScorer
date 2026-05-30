@@ -2,6 +2,7 @@ import { Nav } from "@/design/Nav";
 import { Footer } from "@/design/Footer";
 import { Container } from "@/design/Container";
 import { PaperCard } from "@/design/PaperCard";
+import { OddsReveal } from "@/Odds/OddsReveal";
 import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -83,7 +84,7 @@ export default async function OddsResultPage({
             <PaperCard>
               <h2 className="text-ink text-[24px] font-serif">Forecast not found</h2>
               <p className="mt-3 text-[14px] text-ink-2">
-                We couldn't locate this forecast. It may have expired.
+                We couldn&rsquo;t locate this forecast. It may have expired.
               </p>
             </PaperCard>
           ) : !canReveal ? (
@@ -112,37 +113,11 @@ export default async function OddsResultPage({
                   Your admit forecast
                 </div>
                 <h1 className="mt-2 text-ink text-[32px] md:text-[40px] font-serif leading-[1.1]">
-                  Here's where you <em className="italic text-oxblood">stand</em>.
+                  Here&rsquo;s where you <em className="italic text-oxblood">stand</em>.
                 </h1>
               </div>
 
-              {result.schools.map((s) => (
-                <PaperCard key={s.slug}>
-                  <div className="flex items-baseline justify-between gap-4">
-                    <div>
-                      <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-pencil">
-                        {s.tier}
-                      </div>
-                      <h3 className="text-ink text-[22px] font-serif mt-1">
-                        {s.name}
-                      </h3>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-[44px] font-serif text-oxblood leading-none tabular-nums">
-                        {s.percent}%
-                      </div>
-                      <div className="text-[11px] text-pencil mt-1">
-                        admit chance
-                      </div>
-                    </div>
-                  </div>
-                  <ul className="mt-4 pt-4 border-t border-hair space-y-1.5 text-[14px] text-ink-2">
-                    {s.factors.map((f, i) => (
-                      <li key={i}>· {f}</li>
-                    ))}
-                  </ul>
-                </PaperCard>
-              ))}
+              <OddsReveal schools={result.schools} />
 
               {!session ? (
                 <PaperCard>
@@ -150,7 +125,7 @@ export default async function OddsResultPage({
                     Save this forecast to your account
                   </h3>
                   <p className="mt-2 text-[13.5px] text-ink-2">
-                    Set a password to log back in anytime and access the essay grader, all tools, and future calculations.
+                    Set a password to log back in anytime, re-run your odds as your list changes, and use the essay grader and every tool.
                   </p>
                   <Link
                     href={`/auth/login?claim=1&id=${id}`}
@@ -160,12 +135,18 @@ export default async function OddsResultPage({
                   </Link>
                 </PaperCard>
               ) : (
-                <div className="text-center pt-4">
+                <div className="flex flex-col items-center gap-3 pt-4">
                   <Link
-                    href="/essay-grader"
+                    href="/odds"
                     className="btn btn-ink text-[15px] font-semibold px-7 py-3.5"
                   >
-                    Grade my essay next →
+                    Re-run with different schools →
+                  </Link>
+                  <Link
+                    href="/essay-grader"
+                    className="text-[13px] text-ink-2 hover:text-oxblood underline underline-offset-4"
+                  >
+                    or grade an essay
                   </Link>
                 </div>
               )}

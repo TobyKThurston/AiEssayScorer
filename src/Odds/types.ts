@@ -31,7 +31,13 @@ export interface Profile {
 export interface SchoolOdds {
   slug: string;
   name: string;
-  percent: number;
+  /**
+   * The real admit percentage. Intentionally OMITTED from the client-facing
+   * locked payload returned by /api/calculate-odds — it is the paid value and
+   * must never reach the pre-payment DOM. Present only when read server-side
+   * from the database on /odds/result (post-payment reveal).
+   */
+  percent?: number;
   tier: Tier;
   factors: string[];
 }

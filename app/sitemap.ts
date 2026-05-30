@@ -18,39 +18,48 @@ import { getScorecard } from "@/colleges/scorecard";
 // changeFrequency intentionally omitted: Google ignores the hint, and including it
 // inflates the file without affecting crawl behavior.
 
+// Stable lastmod for non-blog routes. Using a fixed, intentionally-bumped
+// date (not `new Date()`) keeps each URL's lastmod constant across deploys —
+// otherwise every redeploy stamps all 287 non-blog URLs with the build
+// instant, which is a false freshness signal that erodes lastmod trust.
+// Bump this (or set NEXT_PUBLIC_BUILD_DATE) only when content materially changes.
+const SITE_LASTMOD = new Date(process.env.NEXT_PUBLIC_BUILD_DATE ?? "2026-05-30");
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 
   // === Tier 1 + 2: Homepage and primary hubs ===
   const tier1: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: new Date(), priority: 1.0 },
-    { url: `${baseUrl}/essay-grader`, lastModified: new Date(), priority: 0.95 },
-    { url: `${baseUrl}/colleges`, lastModified: new Date(), priority: 0.95 },
-    { url: `${baseUrl}/blog`, lastModified: new Date(), priority: 0.95 },
-    { url: `${baseUrl}/tools`, lastModified: new Date(), priority: 0.95 },
+    { url: baseUrl, lastModified: SITE_LASTMOD, priority: 1.0 },
+    { url: `${baseUrl}/essay-grader`, lastModified: SITE_LASTMOD, priority: 0.95 },
+    { url: `${baseUrl}/odds`, lastModified: SITE_LASTMOD, priority: 0.95 },
+    { url: `${baseUrl}/colleges`, lastModified: SITE_LASTMOD, priority: 0.95 },
+    { url: `${baseUrl}/blog`, lastModified: SITE_LASTMOD, priority: 0.95 },
+    { url: `${baseUrl}/tools`, lastModified: SITE_LASTMOD, priority: 0.95 },
   ];
 
   // === Tier 2: High-volume SEO hubs (real query targets, ranking pages) ===
   const tier2: MetadataRoute.Sitemap = [
     // Editorial SEO landings (hand-written, deep)
-    { url: `${baseUrl}/ivy-league-essay-examples`, lastModified: new Date(), priority: 0.9 },
-    { url: `${baseUrl}/common-app-essay-help`, lastModified: new Date(), priority: 0.9 },
-    { url: `${baseUrl}/college-essay-checker`, lastModified: new Date(), priority: 0.9 },
-    { url: `${baseUrl}/ai-essay-review`, lastModified: new Date(), priority: 0.9 },
-    { url: `${baseUrl}/how-to-improve-college-essay`, lastModified: new Date(), priority: 0.9 },
-    { url: `${baseUrl}/common-app-essay-prompts-2026-2027`, lastModified: new Date(), priority: 0.92 },
-    { url: `${baseUrl}/colleges/early-decision-vs-early-action`, lastModified: new Date(), priority: 0.92 },
+    { url: `${baseUrl}/ivy-league-essay-examples`, lastModified: SITE_LASTMOD, priority: 0.9 },
+    { url: `${baseUrl}/common-app-essay-help`, lastModified: SITE_LASTMOD, priority: 0.9 },
+    { url: `${baseUrl}/college-essay-checker`, lastModified: SITE_LASTMOD, priority: 0.9 },
+    { url: `${baseUrl}/ai-essay-review`, lastModified: SITE_LASTMOD, priority: 0.9 },
+    { url: `${baseUrl}/how-to-improve-college-essay`, lastModified: SITE_LASTMOD, priority: 0.9 },
+    { url: `${baseUrl}/full-essay`, lastModified: SITE_LASTMOD, priority: 0.8 },
+    { url: `${baseUrl}/common-app-essay-prompts-2026-2027`, lastModified: SITE_LASTMOD, priority: 0.92 },
+    { url: `${baseUrl}/colleges/early-decision-vs-early-action`, lastModified: SITE_LASTMOD, priority: 0.92 },
     // Ranking hubs (high search volume, focused queries)
-    { url: `${baseUrl}/colleges/easiest-ivies`, lastModified: new Date(), priority: 0.9 },
-    { url: `${baseUrl}/colleges/most-selective`, lastModified: new Date(), priority: 0.9 },
-    { url: `${baseUrl}/colleges/best-financial-aid`, lastModified: new Date(), priority: 0.9 },
-    { url: `${baseUrl}/colleges/highest-earnings`, lastModified: new Date(), priority: 0.9 },
+    { url: `${baseUrl}/colleges/easiest-ivies`, lastModified: SITE_LASTMOD, priority: 0.9 },
+    { url: `${baseUrl}/colleges/most-selective`, lastModified: SITE_LASTMOD, priority: 0.9 },
+    { url: `${baseUrl}/colleges/best-financial-aid`, lastModified: SITE_LASTMOD, priority: 0.9 },
+    { url: `${baseUrl}/colleges/highest-earnings`, lastModified: SITE_LASTMOD, priority: 0.9 },
   ];
 
   // === Tier utility ===
   const utility: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/about`, lastModified: new Date(), priority: 0.5 },
-    { url: `${baseUrl}/methodology`, lastModified: new Date(), priority: 0.5 },
+    { url: `${baseUrl}/about`, lastModified: SITE_LASTMOD, priority: 0.5 },
+    { url: `${baseUrl}/methodology`, lastModified: SITE_LASTMOD, priority: 0.5 },
   ];
 
   // === Blog posts ===
@@ -73,7 +82,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const priority = hasRichEditorial ? 0.9 : hasFullData ? 0.8 : 0.7;
       return {
         url: `${baseUrl}/colleges/${school.slug}`,
-        lastModified: new Date(),
+        lastModified: SITE_LASTMOD,
         priority,
       };
     }),
@@ -83,7 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         sc?.completion4yr !== undefined && sc?.earnings10yr !== undefined && sc?.demoAsian !== undefined;
       return {
         url: `${baseUrl}/colleges/${college.slug}`,
-        lastModified: new Date(),
+        lastModified: SITE_LASTMOD,
         priority: hasFullData ? 0.8 : 0.7,
       };
     }),
@@ -95,14 +104,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "md","in","mi","nj","ri","nh","mn","ia","tn","mo","co","wi",
   ].map((s) => ({
     url: `${baseUrl}/colleges/by-state/${s}`,
-    lastModified: new Date(),
+    lastModified: SITE_LASTMOD,
     priority: 0.7,
   }));
 
   // === Functional tool pages (generic, hand-built) ===
   const toolRoutes: MetadataRoute.Sitemap = tools.map((tool) => ({
     url: `${baseUrl}/tools/${tool.slug}`,
-    lastModified: new Date(),
+    lastModified: SITE_LASTMOD,
     priority: 0.8,
   }));
 
@@ -112,20 +121,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const richSchools = schools.filter((s) => !!s.rich);
   const schoolWhyRoutes: MetadataRoute.Sitemap = richSchools.map((school) => ({
     url: `${baseUrl}/tools/why-${school.slug}-essay`,
-    lastModified: new Date(),
+    lastModified: SITE_LASTMOD,
     priority: 0.8,
   }));
   const schoolScoreRoutes: MetadataRoute.Sitemap = richSchools.map((school) => ({
     url: `${baseUrl}/tools/score-${school.slug}-essay`,
-    lastModified: new Date(),
+    lastModified: SITE_LASTMOD,
     priority: 0.8,
   }));
 
-  // NOTE: Programmatic compare pages (/colleges/compare/X-vs-Y), prompt-derived
-  // hooks/deconstructs, essay-type scorers, rewriters, and topic-persona pages
-  // are intentionally excluded from the sitemap. They are templated near-duplicates
-  // that suppress indexation pressure on the strong long-form pages above.
-  // Page-level metadata sets `robots: { index: false, follow: true }` for those.
+  // Curated indexable comparison pages — mirror of INDEXED_MATCHUPS in
+  // app/(seo)/colleges/compare/[matchup]/page.tsx. These are high-demand,
+  // GSC-validated marquee pairs. The other ~235 matchups stay noindexed and
+  // excluded (see NOTE below).
+  const indexedCompareRoutes: MetadataRoute.Sitemap = [
+    "mit-vs-stanford",
+    "harvard-vs-yale",
+    "cornell-vs-harvard",
+    "uc-berkeley-vs-ucla",
+  ].map((m) => ({
+    url: `${baseUrl}/colleges/compare/${m}`,
+    lastModified: SITE_LASTMOD,
+    priority: 0.85,
+  }));
+
+  // NOTE: All other programmatic compare pages (/colleges/compare/X-vs-Y),
+  // prompt-derived hooks/deconstructs, essay-type scorers, rewriters, and
+  // topic-persona pages are intentionally excluded from the sitemap. They are
+  // templated near-duplicates that suppress indexation pressure on the strong
+  // long-form pages above. Page-level metadata sets `robots: { index: false,
+  // follow: true }` for those.
 
   const all: MetadataRoute.Sitemap = [
     ...tier1,
@@ -137,6 +162,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...toolRoutes,
     ...schoolWhyRoutes,
     ...schoolScoreRoutes,
+    ...indexedCompareRoutes,
   ];
 
   // Deduplicate by URL — when an entry appears in multiple source lists

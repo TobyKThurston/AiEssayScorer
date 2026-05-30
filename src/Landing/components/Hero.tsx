@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { Container } from "@/design/Container";
 
+const QUICK_SCHOOLS = [
+  { slug: "harvard", label: "Harvard" },
+  { slug: "stanford", label: "Stanford" },
+  { slug: "mit", label: "MIT" },
+  { slug: "yale", label: "Yale" },
+  { slug: "princeton", label: "Princeton" },
+] as const;
+
 export function Hero() {
   return (
     <section className="relative pt-16 sm:pt-20 md:pt-28 pb-20 sm:pb-24 md:pb-32 border-b border-hair overflow-hidden">
@@ -62,9 +70,9 @@ export function Hero() {
             A 60-second prediction, trained on real outcomes.
           </p>
 
-          {/* CTA row — centered */}
+          {/* CTA — one hero, one action */}
           <div
-            className="mt-8 sm:mt-10 md:mt-14 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-5 hero-fade"
+            className="mt-8 sm:mt-10 md:mt-14 flex items-center justify-center hero-fade"
             style={{ animationDelay: "360ms" }}
           >
             <Link
@@ -79,12 +87,28 @@ export function Hero() {
                 →
               </span>
             </Link>
-            <Link
-              href="/essay-grader"
-              className="inline-flex items-center justify-center min-h-11 px-4 py-2 text-[14px] text-ink-2 hover:text-oxblood underline-offset-[6px] decoration-pencil/30 hover:decoration-oxblood/50 underline transition-[color,text-decoration-color] duration-200 whitespace-nowrap"
-            >
-              or grade an essay
-            </Link>
+          </div>
+
+          {/* Quick-start — one tap on a dream school starts the worksheet already
+              in progress (deep-links into /odds with that school pre-selected). */}
+          <div
+            className="mt-7 sm:mt-9 flex flex-col items-center gap-3 hero-fade"
+            style={{ animationDelay: "440ms" }}
+          >
+            <span className="font-mono text-[9.5px] sm:text-[10px] uppercase tracking-[0.22em] text-pencil">
+              Or start with your dream school
+            </span>
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              {QUICK_SCHOOLS.map((s) => (
+                <Link
+                  key={s.slug}
+                  href={`/odds?school=${s.slug}`}
+                  className="px-3.5 py-1.5 text-[13px] text-ink-2 border border-hair rounded-full bg-cream/60 hover:border-oxblood hover:text-oxblood transition-colors duration-150"
+                >
+                  {s.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* trust line — symmetric rules */}
@@ -94,7 +118,7 @@ export function Hero() {
           >
             <span aria-hidden className="hidden sm:block h-px flex-1 max-w-[120px] bg-hair" />
             <p className="font-mono text-[9.5px] sm:text-[10.5px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-pencil text-center sm:whitespace-nowrap">
-              90 seconds · No essay needed · Cancel anytime
+              60 seconds · No essay needed · Cancel anytime
             </p>
             <span aria-hidden className="hidden sm:block h-px flex-1 max-w-[120px] bg-hair" />
           </div>

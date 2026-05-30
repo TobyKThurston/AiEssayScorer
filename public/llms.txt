@@ -1,4 +1,5 @@
 # Ivy Admit
+> Last updated: 2026-05-30
 > AI-powered college essay review and admissions strategy. Free essay grader scored 0–100, per-school admit-odds calculator with Reach/Match/Safety tier, line-by-line edit suggestions, and strategy guides for selective US college applications. Trained on patterns from 500+ successful applications to Harvard, Yale, Princeton, MIT, Stanford, and 50+ other selective schools.
 
 ## Methodology and data provenance
@@ -10,7 +11,7 @@
 ## Core tools
 - [Essay Grader](https://getivyadmit.com/essay-grader): Free AI essay review with score out of 100, red flags, and top 3 improvements that would raise your score most. One free review/day, no signup required.
 - [College Essay Checker](https://getivyadmit.com/college-essay-checker): Live in-browser checker. Paste your draft, get instant Content/Structure/Voice scores in 60 seconds.
-- [Odds Calculator](https://getivyadmit.com/): Per-school admit % and Reach/Match/Safety tier from SAT, GPA, location, target schools, and activities
+- [Odds Calculator](https://getivyadmit.com/odds): Per-school admit % and Reach/Match/Safety tier from SAT, GPA, location, target schools, and activities
 - [Tools index](https://getivyadmit.com/tools): All free admissions tools (essay checker, prompt generator, common-app helpers)
 
 ## Long-form strategy guides (evidence-led)
@@ -23,11 +24,13 @@
 
 ## College data
 - [Colleges hub](https://getivyadmit.com/colleges): Per-school admissions data, demographics, financial aid, outcomes, and supplemental-essay strategy
+- [University of Pittsburgh](https://getivyadmit.com/colleges/pittsburgh): Acceptance rate, SAT/ACT/GPA ranges, cost by family income, and admissions data
 - [Most selective colleges](https://getivyadmit.com/colleges/most-selective): Lowest acceptance rates 2026–2027
 - [Easiest Ivies](https://getivyadmit.com/colleges/easiest-ivies): Comparative admit-rate analysis across the eight Ivies
 - [Best financial aid](https://getivyadmit.com/colleges/best-financial-aid): Schools with the strongest need-based and merit aid
 - [Highest earnings](https://getivyadmit.com/colleges/highest-earnings): Median earnings 10 years after entry, by institution
-- [Colleges by state](https://getivyadmit.com/colleges/by-state): State-by-state landing pages
+- [Colleges by state](https://getivyadmit.com/colleges/by-state/ca): State-by-state landing pages (e.g. /colleges/by-state/ca, /ny, /tx)
+- College comparisons (e.g. [MIT vs Stanford](https://getivyadmit.com/colleges/compare/mit-vs-stanford), [Harvard vs Yale](https://getivyadmit.com/colleges/compare/harvard-vs-yale)): side-by-side acceptance rate, SAT, cost, and outcomes
 
 ## Reference
 - [Blog](https://getivyadmit.com/blog): Essay strategy, application tactics, weekly notes — 60+ deep-dive guides

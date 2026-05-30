@@ -28,11 +28,9 @@ export function SoftwareApplicationSchema({
       price: "0",
       priceCurrency: "USD",
     },
-    creator: {
-      "@type": "Organization",
-      name: "Ivy Admit",
-      url: baseUrl,
-    },
+    // Reference the canonical Organization node (defined in app/layout.tsx)
+    // instead of emitting a second, @id-less Organization on every tool page.
+    creator: { "@id": `${baseUrl}/#organization` },
   };
   return (
     <script

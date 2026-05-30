@@ -226,6 +226,7 @@ export const matchups: Array<[string, string]> = [
   ["tufts", "wake-forest"],
   ["tulane", "villanova"],
   ["tulane", "wake-forest"],
+  ["uc-berkeley", "ucla"],
   ["umich", "unc"],
   ["umich", "ut-austin"],
   ["umich", "uva"],

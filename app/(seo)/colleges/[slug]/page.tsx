@@ -17,6 +17,7 @@ import {
   localeLabel,
   type ScorecardData,
 } from "@/colleges/scorecard";
+import { matchups, matchupSlug } from "@/colleges/matchups";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -156,6 +157,11 @@ export default async function CollegePage({ params }: Props) {
     .filter((s) => s.category === school.category && s.slug !== school.slug)
     .slice(0, 6);
 
+  // Every head-to-head comparison that includes this school. Linking them from
+  // the school page makes the (noindex, follow) compare pages crawl-reachable
+  // so their follow-equity actually flows — otherwise they are orphans.
+  const relatedMatchups = matchups.filter(([a, b]) => a === slug || b === slug);
+
   // === JSON-LD ===
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -163,7 +169,7 @@ export default async function CollegePage({ params }: Props) {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
       { "@type": "ListItem", position: 2, name: "Colleges", item: `${baseUrl}/colleges` },
-      { "@type": "ListItem", position: 3, name: school.name, item: url },
+      { "@type": "ListItem", position: 3, name: school.shortName, item: url },
     ],
   };
 
@@ -176,7 +182,9 @@ export default async function CollegePage({ params }: Props) {
     sameAs: sc?.website ? [`https://${sc.website.replace(/^https?:\/\//, "").replace(/\/$/, "")}`] : undefined,
     address: {
       "@type": "PostalAddress",
-      addressLocality: school.location,
+      // school.location is "City, State"; addressLocality must be the city only
+      // (the state belongs in addressRegion, set below) to avoid duplication.
+      addressLocality: school.location.split(",")[0].trim(),
       addressRegion: school.state,
       addressCountry: "US",
     },
@@ -201,15 +209,7 @@ export default async function CollegePage({ params }: Props) {
     },
     datePublished: ARTICLE_PUBLISHED,
     dateModified: ARTICLE_MODIFIED,
-    author: {
-      "@type": "Person",
-      name: "Ivy Admit Editorial Team",
-      url: `${baseUrl}/about`,
-      jobTitle: "Editorial Team",
-      description:
-        "Editors at Ivy Admit covering selective US college admissions, application strategy, and essay craft.",
-      worksFor: { "@id": `${baseUrl}/#organization` },
-    },
+    author: { "@type": "Organization", "@id": `${baseUrl}/#organization`, name: "Ivy Admit" },
     publisher: { "@id": `${baseUrl}/#organization` },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     about: { "@id": `${url}#college` },
@@ -690,6 +690,31 @@ export default async function CollegePage({ params }: Props) {
                     })}
                   </tbody>
                 </table>
+              </div>
+            </>
+          )}
+
+          {/* Head-to-head comparisons — makes compare pages crawl-reachable */}
+          {relatedMatchups.length > 0 && (
+            <>
+              <h2>{school.shortName} Head-to-Head</h2>
+              <p className="text-center max-w-xl mx-auto">
+                See {school.shortName} compared side by side with schools applicants weigh it against:
+              </p>
+              <div className="not-prose flex flex-wrap gap-2 justify-center my-6">
+                {relatedMatchups.map(([a, b]) => {
+                  const otherSlug = a === slug ? b : a;
+                  const other = allSchools.find((s) => s.slug === otherSlug);
+                  return (
+                    <Link
+                      key={`${a}-vs-${b}`}
+                      href={`/colleges/compare/${matchupSlug(a, b)}`}
+                      className="px-4 py-2 rounded-full border border-hair !text-ink-2 !no-underline text-sm hover:!text-ink hover:border-ink transition-all bg-cream"
+                    >
+                      {school.shortName} vs {other ? other.shortName : otherSlug}
+                    </Link>
+                  );
+                })}
               </div>
             </>
           )}

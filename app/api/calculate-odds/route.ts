@@ -163,10 +163,24 @@ export async function POST(request: Request) {
       );
     }
 
+    // LOCKED client payload. The real `percent` and the full per-factor
+    // breakdown are the paid product — they are persisted to the database
+    // above and revealed only post-payment on /odds/result. We must NOT send
+    // the true percentage to the pre-payment client, or the paywall's blurred
+    // number could be read straight out of the network response / DOM. The
+    // paywall shows the honest tier + a single teaser factor; the exact % is
+    // unlocked after checkout.
+    const lockedSchools: SchoolOdds[] = scored.map((s) => ({
+      slug: s.slug,
+      name: s.name,
+      tier: s.tier,
+      factors: s.factors.slice(0, 1),
+    }));
+
     const result: OddsResult = {
       calculationId: inserted.id,
       generatedAt: inserted.created_at,
-      schools: scored,
+      schools: lockedSchools,
     };
 
     return NextResponse.json({ result });

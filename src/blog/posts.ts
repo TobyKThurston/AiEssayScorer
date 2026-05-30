@@ -33,19 +33,21 @@ export function getAuthor(post: Post): Author {
 export const posts: Post[] = [
   {
     slug: "how-to-write-common-app-essay",
-    title: "How to Write the Common App Personal Statement (2025–26)",
+    title: "How to Write the Common App Personal Statement (2026–27)",
     description:
       "A step-by-step guide to writing a powerful Common App personal statement, from choosing the right prompt to final edits. Includes tips from admitted students and common mistakes to avoid.",
     publishedAt: "2025-10-14",
+    updatedAt: "2026-05-30",
     category: "Writing Guides",
     readTime: "9 min read",
   },
   {
     slug: "common-app-essay-prompts-2025",
-    title: "Common App Essay Prompts 2025–26: Which One to Choose?",
+    title: "Common App Essay Prompts 2026–27: Which One to Choose?",
     description:
-      "Breaking down all 7 Common App essay prompts for 2025–2026, what each one means, which students it suits best, and how to pick the prompt that gives your story the most room to breathe.",
+      "Breaking down all 7 Common App essay prompts for 2026–2027, what each one means, which students it suits best, and how to pick the prompt that gives your story the most room to breathe.",
     publishedAt: "2025-11-03",
+    updatedAt: "2026-05-30",
     category: "Common App",
     readTime: "7 min read",
   },
@@ -616,6 +618,69 @@ export const posts: Post[] = [
     updatedAt: "2026-05-20",
     category: "Admissions Data",
     readTime: "13 min read",
+  },
+  {
+    slug: "uc-piq-leadership",
+    title: "UC PIQ #1 Leadership Essay: How to Write It in 350 Words",
+    description:
+      "A specific guide to UC Personal Insight Question 1: the three valid leadership paths, the 350-word structure UC readers reward, and the mistakes that sink most drafts.",
+    publishedAt: "2026-05-12",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "uc-piq-greatest-talent",
+    title: "UC PIQ #3: How to Write the Greatest Talent or Skill Essay",
+    description:
+      "A specific, accurate guide to UC Personal Insight Question #3. Topic selection, the 350-word structure, a sample essay, and how to coordinate with your other three PIQs.",
+    publishedAt: "2026-05-15",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "uc-piq-educational-opportunity",
+    title: "UC PIQ #4: The Educational Opportunity or Barrier Essay",
+    description:
+      "How to write UC Personal Insight Question #4 in 350 words: pick the opportunity or barrier lane, show agency, and avoid the hybrid-essay trap UC readers penalize.",
+    publishedAt: "2026-05-18",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "uc-piq-challenge",
+    title: "UC PIQ #5: How to Write the Challenge Essay (350 Words)",
+    description:
+      "Write UC Personal Insight Question 5 the way readers score it: name the challenge, show specific steps, and state the academic-impact link. Model essay plus word-count breakdown.",
+    publishedAt: "2026-05-21",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
+  {
+    slug: "uc-piq-favorite-subject",
+    title: "UC PIQ #6: How to Write the Favorite Subject Essay",
+    description:
+      "A specific guide to UC Personal Insight Question 6: nail the “inspires you” verb, use the inside/outside-classroom signal, and a 350-word structure with example.",
+    publishedAt: "2026-05-24",
+    category: "Supplemental Essays",
+    readTime: "9 min read",
+  },
+  {
+    slug: "uc-piq-what-makes-you-unique",
+    title: "UC PIQ #8: The “Strong Candidate” Personal Insight Question",
+    description:
+      "How to write UC Personal Insight Question 8 (the “strong candidate” prompt): when to pick it, the 350-word structure, three story types, and a worked example.",
+    publishedAt: "2026-05-27",
+    category: "Supplemental Essays",
+    readTime: "8 min read",
+  },
+  {
+    slug: "activities-essay-common-app-150-chars",
+    title: "Common App Activities Section: How to Write 150-Character Descriptions",
+    description:
+      "Write Common App activity descriptions that work in 150 characters: strong verbs, real numbers, and 5 before/after rewrites readers actually reward.",
+    publishedAt: "2026-05-29",
+    category: "Common App",
+    readTime: "8 min read",
   },
 ];
 

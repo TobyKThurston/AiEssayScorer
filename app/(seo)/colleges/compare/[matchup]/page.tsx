@@ -12,12 +12,24 @@ import {
   formatMoneySafe,
   type ScorecardData,
 } from "@/colleges/scorecard";
-import { matchups, parseMatchupSlug } from "@/colleges/matchups";
+import { matchups, parseMatchupSlug, matchupSlug } from "@/colleges/matchups";
 
 type Props = { params: Promise<{ matchup: string }> };
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 const LAST_VERIFIED = "May 2026";
+
+// Curated allowlist of comparison pages that are indexable. The other ~235
+// matchups stay noindex,follow (templated near-dups) to protect crawl budget.
+// These are GSC-validated, high-demand, marquee pairs already ranking page 1–2
+// despite the blanket noindex; slugs are the alphabetical (canonical) form.
+// Mirrored in app/sitemap.ts.
+const INDEXED_MATCHUPS = new Set([
+  "mit-vs-stanford",
+  "harvard-vs-yale",
+  "cornell-vs-harvard",
+  "uc-berkeley-vs-ucla",
+]);
 
 const allSchools: School[] = [
   ...schools,
@@ -117,15 +129,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `which is better ${aName} or ${bName}`,
       `${aName} ${bName} acceptance rate`,
     ],
-    alternates: { canonical: `/colleges/compare/${matchup}` },
-    // Templated near-duplicates of the per-school pages — keep them
-    // accessible via internal links but out of the index so they don't
-    // suppress the strong long-form college pages.
-    robots: { index: false, follow: true },
+    // Canonical is always the alphabetical (sorted) slug, so an unsorted
+    // on-demand URL (e.g. ucla-vs-uc-berkeley) consolidates onto the single
+    // canonical (uc-berkeley-vs-ucla) instead of competing as a duplicate.
+    alternates: { canonical: `/colleges/compare/${matchupSlug(a, b)}` },
+    // Most matchups are templated near-duplicates — keep them accessible via
+    // internal links but out of the index so they don't suppress the strong
+    // long-form college pages. A curated allowlist of high-demand,
+    // GSC-validated pairs is indexable (see INDEXED_MATCHUPS).
+    robots: INDEXED_MATCHUPS.has(matchupSlug(a, b))
+      ? { index: true, follow: true }
+      : { index: false, follow: true },
     openGraph: {
       title: `${aName} vs ${bName}: Real Stats Compared`,
       description,
-      url: `/colleges/compare/${matchup}`,
+      url: `/colleges/compare/${matchupSlug(a, b)}`,
       type: "article",
       images: [{ url: "/og-image.png", width: 1200, height: 630, alt: `${aName} vs ${bName} comparison` }],
     },
@@ -159,6 +177,12 @@ export default async function CompareCollegePage({ params }: Props) {
 
   const aName = ra.school.shortName;
   const bName = rb.school.shortName;
+
+  // Sibling comparisons sharing either school — interlinks the compare cluster
+  // so each (noindex, follow) matchup is reachable and passes equity onward.
+  const relatedMatchups = matchups
+    .filter(([x, y]) => (x === a || y === a || x === b || y === b) && matchupSlug(x, y) !== matchup)
+    .slice(0, 8);
 
   // Determine winners across metrics for the headline
   const harderToGetIn = winner(ra.admitRate, rb.admitRate, "lower");
@@ -213,15 +237,7 @@ export default async function CompareCollegePage({ params }: Props) {
     },
     datePublished: "2026-05-09",
     dateModified: "2026-05-09",
-    author: {
-      "@type": "Person",
-      name: "Ivy Admit Editorial Team",
-      url: `${baseUrl}/about`,
-      jobTitle: "Editorial Team",
-      worksFor: { "@type": "Organization", name: "Ivy Admit", url: baseUrl },
-      description:
-        "Editors at Ivy Admit covering selective US college admissions, application strategy, and essay craft.",
-    },
+    author: { "@type": "Organization", "@id": `${baseUrl}/#organization`, name: "Ivy Admit" },
     publisher: {
       "@type": "Organization",
       "@id": `${baseUrl}/#organization`,
@@ -721,6 +737,31 @@ export default async function CompareCollegePage({ params }: Props) {
           <p className="text-center text-xs text-pencil mt-10 italic">
             Last verified {LAST_VERIFIED}. Stats reflect each school&apos;s most recent publicly published admit cycle.
           </p>
+
+          {/* More comparisons — interlinks the compare cluster for crawlability */}
+          {relatedMatchups.length > 0 && (
+            <>
+              <h2>More Comparisons</h2>
+              <p className="text-center max-w-xl mx-auto">
+                Other head-to-heads involving {aName} or {bName}:
+              </p>
+              <div className="not-prose flex flex-wrap gap-2 justify-center my-6">
+                {relatedMatchups.map(([x, y]) => {
+                  const sx = findSchool(x);
+                  const sy = findSchool(y);
+                  return (
+                    <Link
+                      key={`${x}-vs-${y}`}
+                      href={`/colleges/compare/${matchupSlug(x, y)}`}
+                      className="px-4 py-2 rounded-full border border-hair !text-ink-2 !no-underline text-sm hover:!text-ink hover:border-ink transition-all bg-cream"
+                    >
+                      {sx ? sx.shortName : x} vs {sy ? sy.shortName : y}
+                    </Link>
+                  );
+                })}
+              </div>
+            </>
+          )}
 
           {/* Continue */}
           <div className="not-prose mt-14 pt-8 border-t border-hair text-center">

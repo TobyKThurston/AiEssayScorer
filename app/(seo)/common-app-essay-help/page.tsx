@@ -35,7 +35,8 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
-    { "@type": "ListItem", position: 2, name: "Common App Essay Help", item: `${baseUrl}/common-app-essay-help` },
+    { "@type": "ListItem", position: 2, name: "Guides", item: `${baseUrl}/blog` },
+    { "@type": "ListItem", position: 3, name: "Common App Essay Help", item: `${baseUrl}/common-app-essay-help` },
   ],
 };
 

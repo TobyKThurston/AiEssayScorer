@@ -24,7 +24,7 @@ export function Closer() {
             </Link>
           </div>
           <p className="mt-6 sm:mt-7 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.18em] text-paper-3 px-2">
-            $7 / month · Cancel anytime · Includes the per-school essay reviewer
+            Free to start · $7 / month to unlock · 30-day money-back guarantee
           </p>
         </div>
       </Container>

@@ -9,9 +9,9 @@ const AVATARS = [
 ];
 
 const STATS = [
-  { value: "20,417", label: "Essays reviewed" },
-  { value: "+18 pts", label: "Average score lift" },
-  { value: "< 60s", label: "Median time to first score" },
+  { value: "60+", label: "Top schools you can model" },
+  { value: "< 60s", label: "To your first forecast" },
+  { value: "Per-school", label: "Reach / Match / Safety" },
 ];
 
 export function ProofStrip() {
@@ -42,7 +42,7 @@ export function ProofStrip() {
                 ))}
               </div>
               <p className="mt-1 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.14em] text-pencil">
-                4.8 from 2,000+ students
+                Built by people who got in
               </p>
             </div>
           </div>

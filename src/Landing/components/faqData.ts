@@ -2,39 +2,31 @@ export type FaqItem = { q: string; a: string };
 
 export const FAQ_ITEMS: FaqItem[] = [
   {
-    q: "What do I actually get for free?",
-    a: "One full essay review per day, no signup required. You get a realistic score out of 100, a first-impression read, the biggest red flags hurting your essay, and the top 3 improvements that would raise your score most.",
+    q: "How accurate are the odds?",
+    a: "Each school's percentage is generated from recent published admit data and your full profile — test scores, GPA, activity depth and tier, geography, and context. It's a calibrated statistical estimate, not a guarantee of admission, and we tell you plainly when a school is a genuine reach.",
   },
   {
-    q: "What does Pro unlock?",
-    a: "Pro is $7/month and includes unlimited reviews, line-by-line edits on every essay, school-specific feedback, the Reach / Match / Safety odds calculator across multiple schools, rewrite suggestions for weak sections, and draft-over-draft progress tracking.",
+    q: "What exactly do I get for $7/month?",
+    a: "Your exact admit % and Reach/Match/Safety tier for every school you picked, unblurred, plus a per-factor breakdown of what's helping you, what's quietly hurting, and the single biggest lever to pull before you apply. It also unlocks unlimited essay grading and every admissions tool we ship.",
   },
   {
-    q: "Is using Ivy Admit allowed by colleges?",
-    a: "Yes. Ivy Admit is a review and editing tool — the same category as a counselor or English teacher. You remain the author and approve every suggestion. We don't ghostwrite.",
+    q: "Can I cancel anytime — and is my money safe?",
+    a: "Yes. Cancel in one click from billing; access runs to the end of the period. Pro is backed by a 30-day money-back guarantee — if the forecast isn't useful, reply to your receipt and we refund you, no forms. Payments are processed securely by Stripe.",
   },
   {
-    q: "Does it preserve my voice?",
-    a: "That's the design goal. Each line edit shows your original, the suggested change, and a one-line rationale. You accept or reject every suggestion individually — nothing is changed in your draft until you approve it.",
-  },
-  {
-    q: "How fast is a review?",
-    a: "First-pass scoring typically returns in about 10–20 seconds. Line-by-line edits and school-specific feedback are generated on demand from the editor.",
+    q: "Why are my odds blurred until I unlock?",
+    a: "We compute your real percentage for every school the moment you finish the worksheet — the numbers genuinely exist. Unlocking ($7/mo) reveals the exact figures and the per-factor breakdown. We never show a fake number behind the blur; the value you unlock is the value the model produced.",
   },
   {
     q: "Do I have to write an essay to use this?",
-    a: "No. The odds calculator runs without an essay — enter your stats and target list to get Reach / Match / Safety odds at each school individually. Adding an essay sharpens the estimate.",
+    a: "No. The odds calculator runs from your stats and target list alone — enter your scores, GPA, activities and schools to get a per-school admit % in about a minute. Adding essays later (included in Pro) sharpens the picture but is never required.",
   },
   {
     q: "Does it work for non-Ivy schools?",
-    a: "Yes. The structure and evidence rubric works for any selective school. Set a target list and feedback adjusts to the tone and topic risk that fits those specific programs.",
+    a: "Yes. The model covers selective US colleges across our list — Ivies, top private and public flagships, liberal arts colleges, and STEM-focused schools. Pick up to ten and you get an individual admit estimate and tier for each.",
   },
   {
-    q: "Do you store or sell my essay data?",
-    a: "Your drafts are private to your account, encrypted at rest, and never sold. You can grade an essay anonymously without signing up, and you can delete your account at any time.",
-  },
-  {
-    q: "How does cancellation work?",
-    a: "Cancel anytime from billing — your access continues to the end of the billing period. Pro is backed by a 30-day money-back guarantee.",
+    q: "Where does the data come from, and is my information private?",
+    a: "Odds draw on recent published admissions data and selectivity for each school in our list. Your profile and any drafts are private to your account, encrypted at rest, never sold, and you can delete your account at any time.",
   },
 ];

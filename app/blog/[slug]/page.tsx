@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { posts, getPost, formatDate, getAuthor } from "@/blog/posts";
+import { posts, getPost, formatDate, getAuthor, defaultAuthor } from "@/blog/posts";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import { Breadcrumbs } from "@/design/Breadcrumbs";
 
@@ -138,6 +138,20 @@ const contentMap: Record<string, () => Promise<{ default: React.ComponentType }>
     import("@/blog/content/barnard-why-womens-college-essay"),
   "do-college-essays-matter": () =>
     import("@/blog/content/do-college-essays-matter"),
+  "uc-piq-leadership": () =>
+    import("@/blog/content/uc-piq-leadership"),
+  "uc-piq-greatest-talent": () =>
+    import("@/blog/content/uc-piq-greatest-talent"),
+  "uc-piq-educational-opportunity": () =>
+    import("@/blog/content/uc-piq-educational-opportunity"),
+  "uc-piq-challenge": () =>
+    import("@/blog/content/uc-piq-challenge"),
+  "uc-piq-favorite-subject": () =>
+    import("@/blog/content/uc-piq-favorite-subject"),
+  "uc-piq-what-makes-you-unique": () =>
+    import("@/blog/content/uc-piq-what-makes-you-unique"),
+  "activities-essay-common-app-150-chars": () =>
+    import("@/blog/content/activities-essay-common-app-150-chars"),
 };
 
 export async function generateStaticParams() {
@@ -149,9 +163,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPost(slug);
   if (!post) return {};
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
+  const author = getAuthor(post);
   return {
     title: post.title,
     description: post.description,
+    authors: [{ name: author.name, ...(author.url ? { url: author.url } : {}) }],
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {
       title: post.title,
@@ -188,6 +204,19 @@ export default async function BlogPost({ params }: Props) {
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
   const author = getAuthor(post);
+  // Collective "Editorial Team" byline → reference the canonical Organization
+  // entity (a schema.org Person should not carry a team name, and `role` is a
+  // bio paragraph, not a jobTitle). A real per-post named author still emits a
+  // proper Person node with a short jobTitle.
+  const isTeamAuthor = author.name === defaultAuthor.name;
+  const authorNode = isTeamAuthor
+    ? { "@type": "Organization", "@id": `${baseUrl}/#organization`, name: "Ivy Admit" }
+    : {
+        "@type": "Person",
+        name: author.name,
+        ...(author.role ? { jobTitle: author.role } : {}),
+        ...(author.url ? { url: author.url } : {}),
+      };
   const heroImage = post.image
     ? (post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}`)
     : `${baseUrl}/og-image.png`;
@@ -205,12 +234,7 @@ export default async function BlogPost({ params }: Props) {
     },
     datePublished: post.publishedAt,
     dateModified: post.updatedAt ?? post.publishedAt,
-    author: {
-      "@type": "Person",
-      name: author.name,
-      ...(author.role ? { jobTitle: author.role } : {}),
-      ...(author.url ? { url: author.url } : {}),
-    },
+    author: authorNode,
     publisher: {
       "@type": "Organization",
       "@id": `${baseUrl}/#organization`,

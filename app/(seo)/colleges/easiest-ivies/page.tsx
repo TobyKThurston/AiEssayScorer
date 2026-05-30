@@ -155,7 +155,7 @@ export default function EasiestIviesPage() {
             <Link href={`/colleges/${easiest.school.slug}`} className="!text-oxblood !no-underline font-semibold hover:!text-ink">
               {easiest.school.name}
             </Link>{" "}
-            is currently the easiest Ivy to get into at <strong className="text-ink">{formatPct(easiest.rate)}</strong>. The hardest is{" "}
+            is the easiest Ivy to get into as of 2026, at <strong className="text-ink">{formatPct(easiest.rate)}</strong>. The hardest is{" "}
             <Link href={`/colleges/${hardest.school.slug}`} className="!text-oxblood !no-underline font-semibold hover:!text-ink">
               {hardest.school.name}
             </Link>{" "}
@@ -227,7 +227,7 @@ export default function EasiestIviesPage() {
             <details className="border border-hair rounded-xl px-5 py-4 bg-cream">
               <summary className="font-medium text-ink cursor-pointer">What is the easiest Ivy League school to get into in 2026?</summary>
               <p className="mt-3 text-ink-2 text-sm leading-relaxed">
-                {easiest.school.name} currently has the highest published acceptance rate among Ivies at {formatPct(easiest.rate)}, making it statistically the easiest. Cornell typically ranks at or near the top of this list cycle to cycle because its larger applicant pool relative to class size produces a higher rate than other Ivies, though &ldquo;easier&rdquo; remains a relative term in this group.
+                {easiest.school.name} currently has the highest published acceptance rate among Ivies at {formatPct(easiest.rate)}, making it statistically the easiest. {easiest.school.shortName} typically ranks at or near the top of this list cycle to cycle because its larger applicant pool relative to class size produces a higher rate than other Ivies, though &ldquo;easier&rdquo; remains a relative term in this group.
               </p>
             </details>
             <details className="border border-hair rounded-xl px-5 py-4 bg-cream">

@@ -4,27 +4,28 @@ import { Breadcrumbs } from "@/design/Breadcrumbs";
 
 export const metadata: Metadata = {
   // GSC: 59 impressions across "ivy league essays" / "ivy league essays
-  // examples" / "ivy league essays that worked". Previous title buried
-  // "examples"; a count + "annotated" + "accepted apps" answers the "essays
-  // that worked" intent and gives the searcher a list expectation.
-  title: "Ivy League Essay Examples That Worked (8 Annotated, From Accepted Apps)",
+  // examples" / "ivy league essays that worked". Title leads with the head
+  // term + "that worked" intent + a count that MATCHES the 7 on-page
+  // excerpts (H1/intro/schema all say 7), and stays under the ~60-char SERP
+  // limit so nothing truncates.
+  title: "Ivy League Essays That Worked: 7 Annotated Examples",
   description:
-    "Annotated excerpts from real accepted Harvard, Yale, Princeton, Stanford and MIT essays — what worked, why, and how your draft compares. Free, no signup.",
+    "Annotated excerpts modeled on accepted Harvard, Yale, Princeton, Stanford and MIT essays — what worked, why, and how your draft compares. Free, no signup.",
   alternates: {
     canonical: "/ivy-league-essay-examples",
   },
   openGraph: {
-    title: "Ivy League Essay Examples That Worked (8 Annotated)",
+    title: "Ivy League Essays That Worked: 7 Annotated Examples",
     description:
-      "Real accepted Ivy League essays, annotated. See what worked, why, and how your draft compares.",
+      "Ivy League essays annotated against our admit-essay corpus. See what worked, why, and how your draft compares.",
     url: "/ivy-league-essay-examples",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Annotated Ivy League essay examples from accepted applications" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Annotated Ivy League essay examples modeled on accepted applications" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ivy League Essay Examples That Worked (8 Annotated)",
-    description: "Real accepted Ivy League essays, annotated. What worked, why.",
+    title: "Ivy League Essays That Worked: 7 Annotated Examples",
+    description: "Ivy League essays annotated. What worked, why, and how your draft compares.",
     images: ["/og-image.png"],
   },
 };
@@ -36,7 +37,8 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
-    { "@type": "ListItem", position: 2, name: "Ivy League Essay Examples", item: `${baseUrl}/ivy-league-essay-examples` },
+    { "@type": "ListItem", position: 2, name: "Guides", item: `${baseUrl}/blog` },
+    { "@type": "ListItem", position: 3, name: "Ivy League Essay Examples", item: `${baseUrl}/ivy-league-essay-examples` },
   ],
 };
 
@@ -241,6 +243,10 @@ export default function IvyLeagueEssayExamplesPage() {
             school, with rubric scores and the specific features that make each one work. Use them
             as a reference for what differentiated essays look like at the line level — then check
             your own draft against the same patterns.
+          </p>
+          <p className="text-base text-ink-2 mb-3">
+            Want to read one start to finish instead of excerpts? See a{" "}
+            <Link href="/full-essay" className="text-oxblood underline-offset-4 underline">full annotated college essay that worked</Link>.
           </p>
           <p className="text-[13px] text-pencil mb-6">
             Excerpts are illustrative composites drawn from{" "}

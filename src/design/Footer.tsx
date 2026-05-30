@@ -4,8 +4,8 @@ import { Wordmark } from "./Brand";
 type LinkItem = { label: string; href: string };
 
 const PRODUCT: LinkItem[] = [
-  { label: "Score my essay", href: "/try" },
-  { label: "Essay tools", href: "/tools" },
+  { label: "Admit odds calculator", href: "/odds" },
+  { label: "Score my essay", href: "/essay-grader" },
   { label: "AI Essay Review", href: "/ai-essay-review" },
   { label: "Essay Checker", href: "/college-essay-checker" },
   { label: "Pricing", href: "/#pricing" },
@@ -70,8 +70,14 @@ export function Footer() {
           <div className="lg:w-[260px] shrink-0">
             <Wordmark />
             <p className="mt-4 sm:mt-5 font-serif italic text-[15px] sm:text-[17px] leading-[1.5] text-ink-2 max-w-[260px]">
-              Admit smarter. Your essay, louder.
+              Know your real odds before you apply.
             </p>
+            <Link
+              href="/odds"
+              className="btn btn-sm btn-brand font-semibold mt-5"
+            >
+              Calculate my odds →
+            </Link>
           </div>
 
           <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 sm:gap-x-8 gap-y-8 sm:gap-y-12">

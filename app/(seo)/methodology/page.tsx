@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   // clicked when shown for branded queries.
   title: "How the Ivy Admit Essay Scorer Works (Methodology & Data)",
   description:
-    "Inside the Ivy Admit AI essay scorer: training corpus, scoring rubric, validation against real admit outcomes, known limitations, and the federal data behind the admit-odds calculator.",
+    "Inside the Ivy Admit AI essay scorer: training corpus, scoring rubric, validation against real admit outcomes, and the federal data behind the odds calculator.",
   alternates: { canonical: "/methodology" },
   openGraph: {
     title: "How the Ivy Admit Essay Scorer Works (Methodology & Data)",

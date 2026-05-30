@@ -12,24 +12,24 @@ import { Breadcrumbs } from "@/design/Breadcrumbs";
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://getivyadmit.com";
 
 export const metadata: Metadata = {
-  // Putting the "160+" number in the title itself gives a list/depth
+  // Putting the "200+" number in the title itself gives a list/depth
   // signal the prior title was missing. "No Signup" addresses the
   // top friction objection on free-tool queries.
-  title: "160+ Free AI College Essay Tools (No Signup, No Email)",
+  title: "200+ Free AI College Essay Tools (No Signup, No Email)",
   description:
-    "160+ free AI tools for college essays: hook generators, prompt deconstructors, Why-Us brainstormers for 50+ schools, and per-school essay scorers. No signup, no email.",
+    "200+ free AI tools for college essays: hook generators, prompt deconstructors, Why-Us brainstormers for 50+ schools, and per-school essay scorers. No signup, no email.",
   alternates: { canonical: "/tools" },
   openGraph: {
-    title: "160+ Free AI College Essay Tools (No Signup, No Email)",
+    title: "200+ Free AI College Essay Tools (No Signup, No Email)",
     description:
       "Hook generators, prompt deconstructors, Why-Us brainstormers for 50+ schools, per-school essay scorers. Free.",
     url: "/tools",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "160+ free AI college essay tools, no signup required" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "200+ free AI college essay tools, no signup required" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "160+ Free AI College Essay Tools (No Signup)",
+    title: "200+ Free AI College Essay Tools (No Signup)",
     description: "Hook generators, scorers, prompt deconstructors and more.",
     images: ["/og-image.png"],
   },
@@ -132,7 +132,7 @@ export default function ToolsIndex() {
     url: `${baseUrl}/tools`,
     name: "Free AI College Essay Tools",
     description:
-      "160+ free AI tools for college essays: hook generators, prompt analyzers, per-school brainstormers, and essay scorers.",
+      "200+ free AI tools for college essays: hook generators, prompt analyzers, per-school brainstormers, and essay scorers.",
     isPartOf: { "@id": `${baseUrl}/#website` },
     mainEntity: { "@id": `${baseUrl}/tools#itemlist` },
   };
@@ -160,11 +160,17 @@ export default function ToolsIndex() {
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
-              href="/try"
+              href="/odds"
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-oxblood text-cream font-semibold text-[13px] sm:text-sm hover:bg-oxblood-2 transition-colors"
+            >
+              Calculate my admit odds
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/essay-grader"
               className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-ink text-cream font-semibold text-[13px] sm:text-sm hover:bg-oxblood transition-colors"
             >
               Score my full essay free
-              <ArrowRight className="w-4 h-4" />
             </Link>
             <a
               href="#start-here"
